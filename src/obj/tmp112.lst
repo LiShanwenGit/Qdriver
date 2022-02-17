@@ -1,0 +1,16 @@
+GAS LISTING C:\Users\test\AppData\Local\Temp\cclMAgo5.s 			page 1
+
+
+   1              		.file	"tmp112.c"
+   2              		.option nopic
+   3              		.text
+   4              	.Ltext0:
+   5              		.cfi_sections	.debug_frame
+   6              	.Letext0:
+GAS LISTING C:\Users\test\AppData\Local\Temp\cclMAgo5.s 			page 2
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 tmp112.c
+
+NO UNDEFINED SYMBOLS

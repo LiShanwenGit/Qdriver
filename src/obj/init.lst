@@ -1,0 +1,247 @@
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s 			page 1
+
+
+   1              		.file	"init.c"
+   2              		.option nopic
+   3              		.text
+   4              	.Ltext0:
+   5              		.cfi_sections	.debug_frame
+   6              		.section	.text._init,"ax",@progbits
+   7              		.align	1
+   8              		.globl	_init
+  10              	_init:
+  11              	.LFB2:
+  12              		.file 1 "arch/riscv/mach-gd32vf10x/system/init.c"
+   1:arch/riscv/mach-gd32vf10x/system/init.c **** //See LICENSE for license details.
+   2:arch/riscv/mach-gd32vf10x/system/init.c **** #include <gd32vf103.h>
+   3:arch/riscv/mach-gd32vf10x/system/init.c **** #include "riscv_encoding.h"
+   4:arch/riscv/mach-gd32vf10x/system/init.c **** #include "n200_func.h"
+   5:arch/riscv/mach-gd32vf10x/system/init.c **** 
+   6:arch/riscv/mach-gd32vf10x/system/init.c **** extern unsigned int disable_mcycle_minstret();
+   7:arch/riscv/mach-gd32vf10x/system/init.c **** void _init()
+   8:arch/riscv/mach-gd32vf10x/system/init.c **** {
+  13              		.loc 1 8 1
+  14              		.cfi_startproc
+   9:arch/riscv/mach-gd32vf10x/system/init.c **** 	SystemInit();
+  15              		.loc 1 9 2
+   8:arch/riscv/mach-gd32vf10x/system/init.c **** 	SystemInit();
+  16              		.loc 1 8 1 is_stmt 0
+  17 0000 4111     		addi	sp,sp,-16
+  18              	.LCFI0:
+  19              		.cfi_def_cfa_offset 16
+  20 0002 06C6     		sw	ra,12(sp)
+  21              		.cfi_offset 1, -4
+  22              		.loc 1 9 2
+  23 0004 97000000 		call	SystemInit
+  23      E7800000 
+  24              	.LVL0:
+  10:arch/riscv/mach-gd32vf10x/system/init.c **** 
+  11:arch/riscv/mach-gd32vf10x/system/init.c **** 	//ECLIC init
+  12:arch/riscv/mach-gd32vf10x/system/init.c **** 	eclic_init(ECLIC_NUM_INTERRUPTS);
+  25              		.loc 1 12 2 is_stmt 1
+  26 000c 13057005 		li	a0,87
+  27 0010 97000000 		call	eclic_init
+  27      E7800000 
+  28              	.LVL1:
+  13:arch/riscv/mach-gd32vf10x/system/init.c **** 	eclic_mode_enable();
+  29              		.loc 1 13 2
+  30 0018 97000000 		call	eclic_mode_enable
+  30      E7800000 
+  31              	.LVL2:
+  14:arch/riscv/mach-gd32vf10x/system/init.c **** 
+  15:arch/riscv/mach-gd32vf10x/system/init.c **** 	//printf("After ECLIC mode enabled, the mtvec value is %x \n\n\r", read_csr(mtvec));
+  16:arch/riscv/mach-gd32vf10x/system/init.c **** 
+  17:arch/riscv/mach-gd32vf10x/system/init.c **** 	// // It must be NOTED:
+  18:arch/riscv/mach-gd32vf10x/system/init.c **** 	//  //    * In the RISC-V arch, if user mode and PMP supported, then by default if PMP is not conf
+  19:arch/riscv/mach-gd32vf10x/system/init.c **** 	//  //      with valid entries, then user mode cannot access any memory, and cannot execute any in
+  20:arch/riscv/mach-gd32vf10x/system/init.c **** 	//  //    * So if switch to user-mode and still want to continue, then you must configure PMP firs
+  21:arch/riscv/mach-gd32vf10x/system/init.c **** 	//pmp_open_all_space();
+  22:arch/riscv/mach-gd32vf10x/system/init.c **** 	//switch_m2u_mode();
+  23:arch/riscv/mach-gd32vf10x/system/init.c **** 	
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s 			page 2
+
+
+  24:arch/riscv/mach-gd32vf10x/system/init.c ****     /* Before enter into main, add the cycle/instret disable by default to save power,
+  25:arch/riscv/mach-gd32vf10x/system/init.c ****     only use them when needed to measure the cycle/instret */
+  26:arch/riscv/mach-gd32vf10x/system/init.c **** 	disable_mcycle_minstret();
+  32              		.loc 1 26 2
+  27:arch/riscv/mach-gd32vf10x/system/init.c **** }
+  33              		.loc 1 27 1 is_stmt 0
+  34 0020 B240     		lw	ra,12(sp)
+  35              		.cfi_restore 1
+  36 0022 4101     		addi	sp,sp,16
+  37              	.LCFI1:
+  38              		.cfi_def_cfa_offset 0
+  26:arch/riscv/mach-gd32vf10x/system/init.c **** }
+  39              		.loc 1 26 2
+  40 0024 17030000 		tail	disable_mcycle_minstret
+  40      67000300 
+  41              	.LVL3:
+  42              		.cfi_endproc
+  43              	.LFE2:
+  45              		.section	.text._fini,"ax",@progbits
+  46              		.align	1
+  47              		.globl	_fini
+  49              	_fini:
+  50              	.LFB3:
+  28:arch/riscv/mach-gd32vf10x/system/init.c **** 
+  29:arch/riscv/mach-gd32vf10x/system/init.c **** void _fini()
+  30:arch/riscv/mach-gd32vf10x/system/init.c **** {
+  51              		.loc 1 30 1 is_stmt 1
+  52              		.cfi_startproc
+  31:arch/riscv/mach-gd32vf10x/system/init.c **** }
+  53              		.loc 1 31 1
+  54 0000 8280     		ret
+  55              		.cfi_endproc
+  56              	.LFE3:
+  58              		.text
+  59              	.Letext0:
+  60              		.file 2 "d:\\risc_v_gcc\\riscv-none-embed\\include\\machine\\_default_types.h"
+  61              		.file 3 "d:\\risc_v_gcc\\riscv-none-embed\\include\\sys\\_stdint.h"
+  62              		.file 4 "arch/riscv/mach-gd32vf10x/system/system_gd32vf103.h"
+  63              		.file 5 "arch/riscv/mach-gd32vf10x/system/n200_func.h"
+  64              		.file 6 "arch/riscv/mach-gd32vf10x/system/gd32vf103.h"
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s 			page 3
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 init.c
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:10     .text._init:0000000000000000 _init
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:14     .text._init:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:15     .text._init:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:16     .text._init:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:17     .text._init:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:19     .text._init:0000000000000002 .L0 
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:21     .text._init:0000000000000004 .L0 
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:23     .text._init:0000000000000004 .L0 
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:26     .text._init:000000000000000c .L0 
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:30     .text._init:0000000000000018 .L0 
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:33     .text._init:0000000000000020 .L0 
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:34     .text._init:0000000000000020 .L0 
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:35     .text._init:0000000000000022 .L0 
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:38     .text._init:0000000000000024 .L0 
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:40     .text._init:0000000000000024 .L0 
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:42     .text._init:000000000000002c .L0 
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:49     .text._fini:0000000000000000 _fini
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:52     .text._fini:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:53     .text._fini:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:54     .text._fini:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:55     .text._fini:0000000000000002 .L0 
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:45     .text._init:000000000000002c .L0 
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:58     .text._fini:0000000000000002 .L0 
+                     .debug_frame:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:427    .debug_abbrev:0000000000000000 .Ldebug_abbrev0
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:782    .debug_str:0000000000000282 .LASF81
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:798    .debug_str:0000000000000353 .LASF82
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:850    .debug_str:00000000000004eb .LASF83
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:678    .debug_ranges:0000000000000000 .Ldebug_ranges0
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:686    .debug_line:0000000000000000 .Ldebug_line0
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:712    .debug_str:00000000000000ad .LASF84
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:860    .debug_str:0000000000000541 .LASF0
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:816    .debug_str:00000000000003f1 .LASF1
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:762    .debug_str:00000000000001dd .LASF2
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:842    .debug_str:00000000000004b2 .LASF3
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:830    .debug_str:000000000000045e .LASF4
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:856    .debug_str:000000000000052c .LASF5
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:730    .debug_str:0000000000000123 .LASF6
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:700    .debug_str:0000000000000056 .LASF7
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:740    .debug_str:0000000000000159 .LASF8
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:744    .debug_str:000000000000016e .LASF9
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:802    .debug_str:0000000000000390 .LASF10
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:790    .debug_str:000000000000031d .LASF11
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:698    .debug_str:000000000000004b .LASF12
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:786    .debug_str:0000000000000305 .LASF13
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:716    .debug_str:00000000000000bc .LASF14
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:694    .debug_str:0000000000000035 .LASF15
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:708    .debug_str:000000000000008c .LASF16
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:692    .debug_str:0000000000000022 .LASF17
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:776    .debug_str:000000000000024c .LASF18
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:750    .debug_str:000000000000018f .LASF19
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:688    .debug_str:0000000000000000 .LASF20
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:774    .debug_str:0000000000000239 .LASF21
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:862    .debug_str:0000000000000553 .LASF22
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:702    .debug_str:0000000000000062 .LASF23
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s 			page 4
+
+
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:732    .debug_str:000000000000012c .LASF24
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:794    .debug_str:000000000000033a .LASF25
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:734    .debug_str:0000000000000139 .LASF26
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:748    .debug_str:0000000000000180 .LASF27
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:814    .debug_str:00000000000003e4 .LASF28
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:718    .debug_str:00000000000000c7 .LASF29
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:690    .debug_str:0000000000000013 .LASF30
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:820    .debug_str:000000000000040e .LASF31
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:706    .debug_str:0000000000000078 .LASF32
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:840    .debug_str:00000000000004a6 .LASF33
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:728    .debug_str:0000000000000117 .LASF34
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:832    .debug_str:000000000000046d .LASF35
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:752    .debug_str:00000000000001a2 .LASF36
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:758    .debug_str:00000000000001c0 .LASF37
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:764    .debug_str:00000000000001ea .LASF38
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:768    .debug_str:0000000000000206 .LASF39
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:812    .debug_str:00000000000003da .LASF40
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:714    .debug_str:00000000000000b2 .LASF41
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:738    .debug_str:000000000000014d .LASF42
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:848    .debug_str:00000000000004df .LASF43
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:846    .debug_str:00000000000004d3 .LASF44
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:766    .debug_str:00000000000001f7 .LASF45
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:806    .debug_str:00000000000003ab .LASF46
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:760    .debug_str:00000000000001cd .LASF47
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:858    .debug_str:0000000000000537 .LASF48
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:742    .debug_str:0000000000000162 .LASF49
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:852    .debug_str:0000000000000517 .LASF50
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:854    .debug_str:0000000000000521 .LASF51
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:754    .debug_str:00000000000001af .LASF52
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:724    .debug_str:00000000000000f8 .LASF53
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:826    .debug_str:000000000000043f .LASF54
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:834    .debug_str:0000000000000479 .LASF55
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:726    .debug_str:0000000000000104 .LASF56
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:828    .debug_str:000000000000044b .LASF57
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:844    .debug_str:00000000000004c0 .LASF58
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:722    .debug_str:00000000000000e5 .LASF59
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:808    .debug_str:00000000000003ba .LASF60
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:720    .debug_str:00000000000000d7 .LASF61
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:804    .debug_str:000000000000039d .LASF62
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:836    .debug_str:000000000000048c .LASF63
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:824    .debug_str:0000000000000434 .LASF64
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:800    .debug_str:000000000000037b .LASF65
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:788    .debug_str:0000000000000310 .LASF66
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:778    .debug_str:000000000000025f .LASF67
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:772    .debug_str:000000000000022b .LASF68
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:704    .debug_str:000000000000006e .LASF69
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:810    .debug_str:00000000000003c7 .LASF70
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:746    .debug_str:0000000000000177 .LASF71
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:838    .debug_str:000000000000049b .LASF75
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:792    .debug_str:0000000000000328 .LASF72
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:710    .debug_str:000000000000009f .LASF73
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:780    .debug_str:000000000000026b .LASF74
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:784    .debug_str:00000000000002fc .LASF76
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:818    .debug_str:00000000000003fe .LASF85
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:756    .debug_str:00000000000001ba .LASF86
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:50     .text._fini:0000000000000000 .LFB3
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:56     .text._fini:0000000000000002 .LFE3
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s 			page 5
+
+
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:736    .debug_str:0000000000000147 .LASF87
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:11     .text._init:0000000000000000 .LFB2
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:43     .text._init:000000000000002c .LFE2
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:645    .debug_loc:0000000000000000 .LLST0
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:24     .text._init:000000000000000c .LVL0
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:28     .text._init:0000000000000018 .LVL1
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:31     .text._init:0000000000000020 .LVL2
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:41     .text._init:000000000000002c .LVL3
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:796    .debug_str:0000000000000348 .LASF77
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:696    .debug_str:0000000000000040 .LASF78
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:822    .debug_str:0000000000000422 .LASF79
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:770    .debug_str:0000000000000213 .LASF80
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:18     .text._init:0000000000000002 .LCFI0
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:37     .text._init:0000000000000024 .LCFI1
+C:\Users\test\AppData\Local\Temp\ccUwWyFZ.s:66     .debug_info:0000000000000000 .Ldebug_info0
+
+UNDEFINED SYMBOLS
+SystemInit
+eclic_init
+eclic_mode_enable
+disable_mcycle_minstret

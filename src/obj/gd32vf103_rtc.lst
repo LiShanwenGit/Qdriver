@@ -1,0 +1,1073 @@
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccaTzvPD.s 			page 1
+
+
+   1              		.file	"gd32vf103_rtc.c"
+   2              		.option nopic
+   3              		.text
+   4              	.Ltext0:
+   5              		.cfi_sections	.debug_frame
+   6              		.section	.text.rtc_configuration_mode_enter,"ax",@progbits
+   7              		.align	1
+   8              		.globl	rtc_configuration_mode_enter
+  10              	rtc_configuration_mode_enter:
+  11              	.LFB2:
+  12              		.file 1 "arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c"
+   1:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** /*!
+   2:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     \file  gd32vf103_rtc.c
+   3:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     \brief RTC driver
+   4:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     
+   5:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     \version 2019-6-5, V1.0.0, firmware for GD32VF103
+   6:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** */
+   7:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** 
+   8:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** /*
+   9:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     Copyright (c) 2019, GigaDevice Semiconductor Inc.
+  10:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** 
+  11:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     Redistribution and use in source and binary forms, with or without modification, 
+  12:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** are permitted provided that the following conditions are met:
+  13:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** 
+  14:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     1. Redistributions of source code must retain the above copyright notice, this 
+  15:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****        list of conditions and the following disclaimer.
+  16:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     2. Redistributions in binary form must reproduce the above copyright notice, 
+  17:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****        this list of conditions and the following disclaimer in the documentation 
+  18:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****        and/or other materials provided with the distribution.
+  19:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     3. Neither the name of the copyright holder nor the names of its contributors 
+  20:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****        may be used to endorse or promote products derived from this software without 
+  21:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****        specific prior written permission.
+  22:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** 
+  23:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" 
+  24:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED 
+  25:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. 
+  26:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, 
+  27:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT 
+  28:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR 
+  29:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, 
+  30:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) 
+  31:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY 
+  32:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** OF SUCH DAMAGE.
+  33:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** */
+  34:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** 
+  35:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** #include "gd32vf103_rtc.h"
+  36:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** 
+  37:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** /* RTC register high / low bits mask */
+  38:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** #define RTC_HIGH_BITS_MASK         ((uint32_t)0x000F0000U)  /* RTC high bits mask */
+  39:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** #define RTC_LOW_BITS_MASK          ((uint32_t)0x0000FFFFU)  /* RTC low bits mask */
+  40:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** 
+  41:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** /* RTC register high bits offset */
+  42:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** #define RTC_HIGH_BITS_OFFSET       ((uint32_t)16U)
+  43:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** 
+  44:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** /*!
+  45:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     \brief      enter RTC configuration mode
+  46:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     \param[in]  none
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccaTzvPD.s 			page 2
+
+
+  47:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     \param[out] none
+  48:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     \retval     none
+  49:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** */
+  50:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** void rtc_configuration_mode_enter(void)
+  51:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** {
+  13              		.loc 1 51 1
+  14              		.cfi_startproc
+  52:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     RTC_CTL |= RTC_CTL_CMF;
+  15              		.loc 1 52 5
+  16              		.loc 1 52 13 is_stmt 0
+  17 0000 37370040 		li	a4,1073754112
+  18 0004 83274780 		lw	a5,-2044(a4)
+  19 0008 93E70701 		ori	a5,a5,16
+  20 000c 2322F780 		sw	a5,-2044(a4)
+  53:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** }
+  21              		.loc 1 53 1
+  22 0010 8280     		ret
+  23              		.cfi_endproc
+  24              	.LFE2:
+  26              		.section	.text.rtc_configuration_mode_exit,"ax",@progbits
+  27              		.align	1
+  28              		.globl	rtc_configuration_mode_exit
+  30              	rtc_configuration_mode_exit:
+  31              	.LFB3:
+  54:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** 
+  55:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** /*!
+  56:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     \brief      exit RTC configuration mode
+  57:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     \param[in]  none
+  58:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     \param[out] none
+  59:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     \retval     none
+  60:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** */
+  61:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** void rtc_configuration_mode_exit(void)
+  62:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** {
+  32              		.loc 1 62 1 is_stmt 1
+  33              		.cfi_startproc
+  63:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     RTC_CTL &= ~RTC_CTL_CMF;
+  34              		.loc 1 63 5
+  35              		.loc 1 63 13 is_stmt 0
+  36 0000 37370040 		li	a4,1073754112
+  37 0004 83274780 		lw	a5,-2044(a4)
+  38 0008 BD9B     		andi	a5,a5,-17
+  39 000a 2322F780 		sw	a5,-2044(a4)
+  64:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** }
+  40              		.loc 1 64 1
+  41 000e 8280     		ret
+  42              		.cfi_endproc
+  43              	.LFE3:
+  45              		.section	.text.rtc_counter_set,"ax",@progbits
+  46              		.align	1
+  47              		.globl	rtc_counter_set
+  49              	rtc_counter_set:
+  50              	.LFB4:
+  65:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** 
+  66:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** /*!
+  67:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     \brief      set RTC counter value
+  68:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     \param[in]  cnt: RTC counter value
+  69:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     \param[out] none
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccaTzvPD.s 			page 3
+
+
+  70:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     \retval     none
+  71:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** */
+  72:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** void rtc_counter_set(uint32_t cnt)
+  73:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** {
+  51              		.loc 1 73 1 is_stmt 1
+  52              		.cfi_startproc
+  53              	.LVL0:
+  74:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     rtc_configuration_mode_enter();
+  54              		.loc 1 74 5
+  55              	.LBB14:
+  56              	.LBB15:
+  52:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** }
+  57              		.loc 1 52 5
+  52:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** }
+  58              		.loc 1 52 13 is_stmt 0
+  59 0000 B7370040 		li	a5,1073754112
+  60 0004 03A74780 		lw	a4,-2044(a5)
+  61              	.LBE15:
+  62              	.LBE14:
+  75:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     /* set the RTC counter high bits */
+  76:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     RTC_CNTH = (cnt >> RTC_HIGH_BITS_OFFSET);
+  63              		.loc 1 76 21
+  64 0008 93560501 		srli	a3,a0,16
+  77:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     /* set the RTC counter low bits */
+  78:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     RTC_CNTL = (cnt & RTC_LOW_BITS_MASK);
+  65              		.loc 1 78 21
+  66 000c 4205     		slli	a0,a0,16
+  67              	.LVL1:
+  68              	.LBB17:
+  69              	.LBB16:
+  52:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** }
+  70              		.loc 1 52 13
+  71 000e 13670701 		ori	a4,a4,16
+  72 0012 23A2E780 		sw	a4,-2044(a5)
+  73              	.LBE16:
+  74              	.LBE17:
+  76:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     /* set the RTC counter low bits */
+  75              		.loc 1 76 5 is_stmt 1
+  76:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     /* set the RTC counter low bits */
+  76              		.loc 1 76 14 is_stmt 0
+  77 0016 23ACD780 		sw	a3,-2024(a5)
+  78              		.loc 1 78 5 is_stmt 1
+  79              		.loc 1 78 21 is_stmt 0
+  80 001a 4181     		srli	a0,a0,16
+  81              		.loc 1 78 14
+  82 001c 23AEA780 		sw	a0,-2020(a5)
+  79:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     rtc_configuration_mode_exit();
+  83              		.loc 1 79 5 is_stmt 1
+  84              	.LBB18:
+  85              	.LBB19:
+  63:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** }
+  86              		.loc 1 63 5
+  63:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** }
+  87              		.loc 1 63 13 is_stmt 0
+  88 0020 03A74780 		lw	a4,-2044(a5)
+  89 0024 3D9B     		andi	a4,a4,-17
+  90 0026 23A2E780 		sw	a4,-2044(a5)
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccaTzvPD.s 			page 4
+
+
+  91              	.LBE19:
+  92              	.LBE18:
+  80:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** }
+  93              		.loc 1 80 1
+  94 002a 8280     		ret
+  95              		.cfi_endproc
+  96              	.LFE4:
+  98              		.section	.text.rtc_prescaler_set,"ax",@progbits
+  99              		.align	1
+ 100              		.globl	rtc_prescaler_set
+ 102              	rtc_prescaler_set:
+ 103              	.LFB5:
+  81:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** 
+  82:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** /*!
+  83:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     \brief      set RTC prescaler value
+  84:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     \param[in]  psc: RTC prescaler value
+  85:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     \param[out] none
+  86:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     \retval     none
+  87:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** */
+  88:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** void rtc_prescaler_set(uint32_t psc)
+  89:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** {
+ 104              		.loc 1 89 1 is_stmt 1
+ 105              		.cfi_startproc
+ 106              	.LVL2:
+  90:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     rtc_configuration_mode_enter();
+ 107              		.loc 1 90 5
+ 108              	.LBB20:
+ 109              	.LBB21:
+  52:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** }
+ 110              		.loc 1 52 5
+  52:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** }
+ 111              		.loc 1 52 13 is_stmt 0
+ 112 0000 B7370040 		li	a5,1073754112
+ 113 0004 83A64780 		lw	a3,-2044(a5)
+ 114              	.LBE21:
+ 115              	.LBE20:
+  91:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     /* set the RTC prescaler high bits */
+  92:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     RTC_PSCH = ((psc & RTC_HIGH_BITS_MASK) >> RTC_HIGH_BITS_OFFSET);
+ 116              		.loc 1 92 44
+ 117 0008 13570501 		srli	a4,a0,16
+ 118 000c 3D8B     		andi	a4,a4,15
+ 119              	.LBB23:
+ 120              	.LBB22:
+  52:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** }
+ 121              		.loc 1 52 13
+ 122 000e 93E60601 		ori	a3,a3,16
+ 123 0012 23A2D780 		sw	a3,-2044(a5)
+ 124              	.LBE22:
+ 125              	.LBE23:
+ 126              		.loc 1 92 5 is_stmt 1
+  93:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     /* set the RTC prescaler low bits */
+  94:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     RTC_PSCL = (psc & RTC_LOW_BITS_MASK);
+ 127              		.loc 1 94 21 is_stmt 0
+ 128 0016 4205     		slli	a0,a0,16
+ 129              	.LVL3:
+  92:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     /* set the RTC prescaler low bits */
+ 130              		.loc 1 92 14
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccaTzvPD.s 			page 5
+
+
+ 131 0018 23A4E780 		sw	a4,-2040(a5)
+ 132              		.loc 1 94 5 is_stmt 1
+ 133              		.loc 1 94 21 is_stmt 0
+ 134 001c 4181     		srli	a0,a0,16
+ 135              		.loc 1 94 14
+ 136 001e 23A6A780 		sw	a0,-2036(a5)
+  95:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     rtc_configuration_mode_exit();
+ 137              		.loc 1 95 5 is_stmt 1
+ 138              	.LBB24:
+ 139              	.LBB25:
+  63:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** }
+ 140              		.loc 1 63 5
+  63:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** }
+ 141              		.loc 1 63 13 is_stmt 0
+ 142 0022 03A74780 		lw	a4,-2044(a5)
+ 143 0026 3D9B     		andi	a4,a4,-17
+ 144 0028 23A2E780 		sw	a4,-2044(a5)
+ 145              	.LBE25:
+ 146              	.LBE24:
+  96:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** }
+ 147              		.loc 1 96 1
+ 148 002c 8280     		ret
+ 149              		.cfi_endproc
+ 150              	.LFE5:
+ 152              		.section	.text.rtc_lwoff_wait,"ax",@progbits
+ 153              		.align	1
+ 154              		.globl	rtc_lwoff_wait
+ 156              	rtc_lwoff_wait:
+ 157              	.LFB6:
+  97:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** 
+  98:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** /*!
+  99:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     \brief      wait RTC last write operation finished flag set
+ 100:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     \param[in]  none
+ 101:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     \param[out] none
+ 102:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     \retval     none
+ 103:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** */
+ 104:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** void rtc_lwoff_wait(void)
+ 105:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** {
+ 158              		.loc 1 105 1 is_stmt 1
+ 159              		.cfi_startproc
+ 106:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     /* loop until LWOFF flag is set */
+ 107:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     while(RESET == (RTC_CTL & RTC_CTL_LWOFF)){
+ 160              		.loc 1 107 5
+ 161              		.loc 1 107 21 is_stmt 0
+ 162 0000 37370040 		li	a4,1073754112
+ 163              	.L7:
+ 108:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     }
+ 164              		.loc 1 108 5 is_stmt 1 discriminator 1
+ 107:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     }
+ 165              		.loc 1 107 21 is_stmt 0 discriminator 1
+ 166 0004 83274780 		lw	a5,-2044(a4)
+ 107:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     }
+ 167              		.loc 1 107 29 discriminator 1
+ 168 0008 93F70702 		andi	a5,a5,32
+ 107:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     }
+ 169              		.loc 1 107 10 discriminator 1
+ 170 000c E5DF     		beq	a5,zero,.L7
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccaTzvPD.s 			page 6
+
+
+ 109:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** }
+ 171              		.loc 1 109 1
+ 172 000e 8280     		ret
+ 173              		.cfi_endproc
+ 174              	.LFE6:
+ 176              		.section	.text.rtc_register_sync_wait,"ax",@progbits
+ 177              		.align	1
+ 178              		.globl	rtc_register_sync_wait
+ 180              	rtc_register_sync_wait:
+ 181              	.LFB7:
+ 110:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** 
+ 111:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** /*!
+ 112:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     \brief      wait RTC registers synchronized flag set
+ 113:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     \param[in]  none
+ 114:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     \param[out] none
+ 115:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     \retval     none
+ 116:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** */
+ 117:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** void rtc_register_sync_wait(void)
+ 118:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** {
+ 182              		.loc 1 118 1 is_stmt 1
+ 183              		.cfi_startproc
+ 119:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     /* clear RSYNF flag */
+ 120:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     RTC_CTL &= ~RTC_CTL_RSYNF;
+ 184              		.loc 1 120 5
+ 185              		.loc 1 120 13 is_stmt 0
+ 186 0000 B7360040 		li	a3,1073754112
+ 187 0004 83A74680 		lw	a5,-2044(a3)
+ 121:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     /* loop until RSYNF flag is set */
+ 122:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     while(RESET == (RTC_CTL & RTC_CTL_RSYNF)){
+ 188              		.loc 1 122 21
+ 189 0008 37370040 		li	a4,1073754112
+ 120:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     /* loop until RSYNF flag is set */
+ 190              		.loc 1 120 13
+ 191 000c DD9B     		andi	a5,a5,-9
+ 192 000e 23A2F680 		sw	a5,-2044(a3)
+ 193              		.loc 1 122 5 is_stmt 1
+ 194              	.L11:
+ 123:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     }
+ 195              		.loc 1 123 5 discriminator 1
+ 122:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     }
+ 196              		.loc 1 122 21 is_stmt 0 discriminator 1
+ 197 0012 83274780 		lw	a5,-2044(a4)
+ 122:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     }
+ 198              		.loc 1 122 29 discriminator 1
+ 199 0016 A18B     		andi	a5,a5,8
+ 122:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     }
+ 200              		.loc 1 122 10 discriminator 1
+ 201 0018 EDDF     		beq	a5,zero,.L11
+ 124:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** }
+ 202              		.loc 1 124 1
+ 203 001a 8280     		ret
+ 204              		.cfi_endproc
+ 205              	.LFE7:
+ 207              		.section	.text.rtc_alarm_config,"ax",@progbits
+ 208              		.align	1
+ 209              		.globl	rtc_alarm_config
+ 211              	rtc_alarm_config:
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccaTzvPD.s 			page 7
+
+
+ 212              	.LFB8:
+ 125:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** 
+ 126:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** /*!
+ 127:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     \brief      set RTC alarm value
+ 128:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     \param[in]  alarm: RTC alarm value
+ 129:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     \param[out] none
+ 130:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     \retval     none
+ 131:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** */
+ 132:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** void rtc_alarm_config(uint32_t alarm)
+ 133:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** {
+ 213              		.loc 1 133 1 is_stmt 1
+ 214              		.cfi_startproc
+ 215              	.LVL4:
+ 134:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     rtc_configuration_mode_enter();
+ 216              		.loc 1 134 5
+ 217              	.LBB26:
+ 218              	.LBB27:
+  52:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** }
+ 219              		.loc 1 52 5
+  52:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** }
+ 220              		.loc 1 52 13 is_stmt 0
+ 221 0000 B7370040 		li	a5,1073754112
+ 222 0004 03A74780 		lw	a4,-2044(a5)
+ 223              	.LBE27:
+ 224              	.LBE26:
+ 135:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     /* set the alarm high bits */
+ 136:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     RTC_ALRMH = (alarm >> RTC_HIGH_BITS_OFFSET);
+ 225              		.loc 1 136 24
+ 226 0008 93560501 		srli	a3,a0,16
+ 137:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     /* set the alarm low bits */
+ 138:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     RTC_ALRML = (alarm & RTC_LOW_BITS_MASK);
+ 227              		.loc 1 138 24
+ 228 000c 4205     		slli	a0,a0,16
+ 229              	.LVL5:
+ 230              	.LBB29:
+ 231              	.LBB28:
+  52:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** }
+ 232              		.loc 1 52 13
+ 233 000e 13670701 		ori	a4,a4,16
+ 234 0012 23A2E780 		sw	a4,-2044(a5)
+ 235              	.LBE28:
+ 236              	.LBE29:
+ 136:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     /* set the alarm low bits */
+ 237              		.loc 1 136 5 is_stmt 1
+ 136:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     /* set the alarm low bits */
+ 238              		.loc 1 136 15 is_stmt 0
+ 239 0016 23A0D782 		sw	a3,-2016(a5)
+ 240              		.loc 1 138 5 is_stmt 1
+ 241              		.loc 1 138 24 is_stmt 0
+ 242 001a 4181     		srli	a0,a0,16
+ 243              		.loc 1 138 15
+ 244 001c 23A2A782 		sw	a0,-2012(a5)
+ 139:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     rtc_configuration_mode_exit();
+ 245              		.loc 1 139 5 is_stmt 1
+ 246              	.LBB30:
+ 247              	.LBB31:
+  63:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** }
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccaTzvPD.s 			page 8
+
+
+ 248              		.loc 1 63 5
+  63:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** }
+ 249              		.loc 1 63 13 is_stmt 0
+ 250 0020 03A74780 		lw	a4,-2044(a5)
+ 251 0024 3D9B     		andi	a4,a4,-17
+ 252 0026 23A2E780 		sw	a4,-2044(a5)
+ 253              	.LBE31:
+ 254              	.LBE30:
+ 140:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** }
+ 255              		.loc 1 140 1
+ 256 002a 8280     		ret
+ 257              		.cfi_endproc
+ 258              	.LFE8:
+ 260              		.section	.text.rtc_counter_get,"ax",@progbits
+ 261              		.align	1
+ 262              		.globl	rtc_counter_get
+ 264              	rtc_counter_get:
+ 265              	.LFB9:
+ 141:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** 
+ 142:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** /*!
+ 143:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     \brief      get RTC counter value
+ 144:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     \param[in]  none
+ 145:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     \param[out] none
+ 146:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     \retval     RTC counter value
+ 147:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** */
+ 148:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** uint32_t rtc_counter_get(void)
+ 149:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** {
+ 266              		.loc 1 149 1 is_stmt 1
+ 267              		.cfi_startproc
+ 150:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     uint32_t temp = 0x0U;
+ 268              		.loc 1 150 5
+ 269              	.LVL6:
+ 151:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     
+ 152:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     temp = RTC_CNTL;
+ 270              		.loc 1 152 5
+ 271              		.loc 1 152 10 is_stmt 0
+ 272 0000 B7370040 		li	a5,1073754112
+ 273 0004 03A5C781 		lw	a0,-2020(a5)
+ 274              	.LVL7:
+ 153:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     temp |= (RTC_CNTH << RTC_HIGH_BITS_OFFSET);
+ 275              		.loc 1 153 5 is_stmt 1
+ 276              		.loc 1 153 14 is_stmt 0
+ 277 0008 83A78781 		lw	a5,-2024(a5)
+ 278              	.LVL8:
+ 154:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     return temp;
+ 279              		.loc 1 154 5 is_stmt 1
+ 153:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     temp |= (RTC_CNTH << RTC_HIGH_BITS_OFFSET);
+ 280              		.loc 1 153 23 is_stmt 0
+ 281 000c C207     		slli	a5,a5,16
+ 282              	.LVL9:
+ 155:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** }
+ 283              		.loc 1 155 1
+ 284 000e 5D8D     		or	a0,a5,a0
+ 285              	.LVL10:
+ 286 0010 8280     		ret
+ 287              		.cfi_endproc
+ 288              	.LFE9:
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccaTzvPD.s 			page 9
+
+
+ 290              		.section	.text.rtc_divider_get,"ax",@progbits
+ 291              		.align	1
+ 292              		.globl	rtc_divider_get
+ 294              	rtc_divider_get:
+ 295              	.LFB10:
+ 156:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** 
+ 157:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** /*!
+ 158:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     \brief      get RTC divider value
+ 159:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     \param[in]  none
+ 160:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     \param[out] none
+ 161:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     \retval     RTC divider value
+ 162:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** */
+ 163:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** uint32_t rtc_divider_get(void)
+ 164:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** {
+ 296              		.loc 1 164 1 is_stmt 1
+ 297              		.cfi_startproc
+ 165:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     uint32_t temp = 0x00U;
+ 298              		.loc 1 165 5
+ 299              	.LVL11:
+ 166:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     
+ 167:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     temp = ((RTC_DIVH & RTC_DIVH_DIV) << RTC_HIGH_BITS_OFFSET);
+ 300              		.loc 1 167 5
+ 301              		.loc 1 167 14 is_stmt 0
+ 302 0000 37370040 		li	a4,1073754112
+ 303 0004 83270781 		lw	a5,-2032(a4)
+ 168:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     temp |= RTC_DIVL;
+ 304              		.loc 1 168 13
+ 305 0008 03254781 		lw	a0,-2028(a4)
+ 167:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     temp |= RTC_DIVL;
+ 306              		.loc 1 167 10
+ 307 000c 37070F00 		li	a4,983040
+ 167:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     temp |= RTC_DIVL;
+ 308              		.loc 1 167 39
+ 309 0010 C207     		slli	a5,a5,16
+ 167:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     temp |= RTC_DIVL;
+ 310              		.loc 1 167 10
+ 311 0012 F98F     		and	a5,a5,a4
+ 312              	.LVL12:
+ 313              		.loc 1 168 5 is_stmt 1
+ 169:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     return temp;
+ 314              		.loc 1 169 5
+ 170:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** }
+ 315              		.loc 1 170 1 is_stmt 0
+ 316 0014 5D8D     		or	a0,a5,a0
+ 317              	.LVL13:
+ 318 0016 8280     		ret
+ 319              		.cfi_endproc
+ 320              	.LFE10:
+ 322              		.section	.text.rtc_flag_get,"ax",@progbits
+ 323              		.align	1
+ 324              		.globl	rtc_flag_get
+ 326              	rtc_flag_get:
+ 327              	.LFB11:
+ 171:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** 
+ 172:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** /*!
+ 173:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     \brief      get RTC flag status 
+ 174:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     \param[in]  flag: specify which flag status to get
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccaTzvPD.s 			page 10
+
+
+ 175:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****                 only one parameter can be selected which is shown as below:
+ 176:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****       \arg        RTC_FLAG_SECOND: second interrupt flag
+ 177:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****       \arg        RTC_FLAG_ALARM: alarm interrupt flag
+ 178:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****       \arg        RTC_FLAG_OVERFLOW: overflow interrupt flag
+ 179:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****       \arg        RTC_FLAG_RSYN: registers synchronized flag
+ 180:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****       \arg        RTC_FLAG_LWOF: last write operation finished flag
+ 181:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     \param[out] none
+ 182:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     \retval     SET or RESET
+ 183:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** */
+ 184:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** FlagStatus rtc_flag_get(uint32_t flag)
+ 185:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** {
+ 328              		.loc 1 185 1 is_stmt 1
+ 329              		.cfi_startproc
+ 330              	.LVL14:
+ 186:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     if(RESET != (RTC_CTL & flag)){
+ 331              		.loc 1 186 5
+ 332              		.loc 1 186 18 is_stmt 0
+ 333 0000 B7370040 		li	a5,1073754112
+ 334 0004 83A74780 		lw	a5,-2044(a5)
+ 335              		.loc 1 186 26
+ 336 0008 7D8D     		and	a0,a5,a0
+ 337              	.LVL15:
+ 187:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****         return SET;
+ 188:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     }else{
+ 189:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****         return RESET;
+ 190:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     }
+ 191:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** }
+ 338              		.loc 1 191 1
+ 339 000a 3335A000 		snez	a0,a0
+ 340 000e 8280     		ret
+ 341              		.cfi_endproc
+ 342              	.LFE11:
+ 344              		.section	.text.rtc_flag_clear,"ax",@progbits
+ 345              		.align	1
+ 346              		.globl	rtc_flag_clear
+ 348              	rtc_flag_clear:
+ 349              	.LFB12:
+ 192:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** 
+ 193:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** /*!
+ 194:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     \brief      clear RTC flag status
+ 195:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     \param[in]  flag: specify which flag status to clear
+ 196:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****                 one or more parameters can be selected which are shown as below:
+ 197:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****       \arg        RTC_FLAG_SECOND: second interrupt flag
+ 198:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****       \arg        RTC_FLAG_ALARM: alarm interrupt flag
+ 199:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****       \arg        RTC_FLAG_OVERFLOW: overflow interrupt flag
+ 200:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****       \arg        RTC_FLAG_RSYN: registers synchronized flag
+ 201:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     \param[out] none
+ 202:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     \retval     none
+ 203:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** */
+ 204:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** void rtc_flag_clear(uint32_t flag)
+ 205:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** {
+ 350              		.loc 1 205 1 is_stmt 1
+ 351              		.cfi_startproc
+ 352              	.LVL16:
+ 206:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     /* clear RTC flag */
+ 207:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     RTC_CTL &= ~flag;
+ 353              		.loc 1 207 5
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccaTzvPD.s 			page 11
+
+
+ 354              		.loc 1 207 13 is_stmt 0
+ 355 0000 B7370040 		li	a5,1073754112
+ 356 0004 03A74780 		lw	a4,-2044(a5)
+ 357              		.loc 1 207 16
+ 358 0008 1345F5FF 		not	a0,a0
+ 359              	.LVL17:
+ 360              		.loc 1 207 13
+ 361 000c 798D     		and	a0,a0,a4
+ 362              	.LVL18:
+ 363 000e 23A2A780 		sw	a0,-2044(a5)
+ 208:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** }
+ 364              		.loc 1 208 1
+ 365 0012 8280     		ret
+ 366              		.cfi_endproc
+ 367              	.LFE12:
+ 369              		.section	.text.rtc_interrupt_flag_get,"ax",@progbits
+ 370              		.align	1
+ 371              		.globl	rtc_interrupt_flag_get
+ 373              	rtc_interrupt_flag_get:
+ 374              	.LFB18:
+ 375              		.cfi_startproc
+ 376 0000 17030000 		tail	rtc_flag_get
+ 376      67000300 
+ 377              		.cfi_endproc
+ 378              	.LFE18:
+ 380              		.section	.text.rtc_interrupt_flag_clear,"ax",@progbits
+ 381              		.align	1
+ 382              		.globl	rtc_interrupt_flag_clear
+ 384              	rtc_interrupt_flag_clear:
+ 385              	.LFB20:
+ 386              		.cfi_startproc
+ 387 0000 17030000 		tail	rtc_flag_clear
+ 387      67000300 
+ 388              		.cfi_endproc
+ 389              	.LFE20:
+ 391              		.section	.text.rtc_interrupt_enable,"ax",@progbits
+ 392              		.align	1
+ 393              		.globl	rtc_interrupt_enable
+ 395              	rtc_interrupt_enable:
+ 396              	.LFB15:
+ 209:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** 
+ 210:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** /*!
+ 211:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     \brief      get RTC interrupt flag status 
+ 212:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     \param[in]  flag: specify which flag status to get
+ 213:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****                 only one parameter can be selected which is shown as below:
+ 214:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****       \arg        RTC_INT_FLAG_SECOND: second interrupt flag
+ 215:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****       \arg        RTC_INT_FLAG_ALARM: alarm interrupt flag
+ 216:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****       \arg        RTC_INT_FLAG_OVERFLOW: overflow interrupt flag
+ 217:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     \param[out] none
+ 218:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     \retval     SET or RESET
+ 219:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** */
+ 220:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** FlagStatus rtc_interrupt_flag_get(uint32_t flag)
+ 221:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** {
+ 222:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     if(RESET != (RTC_CTL & flag)){
+ 223:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****         return SET;
+ 224:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     }else{
+ 225:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****         return RESET;
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccaTzvPD.s 			page 12
+
+
+ 226:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     }
+ 227:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** }
+ 228:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** 
+ 229:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** /*!
+ 230:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     \brief      clear RTC interrupt flag status
+ 231:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     \param[in]  flag: specify which flag status to clear
+ 232:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****                 one or more parameters can be selected which are shown as below:
+ 233:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****       \arg        RTC_INT_FLAG_SECOND: second interrupt flag
+ 234:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****       \arg        RTC_INT_FLAG_ALARM: alarm interrupt flag
+ 235:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****       \arg        RTC_INT_FLAG_OVERFLOW: overflow interrupt flag
+ 236:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     \param[out] none
+ 237:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     \retval     none
+ 238:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** */
+ 239:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** void rtc_interrupt_flag_clear(uint32_t flag)
+ 240:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** {
+ 241:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     /* clear RTC interrupt flag */
+ 242:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     RTC_CTL &= ~flag;
+ 243:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** }
+ 244:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** 
+ 245:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** /*!
+ 246:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     \brief      enable RTC interrupt
+ 247:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     \param[in]  interrupt: specify which interrupt to enbale
+ 248:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****                 one or more parameters can be selected which are shown as below:
+ 249:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****       \arg        RTC_INT_SECOND: second interrupt
+ 250:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****       \arg        RTC_INT_ALARM: alarm interrupt
+ 251:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****       \arg        RTC_INT_OVERFLOW: overflow interrupt
+ 252:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     \param[out] none
+ 253:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     \retval     none
+ 254:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** */
+ 255:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** void rtc_interrupt_enable(uint32_t interrupt)
+ 256:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** {
+ 397              		.loc 1 256 1 is_stmt 1
+ 398              		.cfi_startproc
+ 399              	.LVL19:
+ 257:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     RTC_INTEN |= interrupt;
+ 400              		.loc 1 257 5
+ 401              		.loc 1 257 15 is_stmt 0
+ 402 0000 37370040 		li	a4,1073754112
+ 403 0004 83270780 		lw	a5,-2048(a4)
+ 404 0008 5D8D     		or	a0,a5,a0
+ 405              	.LVL20:
+ 406 000a 2320A780 		sw	a0,-2048(a4)
+ 258:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** }
+ 407              		.loc 1 258 1
+ 408 000e 8280     		ret
+ 409              		.cfi_endproc
+ 410              	.LFE15:
+ 412              		.section	.text.rtc_interrupt_disable,"ax",@progbits
+ 413              		.align	1
+ 414              		.globl	rtc_interrupt_disable
+ 416              	rtc_interrupt_disable:
+ 417              	.LFB16:
+ 259:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** 
+ 260:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** /*!
+ 261:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     \brief      disable RTC interrupt
+ 262:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     \param[in]  interrupt: specify which interrupt to disbale
+ 263:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****                 one or more parameters can be selected which are shown as below:
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccaTzvPD.s 			page 13
+
+
+ 264:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****       \arg        RTC_INT_SECOND: second interrupt
+ 265:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****       \arg        RTC_INT_ALARM: alarm interrupt
+ 266:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****       \arg        RTC_INT_OVERFLOW: overflow interrupt
+ 267:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     \param[out] none
+ 268:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     \retval     none
+ 269:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** */
+ 270:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** void rtc_interrupt_disable(uint32_t interrupt)
+ 271:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** {
+ 418              		.loc 1 271 1 is_stmt 1
+ 419              		.cfi_startproc
+ 420              	.LVL21:
+ 272:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     RTC_INTEN &= ~interrupt;
+ 421              		.loc 1 272 5
+ 422              		.loc 1 272 15 is_stmt 0
+ 423 0000 B7370040 		li	a5,1073754112
+ 424 0004 03A70780 		lw	a4,-2048(a5)
+ 425              		.loc 1 272 18
+ 426 0008 1345F5FF 		not	a0,a0
+ 427              	.LVL22:
+ 428              		.loc 1 272 15
+ 429 000c 798D     		and	a0,a0,a4
+ 430              	.LVL23:
+ 431 000e 23A0A780 		sw	a0,-2048(a5)
+ 273:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** }
+ 432              		.loc 1 273 1
+ 433 0012 8280     		ret
+ 434              		.cfi_endproc
+ 435              	.LFE16:
+ 437              		.text
+ 438              	.Letext0:
+ 439              		.file 2 "d:\\risc_v_gcc\\riscv-none-embed\\include\\machine\\_default_types.h"
+ 440              		.file 3 "d:\\risc_v_gcc\\riscv-none-embed\\include\\sys\\_stdint.h"
+ 441              		.file 4 "arch/riscv/mach-gd32vf10x/system/gd32vf103.h"
+ 442              		.file 5 "arch/riscv/mach-gd32vf10x/system/system_gd32vf103.h"
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccaTzvPD.s 			page 14
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 gd32vf103_rtc.c
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:10     .text.rtc_configuration_mode_enter:0000000000000000 rtc_configuration_mode_enter
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:14     .text.rtc_configuration_mode_enter:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:15     .text.rtc_configuration_mode_enter:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:16     .text.rtc_configuration_mode_enter:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:17     .text.rtc_configuration_mode_enter:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:22     .text.rtc_configuration_mode_enter:0000000000000010 .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:23     .text.rtc_configuration_mode_enter:0000000000000012 .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:30     .text.rtc_configuration_mode_exit:0000000000000000 rtc_configuration_mode_exit
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:33     .text.rtc_configuration_mode_exit:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:34     .text.rtc_configuration_mode_exit:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:35     .text.rtc_configuration_mode_exit:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:36     .text.rtc_configuration_mode_exit:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:41     .text.rtc_configuration_mode_exit:000000000000000e .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:42     .text.rtc_configuration_mode_exit:0000000000000010 .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:49     .text.rtc_counter_set:0000000000000000 rtc_counter_set
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:52     .text.rtc_counter_set:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:54     .text.rtc_counter_set:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:57     .text.rtc_counter_set:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:58     .text.rtc_counter_set:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:59     .text.rtc_counter_set:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:64     .text.rtc_counter_set:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:66     .text.rtc_counter_set:000000000000000c .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:71     .text.rtc_counter_set:000000000000000e .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:76     .text.rtc_counter_set:0000000000000016 .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:77     .text.rtc_counter_set:0000000000000016 .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:79     .text.rtc_counter_set:000000000000001a .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:80     .text.rtc_counter_set:000000000000001a .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:82     .text.rtc_counter_set:000000000000001c .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:86     .text.rtc_counter_set:0000000000000020 .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:87     .text.rtc_counter_set:0000000000000020 .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:88     .text.rtc_counter_set:0000000000000020 .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:94     .text.rtc_counter_set:000000000000002a .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:95     .text.rtc_counter_set:000000000000002c .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:102    .text.rtc_prescaler_set:0000000000000000 rtc_prescaler_set
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:105    .text.rtc_prescaler_set:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:107    .text.rtc_prescaler_set:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:110    .text.rtc_prescaler_set:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:111    .text.rtc_prescaler_set:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:112    .text.rtc_prescaler_set:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:117    .text.rtc_prescaler_set:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:122    .text.rtc_prescaler_set:000000000000000e .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:127    .text.rtc_prescaler_set:0000000000000016 .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:128    .text.rtc_prescaler_set:0000000000000016 .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:131    .text.rtc_prescaler_set:0000000000000018 .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:133    .text.rtc_prescaler_set:000000000000001c .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:134    .text.rtc_prescaler_set:000000000000001c .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:136    .text.rtc_prescaler_set:000000000000001e .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:140    .text.rtc_prescaler_set:0000000000000022 .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:141    .text.rtc_prescaler_set:0000000000000022 .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:142    .text.rtc_prescaler_set:0000000000000022 .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:148    .text.rtc_prescaler_set:000000000000002c .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:149    .text.rtc_prescaler_set:000000000000002e .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:156    .text.rtc_lwoff_wait:0000000000000000 rtc_lwoff_wait
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:159    .text.rtc_lwoff_wait:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:160    .text.rtc_lwoff_wait:0000000000000000 .L0 
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccaTzvPD.s 			page 15
+
+
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:161    .text.rtc_lwoff_wait:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:162    .text.rtc_lwoff_wait:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:165    .text.rtc_lwoff_wait:0000000000000004 .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:166    .text.rtc_lwoff_wait:0000000000000004 .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:168    .text.rtc_lwoff_wait:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:170    .text.rtc_lwoff_wait:000000000000000c .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:172    .text.rtc_lwoff_wait:000000000000000e .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:173    .text.rtc_lwoff_wait:0000000000000010 .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:180    .text.rtc_register_sync_wait:0000000000000000 rtc_register_sync_wait
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:183    .text.rtc_register_sync_wait:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:184    .text.rtc_register_sync_wait:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:185    .text.rtc_register_sync_wait:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:186    .text.rtc_register_sync_wait:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:189    .text.rtc_register_sync_wait:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:191    .text.rtc_register_sync_wait:000000000000000c .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:195    .text.rtc_register_sync_wait:0000000000000012 .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:196    .text.rtc_register_sync_wait:0000000000000012 .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:197    .text.rtc_register_sync_wait:0000000000000012 .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:199    .text.rtc_register_sync_wait:0000000000000016 .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:201    .text.rtc_register_sync_wait:0000000000000018 .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:203    .text.rtc_register_sync_wait:000000000000001a .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:204    .text.rtc_register_sync_wait:000000000000001c .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:211    .text.rtc_alarm_config:0000000000000000 rtc_alarm_config
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:214    .text.rtc_alarm_config:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:216    .text.rtc_alarm_config:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:219    .text.rtc_alarm_config:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:220    .text.rtc_alarm_config:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:221    .text.rtc_alarm_config:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:226    .text.rtc_alarm_config:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:228    .text.rtc_alarm_config:000000000000000c .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:233    .text.rtc_alarm_config:000000000000000e .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:238    .text.rtc_alarm_config:0000000000000016 .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:239    .text.rtc_alarm_config:0000000000000016 .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:241    .text.rtc_alarm_config:000000000000001a .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:242    .text.rtc_alarm_config:000000000000001a .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:244    .text.rtc_alarm_config:000000000000001c .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:248    .text.rtc_alarm_config:0000000000000020 .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:249    .text.rtc_alarm_config:0000000000000020 .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:250    .text.rtc_alarm_config:0000000000000020 .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:256    .text.rtc_alarm_config:000000000000002a .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:257    .text.rtc_alarm_config:000000000000002c .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:264    .text.rtc_counter_get:0000000000000000 rtc_counter_get
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:267    .text.rtc_counter_get:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:268    .text.rtc_counter_get:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:270    .text.rtc_counter_get:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:271    .text.rtc_counter_get:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:272    .text.rtc_counter_get:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:276    .text.rtc_counter_get:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:277    .text.rtc_counter_get:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:280    .text.rtc_counter_get:000000000000000c .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:281    .text.rtc_counter_get:000000000000000c .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:284    .text.rtc_counter_get:000000000000000e .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:287    .text.rtc_counter_get:0000000000000012 .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:294    .text.rtc_divider_get:0000000000000000 rtc_divider_get
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:297    .text.rtc_divider_get:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:298    .text.rtc_divider_get:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:300    .text.rtc_divider_get:0000000000000000 .L0 
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccaTzvPD.s 			page 16
+
+
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:301    .text.rtc_divider_get:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:302    .text.rtc_divider_get:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:305    .text.rtc_divider_get:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:307    .text.rtc_divider_get:000000000000000c .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:309    .text.rtc_divider_get:0000000000000010 .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:311    .text.rtc_divider_get:0000000000000012 .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:314    .text.rtc_divider_get:0000000000000014 .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:315    .text.rtc_divider_get:0000000000000014 .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:316    .text.rtc_divider_get:0000000000000014 .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:319    .text.rtc_divider_get:0000000000000018 .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:326    .text.rtc_flag_get:0000000000000000 rtc_flag_get
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:329    .text.rtc_flag_get:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:331    .text.rtc_flag_get:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:332    .text.rtc_flag_get:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:333    .text.rtc_flag_get:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:336    .text.rtc_flag_get:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:339    .text.rtc_flag_get:000000000000000a .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:341    .text.rtc_flag_get:0000000000000010 .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:348    .text.rtc_flag_clear:0000000000000000 rtc_flag_clear
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:351    .text.rtc_flag_clear:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:353    .text.rtc_flag_clear:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:354    .text.rtc_flag_clear:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:355    .text.rtc_flag_clear:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:358    .text.rtc_flag_clear:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:361    .text.rtc_flag_clear:000000000000000c .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:365    .text.rtc_flag_clear:0000000000000012 .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:366    .text.rtc_flag_clear:0000000000000014 .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:373    .text.rtc_interrupt_flag_get:0000000000000000 rtc_interrupt_flag_get
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:375    .text.rtc_interrupt_flag_get:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:377    .text.rtc_interrupt_flag_get:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:384    .text.rtc_interrupt_flag_clear:0000000000000000 rtc_interrupt_flag_clear
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:386    .text.rtc_interrupt_flag_clear:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:388    .text.rtc_interrupt_flag_clear:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:395    .text.rtc_interrupt_enable:0000000000000000 rtc_interrupt_enable
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:398    .text.rtc_interrupt_enable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:400    .text.rtc_interrupt_enable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:401    .text.rtc_interrupt_enable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:402    .text.rtc_interrupt_enable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:408    .text.rtc_interrupt_enable:000000000000000e .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:409    .text.rtc_interrupt_enable:0000000000000010 .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:416    .text.rtc_interrupt_disable:0000000000000000 rtc_interrupt_disable
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:419    .text.rtc_interrupt_disable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:421    .text.rtc_interrupt_disable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:422    .text.rtc_interrupt_disable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:423    .text.rtc_interrupt_disable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:426    .text.rtc_interrupt_disable:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:429    .text.rtc_interrupt_disable:000000000000000c .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:433    .text.rtc_interrupt_disable:0000000000000012 .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:434    .text.rtc_interrupt_disable:0000000000000014 .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:26     .text.rtc_configuration_mode_enter:0000000000000012 .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:45     .text.rtc_configuration_mode_exit:0000000000000010 .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:98     .text.rtc_counter_set:000000000000002c .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:152    .text.rtc_prescaler_set:000000000000002e .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:176    .text.rtc_lwoff_wait:0000000000000010 .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:207    .text.rtc_register_sync_wait:000000000000001c .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:260    .text.rtc_alarm_config:000000000000002c .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:290    .text.rtc_counter_get:0000000000000012 .L0 
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccaTzvPD.s 			page 17
+
+
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:322    .text.rtc_divider_get:0000000000000018 .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:344    .text.rtc_flag_get:0000000000000010 .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:369    .text.rtc_flag_clear:0000000000000014 .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:412    .text.rtc_interrupt_enable:0000000000000010 .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:437    .text.rtc_interrupt_disable:0000000000000014 .L0 
+                     .debug_frame:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:163    .text.rtc_lwoff_wait:0000000000000004 .L7
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:194    .text.rtc_register_sync_wait:0000000000000012 .L11
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:876    .debug_abbrev:0000000000000000 .Ldebug_abbrev0
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:1551   .debug_str:0000000000000011 .LASF30
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:1587   .debug_str:0000000000000190 .LASF31
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:1591   .debug_str:00000000000001cc .LASF32
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:1499   .debug_ranges:0000000000000000 .Ldebug_ranges0
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:1547   .debug_line:0000000000000000 .Ldebug_line0
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:1599   .debug_str:0000000000000218 .LASF0
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:1615   .debug_str:000000000000029b .LASF1
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:1589   .debug_str:00000000000001be .LASF2
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:1609   .debug_str:000000000000027f .LASF3
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:1569   .debug_str:0000000000000109 .LASF4
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:1613   .debug_str:0000000000000292 .LASF5
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:1595   .debug_str:0000000000000208 .LASF9
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:1581   .debug_str:0000000000000173 .LASF6
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:1571   .debug_str:000000000000011c .LASF7
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:1601   .debug_str:0000000000000225 .LASF8
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:1611   .debug_str:0000000000000289 .LASF10
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:1607   .debug_str:000000000000026f .LASF33
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:1585   .debug_str:000000000000018a .LASF11
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:1575   .debug_str:0000000000000134 .LASF12
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:1559   .debug_str:00000000000000bb .LASF13
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:417    .text.rtc_interrupt_disable:0000000000000000 .LFB16
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:435    .text.rtc_interrupt_disable:0000000000000014 .LFE16
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:1573   .debug_str:000000000000012a .LASF15
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:1302   .debug_loc:0000000000000000 .LLST8
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:1565   .debug_str:00000000000000e4 .LASF14
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:396    .text.rtc_interrupt_enable:0000000000000000 .LFB15
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:410    .text.rtc_interrupt_enable:0000000000000010 .LFE15
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:1323   .debug_loc:000000000000002f .LLST7
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:1617   .debug_str:00000000000002a7 .LASF34
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:1597   .debug_str:0000000000000213 .LASF16
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:1577   .debug_str:000000000000013f .LASF35
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:1553   .debug_str:000000000000008b .LASF17
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:349    .text.rtc_flag_clear:0000000000000000 .LFB12
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:367    .text.rtc_flag_clear:0000000000000014 .LFE12
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:1337   .debug_loc:0000000000000050 .LLST6
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:1563   .debug_str:00000000000000d7 .LASF18
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:327    .text.rtc_flag_get:0000000000000000 .LFB11
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:342    .text.rtc_flag_get:0000000000000010 .LFE11
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:1358   .debug_loc:000000000000007f .LLST5
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:1593   .debug_str:00000000000001f8 .LASF19
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:295    .text.rtc_divider_get:0000000000000000 .LFB10
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:320    .text.rtc_divider_get:0000000000000018 .LFE10
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:1583   .debug_str:0000000000000185 .LASF21
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:1372   .debug_loc:00000000000000a0 .LLST4
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:1619   .debug_str:00000000000002c0 .LASF20
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:265    .text.rtc_counter_get:0000000000000000 .LFB9
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:288    .text.rtc_counter_get:0000000000000012 .LFE9
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:1393   .debug_loc:00000000000000cf .LLST3
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccaTzvPD.s 			page 18
+
+
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:1549   .debug_str:0000000000000000 .LASF22
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:212    .text.rtc_alarm_config:0000000000000000 .LFB8
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:258    .text.rtc_alarm_config:000000000000002c .LFE8
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:1561   .debug_str:00000000000000d1 .LASF23
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:1420   .debug_loc:000000000000010b .LLST2
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:217    .text.rtc_alarm_config:0000000000000000 .LBB26
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:246    .text.rtc_alarm_config:0000000000000020 .LBB30
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:254    .text.rtc_alarm_config:000000000000002a .LBE30
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:1605   .debug_str:0000000000000258 .LASF24
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:181    .text.rtc_register_sync_wait:0000000000000000 .LFB7
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:205    .text.rtc_register_sync_wait:000000000000001c .LFE7
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:1555   .debug_str:000000000000009a .LASF25
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:157    .text.rtc_lwoff_wait:0000000000000000 .LFB6
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:174    .text.rtc_lwoff_wait:0000000000000010 .LFE6
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:1557   .debug_str:00000000000000a9 .LASF26
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:103    .text.rtc_prescaler_set:0000000000000000 .LFB5
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:150    .text.rtc_prescaler_set:000000000000002e .LFE5
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:1434   .debug_loc:000000000000012c .LLST1
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:108    .text.rtc_prescaler_set:0000000000000000 .LBB20
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:138    .text.rtc_prescaler_set:0000000000000022 .LBB24
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:146    .text.rtc_prescaler_set:000000000000002c .LBE24
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:1567   .debug_str:00000000000000f9 .LASF27
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:50     .text.rtc_counter_set:0000000000000000 .LFB4
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:96     .text.rtc_counter_set:000000000000002c .LFE4
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:1448   .debug_loc:000000000000014d .LLST0
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:55     .text.rtc_counter_set:0000000000000000 .LBB14
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:84     .text.rtc_counter_set:0000000000000020 .LBB18
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:92     .text.rtc_counter_set:000000000000002a .LBE18
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:1603   .debug_str:000000000000023c .LASF28
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:1579   .debug_str:0000000000000156 .LASF29
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:11     .text.rtc_configuration_mode_enter:0000000000000000 .LFB2
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:24     .text.rtc_configuration_mode_enter:0000000000000012 .LFE2
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:31     .text.rtc_configuration_mode_exit:0000000000000000 .LFB3
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:43     .text.rtc_configuration_mode_exit:0000000000000010 .LFE3
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:420    .text.rtc_interrupt_disable:0000000000000000 .LVL21
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:427    .text.rtc_interrupt_disable:000000000000000c .LVL22
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:430    .text.rtc_interrupt_disable:000000000000000e .LVL23
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:399    .text.rtc_interrupt_enable:0000000000000000 .LVL19
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:405    .text.rtc_interrupt_enable:000000000000000a .LVL20
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:352    .text.rtc_flag_clear:0000000000000000 .LVL16
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:359    .text.rtc_flag_clear:000000000000000c .LVL17
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:362    .text.rtc_flag_clear:000000000000000e .LVL18
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:330    .text.rtc_flag_get:0000000000000000 .LVL14
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:337    .text.rtc_flag_get:000000000000000a .LVL15
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:299    .text.rtc_divider_get:0000000000000000 .LVL11
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:312    .text.rtc_divider_get:0000000000000014 .LVL12
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:317    .text.rtc_divider_get:0000000000000016 .LVL13
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:269    .text.rtc_counter_get:0000000000000000 .LVL6
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:274    .text.rtc_counter_get:0000000000000008 .LVL7
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:278    .text.rtc_counter_get:000000000000000c .LVL8
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:282    .text.rtc_counter_get:000000000000000e .LVL9
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:285    .text.rtc_counter_get:0000000000000010 .LVL10
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:215    .text.rtc_alarm_config:0000000000000000 .LVL4
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:229    .text.rtc_alarm_config:000000000000000e .LVL5
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:106    .text.rtc_prescaler_set:0000000000000000 .LVL2
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:129    .text.rtc_prescaler_set:0000000000000018 .LVL3
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:53     .text.rtc_counter_set:0000000000000000 .LVL0
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccaTzvPD.s 			page 19
+
+
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:67     .text.rtc_counter_set:000000000000000e .LVL1
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:444    .debug_info:0000000000000000 .Ldebug_info0
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:62     .text.rtc_counter_set:0000000000000008 .LBE14
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:68     .text.rtc_counter_set:000000000000000e .LBB17
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:74     .text.rtc_counter_set:0000000000000016 .LBE17
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:115    .text.rtc_prescaler_set:0000000000000008 .LBE20
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:119    .text.rtc_prescaler_set:000000000000000e .LBB23
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:125    .text.rtc_prescaler_set:0000000000000016 .LBE23
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:224    .text.rtc_alarm_config:0000000000000008 .LBE26
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:230    .text.rtc_alarm_config:000000000000000e .LBB29
+C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:236    .text.rtc_alarm_config:0000000000000016 .LBE29
+
+NO UNDEFINED SYMBOLS

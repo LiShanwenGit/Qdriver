@@ -1,0 +1,16 @@
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccAWnIBf.s 			page 1
+
+
+   1              		.file	"gd32vf10x-i2c.c"
+   2              		.option nopic
+   3              		.text
+   4              	.Ltext0:
+   5              		.cfi_sections	.debug_frame
+   6              	.Letext0:
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccAWnIBf.s 			page 2
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 gd32vf10x-i2c.c
+
+NO UNDEFINED SYMBOLS

@@ -1,0 +1,2248 @@
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccuSklz3.s 			page 1
+
+
+   1              		.file	"gd32vf103_gpio.c"
+   2              		.option nopic
+   3              		.text
+   4              	.Ltext0:
+   5              		.cfi_sections	.debug_frame
+   6              		.section	.text.gpio_deinit,"ax",@progbits
+   7              		.align	1
+   8              		.globl	gpio_deinit
+  10              	gpio_deinit:
+  11              	.LFB2:
+  12              		.file 1 "arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c"
+   1:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** /*!
+   2:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     \file  gd32vf103_gpio.c
+   3:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     \brief GPIO driver
+   4:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** 
+   5:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     \version 2019-6-5, V1.0.0, firmware for GD32VF103
+   6:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** */
+   7:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** 
+   8:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** /*
+   9:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     Copyright (c) 2019, GigaDevice Semiconductor Inc.
+  10:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** 
+  11:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     Redistribution and use in source and binary forms, with or without modification, 
+  12:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** are permitted provided that the following conditions are met:
+  13:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** 
+  14:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     1. Redistributions of source code must retain the above copyright notice, this 
+  15:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****        list of conditions and the following disclaimer.
+  16:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     2. Redistributions in binary form must reproduce the above copyright notice, 
+  17:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****        this list of conditions and the following disclaimer in the documentation 
+  18:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****        and/or other materials provided with the distribution.
+  19:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     3. Neither the name of the copyright holder nor the names of its contributors 
+  20:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****        may be used to endorse or promote products derived from this software without 
+  21:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****        specific prior written permission.
+  22:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** 
+  23:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" 
+  24:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED 
+  25:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. 
+  26:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, 
+  27:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT 
+  28:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR 
+  29:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, 
+  30:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) 
+  31:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY 
+  32:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** OF SUCH DAMAGE.
+  33:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** */
+  34:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** 
+  35:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** #include "gd32vf103_gpio.h"
+  36:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** 
+  37:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** #define AFIO_EXTI_SOURCE_MASK              ((uint8_t)0x03U)         /*!< AFIO exti source selection
+  38:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** #define AFIO_EXTI_SOURCE_FIELDS            ((uint8_t)0x04U)         /*!< select AFIO exti source re
+  39:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** #define LSB_16BIT_MASK                     ((uint16_t)0xFFFFU)      /*!< LSB 16-bit mask */
+  40:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** #define PCF_POSITION_MASK                  ((uint32_t)0x000F0000U)  /*!< AFIO_PCF register position
+  41:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** #define PCF_SWJCFG_MASK                    ((uint32_t)0xF0FFFFFFU)  /*!< AFIO_PCF register SWJCFG m
+  42:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** #define PCF_LOCATION1_MASK                 ((uint32_t)0x00200000U)  /*!< AFIO_PCF register location
+  43:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** #define PCF_LOCATION2_MASK                 ((uint32_t)0x00100000U)  /*!< AFIO_PCF register location
+  44:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** #define AFIO_PCF1_FIELDS                   ((uint32_t)0x80000000U)  /*!< select AFIO_PCF1 register 
+  45:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** #define GPIO_OUTPUT_PORT_OFFSET            ((uint32_t)4U)           /*!< GPIO event output port off
+  46:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** 
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccuSklz3.s 			page 2
+
+
+  47:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** /*!
+  48:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     \brief      reset GPIO port
+  49:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     \param[in]  gpio_periph: GPIOx(x = A,B,C,D,E)
+  50:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     \param[out] none
+  51:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     \retval     none
+  52:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** */
+  53:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** void gpio_deinit(uint32_t gpio_periph)
+  54:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** {
+  13              		.loc 1 54 1
+  14              		.cfi_startproc
+  15              	.LVL0:
+  55:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     switch (gpio_periph) {
+  16              		.loc 1 55 5
+  54:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     switch (gpio_periph) {
+  17              		.loc 1 54 1 is_stmt 0
+  18 0000 4111     		addi	sp,sp,-16
+  19              	.LCFI0:
+  20              		.cfi_def_cfa_offset 16
+  21 0002 06C6     		sw	ra,12(sp)
+  22              		.cfi_offset 1, -4
+  23              		.loc 1 55 5
+  24 0004 B7170140 		li	a5,1073811456
+  25 0008 6302F506 		beq	a0,a5,.L2
+  26 000c 63FAA702 		bleu	a0,a5,.L11
+  27 0010 93870740 		addi	a5,a5,1024
+  28 0014 630AF506 		beq	a0,a5,.L7
+  29 0018 B7270140 		li	a5,1073815552
+  30 001c 93870780 		addi	a5,a5,-2048
+  31 0020 6312F508 		bne	a0,a5,.L1
+  56:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     case GPIOA:
+  57:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****         /* reset GPIOA */
+  58:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****         rcu_periph_reset_enable(RCU_GPIOARST);
+  59:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****         rcu_periph_reset_disable(RCU_GPIOARST);
+  60:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****         break;
+  61:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     case GPIOB:
+  62:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****         /* reset GPIOB */
+  63:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****         rcu_periph_reset_enable(RCU_GPIOBRST);
+  64:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****         rcu_periph_reset_disable(RCU_GPIOBRST);
+  65:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****         break;
+  66:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     case GPIOC:
+  67:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****         /* reset GPIOC */
+  68:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****         rcu_periph_reset_enable(RCU_GPIOCRST);
+  69:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****         rcu_periph_reset_disable(RCU_GPIOCRST);
+  70:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****         break;
+  71:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     case GPIOD:
+  72:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****         /* reset GPIOD */
+  73:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****         rcu_periph_reset_enable(RCU_GPIODRST);
+  74:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****         rcu_periph_reset_disable(RCU_GPIODRST);
+  75:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****         break;
+  76:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     case GPIOE:
+  77:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****         /* reset GPIOE */
+  78:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****         rcu_periph_reset_enable(RCU_GPIOERST);
+  32              		.loc 1 78 9 is_stmt 1
+  33 0024 13056030 		li	a0,774
+  34              	.LVL1:
+  35 0028 97000000 		call	rcu_periph_reset_enable
+  35      E7800000 
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccuSklz3.s 			page 3
+
+
+  36              	.LVL2:
+  79:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****         rcu_periph_reset_disable(RCU_GPIOERST);
+  37              		.loc 1 79 9
+  80:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****         break;
+  81:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     default:
+  82:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****         break;
+  83:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     }
+  84:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** }
+  38              		.loc 1 84 1 is_stmt 0
+  39 0030 B240     		lw	ra,12(sp)
+  40              		.cfi_remember_state
+  41              		.cfi_restore 1
+  79:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****         rcu_periph_reset_disable(RCU_GPIOERST);
+  42              		.loc 1 79 9
+  43 0032 13056030 		li	a0,774
+  44              		.loc 1 84 1
+  45 0036 4101     		addi	sp,sp,16
+  46              	.LCFI1:
+  47              		.cfi_def_cfa_offset 0
+  79:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****         rcu_periph_reset_disable(RCU_GPIOERST);
+  48              		.loc 1 79 9
+  49 0038 17030000 		tail	rcu_periph_reset_disable
+  49      67000300 
+  50              	.LVL3:
+  51              	.L11:
+  52              	.LCFI2:
+  53              		.cfi_restore_state
+  55:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     case GPIOA:
+  54              		.loc 1 55 5
+  55 0040 13870780 		addi	a4,a5,-2048
+  56 0044 6303E506 		beq	a0,a4,.L4
+  57 0048 938707C0 		addi	a5,a5,-1024
+  58 004c 631CF504 		bne	a0,a5,.L1
+  63:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****         rcu_periph_reset_disable(RCU_GPIOBRST);
+  59              		.loc 1 63 9 is_stmt 1
+  60 0050 13053030 		li	a0,771
+  61              	.LVL4:
+  62 0054 97000000 		call	rcu_periph_reset_enable
+  62      E7800000 
+  63              	.LVL5:
+  64:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****         break;
+  64              		.loc 1 64 9
+  65              		.loc 1 84 1 is_stmt 0
+  66 005c B240     		lw	ra,12(sp)
+  67              		.cfi_remember_state
+  68              		.cfi_restore 1
+  64:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****         break;
+  69              		.loc 1 64 9
+  70 005e 13053030 		li	a0,771
+  71              		.loc 1 84 1
+  72 0062 4101     		addi	sp,sp,16
+  73              	.LCFI3:
+  74              		.cfi_def_cfa_offset 0
+  64:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****         break;
+  75              		.loc 1 64 9
+  76 0064 17030000 		tail	rcu_periph_reset_disable
+  76      67000300 
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccuSklz3.s 			page 4
+
+
+  77              	.LVL6:
+  78              	.L2:
+  79              	.LCFI4:
+  80              		.cfi_restore_state
+  68:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****         rcu_periph_reset_disable(RCU_GPIOCRST);
+  81              		.loc 1 68 9 is_stmt 1
+  82 006c 13054030 		li	a0,772
+  83              	.LVL7:
+  84 0070 97000000 		call	rcu_periph_reset_enable
+  84      E7800000 
+  85              	.LVL8:
+  69:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****         break;
+  86              		.loc 1 69 9
+  87              		.loc 1 84 1 is_stmt 0
+  88 0078 B240     		lw	ra,12(sp)
+  89              		.cfi_remember_state
+  90              		.cfi_restore 1
+  69:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****         break;
+  91              		.loc 1 69 9
+  92 007a 13054030 		li	a0,772
+  93              		.loc 1 84 1
+  94 007e 4101     		addi	sp,sp,16
+  95              	.LCFI5:
+  96              		.cfi_def_cfa_offset 0
+  69:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****         break;
+  97              		.loc 1 69 9
+  98 0080 17030000 		tail	rcu_periph_reset_disable
+  98      67000300 
+  99              	.LVL9:
+ 100              	.L7:
+ 101              	.LCFI6:
+ 102              		.cfi_restore_state
+  73:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****         rcu_periph_reset_disable(RCU_GPIODRST);
+ 103              		.loc 1 73 9 is_stmt 1
+ 104 0088 13055030 		li	a0,773
+ 105              	.LVL10:
+ 106 008c 97000000 		call	rcu_periph_reset_enable
+ 106      E7800000 
+ 107              	.LVL11:
+  74:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****         break;
+ 108              		.loc 1 74 9
+ 109              		.loc 1 84 1 is_stmt 0
+ 110 0094 B240     		lw	ra,12(sp)
+ 111              		.cfi_remember_state
+ 112              		.cfi_restore 1
+  74:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****         break;
+ 113              		.loc 1 74 9
+ 114 0096 13055030 		li	a0,773
+ 115              		.loc 1 84 1
+ 116 009a 4101     		addi	sp,sp,16
+ 117              	.LCFI7:
+ 118              		.cfi_def_cfa_offset 0
+  74:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****         break;
+ 119              		.loc 1 74 9
+ 120 009c 17030000 		tail	rcu_periph_reset_disable
+ 120      67000300 
+ 121              	.LVL12:
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccuSklz3.s 			page 5
+
+
+ 122              	.L1:
+ 123              	.LCFI8:
+ 124              		.cfi_restore_state
+ 125              		.loc 1 84 1
+ 126 00a4 B240     		lw	ra,12(sp)
+ 127              		.cfi_remember_state
+ 128              		.cfi_restore 1
+ 129 00a6 4101     		addi	sp,sp,16
+ 130              	.LCFI9:
+ 131              		.cfi_def_cfa_offset 0
+ 132 00a8 8280     		jr	ra
+ 133              	.L4:
+ 134              	.LCFI10:
+ 135              		.cfi_restore_state
+  58:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****         rcu_periph_reset_disable(RCU_GPIOARST);
+ 136              		.loc 1 58 9 is_stmt 1
+ 137 00aa 13052030 		li	a0,770
+ 138              	.LVL13:
+ 139 00ae 97000000 		call	rcu_periph_reset_enable
+ 139      E7800000 
+ 140              	.LVL14:
+  59:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****         break;
+ 141              		.loc 1 59 9
+ 142              		.loc 1 84 1 is_stmt 0
+ 143 00b6 B240     		lw	ra,12(sp)
+ 144              		.cfi_restore 1
+  59:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****         break;
+ 145              		.loc 1 59 9
+ 146 00b8 13052030 		li	a0,770
+ 147              		.loc 1 84 1
+ 148 00bc 4101     		addi	sp,sp,16
+ 149              	.LCFI11:
+ 150              		.cfi_def_cfa_offset 0
+  59:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****         break;
+ 151              		.loc 1 59 9
+ 152 00be 17030000 		tail	rcu_periph_reset_disable
+ 152      67000300 
+ 153              	.LVL15:
+ 154              		.cfi_endproc
+ 155              	.LFE2:
+ 157              		.section	.text.gpio_afio_deinit,"ax",@progbits
+ 158              		.align	1
+ 159              		.globl	gpio_afio_deinit
+ 161              	gpio_afio_deinit:
+ 162              	.LFB3:
+  85:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** 
+  86:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** /*!
+  87:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     \brief      reset alternate function I/O(AFIO)
+  88:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     \param[in]  none
+  89:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     \param[out] none
+  90:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     \retval     none
+  91:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** */
+  92:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** void gpio_afio_deinit(void)
+  93:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** {
+ 163              		.loc 1 93 1 is_stmt 1
+ 164              		.cfi_startproc
+  94:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     rcu_periph_reset_enable(RCU_AFRST);
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccuSklz3.s 			page 6
+
+
+ 165              		.loc 1 94 5
+  93:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     rcu_periph_reset_enable(RCU_AFRST);
+ 166              		.loc 1 93 1 is_stmt 0
+ 167 0000 4111     		addi	sp,sp,-16
+ 168              	.LCFI12:
+ 169              		.cfi_def_cfa_offset 16
+ 170              		.loc 1 94 5
+ 171 0002 13050030 		li	a0,768
+  93:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     rcu_periph_reset_enable(RCU_AFRST);
+ 172              		.loc 1 93 1
+ 173 0006 06C6     		sw	ra,12(sp)
+ 174              		.cfi_offset 1, -4
+ 175              		.loc 1 94 5
+ 176 0008 97000000 		call	rcu_periph_reset_enable
+ 176      E7800000 
+ 177              	.LVL16:
+  95:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     rcu_periph_reset_disable(RCU_AFRST);
+ 178              		.loc 1 95 5 is_stmt 1
+  96:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** }
+ 179              		.loc 1 96 1 is_stmt 0
+ 180 0010 B240     		lw	ra,12(sp)
+ 181              		.cfi_restore 1
+  95:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     rcu_periph_reset_disable(RCU_AFRST);
+ 182              		.loc 1 95 5
+ 183 0012 13050030 		li	a0,768
+ 184              		.loc 1 96 1
+ 185 0016 4101     		addi	sp,sp,16
+ 186              	.LCFI13:
+ 187              		.cfi_def_cfa_offset 0
+  95:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     rcu_periph_reset_disable(RCU_AFRST);
+ 188              		.loc 1 95 5
+ 189 0018 17030000 		tail	rcu_periph_reset_disable
+ 189      67000300 
+ 190              	.LVL17:
+ 191              		.cfi_endproc
+ 192              	.LFE3:
+ 194              		.section	.text.gpio_init,"ax",@progbits
+ 195              		.align	1
+ 196              		.globl	gpio_init
+ 198              	gpio_init:
+ 199              	.LFB4:
+  97:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** 
+  98:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** /*!
+  99:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     \brief      GPIO parameter initialization
+ 100:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     \param[in]  gpio_periph: GPIOx(x = A,B,C,D,E)
+ 101:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     \param[in]  mode: gpio pin mode
+ 102:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****                 only one parameter can be selected which is shown as below:
+ 103:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****       \arg        GPIO_MODE_AIN: analog input mode
+ 104:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****       \arg        GPIO_MODE_IN_FLOATING: floating input mode
+ 105:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****       \arg        GPIO_MODE_IPD: pull-down input mode
+ 106:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****       \arg        GPIO_MODE_IPU: pull-up input mode
+ 107:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****       \arg        GPIO_MODE_OUT_OD: GPIO output with open-drain
+ 108:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****       \arg        GPIO_MODE_OUT_PP: GPIO output with push-pull
+ 109:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****       \arg        GPIO_MODE_AF_OD: AFIO output with open-drain
+ 110:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****       \arg        GPIO_MODE_AF_PP: AFIO output with push-pull
+ 111:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     \param[in]  speed: gpio output max speed value
+ 112:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****                 only one parameter can be selected which is shown as below:
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccuSklz3.s 			page 7
+
+
+ 113:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****       \arg        GPIO_OSPEED_10MHZ: output max speed 10MHz
+ 114:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****       \arg        GPIO_OSPEED_2MHZ: output max speed 2MHz
+ 115:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****       \arg        GPIO_OSPEED_50MHZ: output max speed 50MHz
+ 116:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     \param[in]  pin: GPIO pin
+ 117:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****                 one or more parameters can be selected which are shown as below:
+ 118:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****       \arg        GPIO_PIN_x(x=0..15), GPIO_PIN_ALL
+ 119:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** 
+ 120:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     \param[out] none
+ 121:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     \retval     none
+ 122:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** */
+ 123:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** void gpio_init(uint32_t gpio_periph, uint32_t mode, uint32_t speed,
+ 124:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****         uint32_t pin)
+ 125:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** {
+ 200              		.loc 1 125 1 is_stmt 1
+ 201              		.cfi_startproc
+ 202              	.LVL18:
+ 126:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     uint16_t i;
+ 203              		.loc 1 126 5
+ 127:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     uint32_t temp_mode = 0U;
+ 204              		.loc 1 127 5
+ 128:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     uint32_t reg = 0U;
+ 205              		.loc 1 128 5
+ 129:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** 
+ 130:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     /* GPIO mode configuration */
+ 131:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     temp_mode = (uint32_t) (mode & ((uint32_t) 0x0FU));
+ 206              		.loc 1 131 5
+ 132:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** 
+ 133:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     /* GPIO speed configuration */
+ 134:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     if (((uint32_t) 0x00U) != ((uint32_t) mode & ((uint32_t) 0x10U))) {
+ 207              		.loc 1 134 48 is_stmt 0
+ 208 0000 93F70501 		andi	a5,a1,16
+ 131:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** 
+ 209              		.loc 1 131 15
+ 210 0004 93F8F500 		andi	a7,a1,15
+ 211              	.LVL19:
+ 212              		.loc 1 134 5 is_stmt 1
+ 213              		.loc 1 134 8 is_stmt 0
+ 214 0008 99C3     		beq	a5,zero,.L15
+ 135:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****         /* output mode max speed:10MHz,2MHz,50MHz */
+ 136:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****         temp_mode |= (uint32_t) speed;
+ 215              		.loc 1 136 9 is_stmt 1
+ 216              		.loc 1 136 19 is_stmt 0
+ 217 000a B3E8C800 		or	a7,a7,a2
+ 218              	.LVL20:
+ 219              	.L15:
+ 137:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     }
+ 138:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** 
+ 139:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     /* configure the eight low port pins with GPIO_CTL0 */
+ 140:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     for (i = 0U; i < 8U; i++) {
+ 220              		.loc 1 140 5 is_stmt 1
+ 125:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     uint16_t i;
+ 221              		.loc 1 125 1 is_stmt 0
+ 222 000e 8147     		li	a5,0
+ 141:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****         if ((1U << i) & pin) {
+ 223              		.loc 1 141 17
+ 224 0010 854E     		li	t4,1
+ 142:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****             reg = GPIO_CTL0(gpio_periph);
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccuSklz3.s 			page 8
+
+
+ 143:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** 
+ 144:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****             /* clear the specified pin mode bits */
+ 145:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****             reg &= ~GPIO_MODE_MASK(i);
+ 225              		.loc 1 145 21
+ 226 0012 3D4E     		li	t3,15
+ 146:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****             /* set the specified pin mode bits */
+ 147:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****             reg |= GPIO_MODE_SET(i, temp_mode);
+ 148:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** 
+ 149:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****             /* set IPD or IPU */
+ 150:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****             if (GPIO_MODE_IPD == mode) {
+ 227              		.loc 1 150 16
+ 228 0014 930F8002 		li	t6,40
+ 151:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****                 /* reset the corresponding OCTL bit */
+ 152:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****                 GPIO_BC(gpio_periph) = (uint32_t) ((1U << i) & pin);
+ 153:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****             } else {
+ 154:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****                 /* set the corresponding OCTL bit */
+ 155:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****                 if (GPIO_MODE_IPU == mode) {
+ 229              		.loc 1 155 20
+ 230 0018 93028004 		li	t0,72
+ 140:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****         if ((1U << i) & pin) {
+ 231              		.loc 1 140 5
+ 232 001c 2143     		li	t1,8
+ 233              	.LVL21:
+ 234              	.L19:
+ 141:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****             reg = GPIO_CTL0(gpio_periph);
+ 235              		.loc 1 141 9 is_stmt 1
+ 142:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** 
+ 236              		.loc 1 142 13
+ 237 001e 13962700 		slli	a2,a5,2
+ 141:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****             reg = GPIO_CTL0(gpio_periph);
+ 238              		.loc 1 141 17 is_stmt 0
+ 239 0022 3397FE00 		sll	a4,t4,a5
+ 145:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****             /* set the specified pin mode bits */
+ 240              		.loc 1 145 21
+ 241 0026 3318CE00 		sll	a6,t3,a2
+ 141:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****             reg = GPIO_CTL0(gpio_periph);
+ 242              		.loc 1 141 23
+ 243 002a 758F     		and	a4,a4,a3
+ 145:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****             /* set the specified pin mode bits */
+ 244              		.loc 1 145 20
+ 245 002c 1348F8FF 		not	a6,a6
+ 147:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** 
+ 246              		.loc 1 147 20
+ 247 0030 3396C800 		sll	a2,a7,a2
+ 141:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****             reg = GPIO_CTL0(gpio_periph);
+ 248              		.loc 1 141 12
+ 249 0034 01CF     		beq	a4,zero,.L16
+ 250              		.loc 1 155 17 is_stmt 1
+ 142:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** 
+ 251              		.loc 1 142 17 is_stmt 0
+ 252 0036 032F0500 		lw	t5,0(a0)
+ 253              	.LVL22:
+ 145:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****             /* set the specified pin mode bits */
+ 254              		.loc 1 145 13 is_stmt 1
+ 145:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****             /* set the specified pin mode bits */
+ 255              		.loc 1 145 17 is_stmt 0
+ 256 003a 3378E801 		and	a6,a6,t5
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccuSklz3.s 			page 9
+
+
+ 257              	.LVL23:
+ 147:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** 
+ 258              		.loc 1 147 13 is_stmt 1
+ 147:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** 
+ 259              		.loc 1 147 17 is_stmt 0
+ 260 003e 33660601 		or	a2,a2,a6
+ 261              	.LVL24:
+ 150:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****                 /* reset the corresponding OCTL bit */
+ 262              		.loc 1 150 13 is_stmt 1
+ 150:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****                 /* reset the corresponding OCTL bit */
+ 263              		.loc 1 150 16 is_stmt 0
+ 264 0042 638FF505 		beq	a1,t6,.L35
+ 265              		.loc 1 155 20
+ 266 0046 63895504 		beq	a1,t0,.L36
+ 267              	.L18:
+ 156:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****                     GPIO_BOP(gpio_periph) = (uint32_t) ((1U << i) & pin);
+ 157:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****                 }
+ 158:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****             }
+ 159:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****             /* set GPIO_CTL0 register */
+ 160:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****             GPIO_CTL0(gpio_periph) = reg;
+ 268              		.loc 1 160 13 is_stmt 1
+ 269              		.loc 1 160 36 is_stmt 0
+ 270 004a 10C1     		sw	a2,0(a0)
+ 271              	.LVL25:
+ 272              	.L16:
+ 273 004c 8507     		addi	a5,a5,1
+ 274              	.LVL26:
+ 140:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****         if ((1U << i) & pin) {
+ 275              		.loc 1 140 5 discriminator 2
+ 276 004e E39867FC 		bne	a5,t1,.L19
+ 161:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****         }
+ 162:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     }
+ 163:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     /* configure the eight high port pins with GPIO_CTL1 */
+ 164:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     for (i = 8U; i < 16U; i++) {
+ 165:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****         if ((1U << i) & pin) {
+ 277              		.loc 1 165 17
+ 278 0052 854E     		li	t4,1
+ 166:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****             reg = GPIO_CTL1(gpio_periph);
+ 167:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** 
+ 168:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****             /* clear the specified pin mode bits */
+ 169:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****             reg &= ~GPIO_MODE_MASK(i - 8U);
+ 279              		.loc 1 169 21
+ 280 0054 3D4E     		li	t3,15
+ 170:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****             /* set the specified pin mode bits */
+ 171:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****             reg |= GPIO_MODE_SET(i - 8U, temp_mode);
+ 172:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** 
+ 173:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****             /* set IPD or IPU */
+ 174:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****             if (GPIO_MODE_IPD == mode) {
+ 281              		.loc 1 174 16
+ 282 0056 930F8002 		li	t6,40
+ 175:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****                 /* reset the corresponding OCTL bit */
+ 176:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****                 GPIO_BC(gpio_periph) = (uint32_t) ((1U << i) & pin);
+ 177:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****             } else {
+ 178:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****                 /* set the corresponding OCTL bit */
+ 179:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****                 if (GPIO_MODE_IPU == mode) {
+ 283              		.loc 1 179 20
+ 284 005a 93028004 		li	t0,72
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccuSklz3.s 			page 10
+
+
+ 164:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****         if ((1U << i) & pin) {
+ 285              		.loc 1 164 5
+ 286 005e 4143     		li	t1,16
+ 287              	.L23:
+ 288              	.LVL27:
+ 165:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****             reg = GPIO_CTL1(gpio_periph);
+ 289              		.loc 1 165 9 is_stmt 1
+ 166:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** 
+ 290              		.loc 1 166 13
+ 169:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****             /* set the specified pin mode bits */
+ 291              		.loc 1 169 21 is_stmt 0
+ 292 0060 13972700 		slli	a4,a5,2
+ 293 0064 0117     		addi	a4,a4,-32
+ 165:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****             reg = GPIO_CTL1(gpio_periph);
+ 294              		.loc 1 165 17
+ 295 0066 3396FE00 		sll	a2,t4,a5
+ 169:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****             /* set the specified pin mode bits */
+ 296              		.loc 1 169 21
+ 297 006a 3318EE00 		sll	a6,t3,a4
+ 165:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****             reg = GPIO_CTL1(gpio_periph);
+ 298              		.loc 1 165 23
+ 299 006e 758E     		and	a2,a2,a3
+ 169:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****             /* set the specified pin mode bits */
+ 300              		.loc 1 169 20
+ 301 0070 1348F8FF 		not	a6,a6
+ 171:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** 
+ 302              		.loc 1 171 20
+ 303 0074 3397E800 		sll	a4,a7,a4
+ 165:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****             reg = GPIO_CTL1(gpio_periph);
+ 304              		.loc 1 165 12
+ 305 0078 01CE     		beq	a2,zero,.L20
+ 306              		.loc 1 179 17 is_stmt 1
+ 166:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** 
+ 307              		.loc 1 166 17 is_stmt 0
+ 308 007a 032F4500 		lw	t5,4(a0)
+ 309              	.LVL28:
+ 169:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****             /* set the specified pin mode bits */
+ 310              		.loc 1 169 13 is_stmt 1
+ 169:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****             /* set the specified pin mode bits */
+ 311              		.loc 1 169 17 is_stmt 0
+ 312 007e 3378E801 		and	a6,a6,t5
+ 313              	.LVL29:
+ 171:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** 
+ 314              		.loc 1 171 13 is_stmt 1
+ 171:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** 
+ 315              		.loc 1 171 17 is_stmt 0
+ 316 0082 33670701 		or	a4,a4,a6
+ 317              	.LVL30:
+ 174:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****                 /* reset the corresponding OCTL bit */
+ 318              		.loc 1 174 13 is_stmt 1
+ 174:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****                 /* reset the corresponding OCTL bit */
+ 319              		.loc 1 174 16 is_stmt 0
+ 320 0086 638FF501 		beq	a1,t6,.L37
+ 321              		.loc 1 179 20
+ 322 008a 63895500 		beq	a1,t0,.L38
+ 323              	.L22:
+ 180:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****                     GPIO_BOP(gpio_periph) = (uint32_t) ((1U << i) & pin);
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccuSklz3.s 			page 11
+
+
+ 181:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****                 }
+ 182:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****             }
+ 183:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****             /* set GPIO_CTL1 register */
+ 184:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****             GPIO_CTL1(gpio_periph) = reg;
+ 324              		.loc 1 184 13 is_stmt 1
+ 325              		.loc 1 184 36 is_stmt 0
+ 326 008e 58C1     		sw	a4,4(a0)
+ 327              	.LVL31:
+ 328              	.L20:
+ 329 0090 8507     		addi	a5,a5,1
+ 330              	.LVL32:
+ 164:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****         if ((1U << i) & pin) {
+ 331              		.loc 1 164 5 discriminator 2
+ 332 0092 E39767FC 		bne	a5,t1,.L23
+ 185:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****         }
+ 186:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     }
+ 187:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** }
+ 333              		.loc 1 187 1
+ 334 0096 8280     		ret
+ 335              	.LVL33:
+ 336              	.L36:
+ 156:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****                 }
+ 337              		.loc 1 156 21 is_stmt 1
+ 156:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****                 }
+ 338              		.loc 1 156 43 is_stmt 0
+ 339 0098 18C9     		sw	a4,16(a0)
+ 340 009a 45BF     		j	.L18
+ 341              	.LVL34:
+ 342              	.L38:
+ 180:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****                 }
+ 343              		.loc 1 180 21 is_stmt 1
+ 180:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****                 }
+ 344              		.loc 1 180 43 is_stmt 0
+ 345 009c 10C9     		sw	a2,16(a0)
+ 346 009e C5BF     		j	.L22
+ 347              	.LVL35:
+ 348              	.L35:
+ 152:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****             } else {
+ 349              		.loc 1 152 17 is_stmt 1
+ 152:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****             } else {
+ 350              		.loc 1 152 38 is_stmt 0
+ 351 00a0 58C9     		sw	a4,20(a0)
+ 352 00a2 65B7     		j	.L18
+ 353              	.LVL36:
+ 354              	.L37:
+ 176:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****             } else {
+ 355              		.loc 1 176 17 is_stmt 1
+ 176:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****             } else {
+ 356              		.loc 1 176 38 is_stmt 0
+ 357 00a4 50C9     		sw	a2,20(a0)
+ 358 00a6 E5B7     		j	.L22
+ 359              		.cfi_endproc
+ 360              	.LFE4:
+ 362              		.section	.text.gpio_bit_set,"ax",@progbits
+ 363              		.align	1
+ 364              		.globl	gpio_bit_set
+ 366              	gpio_bit_set:
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccuSklz3.s 			page 12
+
+
+ 367              	.LFB5:
+ 188:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** 
+ 189:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** /*!
+ 190:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     \brief      set GPIO pin
+ 191:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     \param[in]  gpio_periph: GPIOx(x = A,B,C,D,E)
+ 192:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     \param[in]  pin: GPIO pin
+ 193:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****                 one or more parameters can be selected which are shown as below:
+ 194:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****       \arg        GPIO_PIN_x(x=0..15), GPIO_PIN_ALL
+ 195:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     \param[out] none
+ 196:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     \retval     none
+ 197:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** */
+ 198:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** void gpio_bit_set(uint32_t gpio_periph, uint32_t pin)
+ 199:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** {
+ 368              		.loc 1 199 1 is_stmt 1
+ 369              		.cfi_startproc
+ 370              	.LVL37:
+ 200:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     GPIO_BOP(gpio_periph) = (uint32_t) pin;
+ 371              		.loc 1 200 5
+ 372              		.loc 1 200 27 is_stmt 0
+ 373 0000 0CC9     		sw	a1,16(a0)
+ 201:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** }
+ 374              		.loc 1 201 1
+ 375 0002 8280     		ret
+ 376              		.cfi_endproc
+ 377              	.LFE5:
+ 379              		.section	.text.gpio_bit_reset,"ax",@progbits
+ 380              		.align	1
+ 381              		.globl	gpio_bit_reset
+ 383              	gpio_bit_reset:
+ 384              	.LFB6:
+ 202:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** 
+ 203:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** /*!
+ 204:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     \brief      reset GPIO pin
+ 205:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     \param[in]  gpio_periph: GPIOx(x = A,B,C,D,E)
+ 206:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     \param[in]  pin: GPIO pin
+ 207:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****                 one or more parameters can be selected which are shown as below:
+ 208:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****       \arg        GPIO_PIN_x(x=0..15), GPIO_PIN_ALL
+ 209:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     \param[out] none
+ 210:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     \retval     none
+ 211:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** */
+ 212:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** void gpio_bit_reset(uint32_t gpio_periph, uint32_t pin)
+ 213:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** {
+ 385              		.loc 1 213 1 is_stmt 1
+ 386              		.cfi_startproc
+ 387              	.LVL38:
+ 214:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     GPIO_BC(gpio_periph) = (uint32_t) pin;
+ 388              		.loc 1 214 5
+ 389              		.loc 1 214 26 is_stmt 0
+ 390 0000 4CC9     		sw	a1,20(a0)
+ 215:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** }
+ 391              		.loc 1 215 1
+ 392 0002 8280     		ret
+ 393              		.cfi_endproc
+ 394              	.LFE6:
+ 396              		.section	.text.gpio_bit_write,"ax",@progbits
+ 397              		.align	1
+ 398              		.globl	gpio_bit_write
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccuSklz3.s 			page 13
+
+
+ 400              	gpio_bit_write:
+ 401              	.LFB7:
+ 216:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** 
+ 217:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** /*!
+ 218:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     \brief      write data to the specified GPIO pin
+ 219:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     \param[in]  gpio_periph: GPIOx(x = A,B,C,D,E)
+ 220:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     \param[in]  pin: GPIO pin
+ 221:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****                 one or more parameters can be selected which are shown as below:
+ 222:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****       \arg        GPIO_PIN_x(x=0..15), GPIO_PIN_ALL
+ 223:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     \param[in]  bit_value: SET or RESET
+ 224:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****                 only one parameter can be selected which is shown as below:
+ 225:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****       \arg        RESET: clear the port pin
+ 226:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****       \arg        SET: set the port pin
+ 227:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     \param[out] none
+ 228:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     \retval     none
+ 229:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** */
+ 230:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** void gpio_bit_write(uint32_t gpio_periph, uint32_t pin, bit_status bit_value)
+ 231:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** {
+ 402              		.loc 1 231 1 is_stmt 1
+ 403              		.cfi_startproc
+ 404              	.LVL39:
+ 232:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     if (RESET != bit_value) {
+ 405              		.loc 1 232 5
+ 406              		.loc 1 232 8 is_stmt 0
+ 407 0000 19C2     		beq	a2,zero,.L42
+ 233:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****         GPIO_BOP(gpio_periph) = (uint32_t) pin;
+ 408              		.loc 1 233 9 is_stmt 1
+ 409              		.loc 1 233 31 is_stmt 0
+ 410 0002 0CC9     		sw	a1,16(a0)
+ 411 0004 8280     		ret
+ 412              	.L42:
+ 234:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     } else {
+ 235:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****         GPIO_BC(gpio_periph) = (uint32_t) pin;
+ 413              		.loc 1 235 9 is_stmt 1
+ 414              		.loc 1 235 30 is_stmt 0
+ 415 0006 4CC9     		sw	a1,20(a0)
+ 236:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     }
+ 237:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** }
+ 416              		.loc 1 237 1
+ 417 0008 8280     		ret
+ 418              		.cfi_endproc
+ 419              	.LFE7:
+ 421              		.section	.text.gpio_port_write,"ax",@progbits
+ 422              		.align	1
+ 423              		.globl	gpio_port_write
+ 425              	gpio_port_write:
+ 426              	.LFB8:
+ 238:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** 
+ 239:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** /*!
+ 240:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     \brief      write data to the specified GPIO port
+ 241:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     \param[in]  gpio_periph: GPIOx(x = A,B,C,D,E)
+ 242:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     \param[in]  data: specify the value to be written to the port output data register
+ 243:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     \param[out] none
+ 244:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     \retval     none
+ 245:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** */
+ 246:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** void gpio_port_write(uint32_t gpio_periph, uint16_t data)
+ 247:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** {
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccuSklz3.s 			page 14
+
+
+ 427              		.loc 1 247 1 is_stmt 1
+ 428              		.cfi_startproc
+ 429              	.LVL40:
+ 248:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     GPIO_OCTL(gpio_periph) = (uint32_t) data;
+ 430              		.loc 1 248 5
+ 431              		.loc 1 248 28 is_stmt 0
+ 432 0000 4CC5     		sw	a1,12(a0)
+ 249:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** }
+ 433              		.loc 1 249 1
+ 434 0002 8280     		ret
+ 435              		.cfi_endproc
+ 436              	.LFE8:
+ 438              		.section	.text.gpio_input_bit_get,"ax",@progbits
+ 439              		.align	1
+ 440              		.globl	gpio_input_bit_get
+ 442              	gpio_input_bit_get:
+ 443              	.LFB9:
+ 250:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** 
+ 251:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** /*!
+ 252:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     \brief      get GPIO pin input status
+ 253:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     \param[in]  gpio_periph: GPIOx(x = A,B,C,D,E)
+ 254:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     \param[in]  pin: GPIO pin
+ 255:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****                 only one parameter can be selected which are shown as below:
+ 256:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****       \arg        GPIO_PIN_x(x=0..15), GPIO_PIN_ALL
+ 257:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     \param[out] none
+ 258:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     \retval     input status of gpio pin: SET or RESET
+ 259:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** */
+ 260:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** FlagStatus gpio_input_bit_get(uint32_t gpio_periph, uint32_t pin)
+ 261:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** {
+ 444              		.loc 1 261 1 is_stmt 1
+ 445              		.cfi_startproc
+ 446              	.LVL41:
+ 262:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     if ((uint32_t) RESET != (GPIO_ISTAT(gpio_periph) & (pin))) {
+ 447              		.loc 1 262 5
+ 448              		.loc 1 262 30 is_stmt 0
+ 449 0000 0845     		lw	a0,8(a0)
+ 450              	.LVL42:
+ 451              		.loc 1 262 54
+ 452 0002 6D8D     		and	a0,a0,a1
+ 263:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****         return SET;
+ 264:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     } else {
+ 265:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****         return RESET;
+ 266:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     }
+ 267:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** }
+ 453              		.loc 1 267 1
+ 454 0004 3335A000 		snez	a0,a0
+ 455 0008 8280     		ret
+ 456              		.cfi_endproc
+ 457              	.LFE9:
+ 459              		.section	.text.gpio_input_port_get,"ax",@progbits
+ 460              		.align	1
+ 461              		.globl	gpio_input_port_get
+ 463              	gpio_input_port_get:
+ 464              	.LFB10:
+ 268:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** 
+ 269:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** /*!
+ 270:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     \brief      get GPIO port input status
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccuSklz3.s 			page 15
+
+
+ 271:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     \param[in]  gpio_periph: GPIOx(x = A,B,C,D,E)
+ 272:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     \param[out] none
+ 273:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     \retval     input status of gpio all pins
+ 274:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** */
+ 275:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** uint16_t gpio_input_port_get(uint32_t gpio_periph)
+ 276:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** {
+ 465              		.loc 1 276 1 is_stmt 1
+ 466              		.cfi_startproc
+ 467              	.LVL43:
+ 277:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     return (uint16_t) (GPIO_ISTAT(gpio_periph));
+ 468              		.loc 1 277 5
+ 469              		.loc 1 277 24 is_stmt 0
+ 470 0000 0845     		lw	a0,8(a0)
+ 471              	.LVL44:
+ 278:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** }
+ 472              		.loc 1 278 1
+ 473 0002 4205     		slli	a0,a0,16
+ 474 0004 4181     		srli	a0,a0,16
+ 475 0006 8280     		ret
+ 476              		.cfi_endproc
+ 477              	.LFE10:
+ 479              		.section	.text.gpio_output_bit_get,"ax",@progbits
+ 480              		.align	1
+ 481              		.globl	gpio_output_bit_get
+ 483              	gpio_output_bit_get:
+ 484              	.LFB11:
+ 279:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** 
+ 280:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** /*!
+ 281:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     \brief      get GPIO pin output status
+ 282:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     \param[in]  gpio_periph: GPIOx(x = A,B,C,D,E)
+ 283:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     \param[in]  pin: GPIO pin
+ 284:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****                 only one parameter can be selected which are shown as below:
+ 285:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****       \arg        GPIO_PIN_x(x=0..15), GPIO_PIN_ALL
+ 286:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     \param[out] none
+ 287:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     \retval     output status of gpio pin: SET or RESET
+ 288:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** */
+ 289:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** FlagStatus gpio_output_bit_get(uint32_t gpio_periph, uint32_t pin)
+ 290:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** {
+ 485              		.loc 1 290 1 is_stmt 1
+ 486              		.cfi_startproc
+ 487              	.LVL45:
+ 291:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     if ((uint32_t) RESET != (GPIO_OCTL(gpio_periph) & (pin))) {
+ 488              		.loc 1 291 5
+ 489              		.loc 1 291 30 is_stmt 0
+ 490 0000 4845     		lw	a0,12(a0)
+ 491              	.LVL46:
+ 492              		.loc 1 291 53
+ 493 0002 6D8D     		and	a0,a0,a1
+ 292:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****         return SET;
+ 293:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     } else {
+ 294:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****         return RESET;
+ 295:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     }
+ 296:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** }
+ 494              		.loc 1 296 1
+ 495 0004 3335A000 		snez	a0,a0
+ 496 0008 8280     		ret
+ 497              		.cfi_endproc
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccuSklz3.s 			page 16
+
+
+ 498              	.LFE11:
+ 500              		.section	.text.gpio_output_port_get,"ax",@progbits
+ 501              		.align	1
+ 502              		.globl	gpio_output_port_get
+ 504              	gpio_output_port_get:
+ 505              	.LFB12:
+ 297:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** 
+ 298:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** /*!
+ 299:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     \brief      get GPIO port output status
+ 300:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     \param[in]  gpio_periph: GPIOx(x = A,B,C,D,E)
+ 301:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     \param[out] none
+ 302:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     \retval     output status of gpio all pins
+ 303:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** */
+ 304:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** uint16_t gpio_output_port_get(uint32_t gpio_periph)
+ 305:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** {
+ 506              		.loc 1 305 1 is_stmt 1
+ 507              		.cfi_startproc
+ 508              	.LVL47:
+ 306:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     return ((uint16_t) GPIO_OCTL(gpio_periph));
+ 509              		.loc 1 306 5
+ 510              		.loc 1 306 24 is_stmt 0
+ 511 0000 4845     		lw	a0,12(a0)
+ 512              	.LVL48:
+ 307:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** }
+ 513              		.loc 1 307 1
+ 514 0002 4205     		slli	a0,a0,16
+ 515 0004 4181     		srli	a0,a0,16
+ 516 0006 8280     		ret
+ 517              		.cfi_endproc
+ 518              	.LFE12:
+ 520              		.section	.text.gpio_pin_remap_config,"ax",@progbits
+ 521              		.align	1
+ 522              		.globl	gpio_pin_remap_config
+ 524              	gpio_pin_remap_config:
+ 525              	.LFB13:
+ 308:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** 
+ 309:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** /*!
+ 310:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     \brief      configure GPIO pin remap
+ 311:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     \param[in]  gpio_remap: select the pin to remap
+ 312:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****                 only one parameter can be selected which are shown as below:
+ 313:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****       \arg        GPIO_SPI0_REMAP: SPI0 remapping
+ 314:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****       \arg        GPIO_I2C0_REMAP: I2C0 remapping
+ 315:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****       \arg        GPIO_USART0_REMAP: USART0 remapping
+ 316:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****       \arg        GPIO_USART1_REMAP: USART1 remapping
+ 317:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****       \arg        GPIO_USART2_PARTIAL_REMAP: USART2 partial remapping
+ 318:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****       \arg        GPIO_USART2_FULL_REMAP: USART2 full remapping
+ 319:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****       \arg        GPIO_TIMER0_PARTIAL_REMAP: TIMER0 partial remapping
+ 320:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****       \arg        GPIO_TIMER0_FULL_REMAP: TIMER0 full remapping
+ 321:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****       \arg        GPIO_TIMER1_PARTIAL_REMAP0: TIMER1 partial remapping
+ 322:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****       \arg        GPIO_TIMER1_PARTIAL_REMAP1: TIMER1 partial remapping
+ 323:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****       \arg        GPIO_TIMER1_FULL_REMAP: TIMER1 full remapping
+ 324:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****       \arg        GPIO_TIMER2_PARTIAL_REMAP: TIMER2 partial remapping
+ 325:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****       \arg        GPIO_TIMER2_FULL_REMAP: TIMER2 full remapping
+ 326:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****       \arg        GPIO_TIMER3_REMAP: TIMER3 remapping
+ 327:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****       \arg        GPIO_CAN0_PARTIAL_REMAP: CAN0 partial remapping
+ 328:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****       \arg        GPIO_CAN0_FULL_REMAP: CAN0 full remapping
+ 329:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****       \arg        GPIO_PD01_REMAP: PD01 remapping
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccuSklz3.s 			page 17
+
+
+ 330:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****       \arg        GPIO_TIMER4CH3_IREMAP: TIMER4 channel3 internal remapping
+ 331:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****       \arg        GPIO_CAN1_REMAP: CAN1 remapping
+ 332:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****       \arg        GPIO_SWJ_NONJTRST_REMAP: JTAG-DP,but without NJTRST
+ 333:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****       \arg        GPIO_SWJ_DISABLE_REMAP: JTAG-DP disabled
+ 334:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****       \arg        GPIO_SPI2_REMAP: SPI2 remapping
+ 335:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****       \arg        GPIO_TIMER1ITI1_REMAP: TIMER1 internal trigger 1 remapping
+ 336:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****       \arg        GPIO_EXMC_NADV_REMAP: EXMC_NADV connect/disconnect
+ 337:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     \param[in]  newvalue: ENABLE or DISABLE
+ 338:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     \param[out] none
+ 339:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     \retval     none
+ 340:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** */
+ 341:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** void gpio_pin_remap_config(uint32_t remap, ControlStatus newvalue)
+ 342:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** {
+ 526              		.loc 1 342 1 is_stmt 1
+ 527              		.cfi_startproc
+ 528              	.LVL49:
+ 343:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     uint32_t remap1 = 0U, remap2 = 0U, temp_reg = 0U, temp_mask = 0U;
+ 529              		.loc 1 343 5
+ 344:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** 
+ 345:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     if (AFIO_PCF1_FIELDS == (remap & AFIO_PCF1_FIELDS)) {
+ 530              		.loc 1 345 5
+ 346:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****         /* get AFIO_PCF1 regiter value */
+ 347:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****         temp_reg = AFIO_PCF1;
+ 531              		.loc 1 347 18 is_stmt 0
+ 532 0000 B7070140 		li	a5,1073807360
+ 345:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****         /* get AFIO_PCF1 regiter value */
+ 533              		.loc 1 345 8
+ 534 0004 63480506 		blt	a0,zero,.L61
+ 348:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     } else {
+ 349:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****         /* get AFIO_PCF0 regiter value */
+ 350:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****         temp_reg = AFIO_PCF0;
+ 535              		.loc 1 350 9 is_stmt 1
+ 351:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     }
+ 352:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** 
+ 353:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     temp_mask = (remap & PCF_POSITION_MASK) >> 0x10U;
+ 354:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     remap1 = remap & LSB_16BIT_MASK;
+ 355:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** 
+ 356:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     /* judge pin remap type */
+ 357:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     if ((PCF_LOCATION1_MASK | PCF_LOCATION2_MASK)
+ 358:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****             == (remap & (PCF_LOCATION1_MASK | PCF_LOCATION2_MASK))) {
+ 536              		.loc 1 358 23 is_stmt 0
+ 537 0008 37073000 		li	a4,3145728
+ 350:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     }
+ 538              		.loc 1 350 18
+ 539 000c DC43     		lw	a5,4(a5)
+ 540              	.LVL50:
+ 353:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     remap1 = remap & LSB_16BIT_MASK;
+ 541              		.loc 1 353 5 is_stmt 1
+ 354:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** 
+ 542              		.loc 1 354 5
+ 354:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** 
+ 543              		.loc 1 354 12 is_stmt 0
+ 544 000e 93160501 		slli	a3,a0,16
+ 545              		.loc 1 358 23
+ 546 0012 3376E500 		and	a2,a0,a4
+ 354:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** 
+ 547              		.loc 1 354 12
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccuSklz3.s 			page 18
+
+
+ 548 0016 C182     		srli	a3,a3,16
+ 549              	.LVL51:
+ 357:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****             == (remap & (PCF_LOCATION1_MASK | PCF_LOCATION2_MASK))) {
+ 550              		.loc 1 357 5 is_stmt 1
+ 357:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****             == (remap & (PCF_LOCATION1_MASK | PCF_LOCATION2_MASK))) {
+ 551              		.loc 1 357 8 is_stmt 0
+ 552 0018 6308E606 		beq	a2,a4,.L62
+ 553              	.LVL52:
+ 554              	.L52:
+ 359:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****         temp_reg &= PCF_SWJCFG_MASK;
+ 360:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****         AFIO_PCF0 &= PCF_SWJCFG_MASK;
+ 361:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     } else if (PCF_LOCATION2_MASK == (remap & PCF_LOCATION2_MASK)) {
+ 555              		.loc 1 361 12 is_stmt 1
+ 556              		.loc 1 361 15 is_stmt 0
+ 557 001c 1317B500 		slli	a4,a0,11
+ 558 0020 635C0702 		bge	a4,zero,.L54
+ 362:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****         remap2 = ((uint32_t) 0x03U) << temp_mask;
+ 559              		.loc 1 362 9 is_stmt 1
+ 560              	.LVL53:
+ 363:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****         temp_reg &= ~remap2;
+ 561              		.loc 1 363 9
+ 353:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     remap1 = remap & LSB_16BIT_MASK;
+ 562              		.loc 1 353 45 is_stmt 0
+ 563 0024 13570501 		srli	a4,a0,16
+ 353:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     remap1 = remap & LSB_16BIT_MASK;
+ 564              		.loc 1 353 15
+ 565 0028 1376F700 		andi	a2,a4,15
+ 362:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****         remap2 = ((uint32_t) 0x03U) << temp_mask;
+ 566              		.loc 1 362 16
+ 567 002c 0D47     		li	a4,3
+ 568 002e 3317C700 		sll	a4,a4,a2
+ 569              		.loc 1 363 21
+ 570 0032 1347F7FF 		not	a4,a4
+ 571              		.loc 1 363 18
+ 572 0036 7D8F     		and	a4,a4,a5
+ 573              	.LVL54:
+ 364:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****         temp_reg |= ~PCF_SWJCFG_MASK;
+ 574              		.loc 1 364 9 is_stmt 1
+ 575              		.loc 1 364 18 is_stmt 0
+ 576 0038 B707000F 		li	a5,251658240
+ 577 003c D98F     		or	a5,a4,a5
+ 578              	.LVL55:
+ 579              	.L53:
+ 365:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     }  else {
+ 366:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****         temp_reg &= ~(remap1 << ((remap >> 0x15U) * 0x10U));
+ 367:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****         temp_reg |= ~PCF_SWJCFG_MASK;
+ 368:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     }
+ 369:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** 
+ 370:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     /* set pin remap value */
+ 371:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     if (DISABLE != newvalue) {
+ 580              		.loc 1 371 5 is_stmt 1
+ 581              		.loc 1 371 8 is_stmt 0
+ 582 003e 99C5     		beq	a1,zero,.L55
+ 372:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****         temp_reg |= (remap1 << ((remap >> 0x15U) * 0x10U));
+ 583              		.loc 1 372 9 is_stmt 1
+ 584              		.loc 1 372 40 is_stmt 0
+ 585 0040 13575501 		srli	a4,a0,21
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccuSklz3.s 			page 19
+
+
+ 586              		.loc 1 372 50
+ 587 0044 1207     		slli	a4,a4,4
+ 588              		.loc 1 372 29
+ 589 0046 B396E600 		sll	a3,a3,a4
+ 590              	.LVL56:
+ 591              		.loc 1 372 18
+ 592 004a D58F     		or	a5,a5,a3
+ 593              	.LVL57:
+ 594              	.L55:
+ 373:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     }
+ 374:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** 
+ 375:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     if (AFIO_PCF1_FIELDS == (remap & AFIO_PCF1_FIELDS)) {
+ 595              		.loc 1 375 5 is_stmt 1
+ 376:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****         /* set AFIO_PCF1 regiter value */
+ 377:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****         AFIO_PCF1 = temp_reg;
+ 596              		.loc 1 377 19 is_stmt 0
+ 597 004c 37070140 		li	a4,1073807360
+ 375:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****         /* set AFIO_PCF1 regiter value */
+ 598              		.loc 1 375 8
+ 599 0050 63400502 		blt	a0,zero,.L63
+ 378:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     } else {
+ 379:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****         /* set AFIO_PCF0 regiter value */
+ 380:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****         AFIO_PCF0 = temp_reg;
+ 600              		.loc 1 380 9 is_stmt 1
+ 601              		.loc 1 380 19 is_stmt 0
+ 602 0054 5CC3     		sw	a5,4(a4)
+ 381:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     }
+ 382:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** }
+ 603              		.loc 1 382 1
+ 604 0056 8280     		ret
+ 605              	.LVL58:
+ 606              	.L54:
+ 366:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****         temp_reg |= ~PCF_SWJCFG_MASK;
+ 607              		.loc 1 366 9 is_stmt 1
+ 366:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****         temp_reg |= ~PCF_SWJCFG_MASK;
+ 608              		.loc 1 366 41 is_stmt 0
+ 609 0058 13575501 		srli	a4,a0,21
+ 366:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****         temp_reg |= ~PCF_SWJCFG_MASK;
+ 610              		.loc 1 366 51
+ 611 005c 1207     		slli	a4,a4,4
+ 366:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****         temp_reg |= ~PCF_SWJCFG_MASK;
+ 612              		.loc 1 366 30
+ 613 005e 3397E600 		sll	a4,a3,a4
+ 366:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****         temp_reg |= ~PCF_SWJCFG_MASK;
+ 614              		.loc 1 366 21
+ 615 0062 1347F7FF 		not	a4,a4
+ 366:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****         temp_reg |= ~PCF_SWJCFG_MASK;
+ 616              		.loc 1 366 18
+ 617 0066 7D8F     		and	a4,a4,a5
+ 618              	.LVL59:
+ 367:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     }
+ 619              		.loc 1 367 9 is_stmt 1
+ 367:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     }
+ 620              		.loc 1 367 18 is_stmt 0
+ 621 0068 B707000F 		li	a5,251658240
+ 622 006c D98F     		or	a5,a4,a5
+ 623              	.LVL60:
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccuSklz3.s 			page 20
+
+
+ 624 006e C1BF     		j	.L53
+ 625              	.LVL61:
+ 626              	.L63:
+ 377:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     } else {
+ 627              		.loc 1 377 9 is_stmt 1
+ 377:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     } else {
+ 628              		.loc 1 377 19 is_stmt 0
+ 629 0070 5CCF     		sw	a5,28(a4)
+ 630 0072 8280     		ret
+ 631              	.LVL62:
+ 632              	.L61:
+ 347:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     } else {
+ 633              		.loc 1 347 9 is_stmt 1
+ 358:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****         temp_reg &= PCF_SWJCFG_MASK;
+ 634              		.loc 1 358 23 is_stmt 0
+ 635 0074 37073000 		li	a4,3145728
+ 347:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     } else {
+ 636              		.loc 1 347 18
+ 637 0078 DC4F     		lw	a5,28(a5)
+ 638              	.LVL63:
+ 353:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     remap1 = remap & LSB_16BIT_MASK;
+ 639              		.loc 1 353 5 is_stmt 1
+ 354:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** 
+ 640              		.loc 1 354 5
+ 354:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** 
+ 641              		.loc 1 354 12 is_stmt 0
+ 642 007a 93160501 		slli	a3,a0,16
+ 358:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****         temp_reg &= PCF_SWJCFG_MASK;
+ 643              		.loc 1 358 23
+ 644 007e 3376E500 		and	a2,a0,a4
+ 354:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** 
+ 645              		.loc 1 354 12
+ 646 0082 C182     		srli	a3,a3,16
+ 647              	.LVL64:
+ 357:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****             == (remap & (PCF_LOCATION1_MASK | PCF_LOCATION2_MASK))) {
+ 648              		.loc 1 357 5 is_stmt 1
+ 357:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****             == (remap & (PCF_LOCATION1_MASK | PCF_LOCATION2_MASK))) {
+ 649              		.loc 1 357 8 is_stmt 0
+ 650 0084 E31CE6F8 		bne	a2,a4,.L52
+ 651              	.LVL65:
+ 652              	.L62:
+ 359:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****         AFIO_PCF0 &= PCF_SWJCFG_MASK;
+ 653              		.loc 1 359 9 is_stmt 1
+ 360:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     } else if (PCF_LOCATION2_MASK == (remap & PCF_LOCATION2_MASK)) {
+ 654              		.loc 1 360 19 is_stmt 0
+ 655 0088 37080140 		li	a6,1073807360
+ 656 008c 03264800 		lw	a2,4(a6)
+ 359:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****         AFIO_PCF0 &= PCF_SWJCFG_MASK;
+ 657              		.loc 1 359 18
+ 658 0090 370700F1 		li	a4,-251658240
+ 659 0094 7D17     		addi	a4,a4,-1
+ 360:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     } else if (PCF_LOCATION2_MASK == (remap & PCF_LOCATION2_MASK)) {
+ 660              		.loc 1 360 19
+ 661 0096 798E     		and	a2,a2,a4
+ 359:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****         AFIO_PCF0 &= PCF_SWJCFG_MASK;
+ 662              		.loc 1 359 18
+ 663 0098 F98F     		and	a5,a5,a4
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccuSklz3.s 			page 21
+
+
+ 664              	.LVL66:
+ 360:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     } else if (PCF_LOCATION2_MASK == (remap & PCF_LOCATION2_MASK)) {
+ 665              		.loc 1 360 9 is_stmt 1
+ 360:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     } else if (PCF_LOCATION2_MASK == (remap & PCF_LOCATION2_MASK)) {
+ 666              		.loc 1 360 19 is_stmt 0
+ 667 009a 2322C800 		sw	a2,4(a6)
+ 668 009e 45B7     		j	.L53
+ 669              		.cfi_endproc
+ 670              	.LFE13:
+ 672              		.section	.text.gpio_exti_source_select,"ax",@progbits
+ 673              		.align	1
+ 674              		.globl	gpio_exti_source_select
+ 676              	gpio_exti_source_select:
+ 677              	.LFB14:
+ 383:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** 
+ 384:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** /*!
+ 385:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     \brief      select GPIO pin exti sources
+ 386:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     \param[in]  gpio_outputport: gpio event output port
+ 387:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****                 only one parameter can be selected which are shown as below:
+ 388:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****       \arg        GPIO_PORT_SOURCE_GPIOA: output port source A
+ 389:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****       \arg        GPIO_PORT_SOURCE_GPIOB: output port source B
+ 390:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****       \arg        GPIO_PORT_SOURCE_GPIOC: output port source C
+ 391:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****       \arg        GPIO_PORT_SOURCE_GPIOD: output port source D
+ 392:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****       \arg        GPIO_PORT_SOURCE_GPIOE: output port source E
+ 393:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     \param[in]  gpio_outputpin: GPIO_PIN_SOURCE_x(x=0..15)
+ 394:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     \param[out] none
+ 395:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     \retval     none
+ 396:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** */
+ 397:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** void gpio_exti_source_select(uint8_t output_port, uint8_t output_pin)
+ 398:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** {
+ 678              		.loc 1 398 1 is_stmt 1
+ 679              		.cfi_startproc
+ 680              	.LVL67:
+ 399:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     uint32_t source = 0U;
+ 681              		.loc 1 399 5
+ 400:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     source = ((uint32_t) 0x0FU)
+ 682              		.loc 1 400 5
+ 401:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****             << (AFIO_EXTI_SOURCE_FIELDS * (output_pin & AFIO_EXTI_SOURCE_MASK));
+ 683              		.loc 1 401 55 is_stmt 0
+ 684 0000 93F73500 		andi	a5,a1,3
+ 685              		.loc 1 401 41
+ 686 0004 8A07     		slli	a5,a5,2
+ 687              	.LVL68:
+ 402:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** 
+ 403:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     /* select EXTI sources */
+ 404:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     if (GPIO_PIN_SOURCE_4 > output_pin) {
+ 688              		.loc 1 404 5 is_stmt 1
+ 400:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****             << (AFIO_EXTI_SOURCE_FIELDS * (output_pin & AFIO_EXTI_SOURCE_MASK));
+ 689              		.loc 1 400 12 is_stmt 0
+ 690 0006 3D47     		li	a4,15
+ 691 0008 3317F700 		sll	a4,a4,a5
+ 692              		.loc 1 404 8
+ 693 000c 8D46     		li	a3,3
+ 694 000e 1347F7FF 		not	a4,a4
+ 695 0012 3315F500 		sll	a0,a0,a5
+ 696              	.LVL69:
+ 697 0016 63EBB600 		bgtu	a1,a3,.L65
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccuSklz3.s 			page 22
+
+
+ 405:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****         /* select EXTI0/EXTI1/EXTI2/EXTI3 */
+ 406:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****         AFIO_EXTISS0 &= ~source;
+ 698              		.loc 1 406 9 is_stmt 1
+ 699              		.loc 1 406 22 is_stmt 0
+ 700 001a B7060140 		li	a3,1073807360
+ 701 001e 9C46     		lw	a5,8(a3)
+ 702              	.LVL70:
+ 703 0020 7D8F     		and	a4,a5,a4
+ 704 0022 98C6     		sw	a4,8(a3)
+ 407:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****         AFIO_EXTISS0 |= (((uint32_t) output_port)
+ 705              		.loc 1 407 9 is_stmt 1
+ 706              		.loc 1 407 22 is_stmt 0
+ 707 0024 9C46     		lw	a5,8(a3)
+ 708 0026 C98F     		or	a5,a5,a0
+ 709 0028 9CC6     		sw	a5,8(a3)
+ 710 002a 8280     		ret
+ 711              	.LVL71:
+ 712              	.L65:
+ 408:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****                 << (AFIO_EXTI_SOURCE_FIELDS
+ 409:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****                         * (output_pin & AFIO_EXTI_SOURCE_MASK)));
+ 410:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     } else if (GPIO_PIN_SOURCE_8 > output_pin) {
+ 713              		.loc 1 410 12 is_stmt 1
+ 714              		.loc 1 410 15 is_stmt 0
+ 715 002c 9D47     		li	a5,7
+ 716              	.LVL72:
+ 717 002e 63EBB700 		bgtu	a1,a5,.L67
+ 411:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****         /* select EXTI4/EXTI5/EXTI6/EXTI7 */
+ 412:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****         AFIO_EXTISS1 &= ~source;
+ 718              		.loc 1 412 9 is_stmt 1
+ 719              		.loc 1 412 22 is_stmt 0
+ 720 0032 B7060140 		li	a3,1073807360
+ 721 0036 DC46     		lw	a5,12(a3)
+ 722 0038 7D8F     		and	a4,a5,a4
+ 723 003a D8C6     		sw	a4,12(a3)
+ 413:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****         AFIO_EXTISS1 |= (((uint32_t) output_port)
+ 724              		.loc 1 413 9 is_stmt 1
+ 725              		.loc 1 413 22 is_stmt 0
+ 726 003c DC46     		lw	a5,12(a3)
+ 727 003e C98F     		or	a5,a5,a0
+ 728 0040 DCC6     		sw	a5,12(a3)
+ 729 0042 8280     		ret
+ 730              	.L67:
+ 414:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****                 << (AFIO_EXTI_SOURCE_FIELDS
+ 415:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****                         * (output_pin & AFIO_EXTI_SOURCE_MASK)));
+ 416:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     } else if (GPIO_PIN_SOURCE_12 > output_pin) {
+ 731              		.loc 1 416 12 is_stmt 1
+ 732              		.loc 1 416 15 is_stmt 0
+ 733 0044 AD47     		li	a5,11
+ 417:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****         /* select EXTI8/EXTI9/EXTI10/EXTI11 */
+ 418:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****         AFIO_EXTISS2 &= ~source;
+ 734              		.loc 1 418 22
+ 735 0046 B7060140 		li	a3,1073807360
+ 416:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****         /* select EXTI8/EXTI9/EXTI10/EXTI11 */
+ 736              		.loc 1 416 15
+ 737 004a 63E9B700 		bgtu	a1,a5,.L68
+ 738              		.loc 1 418 9 is_stmt 1
+ 739              		.loc 1 418 22 is_stmt 0
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccuSklz3.s 			page 23
+
+
+ 740 004e 9C4A     		lw	a5,16(a3)
+ 741 0050 7D8F     		and	a4,a5,a4
+ 742 0052 98CA     		sw	a4,16(a3)
+ 419:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****         AFIO_EXTISS2 |= (((uint32_t) output_port)
+ 743              		.loc 1 419 9 is_stmt 1
+ 744              		.loc 1 419 22 is_stmt 0
+ 745 0054 9C4A     		lw	a5,16(a3)
+ 746 0056 C98F     		or	a5,a5,a0
+ 747 0058 9CCA     		sw	a5,16(a3)
+ 748 005a 8280     		ret
+ 749              	.L68:
+ 420:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****                 << (AFIO_EXTI_SOURCE_FIELDS
+ 421:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****                         * (output_pin & AFIO_EXTI_SOURCE_MASK)));
+ 422:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     } else {
+ 423:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****         /* select EXTI12/EXTI13/EXTI14/EXTI15 */
+ 424:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****         AFIO_EXTISS3 &= ~source;
+ 750              		.loc 1 424 9 is_stmt 1
+ 751              		.loc 1 424 22 is_stmt 0
+ 752 005c DC4A     		lw	a5,20(a3)
+ 753 005e 7D8F     		and	a4,a5,a4
+ 754 0060 D8CA     		sw	a4,20(a3)
+ 425:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****         AFIO_EXTISS3 |= (((uint32_t) output_port)
+ 755              		.loc 1 425 9 is_stmt 1
+ 756              		.loc 1 425 22 is_stmt 0
+ 757 0062 DC4A     		lw	a5,20(a3)
+ 758 0064 C98F     		or	a5,a5,a0
+ 759 0066 DCCA     		sw	a5,20(a3)
+ 426:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****                 << (AFIO_EXTI_SOURCE_FIELDS
+ 427:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****                         * (output_pin & AFIO_EXTI_SOURCE_MASK)));
+ 428:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     }
+ 429:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** }
+ 760              		.loc 1 429 1
+ 761 0068 8280     		ret
+ 762              		.cfi_endproc
+ 763              	.LFE14:
+ 765              		.section	.text.gpio_event_output_config,"ax",@progbits
+ 766              		.align	1
+ 767              		.globl	gpio_event_output_config
+ 769              	gpio_event_output_config:
+ 770              	.LFB15:
+ 430:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** 
+ 431:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** /*!
+ 432:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     \brief      configure GPIO pin event output
+ 433:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     \param[in]  output_port: gpio event output port
+ 434:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****                 only one parameter can be selected which are shown as below:
+ 435:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****       \arg        GPIO_EVENT_PORT_GPIOA: event output port A
+ 436:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****       \arg        GPIO_EVENT_PORT_GPIOB: event output port B
+ 437:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****       \arg        GPIO_EVENT_PORT_GPIOC: event output port C
+ 438:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****       \arg        GPIO_EVENT_PORT_GPIOD: event output port D
+ 439:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****       \arg        GPIO_EVENT_PORT_GPIOE: event output port E
+ 440:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     \param[in]  output_pin:
+ 441:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****                 only one parameter can be selected which are shown as below:
+ 442:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****       \arg        GPIO_EVENT_PIN_x(x=0..15)
+ 443:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     \param[out] none
+ 444:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     \retval     none
+ 445:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** */
+ 446:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** void gpio_event_output_config(uint8_t output_port, uint8_t output_pin)
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccuSklz3.s 			page 24
+
+
+ 447:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** {
+ 771              		.loc 1 447 1 is_stmt 1
+ 772              		.cfi_startproc
+ 773              	.LVL73:
+ 448:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     uint32_t reg = 0U;
+ 774              		.loc 1 448 5
+ 449:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     reg = AFIO_EC;
+ 775              		.loc 1 449 5
+ 776              		.loc 1 449 9 is_stmt 0
+ 777 0000 37070140 		li	a4,1073807360
+ 778 0004 1C43     		lw	a5,0(a4)
+ 779              	.LVL74:
+ 450:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** 
+ 451:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     /* clear AFIO_EC_PORT and AFIO_EC_PIN bits */
+ 452:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     reg &= (uint32_t) (~(AFIO_EC_PORT | AFIO_EC_PIN));
+ 780              		.loc 1 452 5 is_stmt 1
+ 453:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** 
+ 454:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     reg |= (uint32_t) ((uint32_t) output_port << GPIO_OUTPUT_PORT_OFFSET);
+ 781              		.loc 1 454 5
+ 455:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     reg |= (uint32_t) output_pin;
+ 782              		.loc 1 455 5
+ 454:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     reg |= (uint32_t) output_pin;
+ 783              		.loc 1 454 12 is_stmt 0
+ 784 0006 1205     		slli	a0,a0,4
+ 785              	.LVL75:
+ 452:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** 
+ 786              		.loc 1 452 9
+ 787 0008 93F707F8 		andi	a5,a5,-128
+ 788              	.LVL76:
+ 789 000c CD8F     		or	a5,a5,a1
+ 790              		.loc 1 455 9
+ 791 000e C98F     		or	a5,a0,a5
+ 792              	.LVL77:
+ 456:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** 
+ 457:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     AFIO_EC = reg;
+ 793              		.loc 1 457 5 is_stmt 1
+ 794              		.loc 1 457 13 is_stmt 0
+ 795 0010 1CC3     		sw	a5,0(a4)
+ 458:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** }
+ 796              		.loc 1 458 1
+ 797 0012 8280     		ret
+ 798              		.cfi_endproc
+ 799              	.LFE15:
+ 801              		.section	.text.gpio_event_output_enable,"ax",@progbits
+ 802              		.align	1
+ 803              		.globl	gpio_event_output_enable
+ 805              	gpio_event_output_enable:
+ 806              	.LFB16:
+ 459:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** 
+ 460:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** /*!
+ 461:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     \brief      enable GPIO pin event output
+ 462:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     \param[in]  none
+ 463:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     \param[out] none
+ 464:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     \retval     none
+ 465:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** */
+ 466:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** void gpio_event_output_enable(void)
+ 467:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** {
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccuSklz3.s 			page 25
+
+
+ 807              		.loc 1 467 1 is_stmt 1
+ 808              		.cfi_startproc
+ 468:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     AFIO_EC |= AFIO_EC_EOE;
+ 809              		.loc 1 468 5
+ 810              		.loc 1 468 13 is_stmt 0
+ 811 0000 37070140 		li	a4,1073807360
+ 812 0004 1C43     		lw	a5,0(a4)
+ 813 0006 93E70708 		ori	a5,a5,128
+ 814 000a 1CC3     		sw	a5,0(a4)
+ 469:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** }
+ 815              		.loc 1 469 1
+ 816 000c 8280     		ret
+ 817              		.cfi_endproc
+ 818              	.LFE16:
+ 820              		.section	.text.gpio_event_output_disable,"ax",@progbits
+ 821              		.align	1
+ 822              		.globl	gpio_event_output_disable
+ 824              	gpio_event_output_disable:
+ 825              	.LFB17:
+ 470:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** 
+ 471:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** /*!
+ 472:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     \brief      disable GPIO pin event output
+ 473:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     \param[in]  none
+ 474:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     \param[out] none
+ 475:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     \retval     none
+ 476:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** */
+ 477:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** void gpio_event_output_disable(void)
+ 478:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** {
+ 826              		.loc 1 478 1 is_stmt 1
+ 827              		.cfi_startproc
+ 479:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     AFIO_EC &= (uint32_t) (~AFIO_EC_EOE);
+ 828              		.loc 1 479 5
+ 829              		.loc 1 479 13 is_stmt 0
+ 830 0000 37070140 		li	a4,1073807360
+ 831 0004 1C43     		lw	a5,0(a4)
+ 832 0006 93F7F7F7 		andi	a5,a5,-129
+ 833 000a 1CC3     		sw	a5,0(a4)
+ 480:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** }
+ 834              		.loc 1 480 1
+ 835 000c 8280     		ret
+ 836              		.cfi_endproc
+ 837              	.LFE17:
+ 839              		.section	.text.gpio_pin_lock,"ax",@progbits
+ 840              		.align	1
+ 841              		.globl	gpio_pin_lock
+ 843              	gpio_pin_lock:
+ 844              	.LFB18:
+ 481:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** 
+ 482:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** /*!
+ 483:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     \brief      lock GPIO pin
+ 484:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     \param[in]  gpio_periph: GPIOx(x = A,B,C,D,E)
+ 485:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     \param[in]  pin: GPIO pin
+ 486:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****                 one or more parameters can be selected which are shown as below:
+ 487:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****       \arg        GPIO_PIN_x(x=0..15), GPIO_PIN_ALL
+ 488:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     \param[out] none
+ 489:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     \retval     none
+ 490:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** */
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccuSklz3.s 			page 26
+
+
+ 491:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** void gpio_pin_lock(uint32_t gpio_periph, uint32_t pin)
+ 492:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** {
+ 845              		.loc 1 492 1 is_stmt 1
+ 846              		.cfi_startproc
+ 847              	.LVL78:
+ 493:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     uint32_t lock = 0x00010000U;
+ 848              		.loc 1 493 5
+ 494:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     lock |= pin;
+ 849              		.loc 1 494 5
+ 850              		.loc 1 494 10 is_stmt 0
+ 851 0000 C167     		li	a5,65536
+ 852 0002 CD8F     		or	a5,a1,a5
+ 853              	.LVL79:
+ 495:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** 
+ 496:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     /* lock key writing sequence: write 1 -> write 0 -> write 1 -> read 0 -> read 1 */
+ 497:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     GPIO_LOCK(gpio_periph) = (uint32_t) lock;
+ 854              		.loc 1 497 5 is_stmt 1
+ 855              		.loc 1 497 28 is_stmt 0
+ 856 0004 1CCD     		sw	a5,24(a0)
+ 498:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     GPIO_LOCK(gpio_periph) = (uint32_t) pin;
+ 857              		.loc 1 498 5 is_stmt 1
+ 858              		.loc 1 498 28 is_stmt 0
+ 859 0006 0CCD     		sw	a1,24(a0)
+ 499:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     GPIO_LOCK(gpio_periph) = (uint32_t) lock;
+ 860              		.loc 1 499 5 is_stmt 1
+ 861              		.loc 1 499 28 is_stmt 0
+ 862 0008 1CCD     		sw	a5,24(a0)
+ 500:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     lock = GPIO_LOCK(gpio_periph);
+ 863              		.loc 1 500 5 is_stmt 1
+ 864              		.loc 1 500 10 is_stmt 0
+ 865 000a 1C4D     		lw	a5,24(a0)
+ 866              	.LVL80:
+ 501:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     lock = GPIO_LOCK(gpio_periph);
+ 867              		.loc 1 501 5 is_stmt 1
+ 868              		.loc 1 501 10 is_stmt 0
+ 869 000c 1C4D     		lw	a5,24(a0)
+ 502:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** }
+ 870              		.loc 1 502 1
+ 871 000e 8280     		ret
+ 872              		.cfi_endproc
+ 873              	.LFE18:
+ 875              		.text
+ 876              	.Letext0:
+ 877              		.file 2 "d:\\risc_v_gcc\\riscv-none-embed\\include\\machine\\_default_types.h"
+ 878              		.file 3 "d:\\risc_v_gcc\\riscv-none-embed\\include\\sys\\_stdint.h"
+ 879              		.file 4 "arch/riscv/mach-gd32vf10x/system/gd32vf103.h"
+ 880              		.file 5 "arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rcu.h"
+ 881              		.file 6 "arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.h"
+ 882              		.file 7 "arch/riscv/mach-gd32vf10x/system/system_gd32vf103.h"
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccuSklz3.s 			page 27
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 gd32vf103_gpio.c
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:10     .text.gpio_deinit:0000000000000000 gpio_deinit
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:14     .text.gpio_deinit:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:16     .text.gpio_deinit:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:17     .text.gpio_deinit:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:18     .text.gpio_deinit:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:20     .text.gpio_deinit:0000000000000002 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:22     .text.gpio_deinit:0000000000000004 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:24     .text.gpio_deinit:0000000000000004 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:33     .text.gpio_deinit:0000000000000024 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:38     .text.gpio_deinit:0000000000000030 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:39     .text.gpio_deinit:0000000000000030 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:40     .text.gpio_deinit:0000000000000032 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:41     .text.gpio_deinit:0000000000000032 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:43     .text.gpio_deinit:0000000000000032 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:45     .text.gpio_deinit:0000000000000036 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:47     .text.gpio_deinit:0000000000000038 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:49     .text.gpio_deinit:0000000000000038 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:53     .text.gpio_deinit:0000000000000040 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:55     .text.gpio_deinit:0000000000000040 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:60     .text.gpio_deinit:0000000000000050 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:65     .text.gpio_deinit:000000000000005c .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:66     .text.gpio_deinit:000000000000005c .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:67     .text.gpio_deinit:000000000000005e .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:68     .text.gpio_deinit:000000000000005e .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:70     .text.gpio_deinit:000000000000005e .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:72     .text.gpio_deinit:0000000000000062 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:74     .text.gpio_deinit:0000000000000064 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:76     .text.gpio_deinit:0000000000000064 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:80     .text.gpio_deinit:000000000000006c .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:82     .text.gpio_deinit:000000000000006c .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:87     .text.gpio_deinit:0000000000000078 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:88     .text.gpio_deinit:0000000000000078 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:89     .text.gpio_deinit:000000000000007a .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:90     .text.gpio_deinit:000000000000007a .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:92     .text.gpio_deinit:000000000000007a .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:94     .text.gpio_deinit:000000000000007e .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:96     .text.gpio_deinit:0000000000000080 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:98     .text.gpio_deinit:0000000000000080 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:102    .text.gpio_deinit:0000000000000088 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:104    .text.gpio_deinit:0000000000000088 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:109    .text.gpio_deinit:0000000000000094 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:110    .text.gpio_deinit:0000000000000094 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:111    .text.gpio_deinit:0000000000000096 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:112    .text.gpio_deinit:0000000000000096 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:114    .text.gpio_deinit:0000000000000096 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:116    .text.gpio_deinit:000000000000009a .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:118    .text.gpio_deinit:000000000000009c .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:120    .text.gpio_deinit:000000000000009c .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:124    .text.gpio_deinit:00000000000000a4 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:126    .text.gpio_deinit:00000000000000a4 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:127    .text.gpio_deinit:00000000000000a6 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:128    .text.gpio_deinit:00000000000000a6 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:131    .text.gpio_deinit:00000000000000a8 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:135    .text.gpio_deinit:00000000000000aa .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:137    .text.gpio_deinit:00000000000000aa .L0 
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccuSklz3.s 			page 28
+
+
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:142    .text.gpio_deinit:00000000000000b6 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:143    .text.gpio_deinit:00000000000000b6 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:144    .text.gpio_deinit:00000000000000b8 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:146    .text.gpio_deinit:00000000000000b8 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:148    .text.gpio_deinit:00000000000000bc .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:150    .text.gpio_deinit:00000000000000be .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:152    .text.gpio_deinit:00000000000000be .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:154    .text.gpio_deinit:00000000000000c6 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:161    .text.gpio_afio_deinit:0000000000000000 gpio_afio_deinit
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:164    .text.gpio_afio_deinit:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:165    .text.gpio_afio_deinit:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:166    .text.gpio_afio_deinit:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:167    .text.gpio_afio_deinit:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:169    .text.gpio_afio_deinit:0000000000000002 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:171    .text.gpio_afio_deinit:0000000000000002 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:173    .text.gpio_afio_deinit:0000000000000006 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:174    .text.gpio_afio_deinit:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:176    .text.gpio_afio_deinit:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:179    .text.gpio_afio_deinit:0000000000000010 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:180    .text.gpio_afio_deinit:0000000000000010 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:181    .text.gpio_afio_deinit:0000000000000012 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:183    .text.gpio_afio_deinit:0000000000000012 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:185    .text.gpio_afio_deinit:0000000000000016 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:187    .text.gpio_afio_deinit:0000000000000018 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:189    .text.gpio_afio_deinit:0000000000000018 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:191    .text.gpio_afio_deinit:0000000000000020 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:198    .text.gpio_init:0000000000000000 gpio_init
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:201    .text.gpio_init:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:203    .text.gpio_init:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:204    .text.gpio_init:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:205    .text.gpio_init:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:206    .text.gpio_init:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:207    .text.gpio_init:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:208    .text.gpio_init:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:210    .text.gpio_init:0000000000000004 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:213    .text.gpio_init:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:214    .text.gpio_init:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:216    .text.gpio_init:000000000000000a .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:217    .text.gpio_init:000000000000000a .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:221    .text.gpio_init:000000000000000e .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:222    .text.gpio_init:000000000000000e .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:224    .text.gpio_init:0000000000000010 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:226    .text.gpio_init:0000000000000012 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:228    .text.gpio_init:0000000000000014 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:230    .text.gpio_init:0000000000000018 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:232    .text.gpio_init:000000000000001c .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:236    .text.gpio_init:000000000000001e .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:237    .text.gpio_init:000000000000001e .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:239    .text.gpio_init:0000000000000022 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:241    .text.gpio_init:0000000000000026 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:243    .text.gpio_init:000000000000002a .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:245    .text.gpio_init:000000000000002c .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:247    .text.gpio_init:0000000000000030 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:249    .text.gpio_init:0000000000000034 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:251    .text.gpio_init:0000000000000036 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:252    .text.gpio_init:0000000000000036 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:255    .text.gpio_init:000000000000003a .L0 
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccuSklz3.s 			page 29
+
+
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:256    .text.gpio_init:000000000000003a .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:259    .text.gpio_init:000000000000003e .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:260    .text.gpio_init:000000000000003e .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:263    .text.gpio_init:0000000000000042 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:264    .text.gpio_init:0000000000000042 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:266    .text.gpio_init:0000000000000046 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:269    .text.gpio_init:000000000000004a .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:270    .text.gpio_init:000000000000004a .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:276    .text.gpio_init:000000000000004e .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:278    .text.gpio_init:0000000000000052 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:280    .text.gpio_init:0000000000000054 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:282    .text.gpio_init:0000000000000056 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:284    .text.gpio_init:000000000000005a .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:286    .text.gpio_init:000000000000005e .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:290    .text.gpio_init:0000000000000060 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:291    .text.gpio_init:0000000000000060 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:292    .text.gpio_init:0000000000000060 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:295    .text.gpio_init:0000000000000066 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:297    .text.gpio_init:000000000000006a .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:299    .text.gpio_init:000000000000006e .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:301    .text.gpio_init:0000000000000070 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:303    .text.gpio_init:0000000000000074 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:305    .text.gpio_init:0000000000000078 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:307    .text.gpio_init:000000000000007a .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:308    .text.gpio_init:000000000000007a .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:311    .text.gpio_init:000000000000007e .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:312    .text.gpio_init:000000000000007e .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:315    .text.gpio_init:0000000000000082 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:316    .text.gpio_init:0000000000000082 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:319    .text.gpio_init:0000000000000086 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:320    .text.gpio_init:0000000000000086 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:322    .text.gpio_init:000000000000008a .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:325    .text.gpio_init:000000000000008e .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:326    .text.gpio_init:000000000000008e .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:332    .text.gpio_init:0000000000000092 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:334    .text.gpio_init:0000000000000096 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:338    .text.gpio_init:0000000000000098 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:339    .text.gpio_init:0000000000000098 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:344    .text.gpio_init:000000000000009c .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:345    .text.gpio_init:000000000000009c .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:350    .text.gpio_init:00000000000000a0 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:351    .text.gpio_init:00000000000000a0 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:356    .text.gpio_init:00000000000000a4 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:357    .text.gpio_init:00000000000000a4 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:359    .text.gpio_init:00000000000000a8 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:366    .text.gpio_bit_set:0000000000000000 gpio_bit_set
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:369    .text.gpio_bit_set:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:371    .text.gpio_bit_set:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:372    .text.gpio_bit_set:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:373    .text.gpio_bit_set:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:375    .text.gpio_bit_set:0000000000000002 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:376    .text.gpio_bit_set:0000000000000004 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:383    .text.gpio_bit_reset:0000000000000000 gpio_bit_reset
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:386    .text.gpio_bit_reset:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:388    .text.gpio_bit_reset:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:389    .text.gpio_bit_reset:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:390    .text.gpio_bit_reset:0000000000000000 .L0 
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccuSklz3.s 			page 30
+
+
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:392    .text.gpio_bit_reset:0000000000000002 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:393    .text.gpio_bit_reset:0000000000000004 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:400    .text.gpio_bit_write:0000000000000000 gpio_bit_write
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:403    .text.gpio_bit_write:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:405    .text.gpio_bit_write:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:406    .text.gpio_bit_write:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:407    .text.gpio_bit_write:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:409    .text.gpio_bit_write:0000000000000002 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:410    .text.gpio_bit_write:0000000000000002 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:414    .text.gpio_bit_write:0000000000000006 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:415    .text.gpio_bit_write:0000000000000006 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:417    .text.gpio_bit_write:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:418    .text.gpio_bit_write:000000000000000a .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:425    .text.gpio_port_write:0000000000000000 gpio_port_write
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:428    .text.gpio_port_write:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:430    .text.gpio_port_write:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:431    .text.gpio_port_write:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:432    .text.gpio_port_write:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:434    .text.gpio_port_write:0000000000000002 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:435    .text.gpio_port_write:0000000000000004 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:442    .text.gpio_input_bit_get:0000000000000000 gpio_input_bit_get
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:445    .text.gpio_input_bit_get:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:447    .text.gpio_input_bit_get:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:448    .text.gpio_input_bit_get:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:449    .text.gpio_input_bit_get:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:452    .text.gpio_input_bit_get:0000000000000002 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:454    .text.gpio_input_bit_get:0000000000000004 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:456    .text.gpio_input_bit_get:000000000000000a .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:463    .text.gpio_input_port_get:0000000000000000 gpio_input_port_get
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:466    .text.gpio_input_port_get:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:468    .text.gpio_input_port_get:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:469    .text.gpio_input_port_get:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:470    .text.gpio_input_port_get:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:473    .text.gpio_input_port_get:0000000000000002 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:476    .text.gpio_input_port_get:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:483    .text.gpio_output_bit_get:0000000000000000 gpio_output_bit_get
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:486    .text.gpio_output_bit_get:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:488    .text.gpio_output_bit_get:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:489    .text.gpio_output_bit_get:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:490    .text.gpio_output_bit_get:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:493    .text.gpio_output_bit_get:0000000000000002 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:495    .text.gpio_output_bit_get:0000000000000004 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:497    .text.gpio_output_bit_get:000000000000000a .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:504    .text.gpio_output_port_get:0000000000000000 gpio_output_port_get
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:507    .text.gpio_output_port_get:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:509    .text.gpio_output_port_get:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:510    .text.gpio_output_port_get:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:511    .text.gpio_output_port_get:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:514    .text.gpio_output_port_get:0000000000000002 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:517    .text.gpio_output_port_get:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:524    .text.gpio_pin_remap_config:0000000000000000 gpio_pin_remap_config
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:527    .text.gpio_pin_remap_config:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:529    .text.gpio_pin_remap_config:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:530    .text.gpio_pin_remap_config:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:531    .text.gpio_pin_remap_config:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:532    .text.gpio_pin_remap_config:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:534    .text.gpio_pin_remap_config:0000000000000004 .L0 
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccuSklz3.s 			page 31
+
+
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:536    .text.gpio_pin_remap_config:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:537    .text.gpio_pin_remap_config:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:539    .text.gpio_pin_remap_config:000000000000000c .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:542    .text.gpio_pin_remap_config:000000000000000e .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:543    .text.gpio_pin_remap_config:000000000000000e .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:544    .text.gpio_pin_remap_config:000000000000000e .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:546    .text.gpio_pin_remap_config:0000000000000012 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:548    .text.gpio_pin_remap_config:0000000000000016 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:551    .text.gpio_pin_remap_config:0000000000000018 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:552    .text.gpio_pin_remap_config:0000000000000018 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:556    .text.gpio_pin_remap_config:000000000000001c .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:557    .text.gpio_pin_remap_config:000000000000001c .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:561    .text.gpio_pin_remap_config:0000000000000024 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:562    .text.gpio_pin_remap_config:0000000000000024 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:563    .text.gpio_pin_remap_config:0000000000000024 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:565    .text.gpio_pin_remap_config:0000000000000028 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:567    .text.gpio_pin_remap_config:000000000000002c .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:570    .text.gpio_pin_remap_config:0000000000000032 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:572    .text.gpio_pin_remap_config:0000000000000036 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:575    .text.gpio_pin_remap_config:0000000000000038 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:576    .text.gpio_pin_remap_config:0000000000000038 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:581    .text.gpio_pin_remap_config:000000000000003e .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:582    .text.gpio_pin_remap_config:000000000000003e .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:584    .text.gpio_pin_remap_config:0000000000000040 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:585    .text.gpio_pin_remap_config:0000000000000040 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:587    .text.gpio_pin_remap_config:0000000000000044 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:589    .text.gpio_pin_remap_config:0000000000000046 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:592    .text.gpio_pin_remap_config:000000000000004a .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:596    .text.gpio_pin_remap_config:000000000000004c .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:597    .text.gpio_pin_remap_config:000000000000004c .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:599    .text.gpio_pin_remap_config:0000000000000050 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:601    .text.gpio_pin_remap_config:0000000000000054 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:602    .text.gpio_pin_remap_config:0000000000000054 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:604    .text.gpio_pin_remap_config:0000000000000056 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:608    .text.gpio_pin_remap_config:0000000000000058 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:609    .text.gpio_pin_remap_config:0000000000000058 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:611    .text.gpio_pin_remap_config:000000000000005c .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:613    .text.gpio_pin_remap_config:000000000000005e .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:615    .text.gpio_pin_remap_config:0000000000000062 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:617    .text.gpio_pin_remap_config:0000000000000066 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:620    .text.gpio_pin_remap_config:0000000000000068 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:621    .text.gpio_pin_remap_config:0000000000000068 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:628    .text.gpio_pin_remap_config:0000000000000070 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:629    .text.gpio_pin_remap_config:0000000000000070 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:634    .text.gpio_pin_remap_config:0000000000000074 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:635    .text.gpio_pin_remap_config:0000000000000074 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:637    .text.gpio_pin_remap_config:0000000000000078 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:640    .text.gpio_pin_remap_config:000000000000007a .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:641    .text.gpio_pin_remap_config:000000000000007a .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:642    .text.gpio_pin_remap_config:000000000000007a .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:644    .text.gpio_pin_remap_config:000000000000007e .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:646    .text.gpio_pin_remap_config:0000000000000082 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:649    .text.gpio_pin_remap_config:0000000000000084 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:650    .text.gpio_pin_remap_config:0000000000000084 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:654    .text.gpio_pin_remap_config:0000000000000088 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:655    .text.gpio_pin_remap_config:0000000000000088 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:658    .text.gpio_pin_remap_config:0000000000000090 .L0 
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccuSklz3.s 			page 32
+
+
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:661    .text.gpio_pin_remap_config:0000000000000096 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:663    .text.gpio_pin_remap_config:0000000000000098 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:666    .text.gpio_pin_remap_config:000000000000009a .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:667    .text.gpio_pin_remap_config:000000000000009a .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:669    .text.gpio_pin_remap_config:00000000000000a0 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:676    .text.gpio_exti_source_select:0000000000000000 gpio_exti_source_select
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:679    .text.gpio_exti_source_select:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:681    .text.gpio_exti_source_select:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:682    .text.gpio_exti_source_select:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:683    .text.gpio_exti_source_select:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:684    .text.gpio_exti_source_select:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:686    .text.gpio_exti_source_select:0000000000000004 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:689    .text.gpio_exti_source_select:0000000000000006 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:690    .text.gpio_exti_source_select:0000000000000006 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:693    .text.gpio_exti_source_select:000000000000000c .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:699    .text.gpio_exti_source_select:000000000000001a .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:700    .text.gpio_exti_source_select:000000000000001a .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:706    .text.gpio_exti_source_select:0000000000000024 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:707    .text.gpio_exti_source_select:0000000000000024 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:714    .text.gpio_exti_source_select:000000000000002c .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:715    .text.gpio_exti_source_select:000000000000002c .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:719    .text.gpio_exti_source_select:0000000000000032 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:720    .text.gpio_exti_source_select:0000000000000032 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:725    .text.gpio_exti_source_select:000000000000003c .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:726    .text.gpio_exti_source_select:000000000000003c .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:732    .text.gpio_exti_source_select:0000000000000044 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:733    .text.gpio_exti_source_select:0000000000000044 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:735    .text.gpio_exti_source_select:0000000000000046 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:737    .text.gpio_exti_source_select:000000000000004a .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:739    .text.gpio_exti_source_select:000000000000004e .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:740    .text.gpio_exti_source_select:000000000000004e .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:744    .text.gpio_exti_source_select:0000000000000054 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:745    .text.gpio_exti_source_select:0000000000000054 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:751    .text.gpio_exti_source_select:000000000000005c .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:752    .text.gpio_exti_source_select:000000000000005c .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:756    .text.gpio_exti_source_select:0000000000000062 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:757    .text.gpio_exti_source_select:0000000000000062 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:761    .text.gpio_exti_source_select:0000000000000068 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:762    .text.gpio_exti_source_select:000000000000006a .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:769    .text.gpio_event_output_config:0000000000000000 gpio_event_output_config
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:772    .text.gpio_event_output_config:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:774    .text.gpio_event_output_config:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:775    .text.gpio_event_output_config:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:776    .text.gpio_event_output_config:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:777    .text.gpio_event_output_config:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:781    .text.gpio_event_output_config:0000000000000006 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:782    .text.gpio_event_output_config:0000000000000006 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:783    .text.gpio_event_output_config:0000000000000006 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:784    .text.gpio_event_output_config:0000000000000006 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:787    .text.gpio_event_output_config:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:791    .text.gpio_event_output_config:000000000000000e .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:794    .text.gpio_event_output_config:0000000000000010 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:795    .text.gpio_event_output_config:0000000000000010 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:797    .text.gpio_event_output_config:0000000000000012 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:798    .text.gpio_event_output_config:0000000000000014 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:805    .text.gpio_event_output_enable:0000000000000000 gpio_event_output_enable
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:808    .text.gpio_event_output_enable:0000000000000000 .L0 
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccuSklz3.s 			page 33
+
+
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:809    .text.gpio_event_output_enable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:810    .text.gpio_event_output_enable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:811    .text.gpio_event_output_enable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:816    .text.gpio_event_output_enable:000000000000000c .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:817    .text.gpio_event_output_enable:000000000000000e .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:824    .text.gpio_event_output_disable:0000000000000000 gpio_event_output_disable
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:827    .text.gpio_event_output_disable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:828    .text.gpio_event_output_disable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:829    .text.gpio_event_output_disable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:830    .text.gpio_event_output_disable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:835    .text.gpio_event_output_disable:000000000000000c .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:836    .text.gpio_event_output_disable:000000000000000e .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:843    .text.gpio_pin_lock:0000000000000000 gpio_pin_lock
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:846    .text.gpio_pin_lock:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:848    .text.gpio_pin_lock:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:849    .text.gpio_pin_lock:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:850    .text.gpio_pin_lock:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:851    .text.gpio_pin_lock:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:855    .text.gpio_pin_lock:0000000000000004 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:856    .text.gpio_pin_lock:0000000000000004 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:858    .text.gpio_pin_lock:0000000000000006 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:859    .text.gpio_pin_lock:0000000000000006 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:861    .text.gpio_pin_lock:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:862    .text.gpio_pin_lock:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:864    .text.gpio_pin_lock:000000000000000a .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:865    .text.gpio_pin_lock:000000000000000a .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:868    .text.gpio_pin_lock:000000000000000c .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:869    .text.gpio_pin_lock:000000000000000c .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:871    .text.gpio_pin_lock:000000000000000e .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:872    .text.gpio_pin_lock:0000000000000010 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:157    .text.gpio_deinit:00000000000000c6 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:194    .text.gpio_afio_deinit:0000000000000020 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:362    .text.gpio_init:00000000000000a8 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:379    .text.gpio_bit_set:0000000000000004 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:396    .text.gpio_bit_reset:0000000000000004 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:421    .text.gpio_bit_write:000000000000000a .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:438    .text.gpio_port_write:0000000000000004 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:459    .text.gpio_input_bit_get:000000000000000a .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:479    .text.gpio_input_port_get:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:500    .text.gpio_output_bit_get:000000000000000a .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:520    .text.gpio_output_port_get:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:672    .text.gpio_pin_remap_config:00000000000000a0 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:765    .text.gpio_exti_source_select:000000000000006a .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:801    .text.gpio_event_output_config:0000000000000014 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:820    .text.gpio_event_output_enable:000000000000000e .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:839    .text.gpio_event_output_disable:000000000000000e .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:875    .text.gpio_pin_lock:0000000000000010 .L0 
+                     .debug_frame:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:78     .text.gpio_deinit:000000000000006c .L2
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:51     .text.gpio_deinit:0000000000000040 .L11
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:100    .text.gpio_deinit:0000000000000088 .L7
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:122    .text.gpio_deinit:00000000000000a4 .L1
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:133    .text.gpio_deinit:00000000000000aa .L4
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:219    .text.gpio_init:000000000000000e .L15
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:272    .text.gpio_init:000000000000004c .L16
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:348    .text.gpio_init:00000000000000a0 .L35
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:336    .text.gpio_init:0000000000000098 .L36
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccuSklz3.s 			page 34
+
+
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:234    .text.gpio_init:000000000000001e .L19
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:328    .text.gpio_init:0000000000000090 .L20
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:354    .text.gpio_init:00000000000000a4 .L37
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:342    .text.gpio_init:000000000000009c .L38
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:287    .text.gpio_init:0000000000000060 .L23
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:267    .text.gpio_init:000000000000004a .L18
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:323    .text.gpio_init:000000000000008e .L22
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:412    .text.gpio_bit_write:0000000000000006 .L42
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:632    .text.gpio_pin_remap_config:0000000000000074 .L61
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:652    .text.gpio_pin_remap_config:0000000000000088 .L62
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:606    .text.gpio_pin_remap_config:0000000000000058 .L54
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:594    .text.gpio_pin_remap_config:000000000000004c .L55
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:626    .text.gpio_pin_remap_config:0000000000000070 .L63
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:579    .text.gpio_pin_remap_config:000000000000003e .L53
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:554    .text.gpio_pin_remap_config:000000000000001c .L52
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:712    .text.gpio_exti_source_select:000000000000002c .L65
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:730    .text.gpio_exti_source_select:0000000000000044 .L67
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:749    .text.gpio_exti_source_select:000000000000005c .L68
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:1829   .debug_abbrev:0000000000000000 .Ldebug_abbrev0
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:3100   .debug_str:0000000000000221 .LASF88
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:3032   .debug_str:0000000000000054 .LASF89
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:3152   .debug_str:00000000000003fa .LASF90
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:2980   .debug_ranges:0000000000000000 .Ldebug_ranges0
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:3018   .debug_line:0000000000000000 .Ldebug_line0
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:3116   .debug_str:000000000000030d .LASF0
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:3104   .debug_str:00000000000002b3 .LASF1
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:3080   .debug_str:00000000000001ac .LASF4
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:3094   .debug_str:00000000000001fd .LASF2
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:3058   .debug_str:000000000000012e .LASF3
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:3052   .debug_str:00000000000000ff .LASF5
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:3130   .debug_str:000000000000035e .LASF6
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:3074   .debug_str:000000000000018b .LASF7
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:3044   .debug_str:00000000000000d8 .LASF8
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:3162   .debug_str:000000000000045c .LASF9
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:3072   .debug_str:000000000000017d .LASF10
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:3108   .debug_str:00000000000002ca .LASF11
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:3060   .debug_str:0000000000000138 .LASF12
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:3118   .debug_str:000000000000031a .LASF13
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:3112   .debug_str:00000000000002ee .LASF14
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:3150   .debug_str:00000000000003ea .LASF91
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:3062   .debug_str:0000000000000140 .LASF15
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:3198   .debug_str:0000000000000541 .LASF16
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:3136   .debug_str:0000000000000393 .LASF17
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:3178   .debug_str:00000000000004c4 .LASF18
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:3194   .debug_str:000000000000052a .LASF19
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:3024   .debug_str:0000000000000021 .LASF20
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:3138   .debug_str:00000000000003a1 .LASF21
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:3064   .debug_str:0000000000000148 .LASF22
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:3088   .debug_str:00000000000001d1 .LASF23
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:3084   .debug_str:00000000000001bd .LASF24
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:3148   .debug_str:00000000000003dc .LASF25
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:3192   .debug_str:000000000000051c .LASF26
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:3202   .debug_str:0000000000000556 .LASF27
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:3038   .debug_str:000000000000009a .LASF28
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:3078   .debug_str:00000000000001a0 .LASF29
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:3158   .debug_str:000000000000043a .LASF30
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:3200   .debug_str:0000000000000548 .LASF31
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccuSklz3.s 			page 35
+
+
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:3164   .debug_str:000000000000046e .LASF32
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:3026   .debug_str:000000000000002e .LASF33
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:3196   .debug_str:0000000000000535 .LASF34
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:3172   .debug_str:00000000000004a3 .LASF35
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:3030   .debug_str:0000000000000048 .LASF36
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:3068   .debug_str:0000000000000163 .LASF37
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:3036   .debug_str:000000000000008e .LASF38
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:3174   .debug_str:00000000000004af .LASF39
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:3106   .debug_str:00000000000002bf .LASF40
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:3096   .debug_str:000000000000020b .LASF41
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:3110   .debug_str:00000000000002e1 .LASF42
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:3168   .debug_str:000000000000048c .LASF43
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:3028   .debug_str:000000000000003b .LASF44
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:3066   .debug_str:0000000000000156 .LASF45
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:3120   .debug_str:0000000000000323 .LASF46
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:3126   .debug_str:000000000000033d .LASF47
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:3180   .debug_str:00000000000004ca .LASF48
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:3022   .debug_str:0000000000000013 .LASF49
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:3184   .debug_str:00000000000004e2 .LASF50
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:3092   .debug_str:00000000000001ef .LASF51
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:3034   .debug_str:0000000000000083 .LASF52
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:3070   .debug_str:000000000000016f .LASF56
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:844    .text.gpio_pin_lock:0000000000000000 .LFB18
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:873    .text.gpio_pin_lock:0000000000000010 .LFE18
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:3098   .debug_str:0000000000000215 .LASF53
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:3146   .debug_str:00000000000003d7 .LASF60
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:2367   .debug_loc:0000000000000000 .LLST19
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:3056   .debug_str:0000000000000114 .LASF54
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:825    .text.gpio_event_output_disable:0000000000000000 .LFB17
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:837    .text.gpio_event_output_disable:000000000000000e .LFE17
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:3042   .debug_str:00000000000000bf .LASF55
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:806    .text.gpio_event_output_enable:0000000000000000 .LFB16
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:818    .text.gpio_event_output_enable:000000000000000e .LFE16
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:3134   .debug_str:000000000000037a .LASF57
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:770    .text.gpio_event_output_config:0000000000000000 .LFB15
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:799    .text.gpio_event_output_config:0000000000000014 .LFE15
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:3076   .debug_str:0000000000000194 .LASF58
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:2381   .debug_loc:0000000000000021 .LLST17
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:3140   .debug_str:00000000000003af .LASF59
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:2395   .debug_loc:0000000000000042 .LLST18
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:3102   .debug_str:000000000000029b .LASF61
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:677    .text.gpio_exti_source_select:0000000000000000 .LFB14
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:763    .text.gpio_exti_source_select:000000000000006a .LFE14
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:2442   .debug_loc:0000000000000092 .LLST15
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:3082   .debug_str:00000000000001b6 .LASF62
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:2456   .debug_loc:00000000000000b3 .LLST16
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:3114   .debug_str:00000000000002f7 .LASF63
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:525    .text.gpio_pin_remap_config:0000000000000000 .LFB13
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:670    .text.gpio_pin_remap_config:00000000000000a0 .LFE13
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:3086   .debug_str:00000000000001cb .LASF64
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:3132   .debug_str:0000000000000371 .LASF65
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:3188   .debug_str:00000000000004fd .LASF66
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:2504   .debug_loc:000000000000010b .LLST11
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:3124   .debug_str:0000000000000336 .LASF67
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:2529   .debug_loc:000000000000014c .LLST12
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:3142   .debug_str:00000000000003ba .LASF68
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:2559   .debug_loc:000000000000018b .LLST13
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccuSklz3.s 			page 36
+
+
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:3176   .debug_str:00000000000004ba .LASF69
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:2596   .debug_loc:00000000000001ed .LLST14
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:3128   .debug_str:0000000000000349 .LASF70
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:505    .text.gpio_output_port_get:0000000000000000 .LFB12
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:518    .text.gpio_output_port_get:0000000000000008 .LFE12
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:2629   .debug_loc:000000000000022f .LLST10
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:3144   .debug_str:00000000000003c3 .LASF71
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:484    .text.gpio_output_bit_get:0000000000000000 .LFB11
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:498    .text.gpio_output_bit_get:000000000000000a .LFE11
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:2643   .debug_loc:0000000000000250 .LLST9
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:3160   .debug_str:0000000000000448 .LASF72
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:464    .text.gpio_input_port_get:0000000000000000 .LFB10
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:477    .text.gpio_input_port_get:0000000000000008 .LFE10
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:2657   .debug_loc:0000000000000271 .LLST8
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:3020   .debug_str:0000000000000000 .LASF73
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:443    .text.gpio_input_bit_get:0000000000000000 .LFB9
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:457    .text.gpio_input_bit_get:000000000000000a .LFE9
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:2671   .debug_loc:0000000000000292 .LLST7
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:3090   .debug_str:00000000000001df .LASF74
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:426    .text.gpio_port_write:0000000000000000 .LFB8
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:436    .text.gpio_port_write:0000000000000004 .LFE8
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:3156   .debug_str:0000000000000435 .LASF75
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:3186   .debug_str:00000000000004ee .LASF76
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:401    .text.gpio_bit_write:0000000000000000 .LFB7
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:419    .text.gpio_bit_write:000000000000000a .LFE7
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:3054   .debug_str:000000000000010a .LASF77
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:3154   .debug_str:0000000000000426 .LASF78
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:384    .text.gpio_bit_reset:0000000000000000 .LFB6
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:394    .text.gpio_bit_reset:0000000000000004 .LFE6
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:3046   .debug_str:00000000000000e3 .LASF79
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:367    .text.gpio_bit_set:0000000000000000 .LFB5
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:377    .text.gpio_bit_set:0000000000000004 .LFE5
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:3170   .debug_str:0000000000000499 .LASF80
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:199    .text.gpio_init:0000000000000000 .LFB4
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:360    .text.gpio_init:00000000000000a8 .LFE4
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:3048   .debug_str:00000000000000f0 .LASF81
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:3122   .debug_str:0000000000000330 .LASF82
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:2685   .debug_loc:00000000000002b3 .LLST3
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:2699   .debug_loc:00000000000002d4 .LLST4
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:3050   .debug_str:00000000000000f5 .LASF83
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:2731   .debug_loc:0000000000000323 .LLST5
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:2743   .debug_loc:0000000000000342 .LLST6
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:3166   .debug_str:000000000000047b .LASF84
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:162    .text.gpio_afio_deinit:0000000000000000 .LFB3
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:192    .text.gpio_afio_deinit:0000000000000020 .LFE3
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:2791   .debug_loc:00000000000003c4 .LLST2
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:177    .text.gpio_afio_deinit:0000000000000010 .LVL16
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:190    .text.gpio_afio_deinit:0000000000000020 .LVL17
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:3182   .debug_str:00000000000004d6 .LASF85
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:11     .text.gpio_deinit:0000000000000000 .LFB2
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:155    .text.gpio_deinit:00000000000000c6 .LFE2
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:2809   .debug_loc:00000000000003f0 .LLST0
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:2877   .debug_loc:0000000000000494 .LLST1
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:36     .text.gpio_deinit:0000000000000030 .LVL2
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:50     .text.gpio_deinit:0000000000000040 .LVL3
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:63     .text.gpio_deinit:000000000000005c .LVL5
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:77     .text.gpio_deinit:000000000000006c .LVL6
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccuSklz3.s 			page 37
+
+
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:85     .text.gpio_deinit:0000000000000078 .LVL8
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:99     .text.gpio_deinit:0000000000000088 .LVL9
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:107    .text.gpio_deinit:0000000000000094 .LVL11
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:121    .text.gpio_deinit:00000000000000a4 .LVL12
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:140    .text.gpio_deinit:00000000000000b6 .LVL14
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:153    .text.gpio_deinit:00000000000000c6 .LVL15
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:3190   .debug_str:0000000000000504 .LASF86
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:3040   .debug_str:00000000000000a6 .LASF87
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:847    .text.gpio_pin_lock:0000000000000000 .LVL78
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:853    .text.gpio_pin_lock:0000000000000004 .LVL79
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:866    .text.gpio_pin_lock:000000000000000c .LVL80
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:773    .text.gpio_event_output_config:0000000000000000 .LVL73
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:785    .text.gpio_event_output_config:0000000000000008 .LVL75
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:779    .text.gpio_event_output_config:0000000000000006 .LVL74
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:788    .text.gpio_event_output_config:000000000000000c .LVL76
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:792    .text.gpio_event_output_config:0000000000000010 .LVL77
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:680    .text.gpio_exti_source_select:0000000000000000 .LVL67
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:696    .text.gpio_exti_source_select:0000000000000016 .LVL69
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:687    .text.gpio_exti_source_select:0000000000000006 .LVL68
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:702    .text.gpio_exti_source_select:0000000000000020 .LVL70
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:711    .text.gpio_exti_source_select:000000000000002c .LVL71
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:716    .text.gpio_exti_source_select:000000000000002e .LVL72
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:528    .text.gpio_pin_remap_config:0000000000000000 .LVL49
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:549    .text.gpio_pin_remap_config:0000000000000018 .LVL51
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:590    .text.gpio_pin_remap_config:000000000000004a .LVL56
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:605    .text.gpio_pin_remap_config:0000000000000058 .LVL58
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:625    .text.gpio_pin_remap_config:0000000000000070 .LVL61
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:631    .text.gpio_pin_remap_config:0000000000000074 .LVL62
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:647    .text.gpio_pin_remap_config:0000000000000084 .LVL64
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:560    .text.gpio_pin_remap_config:0000000000000024 .LVL53
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:578    .text.gpio_pin_remap_config:000000000000003e .LVL55
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:540    .text.gpio_pin_remap_config:000000000000000e .LVL50
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:573    .text.gpio_pin_remap_config:0000000000000038 .LVL54
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:618    .text.gpio_pin_remap_config:0000000000000068 .LVL59
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:623    .text.gpio_pin_remap_config:000000000000006e .LVL60
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:638    .text.gpio_pin_remap_config:000000000000007a .LVL63
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:553    .text.gpio_pin_remap_config:000000000000001c .LVL52
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:651    .text.gpio_pin_remap_config:0000000000000088 .LVL65
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:508    .text.gpio_output_port_get:0000000000000000 .LVL47
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:512    .text.gpio_output_port_get:0000000000000002 .LVL48
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:487    .text.gpio_output_bit_get:0000000000000000 .LVL45
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:491    .text.gpio_output_bit_get:0000000000000002 .LVL46
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:467    .text.gpio_input_port_get:0000000000000000 .LVL43
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:471    .text.gpio_input_port_get:0000000000000002 .LVL44
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:446    .text.gpio_input_bit_get:0000000000000000 .LVL41
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:450    .text.gpio_input_bit_get:0000000000000002 .LVL42
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:202    .text.gpio_init:0000000000000000 .LVL18
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:233    .text.gpio_init:000000000000001e .LVL21
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:218    .text.gpio_init:000000000000000e .LVL20
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:271    .text.gpio_init:000000000000004c .LVL25
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:274    .text.gpio_init:000000000000004e .LVL26
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:288    .text.gpio_init:0000000000000060 .LVL27
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:327    .text.gpio_init:0000000000000090 .LVL31
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:330    .text.gpio_init:0000000000000092 .LVL32
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:335    .text.gpio_init:0000000000000098 .LVL33
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:211    .text.gpio_init:0000000000000008 .LVL19
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:253    .text.gpio_init:000000000000003a .LVL22
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccuSklz3.s 			page 38
+
+
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:257    .text.gpio_init:000000000000003e .LVL23
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:261    .text.gpio_init:0000000000000042 .LVL24
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:309    .text.gpio_init:000000000000007e .LVL28
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:313    .text.gpio_init:0000000000000082 .LVL29
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:317    .text.gpio_init:0000000000000086 .LVL30
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:341    .text.gpio_init:000000000000009c .LVL34
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:347    .text.gpio_init:00000000000000a0 .LVL35
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:353    .text.gpio_init:00000000000000a4 .LVL36
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:168    .text.gpio_afio_deinit:0000000000000002 .LCFI12
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:186    .text.gpio_afio_deinit:0000000000000018 .LCFI13
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:19     .text.gpio_deinit:0000000000000002 .LCFI0
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:46     .text.gpio_deinit:0000000000000038 .LCFI1
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:52     .text.gpio_deinit:0000000000000040 .LCFI2
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:73     .text.gpio_deinit:0000000000000064 .LCFI3
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:79     .text.gpio_deinit:000000000000006c .LCFI4
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:95     .text.gpio_deinit:0000000000000080 .LCFI5
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:101    .text.gpio_deinit:0000000000000088 .LCFI6
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:117    .text.gpio_deinit:000000000000009c .LCFI7
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:123    .text.gpio_deinit:00000000000000a4 .LCFI8
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:130    .text.gpio_deinit:00000000000000a8 .LCFI9
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:134    .text.gpio_deinit:00000000000000aa .LCFI10
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:149    .text.gpio_deinit:00000000000000be .LCFI11
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:15     .text.gpio_deinit:0000000000000000 .LVL0
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:34     .text.gpio_deinit:0000000000000028 .LVL1
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:61     .text.gpio_deinit:0000000000000054 .LVL4
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:83     .text.gpio_deinit:0000000000000070 .LVL7
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:105    .text.gpio_deinit:000000000000008c .LVL10
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:138    .text.gpio_deinit:00000000000000ae .LVL13
+C:\Users\test\AppData\Local\Temp\ccuSklz3.s:884    .debug_info:0000000000000000 .Ldebug_info0
+
+UNDEFINED SYMBOLS
+rcu_periph_reset_enable
+rcu_periph_reset_disable

@@ -1,4 +1,4 @@
-GAS LISTING C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s 			page 1
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccIZIrBk.s 			page 1
 
 
    1              		.file	"main.c"
@@ -10,177 +10,436 @@ GAS LISTING C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s 			page 1
    7              		.align	1
    8              		.globl	main
   10              	main:
-  11              	.LFB3:
+  11              	.LFB16:
   12              		.file 1 "application/main.c"
-   1:application/main.c **** #include "stdio.h"
-   2:application/main.c **** 
-   3:application/main.c **** int main(void)
-   4:application/main.c **** {
-  13              		.loc 1 4 1
+   1:application/main.c **** #include "gd32vf103.h"
+   2:application/main.c **** #include "gd32vf103_usart.h"
+   3:application/main.c **** #include "gpio-core.h"
+   4:application/main.c **** #include "spi-core.h"
+   5:application/main.c **** #include "delay-core.h"
+   6:application/main.c **** 
+   7:application/main.c **** struct gpio_desp led =
+   8:application/main.c **** {
+   9:application/main.c ****     .pin_num = 2,
+  10:application/main.c ****     .mode = 0,
+  11:application/main.c ****     .flag = 1,
+  12:application/main.c **** };
+  13:application/main.c **** 
+  14:application/main.c **** 
+  15:application/main.c **** int main(void)
+  16:application/main.c **** {
+  13              		.loc 1 16 1
   14              		.cfi_startproc
-   5:application/main.c ****     return 0;
-  15              		.loc 1 5 5
-   6:application/main.c **** }...
-  16              		.loc 1 6 1 is_stmt 0
-  17 0000 0145     		li	a0,0
-  18 0002 8280     		ret
-  19              		.cfi_endproc
-  20              	.LFE3:
-  22              		.text
-  23              	.Letext0:
-  24              		.file 2 "d:\\risc_v_gcc\\lib\\gcc\\riscv-none-embed\\8.3.0\\include\\stddef.h"
-  25              		.file 3 "d:\\risc_v_gcc\\riscv-none-embed\\include\\sys\\_types.h"
-  26              		.file 4 "d:\\risc_v_gcc\\riscv-none-embed\\include\\sys\\reent.h"
-  27              		.file 5 "d:\\risc_v_gcc\\riscv-none-embed\\include\\sys\\lock.h"
-GAS LISTING C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s 			page 2
+  17:application/main.c ****     gpio_get(&led); //申请一个GPIO资源
+  15              		.loc 1 17 5
+  16              	.LVL0:
+  17              	.LBB14:
+  18              	.LBB15:
+  19              		.file 2 "core/gpio-core.h"
+   1:core/gpio-core.h **** #ifndef __GPIO_CORE_H_
+   2:core/gpio-core.h **** #define __GPIO_CORE_H_
+   3:core/gpio-core.h **** #include "module.h"
+   4:core/gpio-core.h **** 
+   5:core/gpio-core.h **** struct gpio_controller;
+   6:core/gpio-core.h **** 
+   7:core/gpio-core.h **** 
+   8:core/gpio-core.h **** typedef struct gpio_desp
+   9:core/gpio-core.h **** {
+  10:core/gpio-core.h ****     uint16_t pin_num;
+  11:core/gpio-core.h ****     uint16_t direction:1;
+  12:core/gpio-core.h ****     uint16_t status:1;
+  13:core/gpio-core.h ****     uint16_t mode:4;
+  14:core/gpio-core.h ****     uint16_t flag:1;
+  15:core/gpio-core.h ****     struct gpio_controller *ctl;
+  16:core/gpio-core.h ****     
+  17:core/gpio-core.h **** }gpio_desp_t;
+  18:core/gpio-core.h **** 
+  19:core/gpio-core.h **** typedef enum gpio_direction
+  20:core/gpio-core.h **** {
+  21:core/gpio-core.h ****     GPIO_PP_OUTPUT = 0,
+  22:core/gpio-core.h ****     GPIO_FINPUT,
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccIZIrBk.s 			page 2
+
+
+  23:core/gpio-core.h ****     GPIO_PU_OUTPUT,
+  24:core/gpio-core.h ****     GPIO_PD_OUTPUT,
+  25:core/gpio-core.h ****     
+  26:core/gpio-core.h **** }gpio_direction_t;
+  27:core/gpio-core.h **** 
+  28:core/gpio-core.h **** typedef struct gpio_operations
+  29:core/gpio-core.h **** {
+  30:core/gpio-core.h ****     int8_t   (*get)(gpio_desp_t *gpio_desp);
+  31:core/gpio-core.h ****     void     (*set_direction)(gpio_desp_t *gpio_desp, gpio_direction_t dir);
+  32:core/gpio-core.h ****     void     (*set_value)(gpio_desp_t *gpio_desp, uint8_t value);
+  33:core/gpio-core.h ****     uint32_t (*get_value)(gpio_desp_t *gpio_desp);
+  34:core/gpio-core.h ****     void     (*put)(gpio_desp_t *gpio_desp);
+  35:core/gpio-core.h **** 
+  36:core/gpio-core.h **** }gpio_operations_t;
+  37:core/gpio-core.h **** 
+  38:core/gpio-core.h **** 
+  39:core/gpio-core.h **** typedef struct gpio_controller
+  40:core/gpio-core.h **** {
+  41:core/gpio-core.h ****     gpio_desp_t *desp;
+  42:core/gpio-core.h ****     gpio_operations_t  ops;
+  43:core/gpio-core.h **** 
+  44:core/gpio-core.h **** }gpio_controller_t;
+  45:core/gpio-core.h **** 
+  46:core/gpio-core.h **** 
+  47:core/gpio-core.h **** static inline int8_t gpio_get(gpio_desp_t *gpio_desp)
+  48:core/gpio-core.h **** {
+  49:core/gpio-core.h ****     gpio_desp->ctl = (gpio_controller_t*)&__gpio_core_init;
+  20              		.loc 2 49 5
+  21              		.loc 2 49 20 is_stmt 0
+  22 0000 B7070000 		lui	a5,%hi(__gpio_core_init)
+  23              	.LBE15:
+  24              	.LBE14:
+  16:application/main.c ****     gpio_get(&led); //申请一个GPIO资源
+  25              		.loc 1 16 1
+  26 0004 4111     		addi	sp,sp,-16
+  27              	.LCFI0:
+  28              		.cfi_def_cfa_offset 16
+  29              	.LBB20:
+  30              	.LBB16:
+  31              		.loc 2 49 20
+  32 0006 93870700 		addi	a5,a5,%lo(__gpio_core_init)
+  50:core/gpio-core.h ****     return gpio_desp->ctl->ops.get(gpio_desp);
+  33              		.loc 2 50 12
+  34 000a D843     		lw	a4,4(a5)
+  35              	.LBE16:
+  36              	.LBE20:
+  16:application/main.c ****     gpio_get(&led); //申请一个GPIO资源
+  37              		.loc 1 16 1
+  38 000c 22C4     		sw	s0,8(sp)
+  39              		.cfi_offset 8, -8
+  40              	.LBB21:
+  41              	.LBB17:
+  49:core/gpio-core.h ****     return gpio_desp->ctl->ops.get(gpio_desp);
+  42              		.loc 2 49 20
+  43 000e 37040000 		lui	s0,%hi(.LANCHOR0)
+  44              	.LBE17:
+  45              	.LBE21:
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccIZIrBk.s 			page 3
+
+
+  16:application/main.c ****     gpio_get(&led); //申请一个GPIO资源
+  46              		.loc 1 16 1
+  47 0012 4AC0     		sw	s2,0(sp)
+  48              		.cfi_offset 18, -16
+  49              	.LBB22:
+  50              	.LBB18:
+  49:core/gpio-core.h ****     return gpio_desp->ctl->ops.get(gpio_desp);
+  51              		.loc 2 49 20
+  52 0014 13090400 		addi	s2,s0,%lo(.LANCHOR0)
+  53              	.LBE18:
+  54              	.LBE22:
+  16:application/main.c ****     gpio_get(&led); //申请一个GPIO资源
+  55              		.loc 1 16 1
+  56 0018 06C6     		sw	ra,12(sp)
+  57 001a 26C2     		sw	s1,4(sp)
+  58              		.cfi_offset 1, -4
+  59              		.cfi_offset 9, -12
+  60              	.LBB23:
+  61              	.LBB19:
+  49:core/gpio-core.h ****     return gpio_desp->ctl->ops.get(gpio_desp);
+  62              		.loc 2 49 20
+  63 001c 2322F900 		sw	a5,4(s2)
+  64              		.loc 2 50 5 is_stmt 1
+  65              		.loc 2 50 12 is_stmt 0
+  66 0020 13050400 		addi	a0,s0,%lo(.LANCHOR0)
+  67 0024 0297     		jalr	a4
+  68              	.LVL1:
+  69              	.LBE19:
+  70              	.LBE23:
+  18:application/main.c ****     gpio_set_direction(&led,GPIO_PP_OUTPUT);//设置GPIO为推挽输出
+  71              		.loc 1 18 5 is_stmt 1
+  72              	.LBB24:
+  73              	.LBB25:
+  51:core/gpio-core.h **** }
+  52:core/gpio-core.h **** 
+  53:core/gpio-core.h **** static inline void gpio_set_direction(gpio_desp_t *gpio_desp, gpio_direction_t dir)
+  54:core/gpio-core.h **** {
+  55:core/gpio-core.h ****     gpio_desp->ctl->ops.set_direction(gpio_desp,dir);
+  74              		.loc 2 55 5
+  75              		.loc 2 55 24 is_stmt 0
+  76 0026 83274900 		lw	a5,4(s2)
+  77              		.loc 2 55 5
+  78 002a 8145     		li	a1,0
+  79 002c 13050400 		addi	a0,s0,%lo(.LANCHOR0)
+  80 0030 9C47     		lw	a5,8(a5)
+  81 0032 B7040000 		lui	s1,%hi(__delay_core_init)
+  82 0036 93840400 		addi	s1,s1,%lo(__delay_core_init)
+  83 003a 8297     		jalr	a5
+  84              	.LVL2:
+  85              	.L2:
+  86              	.LBE25:
+  87              	.LBE24:
+  19:application/main.c ****     while (1)
+  88              		.loc 1 19 5 is_stmt 1 discriminator 1
+  20:application/main.c ****     {
+  21:application/main.c ****          gpio_set_value(&led,0);
+  89              		.loc 1 21 10 discriminator 1
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccIZIrBk.s 			page 4
+
+
+  90              	.LBB26:
+  91              	.LBB27:
+  56:core/gpio-core.h **** }
+  57:core/gpio-core.h **** 
+  58:core/gpio-core.h **** static inline void gpio_set_value(gpio_desp_t *gpio_desp, uint8_t value)
+  59:core/gpio-core.h **** {
+  60:core/gpio-core.h ****     gpio_desp->ctl->ops.set_value(gpio_desp,value);
+  92              		.loc 2 60 5 discriminator 1
+  93              		.loc 2 60 24 is_stmt 0 discriminator 1
+  94 003c 83274900 		lw	a5,4(s2)
+  95              		.loc 2 60 5 discriminator 1
+  96 0040 8145     		li	a1,0
+  97 0042 13050400 		addi	a0,s0,%lo(.LANCHOR0)
+  98 0046 DC47     		lw	a5,12(a5)
+  99 0048 8297     		jalr	a5
+ 100              	.LVL3:
+ 101              	.LBE27:
+ 102              	.LBE26:
+  22:application/main.c ****          mdelay(500);      //使用延时函数，延时500ms
+ 103              		.loc 1 22 10 is_stmt 1 discriminator 1
+ 104              	.LBB28:
+ 105              	.LBB29:
+ 106              		.file 3 "core/delay-core.h"
+   1:core/delay-core.h **** #ifndef __DELAY_CORE_H_
+   2:core/delay-core.h **** #define __DELAY_CORE_H_
+   3:core/delay-core.h **** 
+   4:core/delay-core.h **** #include "module.h"
+   5:core/delay-core.h **** 
+   6:core/delay-core.h **** static struct delay_core *__delay_core = (struct delay_core*)&__delay_core_init;
+   7:core/delay-core.h **** 
+   8:core/delay-core.h **** struct delay_core
+   9:core/delay-core.h **** {
+  10:core/delay-core.h ****     void (*udelay)(uint32_t us);
+  11:core/delay-core.h ****     void (*mdelay)(uint32_t ms);
+  12:core/delay-core.h ****     void (*sdelay)(uint32_t s);
+  13:core/delay-core.h **** };
+  14:core/delay-core.h **** 
+  15:core/delay-core.h **** static inline void udelay(uint32_t us)
+  16:core/delay-core.h **** {
+  17:core/delay-core.h ****     __delay_core->udelay(us);
+  18:core/delay-core.h **** }
+  19:core/delay-core.h **** 
+  20:core/delay-core.h **** static inline void mdelay(uint32_t ms)
+  21:core/delay-core.h **** {
+  22:core/delay-core.h ****     __delay_core->mdelay(ms);
+ 107              		.loc 3 22 5 discriminator 1
+ 108 004a DC40     		lw	a5,4(s1)
+ 109 004c 1305401F 		li	a0,500
+ 110 0050 8297     		jalr	a5
+ 111              	.LVL4:
+ 112              	.LBE29:
+ 113              	.LBE28:
+  23:application/main.c ****          gpio_set_value(&led,1);
+ 114              		.loc 1 23 10 discriminator 1
+ 115              	.LBB30:
+ 116              	.LBB31:
+ 117              		.loc 2 60 5 discriminator 1
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccIZIrBk.s 			page 5
+
+
+ 118              		.loc 2 60 24 is_stmt 0 discriminator 1
+ 119 0052 83274900 		lw	a5,4(s2)
+ 120              		.loc 2 60 5 discriminator 1
+ 121 0056 13050400 		addi	a0,s0,%lo(.LANCHOR0)
+ 122 005a 8545     		li	a1,1
+ 123 005c DC47     		lw	a5,12(a5)
+ 124 005e 8297     		jalr	a5
+ 125              	.LVL5:
+ 126              	.LBE31:
+ 127              	.LBE30:
+  24:application/main.c ****          mdelay(500);      //使用延时函数，延时500ms
+ 128              		.loc 1 24 10 is_stmt 1 discriminator 1
+ 129              	.LBB32:
+ 130              	.LBB33:
+ 131              		.loc 3 22 5 discriminator 1
+ 132 0060 DC40     		lw	a5,4(s1)
+ 133 0062 1305401F 		li	a0,500
+ 134 0066 8297     		jalr	a5
+ 135              	.LVL6:
+ 136 0068 D1BF     		j	.L2
+ 137              	.LBE33:
+ 138              	.LBE32:
+ 139              		.cfi_endproc
+ 140              	.LFE16:
+ 142              		.globl	led
+ 143              		.section	.sdata.led,"aw"
+ 144              		.align	2
+ 145              		.set	.LANCHOR0,. + 0
+ 148              	led:
+ 149 0000 0200     		.half	2
+ 150 0002 40       		.byte	64
+ 151 0003 00000000 		.zero	5
+ 151      00
+ 152              		.text
+ 153              	.Letext0:
+ 154              		.file 4 "d:\\risc_v_gcc\\riscv-none-embed\\include\\machine\\_default_types.h"
+ 155              		.file 5 "d:\\risc_v_gcc\\riscv-none-embed\\include\\sys\\_stdint.h"
+ 156              		.file 6 "arch/riscv/mach-gd32vf10x/system/system_gd32vf103.h"
+ 157              		.file 7 "core/module.h"
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccIZIrBk.s 			page 6
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 main.c
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:10     .text.startup.main:0000000000000000 main
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:14     .text.startup.main:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:15     .text.startup.main:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:16     .text.startup.main:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:17     .text.startup.main:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:19     .text.startup.main:0000000000000004 .L0 
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:22     .text.startup.main:0000000000000004 .L0 
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:10     .text.startup.main:0000000000000000 main
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:14     .text.startup.main:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:15     .text.startup.main:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:20     .text.startup.main:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:21     .text.startup.main:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:22     .text.startup.main:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:26     .text.startup.main:0000000000000004 .L0 
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:28     .text.startup.main:0000000000000006 .L0 
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:32     .text.startup.main:0000000000000006 .L0 
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:34     .text.startup.main:000000000000000a .L0 
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:38     .text.startup.main:000000000000000c .L0 
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:39     .text.startup.main:000000000000000e .L0 
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:43     .text.startup.main:000000000000000e .L0 
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:47     .text.startup.main:0000000000000012 .L0 
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:48     .text.startup.main:0000000000000014 .L0 
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:52     .text.startup.main:0000000000000014 .L0 
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:56     .text.startup.main:0000000000000018 .L0 
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:58     .text.startup.main:000000000000001c .L0 
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:59     .text.startup.main:000000000000001c .L0 
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:63     .text.startup.main:000000000000001c .L0 
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:65     .text.startup.main:0000000000000020 .L0 
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:66     .text.startup.main:0000000000000020 .L0 
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:74     .text.startup.main:0000000000000026 .L0 
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:75     .text.startup.main:0000000000000026 .L0 
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:76     .text.startup.main:0000000000000026 .L0 
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:78     .text.startup.main:000000000000002a .L0 
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:89     .text.startup.main:000000000000003c .L0 
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:92     .text.startup.main:000000000000003c .L0 
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:93     .text.startup.main:000000000000003c .L0 
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:94     .text.startup.main:000000000000003c .L0 
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:96     .text.startup.main:0000000000000040 .L0 
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:107    .text.startup.main:000000000000004a .L0 
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:108    .text.startup.main:000000000000004a .L0 
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:117    .text.startup.main:0000000000000052 .L0 
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:118    .text.startup.main:0000000000000052 .L0 
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:119    .text.startup.main:0000000000000052 .L0 
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:121    .text.startup.main:0000000000000056 .L0 
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:131    .text.startup.main:0000000000000060 .L0 
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:132    .text.startup.main:0000000000000060 .L0 
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:139    .text.startup.main:000000000000006a .L0 
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:148    .sdata.led:0000000000000000 led
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:145    .sdata.led:0000000000000000 .LANCHOR0
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:143    .text.startup.main:000000000000006a .L0 
                      .debug_frame:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:1431   .debug_abbrev:0000000000000000 .Ldebug_abbrev0
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:1990   .debug_str:000000000000025e .LASF120
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:2082   .debug_str:00000000000004a0 .LASF121
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:2060   .debug_str:000000000000040f .LASF122
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:1858   .debug_ranges:0000000000000000 .Ldebug_ranges0
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:1864   .debug_line:0000000000000000 .Ldebug_line0
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:1894   .debug_str:00000000000000aa .LASF0
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:2004   .debug_str:0000000000000317 .LASF1
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:2010   .debug_str:0000000000000333 .LASF2
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:1962   .debug_str:00000000000001d9 .LASF3
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:1910   .debug_str:00000000000000ef .LASF4
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:1956   .debug_str:00000000000001ba .LASF5
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:1892   .debug_str:000000000000009c .LASF6
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:1880   .debug_str:000000000000004b .LASF7
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:1948   .debug_str:0000000000000196 .LASF8
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:1986   .debug_str:000000000000024b .LASF9
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:1974   .debug_str:000000000000021c .LASF10
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:1998   .debug_str:00000000000002f4 .LASF11
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:2054   .debug_str:00000000000003fb .LASF12
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:2090   .debug_str:00000000000004c8 .LASF13
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:1972   .debug_str:0000000000000216 .LASF14
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:1950   .debug_str:00000000000001a3 .LASF15
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:2046   .debug_str:00000000000003d9 .LASF16
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:2048   .debug_str:00000000000003e1 .LASF17
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:2020   .debug_str:000000000000035b .LASF18
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:2074   .debug_str:000000000000046b .LASF19
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:2002   .debug_str:0000000000000305 .LASF20
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:1934   .debug_str:0000000000000159 .LASF21
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:1938   .debug_str:000000000000016a .LASF26
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:2066   .debug_str:000000000000044a .LASF22
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:2040   .debug_str:00000000000003c4 .LASF23
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:1932   .debug_str:0000000000000153 .LASF24
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:2084   .debug_str:00000000000004b3 .LASF25
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:1946   .debug_str:0000000000000191 .LASF27
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:1890   .debug_str:0000000000000093 .LASF28
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:2062   .debug_str:000000000000043b .LASF29
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:1900   .debug_str:00000000000000c2 .LASF30
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:2114   .debug_str:0000000000000531 .LASF31
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:1992   .debug_str:00000000000002d8 .LASF32
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:1982   .debug_str:0000000000000238 .LASF33
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:2086   .debug_str:00000000000004b8 .LASF34
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:2012   .debug_str:000000000000033d .LASF35
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:2100   .debug_str:00000000000004f3 .LASF36
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:1904   .debug_str:00000000000000d1 .LASF37
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:1928   .debug_str:0000000000000146 .LASF38
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:1866   .debug_str:0000000000000000 .LASF39
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:2070   .debug_str:000000000000045d .LASF40
-GAS LISTING C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s 			page 3
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:85     .text.startup.main:000000000000003c .L2
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:908    .debug_abbrev:0000000000000000 .Ldebug_abbrev0
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:1527   .debug_str:0000000000000177 .LASF56
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:1543   .debug_str:0000000000000245 .LASF57
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:1569   .debug_str:00000000000002f7 .LASF58
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:1445   .debug_ranges:0000000000000000 .Ldebug_ranges0
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:1463   .debug_line:0000000000000000 .Ldebug_line0
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:1533   .debug_str:0000000000000206 .LASF0
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:1519   .debug_str:000000000000013d .LASF2
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:1523   .debug_str:0000000000000154 .LASF1
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:1585   .debug_str:0000000000000381 .LASF3
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccIZIrBk.s 			page 7
 
 
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:1914   .debug_str:00000000000000ff .LASF41
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:1994   .debug_str:00000000000002e1 .LASF42
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:2032   .debug_str:0000000000000394 .LASF43
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:1930   .debug_str:000000000000014e .LASF44
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:2014   .debug_str:0000000000000347 .LASF45
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:1898   .debug_str:00000000000000bc .LASF46
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:1868   .debug_str:000000000000000c .LASF47
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:2022   .debug_str:0000000000000366 .LASF48
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:1912   .debug_str:00000000000000f8 .LASF49
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:1958   .debug_str:00000000000001cc .LASF50
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:1882   .debug_str:0000000000000062 .LASF51
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:1906   .debug_str:00000000000000df .LASF52
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:1942   .debug_str:0000000000000181 .LASF53
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:1980   .debug_str:0000000000000231 .LASF54
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:2050   .debug_str:00000000000003e9 .LASF55
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:2104   .debug_str:000000000000050d .LASF56
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:1896   .debug_str:00000000000000b6 .LASF57
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:2096   .debug_str:00000000000004e5 .LASF58
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:1918   .debug_str:000000000000010e .LASF59
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:1922   .debug_str:000000000000011f .LASF60
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:1874   .debug_str:0000000000000025 .LASF61
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:1976   .debug_str:0000000000000223 .LASF62
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:2024   .debug_str:000000000000036e .LASF63
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:1978   .debug_str:0000000000000229 .LASF64
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:2042   .debug_str:00000000000003cc .LASF65
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:2058   .debug_str:0000000000000408 .LASF66
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:1916   .debug_str:0000000000000107 .LASF67
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:1952   .debug_str:00000000000001aa .LASF68
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:1936   .debug_str:0000000000000162 .LASF69
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:2030   .debug_str:000000000000038f .LASF70
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:1872   .debug_str:000000000000001a .LASF71
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:2038   .debug_str:00000000000003ab .LASF72
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:2034   .debug_str:0000000000000399 .LASF73
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:1996   .debug_str:00000000000002e9 .LASF74
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:2036   .debug_str:00000000000003a1 .LASF75
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:1970   .debug_str:000000000000020e .LASF76
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:1944   .debug_str:0000000000000187 .LASF77
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:2110   .debug_str:0000000000000527 .LASF78
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:2000   .debug_str:00000000000002fb .LASF79
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:1954   .debug_str:00000000000001b2 .LASF80
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:1920   .debug_str:0000000000000117 .LASF81
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:2006   .debug_str:0000000000000325 .LASF82
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:1964   .debug_str:00000000000001ec .LASF83
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:2094   .debug_str:00000000000004db .LASF84
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:1908   .debug_str:00000000000000e7 .LASF85
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:1902   .debug_str:00000000000000cc .LASF86
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:2056   .debug_str:0000000000000403 .LASF87
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:2018   .debug_str:0000000000000354 .LASF88
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:2088   .debug_str:00000000000004c2 .LASF89
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:1960   .debug_str:00000000000001d2 .LASF90
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:2016   .debug_str:000000000000034e .LASF91
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:1870   .debug_str:0000000000000012 .LASF92
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:2044   .debug_str:00000000000003d3 .LASF93
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:2064   .debug_str:0000000000000444 .LASF94
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:2072   .debug_str:0000000000000466 .LASF95
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:2080   .debug_str:0000000000000493 .LASF96
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:2068   .debug_str:0000000000000450 .LASF97
-GAS LISTING C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s 			page 4
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:1521   .debug_str:0000000000000146 .LASF4
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:1475   .debug_str:000000000000003a .LASF5
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:1487   .debug_str:000000000000006a .LASF6
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:1549   .debug_str:000000000000026f .LASF7
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:1507   .debug_str:00000000000000e9 .LASF8
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:1483   .debug_str:000000000000005a .LASF9
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:1563   .debug_str:00000000000002ca .LASF10
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:1499   .debug_str:00000000000000aa .LASF11
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:1525   .debug_str:0000000000000160 .LASF12
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:1473   .debug_str:0000000000000033 .LASF13
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:1493   .debug_str:0000000000000085 .LASF14
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:1535   .debug_str:0000000000000213 .LASF15
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:1529   .debug_str:00000000000001f1 .LASF16
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:1555   .debug_str:0000000000000292 .LASF17
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:1579   .debug_str:0000000000000356 .LASF18
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:1505   .debug_str:00000000000000d9 .LASF19
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:1547   .debug_str:000000000000025f .LASF20
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:1515   .debug_str:000000000000011c .LASF21
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:1581   .debug_str:0000000000000367 .LASF22
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:1587   .debug_str:000000000000038b .LASF23
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:1557   .debug_str:00000000000002a2 .LASF24
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:1517   .debug_str:000000000000012d .LASF25
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:1509   .debug_str:00000000000000f2 .LASF26
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:1575   .debug_str:0000000000000333 .LASF27
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:1489   .debug_str:0000000000000075 .LASF33
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:1561   .debug_str:00000000000002c2 .LASF32
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:1479   .debug_str:000000000000004b .LASF28
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:1541   .debug_str:000000000000023e .LASF29
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:1485   .debug_str:0000000000000065 .LASF30
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:1573   .debug_str:000000000000032e .LASF31
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:1513   .debug_str:000000000000010c .LASF34
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:1467   .debug_str:000000000000000f .LASF35
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:1531   .debug_str:00000000000001fa .LASF36
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:1465   .debug_str:0000000000000000 .LASF59
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:1567   .debug_str:00000000000002e8 .LASF37
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:1565   .debug_str:00000000000002dc .LASF38
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:1537   .debug_str:000000000000021c .LASF39
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:1501   .debug_str:00000000000000b8 .LASF40
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:1577   .debug_str:0000000000000345 .LASF41
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:1559   .debug_str:00000000000002b2 .LASF42
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:1495   .debug_str:000000000000008d .LASF43
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:1511   .debug_str:0000000000000102 .LASF44
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:1583   .debug_str:0000000000000377 .LASF45
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:1503   .debug_str:00000000000000c7 .LASF46
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:1471   .debug_str:0000000000000021 .LASF47
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:1571   .debug_str:0000000000000323 .LASF48
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:1477   .debug_str:0000000000000044 .LASF49
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:1553   .debug_str:000000000000028b .LASF50
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:1545   .debug_str:0000000000000258 .LASF51
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:1469   .debug_str:0000000000000014 .LASF60
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:1481   .debug_str:0000000000000055 .LASF61
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:11     .text.startup.main:0000000000000000 .LFB16
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:140    .text.startup.main:000000000000006a .LFE16
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:1367   .debug_loc:0000000000000000 .LLST0
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:17     .text.startup.main:0000000000000000 .LBB14
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:1380   .debug_loc:0000000000000020 .LLST1
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:68     .text.startup.main:0000000000000026 .LVL1
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccIZIrBk.s 			page 8
 
 
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:1968   .debug_str:0000000000000201 .LASF98
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:2102   .debug_str:00000000000004fe .LASF99
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:1940   .debug_str:0000000000000172 .LASF100
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:2026   .debug_str:0000000000000377 .LASF101
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:2106   .debug_str:0000000000000514 .LASF102
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:2028   .debug_str:0000000000000382 .LASF103
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:2108   .debug_str:0000000000000519 .LASF104
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:1888   .debug_str:0000000000000085 .LASF105
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:2092   .debug_str:00000000000004d1 .LASF106
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:1966   .debug_str:00000000000001f5 .LASF107
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:2076   .debug_str:0000000000000473 .LASF108
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:1926   .debug_str:0000000000000138 .LASF109
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:1886   .debug_str:0000000000000076 .LASF110
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:1924   .debug_str:0000000000000127 .LASF111
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:1876   .debug_str:000000000000002b .LASF112
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:1878   .debug_str:000000000000003a .LASF113
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:2008   .debug_str:000000000000032a .LASF114
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:1988   .debug_str:0000000000000257 .LASF115
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:1984   .debug_str:0000000000000242 .LASF116
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:2098   .debug_str:00000000000004eb .LASF117
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:1884   .debug_str:000000000000006b .LASF123
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:2052   .debug_str:00000000000003ef .LASF118
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:2078   .debug_str:0000000000000480 .LASF119
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:2112   .debug_str:000000000000052c .LASF124
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:11     .text.startup.main:0000000000000000 .LFB3
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:20     .text.startup.main:0000000000000004 .LFE3
-C:\Users\test\AppData\Local\Temp\cc1P4Ixc.s:29     .debug_info:0000000000000000 .Ldebug_info0
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:72     .text.startup.main:0000000000000026 .LBB24
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:87     .text.startup.main:000000000000003c .LBE24
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:84     .text.startup.main:000000000000003c .LVL2
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:90     .text.startup.main:000000000000003c .LBB26
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:102    .text.startup.main:000000000000004a .LBE26
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:1389   .debug_loc:0000000000000038 .LLST2
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:1397   .debug_loc:000000000000004c .LLST3
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:100    .text.startup.main:000000000000004a .LVL3
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:104    .text.startup.main:000000000000004a .LBB28
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:113    .text.startup.main:0000000000000052 .LBE28
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:1406   .debug_loc:0000000000000064 .LLST4
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:111    .text.startup.main:0000000000000052 .LVL4
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:115    .text.startup.main:0000000000000052 .LBB30
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:127    .text.startup.main:0000000000000060 .LBE30
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:1415   .debug_loc:000000000000007a .LLST5
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:1423   .debug_loc:000000000000008e .LLST6
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:125    .text.startup.main:0000000000000060 .LVL5
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:129    .text.startup.main:0000000000000060 .LBB32
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:138    .text.startup.main:000000000000006a .LBE32
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:135    .text.startup.main:0000000000000068 .LVL6
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:1497   .debug_str:000000000000009b .LASF52
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:1491   .debug_str:000000000000007f .LASF53
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:1539   .debug_str:000000000000022b .LASF54
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:1551   .debug_str:0000000000000282 .LASF55
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:27     .text.startup.main:0000000000000006 .LCFI0
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:16     .text.startup.main:0000000000000000 .LVL0
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:159    .debug_info:0000000000000000 .Ldebug_info0
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:24     .text.startup.main:0000000000000004 .LBE14
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:29     .text.startup.main:0000000000000006 .LBB20
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:36     .text.startup.main:000000000000000c .LBE20
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:40     .text.startup.main:000000000000000e .LBB21
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:45     .text.startup.main:0000000000000012 .LBE21
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:49     .text.startup.main:0000000000000014 .LBB22
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:54     .text.startup.main:0000000000000018 .LBE22
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:60     .text.startup.main:000000000000001c .LBB23
+C:\Users\test\AppData\Local\Temp\ccIZIrBk.s:70     .text.startup.main:0000000000000026 .LBE23
 
-NO UNDEFINED SYMBOLS
+UNDEFINED SYMBOLS
+__gpio_core_init
+__delay_core_init

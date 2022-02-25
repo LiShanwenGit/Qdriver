@@ -54,6 +54,7 @@ C_SOURCES  := 	$(wildcard arch/$(ARCH)/mach-$(MACH)/drivers/*.c)     \
 			  	$(wildcard arch/$(ARCH)/mach-$(MACH)/system/*.c)      \
 				$(wildcard arch/$(ARCH)/mach-$(MACH)/bsp/*.c)         \
 			  	$(wildcard drivers/*.c)                               \
+				$(wildcard core/*.c)                               \
 				$(wildcard application/*.c)  
 
 ##################### All ASM source files ##########################################
@@ -76,6 +77,8 @@ AS_INCLUDES :=
 C_INCLUDES  := -Icore \
                -Iarch/$(ARCH)/mach-$(MACH)/bsp      \
 			   -Iarch/$(ARCH)/mach-$(MACH)/system   \
+			   -Idribers                            \
+			   -Iinitial
 
 ##################### creat obj direction ###########################################
 BUILD_DIR   := obj
@@ -153,3 +156,26 @@ $(BUILD_DIR):
 clean:
 	-rm -fR $(BUILD_DIR)
 
+
+
+######################################
+# Jlink Flash
+######################################
+JLINK_SPEED = 4000
+JLINK_BIN_ADDR = 0x08000000
+JLINK_MCU = GD32VF103CBT6
+
+flash: 
+	touch flash.txt
+	echo usb 0 >> flash.txt
+	echo si 0 >>  flash.txt
+	echo jtagconf -1,-1 >> flash.txt
+	echo Device $(JLINK_MCU) >> flash.txt
+	echo speed $(JLINK_SPEED) >> flash.txt
+	echo r >> flash.txt
+	echo h >> flash.txt
+	echo loadfile obj/$(TARGET).bin $(JLINK_BIN_ADDR) >> flash.txt
+	echo Reset >> flash.txt
+	echo q >> flash.txt
+	.././Jlink/JLink.exe  flash.txt
+	rm -rf flash.txt

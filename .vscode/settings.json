@@ -1,0 +1,14 @@
+{
+    "files.associations": {
+        "gpio-core.h": "c",
+        "module.h": "c",
+        "stdint.h": "c",
+        "stdint-gcc.h": "c",
+        "spi-core.h": "c",
+        "intp-core.h": "c",
+        "spi-gpio-core.h": "c",
+        "delay-core.h": "c",
+        "irq-core.h": "c",
+        "i2c-gpio-core.h": "c"
+    }
+}

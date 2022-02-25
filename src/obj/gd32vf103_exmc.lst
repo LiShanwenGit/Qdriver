@@ -1,4 +1,4 @@
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s 			page 1
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccJaW7hG.s 			page 1
 
 
    1              		.file	"gd32vf103_exmc.c"
@@ -58,7 +58,7 @@ GAS LISTING C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s 			page 1
   44:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exmc.c **** #define SNCTL_NRWTEN_OFFSET               ((uint32_t)13U)
   45:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exmc.c **** #define SNCTL_ASYNCWAIT_OFFSET            ((uint32_t)15U)
   46:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exmc.c **** 
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s 			page 2
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccJaW7hG.s 			page 2
 
 
   47:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exmc.c **** #define SNTCFG_AHLD_OFFSET                ((uint32_t)4U)
@@ -118,7 +118,7 @@ GAS LISTING C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s 			page 1
   69:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exmc.c ****     \brief      initialize the structure exmc_norsram_parameter_struct
   70:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exmc.c ****     \param[in]  none
   71:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exmc.c ****     \param[out] exmc_norsram_init_struct: the initialized structure exmc_norsram_parameter_struct p
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s 			page 3
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccJaW7hG.s 			page 3
 
 
   72:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exmc.c ****     \retval     none
@@ -178,7 +178,7 @@ GAS LISTING C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s 			page 1
   81:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exmc.c ****     exmc_norsram_init_struct->memory_write = ENABLE;
   73              		.loc 1 81 46 is_stmt 0
   74 0016 23280500 		sw	zero,16(a0)
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s 			page 4
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccJaW7hG.s 			page 4
 
 
   82:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exmc.c ****     exmc_norsram_init_struct->nwait_signal = ENABLE;
@@ -238,7 +238,7 @@ GAS LISTING C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s 			page 1
  105:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exmc.c ****     \param[out] none
  106:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exmc.c ****     \retval     none
  107:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exmc.c **** */
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s 			page 5
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccJaW7hG.s 			page 5
 
 
  108:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exmc.c **** void exmc_norsram_init(exmc_norsram_parameter_struct* exmc_norsram_init_struct)
@@ -298,7 +298,7 @@ GAS LISTING C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s 			page 1
  132 001e 3367C701 		or	a4,a4,t3
  113:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exmc.c **** 
  133              		.loc 1 113 13
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s 			page 6
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccJaW7hG.s 			page 6
 
 
  134 0022 1A98     		add	a6,a6,t1
@@ -358,7 +358,7 @@ GAS LISTING C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s 			page 1
  170              		.loc 1 128 125
  171 0052 1377F70F 		andi	a4,a4,255
  127:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exmc.c ****                        (((exmc_norsram_init_struct->read_write_timing->asyn_address_holdtime - 1U )
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s 			page 7
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccJaW7hG.s 			page 7
 
 
  172              		.loc 1 127 94
@@ -418,7 +418,7 @@ GAS LISTING C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s 			page 1
  210              	.LVL6:
  127:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exmc.c ****                        (((exmc_norsram_init_struct->read_write_timing->asyn_address_holdtime - 1U )
  211              		.loc 1 127 5 is_stmt 1
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s 			page 8
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccJaW7hG.s 			page 8
 
 
  127:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exmc.c ****                        (((exmc_norsram_init_struct->read_write_timing->asyn_address_holdtime - 1U )
@@ -478,7 +478,7 @@ GAS LISTING C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s 			page 1
  151:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exmc.c ****     EXMC_SNCTL(norsram_region) |= (uint32_t)EXMC_SNCTL_NRBKEN;
  250              		.loc 1 151 5
  251              		.loc 1 151 32 is_stmt 0
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s 			page 9
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccJaW7hG.s 			page 9
 
 
  252 0000 B7070014 		li	a5,335544320
@@ -535,225 +535,225 @@ GAS LISTING C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s 			page 1
  293              		.file 4 "arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exmc.h"
  294              		.file 5 "arch/riscv/mach-gd32vf10x/system/system_gd32vf103.h"
  295              		.file 6 "arch/riscv/mach-gd32vf10x/system/gd32vf103.h"
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s 			page 10
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccJaW7hG.s 			page 10
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 gd32vf103_exmc.c
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:10     .text.exmc_norsram_deinit:0000000000000000 exmc_norsram_deinit
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:14     .text.exmc_norsram_deinit:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:16     .text.exmc_norsram_deinit:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:17     .text.exmc_norsram_deinit:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:18     .text.exmc_norsram_deinit:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:20     .text.exmc_norsram_deinit:0000000000000002 .L0 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:21     .text.exmc_norsram_deinit:0000000000000002 .L0 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:27     .text.exmc_norsram_deinit:000000000000000e .L0 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:33     .text.exmc_norsram_deinit:0000000000000018 .L0 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:37     .text.exmc_norsram_deinit:0000000000000020 .L0 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:38     .text.exmc_norsram_deinit:0000000000000022 .L0 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:45     .text.exmc_norsram_struct_para_init:0000000000000000 exmc_norsram_struct_para_init
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:48     .text.exmc_norsram_struct_para_init:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:50     .text.exmc_norsram_struct_para_init:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:51     .text.exmc_norsram_struct_para_init:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:52     .text.exmc_norsram_struct_para_init:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:54     .text.exmc_norsram_struct_para_init:0000000000000002 .L0 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:56     .text.exmc_norsram_struct_para_init:0000000000000004 .L0 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:58     .text.exmc_norsram_struct_para_init:0000000000000006 .L0 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:60     .text.exmc_norsram_struct_para_init:0000000000000008 .L0 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:62     .text.exmc_norsram_struct_para_init:000000000000000a .L0 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:64     .text.exmc_norsram_struct_para_init:000000000000000c .L0 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:66     .text.exmc_norsram_struct_para_init:000000000000000e .L0 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:68     .text.exmc_norsram_struct_para_init:0000000000000012 .L0 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:69     .text.exmc_norsram_struct_para_init:0000000000000012 .L0 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:70     .text.exmc_norsram_struct_para_init:0000000000000012 .L0 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:72     .text.exmc_norsram_struct_para_init:0000000000000016 .L0 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:73     .text.exmc_norsram_struct_para_init:0000000000000016 .L0 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:74     .text.exmc_norsram_struct_para_init:0000000000000016 .L0 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:76     .text.exmc_norsram_struct_para_init:000000000000001a .L0 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:77     .text.exmc_norsram_struct_para_init:000000000000001a .L0 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:78     .text.exmc_norsram_struct_para_init:000000000000001a .L0 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:79     .text.exmc_norsram_struct_para_init:000000000000001a .L0 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:81     .text.exmc_norsram_struct_para_init:000000000000001e .L0 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:82     .text.exmc_norsram_struct_para_init:000000000000001e .L0 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:84     .text.exmc_norsram_struct_para_init:0000000000000020 .L0 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:86     .text.exmc_norsram_struct_para_init:0000000000000024 .L0 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:88     .text.exmc_norsram_struct_para_init:0000000000000026 .L0 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:89     .text.exmc_norsram_struct_para_init:0000000000000026 .L0 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:91     .text.exmc_norsram_struct_para_init:0000000000000028 .L0 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:92     .text.exmc_norsram_struct_para_init:0000000000000028 .L0 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:94     .text.exmc_norsram_struct_para_init:000000000000002a .L0 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:95     .text.exmc_norsram_struct_para_init:000000000000002a .L0 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:97     .text.exmc_norsram_struct_para_init:000000000000002c .L0 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:98     .text.exmc_norsram_struct_para_init:000000000000002e .L0 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:105    .text.exmc_norsram_init:0000000000000000 exmc_norsram_init
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:108    .text.exmc_norsram_init:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:110    .text.exmc_norsram_init:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:111    .text.exmc_norsram_init:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:112    .text.exmc_norsram_init:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:113    .text.exmc_norsram_init:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:115    .text.exmc_norsram_init:0000000000000002 .L0 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:117    .text.exmc_norsram_init:0000000000000006 .L0 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:119    .text.exmc_norsram_init:0000000000000008 .L0 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:121    .text.exmc_norsram_init:000000000000000c .L0 
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s 			page 11
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:10     .text.exmc_norsram_deinit:0000000000000000 exmc_norsram_deinit
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:14     .text.exmc_norsram_deinit:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:16     .text.exmc_norsram_deinit:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:17     .text.exmc_norsram_deinit:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:18     .text.exmc_norsram_deinit:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:20     .text.exmc_norsram_deinit:0000000000000002 .L0 
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:21     .text.exmc_norsram_deinit:0000000000000002 .L0 
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:27     .text.exmc_norsram_deinit:000000000000000e .L0 
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:33     .text.exmc_norsram_deinit:0000000000000018 .L0 
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:37     .text.exmc_norsram_deinit:0000000000000020 .L0 
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:38     .text.exmc_norsram_deinit:0000000000000022 .L0 
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:45     .text.exmc_norsram_struct_para_init:0000000000000000 exmc_norsram_struct_para_init
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:48     .text.exmc_norsram_struct_para_init:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:50     .text.exmc_norsram_struct_para_init:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:51     .text.exmc_norsram_struct_para_init:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:52     .text.exmc_norsram_struct_para_init:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:54     .text.exmc_norsram_struct_para_init:0000000000000002 .L0 
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:56     .text.exmc_norsram_struct_para_init:0000000000000004 .L0 
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:58     .text.exmc_norsram_struct_para_init:0000000000000006 .L0 
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:60     .text.exmc_norsram_struct_para_init:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:62     .text.exmc_norsram_struct_para_init:000000000000000a .L0 
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:64     .text.exmc_norsram_struct_para_init:000000000000000c .L0 
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:66     .text.exmc_norsram_struct_para_init:000000000000000e .L0 
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:68     .text.exmc_norsram_struct_para_init:0000000000000012 .L0 
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:69     .text.exmc_norsram_struct_para_init:0000000000000012 .L0 
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:70     .text.exmc_norsram_struct_para_init:0000000000000012 .L0 
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:72     .text.exmc_norsram_struct_para_init:0000000000000016 .L0 
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:73     .text.exmc_norsram_struct_para_init:0000000000000016 .L0 
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:74     .text.exmc_norsram_struct_para_init:0000000000000016 .L0 
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:76     .text.exmc_norsram_struct_para_init:000000000000001a .L0 
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:77     .text.exmc_norsram_struct_para_init:000000000000001a .L0 
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:78     .text.exmc_norsram_struct_para_init:000000000000001a .L0 
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:79     .text.exmc_norsram_struct_para_init:000000000000001a .L0 
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:81     .text.exmc_norsram_struct_para_init:000000000000001e .L0 
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:82     .text.exmc_norsram_struct_para_init:000000000000001e .L0 
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:84     .text.exmc_norsram_struct_para_init:0000000000000020 .L0 
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:86     .text.exmc_norsram_struct_para_init:0000000000000024 .L0 
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:88     .text.exmc_norsram_struct_para_init:0000000000000026 .L0 
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:89     .text.exmc_norsram_struct_para_init:0000000000000026 .L0 
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:91     .text.exmc_norsram_struct_para_init:0000000000000028 .L0 
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:92     .text.exmc_norsram_struct_para_init:0000000000000028 .L0 
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:94     .text.exmc_norsram_struct_para_init:000000000000002a .L0 
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:95     .text.exmc_norsram_struct_para_init:000000000000002a .L0 
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:97     .text.exmc_norsram_struct_para_init:000000000000002c .L0 
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:98     .text.exmc_norsram_struct_para_init:000000000000002e .L0 
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:105    .text.exmc_norsram_init:0000000000000000 exmc_norsram_init
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:108    .text.exmc_norsram_init:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:110    .text.exmc_norsram_init:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:111    .text.exmc_norsram_init:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:112    .text.exmc_norsram_init:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:113    .text.exmc_norsram_init:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:115    .text.exmc_norsram_init:0000000000000002 .L0 
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:117    .text.exmc_norsram_init:0000000000000006 .L0 
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:119    .text.exmc_norsram_init:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:121    .text.exmc_norsram_init:000000000000000c .L0 
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccJaW7hG.s 			page 11
 
 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:123    .text.exmc_norsram_init:0000000000000010 .L0 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:125    .text.exmc_norsram_init:0000000000000012 .L0 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:127    .text.exmc_norsram_init:0000000000000014 .L0 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:129    .text.exmc_norsram_init:0000000000000016 .L0 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:131    .text.exmc_norsram_init:000000000000001a .L0 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:134    .text.exmc_norsram_init:0000000000000022 .L0 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:136    .text.exmc_norsram_init:0000000000000024 .L0 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:138    .text.exmc_norsram_init:0000000000000026 .L0 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:140    .text.exmc_norsram_init:000000000000002a .L0 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:142    .text.exmc_norsram_init:000000000000002e .L0 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:144    .text.exmc_norsram_init:0000000000000030 .L0 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:146    .text.exmc_norsram_init:0000000000000032 .L0 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:148    .text.exmc_norsram_init:0000000000000034 .L0 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:150    .text.exmc_norsram_init:0000000000000038 .L0 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:152    .text.exmc_norsram_init:000000000000003c .L0 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:154    .text.exmc_norsram_init:000000000000003e .L0 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:157    .text.exmc_norsram_init:0000000000000042 .L0 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:159    .text.exmc_norsram_init:0000000000000044 .L0 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:161    .text.exmc_norsram_init:0000000000000048 .L0 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:163    .text.exmc_norsram_init:000000000000004a .L0 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:165    .text.exmc_norsram_init:000000000000004c .L0 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:168    .text.exmc_norsram_init:0000000000000050 .L0 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:169    .text.exmc_norsram_init:0000000000000050 .L0 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:171    .text.exmc_norsram_init:0000000000000052 .L0 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:173    .text.exmc_norsram_init:0000000000000056 .L0 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:175    .text.exmc_norsram_init:0000000000000058 .L0 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:177    .text.exmc_norsram_init:000000000000005c .L0 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:179    .text.exmc_norsram_init:000000000000005e .L0 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:181    .text.exmc_norsram_init:0000000000000062 .L0 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:183    .text.exmc_norsram_init:0000000000000066 .L0 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:185    .text.exmc_norsram_init:0000000000000068 .L0 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:187    .text.exmc_norsram_init:000000000000006a .L0 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:189    .text.exmc_norsram_init:000000000000006c .L0 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:191    .text.exmc_norsram_init:0000000000000070 .L0 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:193    .text.exmc_norsram_init:0000000000000074 .L0 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:195    .text.exmc_norsram_init:0000000000000076 .L0 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:197    .text.exmc_norsram_init:0000000000000078 .L0 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:199    .text.exmc_norsram_init:000000000000007c .L0 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:201    .text.exmc_norsram_init:000000000000007e .L0 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:204    .text.exmc_norsram_init:0000000000000082 .L0 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:205    .text.exmc_norsram_init:0000000000000082 .L0 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:207    .text.exmc_norsram_init:0000000000000086 .L0 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:209    .text.exmc_norsram_init:0000000000000088 .L0 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:212    .text.exmc_norsram_init:000000000000008a .L0 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:213    .text.exmc_norsram_init:000000000000008a .L0 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:216    .text.exmc_norsram_init:000000000000008c .L0 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:217    .text.exmc_norsram_init:000000000000008c .L0 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:219    .text.exmc_norsram_init:0000000000000090 .L0 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:220    .text.exmc_norsram_init:0000000000000090 .L0 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:224    .text.exmc_norsram_init:0000000000000094 .L0 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:225    .text.exmc_norsram_init:0000000000000094 .L0 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:227    .text.exmc_norsram_init:0000000000000098 .L0 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:234    .text.exmc_norsram_init:00000000000000a4 .L0 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:237    .text.exmc_norsram_init:00000000000000a6 .L0 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:238    .text.exmc_norsram_init:00000000000000a8 .L0 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:245    .text.exmc_norsram_enable:0000000000000000 exmc_norsram_enable
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:248    .text.exmc_norsram_enable:0000000000000000 .L0 
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s 			page 12
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:123    .text.exmc_norsram_init:0000000000000010 .L0 
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:125    .text.exmc_norsram_init:0000000000000012 .L0 
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:127    .text.exmc_norsram_init:0000000000000014 .L0 
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:129    .text.exmc_norsram_init:0000000000000016 .L0 
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:131    .text.exmc_norsram_init:000000000000001a .L0 
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:134    .text.exmc_norsram_init:0000000000000022 .L0 
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:136    .text.exmc_norsram_init:0000000000000024 .L0 
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:138    .text.exmc_norsram_init:0000000000000026 .L0 
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:140    .text.exmc_norsram_init:000000000000002a .L0 
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:142    .text.exmc_norsram_init:000000000000002e .L0 
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:144    .text.exmc_norsram_init:0000000000000030 .L0 
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:146    .text.exmc_norsram_init:0000000000000032 .L0 
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:148    .text.exmc_norsram_init:0000000000000034 .L0 
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:150    .text.exmc_norsram_init:0000000000000038 .L0 
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:152    .text.exmc_norsram_init:000000000000003c .L0 
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:154    .text.exmc_norsram_init:000000000000003e .L0 
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:157    .text.exmc_norsram_init:0000000000000042 .L0 
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:159    .text.exmc_norsram_init:0000000000000044 .L0 
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:161    .text.exmc_norsram_init:0000000000000048 .L0 
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:163    .text.exmc_norsram_init:000000000000004a .L0 
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:165    .text.exmc_norsram_init:000000000000004c .L0 
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:168    .text.exmc_norsram_init:0000000000000050 .L0 
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:169    .text.exmc_norsram_init:0000000000000050 .L0 
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:171    .text.exmc_norsram_init:0000000000000052 .L0 
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:173    .text.exmc_norsram_init:0000000000000056 .L0 
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:175    .text.exmc_norsram_init:0000000000000058 .L0 
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:177    .text.exmc_norsram_init:000000000000005c .L0 
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:179    .text.exmc_norsram_init:000000000000005e .L0 
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:181    .text.exmc_norsram_init:0000000000000062 .L0 
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:183    .text.exmc_norsram_init:0000000000000066 .L0 
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:185    .text.exmc_norsram_init:0000000000000068 .L0 
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:187    .text.exmc_norsram_init:000000000000006a .L0 
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:189    .text.exmc_norsram_init:000000000000006c .L0 
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:191    .text.exmc_norsram_init:0000000000000070 .L0 
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:193    .text.exmc_norsram_init:0000000000000074 .L0 
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:195    .text.exmc_norsram_init:0000000000000076 .L0 
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:197    .text.exmc_norsram_init:0000000000000078 .L0 
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:199    .text.exmc_norsram_init:000000000000007c .L0 
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:201    .text.exmc_norsram_init:000000000000007e .L0 
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:204    .text.exmc_norsram_init:0000000000000082 .L0 
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:205    .text.exmc_norsram_init:0000000000000082 .L0 
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:207    .text.exmc_norsram_init:0000000000000086 .L0 
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:209    .text.exmc_norsram_init:0000000000000088 .L0 
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:212    .text.exmc_norsram_init:000000000000008a .L0 
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:213    .text.exmc_norsram_init:000000000000008a .L0 
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:216    .text.exmc_norsram_init:000000000000008c .L0 
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:217    .text.exmc_norsram_init:000000000000008c .L0 
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:219    .text.exmc_norsram_init:0000000000000090 .L0 
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:220    .text.exmc_norsram_init:0000000000000090 .L0 
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:224    .text.exmc_norsram_init:0000000000000094 .L0 
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:225    .text.exmc_norsram_init:0000000000000094 .L0 
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:227    .text.exmc_norsram_init:0000000000000098 .L0 
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:234    .text.exmc_norsram_init:00000000000000a4 .L0 
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:237    .text.exmc_norsram_init:00000000000000a6 .L0 
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:238    .text.exmc_norsram_init:00000000000000a8 .L0 
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:245    .text.exmc_norsram_enable:0000000000000000 exmc_norsram_enable
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:248    .text.exmc_norsram_enable:0000000000000000 .L0 
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccJaW7hG.s 			page 12
 
 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:250    .text.exmc_norsram_enable:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:251    .text.exmc_norsram_enable:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:252    .text.exmc_norsram_enable:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:261    .text.exmc_norsram_enable:0000000000000010 .L0 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:262    .text.exmc_norsram_enable:0000000000000012 .L0 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:269    .text.exmc_norsram_disable:0000000000000000 exmc_norsram_disable
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:272    .text.exmc_norsram_disable:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:274    .text.exmc_norsram_disable:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:275    .text.exmc_norsram_disable:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:276    .text.exmc_norsram_disable:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:285    .text.exmc_norsram_disable:000000000000000e .L0 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:286    .text.exmc_norsram_disable:0000000000000010 .L0 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:41     .text.exmc_norsram_deinit:0000000000000022 .L0 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:101    .text.exmc_norsram_struct_para_init:000000000000002e .L0 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:241    .text.exmc_norsram_init:00000000000000a8 .L0 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:265    .text.exmc_norsram_enable:0000000000000012 .L0 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:289    .text.exmc_norsram_disable:0000000000000010 .L0 
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:250    .text.exmc_norsram_enable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:251    .text.exmc_norsram_enable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:252    .text.exmc_norsram_enable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:261    .text.exmc_norsram_enable:0000000000000010 .L0 
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:262    .text.exmc_norsram_enable:0000000000000012 .L0 
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:269    .text.exmc_norsram_disable:0000000000000000 exmc_norsram_disable
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:272    .text.exmc_norsram_disable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:274    .text.exmc_norsram_disable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:275    .text.exmc_norsram_disable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:276    .text.exmc_norsram_disable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:285    .text.exmc_norsram_disable:000000000000000e .L0 
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:286    .text.exmc_norsram_disable:0000000000000010 .L0 
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:41     .text.exmc_norsram_deinit:0000000000000022 .L0 
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:101    .text.exmc_norsram_struct_para_init:000000000000002e .L0 
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:241    .text.exmc_norsram_init:00000000000000a8 .L0 
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:265    .text.exmc_norsram_enable:0000000000000012 .L0 
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:289    .text.exmc_norsram_disable:0000000000000010 .L0 
                      .debug_frame:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:25     .text.exmc_norsram_deinit:000000000000000e .L2
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:222    .text.exmc_norsram_init:0000000000000094 .L6
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:662    .debug_abbrev:0000000000000000 .Ldebug_abbrev0
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:1045   .debug_str:000000000000000e .LASF35
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:1069   .debug_str:000000000000013e .LASF36
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:1075   .debug_str:000000000000018b .LASF37
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:1027   .debug_ranges:0000000000000000 .Ldebug_ranges0
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:1041   .debug_line:0000000000000000 .Ldebug_line0
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:1083   .debug_str:00000000000001e1 .LASF0
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:1059   .debug_str:00000000000000eb .LASF1
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:1061   .debug_str:00000000000000f7 .LASF2
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:1105   .debug_str:00000000000002c1 .LASF3
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:1067   .debug_str:000000000000012b .LASF4
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:1111   .debug_str:00000000000002eb .LASF5
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:1079   .debug_str:00000000000001d0 .LASF9
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:1063   .debug_str:0000000000000105 .LASF6
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:1043   .debug_str:0000000000000000 .LASF7
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:1085   .debug_str:00000000000001ee .LASF8
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:1109   .debug_str:00000000000002e2 .LASF10
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:1099   .debug_str:000000000000027d .LASF38
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:1117   .debug_str:000000000000030c .LASF11
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:1057   .debug_str:00000000000000e4 .LASF12
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:1087   .debug_str:0000000000000205 .LASF13
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:1095   .debug_str:000000000000025d .LASF14
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:1103   .debug_str:00000000000002ab .LASF15
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:1107   .debug_str:00000000000002cb .LASF16
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:1091   .debug_str:0000000000000226 .LASF17
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:1055   .debug_str:00000000000000d5 .LASF18
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:1073   .debug_str:0000000000000181 .LASF19
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:1119   .debug_str:0000000000000314 .LASF20
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:1121   .debug_str:0000000000000321 .LASF21
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:1049   .debug_str:00000000000000a6 .LASF22
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:1053   .debug_str:00000000000000c7 .LASF23
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:1097   .debug_str:0000000000000271 .LASF24
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:1115   .debug_str:00000000000002fb .LASF25
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:1051   .debug_str:00000000000000b5 .LASF26
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:1101   .debug_str:000000000000028d .LASF27
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:1089   .debug_str:0000000000000211 .LASF28
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:270    .text.exmc_norsram_disable:0000000000000000 .LFB6
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s 			page 13
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:25     .text.exmc_norsram_deinit:000000000000000e .L2
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:222    .text.exmc_norsram_init:0000000000000094 .L6
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:662    .debug_abbrev:0000000000000000 .Ldebug_abbrev0
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:1045   .debug_str:000000000000000e .LASF35
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:1069   .debug_str:000000000000013e .LASF36
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:1075   .debug_str:000000000000018b .LASF37
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:1027   .debug_ranges:0000000000000000 .Ldebug_ranges0
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:1041   .debug_line:0000000000000000 .Ldebug_line0
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:1083   .debug_str:00000000000001e1 .LASF0
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:1059   .debug_str:00000000000000eb .LASF1
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:1061   .debug_str:00000000000000f7 .LASF2
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:1105   .debug_str:00000000000002c1 .LASF3
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:1067   .debug_str:000000000000012b .LASF4
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:1111   .debug_str:00000000000002eb .LASF5
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:1079   .debug_str:00000000000001d0 .LASF9
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:1063   .debug_str:0000000000000105 .LASF6
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:1043   .debug_str:0000000000000000 .LASF7
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:1085   .debug_str:00000000000001ee .LASF8
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:1109   .debug_str:00000000000002e2 .LASF10
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:1099   .debug_str:000000000000027d .LASF38
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:1117   .debug_str:000000000000030c .LASF11
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:1057   .debug_str:00000000000000e4 .LASF12
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:1087   .debug_str:0000000000000205 .LASF13
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:1095   .debug_str:000000000000025d .LASF14
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:1103   .debug_str:00000000000002ab .LASF15
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:1107   .debug_str:00000000000002cb .LASF16
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:1091   .debug_str:0000000000000226 .LASF17
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:1055   .debug_str:00000000000000d5 .LASF18
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:1073   .debug_str:0000000000000181 .LASF19
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:1119   .debug_str:0000000000000314 .LASF20
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:1121   .debug_str:0000000000000321 .LASF21
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:1049   .debug_str:00000000000000a6 .LASF22
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:1053   .debug_str:00000000000000c7 .LASF23
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:1097   .debug_str:0000000000000271 .LASF24
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:1115   .debug_str:00000000000002fb .LASF25
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:1051   .debug_str:00000000000000b5 .LASF26
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:1101   .debug_str:000000000000028d .LASF27
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:1089   .debug_str:0000000000000211 .LASF28
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:270    .text.exmc_norsram_disable:0000000000000000 .LFB6
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccJaW7hG.s 			page 13
 
 
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:287    .text.exmc_norsram_disable:0000000000000010 .LFE6
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:915    .debug_loc:0000000000000000 .LLST4
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:1071   .debug_str:000000000000016d .LASF29
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:246    .text.exmc_norsram_enable:0000000000000000 .LFB5
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:263    .text.exmc_norsram_enable:0000000000000012 .LFE5
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:935    .debug_loc:0000000000000032 .LLST3
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:1093   .debug_str:000000000000024b .LASF30
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:106    .text.exmc_norsram_init:0000000000000000 .LFB4
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:239    .text.exmc_norsram_init:00000000000000a8 .LFE4
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:1077   .debug_str:00000000000001b7 .LASF31
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:1081   .debug_str:00000000000001db .LASF32
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:955    .debug_loc:0000000000000064 .LLST1
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:1113   .debug_str:00000000000002f4 .LASF33
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:980    .debug_loc:00000000000000a5 .LLST2
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:1047   .debug_str:0000000000000088 .LASF34
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:46     .text.exmc_norsram_struct_para_init:0000000000000000 .LFB3
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:99     .text.exmc_norsram_struct_para_init:000000000000002e .LFE3
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:1065   .debug_str:0000000000000117 .LASF39
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:11     .text.exmc_norsram_deinit:0000000000000000 .LFB2
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:39     .text.exmc_norsram_deinit:0000000000000022 .LFE2
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:992    .debug_loc:00000000000000c4 .LLST0
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:273    .text.exmc_norsram_disable:0000000000000000 .LVL14
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:278    .text.exmc_norsram_disable:0000000000000006 .LVL15
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:280    .text.exmc_norsram_disable:0000000000000008 .LVL16
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:249    .text.exmc_norsram_enable:0000000000000000 .LVL11
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:254    .text.exmc_norsram_enable:0000000000000006 .LVL12
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:256    .text.exmc_norsram_enable:0000000000000008 .LVL13
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:109    .text.exmc_norsram_init:0000000000000000 .LVL3
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:166    .text.exmc_norsram_init:0000000000000050 .LVL4
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:202    .text.exmc_norsram_init:0000000000000082 .LVL5
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:210    .text.exmc_norsram_init:000000000000008a .LVL6
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:228    .text.exmc_norsram_init:000000000000009a .LVL9
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:235    .text.exmc_norsram_init:00000000000000a6 .LVL10
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:214    .text.exmc_norsram_init:000000000000008c .LVL7
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:15     .text.exmc_norsram_deinit:0000000000000000 .LVL0
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:30     .text.exmc_norsram_deinit:0000000000000016 .LVL1
-C:\Users\test\AppData\Local\Temp\ccV2k9Dh.s:297    .debug_info:0000000000000000 .Ldebug_info0
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:287    .text.exmc_norsram_disable:0000000000000010 .LFE6
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:915    .debug_loc:0000000000000000 .LLST4
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:1071   .debug_str:000000000000016d .LASF29
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:246    .text.exmc_norsram_enable:0000000000000000 .LFB5
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:263    .text.exmc_norsram_enable:0000000000000012 .LFE5
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:935    .debug_loc:0000000000000032 .LLST3
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:1093   .debug_str:000000000000024b .LASF30
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:106    .text.exmc_norsram_init:0000000000000000 .LFB4
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:239    .text.exmc_norsram_init:00000000000000a8 .LFE4
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:1077   .debug_str:00000000000001b7 .LASF31
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:1081   .debug_str:00000000000001db .LASF32
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:955    .debug_loc:0000000000000064 .LLST1
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:1113   .debug_str:00000000000002f4 .LASF33
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:980    .debug_loc:00000000000000a5 .LLST2
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:1047   .debug_str:0000000000000088 .LASF34
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:46     .text.exmc_norsram_struct_para_init:0000000000000000 .LFB3
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:99     .text.exmc_norsram_struct_para_init:000000000000002e .LFE3
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:1065   .debug_str:0000000000000117 .LASF39
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:11     .text.exmc_norsram_deinit:0000000000000000 .LFB2
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:39     .text.exmc_norsram_deinit:0000000000000022 .LFE2
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:992    .debug_loc:00000000000000c4 .LLST0
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:273    .text.exmc_norsram_disable:0000000000000000 .LVL14
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:278    .text.exmc_norsram_disable:0000000000000006 .LVL15
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:280    .text.exmc_norsram_disable:0000000000000008 .LVL16
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:249    .text.exmc_norsram_enable:0000000000000000 .LVL11
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:254    .text.exmc_norsram_enable:0000000000000006 .LVL12
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:256    .text.exmc_norsram_enable:0000000000000008 .LVL13
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:109    .text.exmc_norsram_init:0000000000000000 .LVL3
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:166    .text.exmc_norsram_init:0000000000000050 .LVL4
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:202    .text.exmc_norsram_init:0000000000000082 .LVL5
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:210    .text.exmc_norsram_init:000000000000008a .LVL6
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:228    .text.exmc_norsram_init:000000000000009a .LVL9
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:235    .text.exmc_norsram_init:00000000000000a6 .LVL10
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:214    .text.exmc_norsram_init:000000000000008c .LVL7
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:15     .text.exmc_norsram_deinit:0000000000000000 .LVL0
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:30     .text.exmc_norsram_deinit:0000000000000016 .LVL1
+C:\Users\test\AppData\Local\Temp\ccJaW7hG.s:297    .debug_info:0000000000000000 .Ldebug_info0
 
 NO UNDEFINED SYMBOLS

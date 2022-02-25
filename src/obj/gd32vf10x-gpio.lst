@@ -1,4 +1,4 @@
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccvs4Cx9.s 			page 1
+GAS LISTING C:\Users\test\AppData\Local\Temp\cc4iDcGk.s 			page 1
 
 
    1              		.file	"gd32vf10x-gpio.c"
@@ -6,11 +6,579 @@ GAS LISTING C:\Users\test\AppData\Local\Temp\ccvs4Cx9.s 			page 1
    3              		.text
    4              	.Ltext0:
    5              		.cfi_sections	.debug_frame
-   6              	.Letext0:
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccvs4Cx9.s 			page 2
+   6              		.section	.text.gd32vf_gpio_get,"ax",@progbits
+   7              		.align	1
+   9              	gd32vf_gpio_get:
+  10              	.LFB7:
+  11              		.file 1 "arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-gpio.c"
+   1:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-gpio.c **** #include "gpio-core.h"
+   2:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-gpio.c **** #include "gd32vf103.h"
+   3:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-gpio.c **** 
+   4:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-gpio.c **** #define GPIO2PORT_SHIFT     (5)
+   5:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-gpio.c **** #define GPIO2PORT_MASK      (31)
+   6:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-gpio.c **** 
+   7:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-gpio.c **** #define GPIO_NUM2PORT(num)  ((num)>>GPIO2PORT_SHIFT)
+   8:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-gpio.c **** #define GPIO_NUM2PIN(num)   ((num)&GPIO2PORT_MASK)
+   9:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-gpio.c **** 
+  10:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-gpio.c **** /**************************************************************************************************
+  11:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-gpio.c **** #define GPIOA                      (GPIO_BASE + 0x00000000U)
+  12:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-gpio.c **** #define GPIOB                      (GPIO_BASE + 0x00000400U)
+  13:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-gpio.c **** #define GPIOC                      (GPIO_BASE + 0x00000800U)
+  14:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-gpio.c **** #define GPIOD                      (GPIO_BASE + 0x00000C00U)
+  15:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-gpio.c **** #define GPIOE                      (GPIO_BASE + 0x00001000U)
+  16:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-gpio.c **** 
+  17:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-gpio.c **** #define GPIO_CTL0(gpiox)           REG32((gpiox) + 0x00U)    < GPIO port control register 0 
+  18:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-gpio.c **** #define GPIO_CTL1(gpiox)           REG32((gpiox) + 0x04U)    < GPIO port control register 1
+  19:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-gpio.c **** **************************************************************************************************/
+  20:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-gpio.c **** 
+  21:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-gpio.c **** static int8_t gd32vf_gpio_get(gpio_desp_t *gpio_desp)
+  22:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-gpio.c **** {
+  12              		.loc 1 22 1
+  13              		.cfi_startproc
+  14              	.LVL0:
+  23:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-gpio.c ****     RCU_APB2EN |= 1<<(GPIO_NUM2PORT(gpio_desp->pin_num)+2);   //使能GPIO时钟
+  15              		.loc 1 23 5
+  16              		.loc 1 23 23 is_stmt 0
+  17 0000 03560500 		lhu	a2,0(a0)
+  18              		.loc 1 23 16
+  19 0004 37150240 		li	a0,1073876992
+  20              	.LVL1:
+  21 0008 0C4D     		lw	a1,24(a0)
+  22              		.loc 1 23 23
+  23 000a 93575600 		srli	a5,a2,5
+  24              		.loc 1 23 20
+  25 000e 0547     		li	a4,1
+  26              		.loc 1 23 56
+  27 0010 93862700 		addi	a3,a5,2
+  28              		.loc 1 23 20
+  29 0014 B316D700 		sll	a3,a4,a3
+  30              		.loc 1 23 16
+  31 0018 CD8E     		or	a3,a3,a1
+  24:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-gpio.c ****     //clear CTL
+  25:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-gpio.c ****     *((volatile uint64_t*)(uint64_t)(GPIO_BASE + (GPIO_NUM2PORT(gpio_desp->pin_num)*0x400U))) &= 
+  32              		.loc 1 25 95
+  33 001a B7051000 		li	a1,1048576
+GAS LISTING C:\Users\test\AppData\Local\Temp\cc4iDcGk.s 			page 2
+
+
+  34 001e 93852504 		addi	a1,a1,66
+  35 0022 AE97     		add	a5,a5,a1
+  23:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-gpio.c ****     RCU_APB2EN |= 1<<(GPIO_NUM2PORT(gpio_desp->pin_num)+2);   //使能GPIO时钟
+  36              		.loc 1 23 16
+  37 0024 14CD     		sw	a3,24(a0)
+  38              		.loc 1 25 5 is_stmt 1
+  39              		.loc 1 25 95 is_stmt 0
+  40 0026 AA07     		slli	a5,a5,10
+  26:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-gpio.c ****     ~(0xF<<(GPIO_NUM2PIN(gpio_desp->pin_num)*4));
+  41              		.loc 1 26 13
+  42 0028 7D8A     		andi	a2,a2,31
+  25:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-gpio.c ****     ~(0xF<<(GPIO_NUM2PIN(gpio_desp->pin_num)*4));
+  43              		.loc 1 25 95
+  44 002a 03A80700 		lw	a6,0(a5)
+  45              		.loc 1 26 45
+  46 002e 13132600 		slli	t1,a2,2
+  47              		.loc 1 26 10
+  48 0032 BD46     		li	a3,15
+  25:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-gpio.c ****     ~(0xF<<(GPIO_NUM2PIN(gpio_desp->pin_num)*4));
+  49              		.loc 1 25 95
+  50 0034 83A84700 		lw	a7,4(a5)
+  51              		.loc 1 26 10
+  52 0038 B3966600 		sll	a3,a3,t1
+  53              		.loc 1 26 5
+  54 003c 93C6F6FF 		not	a3,a3
+  25:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-gpio.c ****     ~(0xF<<(GPIO_NUM2PIN(gpio_desp->pin_num)*4));
+  55              		.loc 1 25 95
+  56 0040 33F50601 		and	a0,a3,a6
+  57              		.loc 1 26 5
+  58 0044 13DEF641 		srai	t3,a3,31
+  25:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-gpio.c ****     ~(0xF<<(GPIO_NUM2PIN(gpio_desp->pin_num)*4));
+  59              		.loc 1 25 95
+  60 0048 88C3     		sw	a0,0(a5)
+  61 004a B3751E01 		and	a1,t3,a7
+  62 004e CCC3     		sw	a1,4(a5)
+  27:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-gpio.c ****     //set CTL  output (default)
+  28:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-gpio.c ****     *((volatile uint64_t*)(uint64_t)(GPIO_BASE + (GPIO_NUM2PORT(gpio_desp->pin_num)*0x400U))) |= 
+  63              		.loc 1 28 5 is_stmt 1
+  64              		.loc 1 28 95 is_stmt 0
+  65 0050 03A80700 		lw	a6,0(a5)
+  29:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-gpio.c ****     (0x3<<(GPIO_NUM2PIN(gpio_desp->pin_num)*4));
+  66              		.loc 1 29 9
+  67 0054 8D46     		li	a3,3
+  28:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-gpio.c ****     (0x3<<(GPIO_NUM2PIN(gpio_desp->pin_num)*4));
+  68              		.loc 1 28 95
+  69 0056 83A84700 		lw	a7,4(a5)
+  70              		.loc 1 29 9
+  71 005a B3966600 		sll	a3,a3,t1
+  28:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-gpio.c ****     (0x3<<(GPIO_NUM2PIN(gpio_desp->pin_num)*4));
+  72              		.loc 1 28 95
+  73 005e 33E50601 		or	a0,a3,a6
+  74              		.loc 1 29 9
+  75 0062 13D3F641 		srai	t1,a3,31
+  28:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-gpio.c ****     (0x3<<(GPIO_NUM2PIN(gpio_desp->pin_num)*4));
+  76              		.loc 1 28 95
+  77 0066 88C3     		sw	a0,0(a5)
+  78 0068 B3651301 		or	a1,t1,a7
+GAS LISTING C:\Users\test\AppData\Local\Temp\cc4iDcGk.s 			page 3
+
+
+  79 006c CCC3     		sw	a1,4(a5)
+  30:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-gpio.c ****     //set 0CTL output (default)
+  31:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-gpio.c ****     *((volatile uint32_t*)(uint32_t)(GPIO_BASE + 0x0C + (GPIO_NUM2PORT(gpio_desp->pin_num)*0x400U))
+  80              		.loc 1 31 5 is_stmt 1
+  81              		.loc 1 31 102 is_stmt 0
+  82 006e D447     		lw	a3,12(a5)
+  32:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-gpio.c ****     ~(1<<GPIO_NUM2PIN(gpio_desp->pin_num));
+  83              		.loc 1 32 8
+  84 0070 3317C700 		sll	a4,a4,a2
+  85              		.loc 1 32 5
+  86 0074 1347F7FF 		not	a4,a4
+  31:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-gpio.c ****     ~(1<<GPIO_NUM2PIN(gpio_desp->pin_num));
+  87              		.loc 1 31 102
+  88 0078 758F     		and	a4,a4,a3
+  89 007a D8C7     		sw	a4,12(a5)
+  33:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-gpio.c **** }
+  90              		.loc 1 33 1
+  91 007c 8280     		ret
+  92              		.cfi_endproc
+  93              	.LFE7:
+  95              		.section	.text.gd32vf_gpio_set_direction,"ax",@progbits
+  96              		.align	1
+  98              	gd32vf_gpio_set_direction:
+  99              	.LFB8:
+  34:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-gpio.c **** 
+  35:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-gpio.c **** static void  gd32vf_gpio_set_direction(gpio_desp_t *gpio_desp, gpio_direction_t dir)
+  36:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-gpio.c **** {
+ 100              		.loc 1 36 1 is_stmt 1
+ 101              		.cfi_startproc
+ 102              	.LVL2:
+  37:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-gpio.c ****     //clear CTL
+  38:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-gpio.c ****     *((volatile uint64_t*)(uint64_t)(GPIO_BASE + (GPIO_NUM2PORT(gpio_desp->pin_num)*0x400U))) &= 
+ 103              		.loc 1 38 5
+ 104              		.loc 1 38 51 is_stmt 0
+ 105 0000 03570500 		lhu	a4,0(a0)
+ 106              		.loc 1 38 95
+ 107 0004 B7061000 		li	a3,1048576
+ 108 0008 93862604 		addi	a3,a3,66
+ 109 000c 93575700 		srli	a5,a4,5
+ 110 0010 B697     		add	a5,a5,a3
+ 111 0012 AA07     		slli	a5,a5,10
+  39:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-gpio.c ****     ~(0xF<<(GPIO_NUM2PIN(gpio_desp->pin_num)*4));
+ 112              		.loc 1 39 13
+ 113 0014 9376F701 		andi	a3,a4,31
+  38:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-gpio.c ****     ~(0xF<<(GPIO_NUM2PIN(gpio_desp->pin_num)*4));
+ 114              		.loc 1 38 95
+ 115 0018 03A30700 		lw	t1,0(a5)
+ 116              		.loc 1 39 45
+ 117 001c 13962600 		slli	a2,a3,2
+ 118              		.loc 1 39 10
+ 119 0020 3D47     		li	a4,15
+  38:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-gpio.c ****     ~(0xF<<(GPIO_NUM2PIN(gpio_desp->pin_num)*4));
+ 120              		.loc 1 38 95
+ 121 0022 83A34700 		lw	t2,4(a5)
+ 122              		.loc 1 39 10
+ 123 0026 3317C700 		sll	a4,a4,a2
+ 124              		.loc 1 39 5
+GAS LISTING C:\Users\test\AppData\Local\Temp\cc4iDcGk.s 			page 4
+
+
+ 125 002a 1347F7FF 		not	a4,a4
+ 126 002e 135EF741 		srai	t3,a4,31
+  38:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-gpio.c ****     ~(0xF<<(GPIO_NUM2PIN(gpio_desp->pin_num)*4));
+ 127              		.loc 1 38 95
+ 128 0032 33786700 		and	a6,a4,t1
+ 129 0036 B3787E00 		and	a7,t3,t2
+ 130 003a 23A00701 		sw	a6,0(a5)
+ 131 003e 23A21701 		sw	a7,4(a5)
+  40:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-gpio.c ****     //set CTL  direction
+  41:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-gpio.c ****     if(dir == GPIO_PP_OUTPUT)
+ 132              		.loc 1 41 5 is_stmt 1
+ 133              		.loc 1 41 7 is_stmt 0
+ 134 0042 95E1     		bne	a1,zero,.L4
+  42:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-gpio.c ****     {
+  43:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-gpio.c ****         *((volatile uint64_t*)(uint64_t)(GPIO_BASE + (GPIO_NUM2PORT(gpio_desp->pin_num)*0x400U))) |
+ 135              		.loc 1 43 9 is_stmt 1
+ 136              		.loc 1 43 99 is_stmt 0
+ 137 0044 03A30700 		lw	t1,0(a5)
+  44:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-gpio.c ****         (0x3<<(GPIO_NUM2PIN(gpio_desp->pin_num)*4));
+ 138              		.loc 1 44 13
+ 139 0048 0D47     		li	a4,3
+  43:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-gpio.c ****         (0x3<<(GPIO_NUM2PIN(gpio_desp->pin_num)*4));
+ 140              		.loc 1 43 99
+ 141 004a 83A34700 		lw	t2,4(a5)
+ 142              		.loc 1 44 13
+ 143 004e 3317C700 		sll	a4,a4,a2
+ 144 0052 1356F741 		srai	a2,a4,31
+  43:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-gpio.c ****         (0x3<<(GPIO_NUM2PIN(gpio_desp->pin_num)*4));
+ 145              		.loc 1 43 99
+ 146 0056 33686700 		or	a6,a4,t1
+ 147 005a B3687600 		or	a7,a2,t2
+ 148 005e 23A00701 		sw	a6,0(a5)
+ 149 0062 23A21701 		sw	a7,4(a5)
+ 150              	.L4:
+  45:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-gpio.c ****     }
+  46:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-gpio.c ****     if(gpio_desp->flag)
+ 151              		.loc 1 46 5 is_stmt 1
+ 152              		.loc 1 46 8 is_stmt 0
+ 153 0066 03472500 		lbu	a4,2(a0)
+ 154              		.loc 1 46 7
+ 155 006a 13770704 		andi	a4,a4,64
+ 156 006e 19C7     		beq	a4,zero,.L3
+  47:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-gpio.c ****     {
+  48:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-gpio.c ****         *((volatile uint32_t*)(uint32_t)(GPIO_BASE + 0x0C + (GPIO_NUM2PORT(gpio_desp->pin_num)*0x40
+ 157              		.loc 1 48 9 is_stmt 1
+ 158              		.loc 1 48 106 is_stmt 0
+ 159 0070 D047     		lw	a2,12(a5)
+  49:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-gpio.c ****         (1<<GPIO_NUM2PIN(gpio_desp->pin_num));
+ 160              		.loc 1 49 11
+ 161 0072 0547     		li	a4,1
+ 162 0074 3317D700 		sll	a4,a4,a3
+  48:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-gpio.c ****         (1<<GPIO_NUM2PIN(gpio_desp->pin_num));
+ 163              		.loc 1 48 106
+ 164 0078 518F     		or	a4,a4,a2
+ 165 007a D8C7     		sw	a4,12(a5)
+ 166              	.L3:
+  50:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-gpio.c ****     }
+GAS LISTING C:\Users\test\AppData\Local\Temp\cc4iDcGk.s 			page 5
+
+
+  51:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-gpio.c **** }
+ 167              		.loc 1 51 1
+ 168 007c 8280     		ret
+ 169              		.cfi_endproc
+ 170              	.LFE8:
+ 172              		.section	.text.gd32vf_gpio_set_value,"ax",@progbits
+ 173              		.align	1
+ 175              	gd32vf_gpio_set_value:
+ 176              	.LFB9:
+  52:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-gpio.c **** 
+  53:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-gpio.c **** static void gd32vf_gpio_set_value(gpio_desp_t *gpio_desp, uint8_t value)
+  54:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-gpio.c **** {
+ 177              		.loc 1 54 1 is_stmt 1
+ 178              		.cfi_startproc
+ 179              	.LVL3:
+  55:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-gpio.c ****     //clear 0CTL output (default)
+  56:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-gpio.c ****     *((volatile uint32_t*)(uint32_t)(GPIO_BASE + 0x0C + (GPIO_NUM2PORT(gpio_desp->pin_num)*0x400U))
+ 180              		.loc 1 56 5
+ 181              		.loc 1 56 58 is_stmt 0
+ 182 0000 03560500 		lhu	a2,0(a0)
+ 183              		.loc 1 56 102
+ 184 0004 B7160140 		li	a3,1073811456
+ 185 0008 9386C680 		addi	a3,a3,-2036
+ 186 000c 93575600 		srli	a5,a2,5
+ 187 0010 AA07     		slli	a5,a5,10
+ 188 0012 B697     		add	a5,a5,a3
+ 189 0014 8843     		lw	a0,0(a5)
+ 190              	.LVL4:
+  57:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-gpio.c ****     ~(1<<GPIO_NUM2PIN(gpio_desp->pin_num));
+ 191              		.loc 1 57 8
+ 192 0016 0547     		li	a4,1
+ 193 0018 3317C700 		sll	a4,a4,a2
+ 194              		.loc 1 57 5
+ 195 001c 9346F7FF 		not	a3,a4
+  56:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-gpio.c ****     ~(1<<GPIO_NUM2PIN(gpio_desp->pin_num));
+ 196              		.loc 1 56 102
+ 197 0020 E98E     		and	a3,a3,a0
+ 198 0022 94C3     		sw	a3,0(a5)
+  58:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-gpio.c ****     //clear 0CTL output (default)
+  59:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-gpio.c ****     if(value)
+ 199              		.loc 1 59 5 is_stmt 1
+ 200              		.loc 1 59 7 is_stmt 0
+ 201 0024 81C5     		beq	a1,zero,.L9
+  60:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-gpio.c ****     {
+  61:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-gpio.c ****         *((volatile uint32_t*)(uint32_t)(GPIO_BASE + 0x0C + (GPIO_NUM2PORT(gpio_desp->pin_num)*0x40
+ 202              		.loc 1 61 9 is_stmt 1
+ 203              		.loc 1 61 106 is_stmt 0
+ 204 0026 9443     		lw	a3,0(a5)
+ 205 0028 558F     		or	a4,a4,a3
+ 206 002a 98C3     		sw	a4,0(a5)
+ 207              	.L9:
+  62:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-gpio.c ****         (1<<GPIO_NUM2PIN(gpio_desp->pin_num));
+  63:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-gpio.c ****     }
+  64:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-gpio.c **** }
+ 208              		.loc 1 64 1
+ 209 002c 8280     		ret
+ 210              		.cfi_endproc
+GAS LISTING C:\Users\test\AppData\Local\Temp\cc4iDcGk.s 			page 6
+
+
+ 211              	.LFE9:
+ 213              		.section	.text.gd32vf_gpio_get_value,"ax",@progbits
+ 214              		.align	1
+ 216              	gd32vf_gpio_get_value:
+ 217              	.LFB10:
+  65:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-gpio.c **** 
+  66:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-gpio.c **** static uint32_t  gd32vf_gpio_get_value(gpio_desp_t *gpio_desp)
+  67:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-gpio.c **** {
+ 218              		.loc 1 67 1 is_stmt 1
+ 219              		.cfi_startproc
+ 220              	.LVL5:
+  68:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-gpio.c ****     return *((volatile uint32_t*)(uint32_t)(GPIO_BASE + 0x0C + (GPIO_NUM2PORT(gpio_desp->pin_num)*0
+ 221              		.loc 1 68 5
+ 222              		.loc 1 68 65 is_stmt 0
+ 223 0000 83570500 		lhu	a5,0(a0)
+ 224              		.loc 1 68 34
+ 225 0004 37170140 		li	a4,1073811456
+ 226 0008 1307C780 		addi	a4,a4,-2036
+ 227              		.loc 1 68 65
+ 228 000c 9583     		srli	a5,a5,5
+ 229              		.loc 1 68 98
+ 230 000e AA07     		slli	a5,a5,10
+ 231              		.loc 1 68 34
+ 232 0010 BA97     		add	a5,a5,a4
+ 233              		.loc 1 68 12
+ 234 0012 8843     		lw	a0,0(a5)
+ 235              	.LVL6:
+  69:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-gpio.c **** }
+ 236              		.loc 1 69 1
+ 237 0014 8280     		ret
+ 238              		.cfi_endproc
+ 239              	.LFE10:
+ 241              		.section	.text.gd32vf_gpio_put,"ax",@progbits
+ 242              		.align	1
+ 244              	gd32vf_gpio_put:
+ 245              	.LFB11:
+  70:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-gpio.c **** 
+  71:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-gpio.c **** static void  gd32vf_gpio_put(gpio_desp_t *gpio_desp)
+  72:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-gpio.c **** {
+ 246              		.loc 1 72 1 is_stmt 1
+ 247              		.cfi_startproc
+ 248              	.LVL7:
+  73:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-gpio.c ****     
+  74:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-gpio.c **** }
+ 249              		.loc 1 74 1
+ 250 0000 8280     		ret
+ 251              		.cfi_endproc
+ 252              	.LFE11:
+ 254              		.globl	gd32vf_gpio_ctrl
+ 255              		.section	.__gpio_core_init,"aw"
+ 256              		.align	2
+ 259              	gd32vf_gpio_ctrl:
+ 260 0000 00000000 		.zero	4
+ 261 0004 00000000 		.word	gd32vf_gpio_get
+ 262 0008 00000000 		.word	gd32vf_gpio_set_direction
+ 263 000c 00000000 		.word	gd32vf_gpio_set_value
+ 264 0010 00000000 		.word	gd32vf_gpio_get_value
+GAS LISTING C:\Users\test\AppData\Local\Temp\cc4iDcGk.s 			page 7
+
+
+ 265 0014 00000000 		.word	gd32vf_gpio_put
+ 266              		.text
+ 267              	.Letext0:
+ 268              		.file 2 "d:\\risc_v_gcc\\riscv-none-embed\\include\\machine\\_default_types.h"
+ 269              		.file 3 "d:\\risc_v_gcc\\riscv-none-embed\\include\\sys\\_stdint.h"
+ 270              		.file 4 "core/module.h"
+ 271              		.file 5 "core/gpio-core.h"
+ 272              		.file 6 "arch/riscv/mach-gd32vf10x/system/system_gd32vf103.h"
+GAS LISTING C:\Users\test\AppData\Local\Temp\cc4iDcGk.s 			page 8
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 gd32vf10x-gpio.c
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:9      .text.gd32vf_gpio_get:0000000000000000 gd32vf_gpio_get
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:13     .text.gd32vf_gpio_get:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:15     .text.gd32vf_gpio_get:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:16     .text.gd32vf_gpio_get:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:17     .text.gd32vf_gpio_get:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:19     .text.gd32vf_gpio_get:0000000000000004 .L0 
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:23     .text.gd32vf_gpio_get:000000000000000a .L0 
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:25     .text.gd32vf_gpio_get:000000000000000e .L0 
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:27     .text.gd32vf_gpio_get:0000000000000010 .L0 
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:29     .text.gd32vf_gpio_get:0000000000000014 .L0 
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:31     .text.gd32vf_gpio_get:0000000000000018 .L0 
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:33     .text.gd32vf_gpio_get:000000000000001a .L0 
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:37     .text.gd32vf_gpio_get:0000000000000024 .L0 
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:39     .text.gd32vf_gpio_get:0000000000000026 .L0 
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:40     .text.gd32vf_gpio_get:0000000000000026 .L0 
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:42     .text.gd32vf_gpio_get:0000000000000028 .L0 
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:44     .text.gd32vf_gpio_get:000000000000002a .L0 
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:46     .text.gd32vf_gpio_get:000000000000002e .L0 
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:48     .text.gd32vf_gpio_get:0000000000000032 .L0 
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:50     .text.gd32vf_gpio_get:0000000000000034 .L0 
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:52     .text.gd32vf_gpio_get:0000000000000038 .L0 
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:54     .text.gd32vf_gpio_get:000000000000003c .L0 
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:56     .text.gd32vf_gpio_get:0000000000000040 .L0 
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:58     .text.gd32vf_gpio_get:0000000000000044 .L0 
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:60     .text.gd32vf_gpio_get:0000000000000048 .L0 
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:64     .text.gd32vf_gpio_get:0000000000000050 .L0 
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:65     .text.gd32vf_gpio_get:0000000000000050 .L0 
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:67     .text.gd32vf_gpio_get:0000000000000054 .L0 
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:69     .text.gd32vf_gpio_get:0000000000000056 .L0 
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:71     .text.gd32vf_gpio_get:000000000000005a .L0 
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:73     .text.gd32vf_gpio_get:000000000000005e .L0 
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:75     .text.gd32vf_gpio_get:0000000000000062 .L0 
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:77     .text.gd32vf_gpio_get:0000000000000066 .L0 
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:81     .text.gd32vf_gpio_get:000000000000006e .L0 
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:82     .text.gd32vf_gpio_get:000000000000006e .L0 
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:84     .text.gd32vf_gpio_get:0000000000000070 .L0 
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:86     .text.gd32vf_gpio_get:0000000000000074 .L0 
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:88     .text.gd32vf_gpio_get:0000000000000078 .L0 
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:91     .text.gd32vf_gpio_get:000000000000007c .L0 
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:92     .text.gd32vf_gpio_get:000000000000007e .L0 
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:98     .text.gd32vf_gpio_set_direction:0000000000000000 gd32vf_gpio_set_direction
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:101    .text.gd32vf_gpio_set_direction:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:103    .text.gd32vf_gpio_set_direction:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:104    .text.gd32vf_gpio_set_direction:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:105    .text.gd32vf_gpio_set_direction:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:107    .text.gd32vf_gpio_set_direction:0000000000000004 .L0 
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:113    .text.gd32vf_gpio_set_direction:0000000000000014 .L0 
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:115    .text.gd32vf_gpio_set_direction:0000000000000018 .L0 
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:117    .text.gd32vf_gpio_set_direction:000000000000001c .L0 
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:119    .text.gd32vf_gpio_set_direction:0000000000000020 .L0 
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:121    .text.gd32vf_gpio_set_direction:0000000000000022 .L0 
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:123    .text.gd32vf_gpio_set_direction:0000000000000026 .L0 
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:125    .text.gd32vf_gpio_set_direction:000000000000002a .L0 
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:128    .text.gd32vf_gpio_set_direction:0000000000000032 .L0 
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:133    .text.gd32vf_gpio_set_direction:0000000000000042 .L0 
+GAS LISTING C:\Users\test\AppData\Local\Temp\cc4iDcGk.s 			page 9
+
+
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:134    .text.gd32vf_gpio_set_direction:0000000000000042 .L0 
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:136    .text.gd32vf_gpio_set_direction:0000000000000044 .L0 
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:137    .text.gd32vf_gpio_set_direction:0000000000000044 .L0 
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:139    .text.gd32vf_gpio_set_direction:0000000000000048 .L0 
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:141    .text.gd32vf_gpio_set_direction:000000000000004a .L0 
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:143    .text.gd32vf_gpio_set_direction:000000000000004e .L0 
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:146    .text.gd32vf_gpio_set_direction:0000000000000056 .L0 
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:152    .text.gd32vf_gpio_set_direction:0000000000000066 .L0 
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:153    .text.gd32vf_gpio_set_direction:0000000000000066 .L0 
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:155    .text.gd32vf_gpio_set_direction:000000000000006a .L0 
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:158    .text.gd32vf_gpio_set_direction:0000000000000070 .L0 
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:159    .text.gd32vf_gpio_set_direction:0000000000000070 .L0 
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:161    .text.gd32vf_gpio_set_direction:0000000000000072 .L0 
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:164    .text.gd32vf_gpio_set_direction:0000000000000078 .L0 
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:168    .text.gd32vf_gpio_set_direction:000000000000007c .L0 
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:169    .text.gd32vf_gpio_set_direction:000000000000007e .L0 
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:175    .text.gd32vf_gpio_set_value:0000000000000000 gd32vf_gpio_set_value
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:178    .text.gd32vf_gpio_set_value:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:180    .text.gd32vf_gpio_set_value:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:181    .text.gd32vf_gpio_set_value:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:182    .text.gd32vf_gpio_set_value:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:184    .text.gd32vf_gpio_set_value:0000000000000004 .L0 
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:192    .text.gd32vf_gpio_set_value:0000000000000016 .L0 
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:195    .text.gd32vf_gpio_set_value:000000000000001c .L0 
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:197    .text.gd32vf_gpio_set_value:0000000000000020 .L0 
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:200    .text.gd32vf_gpio_set_value:0000000000000024 .L0 
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:201    .text.gd32vf_gpio_set_value:0000000000000024 .L0 
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:203    .text.gd32vf_gpio_set_value:0000000000000026 .L0 
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:204    .text.gd32vf_gpio_set_value:0000000000000026 .L0 
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:209    .text.gd32vf_gpio_set_value:000000000000002c .L0 
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:210    .text.gd32vf_gpio_set_value:000000000000002e .L0 
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:216    .text.gd32vf_gpio_get_value:0000000000000000 gd32vf_gpio_get_value
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:219    .text.gd32vf_gpio_get_value:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:221    .text.gd32vf_gpio_get_value:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:222    .text.gd32vf_gpio_get_value:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:223    .text.gd32vf_gpio_get_value:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:225    .text.gd32vf_gpio_get_value:0000000000000004 .L0 
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:228    .text.gd32vf_gpio_get_value:000000000000000c .L0 
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:230    .text.gd32vf_gpio_get_value:000000000000000e .L0 
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:232    .text.gd32vf_gpio_get_value:0000000000000010 .L0 
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:234    .text.gd32vf_gpio_get_value:0000000000000012 .L0 
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:237    .text.gd32vf_gpio_get_value:0000000000000014 .L0 
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:238    .text.gd32vf_gpio_get_value:0000000000000016 .L0 
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:244    .text.gd32vf_gpio_put:0000000000000000 gd32vf_gpio_put
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:247    .text.gd32vf_gpio_put:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:249    .text.gd32vf_gpio_put:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:250    .text.gd32vf_gpio_put:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:251    .text.gd32vf_gpio_put:0000000000000002 .L0 
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:259    .__gpio_core_init:0000000000000000 gd32vf_gpio_ctrl
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:95     .text.gd32vf_gpio_get:000000000000007e .L0 
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:172    .text.gd32vf_gpio_set_direction:000000000000007e .L0 
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:213    .text.gd32vf_gpio_set_value:000000000000002e .L0 
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:241    .text.gd32vf_gpio_get_value:0000000000000016 .L0 
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:255    .text.gd32vf_gpio_put:0000000000000002 .L0 
+                     .debug_frame:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:150    .text.gd32vf_gpio_set_direction:0000000000000066 .L4
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:166    .text.gd32vf_gpio_set_direction:000000000000007c .L3
+GAS LISTING C:\Users\test\AppData\Local\Temp\cc4iDcGk.s 			page 10
+
+
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:207    .text.gd32vf_gpio_set_value:000000000000002c .L9
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:868    .debug_abbrev:0000000000000000 .Ldebug_abbrev0
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:1379   .debug_str:00000000000001cb .LASF56
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:1343   .debug_str:000000000000009b .LASF57
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:1417   .debug_str:000000000000033f .LASF58
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:1299   .debug_ranges:0000000000000000 .Ldebug_ranges0
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:1313   .debug_line:0000000000000000 .Ldebug_line0
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:1369   .debug_str:0000000000000177 .LASF0
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:1375   .debug_str:00000000000001a8 .LASF2
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:1433   .debug_str:00000000000003cf .LASF1
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:1371   .debug_str:0000000000000180 .LASF3
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:1327   .debug_str:0000000000000046 .LASF4
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:1337   .debug_str:0000000000000080 .LASF5
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:1391   .debug_str:000000000000027f .LASF6
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:1357   .debug_str:0000000000000123 .LASF7
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:1333   .debug_str:0000000000000070 .LASF8
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:1409   .debug_str:0000000000000302 .LASF9
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:1349   .debug_str:00000000000000e4 .LASF10
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:1401   .debug_str:00000000000002c1 .LASF11
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:1377   .debug_str:00000000000001b4 .LASF12
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:1385   .debug_str:000000000000025a .LASF13
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:1323   .debug_str:0000000000000036 .LASF14
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:1345   .debug_str:00000000000000ce .LASF15
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:1387   .debug_str:0000000000000267 .LASF16
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:1381   .debug_str:0000000000000245 .LASF17
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:1325   .debug_str:000000000000003d .LASF18
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:1425   .debug_str:0000000000000393 .LASF19
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:1355   .debug_str:0000000000000113 .LASF20
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:1395   .debug_str:0000000000000299 .LASF21
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:1365   .debug_str:0000000000000156 .LASF22
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:1429   .debug_str:00000000000003b5 .LASF23
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:1435   .debug_str:00000000000003d9 .LASF24
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:1405   .debug_str:00000000000002e2 .LASF25
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:1367   .debug_str:0000000000000167 .LASF26
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:1359   .debug_str:000000000000012c .LASF27
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:1421   .debug_str:0000000000000370 .LASF28
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:1339   .debug_str:000000000000008b .LASF34
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:1397   .debug_str:00000000000002a9 .LASF33
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:1331   .debug_str:0000000000000066 .LASF29
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:1393   .debug_str:0000000000000292 .LASF30
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:1335   .debug_str:000000000000007b .LASF31
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:1419   .debug_str:000000000000036b .LASF32
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:1363   .debug_str:0000000000000146 .LASF35
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:1317   .debug_str:000000000000000f .LASF36
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:1383   .debug_str:000000000000024e .LASF37
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:1315   .debug_str:0000000000000000 .LASF59
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:1415   .debug_str:0000000000000330 .LASF38
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:1413   .debug_str:0000000000000324 .LASF39
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:1389   .debug_str:0000000000000270 .LASF40
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:1351   .debug_str:00000000000000f2 .LASF41
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:1423   .debug_str:0000000000000382 .LASF42
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:1407   .debug_str:00000000000002f2 .LASF43
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:1347   .debug_str:00000000000000d6 .LASF44
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:1361   .debug_str:000000000000013c .LASF45
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:1431   .debug_str:00000000000003c5 .LASF46
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:1353   .debug_str:0000000000000101 .LASF47
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:1321   .debug_str:0000000000000024 .LASF48
+GAS LISTING C:\Users\test\AppData\Local\Temp\cc4iDcGk.s 			page 11
+
+
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:1399   .debug_str:00000000000002b1 .LASF49
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:1427   .debug_str:00000000000003a4 .LASF50
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:1319   .debug_str:0000000000000014 .LASF51
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:245    .text.gd32vf_gpio_put:0000000000000000 .LFB11
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:252    .text.gd32vf_gpio_put:0000000000000002 .LFE11
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:1403   .debug_str:00000000000002cc .LASF60
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:217    .text.gd32vf_gpio_get_value:0000000000000000 .LFB10
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:239    .text.gd32vf_gpio_get_value:0000000000000016 .LFE10
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:1236   .debug_loc:0000000000000000 .LLST2
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:1329   .debug_str:0000000000000050 .LASF52
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:176    .text.gd32vf_gpio_set_value:0000000000000000 .LFB9
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:211    .text.gd32vf_gpio_set_value:000000000000002e .LFE9
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:1250   .debug_loc:0000000000000021 .LLST1
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:1341   .debug_str:0000000000000095 .LASF53
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:1373   .debug_str:000000000000018e .LASF54
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:99     .text.gd32vf_gpio_set_direction:0000000000000000 .LFB8
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:170    .text.gd32vf_gpio_set_direction:000000000000007e .LFE8
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:1411   .debug_str:0000000000000314 .LASF55
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:10     .text.gd32vf_gpio_get:0000000000000000 .LFB7
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:93     .text.gd32vf_gpio_get:000000000000007e .LFE7
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:1264   .debug_loc:0000000000000042 .LLST0
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:220    .text.gd32vf_gpio_get_value:0000000000000000 .LVL5
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:235    .text.gd32vf_gpio_get_value:0000000000000014 .LVL6
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:179    .text.gd32vf_gpio_set_value:0000000000000000 .LVL3
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:190    .text.gd32vf_gpio_set_value:0000000000000016 .LVL4
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:14     .text.gd32vf_gpio_get:0000000000000000 .LVL0
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:20     .text.gd32vf_gpio_get:0000000000000008 .LVL1
+C:\Users\test\AppData\Local\Temp\cc4iDcGk.s:274    .debug_info:0000000000000000 .Ldebug_info0
 
 NO UNDEFINED SYMBOLS

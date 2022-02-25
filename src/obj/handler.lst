@@ -1,4 +1,4 @@
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccG9338m.s 			page 1
+GAS LISTING C:\Users\test\AppData\Local\Temp\cclRuKmf.s 			page 1
 
 
    1              		.file	"handler.c"
@@ -58,7 +58,7 @@ GAS LISTING C:\Users\test\AppData\Local\Temp\ccG9338m.s 			page 1
   40              	.LVL1:
   17:arch/riscv/mach-gd32vf10x/system/handler.c ****  // }
   18:arch/riscv/mach-gd32vf10x/system/handler.c ****   //write(1, "trap\n", 5);
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccG9338m.s 			page 2
+GAS LISTING C:\Users\test\AppData\Local\Temp\cclRuKmf.s 			page 2
 
 
   19:arch/riscv/mach-gd32vf10x/system/handler.c ****   //printf("In trap handler, the mcause is %d\n", mcause);
@@ -80,54 +80,54 @@ GAS LISTING C:\Users\test\AppData\Local\Temp\ccG9338m.s 			page 1
   51              	.LFE1:
   53              		.text
   54              	.Letext0:
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccG9338m.s 			page 3
+GAS LISTING C:\Users\test\AppData\Local\Temp\cclRuKmf.s 			page 3
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 handler.c
-C:\Users\test\AppData\Local\Temp\ccG9338m.s:10     .text.handle_nmi:0000000000000000 handle_nmi
-C:\Users\test\AppData\Local\Temp\ccG9338m.s:14     .text.handle_nmi:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccG9338m.s:15     .text.handle_nmi:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccG9338m.s:16     .text.handle_nmi:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccG9338m.s:17     .text.handle_nmi:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccG9338m.s:19     .text.handle_nmi:0000000000000004 .L0 
-C:\Users\test\AppData\Local\Temp\ccG9338m.s:26     .text.handle_trap:0000000000000000 handle_trap
-C:\Users\test\AppData\Local\Temp\ccG9338m.s:29     .text.handle_trap:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccG9338m.s:31     .text.handle_trap:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccG9338m.s:32     .text.handle_trap:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccG9338m.s:33     .text.handle_trap:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccG9338m.s:35     .text.handle_trap:0000000000000002 .L0 
-C:\Users\test\AppData\Local\Temp\ccG9338m.s:37     .text.handle_trap:0000000000000004 .L0 
-C:\Users\test\AppData\Local\Temp\ccG9338m.s:39     .text.handle_trap:0000000000000004 .L0 
-C:\Users\test\AppData\Local\Temp\ccG9338m.s:42     .text.handle_trap:000000000000000c .L0 
-C:\Users\test\AppData\Local\Temp\ccG9338m.s:43     .text.handle_trap:000000000000000c .L0 
-C:\Users\test\AppData\Local\Temp\ccG9338m.s:44     .text.handle_trap:000000000000000e .L0 
-C:\Users\test\AppData\Local\Temp\ccG9338m.s:48     .text.handle_trap:0000000000000012 .L0 
-C:\Users\test\AppData\Local\Temp\ccG9338m.s:50     .text.handle_trap:0000000000000014 .L0 
-C:\Users\test\AppData\Local\Temp\ccG9338m.s:22     .text.handle_nmi:0000000000000004 .L0 
-C:\Users\test\AppData\Local\Temp\ccG9338m.s:53     .text.handle_trap:0000000000000014 .L0 
+C:\Users\test\AppData\Local\Temp\cclRuKmf.s:10     .text.handle_nmi:0000000000000000 handle_nmi
+C:\Users\test\AppData\Local\Temp\cclRuKmf.s:14     .text.handle_nmi:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cclRuKmf.s:15     .text.handle_nmi:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cclRuKmf.s:16     .text.handle_nmi:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cclRuKmf.s:17     .text.handle_nmi:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cclRuKmf.s:19     .text.handle_nmi:0000000000000004 .L0 
+C:\Users\test\AppData\Local\Temp\cclRuKmf.s:26     .text.handle_trap:0000000000000000 handle_trap
+C:\Users\test\AppData\Local\Temp\cclRuKmf.s:29     .text.handle_trap:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cclRuKmf.s:31     .text.handle_trap:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cclRuKmf.s:32     .text.handle_trap:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cclRuKmf.s:33     .text.handle_trap:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cclRuKmf.s:35     .text.handle_trap:0000000000000002 .L0 
+C:\Users\test\AppData\Local\Temp\cclRuKmf.s:37     .text.handle_trap:0000000000000004 .L0 
+C:\Users\test\AppData\Local\Temp\cclRuKmf.s:39     .text.handle_trap:0000000000000004 .L0 
+C:\Users\test\AppData\Local\Temp\cclRuKmf.s:42     .text.handle_trap:000000000000000c .L0 
+C:\Users\test\AppData\Local\Temp\cclRuKmf.s:43     .text.handle_trap:000000000000000c .L0 
+C:\Users\test\AppData\Local\Temp\cclRuKmf.s:44     .text.handle_trap:000000000000000e .L0 
+C:\Users\test\AppData\Local\Temp\cclRuKmf.s:48     .text.handle_trap:0000000000000012 .L0 
+C:\Users\test\AppData\Local\Temp\cclRuKmf.s:50     .text.handle_trap:0000000000000014 .L0 
+C:\Users\test\AppData\Local\Temp\cclRuKmf.s:22     .text.handle_nmi:0000000000000004 .L0 
+C:\Users\test\AppData\Local\Temp\cclRuKmf.s:53     .text.handle_trap:0000000000000014 .L0 
                      .debug_frame:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccG9338m.s:120    .debug_abbrev:0000000000000000 .Ldebug_abbrev0
-C:\Users\test\AppData\Local\Temp\ccG9338m.s:334    .debug_str:0000000000000077 .LASF1
-C:\Users\test\AppData\Local\Temp\ccG9338m.s:328    .debug_str:0000000000000033 .LASF2
-C:\Users\test\AppData\Local\Temp\ccG9338m.s:324    .debug_str:0000000000000000 .LASF3
-C:\Users\test\AppData\Local\Temp\ccG9338m.s:314    .debug_ranges:0000000000000000 .Ldebug_ranges0
-C:\Users\test\AppData\Local\Temp\ccG9338m.s:322    .debug_line:0000000000000000 .Ldebug_line0
-C:\Users\test\AppData\Local\Temp\ccG9338m.s:332    .debug_str:000000000000006b .LASF4
-C:\Users\test\AppData\Local\Temp\ccG9338m.s:27     .text.handle_trap:0000000000000000 .LFB1
-C:\Users\test\AppData\Local\Temp\ccG9338m.s:51     .text.handle_trap:0000000000000014 .LFE1
-C:\Users\test\AppData\Local\Temp\ccG9338m.s:253    .debug_loc:0000000000000000 .LLST0
-C:\Users\test\AppData\Local\Temp\ccG9338m.s:326    .debug_str:000000000000002c .LASF0
-C:\Users\test\AppData\Local\Temp\ccG9338m.s:271    .debug_loc:000000000000002c .LLST1
-C:\Users\test\AppData\Local\Temp\ccG9338m.s:285    .debug_loc:000000000000004d .LLST2
-C:\Users\test\AppData\Local\Temp\ccG9338m.s:40     .text.handle_trap:000000000000000c .LVL1
-C:\Users\test\AppData\Local\Temp\ccG9338m.s:330    .debug_str:000000000000005e .LASF5
-C:\Users\test\AppData\Local\Temp\ccG9338m.s:336    .debug_str:00000000000000f1 .LASF6
-C:\Users\test\AppData\Local\Temp\ccG9338m.s:11     .text.handle_nmi:0000000000000000 .LFB0
-C:\Users\test\AppData\Local\Temp\ccG9338m.s:20     .text.handle_nmi:0000000000000004 .LFE0
-C:\Users\test\AppData\Local\Temp\ccG9338m.s:34     .text.handle_trap:0000000000000002 .LCFI0
-C:\Users\test\AppData\Local\Temp\ccG9338m.s:47     .text.handle_trap:0000000000000012 .LCFI1
-C:\Users\test\AppData\Local\Temp\ccG9338m.s:30     .text.handle_trap:0000000000000000 .LVL0
-C:\Users\test\AppData\Local\Temp\ccG9338m.s:56     .debug_info:0000000000000000 .Ldebug_info0
+C:\Users\test\AppData\Local\Temp\cclRuKmf.s:120    .debug_abbrev:0000000000000000 .Ldebug_abbrev0
+C:\Users\test\AppData\Local\Temp\cclRuKmf.s:334    .debug_str:0000000000000077 .LASF1
+C:\Users\test\AppData\Local\Temp\cclRuKmf.s:328    .debug_str:0000000000000033 .LASF2
+C:\Users\test\AppData\Local\Temp\cclRuKmf.s:324    .debug_str:0000000000000000 .LASF3
+C:\Users\test\AppData\Local\Temp\cclRuKmf.s:314    .debug_ranges:0000000000000000 .Ldebug_ranges0
+C:\Users\test\AppData\Local\Temp\cclRuKmf.s:322    .debug_line:0000000000000000 .Ldebug_line0
+C:\Users\test\AppData\Local\Temp\cclRuKmf.s:332    .debug_str:000000000000006b .LASF4
+C:\Users\test\AppData\Local\Temp\cclRuKmf.s:27     .text.handle_trap:0000000000000000 .LFB1
+C:\Users\test\AppData\Local\Temp\cclRuKmf.s:51     .text.handle_trap:0000000000000014 .LFE1
+C:\Users\test\AppData\Local\Temp\cclRuKmf.s:253    .debug_loc:0000000000000000 .LLST0
+C:\Users\test\AppData\Local\Temp\cclRuKmf.s:326    .debug_str:000000000000002c .LASF0
+C:\Users\test\AppData\Local\Temp\cclRuKmf.s:271    .debug_loc:000000000000002c .LLST1
+C:\Users\test\AppData\Local\Temp\cclRuKmf.s:285    .debug_loc:000000000000004d .LLST2
+C:\Users\test\AppData\Local\Temp\cclRuKmf.s:40     .text.handle_trap:000000000000000c .LVL1
+C:\Users\test\AppData\Local\Temp\cclRuKmf.s:330    .debug_str:000000000000005e .LASF5
+C:\Users\test\AppData\Local\Temp\cclRuKmf.s:336    .debug_str:00000000000000f1 .LASF6
+C:\Users\test\AppData\Local\Temp\cclRuKmf.s:11     .text.handle_nmi:0000000000000000 .LFB0
+C:\Users\test\AppData\Local\Temp\cclRuKmf.s:20     .text.handle_nmi:0000000000000004 .LFE0
+C:\Users\test\AppData\Local\Temp\cclRuKmf.s:34     .text.handle_trap:0000000000000002 .LCFI0
+C:\Users\test\AppData\Local\Temp\cclRuKmf.s:47     .text.handle_trap:0000000000000012 .LCFI1
+C:\Users\test\AppData\Local\Temp\cclRuKmf.s:30     .text.handle_trap:0000000000000000 .LVL0
+C:\Users\test\AppData\Local\Temp\cclRuKmf.s:56     .debug_info:0000000000000000 .Ldebug_info0
 
 NO UNDEFINED SYMBOLS

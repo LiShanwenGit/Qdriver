@@ -1,4 +1,4 @@
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccaTzvPD.s 			page 1
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s 			page 1
 
 
    1              		.file	"gd32vf103_rtc.c"
@@ -58,7 +58,7 @@ GAS LISTING C:\Users\test\AppData\Local\Temp\ccaTzvPD.s 			page 1
   44:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** /*!
   45:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     \brief      enter RTC configuration mode
   46:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     \param[in]  none
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccaTzvPD.s 			page 2
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s 			page 2
 
 
   47:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     \param[out] none
@@ -118,7 +118,7 @@ GAS LISTING C:\Users\test\AppData\Local\Temp\ccaTzvPD.s 			page 1
   67:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     \brief      set RTC counter value
   68:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     \param[in]  cnt: RTC counter value
   69:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     \param[out] none
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccaTzvPD.s 			page 3
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s 			page 3
 
 
   70:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     \retval     none
@@ -178,7 +178,7 @@ GAS LISTING C:\Users\test\AppData\Local\Temp\ccaTzvPD.s 			page 1
   88 0020 03A74780 		lw	a4,-2044(a5)
   89 0024 3D9B     		andi	a4,a4,-17
   90 0026 23A2E780 		sw	a4,-2044(a5)
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccaTzvPD.s 			page 4
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s 			page 4
 
 
   91              	.LBE19:
@@ -238,7 +238,7 @@ GAS LISTING C:\Users\test\AppData\Local\Temp\ccaTzvPD.s 			page 1
  129              	.LVL3:
   92:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     /* set the RTC prescaler low bits */
  130              		.loc 1 92 14
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccaTzvPD.s 			page 5
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s 			page 5
 
 
  131 0018 23A4E780 		sw	a4,-2040(a5)
@@ -298,7 +298,7 @@ GAS LISTING C:\Users\test\AppData\Local\Temp\ccaTzvPD.s 			page 1
  107:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     }
  169              		.loc 1 107 10 discriminator 1
  170 000c E5DF     		beq	a5,zero,.L7
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccaTzvPD.s 			page 6
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s 			page 6
 
 
  109:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** }
@@ -358,7 +358,7 @@ GAS LISTING C:\Users\test\AppData\Local\Temp\ccaTzvPD.s 			page 1
  208              		.align	1
  209              		.globl	rtc_alarm_config
  211              	rtc_alarm_config:
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccaTzvPD.s 			page 7
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s 			page 7
 
 
  212              	.LFB8:
@@ -418,7 +418,7 @@ GAS LISTING C:\Users\test\AppData\Local\Temp\ccaTzvPD.s 			page 1
  246              	.LBB30:
  247              	.LBB31:
   63:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** }
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccaTzvPD.s 			page 8
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s 			page 8
 
 
  248              		.loc 1 63 5
@@ -478,7 +478,7 @@ GAS LISTING C:\Users\test\AppData\Local\Temp\ccaTzvPD.s 			page 1
  286 0010 8280     		ret
  287              		.cfi_endproc
  288              	.LFE9:
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccaTzvPD.s 			page 9
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s 			page 9
 
 
  290              		.section	.text.rtc_divider_get,"ax",@progbits
@@ -538,7 +538,7 @@ GAS LISTING C:\Users\test\AppData\Local\Temp\ccaTzvPD.s 			page 1
  172:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c **** /*!
  173:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     \brief      get RTC flag status 
  174:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     \param[in]  flag: specify which flag status to get
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccaTzvPD.s 			page 10
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s 			page 10
 
 
  175:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****                 only one parameter can be selected which is shown as below:
@@ -598,7 +598,7 @@ GAS LISTING C:\Users\test\AppData\Local\Temp\ccaTzvPD.s 			page 1
  206:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     /* clear RTC flag */
  207:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     RTC_CTL &= ~flag;
  353              		.loc 1 207 5
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccaTzvPD.s 			page 11
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s 			page 11
 
 
  354              		.loc 1 207 13 is_stmt 0
@@ -658,7 +658,7 @@ GAS LISTING C:\Users\test\AppData\Local\Temp\ccaTzvPD.s 			page 1
  223:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****         return SET;
  224:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     }else{
  225:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****         return RESET;
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccaTzvPD.s 			page 12
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s 			page 12
 
 
  226:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     }
@@ -718,7 +718,7 @@ GAS LISTING C:\Users\test\AppData\Local\Temp\ccaTzvPD.s 			page 1
  261:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     \brief      disable RTC interrupt
  262:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****     \param[in]  interrupt: specify which interrupt to disbale
  263:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****                 one or more parameters can be selected which are shown as below:
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccaTzvPD.s 			page 13
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s 			page 13
 
 
  264:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rtc.c ****       \arg        RTC_INT_SECOND: second interrupt
@@ -755,319 +755,319 @@ GAS LISTING C:\Users\test\AppData\Local\Temp\ccaTzvPD.s 			page 1
  440              		.file 3 "d:\\risc_v_gcc\\riscv-none-embed\\include\\sys\\_stdint.h"
  441              		.file 4 "arch/riscv/mach-gd32vf10x/system/gd32vf103.h"
  442              		.file 5 "arch/riscv/mach-gd32vf10x/system/system_gd32vf103.h"
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccaTzvPD.s 			page 14
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s 			page 14
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 gd32vf103_rtc.c
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:10     .text.rtc_configuration_mode_enter:0000000000000000 rtc_configuration_mode_enter
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:14     .text.rtc_configuration_mode_enter:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:15     .text.rtc_configuration_mode_enter:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:16     .text.rtc_configuration_mode_enter:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:17     .text.rtc_configuration_mode_enter:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:22     .text.rtc_configuration_mode_enter:0000000000000010 .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:23     .text.rtc_configuration_mode_enter:0000000000000012 .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:30     .text.rtc_configuration_mode_exit:0000000000000000 rtc_configuration_mode_exit
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:33     .text.rtc_configuration_mode_exit:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:34     .text.rtc_configuration_mode_exit:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:35     .text.rtc_configuration_mode_exit:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:36     .text.rtc_configuration_mode_exit:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:41     .text.rtc_configuration_mode_exit:000000000000000e .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:42     .text.rtc_configuration_mode_exit:0000000000000010 .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:49     .text.rtc_counter_set:0000000000000000 rtc_counter_set
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:52     .text.rtc_counter_set:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:54     .text.rtc_counter_set:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:57     .text.rtc_counter_set:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:58     .text.rtc_counter_set:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:59     .text.rtc_counter_set:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:64     .text.rtc_counter_set:0000000000000008 .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:66     .text.rtc_counter_set:000000000000000c .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:71     .text.rtc_counter_set:000000000000000e .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:76     .text.rtc_counter_set:0000000000000016 .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:77     .text.rtc_counter_set:0000000000000016 .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:79     .text.rtc_counter_set:000000000000001a .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:80     .text.rtc_counter_set:000000000000001a .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:82     .text.rtc_counter_set:000000000000001c .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:86     .text.rtc_counter_set:0000000000000020 .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:87     .text.rtc_counter_set:0000000000000020 .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:88     .text.rtc_counter_set:0000000000000020 .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:94     .text.rtc_counter_set:000000000000002a .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:95     .text.rtc_counter_set:000000000000002c .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:102    .text.rtc_prescaler_set:0000000000000000 rtc_prescaler_set
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:105    .text.rtc_prescaler_set:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:107    .text.rtc_prescaler_set:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:110    .text.rtc_prescaler_set:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:111    .text.rtc_prescaler_set:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:112    .text.rtc_prescaler_set:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:117    .text.rtc_prescaler_set:0000000000000008 .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:122    .text.rtc_prescaler_set:000000000000000e .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:127    .text.rtc_prescaler_set:0000000000000016 .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:128    .text.rtc_prescaler_set:0000000000000016 .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:131    .text.rtc_prescaler_set:0000000000000018 .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:133    .text.rtc_prescaler_set:000000000000001c .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:134    .text.rtc_prescaler_set:000000000000001c .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:136    .text.rtc_prescaler_set:000000000000001e .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:140    .text.rtc_prescaler_set:0000000000000022 .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:141    .text.rtc_prescaler_set:0000000000000022 .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:142    .text.rtc_prescaler_set:0000000000000022 .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:148    .text.rtc_prescaler_set:000000000000002c .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:149    .text.rtc_prescaler_set:000000000000002e .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:156    .text.rtc_lwoff_wait:0000000000000000 rtc_lwoff_wait
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:159    .text.rtc_lwoff_wait:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:160    .text.rtc_lwoff_wait:0000000000000000 .L0 
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccaTzvPD.s 			page 15
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:10     .text.rtc_configuration_mode_enter:0000000000000000 rtc_configuration_mode_enter
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:14     .text.rtc_configuration_mode_enter:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:15     .text.rtc_configuration_mode_enter:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:16     .text.rtc_configuration_mode_enter:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:17     .text.rtc_configuration_mode_enter:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:22     .text.rtc_configuration_mode_enter:0000000000000010 .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:23     .text.rtc_configuration_mode_enter:0000000000000012 .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:30     .text.rtc_configuration_mode_exit:0000000000000000 rtc_configuration_mode_exit
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:33     .text.rtc_configuration_mode_exit:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:34     .text.rtc_configuration_mode_exit:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:35     .text.rtc_configuration_mode_exit:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:36     .text.rtc_configuration_mode_exit:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:41     .text.rtc_configuration_mode_exit:000000000000000e .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:42     .text.rtc_configuration_mode_exit:0000000000000010 .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:49     .text.rtc_counter_set:0000000000000000 rtc_counter_set
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:52     .text.rtc_counter_set:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:54     .text.rtc_counter_set:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:57     .text.rtc_counter_set:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:58     .text.rtc_counter_set:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:59     .text.rtc_counter_set:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:64     .text.rtc_counter_set:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:66     .text.rtc_counter_set:000000000000000c .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:71     .text.rtc_counter_set:000000000000000e .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:76     .text.rtc_counter_set:0000000000000016 .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:77     .text.rtc_counter_set:0000000000000016 .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:79     .text.rtc_counter_set:000000000000001a .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:80     .text.rtc_counter_set:000000000000001a .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:82     .text.rtc_counter_set:000000000000001c .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:86     .text.rtc_counter_set:0000000000000020 .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:87     .text.rtc_counter_set:0000000000000020 .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:88     .text.rtc_counter_set:0000000000000020 .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:94     .text.rtc_counter_set:000000000000002a .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:95     .text.rtc_counter_set:000000000000002c .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:102    .text.rtc_prescaler_set:0000000000000000 rtc_prescaler_set
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:105    .text.rtc_prescaler_set:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:107    .text.rtc_prescaler_set:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:110    .text.rtc_prescaler_set:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:111    .text.rtc_prescaler_set:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:112    .text.rtc_prescaler_set:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:117    .text.rtc_prescaler_set:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:122    .text.rtc_prescaler_set:000000000000000e .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:127    .text.rtc_prescaler_set:0000000000000016 .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:128    .text.rtc_prescaler_set:0000000000000016 .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:131    .text.rtc_prescaler_set:0000000000000018 .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:133    .text.rtc_prescaler_set:000000000000001c .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:134    .text.rtc_prescaler_set:000000000000001c .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:136    .text.rtc_prescaler_set:000000000000001e .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:140    .text.rtc_prescaler_set:0000000000000022 .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:141    .text.rtc_prescaler_set:0000000000000022 .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:142    .text.rtc_prescaler_set:0000000000000022 .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:148    .text.rtc_prescaler_set:000000000000002c .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:149    .text.rtc_prescaler_set:000000000000002e .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:156    .text.rtc_lwoff_wait:0000000000000000 rtc_lwoff_wait
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:159    .text.rtc_lwoff_wait:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:160    .text.rtc_lwoff_wait:0000000000000000 .L0 
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s 			page 15
 
 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:161    .text.rtc_lwoff_wait:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:162    .text.rtc_lwoff_wait:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:165    .text.rtc_lwoff_wait:0000000000000004 .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:166    .text.rtc_lwoff_wait:0000000000000004 .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:168    .text.rtc_lwoff_wait:0000000000000008 .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:170    .text.rtc_lwoff_wait:000000000000000c .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:172    .text.rtc_lwoff_wait:000000000000000e .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:173    .text.rtc_lwoff_wait:0000000000000010 .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:180    .text.rtc_register_sync_wait:0000000000000000 rtc_register_sync_wait
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:183    .text.rtc_register_sync_wait:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:184    .text.rtc_register_sync_wait:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:185    .text.rtc_register_sync_wait:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:186    .text.rtc_register_sync_wait:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:189    .text.rtc_register_sync_wait:0000000000000008 .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:191    .text.rtc_register_sync_wait:000000000000000c .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:195    .text.rtc_register_sync_wait:0000000000000012 .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:196    .text.rtc_register_sync_wait:0000000000000012 .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:197    .text.rtc_register_sync_wait:0000000000000012 .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:199    .text.rtc_register_sync_wait:0000000000000016 .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:201    .text.rtc_register_sync_wait:0000000000000018 .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:203    .text.rtc_register_sync_wait:000000000000001a .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:204    .text.rtc_register_sync_wait:000000000000001c .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:211    .text.rtc_alarm_config:0000000000000000 rtc_alarm_config
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:214    .text.rtc_alarm_config:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:216    .text.rtc_alarm_config:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:219    .text.rtc_alarm_config:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:220    .text.rtc_alarm_config:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:221    .text.rtc_alarm_config:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:226    .text.rtc_alarm_config:0000000000000008 .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:228    .text.rtc_alarm_config:000000000000000c .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:233    .text.rtc_alarm_config:000000000000000e .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:238    .text.rtc_alarm_config:0000000000000016 .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:239    .text.rtc_alarm_config:0000000000000016 .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:241    .text.rtc_alarm_config:000000000000001a .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:242    .text.rtc_alarm_config:000000000000001a .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:244    .text.rtc_alarm_config:000000000000001c .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:248    .text.rtc_alarm_config:0000000000000020 .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:249    .text.rtc_alarm_config:0000000000000020 .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:250    .text.rtc_alarm_config:0000000000000020 .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:256    .text.rtc_alarm_config:000000000000002a .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:257    .text.rtc_alarm_config:000000000000002c .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:264    .text.rtc_counter_get:0000000000000000 rtc_counter_get
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:267    .text.rtc_counter_get:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:268    .text.rtc_counter_get:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:270    .text.rtc_counter_get:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:271    .text.rtc_counter_get:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:272    .text.rtc_counter_get:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:276    .text.rtc_counter_get:0000000000000008 .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:277    .text.rtc_counter_get:0000000000000008 .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:280    .text.rtc_counter_get:000000000000000c .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:281    .text.rtc_counter_get:000000000000000c .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:284    .text.rtc_counter_get:000000000000000e .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:287    .text.rtc_counter_get:0000000000000012 .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:294    .text.rtc_divider_get:0000000000000000 rtc_divider_get
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:297    .text.rtc_divider_get:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:298    .text.rtc_divider_get:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:300    .text.rtc_divider_get:0000000000000000 .L0 
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccaTzvPD.s 			page 16
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:161    .text.rtc_lwoff_wait:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:162    .text.rtc_lwoff_wait:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:165    .text.rtc_lwoff_wait:0000000000000004 .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:166    .text.rtc_lwoff_wait:0000000000000004 .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:168    .text.rtc_lwoff_wait:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:170    .text.rtc_lwoff_wait:000000000000000c .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:172    .text.rtc_lwoff_wait:000000000000000e .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:173    .text.rtc_lwoff_wait:0000000000000010 .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:180    .text.rtc_register_sync_wait:0000000000000000 rtc_register_sync_wait
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:183    .text.rtc_register_sync_wait:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:184    .text.rtc_register_sync_wait:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:185    .text.rtc_register_sync_wait:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:186    .text.rtc_register_sync_wait:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:189    .text.rtc_register_sync_wait:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:191    .text.rtc_register_sync_wait:000000000000000c .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:195    .text.rtc_register_sync_wait:0000000000000012 .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:196    .text.rtc_register_sync_wait:0000000000000012 .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:197    .text.rtc_register_sync_wait:0000000000000012 .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:199    .text.rtc_register_sync_wait:0000000000000016 .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:201    .text.rtc_register_sync_wait:0000000000000018 .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:203    .text.rtc_register_sync_wait:000000000000001a .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:204    .text.rtc_register_sync_wait:000000000000001c .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:211    .text.rtc_alarm_config:0000000000000000 rtc_alarm_config
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:214    .text.rtc_alarm_config:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:216    .text.rtc_alarm_config:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:219    .text.rtc_alarm_config:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:220    .text.rtc_alarm_config:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:221    .text.rtc_alarm_config:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:226    .text.rtc_alarm_config:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:228    .text.rtc_alarm_config:000000000000000c .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:233    .text.rtc_alarm_config:000000000000000e .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:238    .text.rtc_alarm_config:0000000000000016 .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:239    .text.rtc_alarm_config:0000000000000016 .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:241    .text.rtc_alarm_config:000000000000001a .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:242    .text.rtc_alarm_config:000000000000001a .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:244    .text.rtc_alarm_config:000000000000001c .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:248    .text.rtc_alarm_config:0000000000000020 .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:249    .text.rtc_alarm_config:0000000000000020 .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:250    .text.rtc_alarm_config:0000000000000020 .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:256    .text.rtc_alarm_config:000000000000002a .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:257    .text.rtc_alarm_config:000000000000002c .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:264    .text.rtc_counter_get:0000000000000000 rtc_counter_get
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:267    .text.rtc_counter_get:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:268    .text.rtc_counter_get:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:270    .text.rtc_counter_get:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:271    .text.rtc_counter_get:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:272    .text.rtc_counter_get:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:276    .text.rtc_counter_get:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:277    .text.rtc_counter_get:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:280    .text.rtc_counter_get:000000000000000c .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:281    .text.rtc_counter_get:000000000000000c .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:284    .text.rtc_counter_get:000000000000000e .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:287    .text.rtc_counter_get:0000000000000012 .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:294    .text.rtc_divider_get:0000000000000000 rtc_divider_get
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:297    .text.rtc_divider_get:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:298    .text.rtc_divider_get:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:300    .text.rtc_divider_get:0000000000000000 .L0 
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s 			page 16
 
 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:301    .text.rtc_divider_get:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:302    .text.rtc_divider_get:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:305    .text.rtc_divider_get:0000000000000008 .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:307    .text.rtc_divider_get:000000000000000c .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:309    .text.rtc_divider_get:0000000000000010 .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:311    .text.rtc_divider_get:0000000000000012 .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:314    .text.rtc_divider_get:0000000000000014 .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:315    .text.rtc_divider_get:0000000000000014 .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:316    .text.rtc_divider_get:0000000000000014 .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:319    .text.rtc_divider_get:0000000000000018 .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:326    .text.rtc_flag_get:0000000000000000 rtc_flag_get
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:329    .text.rtc_flag_get:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:331    .text.rtc_flag_get:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:332    .text.rtc_flag_get:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:333    .text.rtc_flag_get:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:336    .text.rtc_flag_get:0000000000000008 .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:339    .text.rtc_flag_get:000000000000000a .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:341    .text.rtc_flag_get:0000000000000010 .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:348    .text.rtc_flag_clear:0000000000000000 rtc_flag_clear
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:351    .text.rtc_flag_clear:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:353    .text.rtc_flag_clear:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:354    .text.rtc_flag_clear:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:355    .text.rtc_flag_clear:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:358    .text.rtc_flag_clear:0000000000000008 .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:361    .text.rtc_flag_clear:000000000000000c .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:365    .text.rtc_flag_clear:0000000000000012 .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:366    .text.rtc_flag_clear:0000000000000014 .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:373    .text.rtc_interrupt_flag_get:0000000000000000 rtc_interrupt_flag_get
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:375    .text.rtc_interrupt_flag_get:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:377    .text.rtc_interrupt_flag_get:0000000000000008 .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:384    .text.rtc_interrupt_flag_clear:0000000000000000 rtc_interrupt_flag_clear
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:386    .text.rtc_interrupt_flag_clear:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:388    .text.rtc_interrupt_flag_clear:0000000000000008 .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:395    .text.rtc_interrupt_enable:0000000000000000 rtc_interrupt_enable
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:398    .text.rtc_interrupt_enable:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:400    .text.rtc_interrupt_enable:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:401    .text.rtc_interrupt_enable:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:402    .text.rtc_interrupt_enable:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:408    .text.rtc_interrupt_enable:000000000000000e .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:409    .text.rtc_interrupt_enable:0000000000000010 .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:416    .text.rtc_interrupt_disable:0000000000000000 rtc_interrupt_disable
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:419    .text.rtc_interrupt_disable:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:421    .text.rtc_interrupt_disable:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:422    .text.rtc_interrupt_disable:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:423    .text.rtc_interrupt_disable:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:426    .text.rtc_interrupt_disable:0000000000000008 .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:429    .text.rtc_interrupt_disable:000000000000000c .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:433    .text.rtc_interrupt_disable:0000000000000012 .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:434    .text.rtc_interrupt_disable:0000000000000014 .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:26     .text.rtc_configuration_mode_enter:0000000000000012 .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:45     .text.rtc_configuration_mode_exit:0000000000000010 .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:98     .text.rtc_counter_set:000000000000002c .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:152    .text.rtc_prescaler_set:000000000000002e .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:176    .text.rtc_lwoff_wait:0000000000000010 .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:207    .text.rtc_register_sync_wait:000000000000001c .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:260    .text.rtc_alarm_config:000000000000002c .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:290    .text.rtc_counter_get:0000000000000012 .L0 
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccaTzvPD.s 			page 17
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:301    .text.rtc_divider_get:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:302    .text.rtc_divider_get:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:305    .text.rtc_divider_get:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:307    .text.rtc_divider_get:000000000000000c .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:309    .text.rtc_divider_get:0000000000000010 .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:311    .text.rtc_divider_get:0000000000000012 .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:314    .text.rtc_divider_get:0000000000000014 .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:315    .text.rtc_divider_get:0000000000000014 .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:316    .text.rtc_divider_get:0000000000000014 .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:319    .text.rtc_divider_get:0000000000000018 .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:326    .text.rtc_flag_get:0000000000000000 rtc_flag_get
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:329    .text.rtc_flag_get:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:331    .text.rtc_flag_get:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:332    .text.rtc_flag_get:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:333    .text.rtc_flag_get:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:336    .text.rtc_flag_get:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:339    .text.rtc_flag_get:000000000000000a .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:341    .text.rtc_flag_get:0000000000000010 .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:348    .text.rtc_flag_clear:0000000000000000 rtc_flag_clear
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:351    .text.rtc_flag_clear:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:353    .text.rtc_flag_clear:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:354    .text.rtc_flag_clear:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:355    .text.rtc_flag_clear:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:358    .text.rtc_flag_clear:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:361    .text.rtc_flag_clear:000000000000000c .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:365    .text.rtc_flag_clear:0000000000000012 .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:366    .text.rtc_flag_clear:0000000000000014 .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:373    .text.rtc_interrupt_flag_get:0000000000000000 rtc_interrupt_flag_get
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:375    .text.rtc_interrupt_flag_get:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:377    .text.rtc_interrupt_flag_get:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:384    .text.rtc_interrupt_flag_clear:0000000000000000 rtc_interrupt_flag_clear
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:386    .text.rtc_interrupt_flag_clear:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:388    .text.rtc_interrupt_flag_clear:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:395    .text.rtc_interrupt_enable:0000000000000000 rtc_interrupt_enable
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:398    .text.rtc_interrupt_enable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:400    .text.rtc_interrupt_enable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:401    .text.rtc_interrupt_enable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:402    .text.rtc_interrupt_enable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:408    .text.rtc_interrupt_enable:000000000000000e .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:409    .text.rtc_interrupt_enable:0000000000000010 .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:416    .text.rtc_interrupt_disable:0000000000000000 rtc_interrupt_disable
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:419    .text.rtc_interrupt_disable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:421    .text.rtc_interrupt_disable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:422    .text.rtc_interrupt_disable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:423    .text.rtc_interrupt_disable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:426    .text.rtc_interrupt_disable:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:429    .text.rtc_interrupt_disable:000000000000000c .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:433    .text.rtc_interrupt_disable:0000000000000012 .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:434    .text.rtc_interrupt_disable:0000000000000014 .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:26     .text.rtc_configuration_mode_enter:0000000000000012 .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:45     .text.rtc_configuration_mode_exit:0000000000000010 .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:98     .text.rtc_counter_set:000000000000002c .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:152    .text.rtc_prescaler_set:000000000000002e .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:176    .text.rtc_lwoff_wait:0000000000000010 .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:207    .text.rtc_register_sync_wait:000000000000001c .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:260    .text.rtc_alarm_config:000000000000002c .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:290    .text.rtc_counter_get:0000000000000012 .L0 
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s 			page 17
 
 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:322    .text.rtc_divider_get:0000000000000018 .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:344    .text.rtc_flag_get:0000000000000010 .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:369    .text.rtc_flag_clear:0000000000000014 .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:412    .text.rtc_interrupt_enable:0000000000000010 .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:437    .text.rtc_interrupt_disable:0000000000000014 .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:322    .text.rtc_divider_get:0000000000000018 .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:344    .text.rtc_flag_get:0000000000000010 .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:369    .text.rtc_flag_clear:0000000000000014 .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:412    .text.rtc_interrupt_enable:0000000000000010 .L0 
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:437    .text.rtc_interrupt_disable:0000000000000014 .L0 
                      .debug_frame:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:163    .text.rtc_lwoff_wait:0000000000000004 .L7
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:194    .text.rtc_register_sync_wait:0000000000000012 .L11
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:876    .debug_abbrev:0000000000000000 .Ldebug_abbrev0
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:1551   .debug_str:0000000000000011 .LASF30
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:1587   .debug_str:0000000000000190 .LASF31
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:1591   .debug_str:00000000000001cc .LASF32
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:1499   .debug_ranges:0000000000000000 .Ldebug_ranges0
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:1547   .debug_line:0000000000000000 .Ldebug_line0
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:1599   .debug_str:0000000000000218 .LASF0
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:1615   .debug_str:000000000000029b .LASF1
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:1589   .debug_str:00000000000001be .LASF2
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:1609   .debug_str:000000000000027f .LASF3
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:1569   .debug_str:0000000000000109 .LASF4
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:1613   .debug_str:0000000000000292 .LASF5
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:1595   .debug_str:0000000000000208 .LASF9
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:1581   .debug_str:0000000000000173 .LASF6
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:1571   .debug_str:000000000000011c .LASF7
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:1601   .debug_str:0000000000000225 .LASF8
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:1611   .debug_str:0000000000000289 .LASF10
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:1607   .debug_str:000000000000026f .LASF33
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:1585   .debug_str:000000000000018a .LASF11
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:1575   .debug_str:0000000000000134 .LASF12
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:1559   .debug_str:00000000000000bb .LASF13
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:417    .text.rtc_interrupt_disable:0000000000000000 .LFB16
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:435    .text.rtc_interrupt_disable:0000000000000014 .LFE16
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:1573   .debug_str:000000000000012a .LASF15
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:1302   .debug_loc:0000000000000000 .LLST8
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:1565   .debug_str:00000000000000e4 .LASF14
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:396    .text.rtc_interrupt_enable:0000000000000000 .LFB15
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:410    .text.rtc_interrupt_enable:0000000000000010 .LFE15
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:1323   .debug_loc:000000000000002f .LLST7
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:1617   .debug_str:00000000000002a7 .LASF34
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:1597   .debug_str:0000000000000213 .LASF16
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:1577   .debug_str:000000000000013f .LASF35
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:1553   .debug_str:000000000000008b .LASF17
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:349    .text.rtc_flag_clear:0000000000000000 .LFB12
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:367    .text.rtc_flag_clear:0000000000000014 .LFE12
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:1337   .debug_loc:0000000000000050 .LLST6
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:1563   .debug_str:00000000000000d7 .LASF18
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:327    .text.rtc_flag_get:0000000000000000 .LFB11
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:342    .text.rtc_flag_get:0000000000000010 .LFE11
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:1358   .debug_loc:000000000000007f .LLST5
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:1593   .debug_str:00000000000001f8 .LASF19
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:295    .text.rtc_divider_get:0000000000000000 .LFB10
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:320    .text.rtc_divider_get:0000000000000018 .LFE10
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:1583   .debug_str:0000000000000185 .LASF21
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:1372   .debug_loc:00000000000000a0 .LLST4
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:1619   .debug_str:00000000000002c0 .LASF20
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:265    .text.rtc_counter_get:0000000000000000 .LFB9
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:288    .text.rtc_counter_get:0000000000000012 .LFE9
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:1393   .debug_loc:00000000000000cf .LLST3
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccaTzvPD.s 			page 18
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:163    .text.rtc_lwoff_wait:0000000000000004 .L7
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:194    .text.rtc_register_sync_wait:0000000000000012 .L11
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:876    .debug_abbrev:0000000000000000 .Ldebug_abbrev0
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:1551   .debug_str:0000000000000011 .LASF30
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:1587   .debug_str:0000000000000190 .LASF31
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:1591   .debug_str:00000000000001cc .LASF32
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:1499   .debug_ranges:0000000000000000 .Ldebug_ranges0
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:1547   .debug_line:0000000000000000 .Ldebug_line0
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:1599   .debug_str:0000000000000218 .LASF0
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:1615   .debug_str:000000000000029b .LASF1
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:1589   .debug_str:00000000000001be .LASF2
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:1609   .debug_str:000000000000027f .LASF3
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:1569   .debug_str:0000000000000109 .LASF4
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:1613   .debug_str:0000000000000292 .LASF5
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:1595   .debug_str:0000000000000208 .LASF9
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:1581   .debug_str:0000000000000173 .LASF6
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:1571   .debug_str:000000000000011c .LASF7
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:1601   .debug_str:0000000000000225 .LASF8
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:1611   .debug_str:0000000000000289 .LASF10
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:1607   .debug_str:000000000000026f .LASF33
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:1585   .debug_str:000000000000018a .LASF11
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:1575   .debug_str:0000000000000134 .LASF12
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:1559   .debug_str:00000000000000bb .LASF13
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:417    .text.rtc_interrupt_disable:0000000000000000 .LFB16
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:435    .text.rtc_interrupt_disable:0000000000000014 .LFE16
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:1573   .debug_str:000000000000012a .LASF15
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:1302   .debug_loc:0000000000000000 .LLST8
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:1565   .debug_str:00000000000000e4 .LASF14
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:396    .text.rtc_interrupt_enable:0000000000000000 .LFB15
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:410    .text.rtc_interrupt_enable:0000000000000010 .LFE15
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:1323   .debug_loc:000000000000002f .LLST7
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:1617   .debug_str:00000000000002a7 .LASF34
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:1597   .debug_str:0000000000000213 .LASF16
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:1577   .debug_str:000000000000013f .LASF35
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:1553   .debug_str:000000000000008b .LASF17
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:349    .text.rtc_flag_clear:0000000000000000 .LFB12
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:367    .text.rtc_flag_clear:0000000000000014 .LFE12
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:1337   .debug_loc:0000000000000050 .LLST6
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:1563   .debug_str:00000000000000d7 .LASF18
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:327    .text.rtc_flag_get:0000000000000000 .LFB11
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:342    .text.rtc_flag_get:0000000000000010 .LFE11
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:1358   .debug_loc:000000000000007f .LLST5
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:1593   .debug_str:00000000000001f8 .LASF19
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:295    .text.rtc_divider_get:0000000000000000 .LFB10
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:320    .text.rtc_divider_get:0000000000000018 .LFE10
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:1583   .debug_str:0000000000000185 .LASF21
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:1372   .debug_loc:00000000000000a0 .LLST4
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:1619   .debug_str:00000000000002c0 .LASF20
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:265    .text.rtc_counter_get:0000000000000000 .LFB9
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:288    .text.rtc_counter_get:0000000000000012 .LFE9
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:1393   .debug_loc:00000000000000cf .LLST3
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s 			page 18
 
 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:1549   .debug_str:0000000000000000 .LASF22
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:212    .text.rtc_alarm_config:0000000000000000 .LFB8
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:258    .text.rtc_alarm_config:000000000000002c .LFE8
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:1561   .debug_str:00000000000000d1 .LASF23
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:1420   .debug_loc:000000000000010b .LLST2
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:217    .text.rtc_alarm_config:0000000000000000 .LBB26
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:246    .text.rtc_alarm_config:0000000000000020 .LBB30
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:254    .text.rtc_alarm_config:000000000000002a .LBE30
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:1605   .debug_str:0000000000000258 .LASF24
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:181    .text.rtc_register_sync_wait:0000000000000000 .LFB7
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:205    .text.rtc_register_sync_wait:000000000000001c .LFE7
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:1555   .debug_str:000000000000009a .LASF25
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:157    .text.rtc_lwoff_wait:0000000000000000 .LFB6
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:174    .text.rtc_lwoff_wait:0000000000000010 .LFE6
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:1557   .debug_str:00000000000000a9 .LASF26
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:103    .text.rtc_prescaler_set:0000000000000000 .LFB5
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:150    .text.rtc_prescaler_set:000000000000002e .LFE5
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:1434   .debug_loc:000000000000012c .LLST1
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:108    .text.rtc_prescaler_set:0000000000000000 .LBB20
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:138    .text.rtc_prescaler_set:0000000000000022 .LBB24
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:146    .text.rtc_prescaler_set:000000000000002c .LBE24
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:1567   .debug_str:00000000000000f9 .LASF27
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:50     .text.rtc_counter_set:0000000000000000 .LFB4
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:96     .text.rtc_counter_set:000000000000002c .LFE4
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:1448   .debug_loc:000000000000014d .LLST0
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:55     .text.rtc_counter_set:0000000000000000 .LBB14
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:84     .text.rtc_counter_set:0000000000000020 .LBB18
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:92     .text.rtc_counter_set:000000000000002a .LBE18
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:1603   .debug_str:000000000000023c .LASF28
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:1579   .debug_str:0000000000000156 .LASF29
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:11     .text.rtc_configuration_mode_enter:0000000000000000 .LFB2
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:24     .text.rtc_configuration_mode_enter:0000000000000012 .LFE2
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:31     .text.rtc_configuration_mode_exit:0000000000000000 .LFB3
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:43     .text.rtc_configuration_mode_exit:0000000000000010 .LFE3
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:420    .text.rtc_interrupt_disable:0000000000000000 .LVL21
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:427    .text.rtc_interrupt_disable:000000000000000c .LVL22
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:430    .text.rtc_interrupt_disable:000000000000000e .LVL23
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:399    .text.rtc_interrupt_enable:0000000000000000 .LVL19
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:405    .text.rtc_interrupt_enable:000000000000000a .LVL20
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:352    .text.rtc_flag_clear:0000000000000000 .LVL16
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:359    .text.rtc_flag_clear:000000000000000c .LVL17
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:362    .text.rtc_flag_clear:000000000000000e .LVL18
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:330    .text.rtc_flag_get:0000000000000000 .LVL14
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:337    .text.rtc_flag_get:000000000000000a .LVL15
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:299    .text.rtc_divider_get:0000000000000000 .LVL11
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:312    .text.rtc_divider_get:0000000000000014 .LVL12
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:317    .text.rtc_divider_get:0000000000000016 .LVL13
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:269    .text.rtc_counter_get:0000000000000000 .LVL6
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:274    .text.rtc_counter_get:0000000000000008 .LVL7
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:278    .text.rtc_counter_get:000000000000000c .LVL8
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:282    .text.rtc_counter_get:000000000000000e .LVL9
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:285    .text.rtc_counter_get:0000000000000010 .LVL10
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:215    .text.rtc_alarm_config:0000000000000000 .LVL4
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:229    .text.rtc_alarm_config:000000000000000e .LVL5
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:106    .text.rtc_prescaler_set:0000000000000000 .LVL2
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:129    .text.rtc_prescaler_set:0000000000000018 .LVL3
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:53     .text.rtc_counter_set:0000000000000000 .LVL0
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccaTzvPD.s 			page 19
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:1549   .debug_str:0000000000000000 .LASF22
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:212    .text.rtc_alarm_config:0000000000000000 .LFB8
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:258    .text.rtc_alarm_config:000000000000002c .LFE8
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:1561   .debug_str:00000000000000d1 .LASF23
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:1420   .debug_loc:000000000000010b .LLST2
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:217    .text.rtc_alarm_config:0000000000000000 .LBB26
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:246    .text.rtc_alarm_config:0000000000000020 .LBB30
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:254    .text.rtc_alarm_config:000000000000002a .LBE30
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:1605   .debug_str:0000000000000258 .LASF24
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:181    .text.rtc_register_sync_wait:0000000000000000 .LFB7
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:205    .text.rtc_register_sync_wait:000000000000001c .LFE7
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:1555   .debug_str:000000000000009a .LASF25
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:157    .text.rtc_lwoff_wait:0000000000000000 .LFB6
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:174    .text.rtc_lwoff_wait:0000000000000010 .LFE6
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:1557   .debug_str:00000000000000a9 .LASF26
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:103    .text.rtc_prescaler_set:0000000000000000 .LFB5
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:150    .text.rtc_prescaler_set:000000000000002e .LFE5
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:1434   .debug_loc:000000000000012c .LLST1
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:108    .text.rtc_prescaler_set:0000000000000000 .LBB20
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:138    .text.rtc_prescaler_set:0000000000000022 .LBB24
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:146    .text.rtc_prescaler_set:000000000000002c .LBE24
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:1567   .debug_str:00000000000000f9 .LASF27
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:50     .text.rtc_counter_set:0000000000000000 .LFB4
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:96     .text.rtc_counter_set:000000000000002c .LFE4
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:1448   .debug_loc:000000000000014d .LLST0
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:55     .text.rtc_counter_set:0000000000000000 .LBB14
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:84     .text.rtc_counter_set:0000000000000020 .LBB18
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:92     .text.rtc_counter_set:000000000000002a .LBE18
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:1603   .debug_str:000000000000023c .LASF28
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:1579   .debug_str:0000000000000156 .LASF29
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:11     .text.rtc_configuration_mode_enter:0000000000000000 .LFB2
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:24     .text.rtc_configuration_mode_enter:0000000000000012 .LFE2
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:31     .text.rtc_configuration_mode_exit:0000000000000000 .LFB3
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:43     .text.rtc_configuration_mode_exit:0000000000000010 .LFE3
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:420    .text.rtc_interrupt_disable:0000000000000000 .LVL21
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:427    .text.rtc_interrupt_disable:000000000000000c .LVL22
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:430    .text.rtc_interrupt_disable:000000000000000e .LVL23
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:399    .text.rtc_interrupt_enable:0000000000000000 .LVL19
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:405    .text.rtc_interrupt_enable:000000000000000a .LVL20
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:352    .text.rtc_flag_clear:0000000000000000 .LVL16
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:359    .text.rtc_flag_clear:000000000000000c .LVL17
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:362    .text.rtc_flag_clear:000000000000000e .LVL18
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:330    .text.rtc_flag_get:0000000000000000 .LVL14
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:337    .text.rtc_flag_get:000000000000000a .LVL15
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:299    .text.rtc_divider_get:0000000000000000 .LVL11
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:312    .text.rtc_divider_get:0000000000000014 .LVL12
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:317    .text.rtc_divider_get:0000000000000016 .LVL13
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:269    .text.rtc_counter_get:0000000000000000 .LVL6
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:274    .text.rtc_counter_get:0000000000000008 .LVL7
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:278    .text.rtc_counter_get:000000000000000c .LVL8
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:282    .text.rtc_counter_get:000000000000000e .LVL9
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:285    .text.rtc_counter_get:0000000000000010 .LVL10
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:215    .text.rtc_alarm_config:0000000000000000 .LVL4
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:229    .text.rtc_alarm_config:000000000000000e .LVL5
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:106    .text.rtc_prescaler_set:0000000000000000 .LVL2
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:129    .text.rtc_prescaler_set:0000000000000018 .LVL3
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:53     .text.rtc_counter_set:0000000000000000 .LVL0
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s 			page 19
 
 
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:67     .text.rtc_counter_set:000000000000000e .LVL1
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:444    .debug_info:0000000000000000 .Ldebug_info0
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:62     .text.rtc_counter_set:0000000000000008 .LBE14
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:68     .text.rtc_counter_set:000000000000000e .LBB17
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:74     .text.rtc_counter_set:0000000000000016 .LBE17
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:115    .text.rtc_prescaler_set:0000000000000008 .LBE20
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:119    .text.rtc_prescaler_set:000000000000000e .LBB23
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:125    .text.rtc_prescaler_set:0000000000000016 .LBE23
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:224    .text.rtc_alarm_config:0000000000000008 .LBE26
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:230    .text.rtc_alarm_config:000000000000000e .LBB29
-C:\Users\test\AppData\Local\Temp\ccaTzvPD.s:236    .text.rtc_alarm_config:0000000000000016 .LBE29
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:67     .text.rtc_counter_set:000000000000000e .LVL1
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:444    .debug_info:0000000000000000 .Ldebug_info0
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:62     .text.rtc_counter_set:0000000000000008 .LBE14
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:68     .text.rtc_counter_set:000000000000000e .LBB17
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:74     .text.rtc_counter_set:0000000000000016 .LBE17
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:115    .text.rtc_prescaler_set:0000000000000008 .LBE20
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:119    .text.rtc_prescaler_set:000000000000000e .LBB23
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:125    .text.rtc_prescaler_set:0000000000000016 .LBE23
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:224    .text.rtc_alarm_config:0000000000000008 .LBE26
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:230    .text.rtc_alarm_config:000000000000000e .LBB29
+C:\Users\test\AppData\Local\Temp\ccMqrWpJ.s:236    .text.rtc_alarm_config:0000000000000016 .LBE29
 
 NO UNDEFINED SYMBOLS

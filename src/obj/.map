@@ -22,27 +22,57 @@ Discarded input sections
  .text          0x0000000000000000        0x0 obj/gd32vf10x-spi.o
  .data          0x0000000000000000        0x0 obj/gd32vf10x-spi.o
  .bss           0x0000000000000000        0x0 obj/gd32vf10x-spi.o
- .debug_line    0x0000000000000000        0x0 obj/gd32vf10x-spi.o
- .debug_str     0x0000000000000000       0xd8 obj/gd32vf10x-spi.o
- .comment       0x0000000000000000       0x34 obj/gd32vf10x-spi.o
  .text          0x0000000000000000        0x0 obj/gd32vf10x-gpio.o
  .data          0x0000000000000000        0x0 obj/gd32vf10x-gpio.o
  .bss           0x0000000000000000        0x0 obj/gd32vf10x-gpio.o
- .debug_line    0x0000000000000000        0x0 obj/gd32vf10x-gpio.o
- .debug_str     0x0000000000000000       0xd9 obj/gd32vf10x-gpio.o
- .comment       0x0000000000000000       0x34 obj/gd32vf10x-gpio.o
+ .text          0x0000000000000000        0x0 obj/gd32vf10x-irq.o
+ .data          0x0000000000000000        0x0 obj/gd32vf10x-irq.o
+ .bss           0x0000000000000000        0x0 obj/gd32vf10x-irq.o
+ .text.gd32vf10x_irq_request
+                0x0000000000000000        0x2 obj/gd32vf10x-irq.o
+ .text.gd32vf10x_irq_set_handler
+                0x0000000000000000        0x2 obj/gd32vf10x-irq.o
+ .text.gd32vf10x_irq_disable
+                0x0000000000000000        0x4 obj/gd32vf10x-irq.o
+ .text.gd32vf10x_irq_release
+                0x0000000000000000        0x4 obj/gd32vf10x-irq.o
+ .text.gd32vf10x_irq_enable
+                0x0000000000000000        0x4 obj/gd32vf10x-irq.o
+ .__irq_core_init
+                0x0000000000000000       0x18 obj/gd32vf10x-irq.o
+ .debug_info    0x0000000000000000      0x32a obj/gd32vf10x-irq.o
+ .debug_abbrev  0x0000000000000000      0x13c obj/gd32vf10x-irq.o
+ .debug_loc     0x0000000000000000       0x42 obj/gd32vf10x-irq.o
+ .debug_aranges
+                0x0000000000000000       0x28 obj/gd32vf10x-irq.o
+ .debug_ranges  0x0000000000000000       0x18 obj/gd32vf10x-irq.o
+ .debug_line    0x0000000000000000      0x11a obj/gd32vf10x-irq.o
+ .debug_str     0x0000000000000000      0x332 obj/gd32vf10x-irq.o
+ .comment       0x0000000000000000       0x34 obj/gd32vf10x-irq.o
+ .debug_frame   0x0000000000000000       0x60 obj/gd32vf10x-irq.o
+ .text          0x0000000000000000        0x0 obj/gd32vf10x-delay.o
+ .data          0x0000000000000000        0x0 obj/gd32vf10x-delay.o
+ .bss           0x0000000000000000        0x0 obj/gd32vf10x-delay.o
+ .text          0x0000000000000000        0x0 obj/gd32vf10x-pwm.o
+ .data          0x0000000000000000        0x0 obj/gd32vf10x-pwm.o
+ .bss           0x0000000000000000        0x0 obj/gd32vf10x-pwm.o
+ .debug_info    0x0000000000000000      0x108 obj/gd32vf10x-pwm.o
+ .debug_abbrev  0x0000000000000000       0x48 obj/gd32vf10x-pwm.o
+ .debug_aranges
+                0x0000000000000000       0x18 obj/gd32vf10x-pwm.o
+ .debug_line    0x0000000000000000       0xa9 obj/gd32vf10x-pwm.o
+ .debug_str     0x0000000000000000      0x216 obj/gd32vf10x-pwm.o
+ .comment       0x0000000000000000       0x34 obj/gd32vf10x-pwm.o
  .text          0x0000000000000000        0x0 obj/gd32vf10x-uart.o
  .data          0x0000000000000000        0x0 obj/gd32vf10x-uart.o
  .bss           0x0000000000000000        0x0 obj/gd32vf10x-uart.o
- .debug_line    0x0000000000000000        0x0 obj/gd32vf10x-uart.o
- .debug_str     0x0000000000000000       0xd9 obj/gd32vf10x-uart.o
- .comment       0x0000000000000000       0x34 obj/gd32vf10x-uart.o
+ .text.USART3_IRQHandler
+                0x0000000000000000        0x2 obj/gd32vf10x-uart.o
+ .text.USART4_IRQHandler
+                0x0000000000000000        0x2 obj/gd32vf10x-uart.o
  .text          0x0000000000000000        0x0 obj/gd32vf10x-i2c.o
  .data          0x0000000000000000        0x0 obj/gd32vf10x-i2c.o
  .bss           0x0000000000000000        0x0 obj/gd32vf10x-i2c.o
- .debug_line    0x0000000000000000        0x0 obj/gd32vf10x-i2c.o
- .debug_str     0x0000000000000000       0xd8 obj/gd32vf10x-i2c.o
- .comment       0x0000000000000000       0x34 obj/gd32vf10x-i2c.o
  .text          0x0000000000000000        0x0 obj/handler.o
  .data          0x0000000000000000        0x0 obj/handler.o
  .bss           0x0000000000000000        0x0 obj/handler.o
@@ -303,8 +333,6 @@ Discarded input sections
  .bss           0x0000000000000000        0x0 obj/gd32vf103_rcu.o
  .text.rcu_deinit
                 0x0000000000000000       0x68 obj/gd32vf103_rcu.o
- .text.rcu_periph_clock_enable
-                0x0000000000000000       0x18 obj/gd32vf103_rcu.o
  .text.rcu_periph_clock_disable
                 0x0000000000000000       0x1c obj/gd32vf103_rcu.o
  .text.rcu_periph_clock_sleep_enable
@@ -383,16 +411,6 @@ Discarded input sections
                 0x0000000000000000        0xa obj/gd32vf103_rcu.o
  .text.rcu_clock_freq_get
                 0x0000000000000000      0x13c obj/gd32vf103_rcu.o
- .debug_info    0x0000000000000000     0x10b6 obj/gd32vf103_rcu.o
- .debug_abbrev  0x0000000000000000      0x2cd obj/gd32vf103_rcu.o
- .debug_loc     0x0000000000000000      0xbe4 obj/gd32vf103_rcu.o
- .debug_aranges
-                0x0000000000000000      0x160 obj/gd32vf103_rcu.o
- .debug_ranges  0x0000000000000000      0x270 obj/gd32vf103_rcu.o
- .debug_line    0x0000000000000000     0x15df obj/gd32vf103_rcu.o
- .debug_str     0x0000000000000000      0xdca obj/gd32vf103_rcu.o
- .comment       0x0000000000000000       0x34 obj/gd32vf103_rcu.o
- .debug_frame   0x0000000000000000      0x2b4 obj/gd32vf103_rcu.o
  .text          0x0000000000000000        0x0 obj/gd32vf103_wwdgt.o
  .data          0x0000000000000000        0x0 obj/gd32vf103_wwdgt.o
  .bss           0x0000000000000000        0x0 obj/gd32vf103_wwdgt.o
@@ -1361,6 +1379,70 @@ Discarded input sections
  .debug_line    0x0000000000000000        0x0 obj/tmp112.o
  .debug_str     0x0000000000000000       0xb7 obj/tmp112.o
  .comment       0x0000000000000000       0x34 obj/tmp112.o
+ .text          0x0000000000000000        0x0 obj/spi-gpio-core.o
+ .data          0x0000000000000000        0x0 obj/spi-gpio-core.o
+ .bss           0x0000000000000000        0x0 obj/spi-gpio-core.o
+ .text.spi_gpio_probe
+                0x0000000000000000       0xd0 obj/spi-gpio-core.o
+ .text.spi_gpio_remove
+                0x0000000000000000        0x8 obj/spi-gpio-core.o
+ .text.spi_gpio_set_speed
+                0x0000000000000000        0x2 obj/spi-gpio-core.o
+ .text.spi_gpio_transfer
+                0x0000000000000000        0x2 obj/spi-gpio-core.o
+ .text.spi_gpio_write
+                0x0000000000000000        0x2 obj/spi-gpio-core.o
+ .text.spi_gpio_read
+                0x0000000000000000        0x4 obj/spi-gpio-core.o
+ .data.__spi_gpio_master
+                0x0000000000000000       0x1c obj/spi-gpio-core.o
+ .sbss.spi_clk  0x0000000000000000        0x8 obj/spi-gpio-core.o
+ .sbss.spi_cs   0x0000000000000000        0x8 obj/spi-gpio-core.o
+ .sbss.spi_miso
+                0x0000000000000000        0x8 obj/spi-gpio-core.o
+ .sbss.spi_mosi
+                0x0000000000000000        0x8 obj/spi-gpio-core.o
+ .debug_info    0x0000000000000000      0x8fa obj/spi-gpio-core.o
+ .debug_abbrev  0x0000000000000000      0x257 obj/spi-gpio-core.o
+ .debug_loc     0x0000000000000000      0x1ec obj/spi-gpio-core.o
+ .debug_aranges
+                0x0000000000000000       0x40 obj/spi-gpio-core.o
+ .debug_ranges  0x0000000000000000       0xa0 obj/spi-gpio-core.o
+ .debug_line    0x0000000000000000      0x364 obj/spi-gpio-core.o
+ .debug_str     0x0000000000000000      0x494 obj/spi-gpio-core.o
+ .comment       0x0000000000000000       0x34 obj/spi-gpio-core.o
+ .debug_frame   0x0000000000000000       0xb0 obj/spi-gpio-core.o
+ .text          0x0000000000000000        0x0 obj/i2c-gpio-core.o
+ .data          0x0000000000000000        0x0 obj/i2c-gpio-core.o
+ .bss           0x0000000000000000        0x0 obj/i2c-gpio-core.o
+ .text.i2c_gpio_probe
+                0x0000000000000000       0x54 obj/i2c-gpio-core.o
+ .text.i2c_gpio_remove
+                0x0000000000000000        0x2 obj/i2c-gpio-core.o
+ .text.i2c_gpio_set_speed
+                0x0000000000000000        0x2 obj/i2c-gpio-core.o
+ .text.i2c_gpio_write
+                0x0000000000000000        0x2 obj/i2c-gpio-core.o
+ .text.i2c_gpio_read
+                0x0000000000000000        0x4 obj/i2c-gpio-core.o
+ .text.i2c_gpio_cmd_write
+                0x0000000000000000        0x2 obj/i2c-gpio-core.o
+ .text.i2c_gpio_cmd_read
+                0x0000000000000000        0x4 obj/i2c-gpio-core.o
+ .sbss.__adaptor_sck
+                0x0000000000000000        0x8 obj/i2c-gpio-core.o
+ .sbss.__adaptor_sda
+                0x0000000000000000        0x8 obj/i2c-gpio-core.o
+ .debug_info    0x0000000000000000      0x76b obj/i2c-gpio-core.o
+ .debug_abbrev  0x0000000000000000      0x221 obj/i2c-gpio-core.o
+ .debug_loc     0x0000000000000000       0xe9 obj/i2c-gpio-core.o
+ .debug_aranges
+                0x0000000000000000       0x40 obj/i2c-gpio-core.o
+ .debug_ranges  0x0000000000000000       0x78 obj/i2c-gpio-core.o
+ .debug_line    0x0000000000000000      0x231 obj/i2c-gpio-core.o
+ .debug_str     0x0000000000000000      0x455 obj/i2c-gpio-core.o
+ .comment       0x0000000000000000       0x34 obj/i2c-gpio-core.o
+ .debug_frame   0x0000000000000000       0x9c obj/i2c-gpio-core.o
  .text          0x0000000000000000        0x0 obj/main.o
  .data          0x0000000000000000        0x0 obj/main.o
  .bss           0x0000000000000000        0x0 obj/main.o
@@ -1410,6 +1492,9 @@ Linker script and memory map
 
 LOAD obj/gd32vf10x-spi.o
 LOAD obj/gd32vf10x-gpio.o
+LOAD obj/gd32vf10x-irq.o
+LOAD obj/gd32vf10x-delay.o
+LOAD obj/gd32vf10x-pwm.o
 LOAD obj/gd32vf10x-uart.o
 LOAD obj/gd32vf10x-i2c.o
 LOAD obj/handler.o
@@ -1439,6 +1524,8 @@ LOAD obj/gd32vf103_dma.o
 LOAD obj/gd32vf103_eclic.o
 LOAD obj/at24c02.o
 LOAD obj/tmp112.o
+LOAD obj/spi-gpio-core.o
+LOAD obj/i2c-gpio-core.o
 LOAD obj/main.o
 LOAD obj/entry.o
 LOAD obj/startup.o
@@ -1471,110 +1558,180 @@ END GROUP
 .ialign         0x0000000008000254        0x0
                 [!provide]                        PROVIDE (_ilm = .)
 
-.text           0x0000000008000280      0x4f4
+.text           0x0000000008000280      0x834
  *(.rodata .rodata.*)
+ .rodata.nvic_addr
+                0x0000000008000280       0x10 obj/gd32vf10x-uart.o
  *(.text.unlikely .text.unlikely.*)
  *(.text.startup .text.startup.*)
  .text.startup.main
-                0x0000000008000280        0x4 obj/main.o
-                0x0000000008000280                main
+                0x0000000008000290       0x6a obj/main.o
+                0x0000000008000290                main
  .text.startup.register_fini
-                0x0000000008000284       0x1c d:/risc_v_gcc/bin/../lib/gcc/riscv-none-embed/8.3.0/../../../../riscv-none-embed/lib/rv32imac/ilp32\libc_nano.a(lib_a-__call_atexit.o)
+                0x00000000080002fa       0x1c d:/risc_v_gcc/bin/../lib/gcc/riscv-none-embed/8.3.0/../../../../riscv-none-embed/lib/rv32imac/ilp32\libc_nano.a(lib_a-__call_atexit.o)
  *(.text .text.*)
+ .text.gd32vf10x_spi_probe
+                0x0000000008000316        0x2 obj/gd32vf10x-spi.o
+ .text.gd32vf10x_spi_write
+                0x0000000008000318        0x2 obj/gd32vf10x-spi.o
+ .text.gd32vf10x_spi_transfer
+                0x000000000800031a        0x2 obj/gd32vf10x-spi.o
+ .text.gd32vf10x_spi_set_speed
+                0x000000000800031c        0x2 obj/gd32vf10x-spi.o
+ .text.gd32vf10x_spi_read
+                0x000000000800031e        0x4 obj/gd32vf10x-spi.o
+ .text.gd32vf10x_spi_remove
+                0x0000000008000322        0x4 obj/gd32vf10x-spi.o
+ .text.gd32vf_gpio_get
+                0x0000000008000326       0x7e obj/gd32vf10x-gpio.o
+ .text.gd32vf_gpio_set_direction
+                0x00000000080003a4       0x7e obj/gd32vf10x-gpio.o
+ .text.gd32vf_gpio_set_value
+                0x0000000008000422       0x2e obj/gd32vf10x-gpio.o
+ .text.gd32vf_gpio_get_value
+                0x0000000008000450       0x16 obj/gd32vf10x-gpio.o
+ .text.gd32vf_gpio_put
+                0x0000000008000466        0x2 obj/gd32vf10x-gpio.o
+ .text.gd32vf10x_udelay
+                0x0000000008000468       0x30 obj/gd32vf10x-delay.o
+ .text.gd32vf10x_mdelay
+                0x0000000008000498       0x44 obj/gd32vf10x-delay.o
+ .text.gd32vf10x_sdelay
+                0x00000000080004dc       0x2e obj/gd32vf10x-delay.o
+ .text.gd32vf10x_uart_remove
+                0x000000000800050a        0x2 obj/gd32vf10x-uart.o
+ .text.gd32vf10x_uart_set_baud_rate
+                0x000000000800050c        0x2 obj/gd32vf10x-uart.o
+ .text.gd32vf10x_uart_poll_read
+                0x000000000800050e        0x2 obj/gd32vf10x-uart.o
+ .text.gd32vf10x_uart_set_handler
+                0x0000000008000510        0x6 obj/gd32vf10x-uart.o
+ .text.gd32vf10x_uart_probe
+                0x0000000008000516       0x74 obj/gd32vf10x-uart.o
+ .text.gd32vf10x_uart_poll_write
+                0x000000000800058a        0x4 obj/gd32vf10x-uart.o
+ .text.USART0_IRQHandler
+                0x000000000800058e        0x2 obj/gd32vf10x-uart.o
+                0x000000000800058e                USART0_IRQHandler
+ .text.USART1_IRQHandler
+                0x0000000008000590        0x2 obj/gd32vf10x-uart.o
+                0x0000000008000590                USART1_IRQHandler
+ .text.USART2_IRQHandler
+                0x0000000008000592        0x2 obj/gd32vf10x-uart.o
+                0x0000000008000592                USART2_IRQHandler
+ .text.gd32vf10x_i2c_probe
+                0x0000000008000594        0x2 obj/gd32vf10x-i2c.o
+ .text.gd32vf10x_i2c_write
+                0x0000000008000596        0x2 obj/gd32vf10x-i2c.o
+ .text.gd32vf10x_i2c_cmd_write
+                0x0000000008000598        0x2 obj/gd32vf10x-i2c.o
+ .text.gd32vf10x_i2c_set_speed
+                0x000000000800059a        0x2 obj/gd32vf10x-i2c.o
+ .text.gd32vf10x_i2c_cmd_read
+                0x000000000800059c        0x4 obj/gd32vf10x-i2c.o
+ .text.gd32vf10x_i2c_read
+                0x00000000080005a0        0x4 obj/gd32vf10x-i2c.o
+ .text.gd32vf10x_i2c_remove
+                0x00000000080005a4        0x4 obj/gd32vf10x-i2c.o
  .text.handle_nmi
-                0x00000000080002a0        0x4 obj/handler.o
-                0x00000000080002a0                handle_nmi
+                0x00000000080005a8        0x4 obj/handler.o
+                0x00000000080005a8                handle_nmi
  .text.handle_trap
-                0x00000000080002a4       0x14 obj/handler.o
-                0x00000000080002a4                handle_trap
+                0x00000000080005ac       0x14 obj/handler.o
+                0x00000000080005ac                handle_trap
  .text.SystemInit
-                0x00000000080002b8      0x11e obj/system_gd32vf103.o
-                0x00000000080002b8                SystemInit
+                0x00000000080005c0      0x11e obj/system_gd32vf103.o
+                0x00000000080005c0                SystemInit
  .text.eclic_init
-                0x00000000080003d6       0x24 obj/n200_func.o
-                0x00000000080003d6                eclic_init
+                0x00000000080006de       0x24 obj/n200_func.o
+                0x00000000080006de                eclic_init
  .text.eclic_mode_enable
-                0x00000000080003fa       0x12 obj/n200_func.o
-                0x00000000080003fa                eclic_mode_enable
- .text._init    0x000000000800040c       0x2c obj/init.o
-                0x000000000800040c                _init
- .text._fini    0x0000000008000438        0x2 obj/init.o
-                0x0000000008000438                _fini
- *fill*         0x000000000800043a        0x6 
- .text.trap     0x0000000008000440       0x82 obj/entry.o
-                0x0000000008000440                trap_entry
- *fill*         0x00000000080004c2        0x2 
- .text.irq      0x00000000080004c4       0x72 obj/entry.o
-                0x00000000080004c4                irq_entry
- .text.atexit   0x0000000008000536       0x10 d:/risc_v_gcc/bin/../lib/gcc/riscv-none-embed/8.3.0/../../../../riscv-none-embed/lib/rv32imac/ilp32\libc_nano.a(lib_a-atexit.o)
-                0x0000000008000536                atexit
- .text.exit     0x0000000008000546       0x36 d:/risc_v_gcc/bin/../lib/gcc/riscv-none-embed/8.3.0/../../../../riscv-none-embed/lib/rv32imac/ilp32\libc_nano.a(lib_a-exit.o)
-                0x0000000008000546                exit
+                0x0000000008000702       0x12 obj/n200_func.o
+                0x0000000008000702                eclic_mode_enable
+ .text._init    0x0000000008000714       0x2c obj/init.o
+                0x0000000008000714                _init
+ .text._fini    0x0000000008000740        0x2 obj/init.o
+                0x0000000008000740                _fini
+ .text.rcu_periph_clock_enable
+                0x0000000008000742       0x18 obj/gd32vf103_rcu.o
+                0x0000000008000742                rcu_periph_clock_enable
+ *fill*         0x000000000800075a       0x26 
+ .text.trap     0x0000000008000780       0x82 obj/entry.o
+                0x0000000008000780                trap_entry
+ *fill*         0x0000000008000802        0x2 
+ .text.irq      0x0000000008000804       0x72 obj/entry.o
+                0x0000000008000804                irq_entry
+ .text.atexit   0x0000000008000876       0x10 d:/risc_v_gcc/bin/../lib/gcc/riscv-none-embed/8.3.0/../../../../riscv-none-embed/lib/rv32imac/ilp32\libc_nano.a(lib_a-atexit.o)
+                0x0000000008000876                atexit
+ .text.exit     0x0000000008000886       0x36 d:/risc_v_gcc/bin/../lib/gcc/riscv-none-embed/8.3.0/../../../../riscv-none-embed/lib/rv32imac/ilp32\libc_nano.a(lib_a-exit.o)
+                0x0000000008000886                exit
  .text.__libc_fini_array
-                0x000000000800057c       0x38 d:/risc_v_gcc/bin/../lib/gcc/riscv-none-embed/8.3.0/../../../../riscv-none-embed/lib/rv32imac/ilp32\libc_nano.a(lib_a-fini.o)
-                0x000000000800057c                __libc_fini_array
+                0x00000000080008bc       0x38 d:/risc_v_gcc/bin/../lib/gcc/riscv-none-embed/8.3.0/../../../../riscv-none-embed/lib/rv32imac/ilp32\libc_nano.a(lib_a-fini.o)
+                0x00000000080008bc                __libc_fini_array
  .text.__libc_init_array
-                0x00000000080005b4       0x6a d:/risc_v_gcc/bin/../lib/gcc/riscv-none-embed/8.3.0/../../../../riscv-none-embed/lib/rv32imac/ilp32\libc_nano.a(lib_a-init.o)
-                0x00000000080005b4                __libc_init_array
+                0x00000000080008f4       0x6a d:/risc_v_gcc/bin/../lib/gcc/riscv-none-embed/8.3.0/../../../../riscv-none-embed/lib/rv32imac/ilp32\libc_nano.a(lib_a-init.o)
+                0x00000000080008f4                __libc_init_array
  .text.__register_exitproc
-                0x000000000800061e       0x8c d:/risc_v_gcc/bin/../lib/gcc/riscv-none-embed/8.3.0/../../../../riscv-none-embed/lib/rv32imac/ilp32\libc_nano.a(lib_a-__atexit.o)
-                0x000000000800061e                __register_exitproc
+                0x000000000800095e       0x8c d:/risc_v_gcc/bin/../lib/gcc/riscv-none-embed/8.3.0/../../../../riscv-none-embed/lib/rv32imac/ilp32\libc_nano.a(lib_a-__atexit.o)
+                0x000000000800095e                __register_exitproc
  .text.__call_exitprocs
-                0x00000000080006aa       0xc8 d:/risc_v_gcc/bin/../lib/gcc/riscv-none-embed/8.3.0/../../../../riscv-none-embed/lib/rv32imac/ilp32\libc_nano.a(lib_a-__call_atexit.o)
-                0x00000000080006aa                __call_exitprocs
- .text._exit    0x0000000008000772        0x2 d:/risc_v_gcc/bin/../lib/gcc/riscv-none-embed/8.3.0/../../../../riscv-none-embed/lib/rv32imac/ilp32\libnosys.a(_exit.o)
-                0x0000000008000772                _exit
+                0x00000000080009ea       0xc8 d:/risc_v_gcc/bin/../lib/gcc/riscv-none-embed/8.3.0/../../../../riscv-none-embed/lib/rv32imac/ilp32\libc_nano.a(lib_a-__call_atexit.o)
+                0x00000000080009ea                __call_exitprocs
+ .text._exit    0x0000000008000ab2        0x2 d:/risc_v_gcc/bin/../lib/gcc/riscv-none-embed/8.3.0/../../../../riscv-none-embed/lib/rv32imac/ilp32\libnosys.a(_exit.o)
+                0x0000000008000ab2                _exit
  *(.gnu.linkonce.t.*)
 
 .sdata2._global_impure_ptr
-                0x0000000008000774        0x4
+                0x0000000008000ab4        0x4
  .sdata2._global_impure_ptr
-                0x0000000008000774        0x4 d:/risc_v_gcc/bin/../lib/gcc/riscv-none-embed/8.3.0/../../../../riscv-none-embed/lib/rv32imac/ilp32\libc_nano.a(lib_a-impure.o)
-                0x0000000008000774                _global_impure_ptr
+                0x0000000008000ab4        0x4 d:/risc_v_gcc/bin/../lib/gcc/riscv-none-embed/8.3.0/../../../../riscv-none-embed/lib/rv32imac/ilp32\libc_nano.a(lib_a-impure.o)
+                0x0000000008000ab4                _global_impure_ptr
 
-.rela.dyn       0x0000000008000778        0x0
+.rela.dyn       0x0000000008000ab8        0x0
  .rela.text.handle_trap
-                0x0000000008000778        0x0 obj/handler.o
+                0x0000000008000ab8        0x0 obj/gd32vf10x-spi.o
+ .rela.text.startup.main
+                0x0000000008000ab8        0x0 obj/gd32vf10x-spi.o
  .rela.text.trap
-                0x0000000008000778        0x0 obj/handler.o
- .rela.init     0x0000000008000778        0x0 obj/handler.o
+                0x0000000008000ab8        0x0 obj/gd32vf10x-spi.o
+ .rela.init     0x0000000008000ab8        0x0 obj/gd32vf10x-spi.o
  .rela.text.__libc_fini_array
-                0x0000000008000778        0x0 obj/handler.o
+                0x0000000008000ab8        0x0 obj/gd32vf10x-spi.o
  .rela.data.impure_data
-                0x0000000008000778        0x0 obj/handler.o
+                0x0000000008000ab8        0x0 obj/gd32vf10x-spi.o
  .rela.text.__libc_init_array
-                0x0000000008000778        0x0 obj/handler.o
+                0x0000000008000ab8        0x0 obj/gd32vf10x-spi.o
  .rela.text.__register_exitproc
-                0x0000000008000778        0x0 obj/handler.o
+                0x0000000008000ab8        0x0 obj/gd32vf10x-spi.o
  .rela.text.startup.register_fini
-                0x0000000008000778        0x0 obj/handler.o
+                0x0000000008000ab8        0x0 obj/gd32vf10x-spi.o
 
 .fini
  *(SORT_NONE(.fini))
-                0x0000000008000778                . = ALIGN (0x4)
+                0x0000000008000ab8                . = ALIGN (0x4)
                 [!provide]                        PROVIDE (__etext = .)
                 [!provide]                        PROVIDE (_etext = .)
                 [!provide]                        PROVIDE (etext = .)
                 [!provide]                        PROVIDE (_eilm = .)
 
-.preinit_array  0x0000000008000778        0x0
-                0x0000000008000778                PROVIDE (__preinit_array_start = .)
+.preinit_array  0x0000000008000ab8        0x0
+                0x0000000008000ab8                PROVIDE (__preinit_array_start = .)
  *(.preinit_array)
-                0x0000000008000778                PROVIDE (__preinit_array_end = .)
+                0x0000000008000ab8                PROVIDE (__preinit_array_end = .)
 
-.init_array     0x0000000008000778        0x4
-                0x0000000008000778                PROVIDE (__init_array_start = .)
+.init_array     0x0000000008000ab8        0x4
+                0x0000000008000ab8                PROVIDE (__init_array_start = .)
  *(SORT_BY_INIT_PRIORITY(.init_array.*) SORT_BY_INIT_PRIORITY(.ctors.*))
  .init_array.00000
-                0x0000000008000778        0x4 d:/risc_v_gcc/bin/../lib/gcc/riscv-none-embed/8.3.0/../../../../riscv-none-embed/lib/rv32imac/ilp32\libc_nano.a(lib_a-__call_atexit.o)
+                0x0000000008000ab8        0x4 d:/risc_v_gcc/bin/../lib/gcc/riscv-none-embed/8.3.0/../../../../riscv-none-embed/lib/rv32imac/ilp32\libc_nano.a(lib_a-__call_atexit.o)
  *(.init_array EXCLUDE_FILE(*crtend?.o *crtend.o *crtbegin?.o *crtbegin.o) .ctors)
-                0x000000000800077c                PROVIDE (__init_array_end = .)
+                0x0000000008000abc                PROVIDE (__init_array_end = .)
 
-.fini_array     0x000000000800077c        0x0
-                0x000000000800077c                PROVIDE (__fini_array_start = .)
+.fini_array     0x0000000008000abc        0x0
+                0x0000000008000abc                PROVIDE (__fini_array_start = .)
  *(SORT_BY_INIT_PRIORITY(.fini_array.*) SORT_BY_INIT_PRIORITY(.dtors.*))
  *(.fini_array EXCLUDE_FILE(*crtend?.o *crtend.o *crtbegin?.o *crtbegin.o) .dtors)
-                0x000000000800077c                PROVIDE (__fini_array_end = .)
+                0x0000000008000abc                PROVIDE (__fini_array_end = .)
 
 .ctors
  *crtbegin.o(.ctors)
@@ -1589,18 +1746,18 @@ END GROUP
  *(EXCLUDE_FILE(*crtend?.o *crtend.o) .dtors)
  *(SORT_BY_NAME(.dtors.*))
  *(.dtors)
-                0x000000000800077c                . = ALIGN (0x4)
+                0x0000000008000abc                . = ALIGN (0x4)
                 [!provide]                        PROVIDE (_eilm = .)
 
-.lalign         0x000000000800077c        0x0
-                0x000000000800077c                . = ALIGN (0x4)
-                0x000000000800077c                PROVIDE (_data_lma = .)
+.lalign         0x0000000008000abc        0x0
+                0x0000000008000abc                . = ALIGN (0x4)
+                0x0000000008000abc                PROVIDE (_data_lma = .)
 
-.dalign         0x0000000020000000        0x0 load address 0x000000000800077c
+.dalign         0x0000000020000000        0x0 load address 0x0000000008000abc
                 0x0000000020000000                . = ALIGN (0x4)
                 0x0000000020000000                PROVIDE (_data = .)
 
-.data           0x0000000020000000       0x60 load address 0x000000000800077c
+.data           0x0000000020000000       0xe4 load address 0x0000000008000abc
  *(.rdata)
  *(.gnu.linkonce.r.*)
  *(.data .data.*)
@@ -1610,136 +1767,233 @@ END GROUP
                 0x0000000020000060                . = ALIGN (0x8)
                 0x0000000020000860                PROVIDE (__global_pointer$ = (. + 0x800))
  *(.sdata .sdata.*)
+ .sdata.led     0x0000000020000060        0x8 obj/main.o
+                0x0000000020000060                led
  *(.gnu.linkonce.s.*)
-                0x0000000020000060                . = ALIGN (0x8)
+                0x0000000020000068                . = ALIGN (0x8)
  *(.srodata.cst16)
  *(.srodata.cst8)
  *(.srodata.cst4)
  *(.srodata.cst2)
  *(.srodata .srodata.*)
-                0x0000000020000060                . = ALIGN (0x4)
-                0x0000000020000060                PROVIDE (_edata = .)
+                0x0000000020000068                . = ALIGN (0x8)
+                0x0000000020000068                PROVIDE (__gpio_core_init = .)
+ *(.__gpio_core_init)
+ .__gpio_core_init
+                0x0000000020000068       0x18 obj/gd32vf10x-gpio.o
+                0x0000000020000068                gd32vf_gpio_ctrl
+                [!provide]                        PROVIDE (__spi_core_init = .)
+ *(.__spi_core_init)
+ .__spi_core_init
+                0x0000000020000080       0x1c obj/gd32vf10x-spi.o
+                0x0000000020000080                gd32vf10x_spi_master
+                [!provide]                        PROVIDE (__i2c_core_init = .)
+ *(.__i2c_core_init)
+ .__i2c_core_init
+                0x000000002000009c       0x20 obj/gd32vf10x-i2c.o
+                0x000000002000009c                gd32vf10x_i2c_adaptor
+                [!provide]                        PROVIDE (__uart_core_init = .)
+ *(.__uart_core_init)
+ .__uart_core_init
+                0x00000000200000bc       0x1c obj/gd32vf10x-uart.o
+                0x00000000200000bc                gd32vf10x_uart_controller
+                [!provide]                        PROVIDE (__timer_core_init = .)
+ *(.__timer_core_init)
+                0x00000000200000d8                PROVIDE (__delay_core_init = .)
+ *(.__delay_core_init)
+ .__delay_core_init
+                0x00000000200000d8        0xc obj/gd32vf10x-delay.o
+                0x00000000200000d8                gd32vf10x_delay
+                0x00000000200000e4                . = ALIGN (0x4)
+                0x00000000200000e4                PROVIDE (_edata = .)
                 [!provide]                        PROVIDE (edata = .)
                 [!provide]                        PROVIDE (_fbss = .)
-                0x0000000020000060                PROVIDE (__bss_start = .)
+                0x00000000200000e4                PROVIDE (__bss_start = .)
 
-.bss            0x0000000020000060       0x90
+.bss            0x00000000200000e4       0x90
  *(.sbss*)
  .sbss._global_atexit
-                0x0000000020000060        0x4 d:/risc_v_gcc/bin/../lib/gcc/riscv-none-embed/8.3.0/../../../../riscv-none-embed/lib/rv32imac/ilp32\libc_nano.a(lib_a-__call_atexit.o)
-                0x0000000020000060                _global_atexit
+                0x00000000200000e4        0x4 d:/risc_v_gcc/bin/../lib/gcc/riscv-none-embed/8.3.0/../../../../riscv-none-embed/lib/rv32imac/ilp32\libc_nano.a(lib_a-__call_atexit.o)
+                0x00000000200000e4                _global_atexit
  *(.gnu.linkonce.sb.*)
  *(.bss .bss.*)
  .bss._global_atexit0
-                0x0000000020000064       0x8c d:/risc_v_gcc/bin/../lib/gcc/riscv-none-embed/8.3.0/../../../../riscv-none-embed/lib/rv32imac/ilp32\libc_nano.a(lib_a-__atexit.o)
+                0x00000000200000e8       0x8c d:/risc_v_gcc/bin/../lib/gcc/riscv-none-embed/8.3.0/../../../../riscv-none-embed/lib/rv32imac/ilp32\libc_nano.a(lib_a-__atexit.o)
  *(.gnu.linkonce.b.*)
  *(COMMON)
-                0x00000000200000f0                . = ALIGN (0x4)
-                0x00000000200000f0                . = ALIGN (0x8)
-                0x00000000200000f0                PROVIDE (_end = .)
+                0x0000000020000174                . = ALIGN (0x4)
+                0x0000000020000178                . = ALIGN (0x8)
+                0x0000000020000178                PROVIDE (_end = .)
                 [!provide]                        PROVIDE (end = .)
 
-.stack          0x0000000020007800      0x800 load address 0x00000000200000f0
+.stack          0x0000000020007800      0x800 load address 0x0000000020000174
                 [!provide]                        PROVIDE (_heap_end = .)
                 0x0000000000000800                . = __stack_size
  *fill*         0x0000000020007800      0x800 
                 0x0000000020008000                PROVIDE (_sp = .)
 OUTPUT(obj/gd32vf10x.elf elf32-littleriscv)
 
-.debug_info     0x0000000000000000     0x1ee7
- .debug_info    0x0000000000000000       0x92 obj/handler.o
- .debug_info    0x0000000000000092      0x1f2 obj/system_gd32vf103.o
- .debug_info    0x0000000000000284      0xf3b obj/n200_func.o
- .debug_info    0x00000000000011bf      0x2cd obj/init.o
- .debug_info    0x000000000000148c      0xa13 obj/main.o
- .debug_info    0x0000000000001e9f       0x22 obj/entry.o
- .debug_info    0x0000000000001ec1       0x26 obj/startup.o
+.debug_info     0x0000000000000000     0x420c
+ .debug_info    0x0000000000000000      0x4b2 obj/gd32vf10x-spi.o
+ .debug_info    0x00000000000004b2      0x44f obj/gd32vf10x-gpio.o
+ .debug_info    0x0000000000000901      0x277 obj/gd32vf10x-delay.o
+ .debug_info    0x0000000000000b78      0x699 obj/gd32vf10x-uart.o
+ .debug_info    0x0000000000001211      0x4fe obj/gd32vf10x-i2c.o
+ .debug_info    0x000000000000170f       0x92 obj/handler.o
+ .debug_info    0x00000000000017a1      0x1f2 obj/system_gd32vf103.o
+ .debug_info    0x0000000000001993      0xf3b obj/n200_func.o
+ .debug_info    0x00000000000028ce      0x2cd obj/init.o
+ .debug_info    0x0000000000002b9b     0x10b6 obj/gd32vf103_rcu.o
+ .debug_info    0x0000000000003c51      0x573 obj/main.o
+ .debug_info    0x00000000000041c4       0x22 obj/entry.o
+ .debug_info    0x00000000000041e6       0x26 obj/startup.o
 
-.debug_abbrev   0x0000000000000000      0x816
- .debug_abbrev  0x0000000000000000       0x86 obj/handler.o
- .debug_abbrev  0x0000000000000086       0xef obj/system_gd32vf103.o
- .debug_abbrev  0x0000000000000175      0x3f9 obj/n200_func.o
- .debug_abbrev  0x000000000000056e       0xe4 obj/init.o
- .debug_abbrev  0x0000000000000652      0x19e obj/main.o
- .debug_abbrev  0x00000000000007f0       0x12 obj/entry.o
- .debug_abbrev  0x0000000000000802       0x14 obj/startup.o
+.debug_abbrev   0x0000000000000000     0x1308
+ .debug_abbrev  0x0000000000000000      0x167 obj/gd32vf10x-spi.o
+ .debug_abbrev  0x0000000000000167      0x170 obj/gd32vf10x-gpio.o
+ .debug_abbrev  0x00000000000002d7      0x168 obj/gd32vf10x-delay.o
+ .debug_abbrev  0x000000000000043f      0x24f obj/gd32vf10x-uart.o
+ .debug_abbrev  0x000000000000068e      0x167 obj/gd32vf10x-i2c.o
+ .debug_abbrev  0x00000000000007f5       0x86 obj/handler.o
+ .debug_abbrev  0x000000000000087b       0xef obj/system_gd32vf103.o
+ .debug_abbrev  0x000000000000096a      0x3f9 obj/n200_func.o
+ .debug_abbrev  0x0000000000000d63       0xe4 obj/init.o
+ .debug_abbrev  0x0000000000000e47      0x2cd obj/gd32vf103_rcu.o
+ .debug_abbrev  0x0000000000001114      0x1ce obj/main.o
+ .debug_abbrev  0x00000000000012e2       0x12 obj/entry.o
+ .debug_abbrev  0x00000000000012f4       0x14 obj/startup.o
 
-.debug_loc      0x0000000000000000      0xb5a
- .debug_loc     0x0000000000000000       0x6e obj/handler.o
- .debug_loc     0x000000000000006e      0x1ac obj/system_gd32vf103.o
- .debug_loc     0x000000000000021a      0x914 obj/n200_func.o
- .debug_loc     0x0000000000000b2e       0x2c obj/init.o
+.debug_loc      0x0000000000000000     0x1b84
+ .debug_loc     0x0000000000000000       0x84 obj/gd32vf10x-spi.o
+ .debug_loc     0x0000000000000084       0x63 obj/gd32vf10x-gpio.o
+ .debug_loc     0x00000000000000e7      0x115 obj/gd32vf10x-delay.o
+ .debug_loc     0x00000000000001fc      0x120 obj/gd32vf10x-uart.o
+ .debug_loc     0x000000000000031c       0x84 obj/gd32vf10x-i2c.o
+ .debug_loc     0x00000000000003a0       0x6e obj/handler.o
+ .debug_loc     0x000000000000040e      0x1ac obj/system_gd32vf103.o
+ .debug_loc     0x00000000000005ba      0x914 obj/n200_func.o
+ .debug_loc     0x0000000000000ece       0x2c obj/init.o
+ .debug_loc     0x0000000000000efa      0xbe4 obj/gd32vf103_rcu.o
+ .debug_loc     0x0000000000001ade       0xa6 obj/main.o
 
-.debug_aranges  0x0000000000000000      0x220
+.debug_aranges  0x0000000000000000      0x4a8
  .debug_aranges
-                0x0000000000000000       0x28 obj/handler.o
+                0x0000000000000000       0x38 obj/gd32vf10x-spi.o
  .debug_aranges
-                0x0000000000000028       0x28 obj/system_gd32vf103.o
+                0x0000000000000038       0x40 obj/gd32vf10x-gpio.o
  .debug_aranges
-                0x0000000000000050      0x140 obj/n200_func.o
+                0x0000000000000078       0x30 obj/gd32vf10x-delay.o
  .debug_aranges
-                0x0000000000000190       0x28 obj/init.o
+                0x00000000000000a8       0x48 obj/gd32vf10x-uart.o
  .debug_aranges
-                0x00000000000001b8       0x20 obj/main.o
+                0x00000000000000f0       0x38 obj/gd32vf10x-i2c.o
  .debug_aranges
-                0x00000000000001d8       0x28 obj/entry.o
+                0x0000000000000128       0x28 obj/handler.o
  .debug_aranges
-                0x0000000000000200       0x20 obj/startup.o
+                0x0000000000000150       0x28 obj/system_gd32vf103.o
+ .debug_aranges
+                0x0000000000000178      0x140 obj/n200_func.o
+ .debug_aranges
+                0x00000000000002b8       0x28 obj/init.o
+ .debug_aranges
+                0x00000000000002e0      0x160 obj/gd32vf103_rcu.o
+ .debug_aranges
+                0x0000000000000440       0x20 obj/main.o
+ .debug_aranges
+                0x0000000000000460       0x28 obj/entry.o
+ .debug_aranges
+                0x0000000000000488       0x20 obj/startup.o
 
-.debug_ranges   0x0000000000000000      0x3c0
- .debug_ranges  0x0000000000000000       0x18 obj/handler.o
- .debug_ranges  0x0000000000000018       0x38 obj/system_gd32vf103.o
- .debug_ranges  0x0000000000000050      0x328 obj/n200_func.o
- .debug_ranges  0x0000000000000378       0x18 obj/init.o
- .debug_ranges  0x0000000000000390       0x10 obj/main.o
- .debug_ranges  0x00000000000003a0       0x20 obj/entry.o
+.debug_ranges   0x0000000000000000      0x768
+ .debug_ranges  0x0000000000000000       0x28 obj/gd32vf10x-spi.o
+ .debug_ranges  0x0000000000000028       0x30 obj/gd32vf10x-gpio.o
+ .debug_ranges  0x0000000000000058       0x38 obj/gd32vf10x-delay.o
+ .debug_ranges  0x0000000000000090       0x50 obj/gd32vf10x-uart.o
+ .debug_ranges  0x00000000000000e0       0x28 obj/gd32vf10x-i2c.o
+ .debug_ranges  0x0000000000000108       0x18 obj/handler.o
+ .debug_ranges  0x0000000000000120       0x38 obj/system_gd32vf103.o
+ .debug_ranges  0x0000000000000158      0x328 obj/n200_func.o
+ .debug_ranges  0x0000000000000480       0x18 obj/init.o
+ .debug_ranges  0x0000000000000498      0x270 obj/gd32vf103_rcu.o
+ .debug_ranges  0x0000000000000708       0x40 obj/main.o
+ .debug_ranges  0x0000000000000748       0x20 obj/entry.o
 
-.debug_line     0x0000000000000000     0x1dcc
- .debug_line    0x0000000000000000       0xa9 obj/handler.o
- .debug_line    0x00000000000000a9      0x68b obj/system_gd32vf103.o
- .debug_line    0x0000000000000734     0x11ed obj/n200_func.o
- .debug_line    0x0000000000001921      0x15c obj/init.o
- .debug_line    0x0000000000001a7d       0xe1 obj/main.o
- .debug_line    0x0000000000001b5e       0xe4 obj/entry.o
- .debug_line    0x0000000000001c42      0x18a obj/startup.o
+.debug_line     0x0000000000000000     0x41e2
+ .debug_line    0x0000000000000000      0x14a obj/gd32vf10x-spi.o
+ .debug_line    0x000000000000014a      0x42d obj/gd32vf10x-gpio.o
+ .debug_line    0x0000000000000577      0x2f5 obj/gd32vf10x-delay.o
+ .debug_line    0x000000000000086c      0x2e5 obj/gd32vf10x-uart.o
+ .debug_line    0x0000000000000b51      0x14a obj/gd32vf10x-i2c.o
+ .debug_line    0x0000000000000c9b       0xa9 obj/handler.o
+ .debug_line    0x0000000000000d44      0x68b obj/system_gd32vf103.o
+ .debug_line    0x00000000000013cf     0x11ed obj/n200_func.o
+ .debug_line    0x00000000000025bc      0x15c obj/init.o
+ .debug_line    0x0000000000002718     0x15df obj/gd32vf103_rcu.o
+ .debug_line    0x0000000000003cf7      0x27d obj/main.o
+ .debug_line    0x0000000000003f74       0xe4 obj/entry.o
+ .debug_line    0x0000000000004058      0x18a obj/startup.o
 
-.debug_str      0x0000000000000000      0xdf2
- .debug_str     0x0000000000000000       0xef obj/handler.o
+.debug_str      0x0000000000000000     0x1c6f
+ .debug_str     0x0000000000000000      0x2d5 obj/gd32vf10x-spi.o
+                                        0x37b (size before relaxing)
+ .debug_str     0x00000000000002d5      0x187 obj/gd32vf10x-gpio.o
+                                        0x3eb (size before relaxing)
+ .debug_str     0x000000000000045c       0x84 obj/gd32vf10x-delay.o
+                                        0x288 (size before relaxing)
+ .debug_str     0x00000000000004e0      0x303 obj/gd32vf10x-uart.o
+                                        0x58b (size before relaxing)
+ .debug_str     0x00000000000007e3       0xfb obj/gd32vf10x-i2c.o
+                                        0x380 (size before relaxing)
+ .debug_str     0x00000000000008de       0x49 obj/handler.o
                                          0xfc (size before relaxing)
- .debug_str     0x00000000000000ef      0x14b obj/system_gd32vf103.o
+ .debug_str     0x0000000000000927       0xcb obj/system_gd32vf103.o
                                         0x23f (size before relaxing)
- .debug_str     0x000000000000023a      0x37e obj/n200_func.o
+ .debug_str     0x00000000000009f2      0x37c obj/n200_func.o
                                         0x50a (size before relaxing)
- .debug_str     0x00000000000005b8      0x3e5 obj/init.o
+ .debug_str     0x0000000000000d6e      0x3e5 obj/init.o
                                         0x566 (size before relaxing)
- .debug_str     0x000000000000099d      0x3f3 obj/main.o
-                                        0x53b (size before relaxing)
- .debug_str     0x0000000000000d90       0x36 obj/entry.o
+ .debug_str     0x0000000000001153      0xaa2 obj/gd32vf103_rcu.o
+                                        0xdca (size before relaxing)
+ .debug_str     0x0000000000001bf5       0x18 obj/main.o
+                                        0x39d (size before relaxing)
+ .debug_str     0x0000000000001c0d       0x36 obj/entry.o
                                          0x62 (size before relaxing)
- .debug_str     0x0000000000000dc6       0x2c obj/startup.o
+ .debug_str     0x0000000000001c43       0x2c obj/startup.o
                                          0x64 (size before relaxing)
 
 .comment        0x0000000000000000       0x33
- .comment       0x0000000000000000       0x33 obj/handler.o
+ .comment       0x0000000000000000       0x33 obj/gd32vf10x-spi.o
                                          0x34 (size before relaxing)
+ .comment       0x0000000000000033       0x34 obj/gd32vf10x-gpio.o
+ .comment       0x0000000000000033       0x34 obj/gd32vf10x-delay.o
+ .comment       0x0000000000000033       0x34 obj/gd32vf10x-uart.o
+ .comment       0x0000000000000033       0x34 obj/gd32vf10x-i2c.o
+ .comment       0x0000000000000033       0x34 obj/handler.o
  .comment       0x0000000000000033       0x34 obj/system_gd32vf103.o
  .comment       0x0000000000000033       0x34 obj/n200_func.o
  .comment       0x0000000000000033       0x34 obj/init.o
+ .comment       0x0000000000000033       0x34 obj/gd32vf103_rcu.o
  .comment       0x0000000000000033       0x34 obj/main.o
 
-.debug_frame    0x0000000000000000      0x494
- .debug_frame   0x0000000000000000       0x3c obj/handler.o
- .debug_frame   0x000000000000003c       0x30 obj/system_gd32vf103.o
- .debug_frame   0x000000000000006c      0x26c obj/n200_func.o
- .debug_frame   0x00000000000002d8       0x3c obj/init.o
- .debug_frame   0x0000000000000314       0x20 obj/main.o
- .debug_frame   0x0000000000000334       0x20 d:/risc_v_gcc/bin/../lib/gcc/riscv-none-embed/8.3.0/../../../../riscv-none-embed/lib/rv32imac/ilp32\libc_nano.a(lib_a-atexit.o)
- .debug_frame   0x0000000000000354       0x28 d:/risc_v_gcc/bin/../lib/gcc/riscv-none-embed/8.3.0/../../../../riscv-none-embed/lib/rv32imac/ilp32\libc_nano.a(lib_a-exit.o)
- .debug_frame   0x000000000000037c       0x38 d:/risc_v_gcc/bin/../lib/gcc/riscv-none-embed/8.3.0/../../../../riscv-none-embed/lib/rv32imac/ilp32\libc_nano.a(lib_a-fini.o)
- .debug_frame   0x00000000000003b4       0x3c d:/risc_v_gcc/bin/../lib/gcc/riscv-none-embed/8.3.0/../../../../riscv-none-embed/lib/rv32imac/ilp32\libc_nano.a(lib_a-init.o)
- .debug_frame   0x00000000000003f0       0x20 d:/risc_v_gcc/bin/../lib/gcc/riscv-none-embed/8.3.0/../../../../riscv-none-embed/lib/rv32imac/ilp32\libc_nano.a(lib_a-__atexit.o)
- .debug_frame   0x0000000000000410       0x64 d:/risc_v_gcc/bin/../lib/gcc/riscv-none-embed/8.3.0/../../../../riscv-none-embed/lib/rv32imac/ilp32\libc_nano.a(lib_a-__call_atexit.o)
- .debug_frame   0x0000000000000474       0x20 d:/risc_v_gcc/bin/../lib/gcc/riscv-none-embed/8.3.0/../../../../riscv-none-embed/lib/rv32imac/ilp32\libnosys.a(_exit.o)
+.debug_frame    0x0000000000000000      0x9ec
+ .debug_frame   0x0000000000000000       0x70 obj/gd32vf10x-spi.o
+ .debug_frame   0x0000000000000070       0x60 obj/gd32vf10x-gpio.o
+ .debug_frame   0x00000000000000d0       0x68 obj/gd32vf10x-delay.o
+ .debug_frame   0x0000000000000138       0xdc obj/gd32vf10x-uart.o
+ .debug_frame   0x0000000000000214       0x80 obj/gd32vf10x-i2c.o
+ .debug_frame   0x0000000000000294       0x3c obj/handler.o
+ .debug_frame   0x00000000000002d0       0x30 obj/system_gd32vf103.o
+ .debug_frame   0x0000000000000300      0x26c obj/n200_func.o
+ .debug_frame   0x000000000000056c       0x3c obj/init.o
+ .debug_frame   0x00000000000005a8      0x2b4 obj/gd32vf103_rcu.o
+ .debug_frame   0x000000000000085c       0x30 obj/main.o
+ .debug_frame   0x000000000000088c       0x20 d:/risc_v_gcc/bin/../lib/gcc/riscv-none-embed/8.3.0/../../../../riscv-none-embed/lib/rv32imac/ilp32\libc_nano.a(lib_a-atexit.o)
+ .debug_frame   0x00000000000008ac       0x28 d:/risc_v_gcc/bin/../lib/gcc/riscv-none-embed/8.3.0/../../../../riscv-none-embed/lib/rv32imac/ilp32\libc_nano.a(lib_a-exit.o)
+ .debug_frame   0x00000000000008d4       0x38 d:/risc_v_gcc/bin/../lib/gcc/riscv-none-embed/8.3.0/../../../../riscv-none-embed/lib/rv32imac/ilp32\libc_nano.a(lib_a-fini.o)
+ .debug_frame   0x000000000000090c       0x3c d:/risc_v_gcc/bin/../lib/gcc/riscv-none-embed/8.3.0/../../../../riscv-none-embed/lib/rv32imac/ilp32\libc_nano.a(lib_a-init.o)
+ .debug_frame   0x0000000000000948       0x20 d:/risc_v_gcc/bin/../lib/gcc/riscv-none-embed/8.3.0/../../../../riscv-none-embed/lib/rv32imac/ilp32\libc_nano.a(lib_a-__atexit.o)
+ .debug_frame   0x0000000000000968       0x64 d:/risc_v_gcc/bin/../lib/gcc/riscv-none-embed/8.3.0/../../../../riscv-none-embed/lib/rv32imac/ilp32\libc_nano.a(lib_a-__call_atexit.o)
+ .debug_frame   0x00000000000009cc       0x20 d:/risc_v_gcc/bin/../lib/gcc/riscv-none-embed/8.3.0/../../../../riscv-none-embed/lib/rv32imac/ilp32\libnosys.a(_exit.o)
 
 Cross Reference Table
 
@@ -1803,9 +2057,14 @@ TIMER5_IRQHandler                                 obj/startup.o
 TIMER6_IRQHandler                                 obj/startup.o
 UART3_IRQHandler                                  obj/startup.o
 UART4_IRQHandler                                  obj/startup.o
-USART0_IRQHandler                                 obj/startup.o
-USART1_IRQHandler                                 obj/startup.o
-USART2_IRQHandler                                 obj/startup.o
+USART0_IRQHandler                                 obj/gd32vf10x-uart.o
+                                                  obj/startup.o
+USART1_IRQHandler                                 obj/gd32vf10x-uart.o
+                                                  obj/startup.o
+USART2_IRQHandler                                 obj/gd32vf10x-uart.o
+                                                  obj/startup.o
+USART3_IRQHandler                                 obj/gd32vf10x-uart.o
+USART4_IRQHandler                                 obj/gd32vf10x-uart.o
 USBFS_IRQHandler                                  obj/startup.o
 USBFS_WKUP_IRQHandler                             obj/startup.o
 WWDGT_IRQHandler                                  obj/startup.o
@@ -1814,9 +2073,13 @@ __bss_start                                       obj/startup.o
 __call_exitprocs                                  d:/risc_v_gcc/bin/../lib/gcc/riscv-none-embed/8.3.0/../../../../riscv-none-embed/lib/rv32imac/ilp32\libc_nano.a(lib_a-__call_atexit.o)
                                                   d:/risc_v_gcc/bin/../lib/gcc/riscv-none-embed/8.3.0/../../../../riscv-none-embed/lib/rv32imac/ilp32\libc_nano.a(lib_a-__atexit.o)
                                                   d:/risc_v_gcc/bin/../lib/gcc/riscv-none-embed/8.3.0/../../../../riscv-none-embed/lib/rv32imac/ilp32\libc_nano.a(lib_a-exit.o)
+__delay_core_init                                 obj/main.o
 __fini_array_end                                  d:/risc_v_gcc/bin/../lib/gcc/riscv-none-embed/8.3.0/../../../../riscv-none-embed/lib/rv32imac/ilp32\libc_nano.a(lib_a-fini.o)
 __fini_array_start                                d:/risc_v_gcc/bin/../lib/gcc/riscv-none-embed/8.3.0/../../../../riscv-none-embed/lib/rv32imac/ilp32\libc_nano.a(lib_a-fini.o)
 __global_pointer$                                 obj/startup.o
+__gpio_core_init                                  obj/main.o
+                                                  obj/i2c-gpio-core.o
+                                                  obj/spi-gpio-core.o
 __init_array_end                                  d:/risc_v_gcc/bin/../lib/gcc/riscv-none-embed/8.3.0/../../../../riscv-none-embed/lib/rv32imac/ilp32\libc_nano.a(lib_a-init.o)
 __init_array_start                                d:/risc_v_gcc/bin/../lib/gcc/riscv-none-embed/8.3.0/../../../../riscv-none-embed/lib/rv32imac/ilp32\libc_nano.a(lib_a-init.o)
 __libc_fini                                       d:/risc_v_gcc/bin/../lib/gcc/riscv-none-embed/8.3.0/../../../../riscv-none-embed/lib/rv32imac/ilp32\libc_nano.a(lib_a-__call_atexit.o)
@@ -2088,6 +2351,12 @@ fwdgt_enable                                      obj/gd32vf103_fwdgt.o
 fwdgt_flag_get                                    obj/gd32vf103_fwdgt.o
 fwdgt_write_disable                               obj/gd32vf103_fwdgt.o
 fwdgt_write_enable                                obj/gd32vf103_fwdgt.o
+gd32vf10x_delay                                   obj/gd32vf10x-delay.o
+gd32vf10x_i2c_adaptor                             obj/gd32vf10x-i2c.o
+gd32vf10x_irq_controller                          obj/gd32vf10x-irq.o
+gd32vf10x_spi_master                              obj/gd32vf10x-spi.o
+gd32vf10x_uart_controller                         obj/gd32vf10x-uart.o
+gd32vf_gpio_ctrl                                  obj/gd32vf10x-gpio.o
 get_cpu_freq                                      obj/n200_func.o
 get_cycle_value                                   obj/n200_func.o
 get_instret_value                                 obj/n200_func.o
@@ -2127,6 +2396,13 @@ i2c_dualaddr_enable                               obj/gd32vf103_i2c.o
 i2c_enable                                        obj/gd32vf103_i2c.o
 i2c_flag_clear                                    obj/gd32vf103_i2c.o
 i2c_flag_get                                      obj/gd32vf103_i2c.o
+i2c_gpio_cmd_read                                 obj/i2c-gpio-core.o
+i2c_gpio_cmd_write                                obj/i2c-gpio-core.o
+i2c_gpio_probe                                    obj/i2c-gpio-core.o
+i2c_gpio_read                                     obj/i2c-gpio-core.o
+i2c_gpio_remove                                   obj/i2c-gpio-core.o
+i2c_gpio_set_speed                                obj/i2c-gpio-core.o
+i2c_gpio_write                                    obj/i2c-gpio-core.o
 i2c_interrupt_disable                             obj/gd32vf103_i2c.o
 i2c_interrupt_enable                              obj/gd32vf103_i2c.o
 i2c_interrupt_flag_clear                          obj/gd32vf103_i2c.o
@@ -2151,6 +2427,7 @@ i2s_init                                          obj/gd32vf103_spi.o
 i2s_psc_config                                    obj/gd32vf103_spi.o
 irq_entry                                         obj/entry.o
                                                   obj/startup.o
+led                                               obj/main.o
 main                                              obj/main.o
                                                   obj/startup.o
 measure_cpu_freq                                  obj/n200_func.o
@@ -2213,6 +2490,7 @@ rcu_osci_on                                       obj/gd32vf103_rcu.o
 rcu_osci_stab_wait                                obj/gd32vf103_rcu.o
 rcu_periph_clock_disable                          obj/gd32vf103_rcu.o
 rcu_periph_clock_enable                           obj/gd32vf103_rcu.o
+                                                  obj/gd32vf10x-uart.o
 rcu_periph_clock_sleep_disable                    obj/gd32vf103_rcu.o
 rcu_periph_clock_sleep_enable                     obj/gd32vf103_rcu.o
 rcu_periph_reset_disable                          obj/gd32vf103_rcu.o
@@ -2273,6 +2551,12 @@ spi_disable                                       obj/gd32vf103_spi.o
 spi_dma_disable                                   obj/gd32vf103_spi.o
 spi_dma_enable                                    obj/gd32vf103_spi.o
 spi_enable                                        obj/gd32vf103_spi.o
+spi_gpio_probe                                    obj/spi-gpio-core.o
+spi_gpio_read                                     obj/spi-gpio-core.o
+spi_gpio_remove                                   obj/spi-gpio-core.o
+spi_gpio_set_speed                                obj/spi-gpio-core.o
+spi_gpio_transfer                                 obj/spi-gpio-core.o
+spi_gpio_write                                    obj/spi-gpio-core.o
 spi_i2s_data_frame_format_config                  obj/gd32vf103_spi.o
 spi_i2s_data_receive                              obj/gd32vf103_spi.o
 spi_i2s_data_transmit                             obj/gd32vf103_spi.o

@@ -9,22 +9,21 @@ MEMORY
 	ram   (wxa!ri) : ORIGIN = 0x20000000, LENGTH = 32K 
 
 	/* Run in RAM */ 
-/*	flash (rxai!w) : ORIGIN = 0x20000000, LENGTH = 24k
+  /*	flash (rxai!w) : ORIGIN = 0x20000000, LENGTH = 24k
 	ram   (wxa!ri) : ORIGIN = 0x20006000, LENGTH = 8K
-*/	
+  */	
 }
 
 SECTIONS
 {
   __stack_size = DEFINED(__stack_size) ? __stack_size : 2K;
 
-
   .init           :
   {
     KEEP (*(SORT_NONE(.init)))
   } >flash AT>flash 
 
-  .ilalign         :
+  .ilalign        :
   {
     . = ALIGN(4);
     PROVIDE( _ilm_lma = . );
@@ -50,6 +49,8 @@ SECTIONS
   } >flash AT>flash 
 
   . = ALIGN(4);
+
+
 
   PROVIDE (__etext = .);
   PROVIDE (_etext = .);/*0x80022c8*/
@@ -110,8 +111,9 @@ SECTIONS
     KEEP (*(.dtors))
   } >flash AT>flash 
 
-    . = ALIGN(4);
-    PROVIDE( _eilm = . );
+  
+  . = ALIGN(4);
+  PROVIDE( _eilm = . );
 
   .lalign         :
   {
@@ -129,7 +131,7 @@ SECTIONS
   .data          :
   {
     *(.rdata) 
-   
+
     *(.gnu.linkonce.r.*)
     *(.data .data.*)
     *(.gnu.linkonce.d.*)
@@ -143,6 +145,21 @@ SECTIONS
     *(.srodata.cst4)
     *(.srodata.cst2)
     *(.srodata .srodata.*)
+
+    . = ALIGN(8);
+    PROVIDE( __gpio_core_init = .);
+    KEEP (*(.__gpio_core_init))
+    PROVIDE( __spi_core_init = .);
+    KEEP (*(.__spi_core_init))
+    PROVIDE( __i2c_core_init = .);
+    KEEP (*(.__i2c_core_init))
+    PROVIDE( __uart_core_init = .);
+    KEEP (*(.__uart_core_init))
+    PROVIDE( __timer_core_init = .);
+    KEEP (*(.__timer_core_init))
+    PROVIDE( __delay_core_init = .);
+    KEEP (*(.__delay_core_init))    
+    
   } >ram AT>flash 
 
   . = ALIGN(4);

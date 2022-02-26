@@ -23,7 +23,6 @@ typedef struct uart_ops
 
 }uart_ops_t;
 
-
 typedef struct uart_controller
 {
     uint32_t    baud_rate;

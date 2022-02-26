@@ -9,6 +9,7 @@
         "spi-gpio-core.h": "c",
         "delay-core.h": "c",
         "irq-core.h": "c",
-        "i2c-gpio-core.h": "c"
+        "i2c-gpio-core.h": "c",
+        "i2c-core.h": "c"
     }
 }

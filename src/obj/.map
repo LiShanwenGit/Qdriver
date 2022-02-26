@@ -1376,8 +1376,13 @@ Discarded input sections
  .text          0x0000000000000000        0x0 obj/tmp112.o
  .data          0x0000000000000000        0x0 obj/tmp112.o
  .bss           0x0000000000000000        0x0 obj/tmp112.o
- .debug_line    0x0000000000000000        0x0 obj/tmp112.o
- .debug_str     0x0000000000000000       0xb7 obj/tmp112.o
+ .data.tmp1122  0x0000000000000000        0xc obj/tmp112.o
+ .debug_info    0x0000000000000000      0x2ec obj/tmp112.o
+ .debug_abbrev  0x0000000000000000       0xa9 obj/tmp112.o
+ .debug_aranges
+                0x0000000000000000       0x18 obj/tmp112.o
+ .debug_line    0x0000000000000000       0xcb obj/tmp112.o
+ .debug_str     0x0000000000000000      0x2a3 obj/tmp112.o
  .comment       0x0000000000000000       0x34 obj/tmp112.o
  .text          0x0000000000000000        0x0 obj/spi-gpio-core.o
  .data          0x0000000000000000        0x0 obj/spi-gpio-core.o
@@ -2645,6 +2650,7 @@ timer_struct_para_init                            obj/gd32vf103_timer.o
 timer_update_event_disable                        obj/gd32vf103_timer.o
 timer_update_event_enable                         obj/gd32vf103_timer.o
 timer_update_source_config                        obj/gd32vf103_timer.o
+tmp1122                                           obj/tmp112.o
 trap_entry                                        obj/entry.o
                                                   obj/startup.o
 usart_address_config                              obj/gd32vf103_usart.o

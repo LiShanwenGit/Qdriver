@@ -48,12 +48,10 @@ static inline uint32_t i2c_cmd_write(struct i2c_client *client, uint8_t *cmd, ui
     return client->adaptor->ops.cmd_write(client,cmd,buffer,cmd_size,len);
 }
 
-
 static inline uint32_t i2c_cmd_read(struct i2c_client *client, uint8_t *cmd, uint8_t *buffer,uint32_t cmd_size,uint32_t len)
 {
     return client->adaptor->ops.cmd_read(client,cmd,buffer,cmd_size,len);
 }
-
 
 static inline int8_t i2c_set_speed(struct i2c_client *client, uint32_t speed_hz)
 {

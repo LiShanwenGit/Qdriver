@@ -6,11 +6,10 @@
 
 struct gpio_desp led =
 {
-    .pin_num = 2,
-    .mode = 0,
+    .pin_num = 2, //GPIOA2
+    .mode = GPIO_PP_OUTPUT,
     .flag = 1,
 };
-
 
 int main(void)
 {

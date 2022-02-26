@@ -13,7 +13,7 @@ static int8_t gd32vf10x_irq_set_handler(struct irq_desp *desp, void (*handler)(v
 
 static int8_t gd32vf10x_irq_enable(struct irq_desp *desp)
 {
-
+    
 }
 
 static int8_t gd32vf10x_irq_disable(struct irq_desp *desp)

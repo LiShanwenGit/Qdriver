@@ -73,7 +73,7 @@ static void  gd32vf_gpio_put(gpio_desp_t *gpio_desp)
     
 }
 
-gpio_controller_t   gd32vf_gpio_ctrl = 
+gpio_controller_t  gd32vf_gpio_ctrl = 
 {
     .ops = {
         .get = gd32vf_gpio_get,

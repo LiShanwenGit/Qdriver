@@ -384,9 +384,9 @@ static inline int8_t gpio_get(gpio_desp_t *gpio_desp)
 {
     gpio_desp->ctl = (gpio_controller_t*)&__gpio_core_init;
  8000290:	200007b7          	lui	a5,0x20000
+    .mode = GPIO_PP_OUTPUT,
     .flag = 1,
 };
-
 
 int main(void)
 {
@@ -2100,9 +2100,9 @@ static inline int8_t gpio_get(gpio_desp_t *gpio_desp)
 {
     gpio_desp->ctl = (gpio_controller_t*)&__gpio_core_init;
  8000290:	200007b7          	lui	a5,0x20000
+    .mode = GPIO_PP_OUTPUT,
     .flag = 1,
 };
-
 
 int main(void)
 {

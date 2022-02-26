@@ -5,4 +5,3 @@
 
 
 #endif // !__DMA_CORE_H_
-

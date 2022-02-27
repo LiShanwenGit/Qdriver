@@ -1,0 +1,657 @@
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccArdGl2.s 			page 1
+
+
+   1              		.file	"gd32vf10x-uart.c"
+   2              		.option nopic
+   3              		.text
+   4              	.Ltext0:
+   5              		.cfi_sections	.debug_frame
+   6              		.section	.text.gd32vf10x_uart_remove,"ax",@progbits
+   7              		.align	1
+   9              	gd32vf10x_uart_remove:
+  10              	.LFB14:
+  11              		.file 1 "arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-uart.c"
+   1:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-uart.c **** #include "uart-core.h"
+   2:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-uart.c **** #include "gd32vf103.h"
+   3:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-uart.c **** 
+   4:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-uart.c **** #define  UART_ALL_NUM    4
+   5:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-uart.c **** 
+   6:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-uart.c **** #define  UART0_NVIC      0x000000E0
+   7:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-uart.c **** #define  UART1_NVIC      0x000000E4
+   8:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-uart.c **** #define  UART2_NVIC      0x000000E8
+   9:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-uart.c **** #define  UART3_NVIC      0x0000011C
+  10:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-uart.c **** #define  UART4_NVIC      0x00000120
+  11:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-uart.c **** 
+  12:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-uart.c **** //[TX][RX]
+  13:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-uart.c **** static const char uart_pin[UART_ALL_NUM][2] = {{9,10},{} };
+  14:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-uart.c **** 
+  15:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-uart.c **** static const uint32_t nvic_addr[UART_ALL_NUM] = {0x000000E0,0x000000E4,0x000000E8,0x0000011C,0x0000
+  16:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-uart.c **** 
+  17:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-uart.c **** 
+  18:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-uart.c **** void USART0_IRQHandler(void)
+  19:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-uart.c **** {
+  20:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-uart.c **** 
+  21:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-uart.c **** }
+  22:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-uart.c **** 
+  23:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-uart.c **** void USART1_IRQHandler(void)
+  24:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-uart.c **** {
+  25:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-uart.c ****     
+  26:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-uart.c **** }
+  27:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-uart.c **** 
+  28:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-uart.c **** void USART2_IRQHandler(void)
+  29:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-uart.c **** {
+  30:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-uart.c ****     
+  31:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-uart.c **** }
+  32:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-uart.c **** 
+  33:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-uart.c **** void USART3_IRQHandler(void)
+  34:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-uart.c **** {
+  35:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-uart.c ****     
+  36:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-uart.c **** }
+  37:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-uart.c **** 
+  38:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-uart.c **** void USART4_IRQHandler(void)
+  39:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-uart.c **** {
+  40:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-uart.c ****     
+  41:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-uart.c **** }
+  42:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-uart.c **** 
+  43:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-uart.c **** 
+  44:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-uart.c **** static int8_t gd32vf10x_uart_probe(struct uart_device *dev)
+  45:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-uart.c **** {
+  46:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-uart.c ****     
+  47:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-uart.c ****     rcu_periph_clock_enable(RCU_USART0);  //打开USART0时钟
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccArdGl2.s 			page 2
+
+
+  48:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-uart.c ****     rcu_periph_clock_enable(RCU_GPIOA);   //打开GPIOA时钟
+  49:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-uart.c ****     switch(dev->uart)
+  50:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-uart.c ****     {
+  51:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-uart.c ****         case 0:
+  52:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-uart.c ****             RCU_APB2EN |= (1<<14); //enable uart0 clock
+  53:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-uart.c ****             break;
+  54:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-uart.c ****         case 1 ... 4:
+  55:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-uart.c ****             RCU_APB1EN |= (1<<(16+dev->uart)); //enable uart1/2/3/4 clock
+  56:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-uart.c ****         default:
+  57:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-uart.c ****             return -1;
+  58:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-uart.c ****     }
+  59:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-uart.c ****     dev->nvic_addr = nvic_addr[dev->uart]; //set nvic addr
+  60:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-uart.c ****     return 0;
+  61:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-uart.c **** }
+  62:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-uart.c **** 
+  63:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-uart.c **** static int8_t gd32vf10x_uart_remove(struct uart_device *dev)
+  64:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-uart.c **** {
+  12              		.loc 1 64 1
+  13              		.cfi_startproc
+  14              	.LVL0:
+  65:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-uart.c **** 
+  66:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-uart.c **** }
+  15              		.loc 1 66 1
+  16              	.LVL1:
+  17 0000 8280     		ret
+  18              		.cfi_endproc
+  19              	.LFE14:
+  21              		.section	.text.gd32vf10x_uart_set_baud_rate,"ax",@progbits
+  22              		.align	1
+  24              	gd32vf10x_uart_set_baud_rate:
+  25              	.LFB15:
+  67:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-uart.c **** 
+  68:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-uart.c **** static int8_t gd32vf10x_uart_set_baud_rate(struct uart_device *dev, uint32_t baud_rate)
+  69:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-uart.c **** {
+  26              		.loc 1 69 1
+  27              		.cfi_startproc
+  28              	.LVL2:
+  70:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-uart.c **** 
+  71:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-uart.c **** }
+  29              		.loc 1 71 1
+  30              	.LVL3:
+  31 0000 8280     		ret
+  32              		.cfi_endproc
+  33              	.LFE15:
+  35              		.section	.text.gd32vf10x_uart_poll_read,"ax",@progbits
+  36              		.align	1
+  38              	gd32vf10x_uart_poll_read:
+  39              	.LFB16:
+  72:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-uart.c **** 
+  73:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-uart.c **** static int32_t gd32vf10x_uart_poll_read(struct uart_device *dev, uint8_t *buffer, uint32_t len)
+  74:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-uart.c **** {
+  40              		.loc 1 74 1
+  41              		.cfi_startproc
+  42              	.LVL4:
+  75:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-uart.c **** 
+  76:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-uart.c **** }
+  43              		.loc 1 76 1
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccArdGl2.s 			page 3
+
+
+  44              	.LVL5:
+  45 0000 8280     		ret
+  46              		.cfi_endproc
+  47              	.LFE16:
+  49              		.section	.text.gd32vf10x_uart_set_handler,"ax",@progbits
+  50              		.align	1
+  52              	gd32vf10x_uart_set_handler:
+  53              	.LFB18:
+  77:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-uart.c **** 
+  78:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-uart.c **** static int32_t gd32vf10x_uart_poll_write(struct uart_device *dev, uint8_t *buffer, uint32_t len)
+  79:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-uart.c **** {
+  80:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-uart.c ****     
+  81:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-uart.c **** }
+  82:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-uart.c **** 
+  83:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-uart.c **** static int8_t gd32vf10x_uart_set_handler(struct uart_device *dev, void (*handler)(void *data))
+  84:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-uart.c **** {
+  54              		.loc 1 84 1
+  55              		.cfi_startproc
+  56              	.LVL6:
+  85:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-uart.c ****     dev->handler = handler;
+  57              		.loc 1 85 5
+  58              		.loc 1 85 18 is_stmt 0
+  59 0000 4CC5     		sw	a1,12(a0)
+  86:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-uart.c **** }
+  60              		.loc 1 86 1
+  61 0002 3E85     		mv	a0,a5
+  62              	.LVL7:
+  63 0004 8280     		ret
+  64              		.cfi_endproc
+  65              	.LFE18:
+  67              		.section	.text.gd32vf10x_uart_probe,"ax",@progbits
+  68              		.align	1
+  70              	gd32vf10x_uart_probe:
+  71              	.LFB13:
+  45:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-uart.c ****     
+  72              		.loc 1 45 1 is_stmt 1
+  73              		.cfi_startproc
+  74              	.LVL8:
+  47:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-uart.c ****     rcu_periph_clock_enable(RCU_GPIOA);   //打开GPIOA时钟
+  75              		.loc 1 47 5
+  45:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-uart.c ****     
+  76              		.loc 1 45 1 is_stmt 0
+  77 0000 4111     		addi	sp,sp,-16
+  78              	.LCFI0:
+  79              		.cfi_def_cfa_offset 16
+  80 0002 22C4     		sw	s0,8(sp)
+  81              		.cfi_offset 8, -8
+  82 0004 2A84     		mv	s0,a0
+  47:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-uart.c ****     rcu_periph_clock_enable(RCU_GPIOA);   //打开GPIOA时钟
+  83              		.loc 1 47 5
+  84 0006 1305E060 		li	a0,1550
+  85              	.LVL9:
+  45:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-uart.c ****     
+  86              		.loc 1 45 1
+  87 000a 06C6     		sw	ra,12(sp)
+  88              		.cfi_offset 1, -4
+  47:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-uart.c ****     rcu_periph_clock_enable(RCU_GPIOA);   //打开GPIOA时钟
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccArdGl2.s 			page 4
+
+
+  89              		.loc 1 47 5
+  90 000c 97000000 		call	rcu_periph_clock_enable
+  90      E7800000 
+  91              	.LVL10:
+  48:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-uart.c ****     switch(dev->uart)
+  92              		.loc 1 48 5 is_stmt 1
+  93 0014 13052060 		li	a0,1538
+  94 0018 97000000 		call	rcu_periph_clock_enable
+  94      E7800000 
+  95              	.LVL11:
+  49:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-uart.c ****     {
+  96              		.loc 1 49 5
+  49:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-uart.c ****     {
+  97              		.loc 1 49 15 is_stmt 0
+  98 0020 83470400 		lbu	a5,0(s0)
+  49:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-uart.c ****     {
+  99              		.loc 1 49 5
+ 100 0024 95C3     		beq	a5,zero,.L7
+ 101 0026 1147     		li	a4,4
+  57:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-uart.c ****     }
+ 102              		.loc 1 57 20
+ 103 0028 7D55     		li	a0,-1
+  49:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-uart.c ****     {
+ 104              		.loc 1 49 5
+ 105 002a 636BF700 		bgtu	a5,a4,.L8
+  55:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-uart.c ****         default:
+ 106              		.loc 1 55 13 is_stmt 1
+  55:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-uart.c ****         default:
+ 107              		.loc 1 55 24 is_stmt 0
+ 108 002e B7160240 		li	a3,1073876992
+ 109 0032 D04E     		lw	a2,28(a3)
+  55:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-uart.c ****         default:
+ 110              		.loc 1 55 34
+ 111 0034 C107     		addi	a5,a5,16
+  55:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-uart.c ****         default:
+ 112              		.loc 1 55 29
+ 113 0036 0547     		li	a4,1
+ 114 0038 B317F700 		sll	a5,a4,a5
+  55:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-uart.c ****         default:
+ 115              		.loc 1 55 24
+ 116 003c D18F     		or	a5,a5,a2
+ 117 003e DCCE     		sw	a5,28(a3)
+ 118              	.L8:
+  61:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-uart.c **** 
+ 119              		.loc 1 61 1
+ 120 0040 B240     		lw	ra,12(sp)
+ 121              		.cfi_remember_state
+ 122              		.cfi_restore 1
+ 123 0042 2244     		lw	s0,8(sp)
+ 124              		.cfi_restore 8
+ 125              	.LVL12:
+ 126 0044 4101     		addi	sp,sp,16
+ 127              	.LCFI1:
+ 128              		.cfi_def_cfa_offset 0
+ 129 0046 8280     		jr	ra
+ 130              	.LVL13:
+ 131              	.L7:
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccArdGl2.s 			page 5
+
+
+ 132              	.LCFI2:
+ 133              		.cfi_restore_state
+ 134              	.LBB4:
+ 135              	.LBB5:
+  52:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-uart.c ****             break;
+ 136              		.loc 1 52 13 is_stmt 1
+  52:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-uart.c ****             break;
+ 137              		.loc 1 52 24 is_stmt 0
+ 138 0048 37170240 		li	a4,1073876992
+ 139 004c 1C4F     		lw	a5,24(a4)
+ 140 004e 9166     		li	a3,16384
+ 141              	.LBE5:
+ 142              	.LBE4:
+  61:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-uart.c **** 
+ 143              		.loc 1 61 1
+ 144 0050 B240     		lw	ra,12(sp)
+ 145              		.cfi_restore 1
+ 146              	.LBB7:
+ 147              	.LBB6:
+  52:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-uart.c ****             break;
+ 148              		.loc 1 52 24
+ 149 0052 D58F     		or	a5,a5,a3
+ 150 0054 1CCF     		sw	a5,24(a4)
+  53:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-uart.c ****         case 1 ... 4:
+ 151              		.loc 1 53 13 is_stmt 1
+  59:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-uart.c ****     return 0;
+ 152              		.loc 1 59 5
+  59:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-uart.c ****     return 0;
+ 153              		.loc 1 59 35 is_stmt 0
+ 154 0056 83470400 		lbu	a5,0(s0)
+  59:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-uart.c ****     return 0;
+ 155              		.loc 1 59 20
+ 156 005a 0145     		li	a0,0
+  59:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-uart.c ****     return 0;
+ 157              		.loc 1 59 31
+ 158 005c 13972700 		slli	a4,a5,2
+ 159 0060 B7070000 		lui	a5,%hi(.LANCHOR0)
+ 160 0064 93870700 		addi	a5,a5,%lo(.LANCHOR0)
+ 161 0068 BA97     		add	a5,a5,a4
+  59:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-uart.c ****     return 0;
+ 162              		.loc 1 59 20
+ 163 006a 9C43     		lw	a5,0(a5)
+ 164 006c 1CC8     		sw	a5,16(s0)
+  60:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-uart.c **** }
+ 165              		.loc 1 60 5 is_stmt 1
+ 166              	.LVL14:
+ 167              	.LBE6:
+ 168              	.LBE7:
+  61:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-uart.c **** 
+ 169              		.loc 1 61 1 is_stmt 0
+ 170 006e 2244     		lw	s0,8(sp)
+ 171              		.cfi_restore 8
+ 172              	.LVL15:
+ 173 0070 4101     		addi	sp,sp,16
+ 174              	.LCFI3:
+ 175              		.cfi_def_cfa_offset 0
+ 176 0072 8280     		jr	ra
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccArdGl2.s 			page 6
+
+
+ 177              		.cfi_endproc
+ 178              	.LFE13:
+ 180              		.section	.text.gd32vf10x_uart_poll_write,"ax",@progbits
+ 181              		.align	1
+ 183              	gd32vf10x_uart_poll_write:
+ 184              	.LFB29:
+ 185              		.cfi_startproc
+ 186 0000 0145     		li	a0,0
+ 187 0002 8280     		ret
+ 188              		.cfi_endproc
+ 189              	.LFE29:
+ 191              		.section	.text.USART0_IRQHandler,"ax",@progbits
+ 192              		.align	1
+ 193              		.globl	USART0_IRQHandler
+ 195              	USART0_IRQHandler:
+ 196              	.LFB8:
+  19:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-uart.c **** 
+ 197              		.loc 1 19 1 is_stmt 1
+ 198              		.cfi_startproc
+  21:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-uart.c **** 
+ 199              		.loc 1 21 1
+ 200 0000 8280     		ret
+ 201              		.cfi_endproc
+ 202              	.LFE8:
+ 204              		.section	.text.USART1_IRQHandler,"ax",@progbits
+ 205              		.align	1
+ 206              		.globl	USART1_IRQHandler
+ 208              	USART1_IRQHandler:
+ 209              	.LFB21:
+ 210              		.cfi_startproc
+ 211 0000 8280     		ret
+ 212              		.cfi_endproc
+ 213              	.LFE21:
+ 215              		.section	.text.USART2_IRQHandler,"ax",@progbits
+ 216              		.align	1
+ 217              		.globl	USART2_IRQHandler
+ 219              	USART2_IRQHandler:
+ 220              	.LFB23:
+ 221              		.cfi_startproc
+ 222 0000 8280     		ret
+ 223              		.cfi_endproc
+ 224              	.LFE23:
+ 226              		.section	.text.USART3_IRQHandler,"ax",@progbits
+ 227              		.align	1
+ 228              		.globl	USART3_IRQHandler
+ 230              	USART3_IRQHandler:
+ 231              	.LFB25:
+ 232              		.cfi_startproc
+ 233 0000 8280     		ret
+ 234              		.cfi_endproc
+ 235              	.LFE25:
+ 237              		.section	.text.USART4_IRQHandler,"ax",@progbits
+ 238              		.align	1
+ 239              		.globl	USART4_IRQHandler
+ 241              	USART4_IRQHandler:
+ 242              	.LFB27:
+ 243              		.cfi_startproc
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccArdGl2.s 			page 7
+
+
+ 244 0000 8280     		ret
+ 245              		.cfi_endproc
+ 246              	.LFE27:
+ 248              		.globl	gd32vf10x_uart_controller
+ 249              		.section	.__uart_core_init,"aw"
+ 250              		.align	2
+ 253              	gd32vf10x_uart_controller:
+ 254 0000 00000000 		.zero	4
+ 255 0004 00000000 		.word	gd32vf10x_uart_probe
+ 256 0008 00000000 		.word	gd32vf10x_uart_remove
+ 257 000c 00000000 		.word	gd32vf10x_uart_set_baud_rate
+ 258 0010 00000000 		.word	gd32vf10x_uart_poll_read
+ 259 0014 00000000 		.word	gd32vf10x_uart_poll_write
+ 260 0018 00000000 		.word	gd32vf10x_uart_set_handler
+ 261              		.section	.rodata.nvic_addr,"a"
+ 262              		.align	2
+ 263              		.set	.LANCHOR0,. + 0
+ 266              	nvic_addr:
+ 267 0000 E0000000 		.word	224
+ 268 0004 E4000000 		.word	228
+ 269 0008 E8000000 		.word	232
+ 270 000c 1C010000 		.word	284
+ 271              		.text
+ 272              	.Letext0:
+ 273              		.file 2 "d:\\risc_v_gcc\\riscv-none-embed\\include\\machine\\_default_types.h"
+ 274              		.file 3 "d:\\risc_v_gcc\\riscv-none-embed\\include\\sys\\_stdint.h"
+ 275              		.file 4 "core/module.h"
+ 276              		.file 5 "core/uart-core.h"
+ 277              		.file 6 "arch/riscv/mach-gd32vf10x/system/system_gd32vf103.h"
+ 278              		.file 7 "arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rcu.h"
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccArdGl2.s 			page 8
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 gd32vf10x-uart.c
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:9      .text.gd32vf10x_uart_remove:0000000000000000 gd32vf10x_uart_remove
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:13     .text.gd32vf10x_uart_remove:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:15     .text.gd32vf10x_uart_remove:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:17     .text.gd32vf10x_uart_remove:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:18     .text.gd32vf10x_uart_remove:0000000000000002 .L0 
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:24     .text.gd32vf10x_uart_set_baud_rate:0000000000000000 gd32vf10x_uart_set_baud_rate
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:27     .text.gd32vf10x_uart_set_baud_rate:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:29     .text.gd32vf10x_uart_set_baud_rate:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:31     .text.gd32vf10x_uart_set_baud_rate:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:32     .text.gd32vf10x_uart_set_baud_rate:0000000000000002 .L0 
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:38     .text.gd32vf10x_uart_poll_read:0000000000000000 gd32vf10x_uart_poll_read
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:41     .text.gd32vf10x_uart_poll_read:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:43     .text.gd32vf10x_uart_poll_read:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:45     .text.gd32vf10x_uart_poll_read:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:46     .text.gd32vf10x_uart_poll_read:0000000000000002 .L0 
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:52     .text.gd32vf10x_uart_set_handler:0000000000000000 gd32vf10x_uart_set_handler
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:55     .text.gd32vf10x_uart_set_handler:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:57     .text.gd32vf10x_uart_set_handler:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:58     .text.gd32vf10x_uart_set_handler:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:59     .text.gd32vf10x_uart_set_handler:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:61     .text.gd32vf10x_uart_set_handler:0000000000000002 .L0 
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:64     .text.gd32vf10x_uart_set_handler:0000000000000006 .L0 
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:70     .text.gd32vf10x_uart_probe:0000000000000000 gd32vf10x_uart_probe
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:73     .text.gd32vf10x_uart_probe:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:75     .text.gd32vf10x_uart_probe:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:76     .text.gd32vf10x_uart_probe:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:77     .text.gd32vf10x_uart_probe:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:79     .text.gd32vf10x_uart_probe:0000000000000002 .L0 
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:81     .text.gd32vf10x_uart_probe:0000000000000004 .L0 
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:84     .text.gd32vf10x_uart_probe:0000000000000006 .L0 
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:87     .text.gd32vf10x_uart_probe:000000000000000a .L0 
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:88     .text.gd32vf10x_uart_probe:000000000000000c .L0 
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:90     .text.gd32vf10x_uart_probe:000000000000000c .L0 
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:93     .text.gd32vf10x_uart_probe:0000000000000014 .L0 
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:97     .text.gd32vf10x_uart_probe:0000000000000020 .L0 
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:98     .text.gd32vf10x_uart_probe:0000000000000020 .L0 
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:100    .text.gd32vf10x_uart_probe:0000000000000024 .L0 
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:103    .text.gd32vf10x_uart_probe:0000000000000028 .L0 
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:105    .text.gd32vf10x_uart_probe:000000000000002a .L0 
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:107    .text.gd32vf10x_uart_probe:000000000000002e .L0 
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:108    .text.gd32vf10x_uart_probe:000000000000002e .L0 
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:111    .text.gd32vf10x_uart_probe:0000000000000034 .L0 
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:113    .text.gd32vf10x_uart_probe:0000000000000036 .L0 
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:116    .text.gd32vf10x_uart_probe:000000000000003c .L0 
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:120    .text.gd32vf10x_uart_probe:0000000000000040 .L0 
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:121    .text.gd32vf10x_uart_probe:0000000000000042 .L0 
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:122    .text.gd32vf10x_uart_probe:0000000000000042 .L0 
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:124    .text.gd32vf10x_uart_probe:0000000000000044 .L0 
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:128    .text.gd32vf10x_uart_probe:0000000000000046 .L0 
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:133    .text.gd32vf10x_uart_probe:0000000000000048 .L0 
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:137    .text.gd32vf10x_uart_probe:0000000000000048 .L0 
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:138    .text.gd32vf10x_uart_probe:0000000000000048 .L0 
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:144    .text.gd32vf10x_uart_probe:0000000000000050 .L0 
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:145    .text.gd32vf10x_uart_probe:0000000000000052 .L0 
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:149    .text.gd32vf10x_uart_probe:0000000000000052 .L0 
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccArdGl2.s 			page 9
+
+
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:152    .text.gd32vf10x_uart_probe:0000000000000056 .L0 
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:153    .text.gd32vf10x_uart_probe:0000000000000056 .L0 
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:154    .text.gd32vf10x_uart_probe:0000000000000056 .L0 
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:156    .text.gd32vf10x_uart_probe:000000000000005a .L0 
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:158    .text.gd32vf10x_uart_probe:000000000000005c .L0 
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:163    .text.gd32vf10x_uart_probe:000000000000006a .L0 
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:169    .text.gd32vf10x_uart_probe:000000000000006e .L0 
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:170    .text.gd32vf10x_uart_probe:000000000000006e .L0 
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:171    .text.gd32vf10x_uart_probe:0000000000000070 .L0 
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:175    .text.gd32vf10x_uart_probe:0000000000000072 .L0 
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:177    .text.gd32vf10x_uart_probe:0000000000000074 .L0 
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:183    .text.gd32vf10x_uart_poll_write:0000000000000000 gd32vf10x_uart_poll_write
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:185    .text.gd32vf10x_uart_poll_write:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:188    .text.gd32vf10x_uart_poll_write:0000000000000004 .L0 
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:195    .text.USART0_IRQHandler:0000000000000000 USART0_IRQHandler
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:198    .text.USART0_IRQHandler:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:199    .text.USART0_IRQHandler:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:200    .text.USART0_IRQHandler:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:201    .text.USART0_IRQHandler:0000000000000002 .L0 
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:208    .text.USART1_IRQHandler:0000000000000000 USART1_IRQHandler
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:210    .text.USART1_IRQHandler:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:212    .text.USART1_IRQHandler:0000000000000002 .L0 
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:219    .text.USART2_IRQHandler:0000000000000000 USART2_IRQHandler
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:221    .text.USART2_IRQHandler:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:223    .text.USART2_IRQHandler:0000000000000002 .L0 
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:230    .text.USART3_IRQHandler:0000000000000000 USART3_IRQHandler
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:232    .text.USART3_IRQHandler:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:234    .text.USART3_IRQHandler:0000000000000002 .L0 
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:241    .text.USART4_IRQHandler:0000000000000000 USART4_IRQHandler
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:243    .text.USART4_IRQHandler:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:245    .text.USART4_IRQHandler:0000000000000002 .L0 
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:253    .__uart_core_init:0000000000000000 gd32vf10x_uart_controller
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:263    .rodata.nvic_addr:0000000000000000 .LANCHOR0
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:266    .rodata.nvic_addr:0000000000000000 nvic_addr
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:21     .text.gd32vf10x_uart_remove:0000000000000002 .L0 
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:35     .text.gd32vf10x_uart_set_baud_rate:0000000000000002 .L0 
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:49     .text.gd32vf10x_uart_poll_read:0000000000000002 .L0 
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:67     .text.gd32vf10x_uart_set_handler:0000000000000006 .L0 
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:180    .text.gd32vf10x_uart_probe:0000000000000074 .L0 
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:204    .text.USART0_IRQHandler:0000000000000002 .L0 
+                     .debug_frame:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:131    .text.gd32vf10x_uart_probe:0000000000000048 .L7
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:118    .text.gd32vf10x_uart_probe:0000000000000040 .L8
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:1140   .debug_abbrev:0000000000000000 .Ldebug_abbrev0
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:1987   .debug_str:000000000000025a .LASF93
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:2009   .debug_str:0000000000000347 .LASF94
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:2065   .debug_str:00000000000004bb .LASF95
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:1865   .debug_ranges:0000000000000000 .Ldebug_ranges0
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:1887   .debug_line:0000000000000000 .Ldebug_line0
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:2011   .debug_str:000000000000037a .LASF0
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:1981   .debug_str:000000000000022f .LASF2
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:1993   .debug_str:00000000000002ea .LASF1
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:1969   .debug_str:00000000000001c8 .LASF3
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:1919   .debug_str:00000000000000a6 .LASF4
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:2007   .debug_str:0000000000000334 .LASF5
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:2053   .debug_str:000000000000047c .LASF6
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:1937   .debug_str:0000000000000106 .LASF7
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccArdGl2.s 			page 10
+
+
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:2047   .debug_str:0000000000000453 .LASF8
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:1995   .debug_str:00000000000002f4 .LASF9
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:1907   .debug_str:000000000000005d .LASF10
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:1985   .debug_str:0000000000000243 .LASF11
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:1991   .debug_str:00000000000002dd .LASF12
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:1893   .debug_str:0000000000000019 .LASF13
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:1923   .debug_str:00000000000000c0 .LASF14
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:1983   .debug_str:000000000000023b .LASF15
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:1989   .debug_str:00000000000002d4 .LASF16
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:2075   .debug_str:000000000000052d .LASF17
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:1935   .debug_str:00000000000000f6 .LASF18
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:2021   .debug_str:00000000000003ac .LASF19
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:2035   .debug_str:0000000000000401 .LASF20
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:2079   .debug_str:0000000000000547 .LASF21
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:2085   .debug_str:0000000000000579 .LASF22
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:1963   .debug_str:0000000000000195 .LASF23
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:2067   .debug_str:00000000000004e7 .LASF24
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:1945   .debug_str:000000000000012f .LASF25
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:2071   .debug_str:0000000000000509 .LASF26
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:2049   .debug_str:000000000000045e .LASF32
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:1911   .debug_str:0000000000000088 .LASF27
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:1925   .debug_str:00000000000000c8 .LASF28
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:1931   .debug_str:00000000000000e4 .LASF29
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:1917   .debug_str:000000000000009e .LASF30
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:1965   .debug_str:00000000000001a5 .LASF31
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:1921   .debug_str:00000000000000b0 .LASF33
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:1915   .debug_str:0000000000000095 .LASF34
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:1997   .debug_str:0000000000000306 .LASF35
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:2041   .debug_str:0000000000000424 .LASF36
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:1939   .debug_str:000000000000010f .LASF37
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:2003   .debug_str:0000000000000322 .LASF38
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:2039   .debug_str:0000000000000419 .LASF39
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:2001   .debug_str:0000000000000316 .LASF40
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:1905   .debug_str:0000000000000052 .LASF41
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:1891   .debug_str:0000000000000009 .LASF42
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:2027   .debug_str:00000000000003e0 .LASF43
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:2029   .debug_str:00000000000003e9 .LASF44
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:2081   .debug_str:0000000000000557 .LASF45
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:2077   .debug_str:000000000000053e .LASF46
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:2061   .debug_str:00000000000004a7 .LASF47
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:1951   .debug_str:0000000000000155 .LASF48
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:1953   .debug_str:0000000000000160 .LASF49
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:1955   .debug_str:000000000000016b .LASF50
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:1947   .debug_str:000000000000013f .LASF51
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:1959   .debug_str:000000000000017f .LASF52
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:1961   .debug_str:000000000000018a .LASF53
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:1933   .debug_str:00000000000000ec .LASF54
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:1941   .debug_str:000000000000011d .LASF55
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:1943   .debug_str:0000000000000126 .LASF56
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:2057   .debug_str:0000000000000491 .LASF57
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:2059   .debug_str:000000000000049c .LASF58
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:1999   .debug_str:000000000000030c .LASF59
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:2063   .debug_str:00000000000004b1 .LASF60
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:2017   .debug_str:000000000000039a .LASF61
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:2019   .debug_str:00000000000003a3 .LASF62
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:1927   .debug_str:00000000000000d2 .LASF63
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:1929   .debug_str:00000000000000db .LASF64
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccArdGl2.s 			page 11
+
+
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:1979   .debug_str:0000000000000226 .LASF65
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:2005   .debug_str:000000000000032c .LASF66
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:2031   .debug_str:00000000000003f2 .LASF67
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:1913   .debug_str:000000000000008d .LASF68
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:2037   .debug_str:0000000000000412 .LASF69
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:1895   .debug_str:0000000000000020 .LASF70
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:1897   .debug_str:000000000000002a .LASF71
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:1899   .debug_str:0000000000000034 .LASF72
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:1901   .debug_str:000000000000003e .LASF73
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:1903   .debug_str:0000000000000048 .LASF74
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:2025   .debug_str:00000000000003d7 .LASF75
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:1975   .debug_str:0000000000000203 .LASF76
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:1949   .debug_str:000000000000014a .LASF77
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:1957   .debug_str:0000000000000176 .LASF78
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:2055   .debug_str:0000000000000486 .LASF79
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:2015   .debug_str:0000000000000395 .LASF80
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:1889   .debug_str:0000000000000000 .LASF81
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:1977   .debug_str:000000000000020c .LASF82
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:2023   .debug_str:00000000000003bc .LASF84
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:53     .text.gd32vf10x_uart_set_handler:0000000000000000 .LFB18
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:65     .text.gd32vf10x_uart_set_handler:0000000000000006 .LFE18
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:1722   .debug_loc:0000000000000000 .LLST3
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:2083   .debug_str:000000000000055f .LASF96
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:2033   .debug_str:00000000000003fa .LASF83
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:1967   .debug_str:00000000000001af .LASF87
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:1909   .debug_str:000000000000006b .LASF85
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:25     .text.gd32vf10x_uart_set_baud_rate:0000000000000000 .LFB15
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:33     .text.gd32vf10x_uart_set_baud_rate:0000000000000002 .LFE15
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:1736   .debug_loc:0000000000000021 .LLST1
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:2043   .debug_str:000000000000042b .LASF86
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:10     .text.gd32vf10x_uart_remove:0000000000000000 .LFB14
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:19     .text.gd32vf10x_uart_remove:0000000000000002 .LFE14
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:1750   .debug_loc:0000000000000042 .LLST0
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:1973   .debug_str:00000000000001ee .LASF88
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:2073   .debug_str:000000000000051b .LASF89
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:2069   .debug_str:00000000000004f7 .LASF90
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:2013   .debug_str:0000000000000383 .LASF91
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:2051   .debug_str:000000000000046a .LASF92
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:2045   .debug_str:0000000000000441 .LASF97
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:39     .text.gd32vf10x_uart_poll_read:0000000000000000 .LFB16
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:47     .text.gd32vf10x_uart_poll_read:0000000000000002 .LFE16
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:1764   .debug_loc:0000000000000063 .LLST2
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:71     .text.gd32vf10x_uart_probe:0000000000000000 .LFB13
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:178    .text.gd32vf10x_uart_probe:0000000000000074 .LFE13
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:1778   .debug_loc:0000000000000084 .LLST4
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:1806   .debug_loc:00000000000000c8 .LLST5
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:134    .text.gd32vf10x_uart_probe:0000000000000048 .LBB4
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:1835   .debug_loc:000000000000010d .LLST6
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:91     .text.gd32vf10x_uart_probe:0000000000000014 .LVL10
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:95     .text.gd32vf10x_uart_probe:0000000000000020 .LVL11
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:196    .text.USART0_IRQHandler:0000000000000000 .LFB8
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:202    .text.USART0_IRQHandler:0000000000000002 .LFE8
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:1971   .debug_str:00000000000001d6 .LASF98
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:56     .text.gd32vf10x_uart_set_handler:0000000000000000 .LVL6
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:62     .text.gd32vf10x_uart_set_handler:0000000000000004 .LVL7
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:28     .text.gd32vf10x_uart_set_baud_rate:0000000000000000 .LVL2
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:30     .text.gd32vf10x_uart_set_baud_rate:0000000000000000 .LVL3
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccArdGl2.s 			page 12
+
+
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:14     .text.gd32vf10x_uart_remove:0000000000000000 .LVL0
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:16     .text.gd32vf10x_uart_remove:0000000000000000 .LVL1
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:42     .text.gd32vf10x_uart_poll_read:0000000000000000 .LVL4
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:44     .text.gd32vf10x_uart_poll_read:0000000000000000 .LVL5
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:78     .text.gd32vf10x_uart_probe:0000000000000002 .LCFI0
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:127    .text.gd32vf10x_uart_probe:0000000000000046 .LCFI1
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:132    .text.gd32vf10x_uart_probe:0000000000000048 .LCFI2
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:174    .text.gd32vf10x_uart_probe:0000000000000072 .LCFI3
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:74     .text.gd32vf10x_uart_probe:0000000000000000 .LVL8
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:85     .text.gd32vf10x_uart_probe:000000000000000a .LVL9
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:125    .text.gd32vf10x_uart_probe:0000000000000044 .LVL12
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:130    .text.gd32vf10x_uart_probe:0000000000000048 .LVL13
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:172    .text.gd32vf10x_uart_probe:0000000000000070 .LVL15
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:166    .text.gd32vf10x_uart_probe:000000000000006e .LVL14
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:280    .debug_info:0000000000000000 .Ldebug_info0
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:142    .text.gd32vf10x_uart_probe:0000000000000050 .LBE4
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:146    .text.gd32vf10x_uart_probe:0000000000000052 .LBB7
+C:\Users\test\AppData\Local\Temp\ccArdGl2.s:168    .text.gd32vf10x_uart_probe:000000000000006e .LBE7
+
+UNDEFINED SYMBOLS
+rcu_periph_clock_enable

@@ -1,0 +1,133 @@
+GAS LISTING C:\Users\test\AppData\Local\Temp\cclRuKmf.s 			page 1
+
+
+   1              		.file	"handler.c"
+   2              		.option nopic
+   3              		.text
+   4              	.Ltext0:
+   5              		.cfi_sections	.debug_frame
+   6              		.section	.text.handle_nmi,"ax",@progbits
+   7              		.align	1
+   8              		.weak	handle_nmi
+  10              	handle_nmi:
+  11              	.LFB0:
+  12              		.file 1 "arch/riscv/mach-gd32vf10x/system/handler.c"
+   1:arch/riscv/mach-gd32vf10x/system/handler.c **** //See LICENSE for license details.
+   2:arch/riscv/mach-gd32vf10x/system/handler.c **** #include "riscv_encoding.h"
+   3:arch/riscv/mach-gd32vf10x/system/handler.c **** 
+   4:arch/riscv/mach-gd32vf10x/system/handler.c **** 
+   5:arch/riscv/mach-gd32vf10x/system/handler.c **** __attribute__((weak)) unsigned int handle_nmi()
+   6:arch/riscv/mach-gd32vf10x/system/handler.c **** {
+  13              		.loc 1 6 1
+  14              		.cfi_startproc
+   7:arch/riscv/mach-gd32vf10x/system/handler.c ****   //write(1, "nmi\n", 5);
+   8:arch/riscv/mach-gd32vf10x/system/handler.c ****   //_exit(1);
+   9:arch/riscv/mach-gd32vf10x/system/handler.c ****   return 0;
+  15              		.loc 1 9 3
+  10:arch/riscv/mach-gd32vf10x/system/handler.c **** }
+  16              		.loc 1 10 1 is_stmt 0
+  17 0000 0145     		li	a0,0
+  18 0002 8280     		ret
+  19              		.cfi_endproc
+  20              	.LFE0:
+  22              		.section	.text.handle_trap,"ax",@progbits
+  23              		.align	1
+  24              		.weak	handle_trap
+  26              	handle_trap:
+  27              	.LFB1:
+  11:arch/riscv/mach-gd32vf10x/system/handler.c **** 
+  12:arch/riscv/mach-gd32vf10x/system/handler.c **** 
+  13:arch/riscv/mach-gd32vf10x/system/handler.c **** __attribute__((weak)) unsigned int handle_trap(unsigned int mcause, unsigned int sp)
+  14:arch/riscv/mach-gd32vf10x/system/handler.c **** {
+  28              		.loc 1 14 1 is_stmt 1
+  29              		.cfi_startproc
+  30              	.LVL0:
+  15:arch/riscv/mach-gd32vf10x/system/handler.c ****   //if(mcause == 0xFFF) {
+  16:arch/riscv/mach-gd32vf10x/system/handler.c ****       handle_nmi();
+  31              		.loc 1 16 7
+  14:arch/riscv/mach-gd32vf10x/system/handler.c ****   //if(mcause == 0xFFF) {
+  32              		.loc 1 14 1 is_stmt 0
+  33 0000 4111     		addi	sp,sp,-16
+  34              	.LCFI0:
+  35              		.cfi_def_cfa_offset 16
+  36 0002 06C6     		sw	ra,12(sp)
+  37              		.cfi_offset 1, -4
+  38              		.loc 1 16 7
+  39 0004 97000000 		call	handle_nmi
+  39      E7800000 
+  40              	.LVL1:
+  17:arch/riscv/mach-gd32vf10x/system/handler.c ****  // }
+  18:arch/riscv/mach-gd32vf10x/system/handler.c ****   //write(1, "trap\n", 5);
+GAS LISTING C:\Users\test\AppData\Local\Temp\cclRuKmf.s 			page 2
+
+
+  19:arch/riscv/mach-gd32vf10x/system/handler.c ****   //printf("In trap handler, the mcause is %d\n", mcause);
+  20:arch/riscv/mach-gd32vf10x/system/handler.c ****   //printf("In trap handler, the mepc is 0x%x\n", read_csr(mepc));
+  21:arch/riscv/mach-gd32vf10x/system/handler.c ****   //printf("In trap handler, the mtval is 0x%x\n", read_csr(mbadaddr));
+  22:arch/riscv/mach-gd32vf10x/system/handler.c ****   //_exit(mcause);
+  23:arch/riscv/mach-gd32vf10x/system/handler.c ****   return 0;
+  41              		.loc 1 23 3 is_stmt 1
+  24:arch/riscv/mach-gd32vf10x/system/handler.c **** }
+  42              		.loc 1 24 1 is_stmt 0
+  43 000c B240     		lw	ra,12(sp)
+  44              		.cfi_restore 1
+  45 000e 0145     		li	a0,0
+  46 0010 4101     		addi	sp,sp,16
+  47              	.LCFI1:
+  48              		.cfi_def_cfa_offset 0
+  49 0012 8280     		jr	ra
+  50              		.cfi_endproc
+  51              	.LFE1:
+  53              		.text
+  54              	.Letext0:
+GAS LISTING C:\Users\test\AppData\Local\Temp\cclRuKmf.s 			page 3
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 handler.c
+C:\Users\test\AppData\Local\Temp\cclRuKmf.s:10     .text.handle_nmi:0000000000000000 handle_nmi
+C:\Users\test\AppData\Local\Temp\cclRuKmf.s:14     .text.handle_nmi:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cclRuKmf.s:15     .text.handle_nmi:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cclRuKmf.s:16     .text.handle_nmi:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cclRuKmf.s:17     .text.handle_nmi:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cclRuKmf.s:19     .text.handle_nmi:0000000000000004 .L0 
+C:\Users\test\AppData\Local\Temp\cclRuKmf.s:26     .text.handle_trap:0000000000000000 handle_trap
+C:\Users\test\AppData\Local\Temp\cclRuKmf.s:29     .text.handle_trap:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cclRuKmf.s:31     .text.handle_trap:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cclRuKmf.s:32     .text.handle_trap:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cclRuKmf.s:33     .text.handle_trap:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cclRuKmf.s:35     .text.handle_trap:0000000000000002 .L0 
+C:\Users\test\AppData\Local\Temp\cclRuKmf.s:37     .text.handle_trap:0000000000000004 .L0 
+C:\Users\test\AppData\Local\Temp\cclRuKmf.s:39     .text.handle_trap:0000000000000004 .L0 
+C:\Users\test\AppData\Local\Temp\cclRuKmf.s:42     .text.handle_trap:000000000000000c .L0 
+C:\Users\test\AppData\Local\Temp\cclRuKmf.s:43     .text.handle_trap:000000000000000c .L0 
+C:\Users\test\AppData\Local\Temp\cclRuKmf.s:44     .text.handle_trap:000000000000000e .L0 
+C:\Users\test\AppData\Local\Temp\cclRuKmf.s:48     .text.handle_trap:0000000000000012 .L0 
+C:\Users\test\AppData\Local\Temp\cclRuKmf.s:50     .text.handle_trap:0000000000000014 .L0 
+C:\Users\test\AppData\Local\Temp\cclRuKmf.s:22     .text.handle_nmi:0000000000000004 .L0 
+C:\Users\test\AppData\Local\Temp\cclRuKmf.s:53     .text.handle_trap:0000000000000014 .L0 
+                     .debug_frame:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cclRuKmf.s:120    .debug_abbrev:0000000000000000 .Ldebug_abbrev0
+C:\Users\test\AppData\Local\Temp\cclRuKmf.s:334    .debug_str:0000000000000077 .LASF1
+C:\Users\test\AppData\Local\Temp\cclRuKmf.s:328    .debug_str:0000000000000033 .LASF2
+C:\Users\test\AppData\Local\Temp\cclRuKmf.s:324    .debug_str:0000000000000000 .LASF3
+C:\Users\test\AppData\Local\Temp\cclRuKmf.s:314    .debug_ranges:0000000000000000 .Ldebug_ranges0
+C:\Users\test\AppData\Local\Temp\cclRuKmf.s:322    .debug_line:0000000000000000 .Ldebug_line0
+C:\Users\test\AppData\Local\Temp\cclRuKmf.s:332    .debug_str:000000000000006b .LASF4
+C:\Users\test\AppData\Local\Temp\cclRuKmf.s:27     .text.handle_trap:0000000000000000 .LFB1
+C:\Users\test\AppData\Local\Temp\cclRuKmf.s:51     .text.handle_trap:0000000000000014 .LFE1
+C:\Users\test\AppData\Local\Temp\cclRuKmf.s:253    .debug_loc:0000000000000000 .LLST0
+C:\Users\test\AppData\Local\Temp\cclRuKmf.s:326    .debug_str:000000000000002c .LASF0
+C:\Users\test\AppData\Local\Temp\cclRuKmf.s:271    .debug_loc:000000000000002c .LLST1
+C:\Users\test\AppData\Local\Temp\cclRuKmf.s:285    .debug_loc:000000000000004d .LLST2
+C:\Users\test\AppData\Local\Temp\cclRuKmf.s:40     .text.handle_trap:000000000000000c .LVL1
+C:\Users\test\AppData\Local\Temp\cclRuKmf.s:330    .debug_str:000000000000005e .LASF5
+C:\Users\test\AppData\Local\Temp\cclRuKmf.s:336    .debug_str:00000000000000f1 .LASF6
+C:\Users\test\AppData\Local\Temp\cclRuKmf.s:11     .text.handle_nmi:0000000000000000 .LFB0
+C:\Users\test\AppData\Local\Temp\cclRuKmf.s:20     .text.handle_nmi:0000000000000004 .LFE0
+C:\Users\test\AppData\Local\Temp\cclRuKmf.s:34     .text.handle_trap:0000000000000002 .LCFI0
+C:\Users\test\AppData\Local\Temp\cclRuKmf.s:47     .text.handle_trap:0000000000000012 .LCFI1
+C:\Users\test\AppData\Local\Temp\cclRuKmf.s:30     .text.handle_trap:0000000000000000 .LVL0
+C:\Users\test\AppData\Local\Temp\cclRuKmf.s:56     .debug_info:0000000000000000 .Ldebug_info0
+
+NO UNDEFINED SYMBOLS

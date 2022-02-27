@@ -1,0 +1,607 @@
+GAS LISTING C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s 			page 1
+
+
+   1              		.file	"gd32vf103_fwdgt.c"
+   2              		.option nopic
+   3              		.text
+   4              	.Ltext0:
+   5              		.cfi_sections	.debug_frame
+   6              		.section	.text.fwdgt_write_enable,"ax",@progbits
+   7              		.align	1
+   8              		.globl	fwdgt_write_enable
+  10              	fwdgt_write_enable:
+  11              	.LFB2:
+  12              		.file 1 "arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c"
+   1:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c **** /*!
+   2:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c ****     \file  gd32vf103_fwdgt.c
+   3:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c ****     \brief FWDGT driver
+   4:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c ****        
+   5:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c ****     \version 2019-6-5, V1.0.0, firmware for GD32VF103
+   6:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c **** */
+   7:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c **** 
+   8:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c **** /*
+   9:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c ****     Copyright (c) 2019, GigaDevice Semiconductor Inc.
+  10:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c **** 
+  11:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c ****     Redistribution and use in source and binary forms, with or without modification, 
+  12:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c **** are permitted provided that the following conditions are met:
+  13:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c **** 
+  14:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c ****     1. Redistributions of source code must retain the above copyright notice, this 
+  15:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c ****        list of conditions and the following disclaimer.
+  16:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c ****     2. Redistributions in binary form must reproduce the above copyright notice, 
+  17:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c ****        this list of conditions and the following disclaimer in the documentation 
+  18:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c ****        and/or other materials provided with the distribution.
+  19:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c ****     3. Neither the name of the copyright holder nor the names of its contributors 
+  20:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c ****        may be used to endorse or promote products derived from this software without 
+  21:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c ****        specific prior written permission.
+  22:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c **** 
+  23:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c ****     THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" 
+  24:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c **** AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED 
+  25:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c **** WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. 
+  26:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c **** IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, 
+  27:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c **** INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT 
+  28:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c **** NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR 
+  29:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c **** PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, 
+  30:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c **** WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) 
+  31:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c **** ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY 
+  32:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c **** OF SUCH DAMAGE.
+  33:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c **** */
+  34:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c **** 
+  35:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c **** #include "gd32vf103_fwdgt.h"
+  36:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c **** 
+  37:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c **** /* write value to FWDGT_CTL_CMD bit field */
+  38:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c **** #define CTL_CMD(regval)             (BITS(0,15) & ((uint32_t)(regval) << 0))
+  39:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c **** /* write value to FWDGT_RLD_RLD bit field */
+  40:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c **** #define RLD_RLD(regval)             (BITS(0,11) & ((uint32_t)(regval) << 0))
+  41:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c **** 
+  42:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c **** /*!
+  43:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c ****     \brief      enable write access to FWDGT_PSC and FWDGT_RLD
+  44:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c ****     \param[in]  none
+  45:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c ****     \param[out] none
+  46:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c ****     \retval     none
+GAS LISTING C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s 			page 2
+
+
+  47:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c **** */
+  48:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c **** void fwdgt_write_enable(void)
+  49:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c **** {
+  13              		.loc 1 49 1
+  14              		.cfi_startproc
+  50:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c ****     FWDGT_CTL = FWDGT_WRITEACCESS_ENABLE;
+  15              		.loc 1 50 5
+  16              		.loc 1 50 15 is_stmt 0
+  17 0000 9567     		li	a5,20480
+  18 0002 37370040 		li	a4,1073754112
+  19 0006 93875755 		addi	a5,a5,1365
+  20 000a 1CC3     		sw	a5,0(a4)
+  51:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c **** }
+  21              		.loc 1 51 1
+  22 000c 8280     		ret
+  23              		.cfi_endproc
+  24              	.LFE2:
+  26              		.section	.text.fwdgt_write_disable,"ax",@progbits
+  27              		.align	1
+  28              		.globl	fwdgt_write_disable
+  30              	fwdgt_write_disable:
+  31              	.LFB3:
+  52:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c **** 
+  53:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c **** /*!
+  54:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c ****     \brief      disable write access to FWDGT_PSC and FWDGT_RLD
+  55:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c ****     \param[in]  none
+  56:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c ****     \param[out] none
+  57:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c ****     \retval     none
+  58:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c **** */
+  59:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c **** void fwdgt_write_disable(void)
+  60:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c **** {
+  32              		.loc 1 60 1 is_stmt 1
+  33              		.cfi_startproc
+  61:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c ****     FWDGT_CTL = FWDGT_WRITEACCESS_DISABLE;
+  34              		.loc 1 61 5
+  35              		.loc 1 61 15 is_stmt 0
+  36 0000 B7370040 		li	a5,1073754112
+  37 0004 23A00700 		sw	zero,0(a5)
+  62:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c **** }
+  38              		.loc 1 62 1
+  39 0008 8280     		ret
+  40              		.cfi_endproc
+  41              	.LFE3:
+  43              		.section	.text.fwdgt_enable,"ax",@progbits
+  44              		.align	1
+  45              		.globl	fwdgt_enable
+  47              	fwdgt_enable:
+  48              	.LFB4:
+  63:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c **** 
+  64:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c **** /*!
+  65:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c ****     \brief      start the free watchdog timer counter
+  66:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c ****     \param[in]  none
+  67:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c ****     \param[out] none
+  68:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c ****     \retval     none
+  69:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c **** */
+  70:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c **** void fwdgt_enable(void)
+  71:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c **** {
+GAS LISTING C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s 			page 3
+
+
+  49              		.loc 1 71 1 is_stmt 1
+  50              		.cfi_startproc
+  72:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c ****     FWDGT_CTL = FWDGT_KEY_ENABLE;
+  51              		.loc 1 72 5
+  52              		.loc 1 72 15 is_stmt 0
+  53 0000 B567     		li	a5,53248
+  54 0002 37370040 		li	a4,1073754112
+  55 0006 9387C7CC 		addi	a5,a5,-820
+  56 000a 1CC3     		sw	a5,0(a4)
+  73:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c **** }
+  57              		.loc 1 73 1
+  58 000c 8280     		ret
+  59              		.cfi_endproc
+  60              	.LFE4:
+  62              		.section	.text.fwdgt_counter_reload,"ax",@progbits
+  63              		.align	1
+  64              		.globl	fwdgt_counter_reload
+  66              	fwdgt_counter_reload:
+  67              	.LFB5:
+  74:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c **** 
+  75:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c **** /*!
+  76:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c ****     \brief      reload the counter of FWDGT
+  77:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c ****     \param[in]  none
+  78:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c ****     \param[out] none
+  79:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c ****     \retval     none
+  80:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c **** */
+  81:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c **** void fwdgt_counter_reload(void)
+  82:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c **** {
+  68              		.loc 1 82 1 is_stmt 1
+  69              		.cfi_startproc
+  83:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c ****     FWDGT_CTL = FWDGT_KEY_RELOAD;
+  70              		.loc 1 83 5
+  71              		.loc 1 83 15 is_stmt 0
+  72 0000 AD67     		li	a5,45056
+  73 0002 37370040 		li	a4,1073754112
+  74 0006 9387A7AA 		addi	a5,a5,-1366
+  75 000a 1CC3     		sw	a5,0(a4)
+  84:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c **** }
+  76              		.loc 1 84 1
+  77 000c 8280     		ret
+  78              		.cfi_endproc
+  79              	.LFE5:
+  81              		.section	.text.fwdgt_config,"ax",@progbits
+  82              		.align	1
+  83              		.globl	fwdgt_config
+  85              	fwdgt_config:
+  86              	.LFB6:
+  85:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c **** 
+  86:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c **** /*!
+  87:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c ****     \brief      configure counter reload value, and prescaler divider value
+  88:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c ****     \param[in]  reload_value: specify reload value(0x0000 - 0x0FFF)
+  89:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c ****     \param[in]  prescaler_div: FWDGT prescaler value
+  90:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c ****                 only one parameter can be selected which is shown as below:
+  91:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c ****       \arg        FWDGT_PSC_DIV4: FWDGT prescaler set to 4
+  92:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c ****       \arg        FWDGT_PSC_DIV8: FWDGT prescaler set to 8
+  93:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c ****       \arg        FWDGT_PSC_DIV16: FWDGT prescaler set to 16
+  94:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c ****       \arg        FWDGT_PSC_DIV32: FWDGT prescaler set to 32
+GAS LISTING C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s 			page 4
+
+
+  95:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c ****       \arg        FWDGT_PSC_DIV64: FWDGT prescaler set to 64
+  96:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c ****       \arg        FWDGT_PSC_DIV128: FWDGT prescaler set to 128
+  97:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c ****       \arg        FWDGT_PSC_DIV256: FWDGT prescaler set to 256
+  98:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c ****     \param[out] none
+  99:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c ****     \retval     ErrStatus: ERROR or SUCCESS
+ 100:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c **** */
+ 101:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c **** ErrStatus fwdgt_config(uint16_t reload_value, uint8_t prescaler_div)
+ 102:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c **** {
+  87              		.loc 1 102 1 is_stmt 1
+  88              		.cfi_startproc
+  89              	.LVL0:
+ 103:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c ****     uint32_t timeout = FWDGT_PSC_TIMEOUT;
+  90              		.loc 1 103 5
+ 104:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c ****     uint32_t flag_status = RESET;
+  91              		.loc 1 104 5
+ 105:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c ****   
+ 106:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c ****     /* enable write access to FWDGT_PSC,and FWDGT_RLD */
+ 107:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c ****     FWDGT_CTL = FWDGT_WRITEACCESS_ENABLE;
+  92              		.loc 1 107 5
+  93              		.loc 1 107 15 is_stmt 0
+  94 0000 9567     		li	a5,20480
+  95 0002 37370040 		li	a4,1073754112
+  96 0006 93875755 		addi	a5,a5,1365
+  97 000a 1CC3     		sw	a5,0(a4)
+ 108:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c ****     /* wait until the PUD flag to be reset */
+ 109:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c ****     do{
+  98              		.loc 1 109 5 is_stmt 1
+ 110:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c ****        flag_status = FWDGT_STAT & FWDGT_STAT_PUD;
+  99              		.loc 1 110 8
+ 100              		.loc 1 110 22 is_stmt 0
+ 101 000c 5C47     		lw	a5,12(a4)
+ 102              		.loc 1 110 20
+ 103 000e 37071000 		li	a4,1048576
+ 104 0012 7917     		addi	a4,a4,-2
+ 105 0014 858B     		andi	a5,a5,1
+ 106              	.LVL1:
+ 107              		.loc 1 110 22
+ 108 0016 B7360040 		li	a3,1073754112
+ 109 001a 21A0     		j	.L7
+ 110              	.LVL2:
+ 111              	.L9:
+ 112              		.loc 1 110 22 discriminator 2
+ 113 001c DC46     		lw	a5,12(a3)
+ 114              	.LVL3:
+ 115              		.loc 1 110 20 discriminator 2
+ 116 001e 858B     		andi	a5,a5,1
+ 117              	.LVL4:
+ 111:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c ****     }while((--timeout > 0U) && ((uint32_t)RESET != flag_status));
+ 118              		.loc 1 111 5 discriminator 2
+ 119 0020 15CF     		beq	a4,zero,.L8
+ 120              	.L7:
+ 109:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c ****        flag_status = FWDGT_STAT & FWDGT_STAT_PUD;
+ 121              		.loc 1 109 5 is_stmt 1 discriminator 1
+ 110:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c ****        flag_status = FWDGT_STAT & FWDGT_STAT_PUD;
+ 122              		.loc 1 110 8 discriminator 1
+ 123              	.LVL5:
+ 124 0022 7D17     		addi	a4,a4,-1
+GAS LISTING C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s 			page 5
+
+
+ 125              	.LVL6:
+ 126              		.loc 1 111 29 is_stmt 0 discriminator 1
+ 127 0024 E5FF     		bne	a5,zero,.L9
+ 128              	.LVL7:
+ 129              	.L10:
+ 112:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c ****     
+ 113:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c ****     if((uint32_t)RESET != flag_status){
+ 114:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c ****         return ERROR;
+ 115:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c ****     }
+ 116:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c ****     /* configure FWDGT */
+ 117:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c ****     FWDGT_PSC = (uint32_t)prescaler_div;
+ 130              		.loc 1 117 5 is_stmt 1
+ 131              		.loc 1 117 15 is_stmt 0
+ 132 0026 B7370040 		li	a5,1073754112
+ 133              	.LVL8:
+ 134 002a CCC3     		sw	a1,4(a5)
+ 118:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c **** 
+ 119:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c ****     timeout = FWDGT_RLD_TIMEOUT;
+ 135              		.loc 1 119 5 is_stmt 1
+ 136              	.LVL9:
+ 120:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c ****     /* wait until the RUD flag to be reset */
+ 121:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c ****     do{
+ 137              		.loc 1 121 5
+ 122:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c ****        flag_status = FWDGT_STAT & FWDGT_STAT_RUD;
+ 138              		.loc 1 122 8
+ 139              		.loc 1 122 22 is_stmt 0
+ 140 002c DC47     		lw	a5,12(a5)
+ 141              		.loc 1 122 20
+ 142 002e 37071000 		li	a4,1048576
+ 143 0032 7917     		addi	a4,a4,-2
+ 144 0034 898B     		andi	a5,a5,2
+ 145              	.LVL10:
+ 146              		.loc 1 122 22
+ 147 0036 B7360040 		li	a3,1073754112
+ 148 003a 21A0     		j	.L12
+ 149              	.LVL11:
+ 150              	.L14:
+ 151              		.loc 1 122 22 discriminator 2
+ 152 003c DC46     		lw	a5,12(a3)
+ 153              	.LVL12:
+ 154              		.loc 1 122 20 discriminator 2
+ 155 003e 898B     		andi	a5,a5,2
+ 156              	.LVL13:
+ 123:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c ****     }while((--timeout > 0U) && ((uint32_t)RESET != flag_status));
+ 157              		.loc 1 123 5 discriminator 2
+ 158 0040 0DC3     		beq	a4,zero,.L13
+ 159              	.L12:
+ 121:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c ****        flag_status = FWDGT_STAT & FWDGT_STAT_RUD;
+ 160              		.loc 1 121 5 is_stmt 1 discriminator 1
+ 122:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c ****        flag_status = FWDGT_STAT & FWDGT_STAT_RUD;
+ 161              		.loc 1 122 8 discriminator 1
+ 162              	.LVL14:
+ 163 0042 7D17     		addi	a4,a4,-1
+ 164              	.LVL15:
+ 165              		.loc 1 123 29 is_stmt 0 discriminator 1
+ 166 0044 E5FF     		bne	a5,zero,.L14
+ 167              	.LVL16:
+GAS LISTING C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s 			page 6
+
+
+ 168              	.L15:
+ 124:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c ****    
+ 125:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c ****     if((uint32_t)RESET != flag_status){
+ 126:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c ****         return ERROR;
+ 127:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c ****     }
+ 128:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c ****     FWDGT_RLD = RLD_RLD(reload_value);
+ 169              		.loc 1 128 5 is_stmt 1
+ 170              		.loc 1 128 17 is_stmt 0
+ 171 0046 5205     		slli	a0,a0,20
+ 172              	.LVL17:
+ 173              		.loc 1 128 15
+ 174 0048 37370040 		li	a4,1073754112
+ 175              		.loc 1 128 17
+ 176 004c 5181     		srli	a0,a0,20
+ 129:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c ****     /* reload the counter */
+ 130:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c ****     FWDGT_CTL = FWDGT_KEY_RELOAD;
+ 177              		.loc 1 130 15
+ 178 004e AD67     		li	a5,45056
+ 179              	.LVL18:
+ 128:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c ****     /* reload the counter */
+ 180              		.loc 1 128 15
+ 181 0050 08C7     		sw	a0,8(a4)
+ 182              		.loc 1 130 5 is_stmt 1
+ 183              		.loc 1 130 15 is_stmt 0
+ 184 0052 9387A7AA 		addi	a5,a5,-1366
+ 185 0056 1CC3     		sw	a5,0(a4)
+ 131:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c **** 
+ 132:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c ****     return SUCCESS;
+ 186              		.loc 1 132 5 is_stmt 1
+ 187              		.loc 1 132 12 is_stmt 0
+ 188 0058 0545     		li	a0,1
+ 133:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c **** }
+ 189              		.loc 1 133 1
+ 190 005a 8280     		ret
+ 191              	.LVL19:
+ 192              	.L8:
+ 113:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c ****         return ERROR;
+ 193              		.loc 1 113 5 is_stmt 1
+ 113:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c ****         return ERROR;
+ 194              		.loc 1 113 7 is_stmt 0
+ 195 005c E9D7     		beq	a5,zero,.L10
+ 114:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c ****     }
+ 196              		.loc 1 114 16
+ 197 005e 0145     		li	a0,0
+ 198              	.LVL20:
+ 199 0060 8280     		ret
+ 200              	.LVL21:
+ 201              	.L13:
+ 125:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c ****         return ERROR;
+ 202              		.loc 1 125 5 is_stmt 1
+ 125:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c ****         return ERROR;
+ 203              		.loc 1 125 7 is_stmt 0
+ 204 0062 F5D3     		beq	a5,zero,.L15
+ 114:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c ****     }
+ 205              		.loc 1 114 16
+ 206 0064 0145     		li	a0,0
+ 207              	.LVL22:
+GAS LISTING C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s 			page 7
+
+
+ 208 0066 8280     		ret
+ 209              		.cfi_endproc
+ 210              	.LFE6:
+ 212              		.section	.text.fwdgt_flag_get,"ax",@progbits
+ 213              		.align	1
+ 214              		.globl	fwdgt_flag_get
+ 216              	fwdgt_flag_get:
+ 217              	.LFB7:
+ 134:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c **** 
+ 135:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c **** /*!
+ 136:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c ****     \brief      get flag state of FWDGT
+ 137:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c ****     \param[in]  flag: flag to get 
+ 138:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c ****                 only one parameter can be selected which is shown as below:
+ 139:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c ****       \arg        FWDGT_FLAG_PUD: a write operation to FWDGT_PSC register is on going
+ 140:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c ****       \arg        FWDGT_FLAG_RUD: a write operation to FWDGT_RLD register is on going
+ 141:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c ****     \param[out] none
+ 142:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c ****     \retval     FlagStatus: SET or RESET
+ 143:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c **** */
+ 144:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c **** FlagStatus fwdgt_flag_get(uint16_t flag)
+ 145:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c **** {
+ 218              		.loc 1 145 1 is_stmt 1
+ 219              		.cfi_startproc
+ 220              	.LVL23:
+ 146:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c ****     if(FWDGT_STAT & flag){
+ 221              		.loc 1 146 5
+ 222              		.loc 1 146 8 is_stmt 0
+ 223 0000 B7370040 		li	a5,1073754112
+ 224 0004 DC47     		lw	a5,12(a5)
+ 225              		.loc 1 146 19
+ 226 0006 7D8D     		and	a0,a0,a5
+ 227              	.LVL24:
+ 147:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c ****         return SET;
+ 148:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c ****     }
+ 149:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c ****     
+ 150:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c ****     return RESET;
+ 151:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_fwdgt.c **** }
+ 228              		.loc 1 151 1
+ 229 0008 3335A000 		snez	a0,a0
+ 230 000c 8280     		ret
+ 231              		.cfi_endproc
+ 232              	.LFE7:
+ 234              		.text
+ 235              	.Letext0:
+ 236              		.file 2 "d:\\risc_v_gcc\\riscv-none-embed\\include\\machine\\_default_types.h"
+ 237              		.file 3 "d:\\risc_v_gcc\\riscv-none-embed\\include\\sys\\_stdint.h"
+ 238              		.file 4 "arch/riscv/mach-gd32vf10x/system/gd32vf103.h"
+ 239              		.file 5 "arch/riscv/mach-gd32vf10x/system/system_gd32vf103.h"
+GAS LISTING C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s 			page 8
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 gd32vf103_fwdgt.c
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:10     .text.fwdgt_write_enable:0000000000000000 fwdgt_write_enable
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:14     .text.fwdgt_write_enable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:15     .text.fwdgt_write_enable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:16     .text.fwdgt_write_enable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:17     .text.fwdgt_write_enable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:22     .text.fwdgt_write_enable:000000000000000c .L0 
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:23     .text.fwdgt_write_enable:000000000000000e .L0 
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:30     .text.fwdgt_write_disable:0000000000000000 fwdgt_write_disable
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:33     .text.fwdgt_write_disable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:34     .text.fwdgt_write_disable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:35     .text.fwdgt_write_disable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:36     .text.fwdgt_write_disable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:39     .text.fwdgt_write_disable:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:40     .text.fwdgt_write_disable:000000000000000a .L0 
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:47     .text.fwdgt_enable:0000000000000000 fwdgt_enable
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:50     .text.fwdgt_enable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:51     .text.fwdgt_enable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:52     .text.fwdgt_enable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:53     .text.fwdgt_enable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:58     .text.fwdgt_enable:000000000000000c .L0 
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:59     .text.fwdgt_enable:000000000000000e .L0 
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:66     .text.fwdgt_counter_reload:0000000000000000 fwdgt_counter_reload
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:69     .text.fwdgt_counter_reload:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:70     .text.fwdgt_counter_reload:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:71     .text.fwdgt_counter_reload:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:72     .text.fwdgt_counter_reload:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:77     .text.fwdgt_counter_reload:000000000000000c .L0 
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:78     .text.fwdgt_counter_reload:000000000000000e .L0 
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:85     .text.fwdgt_config:0000000000000000 fwdgt_config
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:88     .text.fwdgt_config:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:90     .text.fwdgt_config:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:91     .text.fwdgt_config:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:92     .text.fwdgt_config:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:93     .text.fwdgt_config:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:94     .text.fwdgt_config:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:99     .text.fwdgt_config:000000000000000c .L0 
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:100    .text.fwdgt_config:000000000000000c .L0 
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:101    .text.fwdgt_config:000000000000000c .L0 
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:103    .text.fwdgt_config:000000000000000e .L0 
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:108    .text.fwdgt_config:0000000000000016 .L0 
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:113    .text.fwdgt_config:000000000000001c .L0 
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:116    .text.fwdgt_config:000000000000001e .L0 
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:119    .text.fwdgt_config:0000000000000020 .L0 
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:122    .text.fwdgt_config:0000000000000022 .L0 
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:124    .text.fwdgt_config:0000000000000022 .L0 
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:127    .text.fwdgt_config:0000000000000024 .L0 
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:131    .text.fwdgt_config:0000000000000026 .L0 
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:132    .text.fwdgt_config:0000000000000026 .L0 
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:137    .text.fwdgt_config:000000000000002c .L0 
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:138    .text.fwdgt_config:000000000000002c .L0 
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:139    .text.fwdgt_config:000000000000002c .L0 
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:140    .text.fwdgt_config:000000000000002c .L0 
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:142    .text.fwdgt_config:000000000000002e .L0 
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:147    .text.fwdgt_config:0000000000000036 .L0 
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:152    .text.fwdgt_config:000000000000003c .L0 
+GAS LISTING C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s 			page 9
+
+
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:155    .text.fwdgt_config:000000000000003e .L0 
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:158    .text.fwdgt_config:0000000000000040 .L0 
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:161    .text.fwdgt_config:0000000000000042 .L0 
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:163    .text.fwdgt_config:0000000000000042 .L0 
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:166    .text.fwdgt_config:0000000000000044 .L0 
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:170    .text.fwdgt_config:0000000000000046 .L0 
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:171    .text.fwdgt_config:0000000000000046 .L0 
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:174    .text.fwdgt_config:0000000000000048 .L0 
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:176    .text.fwdgt_config:000000000000004c .L0 
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:178    .text.fwdgt_config:000000000000004e .L0 
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:181    .text.fwdgt_config:0000000000000050 .L0 
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:183    .text.fwdgt_config:0000000000000052 .L0 
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:184    .text.fwdgt_config:0000000000000052 .L0 
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:187    .text.fwdgt_config:0000000000000058 .L0 
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:188    .text.fwdgt_config:0000000000000058 .L0 
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:190    .text.fwdgt_config:000000000000005a .L0 
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:194    .text.fwdgt_config:000000000000005c .L0 
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:195    .text.fwdgt_config:000000000000005c .L0 
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:197    .text.fwdgt_config:000000000000005e .L0 
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:203    .text.fwdgt_config:0000000000000062 .L0 
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:204    .text.fwdgt_config:0000000000000062 .L0 
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:206    .text.fwdgt_config:0000000000000064 .L0 
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:209    .text.fwdgt_config:0000000000000068 .L0 
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:216    .text.fwdgt_flag_get:0000000000000000 fwdgt_flag_get
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:219    .text.fwdgt_flag_get:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:221    .text.fwdgt_flag_get:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:222    .text.fwdgt_flag_get:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:223    .text.fwdgt_flag_get:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:226    .text.fwdgt_flag_get:0000000000000006 .L0 
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:229    .text.fwdgt_flag_get:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:231    .text.fwdgt_flag_get:000000000000000e .L0 
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:26     .text.fwdgt_write_enable:000000000000000e .L0 
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:43     .text.fwdgt_write_disable:000000000000000a .L0 
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:62     .text.fwdgt_enable:000000000000000e .L0 
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:81     .text.fwdgt_counter_reload:000000000000000e .L0 
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:212    .text.fwdgt_config:0000000000000068 .L0 
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:234    .text.fwdgt_flag_get:000000000000000e .L0 
+                     .debug_frame:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:120    .text.fwdgt_config:0000000000000022 .L7
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:192    .text.fwdgt_config:000000000000005c .L8
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:111    .text.fwdgt_config:000000000000001c .L9
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:159    .text.fwdgt_config:0000000000000042 .L12
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:201    .text.fwdgt_config:0000000000000062 .L13
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:150    .text.fwdgt_config:000000000000003c .L14
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:129    .text.fwdgt_config:0000000000000026 .L10
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:168    .text.fwdgt_config:0000000000000046 .L15
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:506    .debug_abbrev:0000000000000000 .Ldebug_abbrev0
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:918    .debug_str:000000000000002c .LASF31
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:938    .debug_str:000000000000011e .LASF32
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:916    .debug_str:0000000000000000 .LASF33
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:898    .debug_ranges:0000000000000000 .Ldebug_ranges0
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:914    .debug_line:0000000000000000 .Ldebug_line0
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:958    .debug_str:00000000000001be .LASF0
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:980    .debug_str:0000000000000245 .LASF1
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:920    .debug_str:00000000000000a6 .LASF4
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:928    .debug_str:00000000000000e2 .LASF2
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:970    .debug_str:0000000000000210 .LASF3
+GAS LISTING C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s 			page 10
+
+
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:944    .debug_str:0000000000000164 .LASF5
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:926    .debug_str:00000000000000cf .LASF6
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:942    .debug_str:000000000000015b .LASF7
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:950    .debug_str:000000000000018e .LASF8
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:946    .debug_str:000000000000016f .LASF9
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:964    .debug_str:00000000000001ea .LASF10
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:960    .debug_str:00000000000001cb .LASF11
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:962    .debug_str:00000000000001e2 .LASF12
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:972    .debug_str:000000000000021a .LASF13
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:976    .debug_str:0000000000000236 .LASF14
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:968    .debug_str:0000000000000200 .LASF34
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:982    .debug_str:0000000000000251 .LASF15
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:932    .debug_str:00000000000000f8 .LASF16
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:978    .debug_str:000000000000023f .LASF17
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:930    .debug_str:00000000000000f0 .LASF18
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:922    .debug_str:00000000000000b0 .LASF19
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:984    .debug_str:0000000000000257 .LASF20
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:217    .text.fwdgt_flag_get:0000000000000000 .LFB7
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:232    .text.fwdgt_flag_get:000000000000000e .LFE7
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:954    .debug_str:00000000000001ad .LASF22
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:738    .debug_loc:0000000000000000 .LLST3
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:948    .debug_str:0000000000000181 .LASF21
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:86     .text.fwdgt_config:0000000000000000 .LFB6
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:210    .text.fwdgt_config:0000000000000068 .LFE6
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:940    .debug_str:000000000000014e .LASF23
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:752    .debug_loc:0000000000000021 .LLST0
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:936    .debug_str:0000000000000110 .LASF24
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:966    .debug_str:00000000000001f8 .LASF25
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:788    .debug_loc:0000000000000074 .LLST1
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:956    .debug_str:00000000000001b2 .LASF26
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:847    .debug_loc:0000000000000106 .LLST2
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:924    .debug_str:00000000000000ba .LASF27
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:67     .text.fwdgt_counter_reload:0000000000000000 .LFB5
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:79     .text.fwdgt_counter_reload:000000000000000e .LFE5
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:934    .debug_str:0000000000000103 .LASF28
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:48     .text.fwdgt_enable:0000000000000000 .LFB4
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:60     .text.fwdgt_enable:000000000000000e .LFE4
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:952    .debug_str:0000000000000199 .LASF29
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:31     .text.fwdgt_write_disable:0000000000000000 .LFB3
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:41     .text.fwdgt_write_disable:000000000000000a .LFE3
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:974    .debug_str:0000000000000223 .LASF30
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:11     .text.fwdgt_write_enable:0000000000000000 .LFB2
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:24     .text.fwdgt_write_enable:000000000000000e .LFE2
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:220    .text.fwdgt_flag_get:0000000000000000 .LVL23
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:227    .text.fwdgt_flag_get:0000000000000008 .LVL24
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:89     .text.fwdgt_config:0000000000000000 .LVL0
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:172    .text.fwdgt_config:0000000000000048 .LVL17
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:191    .text.fwdgt_config:000000000000005c .LVL19
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:198    .text.fwdgt_config:0000000000000060 .LVL20
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:200    .text.fwdgt_config:0000000000000062 .LVL21
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:207    .text.fwdgt_config:0000000000000066 .LVL22
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:106    .text.fwdgt_config:0000000000000016 .LVL1
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:110    .text.fwdgt_config:000000000000001c .LVL2
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:117    .text.fwdgt_config:0000000000000020 .LVL4
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:123    .text.fwdgt_config:0000000000000022 .LVL5
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:125    .text.fwdgt_config:0000000000000024 .LVL6
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:128    .text.fwdgt_config:0000000000000026 .LVL7
+GAS LISTING C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s 			page 11
+
+
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:136    .text.fwdgt_config:000000000000002c .LVL9
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:145    .text.fwdgt_config:0000000000000036 .LVL10
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:149    .text.fwdgt_config:000000000000003c .LVL11
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:156    .text.fwdgt_config:0000000000000040 .LVL13
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:162    .text.fwdgt_config:0000000000000042 .LVL14
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:164    .text.fwdgt_config:0000000000000044 .LVL15
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:167    .text.fwdgt_config:0000000000000046 .LVL16
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:114    .text.fwdgt_config:000000000000001e .LVL3
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:133    .text.fwdgt_config:000000000000002a .LVL8
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:153    .text.fwdgt_config:000000000000003e .LVL12
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:179    .text.fwdgt_config:0000000000000050 .LVL18
+C:\Users\test\AppData\Local\Temp\cc6pKyJ3.s:241    .debug_info:0000000000000000 .Ldebug_info0
+
+NO UNDEFINED SYMBOLS

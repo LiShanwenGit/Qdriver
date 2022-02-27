@@ -1,0 +1,1793 @@
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccpJADio.s 			page 1
+
+
+   1              		.file	"system_gd32vf103.c"
+   2              		.option nopic
+   3              		.text
+   4              	.Ltext0:
+   5              		.cfi_sections	.debug_frame
+   6              		.section	.text.SystemInit,"ax",@progbits
+   7              		.align	1
+   8              		.globl	SystemInit
+  10              	SystemInit:
+  11              	.LFB3:
+  12              		.file 1 "arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c"
+   1:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** /*!
+   2:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     \file    system_gd32vf103.c
+   3:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     \brief   RISC-V Device Peripheral Access Layer Source File for
+   4:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****              GD32VF103 Device Series
+   5:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+   6:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     \version 2019-6-5, V1.0.0, firmware for GD32VF103
+   7:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** */
+   8:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+   9:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** /*
+  10:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     Copyright (c) 2019, GigaDevice Semiconductor Inc.
+  11:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+  12:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     Redistribution and use in source and binary forms, with or without modification,
+  13:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** are permitted provided that the following conditions are met:
+  14:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+  15:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     1. Redistributions of source code must retain the above copyright notice, this
+  16:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****        list of conditions and the following disclaimer.
+  17:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     2. Redistributions in binary form must reproduce the above copyright notice,
+  18:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****        this list of conditions and the following disclaimer in the documentation
+  19:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****        and/or other materials provided with the distribution.
+  20:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     3. Neither the name of the copyright holder nor the names of its contributors
+  21:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****        may be used to endorse or promote products derived from this software without
+  22:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****        specific prior written permission.
+  23:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+  24:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+  25:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+  26:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
+  27:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT,
+  28:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
+  29:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
+  30:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+  31:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+  32:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY
+  33:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** OF SUCH DAMAGE.
+  34:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** */
+  35:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+  36:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** /* This file refers the RISC-V standard, some adjustments are made according to GigaDevice chips */
+  37:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+  38:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** #include "gd32vf103.h"
+  39:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+  40:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** /* system frequency define */
+  41:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** #define __IRC8M           (IRC8M_VALUE)            /* internal 8 MHz RC oscillator frequency */
+  42:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** #define __HXTAL           (HXTAL_VALUE)            /* high speed crystal oscillator frequency */
+  43:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** #define __SYS_OSC_CLK     (__HXTAL)                /* main oscillator frequency */
+  44:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+  45:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** /* select a system clock by uncommenting the following line */
+  46:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** /* use IRC8M */
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccpJADio.s 			page 2
+
+
+  47:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** //#define __SYSTEM_CLOCK_48M_PLL_IRC8M            (uint32_t)(48000000)
+  48:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** //#define __SYSTEM_CLOCK_72M_PLL_IRC8M            (uint32_t)(72000000)
+  49:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** //#define __SYSTEM_CLOCK_108M_PLL_IRC8M           (uint32_t)(108000000)
+  50:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+  51:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** /********************************************************************/
+  52:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** //#define __SYSTEM_CLOCK_HXTAL                    (HXTAL_VALUE)
+  53:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** //#define __SYSTEM_CLOCK_24M_PLL_HXTAL            (uint32_t)(24000000)
+  54:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** /********************************************************************/
+  55:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+  56:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** //#define __SYSTEM_CLOCK_36M_PLL_HXTAL            (uint32_t)(36000000)
+  57:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** //#define __SYSTEM_CLOCK_48M_PLL_HXTAL            (uint32_t)(48000000)
+  58:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** //#define __SYSTEM_CLOCK_56M_PLL_HXTAL            (uint32_t)(56000000)
+  59:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** //#define __SYSTEM_CLOCK_72M_PLL_HXTAL            (uint32_t)(72000000)
+  60:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** //#define __SYSTEM_CLOCK_96M_PLL_HXTAL            (uint32_t)(96000000)
+  61:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** #define __SYSTEM_CLOCK_108M_PLL_HXTAL           (uint32_t)(108000000)
+  62:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+  63:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** #define SEL_IRC8M       0x00U
+  64:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** #define SEL_HXTAL       0x01U
+  65:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** #define SEL_PLL         0x02U
+  66:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+  67:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** /* set the system clock frequency and declare the system clock configuration function */
+  68:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** #ifdef __SYSTEM_CLOCK_48M_PLL_IRC8M
+  69:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** uint32_t SystemCoreClock = __SYSTEM_CLOCK_48M_PLL_IRC8M;
+  70:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** static void system_clock_48m_irc8m(void);
+  71:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** #elif defined (__SYSTEM_CLOCK_72M_PLL_IRC8M)
+  72:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** uint32_t SystemCoreClock = __SYSTEM_CLOCK_72M_PLL_IRC8M;
+  73:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** static void system_clock_72m_irc8m(void);
+  74:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** #elif defined (__SYSTEM_CLOCK_108M_PLL_IRC8M)
+  75:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** uint32_t SystemCoreClock = __SYSTEM_CLOCK_108M_PLL_IRC8M;
+  76:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** static void system_clock_108m_irc8m(void);
+  77:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+  78:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** #elif defined (__SYSTEM_CLOCK_HXTAL)
+  79:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** uint32_t SystemCoreClock = __SYSTEM_CLOCK_HXTAL;
+  80:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** static void system_clock_hxtal(void);
+  81:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** #elif defined (__SYSTEM_CLOCK_24M_PLL_HXTAL)
+  82:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** uint32_t SystemCoreClock = __SYSTEM_CLOCK_24M_PLL_HXTAL;
+  83:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** static void system_clock_24m_hxtal(void);
+  84:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** #elif defined (__SYSTEM_CLOCK_36M_PLL_HXTAL)
+  85:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** uint32_t SystemCoreClock = __SYSTEM_CLOCK_36M_PLL_HXTAL;
+  86:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** static void system_clock_36m_hxtal(void);
+  87:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** #elif defined (__SYSTEM_CLOCK_48M_PLL_HXTAL)
+  88:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** uint32_t SystemCoreClock = __SYSTEM_CLOCK_48M_PLL_HXTAL;
+  89:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** static void system_clock_48m_hxtal(void);
+  90:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** #elif defined (__SYSTEM_CLOCK_56M_PLL_HXTAL)
+  91:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** uint32_t SystemCoreClock = __SYSTEM_CLOCK_56M_PLL_HXTAL;
+  92:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** static void system_clock_56m_hxtal(void);
+  93:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** #elif defined (__SYSTEM_CLOCK_72M_PLL_HXTAL)
+  94:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** uint32_t SystemCoreClock = __SYSTEM_CLOCK_72M_PLL_HXTAL;
+  95:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** static void system_clock_72m_hxtal(void);
+  96:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** #elif defined (__SYSTEM_CLOCK_96M_PLL_HXTAL)
+  97:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** uint32_t SystemCoreClock = __SYSTEM_CLOCK_96M_PLL_HXTAL;
+  98:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** static void system_clock_96m_hxtal(void);
+  99:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** #elif defined (__SYSTEM_CLOCK_108M_PLL_HXTAL)
+ 100:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** uint32_t SystemCoreClock = __SYSTEM_CLOCK_108M_PLL_HXTAL;
+ 101:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** static void system_clock_108m_hxtal(void);
+ 102:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** #else
+ 103:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** uint32_t SystemCoreClock = IRC8M_VALUE;
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccpJADio.s 			page 3
+
+
+ 104:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** #endif /* __SYSTEM_CLOCK_48M_PLL_IRC8M */
+ 105:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 106:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** /* configure the system clock */
+ 107:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** static void system_clock_config(void);
+ 108:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 109:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** /*!
+ 110:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     \brief      configure the system clock
+ 111:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     \param[in]  none
+ 112:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     \param[out] none
+ 113:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     \retval     none
+ 114:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** */
+ 115:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** static void system_clock_config(void)
+ 116:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** {
+ 117:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** #ifdef __SYSTEM_CLOCK_HXTAL
+ 118:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     system_clock_hxtal();
+ 119:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** #elif defined (__SYSTEM_CLOCK_24M_PLL_HXTAL)
+ 120:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     system_clock_24m_hxtal();
+ 121:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** #elif defined (__SYSTEM_CLOCK_36M_PLL_HXTAL)
+ 122:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     system_clock_36m_hxtal();
+ 123:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** #elif defined (__SYSTEM_CLOCK_48M_PLL_HXTAL)
+ 124:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     system_clock_48m_hxtal();
+ 125:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** #elif defined (__SYSTEM_CLOCK_56M_PLL_HXTAL)
+ 126:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     system_clock_56m_hxtal();
+ 127:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** #elif defined (__SYSTEM_CLOCK_72M_PLL_HXTAL)
+ 128:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     system_clock_72m_hxtal();
+ 129:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** #elif defined (__SYSTEM_CLOCK_96M_PLL_HXTAL)
+ 130:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     system_clock_96m_hxtal();
+ 131:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** #elif defined (__SYSTEM_CLOCK_108M_PLL_HXTAL)
+ 132:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     system_clock_108m_hxtal();
+ 133:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 134:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** #elif defined (__SYSTEM_CLOCK_48M_PLL_IRC8M)
+ 135:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     system_clock_48m_irc8m();
+ 136:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** #elif defined (__SYSTEM_CLOCK_72M_PLL_IRC8M)
+ 137:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     system_clock_72m_irc8m();
+ 138:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** #elif defined (__SYSTEM_CLOCK_108M_PLL_IRC8M)
+ 139:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     system_clock_108m_irc8m();
+ 140:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** #endif /* __SYSTEM_CLOCK_HXTAL */
+ 141:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** }
+ 142:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 143:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** /*!
+ 144:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     \brief      setup the microcontroller system, initialize the system
+ 145:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     \param[in]  none
+ 146:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     \param[out] none
+ 147:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     \retval     none
+ 148:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** */
+ 149:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** void SystemInit(void)
+ 150:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** {
+  13              		.loc 1 150 1
+  14              		.cfi_startproc
+ 151:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     /* reset the RCC clock configuration to the default reset state */
+ 152:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     /* enable IRC8M */
+ 153:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     RCU_CTL |= RCU_CTL_IRC8MEN;
+  15              		.loc 1 153 5
+  16              		.loc 1 153 13 is_stmt 0
+  17 0000 B7170240 		li	a5,1073876992
+  18 0004 9843     		lw	a4,0(a5)
+ 154:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccpJADio.s 			page 4
+
+
+ 155:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     /* reset SCS, AHBPSC, APB1PSC, APB2PSC, ADCPSC, CKOUT0SEL bits */
+ 156:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     RCU_CFG0 &= ~(RCU_CFG0_SCS | RCU_CFG0_AHBPSC | RCU_CFG0_APB1PSC | RCU_CFG0_APB2PSC |
+  19              		.loc 1 156 14
+  20 0006 B706FFE0 		li	a3,-520159232
+  21 000a B106     		addi	a3,a3,12
+ 153:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     
+  22              		.loc 1 153 13
+  23 000c 13671700 		ori	a4,a4,1
+  24 0010 98C3     		sw	a4,0(a5)
+  25              		.loc 1 156 5 is_stmt 1
+  26              		.loc 1 156 14 is_stmt 0
+  27 0012 D843     		lw	a4,4(a5)
+ 157:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****                   RCU_CFG0_ADCPSC | RCU_CFG0_ADCPSC_2 | RCU_CFG0_CKOUT0SEL);
+ 158:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 159:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     /* reset HXTALEN, CKMEN, PLLEN bits */
+ 160:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     RCU_CTL &= ~(RCU_CTL_HXTALEN | RCU_CTL_CKMEN | RCU_CTL_PLLEN);
+ 161:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 162:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     /* Reset HXTALBPS bit */
+ 163:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     RCU_CTL &= ~(RCU_CTL_HXTALBPS);
+ 164:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 165:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     /* reset PLLSEL, PREDV0_LSB, PLLMF, USBFSPSC bits */
+ 166:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     
+ 167:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     RCU_CFG0 &= ~(RCU_CFG0_PLLSEL | RCU_CFG0_PREDV0_LSB | RCU_CFG0_PLLMF |
+ 168:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****                   RCU_CFG0_USBFSPSC | RCU_CFG0_PLLMF_4);
+ 169:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     RCU_CFG1 = 0x00000000U;
+ 170:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 171:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     /* Reset HXTALEN, CKMEN, PLLEN, PLL1EN and PLL2EN bits */
+ 172:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     RCU_CTL &= ~(RCU_CTL_PLLEN | RCU_CTL_PLL1EN | RCU_CTL_PLL2EN | RCU_CTL_CKMEN | RCU_CTL_HXTALEN)
+  28              		.loc 1 172 13
+  29 0014 3706F7EA 		li	a2,-352911360
+  30 0018 7D16     		addi	a2,a2,-1
+ 156:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****                   RCU_CFG0_ADCPSC | RCU_CFG0_ADCPSC_2 | RCU_CFG0_CKOUT0SEL);
+  31              		.loc 1 156 14
+  32 001a 758F     		and	a4,a4,a3
+  33 001c D8C3     		sw	a4,4(a5)
+ 160:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+  34              		.loc 1 160 5 is_stmt 1
+ 160:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+  35              		.loc 1 160 13 is_stmt 0
+  36 001e 9843     		lw	a4,0(a5)
+  37 0020 B706F7FE 		li	a3,-17367040
+  38 0024 FD16     		addi	a3,a3,-1
+  39 0026 758F     		and	a4,a4,a3
+  40 0028 98C3     		sw	a4,0(a5)
+ 163:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+  41              		.loc 1 163 5 is_stmt 1
+ 163:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+  42              		.loc 1 163 13 is_stmt 0
+  43 002a 9843     		lw	a4,0(a5)
+  44 002c B706FCFF 		li	a3,-262144
+  45 0030 FD16     		addi	a3,a3,-1
+  46 0032 758F     		and	a4,a4,a3
+  47 0034 98C3     		sw	a4,0(a5)
+ 167:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****                   RCU_CFG0_USBFSPSC | RCU_CFG0_PLLMF_4);
+  48              		.loc 1 167 5 is_stmt 1
+ 167:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****                   RCU_CFG0_USBFSPSC | RCU_CFG0_PLLMF_4);
+  49              		.loc 1 167 14 is_stmt 0
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccpJADio.s 			page 5
+
+
+  50 0036 D843     		lw	a4,4(a5)
+  51 0038 B70601DF 		li	a3,-553582592
+  52 003c FD16     		addi	a3,a3,-1
+  53 003e 758F     		and	a4,a4,a3
+  54 0040 D8C3     		sw	a4,4(a5)
+ 169:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+  55              		.loc 1 169 5 is_stmt 1
+ 169:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+  56              		.loc 1 169 14 is_stmt 0
+  57 0042 23A60702 		sw	zero,44(a5)
+  58              		.loc 1 172 5 is_stmt 1
+  59              		.loc 1 172 13 is_stmt 0
+  60 0046 9443     		lw	a3,0(a5)
+ 173:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     /* disable all interrupts */
+ 174:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     RCU_INT = 0x00FF0000U;
+  61              		.loc 1 174 13
+  62 0048 3707FF00 		li	a4,16711680
+  63              	.LBB8:
+  64              	.LBB9:
+  65              	.LBB10:
+ 175:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 176:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     /* Configure the System clock source, PLL Multiplier, AHB/APBx prescalers and Flash settings */
+ 177:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     system_clock_config();
+ 178:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** }
+ 179:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 180:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** /*!
+ 181:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     \brief      update the SystemCoreClock with current core clock retrieved from cpu registers
+ 182:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     \param[in]  none
+ 183:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     \param[out] none
+ 184:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     \retval     none
+ 185:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** */
+ 186:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** void SystemCoreClockUpdate(void)
+ 187:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** {
+ 188:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     uint32_t scss;
+ 189:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     uint32_t pllsel, predv0sel, pllmf, ck_src;
+ 190:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     uint32_t predv0, predv1, pll1mf;
+ 191:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 192:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     scss = GET_BITS(RCU_CFG0, 2, 3);
+ 193:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     scss = 2;
+ 194:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     switch (scss)
+ 195:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     {
+ 196:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****         /* IRC8M is selected as CK_SYS */
+ 197:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****         case SEL_IRC8M:
+ 198:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****             SystemCoreClock = IRC8M_VALUE;
+ 199:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****             break;
+ 200:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****             
+ 201:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****         /* HXTAL is selected as CK_SYS */
+ 202:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****         case SEL_HXTAL:
+ 203:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****             SystemCoreClock = HXTAL_VALUE;
+ 204:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****             break;
+ 205:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****             
+ 206:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****         /* PLL is selected as CK_SYS */
+ 207:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****         case SEL_PLL:
+ 208:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****             /* PLL clock source selection, HXTAL or IRC8M/2 */
+ 209:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****             pllsel = (RCU_CFG0 & RCU_CFG0_PLLSEL);
+ 210:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 211:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****             pllsel = 1;
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccpJADio.s 			page 6
+
+
+ 212:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 213:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****             if(RCU_PLLSRC_IRC8M_DIV2 == pllsel){
+ 214:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****                 /* PLL clock source is IRC8M/2 */
+ 215:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****                 ck_src = IRC8M_VALUE / 2U;
+ 216:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****             }else{
+ 217:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****                 /* PLL clock source is HXTAL */
+ 218:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****                 ck_src = HXTAL_VALUE;
+ 219:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 220:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****                 predv0sel = (RCU_CFG1 & RCU_CFG1_PREDV0SEL);
+ 221:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 222:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****                 /* source clock use PLL1 */
+ 223:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****                 if(RCU_PREDV0SRC_CKPLL1 == predv0sel){
+ 224:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****                     predv1 = ((RCU_CFG1 & RCU_CFG1_PREDV1) >> 4) + 1U;
+ 225:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****                     pll1mf = ((RCU_CFG1 & RCU_CFG1_PLL1MF) >> 8) + 2U;
+ 226:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****                     if(17U == pll1mf){
+ 227:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****                         pll1mf = 20U;
+ 228:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****                     }
+ 229:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****                     ck_src = (ck_src / predv1) * pll1mf;
+ 230:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****                 }
+ 231:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****                 predv0 = (RCU_CFG1 & RCU_CFG1_PREDV0) + 1U;
+ 232:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****                 ck_src /= predv0;
+ 233:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****             }
+ 234:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 235:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****             /* PLL multiplication factor */
+ 236:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****             pllmf = GET_BITS(RCU_CFG0, 18, 21);
+ 237:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 238:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****             if((RCU_CFG0 & RCU_CFG0_PLLMF_4)){
+ 239:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****                 pllmf |= 0x10U;
+ 240:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****             }
+ 241:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 242:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****             if(pllmf >= 15U){
+ 243:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****                 pllmf += 1U;
+ 244:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****             }else{
+ 245:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****                 pllmf += 2U;
+ 246:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****             }
+ 247:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 248:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****             SystemCoreClock = ck_src * pllmf;
+ 249:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 250:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****             if(15U == pllmf){
+ 251:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****                 /* PLL source clock multiply by 6.5 */
+ 252:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****                 SystemCoreClock = ck_src * 6U + ck_src / 2U;
+ 253:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****             }
+ 254:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 255:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****             break;
+ 256:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 257:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****         /* IRC8M is selected as CK_SYS */
+ 258:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****         default:
+ 259:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****             SystemCoreClock = IRC8M_VALUE;
+ 260:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****             break;
+ 261:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     }
+ 262:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** }
+ 263:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 264:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** #ifdef __SYSTEM_CLOCK_HXTAL
+ 265:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** /*!
+ 266:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     \brief      configure the system clock to HXTAL
+ 267:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     \param[in]  none
+ 268:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     \param[out] none
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccpJADio.s 			page 7
+
+
+ 269:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     \retval     none
+ 270:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** */
+ 271:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** static void system_clock_hxtal(void)
+ 272:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** {
+ 273:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     uint32_t timeout = 0U;
+ 274:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     uint32_t stab_flag = 0U;
+ 275:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     
+ 276:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     /* enable HXTAL */
+ 277:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     RCU_CTL |= RCU_CTL_HXTALEN;
+ 278:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     
+ 279:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     /* wait until HXTAL is stable or the startup time is longer than HXTAL_STARTUP_TIMEOUT */
+ 280:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     do{
+ 281:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****         timeout++;
+ 282:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****         stab_flag = (RCU_CTL & RCU_CTL_HXTALSTB);
+ 283:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     }while((0U == stab_flag) && (HXTAL_STARTUP_TIMEOUT != timeout));
+ 284:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     
+ 285:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     /* if fail */
+ 286:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     if(0U == (RCU_CTL & RCU_CTL_HXTALSTB)){
+ 287:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****         while(1){
+ 288:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****         }
+ 289:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     }
+ 290:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     
+ 291:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     /* AHB = SYSCLK */
+ 292:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     RCU_CFG0 |= RCU_AHB_CKSYS_DIV1;
+ 293:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     /* APB2 = AHB/1 */
+ 294:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     RCU_CFG0 |= RCU_APB2_CKAHB_DIV1;
+ 295:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     /* APB1 = AHB/2 */
+ 296:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     RCU_CFG0 |= RCU_APB1_CKAHB_DIV2;
+ 297:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     
+ 298:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     /* select HXTAL as system clock */
+ 299:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     RCU_CFG0 &= ~RCU_CFG0_SCS;
+ 300:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     RCU_CFG0 |= RCU_CKSYSSRC_HXTAL;
+ 301:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     
+ 302:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     /* wait until HXTAL is selected as system clock */
+ 303:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     while(0 == (RCU_CFG0 & RCU_SCSS_HXTAL)){
+ 304:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     }
+ 305:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** }
+ 306:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 307:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** #elif defined (__SYSTEM_CLOCK_24M_PLL_HXTAL)
+ 308:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** /*!
+ 309:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     \brief      configure the system clock to 24M by PLL which selects HXTAL(MD/HD/XD:8M; CL:25M) a
+ 310:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     \param[in]  none
+ 311:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     \param[out] none
+ 312:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     \retval     none
+ 313:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** */
+ 314:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** static void system_clock_24m_hxtal(void)
+ 315:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** {
+ 316:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     uint32_t timeout = 0U;
+ 317:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     uint32_t stab_flag = 0U;
+ 318:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 319:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     /* enable HXTAL */
+ 320:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     RCU_CTL |= RCU_CTL_HXTALEN;
+ 321:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 322:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     /* wait until HXTAL is stable or the startup time is longer than HXTAL_STARTUP_TIMEOUT */
+ 323:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     do{
+ 324:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****         timeout++;
+ 325:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****         stab_flag = (RCU_CTL & RCU_CTL_HXTALSTB);
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccpJADio.s 			page 8
+
+
+ 326:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     }while((0U == stab_flag) && (HXTAL_STARTUP_TIMEOUT != timeout));
+ 327:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 328:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     /* if fail */
+ 329:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     if(0U == (RCU_CTL & RCU_CTL_HXTALSTB)){
+ 330:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****         while(1){
+ 331:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****         }
+ 332:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     }
+ 333:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 334:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     /* HXTAL is stable */
+ 335:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     /* AHB = SYSCLK */
+ 336:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     RCU_CFG0 |= RCU_AHB_CKSYS_DIV1;
+ 337:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     /* APB2 = AHB/1 */
+ 338:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     RCU_CFG0 |= RCU_APB2_CKAHB_DIV1;
+ 339:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     /* APB1 = AHB/2 */
+ 340:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     RCU_CFG0 |= RCU_APB1_CKAHB_DIV2;
+ 341:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 342:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     /* CK_PLL = (CK_PREDIV0) * 6 = 24 MHz */
+ 343:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     RCU_CFG0 &= ~(RCU_CFG0_PLLMF | RCU_CFG0_PLLMF_4);
+ 344:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     RCU_CFG0 |= (RCU_PLLSRC_HXTAL | RCU_PLL_MUL6);
+ 345:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 346:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     if(HXTAL_VALUE==25000000){
+ 347:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****         /* CK_PREDIV0 = (CK_HXTAL)/5 *8 /10 = 4 MHz */
+ 348:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****         RCU_CFG1 &= ~(RCU_CFG1_PREDV0SEL | RCU_CFG1_PLL1MF | RCU_CFG1_PREDV1 | RCU_CFG1_PREDV0);
+ 349:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****         RCU_CFG1 |= (RCU_PREDV0SRC_CKPLL1 | RCU_PLL1_MUL8 | RCU_PREDV1_DIV5 | RCU_PREDV0_DIV10);
+ 350:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 351:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****         /* enable PLL1 */
+ 352:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****         RCU_CTL |= RCU_CTL_PLL1EN;
+ 353:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****         /* wait till PLL1 is ready */
+ 354:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****         while((RCU_CTL & RCU_CTL_PLL1STB) == 0){
+ 355:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****         }
+ 356:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 357:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     }else if(HXTAL_VALUE==8000000){
+ 358:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 		RCU_CFG1 &= ~(RCU_CFG1_PREDV0SEL | RCU_CFG1_PREDV1 | RCU_CFG1_PLL1MF | RCU_CFG1_PREDV0);
+ 359:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 		RCU_CFG1 |= (RCU_PREDV0SRC_HXTAL | RCU_PREDV0_DIV2 );
+ 360:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     }
+ 361:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 362:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     /* enable PLL */
+ 363:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     RCU_CTL |= RCU_CTL_PLLEN;
+ 364:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 365:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     /* wait until PLL is stable */
+ 366:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     while(0U == (RCU_CTL & RCU_CTL_PLLSTB)){
+ 367:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     }
+ 368:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 369:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     /* select PLL as system clock */
+ 370:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     RCU_CFG0 &= ~RCU_CFG0_SCS;
+ 371:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     RCU_CFG0 |= RCU_CKSYSSRC_PLL;
+ 372:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 373:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     /* wait until PLL is selected as system clock */
+ 374:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     while(0U == (RCU_CFG0 & RCU_SCSS_PLL)){
+ 375:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     }
+ 376:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** }
+ 377:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 378:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** #elif defined (__SYSTEM_CLOCK_36M_PLL_HXTAL)
+ 379:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** /*!
+ 380:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     \brief      configure the system clock to 36M by PLL which selects HXTAL(MD/HD/XD:8M; CL:25M) a
+ 381:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     \param[in]  none
+ 382:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     \param[out] none
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccpJADio.s 			page 9
+
+
+ 383:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     \retval     none
+ 384:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** */
+ 385:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** static void system_clock_36m_hxtal(void)
+ 386:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** {
+ 387:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     uint32_t timeout = 0U;
+ 388:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     uint32_t stab_flag = 0U;
+ 389:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 390:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     /* enable HXTAL */
+ 391:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     RCU_CTL |= RCU_CTL_HXTALEN;
+ 392:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 393:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     /* wait until HXTAL is stable or the startup time is longer than HXTAL_STARTUP_TIMEOUT */
+ 394:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     do{
+ 395:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****         timeout++;
+ 396:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****         stab_flag = (RCU_CTL & RCU_CTL_HXTALSTB);
+ 397:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     }while((0U == stab_flag) && (HXTAL_STARTUP_TIMEOUT != timeout));
+ 398:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 399:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     /* if fail */
+ 400:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     if(0U == (RCU_CTL & RCU_CTL_HXTALSTB)){
+ 401:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****         while(1){
+ 402:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****         }
+ 403:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     }
+ 404:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 405:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     /* HXTAL is stable */
+ 406:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     /* AHB = SYSCLK */
+ 407:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     RCU_CFG0 |= RCU_AHB_CKSYS_DIV1;
+ 408:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     /* APB2 = AHB/1 */
+ 409:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     RCU_CFG0 |= RCU_APB2_CKAHB_DIV1;
+ 410:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     /* APB1 = AHB/2 */
+ 411:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     RCU_CFG0 |= RCU_APB1_CKAHB_DIV2;
+ 412:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 413:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     /* CK_PLL = (CK_PREDIV0) * 9 = 36 MHz */
+ 414:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     RCU_CFG0 &= ~(RCU_CFG0_PLLMF | RCU_CFG0_PLLMF_4);
+ 415:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     RCU_CFG0 |= (RCU_PLLSRC_HXTAL | RCU_PLL_MUL9);
+ 416:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 417:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     if(HXTAL_VALUE==25000000){
+ 418:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****         /* CK_PREDIV0 = (CK_HXTAL)/5 *8 /10 = 4 MHz */
+ 419:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****         RCU_CFG1 &= ~(RCU_CFG1_PREDV0SEL | RCU_CFG1_PLL1MF | RCU_CFG1_PREDV1 | RCU_CFG1_PREDV0);
+ 420:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****         RCU_CFG1 |= (RCU_PREDV0SRC_CKPLL1 | RCU_PLL1_MUL8 | RCU_PREDV1_DIV5 | RCU_PREDV0_DIV10);
+ 421:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 422:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****         /* enable PLL1 */
+ 423:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****         RCU_CTL |= RCU_CTL_PLL1EN;
+ 424:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****         /* wait till PLL1 is ready */
+ 425:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****         while((RCU_CTL & RCU_CTL_PLL1STB) == 0){
+ 426:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****         }
+ 427:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 428:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     }else if(HXTAL_VALUE==8000000){
+ 429:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 		RCU_CFG1 &= ~(RCU_CFG1_PREDV0SEL | RCU_CFG1_PREDV1 | RCU_CFG1_PLL1MF | RCU_CFG1_PREDV0);
+ 430:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 		RCU_CFG1 |= (RCU_PREDV0SRC_HXTAL | RCU_PREDV0_DIV2 );
+ 431:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     }
+ 432:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 433:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     /* enable PLL */
+ 434:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     RCU_CTL |= RCU_CTL_PLLEN;
+ 435:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 436:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     /* wait until PLL is stable */
+ 437:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     while(0U == (RCU_CTL & RCU_CTL_PLLSTB)){
+ 438:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     }
+ 439:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccpJADio.s 			page 10
+
+
+ 440:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     /* select PLL as system clock */
+ 441:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     RCU_CFG0 &= ~RCU_CFG0_SCS;
+ 442:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     RCU_CFG0 |= RCU_CKSYSSRC_PLL;
+ 443:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 444:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     /* wait until PLL is selected as system clock */
+ 445:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     while(0U == (RCU_CFG0 & RCU_SCSS_PLL)){
+ 446:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     }
+ 447:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** }
+ 448:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 449:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** #elif defined (__SYSTEM_CLOCK_48M_PLL_HXTAL)
+ 450:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** /*!
+ 451:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     \brief      configure the system clock to 48M by PLL which selects HXTAL(MD/HD/XD:8M; CL:25M) a
+ 452:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     \param[in]  none
+ 453:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     \param[out] none
+ 454:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     \retval     none
+ 455:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** */
+ 456:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** static void system_clock_48m_hxtal(void)
+ 457:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** {
+ 458:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     uint32_t timeout = 0U;
+ 459:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     uint32_t stab_flag = 0U;
+ 460:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 461:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     /* enable HXTAL */
+ 462:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     RCU_CTL |= RCU_CTL_HXTALEN;
+ 463:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 464:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     /* wait until HXTAL is stable or the startup time is longer than HXTAL_STARTUP_TIMEOUT */
+ 465:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     do{
+ 466:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****         timeout++;
+ 467:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****         stab_flag = (RCU_CTL & RCU_CTL_HXTALSTB);
+ 468:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     }while((0U == stab_flag) && (HXTAL_STARTUP_TIMEOUT != timeout));
+ 469:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 470:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     /* if fail */
+ 471:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     if(0U == (RCU_CTL & RCU_CTL_HXTALSTB)){
+ 472:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****         while(1){
+ 473:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****         }
+ 474:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     }
+ 475:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 476:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     /* HXTAL is stable */
+ 477:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     /* AHB = SYSCLK */
+ 478:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     RCU_CFG0 |= RCU_AHB_CKSYS_DIV1;
+ 479:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     /* APB2 = AHB/1 */
+ 480:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     RCU_CFG0 |= RCU_APB2_CKAHB_DIV1;
+ 481:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     /* APB1 = AHB/2 */
+ 482:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     RCU_CFG0 |= RCU_APB1_CKAHB_DIV2;
+ 483:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 484:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     /* CK_PLL = (CK_PREDIV0) * 12 = 48 MHz */
+ 485:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     RCU_CFG0 &= ~(RCU_CFG0_PLLMF | RCU_CFG0_PLLMF_4);
+ 486:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     RCU_CFG0 |= (RCU_PLLSRC_HXTAL | RCU_PLL_MUL12);
+ 487:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 488:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     if(HXTAL_VALUE==25000000){
+ 489:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 490:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****         /* CK_PREDIV0 = (CK_HXTAL)/5 *8 /10 = 4 MHz */
+ 491:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****         RCU_CFG1 &= ~(RCU_CFG1_PREDV0SEL | RCU_CFG1_PLL1MF | RCU_CFG1_PREDV1 | RCU_CFG1_PREDV0);
+ 492:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****         RCU_CFG1 |= (RCU_PREDV0SRC_CKPLL1 | RCU_PLL1_MUL8 | RCU_PREDV1_DIV5 | RCU_PREDV0_DIV10);
+ 493:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 494:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****         /* enable PLL1 */
+ 495:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****         RCU_CTL |= RCU_CTL_PLL1EN;
+ 496:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****         /* wait till PLL1 is ready */
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccpJADio.s 			page 11
+
+
+ 497:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****         while((RCU_CTL & RCU_CTL_PLL1STB) == 0){
+ 498:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****         }
+ 499:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 500:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     }else if(HXTAL_VALUE==8000000){
+ 501:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 		RCU_CFG1 &= ~(RCU_CFG1_PREDV0SEL | RCU_CFG1_PREDV1 | RCU_CFG1_PLL1MF | RCU_CFG1_PREDV0);
+ 502:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 		RCU_CFG1 |= (RCU_PREDV0SRC_HXTAL | RCU_PREDV0_DIV2 );
+ 503:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     }
+ 504:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 505:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 506:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 507:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     /* enable PLL */
+ 508:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     RCU_CTL |= RCU_CTL_PLLEN;
+ 509:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 510:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     /* wait until PLL is stable */
+ 511:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     while(0U == (RCU_CTL & RCU_CTL_PLLSTB)){
+ 512:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     }
+ 513:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 514:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     /* select PLL as system clock */
+ 515:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     RCU_CFG0 &= ~RCU_CFG0_SCS;
+ 516:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     RCU_CFG0 |= RCU_CKSYSSRC_PLL;
+ 517:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 518:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     /* wait until PLL is selected as system clock */
+ 519:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     while(0U == (RCU_CFG0 & RCU_SCSS_PLL)){
+ 520:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     }
+ 521:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** }
+ 522:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 523:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** #elif defined (__SYSTEM_CLOCK_56M_PLL_HXTAL)
+ 524:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** /*!
+ 525:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     \brief      configure the system clock to 56M by PLL which selects HXTAL(MD/HD/XD:8M; CL:25M) a
+ 526:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     \param[in]  none
+ 527:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     \param[out] none
+ 528:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     \retval     none
+ 529:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** */
+ 530:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** static void system_clock_56m_hxtal(void)
+ 531:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** {
+ 532:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     uint32_t timeout = 0U;
+ 533:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     uint32_t stab_flag = 0U;
+ 534:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 535:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     /* enable HXTAL */
+ 536:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     RCU_CTL |= RCU_CTL_HXTALEN;
+ 537:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 538:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     /* wait until HXTAL is stable or the startup time is longer than HXTAL_STARTUP_TIMEOUT */
+ 539:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     do{
+ 540:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****         timeout++;
+ 541:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****         stab_flag = (RCU_CTL & RCU_CTL_HXTALSTB);
+ 542:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     }while((0U == stab_flag) && (HXTAL_STARTUP_TIMEOUT != timeout));
+ 543:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 544:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     /* if fail */
+ 545:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     if(0U == (RCU_CTL & RCU_CTL_HXTALSTB)){
+ 546:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****         while(1){
+ 547:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****         }
+ 548:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     }
+ 549:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 550:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     /* HXTAL is stable */
+ 551:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     /* AHB = SYSCLK */
+ 552:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     RCU_CFG0 |= RCU_AHB_CKSYS_DIV1;
+ 553:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     /* APB2 = AHB/1 */
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccpJADio.s 			page 12
+
+
+ 554:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     RCU_CFG0 |= RCU_APB2_CKAHB_DIV1;
+ 555:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     /* APB1 = AHB/2 */
+ 556:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     RCU_CFG0 |= RCU_APB1_CKAHB_DIV2;
+ 557:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 558:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     /* CK_PLL = (CK_PREDIV0) * 14 = 56 MHz */
+ 559:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     RCU_CFG0 &= ~(RCU_CFG0_PLLMF | RCU_CFG0_PLLMF_4);
+ 560:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     RCU_CFG0 |= (RCU_PLLSRC_HXTAL | RCU_PLL_MUL14);
+ 561:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 562:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     if(HXTAL_VALUE==25000000){
+ 563:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 564:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****         /* CK_PREDIV0 = (CK_HXTAL)/5 *8 /10 = 4 MHz */
+ 565:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****         RCU_CFG1 &= ~(RCU_CFG1_PREDV0SEL | RCU_CFG1_PLL1MF | RCU_CFG1_PREDV1 | RCU_CFG1_PREDV0);
+ 566:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****         RCU_CFG1 |= (RCU_PREDV0SRC_CKPLL1 | RCU_PLL1_MUL8 | RCU_PREDV1_DIV5 | RCU_PREDV0_DIV10);
+ 567:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 568:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****         /* enable PLL1 */
+ 569:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****         RCU_CTL |= RCU_CTL_PLL1EN;
+ 570:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****         /* wait till PLL1 is ready */
+ 571:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****         while((RCU_CTL & RCU_CTL_PLL1STB) == 0){
+ 572:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****         }
+ 573:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 574:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     }else if(HXTAL_VALUE==8000000){
+ 575:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 		RCU_CFG1 &= ~(RCU_CFG1_PREDV0SEL | RCU_CFG1_PREDV1 | RCU_CFG1_PLL1MF | RCU_CFG1_PREDV0);
+ 576:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 		RCU_CFG1 |= (RCU_PREDV0SRC_HXTAL | RCU_PREDV0_DIV2 );
+ 577:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     }
+ 578:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 579:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     /* enable PLL */
+ 580:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     RCU_CTL |= RCU_CTL_PLLEN;
+ 581:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 582:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     /* wait until PLL is stable */
+ 583:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     while(0U == (RCU_CTL & RCU_CTL_PLLSTB)){
+ 584:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     }
+ 585:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 586:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     /* select PLL as system clock */
+ 587:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     RCU_CFG0 &= ~RCU_CFG0_SCS;
+ 588:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     RCU_CFG0 |= RCU_CKSYSSRC_PLL;
+ 589:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 590:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     /* wait until PLL is selected as system clock */
+ 591:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     while(0U == (RCU_CFG0 & RCU_SCSS_PLL)){
+ 592:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     }
+ 593:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** }
+ 594:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 595:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** #elif defined (__SYSTEM_CLOCK_72M_PLL_HXTAL)
+ 596:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** /*!
+ 597:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     \brief      configure the system clock to 72M by PLL which selects HXTAL(MD/HD/XD:8M; CL:25M) a
+ 598:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     \param[in]  none
+ 599:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     \param[out] none
+ 600:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     \retval     none
+ 601:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** */
+ 602:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** static void system_clock_72m_hxtal(void)
+ 603:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** {
+ 604:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     uint32_t timeout = 0U;
+ 605:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     uint32_t stab_flag = 0U;
+ 606:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 607:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     /* enable HXTAL */
+ 608:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     RCU_CTL |= RCU_CTL_HXTALEN;
+ 609:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 610:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     /* wait until HXTAL is stable or the startup time is longer than HXTAL_STARTUP_TIMEOUT */
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccpJADio.s 			page 13
+
+
+ 611:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     do{
+ 612:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****         timeout++;
+ 613:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****         stab_flag = (RCU_CTL & RCU_CTL_HXTALSTB);
+ 614:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     }while((0U == stab_flag) && (HXTAL_STARTUP_TIMEOUT != timeout));
+ 615:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 616:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     /* if fail */
+ 617:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     if(0U == (RCU_CTL & RCU_CTL_HXTALSTB)){
+ 618:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****         while(1){
+ 619:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****         }
+ 620:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     }
+ 621:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 622:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     /* HXTAL is stable */
+ 623:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     /* AHB = SYSCLK */
+ 624:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     RCU_CFG0 |= RCU_AHB_CKSYS_DIV1;
+ 625:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     /* APB2 = AHB/1 */
+ 626:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     RCU_CFG0 |= RCU_APB2_CKAHB_DIV1;
+ 627:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     /* APB1 = AHB/2 */
+ 628:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     RCU_CFG0 |= RCU_APB1_CKAHB_DIV2;
+ 629:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 630:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     /* CK_PLL = (CK_PREDIV0) * 18 = 72 MHz */ 
+ 631:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     RCU_CFG0 &= ~(RCU_CFG0_PLLMF | RCU_CFG0_PLLMF_4);
+ 632:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     RCU_CFG0 |= (RCU_PLLSRC_HXTAL | RCU_PLL_MUL18);
+ 633:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 634:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 635:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     if(HXTAL_VALUE==25000000){
+ 636:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 637:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****         /* CK_PREDIV0 = (CK_HXTAL)/5 *8 /10 = 4 MHz */
+ 638:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****         RCU_CFG1 &= ~(RCU_CFG1_PREDV0SEL | RCU_CFG1_PLL1MF | RCU_CFG1_PREDV1 | RCU_CFG1_PREDV0);
+ 639:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****         RCU_CFG1 |= (RCU_PREDV0SRC_CKPLL1 | RCU_PLL1_MUL8 | RCU_PREDV1_DIV5 | RCU_PREDV0_DIV10);
+ 640:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 641:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****         /* enable PLL1 */
+ 642:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****         RCU_CTL |= RCU_CTL_PLL1EN;
+ 643:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****         /* wait till PLL1 is ready */
+ 644:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****         while((RCU_CTL & RCU_CTL_PLL1STB) == 0){
+ 645:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****         }
+ 646:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 647:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     }else if(HXTAL_VALUE==8000000){
+ 648:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 		RCU_CFG1 &= ~(RCU_CFG1_PREDV0SEL | RCU_CFG1_PREDV1 | RCU_CFG1_PLL1MF | RCU_CFG1_PREDV0);
+ 649:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 		RCU_CFG1 |= (RCU_PREDV0SRC_HXTAL | RCU_PREDV0_DIV2 );
+ 650:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     }
+ 651:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 652:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     /* enable PLL */
+ 653:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     RCU_CTL |= RCU_CTL_PLLEN;
+ 654:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 655:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     /* wait until PLL is stable */
+ 656:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     while(0U == (RCU_CTL & RCU_CTL_PLLSTB)){
+ 657:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     }
+ 658:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 659:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     /* select PLL as system clock */
+ 660:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     RCU_CFG0 &= ~RCU_CFG0_SCS;
+ 661:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     RCU_CFG0 |= RCU_CKSYSSRC_PLL;
+ 662:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 663:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     /* wait until PLL is selected as system clock */
+ 664:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     while(0U == (RCU_CFG0 & RCU_SCSS_PLL)){
+ 665:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     }
+ 666:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** }
+ 667:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccpJADio.s 			page 14
+
+
+ 668:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** #elif defined (__SYSTEM_CLOCK_96M_PLL_HXTAL)
+ 669:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** /*!
+ 670:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     \brief      configure the system clock to 96M by PLL which selects HXTAL(MD/HD/XD:8M; CL:25M) a
+ 671:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     \param[in]  none
+ 672:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     \param[out] none
+ 673:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     \retval     none
+ 674:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** */
+ 675:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** static void system_clock_96m_hxtal(void)
+ 676:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** {
+ 677:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     uint32_t timeout = 0U;
+ 678:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     uint32_t stab_flag = 0U;
+ 679:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 680:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     /* enable HXTAL */
+ 681:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     RCU_CTL |= RCU_CTL_HXTALEN;
+ 682:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 683:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     /* wait until HXTAL is stable or the startup time is longer than HXTAL_STARTUP_TIMEOUT */
+ 684:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     do{
+ 685:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****         timeout++;
+ 686:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****         stab_flag = (RCU_CTL & RCU_CTL_HXTALSTB);
+ 687:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     }while((0U == stab_flag) && (HXTAL_STARTUP_TIMEOUT != timeout));
+ 688:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 689:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     /* if fail */
+ 690:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     if(0U == (RCU_CTL & RCU_CTL_HXTALSTB)){
+ 691:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****         while(1){
+ 692:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****         }
+ 693:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     }
+ 694:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 695:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     /* HXTAL is stable */
+ 696:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     /* AHB = SYSCLK */
+ 697:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     RCU_CFG0 |= RCU_AHB_CKSYS_DIV1;
+ 698:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     /* APB2 = AHB/1 */
+ 699:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     RCU_CFG0 |= RCU_APB2_CKAHB_DIV1;
+ 700:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     /* APB1 = AHB/2 */
+ 701:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     RCU_CFG0 |= RCU_APB1_CKAHB_DIV2;
+ 702:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 703:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     if(HXTAL_VALUE==25000000){
+ 704:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 705:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****         /* CK_PLL = (CK_PREDIV0) * 24 = 96 MHz */
+ 706:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****         RCU_CFG0 &= ~(RCU_CFG0_PLLMF | RCU_CFG0_PLLMF_4);
+ 707:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****         RCU_CFG0 |= (RCU_PLLSRC_HXTAL | RCU_PLL_MUL24);
+ 708:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 709:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****         /* CK_PREDIV0 = (CK_HXTAL)/5 *8 /10 = 4 MHz */
+ 710:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****         RCU_CFG1 &= ~(RCU_CFG1_PREDV0SEL | RCU_CFG1_PLL1MF | RCU_CFG1_PREDV1 | RCU_CFG1_PREDV0);
+ 711:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****         RCU_CFG1 |= (RCU_PREDV0SRC_CKPLL1 | RCU_PLL1_MUL8 | RCU_PREDV1_DIV5 | RCU_PREDV0_DIV10);
+ 712:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****         /* enable PLL1 */
+ 713:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****         RCU_CTL |= RCU_CTL_PLL1EN;
+ 714:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****         /* wait till PLL1 is ready */
+ 715:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****         while((RCU_CTL & RCU_CTL_PLL1STB) == 0){
+ 716:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****         }
+ 717:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 718:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     }else if(HXTAL_VALUE==8000000){
+ 719:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****         /* CK_PLL = (CK_PREDIV0) * 24 = 96 MHz */
+ 720:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****         RCU_CFG0 &= ~(RCU_CFG0_PLLMF | RCU_CFG0_PLLMF_4);
+ 721:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****         RCU_CFG0 |= (RCU_PLLSRC_HXTAL | RCU_PLL_MUL24);
+ 722:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 723:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 		RCU_CFG1 &= ~(RCU_CFG1_PREDV0SEL | RCU_CFG1_PREDV1 | RCU_CFG1_PLL1MF | RCU_CFG1_PREDV0);
+ 724:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 		RCU_CFG1 |= (RCU_PREDV0SRC_HXTAL | RCU_PREDV0_DIV2 );
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccpJADio.s 			page 15
+
+
+ 725:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     }
+ 726:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 727:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     /* enable PLL */
+ 728:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     RCU_CTL |= RCU_CTL_PLLEN;
+ 729:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 730:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     /* wait until PLL is stable */
+ 731:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     while(0U == (RCU_CTL & RCU_CTL_PLLSTB)){
+ 732:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     }
+ 733:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 734:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     /* select PLL as system clock */
+ 735:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     RCU_CFG0 &= ~RCU_CFG0_SCS;
+ 736:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     RCU_CFG0 |= RCU_CKSYSSRC_PLL;
+ 737:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 738:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     /* wait until PLL is selected as system clock */
+ 739:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     while(0U == (RCU_CFG0 & RCU_SCSS_PLL)){
+ 740:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     }
+ 741:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** }
+ 742:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 743:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** #elif defined (__SYSTEM_CLOCK_108M_PLL_HXTAL)
+ 744:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** /*!
+ 745:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     \brief      configure the system clock to 108M by PLL which selects HXTAL(MD/HD/XD:8M; CL:25M) 
+ 746:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     \param[in]  none
+ 747:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     \param[out] none
+ 748:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     \retval     none
+ 749:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** */
+ 750:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 751:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** static void system_clock_108m_hxtal(void)
+ 752:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** {
+ 753:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     uint32_t timeout   = 0U;
+ 754:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     uint32_t stab_flag = 0U;
+ 755:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 756:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     /* enable HXTAL */
+ 757:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     RCU_CTL |= RCU_CTL_HXTALEN;
+  66              		.loc 1 757 13
+  67 004c C165     		li	a1,65536
+  68              	.LBE10:
+  69              	.LBE9:
+  70              	.LBE8:
+ 172:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     /* disable all interrupts */
+  71              		.loc 1 172 13
+  72 004e F18E     		and	a3,a3,a2
+  73 0050 94C3     		sw	a3,0(a5)
+ 174:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+  74              		.loc 1 174 5 is_stmt 1
+ 174:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+  75              		.loc 1 174 13 is_stmt 0
+  76 0052 98C7     		sw	a4,8(a5)
+ 177:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** }
+  77              		.loc 1 177 5 is_stmt 1
+ 132:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+  78              		.loc 1 132 5
+  79              	.LBB15:
+  80              	.LBB13:
+  81              	.LBB11:
+ 753:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     uint32_t stab_flag = 0U;
+  82              		.loc 1 753 5
+  83              	.LVL0:
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccpJADio.s 			page 16
+
+
+ 754:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+  84              		.loc 1 754 5
+  85              		.loc 1 757 5
+  86              		.loc 1 757 13 is_stmt 0
+  87 0054 9843     		lw	a4,0(a5)
+  88 0056 9386F5FF 		addi	a3,a1,-1
+ 758:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 759:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     /* wait until HXTAL is stable or the startup time is longer than HXTAL_STARTUP_TIMEOUT */
+ 760:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     do{
+ 761:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****         timeout++;
+ 762:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****         stab_flag = (RCU_CTL & RCU_CTL_HXTALSTB);
+  89              		.loc 1 762 22
+  90 005a 37160240 		li	a2,1073876992
+ 757:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+  91              		.loc 1 757 13
+  92 005e 4D8F     		or	a4,a4,a1
+  93 0060 98C3     		sw	a4,0(a5)
+  94 0062 11A0     		j	.L3
+  95              	.LVL1:
+  96              	.L20:
+ 763:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     }while((0U == stab_flag) && (HXTAL_STARTUP_TIMEOUT != timeout));
+  97              		.loc 1 763 30
+  98 0064 99C6     		beq	a3,zero,.L2
+  99              	.LVL2:
+ 100              	.L3:
+ 760:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****         timeout++;
+ 101              		.loc 1 760 5 is_stmt 1
+ 761:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****         stab_flag = (RCU_CTL & RCU_CTL_HXTALSTB);
+ 102              		.loc 1 761 9
+ 762:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     }while((0U == stab_flag) && (HXTAL_STARTUP_TIMEOUT != timeout));
+ 103              		.loc 1 762 9
+ 762:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     }while((0U == stab_flag) && (HXTAL_STARTUP_TIMEOUT != timeout));
+ 104              		.loc 1 762 22 is_stmt 0
+ 105 0066 1C42     		lw	a5,0(a2)
+ 106              	.LVL3:
+ 107 0068 FD16     		addi	a3,a3,-1
+ 108              	.LVL4:
+ 109              		.loc 1 763 5
+ 110 006a 1397E700 		slli	a4,a5,14
+ 111 006e E35B07FE 		bge	a4,zero,.L20
+ 112              	.L2:
+ 764:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 765:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     /* if fail */
+ 766:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     if(0U == (RCU_CTL & RCU_CTL_HXTALSTB)){
+ 113              		.loc 1 766 5 is_stmt 1
+ 114              		.loc 1 766 15 is_stmt 0
+ 115 0072 B7170240 		li	a5,1073876992
+ 116              	.LVL5:
+ 117 0076 9843     		lw	a4,0(a5)
+ 118              		.loc 1 766 7
+ 119 0078 9316E700 		slli	a3,a4,14
+ 120              	.LVL6:
+ 121 007c 63D0060A 		bge	a3,zero,.L5
+ 767:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****         while(1){
+ 768:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****         }
+ 769:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     }
+ 770:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccpJADio.s 			page 17
+
+
+ 771:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     /* HXTAL is stable */
+ 772:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     /* AHB = SYSCLK */
+ 773:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     RCU_CFG0 |= RCU_AHB_CKSYS_DIV1;
+ 122              		.loc 1 773 5 is_stmt 1
+ 123              		.loc 1 773 14 is_stmt 0
+ 124 0080 D843     		lw	a4,4(a5)
+ 774:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     /* APB2 = AHB/1 */
+ 775:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     RCU_CFG0 |= RCU_APB2_CKAHB_DIV1;
+ 776:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     /* APB1 = AHB/2 */
+ 777:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     RCU_CFG0 |= RCU_APB1_CKAHB_DIV2;
+ 778:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 779:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     /* CK_PLL = (CK_PREDIV0) * 27 = 108 MHz */ 
+ 780:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     RCU_CFG0 &= ~(RCU_CFG0_PLLMF | RCU_CFG0_PLLMF_4);
+ 125              		.loc 1 780 14
+ 126 0082 3706C4DF 		li	a2,-540803072
+ 127 0086 7D16     		addi	a2,a2,-1
+ 773:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     /* APB2 = AHB/1 */
+ 128              		.loc 1 773 14
+ 129 0088 D8C3     		sw	a4,4(a5)
+ 775:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     /* APB1 = AHB/2 */
+ 130              		.loc 1 775 5 is_stmt 1
+ 775:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     /* APB1 = AHB/2 */
+ 131              		.loc 1 775 14 is_stmt 0
+ 132 008a D843     		lw	a4,4(a5)
+ 781:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     RCU_CFG0 |= (RCU_PLLSRC_HXTAL | RCU_PLL_MUL27);
+ 782:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 783:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     if(HXTAL_VALUE==25000000){
+ 784:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 		/* CK_PREDIV0 = (CK_HXTAL)/5 *8 /10 = 4 MHz */
+ 785:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 		RCU_CFG1 &= ~(RCU_CFG1_PREDV0SEL | RCU_CFG1_PREDV1 | RCU_CFG1_PLL1MF | RCU_CFG1_PREDV0);
+ 786:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 		RCU_CFG1 |= (RCU_PREDV0SRC_CKPLL1 | RCU_PREDV1_DIV5 | RCU_PLL1_MUL8 | RCU_PREDV0_DIV10);
+ 787:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 788:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 		/* enable PLL1 */
+ 789:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 		RCU_CTL |= RCU_CTL_PLL1EN;
+ 790:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 		/* wait till PLL1 is ready */
+ 791:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 		while(0U == (RCU_CTL & RCU_CTL_PLL1STB)){
+ 792:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 		}
+ 793:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 794:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 		/* enable PLL1 */
+ 795:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 		RCU_CTL |= RCU_CTL_PLL2EN;
+ 796:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 		/* wait till PLL1 is ready */
+ 797:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 		while(0U == (RCU_CTL & RCU_CTL_PLL2STB)){
+ 798:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 		}
+ 799:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     }else if(HXTAL_VALUE==8000000){
+ 800:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 		RCU_CFG1 &= ~(RCU_CFG1_PREDV0SEL | RCU_CFG1_PREDV1 | RCU_CFG1_PLL1MF | RCU_CFG1_PREDV0);
+ 801:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 		RCU_CFG1 |= (RCU_PREDV0SRC_HXTAL | RCU_PREDV0_DIV2 | RCU_PREDV1_DIV2 | RCU_PLL1_MUL20 | RCU_PLL2_
+ 802:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 803:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 		/* enable PLL1 */
+ 804:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 		RCU_CTL |= RCU_CTL_PLL1EN;
+ 805:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 		/* wait till PLL1 is ready */
+ 806:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 		while(0U == (RCU_CTL & RCU_CTL_PLL1STB)){
+ 133              		.loc 1 806 16
+ 134 008c B7160240 		li	a3,1073876992
+ 775:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     /* APB1 = AHB/2 */
+ 135              		.loc 1 775 14
+ 136 0090 D8C3     		sw	a4,4(a5)
+ 777:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 137              		.loc 1 777 5 is_stmt 1
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccpJADio.s 			page 18
+
+
+ 777:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 138              		.loc 1 777 14 is_stmt 0
+ 139 0092 D843     		lw	a4,4(a5)
+ 140 0094 13670740 		ori	a4,a4,1024
+ 141 0098 D8C3     		sw	a4,4(a5)
+ 780:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     RCU_CFG0 |= (RCU_PLLSRC_HXTAL | RCU_PLL_MUL27);
+ 142              		.loc 1 780 5 is_stmt 1
+ 780:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     RCU_CFG0 |= (RCU_PLLSRC_HXTAL | RCU_PLL_MUL27);
+ 143              		.loc 1 780 14 is_stmt 0
+ 144 009a D843     		lw	a4,4(a5)
+ 145 009c 718F     		and	a4,a4,a2
+ 146 009e D8C3     		sw	a4,4(a5)
+ 781:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     RCU_CFG0 |= (RCU_PLLSRC_HXTAL | RCU_PLL_MUL27);
+ 147              		.loc 1 781 5 is_stmt 1
+ 781:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     RCU_CFG0 |= (RCU_PLLSRC_HXTAL | RCU_PLL_MUL27);
+ 148              		.loc 1 781 14 is_stmt 0
+ 149 00a0 D843     		lw	a4,4(a5)
+ 150 00a2 37062920 		li	a2,539557888
+ 151 00a6 518F     		or	a4,a4,a2
+ 152 00a8 D8C3     		sw	a4,4(a5)
+ 783:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 		/* CK_PREDIV0 = (CK_HXTAL)/5 *8 /10 = 4 MHz */
+ 153              		.loc 1 783 5 is_stmt 1
+ 799:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 		RCU_CFG1 &= ~(RCU_CFG1_PREDV0SEL | RCU_CFG1_PREDV1 | RCU_CFG1_PLL1MF | RCU_CFG1_PREDV0);
+ 154              		.loc 1 799 11
+ 800:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 		RCU_CFG1 |= (RCU_PREDV0SRC_HXTAL | RCU_PREDV0_DIV2 | RCU_PREDV1_DIV2 | RCU_PLL1_MUL20 | RCU_PLL2_
+ 155              		.loc 1 800 3
+ 800:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 		RCU_CFG1 |= (RCU_PREDV0SRC_HXTAL | RCU_PREDV0_DIV2 | RCU_PREDV1_DIV2 | RCU_PLL1_MUL20 | RCU_PLL2_
+ 156              		.loc 1 800 12 is_stmt 0
+ 157 00aa D857     		lw	a4,44(a5)
+ 158 00ac 3D76     		li	a2,-69632
+ 159 00ae 718F     		and	a4,a4,a2
+ 160 00b0 D8D7     		sw	a4,44(a5)
+ 801:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 161              		.loc 1 801 3 is_stmt 1
+ 801:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 162              		.loc 1 801 12 is_stmt 0
+ 163 00b2 D857     		lw	a4,44(a5)
+ 164 00b4 4166     		li	a2,65536
+ 165 00b6 130616F1 		addi	a2,a2,-239
+ 166 00ba 518F     		or	a4,a4,a2
+ 167 00bc D8D7     		sw	a4,44(a5)
+ 804:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 		/* wait till PLL1 is ready */
+ 168              		.loc 1 804 3 is_stmt 1
+ 804:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 		/* wait till PLL1 is ready */
+ 169              		.loc 1 804 11 is_stmt 0
+ 170 00be 9843     		lw	a4,0(a5)
+ 171 00c0 37060004 		li	a2,67108864
+ 172 00c4 518F     		or	a4,a4,a2
+ 173 00c6 98C3     		sw	a4,0(a5)
+ 174              		.loc 1 806 3 is_stmt 1
+ 175              	.L6:
+ 807:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 		}
+ 176              		.loc 1 807 3
+ 806:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 		}
+ 177              		.loc 1 806 16 is_stmt 0
+ 178 00c8 9C42     		lw	a5,0(a3)
+ 806:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 		}
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccpJADio.s 			page 19
+
+
+ 179              		.loc 1 806 8
+ 180 00ca 13974700 		slli	a4,a5,4
+ 181 00ce E35D07FE 		bge	a4,zero,.L6
+ 808:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 809:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 		/* enable PLL2 */
+ 810:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 		RCU_CTL |= RCU_CTL_PLL2EN;
+ 182              		.loc 1 810 3 is_stmt 1
+ 183              		.loc 1 810 11 is_stmt 0
+ 184 00d2 9C42     		lw	a5,0(a3)
+ 185 00d4 37060010 		li	a2,268435456
+ 811:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 		/* wait till PLL1 is ready */
+ 812:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 		while(0U == (RCU_CTL & RCU_CTL_PLL2STB)){
+ 186              		.loc 1 812 16
+ 187 00d8 37170240 		li	a4,1073876992
+ 810:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 		/* wait till PLL1 is ready */
+ 188              		.loc 1 810 11
+ 189 00dc D18F     		or	a5,a5,a2
+ 190 00de 9CC2     		sw	a5,0(a3)
+ 191              		.loc 1 812 3 is_stmt 1
+ 192              	.L7:
+ 813:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 		}
+ 193              		.loc 1 813 3
+ 812:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 		}
+ 194              		.loc 1 812 16 is_stmt 0
+ 195 00e0 1C43     		lw	a5,0(a4)
+ 812:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 		}
+ 196              		.loc 1 812 8
+ 197 00e2 93962700 		slli	a3,a5,2
+ 198 00e6 E3DD06FE 		bge	a3,zero,.L7
+ 814:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 815:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     }
+ 816:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     /* enable PLL */
+ 817:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     RCU_CTL |= RCU_CTL_PLLEN;
+ 199              		.loc 1 817 5 is_stmt 1
+ 200              		.loc 1 817 13 is_stmt 0
+ 201 00ea 1443     		lw	a3,0(a4)
+ 202 00ec 37060001 		li	a2,16777216
+ 818:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 819:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     /* wait until PLL is stable */
+ 820:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     while(0U == (RCU_CTL & RCU_CTL_PLLSTB)){
+ 203              		.loc 1 820 18
+ 204 00f0 B7170240 		li	a5,1073876992
+ 817:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 205              		.loc 1 817 13
+ 206 00f4 D18E     		or	a3,a3,a2
+ 207 00f6 14C3     		sw	a3,0(a4)
+ 208              		.loc 1 820 5 is_stmt 1
+ 209              	.L8:
+ 821:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     }
+ 210              		.loc 1 821 5
+ 820:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     }
+ 211              		.loc 1 820 18 is_stmt 0
+ 212 00f8 9843     		lw	a4,0(a5)
+ 820:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     }
+ 213              		.loc 1 820 10
+ 214 00fa 93166700 		slli	a3,a4,6
+ 215 00fe E3DD06FE 		bge	a3,zero,.L8
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccpJADio.s 			page 20
+
+
+ 822:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 823:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     /* select PLL as system clock */
+ 824:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     RCU_CFG0 &= ~RCU_CFG0_SCS;
+ 216              		.loc 1 824 5 is_stmt 1
+ 217              		.loc 1 824 14 is_stmt 0
+ 218 0102 D843     		lw	a4,4(a5)
+ 825:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     RCU_CFG0 |= RCU_CKSYSSRC_PLL;
+ 826:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 827:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     /* wait until PLL is selected as system clock */
+ 828:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     while(0U == (RCU_CFG0 & RCU_SCSS_PLL)){
+ 219              		.loc 1 828 18
+ 220 0104 B7160240 		li	a3,1073876992
+ 824:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     RCU_CFG0 |= RCU_CKSYSSRC_PLL;
+ 221              		.loc 1 824 14
+ 222 0108 719B     		andi	a4,a4,-4
+ 223 010a D8C3     		sw	a4,4(a5)
+ 825:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     RCU_CFG0 |= RCU_CKSYSSRC_PLL;
+ 224              		.loc 1 825 5 is_stmt 1
+ 825:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     RCU_CFG0 |= RCU_CKSYSSRC_PLL;
+ 225              		.loc 1 825 14 is_stmt 0
+ 226 010c D843     		lw	a4,4(a5)
+ 227 010e 13672700 		ori	a4,a4,2
+ 228 0112 D8C3     		sw	a4,4(a5)
+ 229              		.loc 1 828 5 is_stmt 1
+ 230              	.L9:
+ 829:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     }
+ 231              		.loc 1 829 5
+ 828:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     }
+ 232              		.loc 1 828 18 is_stmt 0
+ 233 0114 DC42     		lw	a5,4(a3)
+ 828:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     }
+ 234              		.loc 1 828 27
+ 235 0116 A18B     		andi	a5,a5,8
+ 828:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     }
+ 236              		.loc 1 828 10
+ 237 0118 F5DF     		beq	a5,zero,.L9
+ 238              	.LBE11:
+ 239              	.LBE13:
+ 240              	.LBE15:
+ 178:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 241              		.loc 1 178 1
+ 242 011a 8280     		ret
+ 243              	.L5:
+ 244              	.LBB16:
+ 245              	.LBB14:
+ 246              	.LBB12:
+ 767:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****         }
+ 247              		.loc 1 767 9 is_stmt 1
+ 768:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     }
+ 248              		.loc 1 768 9
+ 767:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****         }
+ 249              		.loc 1 767 9
+ 768:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     }
+ 250              		.loc 1 768 9
+ 251 011c 01A0     		j	.L5
+ 252              	.LBE12:
+ 253              	.LBE14:
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccpJADio.s 			page 21
+
+
+ 254              	.LBE16:
+ 255              		.cfi_endproc
+ 256              	.LFE3:
+ 258              		.section	.text.SystemCoreClockUpdate,"ax",@progbits
+ 259              		.align	1
+ 260              		.globl	SystemCoreClockUpdate
+ 262              	SystemCoreClockUpdate:
+ 263              	.LFB4:
+ 187:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     uint32_t scss;
+ 264              		.loc 1 187 1
+ 265              		.cfi_startproc
+ 188:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     uint32_t pllsel, predv0sel, pllmf, ck_src;
+ 266              		.loc 1 188 5
+ 189:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     uint32_t predv0, predv1, pll1mf;
+ 267              		.loc 1 189 5
+ 190:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 268              		.loc 1 190 5
+ 192:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     scss = 2;
+ 269              		.loc 1 192 5
+ 192:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     scss = 2;
+ 270              		.loc 1 192 12 is_stmt 0
+ 271 0000 B7170240 		li	a5,1073876992
+ 272 0004 D843     		lw	a4,4(a5)
+ 273              	.LVL7:
+ 193:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     switch (scss)
+ 274              		.loc 1 193 5 is_stmt 1
+ 194:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****     {
+ 275              		.loc 1 194 5
+ 209:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 276              		.loc 1 209 13
+ 209:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 277              		.loc 1 209 23 is_stmt 0
+ 278 0006 D843     		lw	a4,4(a5)
+ 211:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 279              		.loc 1 211 13 is_stmt 1
+ 280              	.LVL8:
+ 213:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****                 /* PLL clock source is IRC8M/2 */
+ 281              		.loc 1 213 13
+ 218:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 282              		.loc 1 218 17
+ 220:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 283              		.loc 1 220 17
+ 220:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 284              		.loc 1 220 30 is_stmt 0
+ 285 0008 D857     		lw	a4,44(a5)
+ 286              	.LVL9:
+ 223:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****                     predv1 = ((RCU_CFG1 & RCU_CFG1_PREDV1) >> 4) + 1U;
+ 287              		.loc 1 223 17 is_stmt 1
+ 223:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****                     predv1 = ((RCU_CFG1 & RCU_CFG1_PREDV1) >> 4) + 1U;
+ 288              		.loc 1 223 19 is_stmt 0
+ 289 000a 9316F700 		slli	a3,a4,15
+ 290 000e 63D70602 		bge	a3,zero,.L29
+ 224:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****                     pll1mf = ((RCU_CFG1 & RCU_CFG1_PLL1MF) >> 8) + 2U;
+ 291              		.loc 1 224 21 is_stmt 1
+ 224:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****                     pll1mf = ((RCU_CFG1 & RCU_CFG1_PLL1MF) >> 8) + 2U;
+ 292              		.loc 1 224 32 is_stmt 0
+ 293 0012 D857     		lw	a4,44(a5)
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccpJADio.s 			page 22
+
+
+ 294              	.LVL10:
+ 225:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****                     if(17U == pll1mf){
+ 295              		.loc 1 225 32
+ 296 0014 DC57     		lw	a5,44(a5)
+ 226:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****                         pll1mf = 20U;
+ 297              		.loc 1 226 23
+ 298 0016 4546     		li	a2,17
+ 224:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****                     pll1mf = ((RCU_CFG1 & RCU_CFG1_PLL1MF) >> 8) + 2U;
+ 299              		.loc 1 224 60
+ 300 0018 1183     		srli	a4,a4,4
+ 225:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****                     if(17U == pll1mf){
+ 301              		.loc 1 225 60
+ 302 001a A183     		srli	a5,a5,8
+ 303 001c BD8B     		andi	a5,a5,15
+ 224:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****                     pll1mf = ((RCU_CFG1 & RCU_CFG1_PLL1MF) >> 8) + 2U;
+ 304              		.loc 1 224 60
+ 305 001e 3D8B     		andi	a4,a4,15
+ 225:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****                     if(17U == pll1mf){
+ 306              		.loc 1 225 28
+ 307 0020 8907     		addi	a5,a5,2
+ 224:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****                     pll1mf = ((RCU_CFG1 & RCU_CFG1_PLL1MF) >> 8) + 2U;
+ 308              		.loc 1 224 28
+ 309 0022 93061700 		addi	a3,a4,1
+ 310              	.LVL11:
+ 225:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****                     if(17U == pll1mf){
+ 311              		.loc 1 225 21 is_stmt 1
+ 226:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****                         pll1mf = 20U;
+ 312              		.loc 1 226 21
+ 226:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****                         pll1mf = 20U;
+ 313              		.loc 1 226 23 is_stmt 0
+ 314 0026 638BC706 		beq	a5,a2,.L30
+ 229:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****                 }
+ 315              		.loc 1 229 21 is_stmt 1
+ 229:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****                 }
+ 316              		.loc 1 229 38 is_stmt 0
+ 317 002a 37177A00 		li	a4,7999488
+ 318 002e 13070720 		addi	a4,a4,512
+ 319 0032 3357D702 		divu	a4,a4,a3
+ 229:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****                 }
+ 320              		.loc 1 229 28
+ 321 0036 3307F702 		mul	a4,a4,a5
+ 322              	.LVL12:
+ 323 003a 29A0     		j	.L22
+ 324              	.LVL13:
+ 325              	.L29:
+ 218:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 326              		.loc 1 218 24
+ 327 003c 37177A00 		li	a4,7999488
+ 328              	.LVL14:
+ 329 0040 13070720 		addi	a4,a4,512
+ 330              	.LVL15:
+ 331              	.L22:
+ 231:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****                 ck_src /= predv0;
+ 332              		.loc 1 231 17 is_stmt 1
+ 231:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****                 ck_src /= predv0;
+ 333              		.loc 1 231 27 is_stmt 0
+ 334 0044 37160240 		li	a2,1073876992
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccpJADio.s 			page 23
+
+
+ 335 0048 5456     		lw	a3,44(a2)
+ 336              	.LVL16:
+ 232:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****             }
+ 337              		.loc 1 232 17 is_stmt 1
+ 236:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 338              		.loc 1 236 21 is_stmt 0
+ 339 004a 5C42     		lw	a5,4(a2)
+ 238:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****                 pllmf |= 0x10U;
+ 340              		.loc 1 238 17
+ 341 004c 5042     		lw	a2,4(a2)
+ 231:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****                 ck_src /= predv0;
+ 342              		.loc 1 231 36
+ 343 004e BD8A     		andi	a3,a3,15
+ 344              	.LVL17:
+ 231:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****                 ck_src /= predv0;
+ 345              		.loc 1 231 24
+ 346 0050 8506     		addi	a3,a3,1
+ 347              	.LVL18:
+ 236:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 348              		.loc 1 236 21
+ 349 0052 C983     		srli	a5,a5,18
+ 232:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****             }
+ 350              		.loc 1 232 24
+ 351 0054 3357D702 		divu	a4,a4,a3
+ 352              	.LVL19:
+ 236:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 353              		.loc 1 236 13 is_stmt 1
+ 238:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****                 pllmf |= 0x10U;
+ 354              		.loc 1 238 15 is_stmt 0
+ 355 0058 93162600 		slli	a3,a2,2
+ 356              	.LVL20:
+ 236:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 357              		.loc 1 236 19
+ 358 005c BD8B     		andi	a5,a5,15
+ 359              	.LVL21:
+ 238:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****                 pllmf |= 0x10U;
+ 360              		.loc 1 238 13 is_stmt 1
+ 238:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****                 pllmf |= 0x10U;
+ 361              		.loc 1 238 15 is_stmt 0
+ 362 005e 63DC0600 		bge	a3,zero,.L24
+ 239:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****             }
+ 363              		.loc 1 239 17 is_stmt 1
+ 239:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****             }
+ 364              		.loc 1 239 23 is_stmt 0
+ 365 0062 93E70701 		ori	a5,a5,16
+ 366              	.LVL22:
+ 242:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****                 pllmf += 1U;
+ 367              		.loc 1 242 13 is_stmt 1
+ 368              	.L25:
+ 243:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****             }else{
+ 369              		.loc 1 243 17
+ 248:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 370              		.loc 1 248 13
+ 243:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****             }else{
+ 371              		.loc 1 243 23 is_stmt 0
+ 372 0066 8507     		addi	a5,a5,1
+ 373              	.LVL23:
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccpJADio.s 			page 24
+
+
+ 248:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 374              		.loc 1 248 38
+ 375 0068 B387E702 		mul	a5,a5,a4
+ 376              	.LVL24:
+ 248:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 377              		.loc 1 248 29
+ 378 006c 37070000 		lui	a4,%hi(.LANCHOR0)
+ 379              	.LVL25:
+ 380 0070 2320F700 		sw	a5,%lo(.LANCHOR0)(a4)
+ 250:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****                 /* PLL source clock multiply by 6.5 */
+ 381              		.loc 1 250 13 is_stmt 1
+ 382 0074 8280     		ret
+ 383              	.LVL26:
+ 384              	.L24:
+ 242:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****                 pllmf += 1U;
+ 385              		.loc 1 242 13
+ 242:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****                 pllmf += 1U;
+ 386              		.loc 1 242 15 is_stmt 0
+ 387 0076 BD46     		li	a3,15
+ 388 0078 E387D7FE 		beq	a5,a3,.L25
+ 245:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****             }
+ 389              		.loc 1 245 17 is_stmt 1
+ 245:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****             }
+ 390              		.loc 1 245 23 is_stmt 0
+ 391 007c 8907     		addi	a5,a5,2
+ 392              	.LVL27:
+ 248:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 393              		.loc 1 248 13 is_stmt 1
+ 250:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****                 /* PLL source clock multiply by 6.5 */
+ 394              		.loc 1 250 13
+ 250:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****                 /* PLL source clock multiply by 6.5 */
+ 395              		.loc 1 250 15 is_stmt 0
+ 396 007e 6399D702 		bne	a5,a3,.L31
+ 252:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****             }
+ 397              		.loc 1 252 17 is_stmt 1
+ 252:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****             }
+ 398              		.loc 1 252 42 is_stmt 0
+ 399 0082 93171700 		slli	a5,a4,1
+ 400              	.LVL28:
+ 401 0086 BA97     		add	a5,a5,a4
+ 402 0088 93961700 		slli	a3,a5,1
+ 252:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****             }
+ 403              		.loc 1 252 56
+ 404 008c 93571700 		srli	a5,a4,1
+ 252:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****             }
+ 405              		.loc 1 252 47
+ 406 0090 B697     		add	a5,a3,a5
+ 252:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****             }
+ 407              		.loc 1 252 33
+ 408 0092 37070000 		lui	a4,%hi(.LANCHOR0)
+ 409              	.LVL29:
+ 410 0096 2320F700 		sw	a5,%lo(.LANCHOR0)(a4)
+ 262:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 411              		.loc 1 262 1
+ 412 009a 8280     		ret
+ 413              	.LVL30:
+ 414              	.L30:
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccpJADio.s 			page 25
+
+
+ 229:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****                 }
+ 415              		.loc 1 229 38
+ 416 009c 37177A00 		li	a4,7999488
+ 417 00a0 13070720 		addi	a4,a4,512
+ 418 00a4 3357D702 		divu	a4,a4,a3
+ 227:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****                     }
+ 419              		.loc 1 227 32
+ 420 00a8 D147     		li	a5,20
+ 421              	.LVL31:
+ 229:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****                 }
+ 422              		.loc 1 229 21 is_stmt 1
+ 229:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c ****                 }
+ 423              		.loc 1 229 28 is_stmt 0
+ 424 00aa 3307F702 		mul	a4,a4,a5
+ 425              	.LVL32:
+ 426 00ae 59BF     		j	.L22
+ 427              	.LVL33:
+ 428              	.L31:
+ 248:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 429              		.loc 1 248 38
+ 430 00b0 B307F702 		mul	a5,a4,a5
+ 431              	.LVL34:
+ 248:arch/riscv/mach-gd32vf10x/system/system_gd32vf103.c **** 
+ 432              		.loc 1 248 29
+ 433 00b4 37070000 		lui	a4,%hi(.LANCHOR0)
+ 434              	.LVL35:
+ 435 00b8 2320F700 		sw	a5,%lo(.LANCHOR0)(a4)
+ 436 00bc 8280     		ret
+ 437              		.cfi_endproc
+ 438              	.LFE4:
+ 440              		.globl	SystemCoreClock
+ 441              		.section	.sdata.SystemCoreClock,"aw"
+ 442              		.align	2
+ 443              		.set	.LANCHOR0,. + 0
+ 446              	SystemCoreClock:
+ 447 0000 00F36F06 		.word	108000000
+ 448              		.text
+ 449              	.Letext0:
+ 450              		.file 2 "d:\\risc_v_gcc\\riscv-none-embed\\include\\machine\\_default_types.h"
+ 451              		.file 3 "d:\\risc_v_gcc\\riscv-none-embed\\include\\sys\\_stdint.h"
+ 452              		.file 4 "arch/riscv/mach-gd32vf10x/system/system_gd32vf103.h"
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccpJADio.s 			page 26
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 system_gd32vf103.c
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:10     .text.SystemInit:0000000000000000 SystemInit
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:14     .text.SystemInit:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:15     .text.SystemInit:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:16     .text.SystemInit:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:17     .text.SystemInit:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:20     .text.SystemInit:0000000000000006 .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:23     .text.SystemInit:000000000000000c .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:26     .text.SystemInit:0000000000000012 .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:27     .text.SystemInit:0000000000000012 .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:29     .text.SystemInit:0000000000000014 .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:32     .text.SystemInit:000000000000001a .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:35     .text.SystemInit:000000000000001e .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:36     .text.SystemInit:000000000000001e .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:42     .text.SystemInit:000000000000002a .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:43     .text.SystemInit:000000000000002a .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:49     .text.SystemInit:0000000000000036 .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:50     .text.SystemInit:0000000000000036 .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:56     .text.SystemInit:0000000000000042 .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:57     .text.SystemInit:0000000000000042 .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:59     .text.SystemInit:0000000000000046 .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:60     .text.SystemInit:0000000000000046 .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:62     .text.SystemInit:0000000000000048 .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:67     .text.SystemInit:000000000000004c .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:72     .text.SystemInit:000000000000004e .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:75     .text.SystemInit:0000000000000052 .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:76     .text.SystemInit:0000000000000052 .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:78     .text.SystemInit:0000000000000054 .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:82     .text.SystemInit:0000000000000054 .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:84     .text.SystemInit:0000000000000054 .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:85     .text.SystemInit:0000000000000054 .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:86     .text.SystemInit:0000000000000054 .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:87     .text.SystemInit:0000000000000054 .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:90     .text.SystemInit:000000000000005a .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:92     .text.SystemInit:000000000000005e .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:98     .text.SystemInit:0000000000000064 .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:102    .text.SystemInit:0000000000000066 .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:103    .text.SystemInit:0000000000000066 .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:104    .text.SystemInit:0000000000000066 .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:105    .text.SystemInit:0000000000000066 .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:110    .text.SystemInit:000000000000006a .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:114    .text.SystemInit:0000000000000072 .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:115    .text.SystemInit:0000000000000072 .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:119    .text.SystemInit:0000000000000078 .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:123    .text.SystemInit:0000000000000080 .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:124    .text.SystemInit:0000000000000080 .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:126    .text.SystemInit:0000000000000082 .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:129    .text.SystemInit:0000000000000088 .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:131    .text.SystemInit:000000000000008a .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:132    .text.SystemInit:000000000000008a .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:134    .text.SystemInit:000000000000008c .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:136    .text.SystemInit:0000000000000090 .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:138    .text.SystemInit:0000000000000092 .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:139    .text.SystemInit:0000000000000092 .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:143    .text.SystemInit:000000000000009a .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:144    .text.SystemInit:000000000000009a .L0 
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccpJADio.s 			page 27
+
+
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:148    .text.SystemInit:00000000000000a0 .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:149    .text.SystemInit:00000000000000a0 .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:154    .text.SystemInit:00000000000000aa .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:155    .text.SystemInit:00000000000000aa .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:156    .text.SystemInit:00000000000000aa .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:157    .text.SystemInit:00000000000000aa .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:162    .text.SystemInit:00000000000000b2 .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:163    .text.SystemInit:00000000000000b2 .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:169    .text.SystemInit:00000000000000be .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:170    .text.SystemInit:00000000000000be .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:176    .text.SystemInit:00000000000000c8 .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:177    .text.SystemInit:00000000000000c8 .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:178    .text.SystemInit:00000000000000c8 .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:180    .text.SystemInit:00000000000000ca .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:183    .text.SystemInit:00000000000000d2 .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:184    .text.SystemInit:00000000000000d2 .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:187    .text.SystemInit:00000000000000d8 .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:189    .text.SystemInit:00000000000000dc .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:193    .text.SystemInit:00000000000000e0 .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:194    .text.SystemInit:00000000000000e0 .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:195    .text.SystemInit:00000000000000e0 .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:197    .text.SystemInit:00000000000000e2 .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:200    .text.SystemInit:00000000000000ea .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:201    .text.SystemInit:00000000000000ea .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:204    .text.SystemInit:00000000000000f0 .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:206    .text.SystemInit:00000000000000f4 .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:210    .text.SystemInit:00000000000000f8 .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:211    .text.SystemInit:00000000000000f8 .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:212    .text.SystemInit:00000000000000f8 .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:214    .text.SystemInit:00000000000000fa .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:217    .text.SystemInit:0000000000000102 .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:218    .text.SystemInit:0000000000000102 .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:220    .text.SystemInit:0000000000000104 .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:222    .text.SystemInit:0000000000000108 .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:225    .text.SystemInit:000000000000010c .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:226    .text.SystemInit:000000000000010c .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:231    .text.SystemInit:0000000000000114 .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:232    .text.SystemInit:0000000000000114 .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:233    .text.SystemInit:0000000000000114 .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:235    .text.SystemInit:0000000000000116 .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:237    .text.SystemInit:0000000000000118 .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:242    .text.SystemInit:000000000000011a .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:248    .text.SystemInit:000000000000011c .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:249    .text.SystemInit:000000000000011c .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:250    .text.SystemInit:000000000000011c .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:251    .text.SystemInit:000000000000011c .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:255    .text.SystemInit:000000000000011e .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:262    .text.SystemCoreClockUpdate:0000000000000000 SystemCoreClockUpdate
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:265    .text.SystemCoreClockUpdate:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:266    .text.SystemCoreClockUpdate:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:267    .text.SystemCoreClockUpdate:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:268    .text.SystemCoreClockUpdate:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:269    .text.SystemCoreClockUpdate:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:270    .text.SystemCoreClockUpdate:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:271    .text.SystemCoreClockUpdate:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:275    .text.SystemCoreClockUpdate:0000000000000006 .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:276    .text.SystemCoreClockUpdate:0000000000000006 .L0 
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccpJADio.s 			page 28
+
+
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:277    .text.SystemCoreClockUpdate:0000000000000006 .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:278    .text.SystemCoreClockUpdate:0000000000000006 .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:281    .text.SystemCoreClockUpdate:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:282    .text.SystemCoreClockUpdate:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:283    .text.SystemCoreClockUpdate:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:284    .text.SystemCoreClockUpdate:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:285    .text.SystemCoreClockUpdate:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:288    .text.SystemCoreClockUpdate:000000000000000a .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:289    .text.SystemCoreClockUpdate:000000000000000a .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:292    .text.SystemCoreClockUpdate:0000000000000012 .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:293    .text.SystemCoreClockUpdate:0000000000000012 .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:296    .text.SystemCoreClockUpdate:0000000000000014 .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:298    .text.SystemCoreClockUpdate:0000000000000016 .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:300    .text.SystemCoreClockUpdate:0000000000000018 .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:302    .text.SystemCoreClockUpdate:000000000000001a .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:305    .text.SystemCoreClockUpdate:000000000000001e .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:307    .text.SystemCoreClockUpdate:0000000000000020 .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:309    .text.SystemCoreClockUpdate:0000000000000022 .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:312    .text.SystemCoreClockUpdate:0000000000000026 .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:313    .text.SystemCoreClockUpdate:0000000000000026 .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:314    .text.SystemCoreClockUpdate:0000000000000026 .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:316    .text.SystemCoreClockUpdate:000000000000002a .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:317    .text.SystemCoreClockUpdate:000000000000002a .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:321    .text.SystemCoreClockUpdate:0000000000000036 .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:327    .text.SystemCoreClockUpdate:000000000000003c .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:333    .text.SystemCoreClockUpdate:0000000000000044 .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:334    .text.SystemCoreClockUpdate:0000000000000044 .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:338    .text.SystemCoreClockUpdate:000000000000004a .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:339    .text.SystemCoreClockUpdate:000000000000004a .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:341    .text.SystemCoreClockUpdate:000000000000004c .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:343    .text.SystemCoreClockUpdate:000000000000004e .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:346    .text.SystemCoreClockUpdate:0000000000000050 .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:349    .text.SystemCoreClockUpdate:0000000000000052 .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:351    .text.SystemCoreClockUpdate:0000000000000054 .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:354    .text.SystemCoreClockUpdate:0000000000000058 .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:355    .text.SystemCoreClockUpdate:0000000000000058 .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:358    .text.SystemCoreClockUpdate:000000000000005c .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:361    .text.SystemCoreClockUpdate:000000000000005e .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:362    .text.SystemCoreClockUpdate:000000000000005e .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:364    .text.SystemCoreClockUpdate:0000000000000062 .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:365    .text.SystemCoreClockUpdate:0000000000000062 .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:369    .text.SystemCoreClockUpdate:0000000000000066 .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:370    .text.SystemCoreClockUpdate:0000000000000066 .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:371    .text.SystemCoreClockUpdate:0000000000000066 .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:372    .text.SystemCoreClockUpdate:0000000000000066 .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:375    .text.SystemCoreClockUpdate:0000000000000068 .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:378    .text.SystemCoreClockUpdate:000000000000006c .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:382    .text.SystemCoreClockUpdate:0000000000000074 .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:386    .text.SystemCoreClockUpdate:0000000000000076 .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:387    .text.SystemCoreClockUpdate:0000000000000076 .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:390    .text.SystemCoreClockUpdate:000000000000007c .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:391    .text.SystemCoreClockUpdate:000000000000007c .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:394    .text.SystemCoreClockUpdate:000000000000007e .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:395    .text.SystemCoreClockUpdate:000000000000007e .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:396    .text.SystemCoreClockUpdate:000000000000007e .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:398    .text.SystemCoreClockUpdate:0000000000000082 .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:399    .text.SystemCoreClockUpdate:0000000000000082 .L0 
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccpJADio.s 			page 29
+
+
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:404    .text.SystemCoreClockUpdate:000000000000008c .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:406    .text.SystemCoreClockUpdate:0000000000000090 .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:408    .text.SystemCoreClockUpdate:0000000000000092 .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:412    .text.SystemCoreClockUpdate:000000000000009a .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:416    .text.SystemCoreClockUpdate:000000000000009c .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:420    .text.SystemCoreClockUpdate:00000000000000a8 .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:423    .text.SystemCoreClockUpdate:00000000000000aa .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:424    .text.SystemCoreClockUpdate:00000000000000aa .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:430    .text.SystemCoreClockUpdate:00000000000000b0 .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:433    .text.SystemCoreClockUpdate:00000000000000b4 .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:437    .text.SystemCoreClockUpdate:00000000000000be .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:446    .sdata.SystemCoreClock:0000000000000000 SystemCoreClock
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:443    .sdata.SystemCoreClock:0000000000000000 .LANCHOR0
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:258    .text.SystemInit:000000000000011e .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:441    .text.SystemCoreClockUpdate:00000000000000be .L0 
+                     .debug_frame:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:100    .text.SystemInit:0000000000000066 .L3
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:112    .text.SystemInit:0000000000000072 .L2
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:96     .text.SystemInit:0000000000000064 .L20
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:243    .text.SystemInit:000000000000011c .L5
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:175    .text.SystemInit:00000000000000c8 .L6
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:192    .text.SystemInit:00000000000000e0 .L7
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:209    .text.SystemInit:00000000000000f8 .L8
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:230    .text.SystemInit:0000000000000114 .L9
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:325    .text.SystemCoreClockUpdate:000000000000003c .L29
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:414    .text.SystemCoreClockUpdate:000000000000009c .L30
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:331    .text.SystemCoreClockUpdate:0000000000000044 .L22
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:384    .text.SystemCoreClockUpdate:0000000000000076 .L24
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:368    .text.SystemCoreClockUpdate:0000000000000066 .L25
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:428    .text.SystemCoreClockUpdate:00000000000000b0 .L31
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:701    .debug_abbrev:0000000000000000 .Ldebug_abbrev0
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:1165   .debug_str:000000000000002c .LASF27
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:1183   .debug_str:00000000000000ff .LASF28
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:1163   .debug_str:0000000000000000 .LASF29
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:1145   .debug_ranges:0000000000000000 .Ldebug_ranges0
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:1161   .debug_line:0000000000000000 .Ldebug_line0
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:1195   .debug_str:0000000000000175 .LASF0
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:1227   .debug_str:0000000000000233 .LASF1
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:1167   .debug_str:00000000000000a6 .LASF4
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:1181   .debug_str:00000000000000f1 .LASF2
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:1213   .debug_str:00000000000001ed .LASF3
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:1191   .debug_str:0000000000000163 .LASF5
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:1187   .debug_str:0000000000000145 .LASF6
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:1223   .debug_str:0000000000000224 .LASF7
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:1189   .debug_str:0000000000000158 .LASF8
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:1185   .debug_str:0000000000000133 .LASF9
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:1205   .debug_str:00000000000001b1 .LASF10
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:1197   .debug_str:0000000000000182 .LASF11
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:1199   .debug_str:0000000000000199 .LASF12
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:1217   .debug_str:00000000000001fe .LASF13
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:1221   .debug_str:000000000000021b .LASF14
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:1209   .debug_str:00000000000001c7 .LASF30
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:1179   .debug_str:00000000000000d9 .LASF31
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:1207   .debug_str:00000000000001bf .LASF15
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:1177   .debug_str:00000000000000cf .LASF16
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:1211   .debug_str:00000000000001d7 .LASF25
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:263    .text.SystemCoreClockUpdate:0000000000000000 .LFB4
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccpJADio.s 			page 30
+
+
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:438    .text.SystemCoreClockUpdate:00000000000000be .LFE4
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:1201   .debug_str:00000000000001a1 .LASF17
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:1215   .debug_str:00000000000001f7 .LASF18
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:1169   .debug_str:00000000000000b0 .LASF19
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:942    .debug_loc:0000000000000000 .LLST2
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:1225   .debug_str:000000000000022d .LASF20
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:965    .debug_loc:000000000000002a .LLST3
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:1193   .debug_str:000000000000016e .LASF21
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:990    .debug_loc:000000000000006b .LLST4
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:1171   .debug_str:00000000000000ba .LASF22
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:1027   .debug_loc:00000000000000cf .LLST5
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:1173   .debug_str:00000000000000c1 .LASF23
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:1044   .debug_loc:00000000000000f3 .LLST6
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:1175   .debug_str:00000000000000c8 .LASF24
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:1055   .debug_loc:0000000000000111 .LLST7
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:1203   .debug_str:00000000000001a6 .LASF26
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:11     .text.SystemInit:0000000000000000 .LFB3
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:256    .text.SystemInit:000000000000011e .LFE3
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:63     .text.SystemInit:000000000000004c .LBB8
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:64     .text.SystemInit:000000000000004c .LBB9
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:1066   .debug_loc:000000000000012f .LLST0
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:1102   .debug_loc:0000000000000176 .LLST1
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:1219   .debug_str:0000000000000207 .LASF32
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:286    .text.SystemCoreClockUpdate:000000000000000a .LVL9
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:294    .text.SystemCoreClockUpdate:0000000000000014 .LVL10
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:324    .text.SystemCoreClockUpdate:000000000000003c .LVL13
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:328    .text.SystemCoreClockUpdate:0000000000000040 .LVL14
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:359    .text.SystemCoreClockUpdate:000000000000005e .LVL21
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:366    .text.SystemCoreClockUpdate:0000000000000066 .LVL22
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:373    .text.SystemCoreClockUpdate:0000000000000068 .LVL23
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:376    .text.SystemCoreClockUpdate:000000000000006c .LVL24
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:383    .text.SystemCoreClockUpdate:0000000000000076 .LVL26
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:400    .text.SystemCoreClockUpdate:0000000000000086 .LVL28
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:427    .text.SystemCoreClockUpdate:00000000000000b0 .LVL33
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:431    .text.SystemCoreClockUpdate:00000000000000b4 .LVL34
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:280    .text.SystemCoreClockUpdate:0000000000000008 .LVL8
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:322    .text.SystemCoreClockUpdate:000000000000003a .LVL12
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:330    .text.SystemCoreClockUpdate:0000000000000044 .LVL15
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:379    .text.SystemCoreClockUpdate:0000000000000070 .LVL25
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:409    .text.SystemCoreClockUpdate:0000000000000096 .LVL29
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:413    .text.SystemCoreClockUpdate:000000000000009c .LVL30
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:425    .text.SystemCoreClockUpdate:00000000000000ae .LVL32
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:434    .text.SystemCoreClockUpdate:00000000000000b8 .LVL35
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:336    .text.SystemCoreClockUpdate:000000000000004a .LVL16
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:344    .text.SystemCoreClockUpdate:0000000000000050 .LVL17
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:347    .text.SystemCoreClockUpdate:0000000000000052 .LVL18
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:356    .text.SystemCoreClockUpdate:000000000000005c .LVL20
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:310    .text.SystemCoreClockUpdate:0000000000000026 .LVL11
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:83     .text.SystemInit:0000000000000054 .LVL0
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:95     .text.SystemInit:0000000000000064 .LVL1
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:99     .text.SystemInit:0000000000000066 .LVL2
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:108    .text.SystemInit:000000000000006a .LVL4
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:120    .text.SystemInit:000000000000007c .LVL6
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:106    .text.SystemInit:0000000000000068 .LVL3
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:116    .text.SystemInit:0000000000000076 .LVL5
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:454    .debug_info:0000000000000000 .Ldebug_info0
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:70     .text.SystemInit:000000000000004e .LBE8
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccpJADio.s 			page 31
+
+
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:79     .text.SystemInit:0000000000000054 .LBB15
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:240    .text.SystemInit:000000000000011a .LBE15
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:244    .text.SystemInit:000000000000011c .LBB16
+C:\Users\test\AppData\Local\Temp\ccpJADio.s:254    .text.SystemInit:000000000000011e .LBE16
+
+NO UNDEFINED SYMBOLS

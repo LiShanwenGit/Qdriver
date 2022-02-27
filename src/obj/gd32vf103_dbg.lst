@@ -1,0 +1,352 @@
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccx4RdM6.s 			page 1
+
+
+   1              		.file	"gd32vf103_dbg.c"
+   2              		.option nopic
+   3              		.text
+   4              	.Ltext0:
+   5              		.cfi_sections	.debug_frame
+   6              		.section	.text.dbg_id_get,"ax",@progbits
+   7              		.align	1
+   8              		.globl	dbg_id_get
+  10              	dbg_id_get:
+  11              	.LFB2:
+  12              		.file 1 "arch/riscv/mach-gd32vf10x/bsp/gd32vf103_dbg.c"
+   1:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_dbg.c **** /*!
+   2:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_dbg.c ****     \file  gd32vf103_dbg.c
+   3:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_dbg.c ****     \brief DBG driver
+   4:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_dbg.c **** 
+   5:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_dbg.c ****     \version 2019-6-5, V1.0.0, firmware for GD32VF103
+   6:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_dbg.c **** */
+   7:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_dbg.c **** 
+   8:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_dbg.c **** /*
+   9:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_dbg.c ****     Copyright (c) 2019, GigaDevice Semiconductor Inc.
+  10:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_dbg.c **** 
+  11:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_dbg.c ****     Redistribution and use in source and binary forms, with or without modification, 
+  12:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_dbg.c **** are permitted provided that the following conditions are met:
+  13:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_dbg.c **** 
+  14:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_dbg.c ****     1. Redistributions of source code must retain the above copyright notice, this 
+  15:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_dbg.c ****        list of conditions and the following disclaimer.
+  16:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_dbg.c ****     2. Redistributions in binary form must reproduce the above copyright notice, 
+  17:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_dbg.c ****        this list of conditions and the following disclaimer in the documentation 
+  18:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_dbg.c ****        and/or other materials provided with the distribution.
+  19:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_dbg.c ****     3. Neither the name of the copyright holder nor the names of its contributors 
+  20:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_dbg.c ****        may be used to endorse or promote products derived from this software without 
+  21:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_dbg.c ****        specific prior written permission.
+  22:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_dbg.c **** 
+  23:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_dbg.c ****     THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" 
+  24:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_dbg.c **** AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED 
+  25:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_dbg.c **** WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. 
+  26:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_dbg.c **** IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, 
+  27:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_dbg.c **** INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT 
+  28:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_dbg.c **** NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR 
+  29:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_dbg.c **** PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, 
+  30:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_dbg.c **** WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) 
+  31:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_dbg.c **** ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY 
+  32:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_dbg.c **** OF SUCH DAMAGE.
+  33:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_dbg.c **** */
+  34:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_dbg.c **** 
+  35:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_dbg.c **** #include "gd32vf103_dbg.h"
+  36:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_dbg.c **** 
+  37:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_dbg.c **** /*!
+  38:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_dbg.c ****     \brief      read DBG_ID code register
+  39:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_dbg.c ****     \param[in]  none
+  40:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_dbg.c ****     \param[out] none
+  41:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_dbg.c ****     \retval     DBG_ID code
+  42:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_dbg.c **** */
+  43:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_dbg.c **** uint32_t dbg_id_get(void)
+  44:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_dbg.c **** {
+  13              		.loc 1 44 1
+  14              		.cfi_startproc
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccx4RdM6.s 			page 2
+
+
+  45:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_dbg.c ****     return DBG_ID;
+  15              		.loc 1 45 5
+  16              		.loc 1 45 12 is_stmt 0
+  17 0000 B72704E0 		li	a5,-536600576
+  18 0004 8843     		lw	a0,0(a5)
+  46:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_dbg.c **** }
+  19              		.loc 1 46 1
+  20 0006 8280     		ret
+  21              		.cfi_endproc
+  22              	.LFE2:
+  24              		.section	.text.dbg_low_power_enable,"ax",@progbits
+  25              		.align	1
+  26              		.globl	dbg_low_power_enable
+  28              	dbg_low_power_enable:
+  29              	.LFB3:
+  47:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_dbg.c **** 
+  48:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_dbg.c **** /*!
+  49:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_dbg.c ****     \brief      enable low power behavior when the mcu is in debug mode
+  50:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_dbg.c ****     \param[in]  dbg_low_power:
+  51:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_dbg.c ****                 one or more parameters can be selected which are shown as below:
+  52:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_dbg.c ****       \arg        DBG_LOW_POWER_SLEEP: keep debugger connection during sleep mode
+  53:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_dbg.c ****       \arg        DBG_LOW_POWER_DEEPSLEEP: keep debugger connection during deepsleep mode
+  54:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_dbg.c ****       \arg        DBG_LOW_POWER_STANDBY: keep debugger connection during standby mode
+  55:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_dbg.c ****     \param[out] none
+  56:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_dbg.c ****     \retval     none
+  57:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_dbg.c **** */
+  58:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_dbg.c **** void dbg_low_power_enable(uint32_t dbg_low_power)
+  59:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_dbg.c **** {
+  30              		.loc 1 59 1 is_stmt 1
+  31              		.cfi_startproc
+  32              	.LVL0:
+  60:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_dbg.c ****     DBG_CTL |= dbg_low_power;
+  33              		.loc 1 60 5
+  34              		.loc 1 60 13 is_stmt 0
+  35 0000 372704E0 		li	a4,-536600576
+  36 0004 5C43     		lw	a5,4(a4)
+  37 0006 5D8D     		or	a0,a5,a0
+  38              	.LVL1:
+  39 0008 48C3     		sw	a0,4(a4)
+  61:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_dbg.c **** }
+  40              		.loc 1 61 1
+  41 000a 8280     		ret
+  42              		.cfi_endproc
+  43              	.LFE3:
+  45              		.section	.text.dbg_low_power_disable,"ax",@progbits
+  46              		.align	1
+  47              		.globl	dbg_low_power_disable
+  49              	dbg_low_power_disable:
+  50              	.LFB4:
+  62:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_dbg.c **** 
+  63:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_dbg.c **** /*!
+  64:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_dbg.c ****     \brief      disable low power behavior when the mcu is in debug mode
+  65:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_dbg.c ****     \param[in]  dbg_low_power:
+  66:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_dbg.c ****                 one or more parameters can be selected which are shown as below:
+  67:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_dbg.c ****       \arg        DBG_LOW_POWER_SLEEP: donot keep debugger connection during sleep mode
+  68:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_dbg.c ****       \arg        DBG_LOW_POWER_DEEPSLEEP: donot keep debugger connection during deepsleep mode
+  69:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_dbg.c ****       \arg        DBG_LOW_POWER_STANDBY: donot keep debugger connection during standby mode
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccx4RdM6.s 			page 3
+
+
+  70:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_dbg.c ****     \param[out] none
+  71:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_dbg.c ****     \retval     none
+  72:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_dbg.c **** */
+  73:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_dbg.c **** void dbg_low_power_disable(uint32_t dbg_low_power)
+  74:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_dbg.c **** {
+  51              		.loc 1 74 1 is_stmt 1
+  52              		.cfi_startproc
+  53              	.LVL2:
+  75:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_dbg.c ****     DBG_CTL &= ~dbg_low_power;
+  54              		.loc 1 75 5
+  55              		.loc 1 75 13 is_stmt 0
+  56 0000 B72704E0 		li	a5,-536600576
+  57 0004 D843     		lw	a4,4(a5)
+  58              		.loc 1 75 16
+  59 0006 1345F5FF 		not	a0,a0
+  60              	.LVL3:
+  61              		.loc 1 75 13
+  62 000a 798D     		and	a0,a0,a4
+  63              	.LVL4:
+  64 000c C8C3     		sw	a0,4(a5)
+  76:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_dbg.c **** }
+  65              		.loc 1 76 1
+  66 000e 8280     		ret
+  67              		.cfi_endproc
+  68              	.LFE4:
+  70              		.section	.text.dbg_periph_enable,"ax",@progbits
+  71              		.align	1
+  72              		.globl	dbg_periph_enable
+  74              	dbg_periph_enable:
+  75              	.LFB5:
+  77:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_dbg.c **** 
+  78:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_dbg.c **** /*!
+  79:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_dbg.c ****     \brief      enable peripheral behavior when the mcu is in debug mode
+  80:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_dbg.c ****     \param[in]  dbg_periph: refer to dbg_periph_enum
+  81:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_dbg.c ****                 one or more parameters can be selected which are shown as below:
+  82:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_dbg.c ****       \arg        DBG_FWDGT_HOLD : debug FWDGT kept when core is halted
+  83:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_dbg.c ****       \arg        DBG_WWDGT_HOLD : debug WWDGT kept when core is halted
+  84:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_dbg.c ****       \arg        DBG_CANx_HOLD (x=0,1): hold CANx counter when core is halted
+  85:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_dbg.c ****       \arg        DBG_I2Cx_HOLD (x=0,1): hold I2Cx smbus when core is halted
+  86:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_dbg.c ****       \arg        DBG_TIMERx_HOLD (x=0,1,2,3,4,5,6): hold TIMERx counter when core is halted
+  87:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_dbg.c ****     \param[out] none
+  88:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_dbg.c ****     \retval     none
+  89:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_dbg.c **** */
+  90:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_dbg.c **** void dbg_periph_enable(dbg_periph_enum dbg_periph)
+  91:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_dbg.c **** {
+  76              		.loc 1 91 1 is_stmt 1
+  77              		.cfi_startproc
+  78              	.LVL5:
+  92:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_dbg.c ****     DBG_CTL |= (uint32_t)dbg_periph;
+  79              		.loc 1 92 5
+  80              		.loc 1 92 13 is_stmt 0
+  81 0000 372704E0 		li	a4,-536600576
+  82 0004 5C43     		lw	a5,4(a4)
+  83 0006 5D8D     		or	a0,a5,a0
+  84              	.LVL6:
+  85 0008 48C3     		sw	a0,4(a4)
+  93:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_dbg.c **** }
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccx4RdM6.s 			page 4
+
+
+  86              		.loc 1 93 1
+  87 000a 8280     		ret
+  88              		.cfi_endproc
+  89              	.LFE5:
+  91              		.section	.text.dbg_periph_disable,"ax",@progbits
+  92              		.align	1
+  93              		.globl	dbg_periph_disable
+  95              	dbg_periph_disable:
+  96              	.LFB6:
+  94:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_dbg.c **** 
+  95:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_dbg.c **** /*!
+  96:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_dbg.c ****     \brief      disable peripheral behavior when the mcu is in debug mode
+  97:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_dbg.c ****     \param[in]  dbg_periph: refer to dbg_periph_enum
+  98:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_dbg.c ****                 one or more parameters can be selected which are shown as below:
+  99:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_dbg.c ****       \arg        DBG_FWDGT_HOLD : debug FWDGT kept when core is halted
+ 100:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_dbg.c ****       \arg        DBG_WWDGT_HOLD : debug WWDGT kept when core is halted
+ 101:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_dbg.c ****       \arg        DBG_CANx_HOLD (x=0,1): hold CAN0 counter when core is halted
+ 102:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_dbg.c ****       \arg        DBG_I2Cx_HOLD (x=0,1): hold I2Cx smbus when core is halted
+ 103:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_dbg.c ****       \arg        DBG_TIMERx_HOLD (x=0,1,2,3,4,5,6): hold TIMERx counter when core is halted
+ 104:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_dbg.c ****     \param[out] none
+ 105:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_dbg.c ****     \retval     none
+ 106:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_dbg.c **** */
+ 107:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_dbg.c **** void dbg_periph_disable(dbg_periph_enum dbg_periph)
+ 108:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_dbg.c **** {
+  97              		.loc 1 108 1 is_stmt 1
+  98              		.cfi_startproc
+  99              	.LVL7:
+ 109:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_dbg.c ****     DBG_CTL &= ~(uint32_t)dbg_periph;
+ 100              		.loc 1 109 5
+ 101              		.loc 1 109 13 is_stmt 0
+ 102 0000 B72704E0 		li	a5,-536600576
+ 103 0004 D843     		lw	a4,4(a5)
+ 104              		.loc 1 109 16
+ 105 0006 1345F5FF 		not	a0,a0
+ 106              	.LVL8:
+ 107              		.loc 1 109 13
+ 108 000a 798D     		and	a0,a0,a4
+ 109              	.LVL9:
+ 110 000c C8C3     		sw	a0,4(a5)
+ 110:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_dbg.c **** }
+ 111              		.loc 1 110 1
+ 112 000e 8280     		ret
+ 113              		.cfi_endproc
+ 114              	.LFE6:
+ 116              		.text
+ 117              	.Letext0:
+ 118              		.file 2 "d:\\risc_v_gcc\\riscv-none-embed\\include\\machine\\_default_types.h"
+ 119              		.file 3 "d:\\risc_v_gcc\\riscv-none-embed\\include\\sys\\_stdint.h"
+ 120              		.file 4 "arch/riscv/mach-gd32vf10x/bsp/gd32vf103_dbg.h"
+ 121              		.file 5 "arch/riscv/mach-gd32vf10x/system/system_gd32vf103.h"
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccx4RdM6.s 			page 5
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 gd32vf103_dbg.c
+C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:10     .text.dbg_id_get:0000000000000000 dbg_id_get
+C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:14     .text.dbg_id_get:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:15     .text.dbg_id_get:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:16     .text.dbg_id_get:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:17     .text.dbg_id_get:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:20     .text.dbg_id_get:0000000000000006 .L0 
+C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:21     .text.dbg_id_get:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:28     .text.dbg_low_power_enable:0000000000000000 dbg_low_power_enable
+C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:31     .text.dbg_low_power_enable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:33     .text.dbg_low_power_enable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:34     .text.dbg_low_power_enable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:35     .text.dbg_low_power_enable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:41     .text.dbg_low_power_enable:000000000000000a .L0 
+C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:42     .text.dbg_low_power_enable:000000000000000c .L0 
+C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:49     .text.dbg_low_power_disable:0000000000000000 dbg_low_power_disable
+C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:52     .text.dbg_low_power_disable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:54     .text.dbg_low_power_disable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:55     .text.dbg_low_power_disable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:56     .text.dbg_low_power_disable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:59     .text.dbg_low_power_disable:0000000000000006 .L0 
+C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:62     .text.dbg_low_power_disable:000000000000000a .L0 
+C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:66     .text.dbg_low_power_disable:000000000000000e .L0 
+C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:67     .text.dbg_low_power_disable:0000000000000010 .L0 
+C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:74     .text.dbg_periph_enable:0000000000000000 dbg_periph_enable
+C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:77     .text.dbg_periph_enable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:79     .text.dbg_periph_enable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:80     .text.dbg_periph_enable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:81     .text.dbg_periph_enable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:87     .text.dbg_periph_enable:000000000000000a .L0 
+C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:88     .text.dbg_periph_enable:000000000000000c .L0 
+C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:95     .text.dbg_periph_disable:0000000000000000 dbg_periph_disable
+C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:98     .text.dbg_periph_disable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:100    .text.dbg_periph_disable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:101    .text.dbg_periph_disable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:102    .text.dbg_periph_disable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:105    .text.dbg_periph_disable:0000000000000006 .L0 
+C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:108    .text.dbg_periph_disable:000000000000000a .L0 
+C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:112    .text.dbg_periph_disable:000000000000000e .L0 
+C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:113    .text.dbg_periph_disable:0000000000000010 .L0 
+C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:24     .text.dbg_id_get:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:45     .text.dbg_low_power_enable:000000000000000c .L0 
+C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:70     .text.dbg_low_power_disable:0000000000000010 .L0 
+C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:91     .text.dbg_periph_enable:000000000000000c .L0 
+C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:116    .text.dbg_periph_disable:0000000000000010 .L0 
+                     .debug_frame:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:355    .debug_abbrev:0000000000000000 .Ldebug_abbrev0
+C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:653    .debug_str:000000000000000b .LASF31
+C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:691    .debug_str:00000000000001b6 .LASF32
+C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:687    .debug_str:000000000000017f .LASF33
+C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:635    .debug_ranges:0000000000000000 .Ldebug_ranges0
+C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:649    .debug_line:0000000000000000 .Ldebug_line0
+C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:695    .debug_str:00000000000001f2 .LASF0
+C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:715    .debug_str:0000000000000288 .LASF1
+C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:675    .debug_str:000000000000011e .LASF2
+C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:709    .debug_str:0000000000000262 .LASF3
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccx4RdM6.s 			page 6
+
+
+C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:681    .debug_str:000000000000014c .LASF4
+C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:661    .debug_str:00000000000000ae .LASF5
+C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:689    .debug_str:00000000000001ab .LASF9
+C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:679    .debug_str:000000000000013a .LASF6
+C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:705    .debug_str:0000000000000244 .LASF7
+C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:699    .debug_str:000000000000020d .LASF8
+C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:711    .debug_str:000000000000026c .LASF10
+C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:707    .debug_str:0000000000000252 .LASF34
+C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:673    .debug_str:000000000000010f .LASF11
+C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:665    .debug_str:00000000000000cc .LASF12
+C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:717    .debug_str:0000000000000294 .LASF13
+C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:685    .debug_str:000000000000016f .LASF14
+C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:703    .debug_str:0000000000000234 .LASF15
+C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:655    .debug_str:0000000000000085 .LASF16
+C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:659    .debug_str:00000000000000a0 .LASF17
+C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:667    .debug_str:00000000000000db .LASF18
+C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:697    .debug_str:00000000000001ff .LASF19
+C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:683    .debug_str:000000000000015f .LASF20
+C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:701    .debug_str:0000000000000224 .LASF21
+C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:719    .debug_str:00000000000002a4 .LASF22
+C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:677    .debug_str:000000000000012c .LASF23
+C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:669    .debug_str:00000000000000e9 .LASF24
+C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:713    .debug_str:0000000000000275 .LASF25
+C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:96     .text.dbg_periph_disable:0000000000000000 .LFB6
+C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:114    .text.dbg_periph_disable:0000000000000010 .LFE6
+C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:651    .debug_str:0000000000000000 .LASF27
+C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:544    .debug_loc:0000000000000000 .LLST3
+C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:721    .debug_str:00000000000002b4 .LASF26
+C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:75     .text.dbg_periph_enable:0000000000000000 .LFB5
+C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:89     .text.dbg_periph_enable:000000000000000c .LFE5
+C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:565    .debug_loc:000000000000002f .LLST2
+C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:671    .debug_str:00000000000000f9 .LASF28
+C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:50     .text.dbg_low_power_disable:0000000000000000 .LFB4
+C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:68     .text.dbg_low_power_disable:0000000000000010 .LFE4
+C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:693    .debug_str:00000000000001e4 .LASF29
+C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:579    .debug_loc:0000000000000050 .LLST1
+C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:663    .debug_str:00000000000000b7 .LASF30
+C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:29     .text.dbg_low_power_enable:0000000000000000 .LFB3
+C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:43     .text.dbg_low_power_enable:000000000000000c .LFE3
+C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:600    .debug_loc:000000000000007f .LLST0
+C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:657    .debug_str:0000000000000095 .LASF35
+C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:11     .text.dbg_id_get:0000000000000000 .LFB2
+C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:22     .text.dbg_id_get:0000000000000008 .LFE2
+C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:99     .text.dbg_periph_disable:0000000000000000 .LVL7
+C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:106    .text.dbg_periph_disable:000000000000000a .LVL8
+C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:109    .text.dbg_periph_disable:000000000000000c .LVL9
+C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:78     .text.dbg_periph_enable:0000000000000000 .LVL5
+C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:84     .text.dbg_periph_enable:0000000000000008 .LVL6
+C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:53     .text.dbg_low_power_disable:0000000000000000 .LVL2
+C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:60     .text.dbg_low_power_disable:000000000000000a .LVL3
+C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:63     .text.dbg_low_power_disable:000000000000000c .LVL4
+C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:32     .text.dbg_low_power_enable:0000000000000000 .LVL0
+C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:38     .text.dbg_low_power_enable:0000000000000008 .LVL1
+C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:123    .debug_info:0000000000000000 .Ldebug_info0
+
+NO UNDEFINED SYMBOLS

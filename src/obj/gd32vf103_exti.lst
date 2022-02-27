@@ -1,0 +1,971 @@
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccOdgYUe.s 			page 1
+
+
+   1              		.file	"gd32vf103_exti.c"
+   2              		.option nopic
+   3              		.text
+   4              	.Ltext0:
+   5              		.cfi_sections	.debug_frame
+   6              		.section	.text.exti_deinit,"ax",@progbits
+   7              		.align	1
+   8              		.globl	exti_deinit
+  10              	exti_deinit:
+  11              	.LFB2:
+  12              		.file 1 "arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c"
+   1:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c **** /*!
+   2:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****     \file    gd32vf103_exti.c
+   3:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****     \brief   EXTI driver
+   4:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c **** 
+   5:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****     \version 2019-6-5, V1.0.0, firmware for GD32VF103
+   6:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c **** */
+   7:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c **** 
+   8:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c **** /*
+   9:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****     Copyright (c) 2019, GigaDevice Semiconductor Inc.
+  10:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c **** 
+  11:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****     Redistribution and use in source and binary forms, with or without modification,
+  12:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c **** are permitted provided that the following conditions are met:
+  13:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c **** 
+  14:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****     1. Redistributions of source code must retain the above copyright notice, this
+  15:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****        list of conditions and the following disclaimer.
+  16:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****     2. Redistributions in binary form must reproduce the above copyright notice,
+  17:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****        this list of conditions and the following disclaimer in the documentation
+  18:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****        and/or other materials provided with the distribution.
+  19:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****     3. Neither the name of the copyright holder nor the names of its contributors
+  20:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****        may be used to endorse or promote products derived from this software without
+  21:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****        specific prior written permission.
+  22:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c **** 
+  23:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****     THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+  24:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c **** AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+  25:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c **** WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
+  26:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c **** IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT,
+  27:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c **** INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
+  28:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c **** NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
+  29:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c **** PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+  30:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c **** WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+  31:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c **** ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY
+  32:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c **** OF SUCH DAMAGE.
+  33:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c **** */
+  34:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c **** 
+  35:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c **** #include "gd32vf103_exti.h"
+  36:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c **** 
+  37:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c **** #define EXTI_REG_RESET_VALUE            ((uint32_t)0x00000000U)
+  38:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c **** 
+  39:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c **** /*!
+  40:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****  \brief      deinitialize the EXTI
+  41:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****  \param[in]  none
+  42:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****  \param[out] none
+  43:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****  \retval     none
+  44:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****  */
+  45:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c **** void exti_deinit(void)
+  46:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c **** {
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccOdgYUe.s 			page 2
+
+
+  13              		.loc 1 46 1
+  14              		.cfi_startproc
+  47:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****     /* reset the value of all the EXTI registers */
+  48:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****     EXTI_INTEN = EXTI_REG_RESET_VALUE;
+  15              		.loc 1 48 5
+  16              		.loc 1 48 16 is_stmt 0
+  17 0000 B7070140 		li	a5,1073807360
+  18 0004 23A00740 		sw	zero,1024(a5)
+  49:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****     EXTI_EVEN  = EXTI_REG_RESET_VALUE;
+  19              		.loc 1 49 5 is_stmt 1
+  20              		.loc 1 49 16 is_stmt 0
+  21 0008 23A20740 		sw	zero,1028(a5)
+  50:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****     EXTI_RTEN  = EXTI_REG_RESET_VALUE;
+  22              		.loc 1 50 5 is_stmt 1
+  23              		.loc 1 50 16 is_stmt 0
+  24 000c 23A40740 		sw	zero,1032(a5)
+  51:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****     EXTI_FTEN  = EXTI_REG_RESET_VALUE;
+  25              		.loc 1 51 5 is_stmt 1
+  26              		.loc 1 51 16 is_stmt 0
+  27 0010 23A60740 		sw	zero,1036(a5)
+  52:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****     EXTI_SWIEV = EXTI_REG_RESET_VALUE;
+  28              		.loc 1 52 5 is_stmt 1
+  29              		.loc 1 52 16 is_stmt 0
+  30 0014 23A80740 		sw	zero,1040(a5)
+  53:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c **** }
+  31              		.loc 1 53 1
+  32 0018 8280     		ret
+  33              		.cfi_endproc
+  34              	.LFE2:
+  36              		.section	.text.exti_init,"ax",@progbits
+  37              		.align	1
+  38              		.globl	exti_init
+  40              	exti_init:
+  41              	.LFB3:
+  54:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c **** 
+  55:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c **** /*!
+  56:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****     \brief      initialize the EXTI
+  57:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****     \param[in]  linex: EXTI line number, refer to exti_line_enum
+  58:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****                 only one parameter can be selected which is shown as below:
+  59:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****       \arg        EXTI_x (x=0..18): EXTI line x
+  60:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****     \param[in]  mode: interrupt or event mode, refer to exti_mode_enum
+  61:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****                 only one parameter can be selected which is shown as below:
+  62:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****       \arg        EXTI_INTERRUPT: interrupt mode
+  63:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****       \arg        EXTI_EVENT: event mode
+  64:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****     \param[in]  trig_type: trigger type, refer to exti_trig_type_enum
+  65:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****                 only one parameter can be selected which is shown as below:
+  66:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****       \arg        EXTI_TRIG_RISING: rising edge trigger
+  67:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****       \arg        EXTI_TRIG_FALLING: falling edge trigger
+  68:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****       \arg        EXTI_TRIG_BOTH: rising edge and falling edge trigger
+  69:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****       \arg        EXTI_TRIG_NONE: without rising edge or falling edge trigger
+  70:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****     \param[out] none
+  71:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****     \retval     none
+  72:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****  */
+  73:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c **** void exti_init(exti_line_enum linex, exti_mode_enum mode, exti_trig_type_enum trig_type)
+  74:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c **** {
+  42              		.loc 1 74 1 is_stmt 1
+  43              		.cfi_startproc
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccOdgYUe.s 			page 3
+
+
+  44              	.LVL0:
+  75:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****     /* reset the EXTI line x */
+  76:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****     EXTI_INTEN &= ~(uint32_t) linex;
+  45              		.loc 1 76 5
+  46              		.loc 1 76 16 is_stmt 0
+  47 0000 B7070140 		li	a5,1073807360
+  48 0004 83A60740 		lw	a3,1024(a5)
+  49              		.loc 1 76 19
+  50 0008 1347F5FF 		not	a4,a0
+  51              		.loc 1 76 16
+  52 000c F98E     		and	a3,a3,a4
+  53 000e 23A0D740 		sw	a3,1024(a5)
+  77:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****     EXTI_EVEN &= ~(uint32_t) linex;
+  54              		.loc 1 77 5 is_stmt 1
+  55              		.loc 1 77 15 is_stmt 0
+  56 0012 83A64740 		lw	a3,1028(a5)
+  57 0016 F98E     		and	a3,a4,a3
+  58 0018 23A2D740 		sw	a3,1028(a5)
+  78:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****     EXTI_RTEN &= ~(uint32_t) linex;
+  59              		.loc 1 78 5 is_stmt 1
+  60              		.loc 1 78 15 is_stmt 0
+  61 001c 83A68740 		lw	a3,1032(a5)
+  62 0020 F98E     		and	a3,a4,a3
+  63 0022 23A4D740 		sw	a3,1032(a5)
+  79:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****     EXTI_FTEN &= ~(uint32_t) linex;
+  64              		.loc 1 79 5 is_stmt 1
+  65              		.loc 1 79 15 is_stmt 0
+  66 0026 83A6C740 		lw	a3,1036(a5)
+  67 002a F98E     		and	a3,a4,a3
+  68 002c 23A6D740 		sw	a3,1036(a5)
+  80:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c **** 
+  81:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****     /* set the EXTI mode and enable the interrupts or events from EXTI line x */
+  82:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****     switch (mode) {
+  69              		.loc 1 82 5 is_stmt 1
+  70 0030 95CD     		beq	a1,zero,.L4
+  71 0032 8546     		li	a3,1
+  72 0034 6397D500 		bne	a1,a3,.L6
+  83:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****     case EXTI_INTERRUPT:
+  84:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****         EXTI_INTEN |= (uint32_t) linex;
+  85:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****         break;
+  86:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****     case EXTI_EVENT:
+  87:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****         EXTI_EVEN |= (uint32_t) linex;
+  73              		.loc 1 87 9
+  74              		.loc 1 87 19 is_stmt 0
+  75 0038 83A64740 		lw	a3,1028(a5)
+  76 003c C98E     		or	a3,a3,a0
+  77 003e 23A2D740 		sw	a3,1028(a5)
+  88:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****         break;
+  78              		.loc 1 88 9 is_stmt 1
+  79              	.L6:
+  89:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****     default:
+  90:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****         break;
+  91:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****     }
+  92:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c **** 
+  93:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****     /* set the EXTI trigger type */
+  94:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****     switch (trig_type) {
+  80              		.loc 1 94 5
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccOdgYUe.s 			page 4
+
+
+  81 0042 8547     		li	a5,1
+  82 0044 630CF602 		beq	a2,a5,.L7
+  83              	.L11:
+  84 0048 39C6     		beq	a2,zero,.L8
+  85 004a 8947     		li	a5,2
+  86 004c 6303F600 		beq	a2,a5,.L9
+  87 0050 8280     		ret
+  88              	.L9:
+  95:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****     case EXTI_TRIG_RISING:
+  96:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****         EXTI_RTEN |= (uint32_t) linex;
+  97:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****         EXTI_FTEN &= ~(uint32_t) linex;
+  98:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****         break;
+  99:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****     case EXTI_TRIG_FALLING:
+ 100:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****         EXTI_RTEN &= ~(uint32_t) linex;
+ 101:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****         EXTI_FTEN |= (uint32_t) linex;
+ 102:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****         break;
+ 103:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****     case EXTI_TRIG_BOTH:
+ 104:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****         EXTI_RTEN |= (uint32_t) linex;
+  89              		.loc 1 104 9
+  90              		.loc 1 104 19 is_stmt 0
+  91 0052 B7070140 		li	a5,1073807360
+  92 0056 03A78740 		lw	a4,1032(a5)
+  93 005a 498F     		or	a4,a4,a0
+  94 005c 23A4E740 		sw	a4,1032(a5)
+ 105:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****         EXTI_FTEN |= (uint32_t) linex;
+  95              		.loc 1 105 9 is_stmt 1
+  96              		.loc 1 105 19 is_stmt 0
+  97 0060 03A7C740 		lw	a4,1036(a5)
+  98 0064 598D     		or	a0,a4,a0
+  99              	.LVL1:
+ 100 0066 23A6A740 		sw	a0,1036(a5)
+ 106:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****         break;
+ 101              		.loc 1 106 9 is_stmt 1
+ 107:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****     case EXTI_TRIG_NONE:
+ 108:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****     default:
+ 109:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****         break;
+ 110:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****     }
+ 111:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c **** }
+ 102              		.loc 1 111 1 is_stmt 0
+ 103 006a 8280     		ret
+ 104              	.LVL2:
+ 105              	.L4:
+  84:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****         break;
+ 106              		.loc 1 84 9 is_stmt 1
+  84:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****         break;
+ 107              		.loc 1 84 20 is_stmt 0
+ 108 006c 83A60740 		lw	a3,1024(a5)
+ 109 0070 C98E     		or	a3,a3,a0
+ 110 0072 23A0D740 		sw	a3,1024(a5)
+  85:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****     case EXTI_EVENT:
+ 111              		.loc 1 85 9 is_stmt 1
+  94:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****     case EXTI_TRIG_RISING:
+ 112              		.loc 1 94 5
+ 113 0076 8547     		li	a5,1
+ 114 0078 E318F6FC 		bne	a2,a5,.L11
+ 115              	.L7:
+ 100:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****         EXTI_FTEN |= (uint32_t) linex;
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccOdgYUe.s 			page 5
+
+
+ 116              		.loc 1 100 9
+ 100:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****         EXTI_FTEN |= (uint32_t) linex;
+ 117              		.loc 1 100 19 is_stmt 0
+ 118 007c B7070140 		li	a5,1073807360
+ 119 0080 83A68740 		lw	a3,1032(a5)
+ 120 0084 758F     		and	a4,a4,a3
+ 121 0086 23A4E740 		sw	a4,1032(a5)
+ 101:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****         break;
+ 122              		.loc 1 101 9 is_stmt 1
+ 101:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****         break;
+ 123              		.loc 1 101 19 is_stmt 0
+ 124 008a 03A7C740 		lw	a4,1036(a5)
+ 125 008e 598D     		or	a0,a4,a0
+ 126              	.LVL3:
+ 127 0090 23A6A740 		sw	a0,1036(a5)
+ 102:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****     case EXTI_TRIG_BOTH:
+ 128              		.loc 1 102 9 is_stmt 1
+ 129 0094 8280     		ret
+ 130              	.LVL4:
+ 131              	.L8:
+  96:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****         EXTI_FTEN &= ~(uint32_t) linex;
+ 132              		.loc 1 96 9
+  96:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****         EXTI_FTEN &= ~(uint32_t) linex;
+ 133              		.loc 1 96 19 is_stmt 0
+ 134 0096 B7070140 		li	a5,1073807360
+ 135 009a 83A68740 		lw	a3,1032(a5)
+ 136 009e 558D     		or	a0,a3,a0
+ 137              	.LVL5:
+ 138 00a0 23A4A740 		sw	a0,1032(a5)
+  97:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****         break;
+ 139              		.loc 1 97 9 is_stmt 1
+  97:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****         break;
+ 140              		.loc 1 97 19 is_stmt 0
+ 141 00a4 83A6C740 		lw	a3,1036(a5)
+ 142 00a8 758F     		and	a4,a4,a3
+ 143              	.LVL6:
+ 144 00aa 23A6E740 		sw	a4,1036(a5)
+  98:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****     case EXTI_TRIG_FALLING:
+ 145              		.loc 1 98 9 is_stmt 1
+ 146 00ae 8280     		ret
+ 147              		.cfi_endproc
+ 148              	.LFE3:
+ 150              		.section	.text.exti_interrupt_enable,"ax",@progbits
+ 151              		.align	1
+ 152              		.globl	exti_interrupt_enable
+ 154              	exti_interrupt_enable:
+ 155              	.LFB4:
+ 112:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c **** 
+ 113:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c **** /*!
+ 114:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****     \brief      enable the interrupts from EXTI line x
+ 115:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****     \param[in]  linex: EXTI line number, refer to exti_line_enum
+ 116:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****                 only one parameter can be selected which is shown as below:
+ 117:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****       \arg        EXTI_x (x=0..18): EXTI line x
+ 118:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****     \param[out] none
+ 119:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****     \retval     none
+ 120:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c **** */
+ 121:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c **** void exti_interrupt_enable(exti_line_enum linex)
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccOdgYUe.s 			page 6
+
+
+ 122:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c **** {
+ 156              		.loc 1 122 1
+ 157              		.cfi_startproc
+ 158              	.LVL7:
+ 123:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****     EXTI_INTEN |= (uint32_t) linex;
+ 159              		.loc 1 123 5
+ 160              		.loc 1 123 16 is_stmt 0
+ 161 0000 37070140 		li	a4,1073807360
+ 162 0004 83270740 		lw	a5,1024(a4)
+ 163 0008 5D8D     		or	a0,a5,a0
+ 164              	.LVL8:
+ 165 000a 2320A740 		sw	a0,1024(a4)
+ 124:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c **** }
+ 166              		.loc 1 124 1
+ 167 000e 8280     		ret
+ 168              		.cfi_endproc
+ 169              	.LFE4:
+ 171              		.section	.text.exti_event_enable,"ax",@progbits
+ 172              		.align	1
+ 173              		.globl	exti_event_enable
+ 175              	exti_event_enable:
+ 176              	.LFB5:
+ 125:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c **** 
+ 126:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c **** /*!
+ 127:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****     \brief      enable the events from EXTI line x
+ 128:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****     \param[in]  linex: EXTI line number, refer to exti_line_enum
+ 129:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****                 only one parameter can be selected which is shown as below:
+ 130:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****       \arg        EXTI_x (x=0..18): EXTI line x
+ 131:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****     \param[out] none
+ 132:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****     \retval     none
+ 133:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c **** */
+ 134:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c **** void exti_event_enable(exti_line_enum linex)
+ 135:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c **** {
+ 177              		.loc 1 135 1 is_stmt 1
+ 178              		.cfi_startproc
+ 179              	.LVL9:
+ 136:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****     EXTI_EVEN |= (uint32_t) linex;
+ 180              		.loc 1 136 5
+ 181              		.loc 1 136 15 is_stmt 0
+ 182 0000 37070140 		li	a4,1073807360
+ 183 0004 83274740 		lw	a5,1028(a4)
+ 184 0008 5D8D     		or	a0,a5,a0
+ 185              	.LVL10:
+ 186 000a 2322A740 		sw	a0,1028(a4)
+ 137:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c **** }
+ 187              		.loc 1 137 1
+ 188 000e 8280     		ret
+ 189              		.cfi_endproc
+ 190              	.LFE5:
+ 192              		.section	.text.exti_interrupt_disable,"ax",@progbits
+ 193              		.align	1
+ 194              		.globl	exti_interrupt_disable
+ 196              	exti_interrupt_disable:
+ 197              	.LFB6:
+ 138:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c **** 
+ 139:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c **** /*!
+ 140:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****     \brief      disable the interrupt from EXTI line x
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccOdgYUe.s 			page 7
+
+
+ 141:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****     \param[in]  linex: EXTI line number, refer to exti_line_enum
+ 142:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****                 only one parameter can be selected which is shown as below:
+ 143:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****       \arg        EXTI_x (x=0..18): EXTI line x
+ 144:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****     \param[out] none
+ 145:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****     \retval     none
+ 146:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c **** */
+ 147:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c **** void exti_interrupt_disable(exti_line_enum linex)
+ 148:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c **** {
+ 198              		.loc 1 148 1 is_stmt 1
+ 199              		.cfi_startproc
+ 200              	.LVL11:
+ 149:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****     EXTI_INTEN &= ~(uint32_t) linex;
+ 201              		.loc 1 149 5
+ 202              		.loc 1 149 16 is_stmt 0
+ 203 0000 B7070140 		li	a5,1073807360
+ 204 0004 03A70740 		lw	a4,1024(a5)
+ 205              		.loc 1 149 19
+ 206 0008 1345F5FF 		not	a0,a0
+ 207              	.LVL12:
+ 208              		.loc 1 149 16
+ 209 000c 798D     		and	a0,a0,a4
+ 210              	.LVL13:
+ 211 000e 23A0A740 		sw	a0,1024(a5)
+ 150:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c **** }
+ 212              		.loc 1 150 1
+ 213 0012 8280     		ret
+ 214              		.cfi_endproc
+ 215              	.LFE6:
+ 217              		.section	.text.exti_event_disable,"ax",@progbits
+ 218              		.align	1
+ 219              		.globl	exti_event_disable
+ 221              	exti_event_disable:
+ 222              	.LFB7:
+ 151:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c **** 
+ 152:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c **** /*!
+ 153:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****     \brief      disable the events from EXTI line x
+ 154:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****     \param[in]  linex: EXTI line number, refer to exti_line_enum
+ 155:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****                 only one parameter can be selected which is shown as below:
+ 156:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****       \arg        EXTI_x (x=0..18): EXTI line x
+ 157:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****     \param[out] none
+ 158:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****     \retval     none
+ 159:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c **** */
+ 160:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c **** void exti_event_disable(exti_line_enum linex)
+ 161:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c **** {
+ 223              		.loc 1 161 1 is_stmt 1
+ 224              		.cfi_startproc
+ 225              	.LVL14:
+ 162:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****     EXTI_EVEN &= ~(uint32_t) linex;
+ 226              		.loc 1 162 5
+ 227              		.loc 1 162 15 is_stmt 0
+ 228 0000 B7070140 		li	a5,1073807360
+ 229 0004 03A74740 		lw	a4,1028(a5)
+ 230              		.loc 1 162 18
+ 231 0008 1345F5FF 		not	a0,a0
+ 232              	.LVL15:
+ 233              		.loc 1 162 15
+ 234 000c 798D     		and	a0,a0,a4
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccOdgYUe.s 			page 8
+
+
+ 235              	.LVL16:
+ 236 000e 23A2A740 		sw	a0,1028(a5)
+ 163:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c **** }
+ 237              		.loc 1 163 1
+ 238 0012 8280     		ret
+ 239              		.cfi_endproc
+ 240              	.LFE7:
+ 242              		.section	.text.exti_flag_get,"ax",@progbits
+ 243              		.align	1
+ 244              		.globl	exti_flag_get
+ 246              	exti_flag_get:
+ 247              	.LFB8:
+ 164:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c **** 
+ 165:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c **** /*!
+ 166:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****     \brief      get EXTI lines flag
+ 167:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****     \param[in]  linex: EXTI line number, refer to exti_line_enum
+ 168:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****                 only one parameter can be selected which is shown as below:
+ 169:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****       \arg        EXTI_x (x=0..18): EXTI line x
+ 170:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****     \param[out] none
+ 171:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****     \retval     FlagStatus: status of flag (RESET or SET)
+ 172:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c **** */
+ 173:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c **** FlagStatus exti_flag_get(exti_line_enum linex)
+ 174:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c **** {
+ 248              		.loc 1 174 1 is_stmt 1
+ 249              		.cfi_startproc
+ 250              	.LVL17:
+ 175:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****     if (RESET != (EXTI_PD & (uint32_t) linex)) {
+ 251              		.loc 1 175 5
+ 252              		.loc 1 175 19 is_stmt 0
+ 253 0000 B7070140 		li	a5,1073807360
+ 254 0004 83A74741 		lw	a5,1044(a5)
+ 255              		.loc 1 175 27
+ 256 0008 7D8D     		and	a0,a5,a0
+ 257              	.LVL18:
+ 176:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****         return SET;
+ 177:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****     } else {
+ 178:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****         return RESET;
+ 179:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****     }
+ 180:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c **** }
+ 258              		.loc 1 180 1
+ 259 000a 3335A000 		snez	a0,a0
+ 260 000e 8280     		ret
+ 261              		.cfi_endproc
+ 262              	.LFE8:
+ 264              		.section	.text.exti_flag_clear,"ax",@progbits
+ 265              		.align	1
+ 266              		.globl	exti_flag_clear
+ 268              	exti_flag_clear:
+ 269              	.LFB9:
+ 181:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c **** 
+ 182:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c **** /*!
+ 183:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****     \brief      clear EXTI lines pending flag
+ 184:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****     \param[in]  linex: EXTI line number, refer to exti_line_enum
+ 185:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****                 only one parameter can be selected which is shown as below:
+ 186:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****       \arg        EXTI_x (x=0..18): EXTI line x
+ 187:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****     \param[out] none
+ 188:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****     \retval     none
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccOdgYUe.s 			page 9
+
+
+ 189:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c **** */
+ 190:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c **** void exti_flag_clear(exti_line_enum linex)
+ 191:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c **** {
+ 270              		.loc 1 191 1 is_stmt 1
+ 271              		.cfi_startproc
+ 272              	.LVL19:
+ 192:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****     EXTI_PD = (uint32_t) linex;
+ 273              		.loc 1 192 5
+ 274              		.loc 1 192 13 is_stmt 0
+ 275 0000 B7070140 		li	a5,1073807360
+ 276 0004 23AAA740 		sw	a0,1044(a5)
+ 193:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c **** }
+ 277              		.loc 1 193 1
+ 278 0008 8280     		ret
+ 279              		.cfi_endproc
+ 280              	.LFE9:
+ 282              		.section	.text.exti_interrupt_flag_get,"ax",@progbits
+ 283              		.align	1
+ 284              		.globl	exti_interrupt_flag_get
+ 286              	exti_interrupt_flag_get:
+ 287              	.LFB10:
+ 194:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c **** 
+ 195:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c **** /*!
+ 196:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****     \brief      get EXTI lines flag when the interrupt flag is set
+ 197:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****     \param[in]  linex: EXTI line number, refer to exti_line_enum
+ 198:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****                 only one parameter can be selected which is shown as below:
+ 199:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****       \arg        EXTI_x (x=0..18): EXTI line x
+ 200:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****     \param[out] none
+ 201:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****     \retval     FlagStatus: status of flag (RESET or SET)
+ 202:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c **** */
+ 203:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c **** FlagStatus exti_interrupt_flag_get(exti_line_enum linex)
+ 204:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c **** {
+ 288              		.loc 1 204 1 is_stmt 1
+ 289              		.cfi_startproc
+ 290              	.LVL20:
+ 205:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****     uint32_t flag_left, flag_right;
+ 291              		.loc 1 205 5
+ 206:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c **** 
+ 207:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****     flag_left = EXTI_PD & (uint32_t) linex;
+ 292              		.loc 1 207 5
+ 293              		.loc 1 207 17 is_stmt 0
+ 294 0000 37070140 		li	a4,1073807360
+ 295 0004 83274741 		lw	a5,1044(a4)
+ 208:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****     flag_right = EXTI_INTEN & (uint32_t) linex;
+ 296              		.loc 1 208 18
+ 297 0008 03270740 		lw	a4,1024(a4)
+ 204:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****     uint32_t flag_left, flag_right;
+ 298              		.loc 1 204 1
+ 299 000c AA86     		mv	a3,a0
+ 207:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****     flag_right = EXTI_INTEN & (uint32_t) linex;
+ 300              		.loc 1 207 15
+ 301 000e 7D8D     		and	a0,a5,a0
+ 302              	.LVL21:
+ 303              		.loc 1 208 5 is_stmt 1
+ 209:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c **** 
+ 210:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****     if ((RESET != flag_left) && (RESET != flag_right)) {
+ 304              		.loc 1 210 5
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccOdgYUe.s 			page 10
+
+
+ 305              		.loc 1 210 8 is_stmt 0
+ 306 0010 09C5     		beq	a0,zero,.L18
+ 208:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c **** 
+ 307              		.loc 1 208 16 discriminator 1
+ 308 0012 3375D700 		and	a0,a4,a3
+ 309              	.LVL22:
+ 310              		.loc 1 210 30 discriminator 1
+ 311 0016 3335A000 		snez	a0,a0
+ 312              	.LVL23:
+ 313              	.L18:
+ 211:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****         return SET;
+ 212:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****     } else {
+ 213:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****         return RESET;
+ 214:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****     }
+ 215:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c **** }
+ 314              		.loc 1 215 1
+ 315 001a 8280     		ret
+ 316              		.cfi_endproc
+ 317              	.LFE10:
+ 319              		.section	.text.exti_interrupt_flag_clear,"ax",@progbits
+ 320              		.align	1
+ 321              		.globl	exti_interrupt_flag_clear
+ 323              	exti_interrupt_flag_clear:
+ 324              	.LFB15:
+ 325              		.cfi_startproc
+ 326 0000 B7070140 		li	a5,1073807360
+ 327 0004 23AAA740 		sw	a0,1044(a5)
+ 328 0008 8280     		ret
+ 329              		.cfi_endproc
+ 330              	.LFE15:
+ 332              		.section	.text.exti_software_interrupt_enable,"ax",@progbits
+ 333              		.align	1
+ 334              		.globl	exti_software_interrupt_enable
+ 336              	exti_software_interrupt_enable:
+ 337              	.LFB12:
+ 216:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c **** 
+ 217:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c **** /*!
+ 218:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****     \brief      clear EXTI lines pending flag
+ 219:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****     \param[in]  linex: EXTI line number, refer to exti_line_enum
+ 220:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****                 only one parameter can be selected which is shown as below:
+ 221:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****       \arg        EXTI_x (x=0..18): EXTI line x
+ 222:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****     \param[out] none
+ 223:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****     \retval     none
+ 224:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c **** */
+ 225:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c **** void exti_interrupt_flag_clear(exti_line_enum linex)
+ 226:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c **** {
+ 227:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****     EXTI_PD = (uint32_t) linex;
+ 228:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c **** }
+ 229:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c **** 
+ 230:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c **** /*!
+ 231:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****     \brief      enable EXTI software interrupt event
+ 232:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****     \param[in]  linex: EXTI line number, refer to exti_line_enum
+ 233:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****                 only one parameter can be selected which is shown as below:
+ 234:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****       \arg        EXTI_x (x=0..18): EXTI line x
+ 235:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****     \param[out] none
+ 236:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****     \retval     none
+ 237:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c **** */
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccOdgYUe.s 			page 11
+
+
+ 238:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c **** void exti_software_interrupt_enable(exti_line_enum linex)
+ 239:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c **** {
+ 338              		.loc 1 239 1 is_stmt 1
+ 339              		.cfi_startproc
+ 340              	.LVL24:
+ 240:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****     EXTI_SWIEV |= (uint32_t) linex;
+ 341              		.loc 1 240 5
+ 342              		.loc 1 240 16 is_stmt 0
+ 343 0000 37070140 		li	a4,1073807360
+ 344 0004 83270741 		lw	a5,1040(a4)
+ 345 0008 5D8D     		or	a0,a5,a0
+ 346              	.LVL25:
+ 347 000a 2328A740 		sw	a0,1040(a4)
+ 241:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c **** }
+ 348              		.loc 1 241 1
+ 349 000e 8280     		ret
+ 350              		.cfi_endproc
+ 351              	.LFE12:
+ 353              		.section	.text.exti_software_interrupt_disable,"ax",@progbits
+ 354              		.align	1
+ 355              		.globl	exti_software_interrupt_disable
+ 357              	exti_software_interrupt_disable:
+ 358              	.LFB13:
+ 242:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c **** 
+ 243:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c **** /*!
+ 244:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****     \brief      disable EXTI software interrupt event
+ 245:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****     \param[in]  linex: EXTI line number, refer to exti_line_enum
+ 246:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****                 only one parameter can be selected which is shown as below:
+ 247:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****       \arg        EXTI_x (x=0..18): EXTI line x
+ 248:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****     \param[out] none
+ 249:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****     \retval     none
+ 250:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c **** */
+ 251:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c **** void exti_software_interrupt_disable(exti_line_enum linex)
+ 252:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c **** {
+ 359              		.loc 1 252 1 is_stmt 1
+ 360              		.cfi_startproc
+ 361              	.LVL26:
+ 253:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c ****     EXTI_SWIEV &= ~(uint32_t) linex;
+ 362              		.loc 1 253 5
+ 363              		.loc 1 253 16 is_stmt 0
+ 364 0000 B7070140 		li	a5,1073807360
+ 365 0004 03A70741 		lw	a4,1040(a5)
+ 366              		.loc 1 253 19
+ 367 0008 1345F5FF 		not	a0,a0
+ 368              	.LVL27:
+ 369              		.loc 1 253 16
+ 370 000c 798D     		and	a0,a0,a4
+ 371              	.LVL28:
+ 372 000e 23A8A740 		sw	a0,1040(a5)
+ 254:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.c **** }
+ 373              		.loc 1 254 1
+ 374 0012 8280     		ret
+ 375              		.cfi_endproc
+ 376              	.LFE13:
+ 378              		.text
+ 379              	.Letext0:
+ 380              		.file 2 "d:\\risc_v_gcc\\riscv-none-embed\\include\\machine\\_default_types.h"
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccOdgYUe.s 			page 12
+
+
+ 381              		.file 3 "d:\\risc_v_gcc\\riscv-none-embed\\include\\sys\\_stdint.h"
+ 382              		.file 4 "arch/riscv/mach-gd32vf10x/system/gd32vf103.h"
+ 383              		.file 5 "arch/riscv/mach-gd32vf10x/bsp/gd32vf103_exti.h"
+ 384              		.file 6 "arch/riscv/mach-gd32vf10x/system/system_gd32vf103.h"
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccOdgYUe.s 			page 13
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 gd32vf103_exti.c
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:10     .text.exti_deinit:0000000000000000 exti_deinit
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:14     .text.exti_deinit:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:15     .text.exti_deinit:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:16     .text.exti_deinit:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:17     .text.exti_deinit:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:20     .text.exti_deinit:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:21     .text.exti_deinit:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:23     .text.exti_deinit:000000000000000c .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:24     .text.exti_deinit:000000000000000c .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:26     .text.exti_deinit:0000000000000010 .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:27     .text.exti_deinit:0000000000000010 .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:29     .text.exti_deinit:0000000000000014 .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:30     .text.exti_deinit:0000000000000014 .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:32     .text.exti_deinit:0000000000000018 .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:33     .text.exti_deinit:000000000000001a .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:40     .text.exti_init:0000000000000000 exti_init
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:43     .text.exti_init:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:45     .text.exti_init:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:46     .text.exti_init:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:47     .text.exti_init:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:50     .text.exti_init:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:52     .text.exti_init:000000000000000c .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:55     .text.exti_init:0000000000000012 .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:56     .text.exti_init:0000000000000012 .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:60     .text.exti_init:000000000000001c .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:61     .text.exti_init:000000000000001c .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:65     .text.exti_init:0000000000000026 .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:66     .text.exti_init:0000000000000026 .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:70     .text.exti_init:0000000000000030 .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:74     .text.exti_init:0000000000000038 .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:75     .text.exti_init:0000000000000038 .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:80     .text.exti_init:0000000000000042 .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:81     .text.exti_init:0000000000000042 .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:90     .text.exti_init:0000000000000052 .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:91     .text.exti_init:0000000000000052 .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:96     .text.exti_init:0000000000000060 .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:97     .text.exti_init:0000000000000060 .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:102    .text.exti_init:000000000000006a .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:103    .text.exti_init:000000000000006a .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:107    .text.exti_init:000000000000006c .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:108    .text.exti_init:000000000000006c .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:112    .text.exti_init:0000000000000076 .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:113    .text.exti_init:0000000000000076 .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:117    .text.exti_init:000000000000007c .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:118    .text.exti_init:000000000000007c .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:123    .text.exti_init:000000000000008a .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:124    .text.exti_init:000000000000008a .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:129    .text.exti_init:0000000000000094 .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:133    .text.exti_init:0000000000000096 .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:134    .text.exti_init:0000000000000096 .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:140    .text.exti_init:00000000000000a4 .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:141    .text.exti_init:00000000000000a4 .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:146    .text.exti_init:00000000000000ae .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:147    .text.exti_init:00000000000000b0 .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:154    .text.exti_interrupt_enable:0000000000000000 exti_interrupt_enable
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccOdgYUe.s 			page 14
+
+
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:157    .text.exti_interrupt_enable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:159    .text.exti_interrupt_enable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:160    .text.exti_interrupt_enable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:161    .text.exti_interrupt_enable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:167    .text.exti_interrupt_enable:000000000000000e .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:168    .text.exti_interrupt_enable:0000000000000010 .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:175    .text.exti_event_enable:0000000000000000 exti_event_enable
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:178    .text.exti_event_enable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:180    .text.exti_event_enable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:181    .text.exti_event_enable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:182    .text.exti_event_enable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:188    .text.exti_event_enable:000000000000000e .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:189    .text.exti_event_enable:0000000000000010 .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:196    .text.exti_interrupt_disable:0000000000000000 exti_interrupt_disable
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:199    .text.exti_interrupt_disable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:201    .text.exti_interrupt_disable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:202    .text.exti_interrupt_disable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:203    .text.exti_interrupt_disable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:206    .text.exti_interrupt_disable:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:209    .text.exti_interrupt_disable:000000000000000c .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:213    .text.exti_interrupt_disable:0000000000000012 .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:214    .text.exti_interrupt_disable:0000000000000014 .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:221    .text.exti_event_disable:0000000000000000 exti_event_disable
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:224    .text.exti_event_disable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:226    .text.exti_event_disable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:227    .text.exti_event_disable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:228    .text.exti_event_disable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:231    .text.exti_event_disable:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:234    .text.exti_event_disable:000000000000000c .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:238    .text.exti_event_disable:0000000000000012 .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:239    .text.exti_event_disable:0000000000000014 .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:246    .text.exti_flag_get:0000000000000000 exti_flag_get
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:249    .text.exti_flag_get:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:251    .text.exti_flag_get:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:252    .text.exti_flag_get:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:253    .text.exti_flag_get:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:256    .text.exti_flag_get:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:259    .text.exti_flag_get:000000000000000a .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:261    .text.exti_flag_get:0000000000000010 .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:268    .text.exti_flag_clear:0000000000000000 exti_flag_clear
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:271    .text.exti_flag_clear:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:273    .text.exti_flag_clear:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:274    .text.exti_flag_clear:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:275    .text.exti_flag_clear:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:278    .text.exti_flag_clear:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:279    .text.exti_flag_clear:000000000000000a .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:286    .text.exti_interrupt_flag_get:0000000000000000 exti_interrupt_flag_get
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:289    .text.exti_interrupt_flag_get:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:291    .text.exti_interrupt_flag_get:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:292    .text.exti_interrupt_flag_get:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:293    .text.exti_interrupt_flag_get:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:294    .text.exti_interrupt_flag_get:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:297    .text.exti_interrupt_flag_get:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:299    .text.exti_interrupt_flag_get:000000000000000c .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:301    .text.exti_interrupt_flag_get:000000000000000e .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:304    .text.exti_interrupt_flag_get:0000000000000010 .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:305    .text.exti_interrupt_flag_get:0000000000000010 .L0 
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccOdgYUe.s 			page 15
+
+
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:306    .text.exti_interrupt_flag_get:0000000000000010 .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:308    .text.exti_interrupt_flag_get:0000000000000012 .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:311    .text.exti_interrupt_flag_get:0000000000000016 .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:315    .text.exti_interrupt_flag_get:000000000000001a .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:316    .text.exti_interrupt_flag_get:000000000000001c .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:323    .text.exti_interrupt_flag_clear:0000000000000000 exti_interrupt_flag_clear
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:325    .text.exti_interrupt_flag_clear:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:329    .text.exti_interrupt_flag_clear:000000000000000a .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:336    .text.exti_software_interrupt_enable:0000000000000000 exti_software_interrupt_enable
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:339    .text.exti_software_interrupt_enable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:341    .text.exti_software_interrupt_enable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:342    .text.exti_software_interrupt_enable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:343    .text.exti_software_interrupt_enable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:349    .text.exti_software_interrupt_enable:000000000000000e .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:350    .text.exti_software_interrupt_enable:0000000000000010 .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:357    .text.exti_software_interrupt_disable:0000000000000000 exti_software_interrupt_disable
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:360    .text.exti_software_interrupt_disable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:362    .text.exti_software_interrupt_disable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:363    .text.exti_software_interrupt_disable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:364    .text.exti_software_interrupt_disable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:367    .text.exti_software_interrupt_disable:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:370    .text.exti_software_interrupt_disable:000000000000000c .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:374    .text.exti_software_interrupt_disable:0000000000000012 .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:375    .text.exti_software_interrupt_disable:0000000000000014 .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:36     .text.exti_deinit:000000000000001a .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:150    .text.exti_init:00000000000000b0 .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:171    .text.exti_interrupt_enable:0000000000000010 .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:192    .text.exti_event_enable:0000000000000010 .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:217    .text.exti_interrupt_disable:0000000000000014 .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:242    .text.exti_event_disable:0000000000000014 .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:264    .text.exti_flag_get:0000000000000010 .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:282    .text.exti_flag_clear:000000000000000a .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:319    .text.exti_interrupt_flag_get:000000000000001c .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:353    .text.exti_software_interrupt_enable:0000000000000010 .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:378    .text.exti_software_interrupt_disable:0000000000000014 .L0 
+                     .debug_frame:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:105    .text.exti_init:000000000000006c .L4
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:79     .text.exti_init:0000000000000042 .L6
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:115    .text.exti_init:000000000000007c .L7
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:131    .text.exti_init:0000000000000096 .L8
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:88     .text.exti_init:0000000000000052 .L9
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:83     .text.exti_init:0000000000000048 .L11
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:313    .text.exti_interrupt_flag_get:000000000000001a .L18
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:893    .debug_abbrev:0000000000000000 .Ldebug_abbrev0
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:1570   .debug_str:000000000000016f .LASF55
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:1562   .debug_str:000000000000011c .LASF56
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:1638   .debug_str:000000000000035c .LASF57
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:1496   .debug_ranges:0000000000000000 .Ldebug_ranges0
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:1522   .debug_line:0000000000000000 .Ldebug_line0
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:1590   .debug_str:0000000000000231 .LASF0
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:1540   .debug_str:0000000000000068 .LASF1
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:1566   .debug_str:0000000000000157 .LASF2
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:1530   .debug_str:0000000000000023 .LASF3
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:1618   .debug_str:00000000000002b8 .LASF4
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:1554   .debug_str:00000000000000e3 .LASF5
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:1526   .debug_str:0000000000000013 .LASF9
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:1624   .debug_str:00000000000002fb .LASF6
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccOdgYUe.s 			page 16
+
+
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:1548   .debug_str:00000000000000ad .LASF7
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:1550   .debug_str:00000000000000bb .LASF8
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:1538   .debug_str:000000000000005f .LASF10
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:1620   .debug_str:00000000000002cb .LASF58
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:1634   .debug_str:0000000000000350 .LASF11
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:1646   .debug_str:00000000000003bf .LASF12
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:1592   .debug_str:000000000000023e .LASF13
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:1594   .debug_str:0000000000000245 .LASF14
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:1596   .debug_str:000000000000024c .LASF15
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:1598   .debug_str:0000000000000253 .LASF16
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:1600   .debug_str:000000000000025a .LASF17
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:1602   .debug_str:0000000000000261 .LASF18
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:1604   .debug_str:0000000000000268 .LASF19
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:1606   .debug_str:000000000000026f .LASF20
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:1608   .debug_str:0000000000000276 .LASF21
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:1610   .debug_str:000000000000027d .LASF22
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:1572   .debug_str:00000000000001e9 .LASF23
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:1574   .debug_str:00000000000001f1 .LASF24
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:1576   .debug_str:00000000000001f9 .LASF25
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:1578   .debug_str:0000000000000201 .LASF26
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:1580   .debug_str:0000000000000209 .LASF27
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:1582   .debug_str:0000000000000211 .LASF28
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:1584   .debug_str:0000000000000219 .LASF29
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:1586   .debug_str:0000000000000221 .LASF30
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:1588   .debug_str:0000000000000229 .LASF31
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:1626   .debug_str:000000000000030d .LASF32
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:1556   .debug_str:00000000000000ec .LASF33
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:1628   .debug_str:000000000000031c .LASF34
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:1560   .debug_str:000000000000010d .LASF35
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:1552   .debug_str:00000000000000d2 .LASF36
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:1642   .debug_str:0000000000000396 .LASF37
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:1544   .debug_str:0000000000000088 .LASF38
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:1632   .debug_str:0000000000000341 .LASF39
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:1542   .debug_str:0000000000000074 .LASF40
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:1622   .debug_str:00000000000002db .LASF41
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:358    .text.exti_software_interrupt_disable:0000000000000000 .LFB13
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:376    .text.exti_software_interrupt_disable:0000000000000014 .LFE13
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:1636   .debug_str:0000000000000356 .LASF43
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:1249   .debug_loc:0000000000000000 .LLST10
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:1616   .debug_str:0000000000000299 .LASF42
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:337    .text.exti_software_interrupt_enable:0000000000000000 .LFB12
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:351    .text.exti_software_interrupt_enable:0000000000000010 .LFE12
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:1270   .debug_loc:000000000000002f .LLST9
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:1630   .debug_str:0000000000000327 .LASF59
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:1536   .debug_str:0000000000000047 .LASF46
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:287    .text.exti_interrupt_flag_get:0000000000000000 .LFB10
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:317    .text.exti_interrupt_flag_get:000000000000001c .LFE10
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:1284   .debug_loc:0000000000000050 .LLST6
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:1612   .debug_str:0000000000000284 .LASF44
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:1295   .debug_loc:000000000000006e .LLST7
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:1614   .debug_str:000000000000028e .LASF45
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:1311   .debug_loc:0000000000000091 .LLST8
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:1532   .debug_str:000000000000002d .LASF60
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:1640   .debug_str:0000000000000388 .LASF47
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:247    .text.exti_flag_get:0000000000000000 .LFB8
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:262    .text.exti_flag_get:0000000000000010 .LFE8
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:1336   .debug_loc:00000000000000c4 .LLST5
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccOdgYUe.s 			page 17
+
+
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:1524   .debug_str:0000000000000000 .LASF48
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:222    .text.exti_event_disable:0000000000000000 .LFB7
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:240    .text.exti_event_disable:0000000000000014 .LFE7
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:1350   .debug_loc:00000000000000e5 .LLST4
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:1644   .debug_str:00000000000003a8 .LASF49
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:197    .text.exti_interrupt_disable:0000000000000000 .LFB6
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:215    .text.exti_interrupt_disable:0000000000000014 .LFE6
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:1371   .debug_loc:0000000000000114 .LLST3
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:1558   .debug_str:00000000000000fb .LASF50
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:176    .text.exti_event_enable:0000000000000000 .LFB5
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:190    .text.exti_event_enable:0000000000000010 .LFE5
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:1392   .debug_loc:0000000000000143 .LLST2
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:1546   .debug_str:0000000000000097 .LASF51
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:155    .text.exti_interrupt_enable:0000000000000000 .LFB4
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:169    .text.exti_interrupt_enable:0000000000000010 .LFE4
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:1406   .debug_loc:0000000000000164 .LLST1
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:1568   .debug_str:0000000000000165 .LASF52
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:41     .text.exti_init:0000000000000000 .LFB3
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:148    .text.exti_init:00000000000000b0 .LFE3
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:1420   .debug_loc:0000000000000185 .LLST0
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:1528   .debug_str:000000000000001e .LASF53
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:1534   .debug_str:000000000000003d .LASF54
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:1564   .debug_str:000000000000014b .LASF61
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:11     .text.exti_deinit:0000000000000000 .LFB2
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:34     .text.exti_deinit:000000000000001a .LFE2
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:269    .text.exti_flag_clear:0000000000000000 .LFB9
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:280    .text.exti_flag_clear:000000000000000a .LFE9
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:361    .text.exti_software_interrupt_disable:0000000000000000 .LVL26
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:368    .text.exti_software_interrupt_disable:000000000000000c .LVL27
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:371    .text.exti_software_interrupt_disable:000000000000000e .LVL28
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:340    .text.exti_software_interrupt_enable:0000000000000000 .LVL24
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:346    .text.exti_software_interrupt_enable:000000000000000a .LVL25
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:290    .text.exti_interrupt_flag_get:0000000000000000 .LVL20
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:302    .text.exti_interrupt_flag_get:0000000000000010 .LVL21
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:309    .text.exti_interrupt_flag_get:0000000000000016 .LVL22
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:312    .text.exti_interrupt_flag_get:000000000000001a .LVL23
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:250    .text.exti_flag_get:0000000000000000 .LVL17
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:257    .text.exti_flag_get:000000000000000a .LVL18
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:225    .text.exti_event_disable:0000000000000000 .LVL14
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:232    .text.exti_event_disable:000000000000000c .LVL15
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:235    .text.exti_event_disable:000000000000000e .LVL16
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:200    .text.exti_interrupt_disable:0000000000000000 .LVL11
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:207    .text.exti_interrupt_disable:000000000000000c .LVL12
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:210    .text.exti_interrupt_disable:000000000000000e .LVL13
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:179    .text.exti_event_enable:0000000000000000 .LVL9
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:185    .text.exti_event_enable:000000000000000a .LVL10
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:158    .text.exti_interrupt_enable:0000000000000000 .LVL7
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:164    .text.exti_interrupt_enable:000000000000000a .LVL8
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:44     .text.exti_init:0000000000000000 .LVL0
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:99     .text.exti_init:0000000000000066 .LVL1
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:104    .text.exti_init:000000000000006c .LVL2
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:126    .text.exti_init:0000000000000090 .LVL3
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:130    .text.exti_init:0000000000000096 .LVL4
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:137    .text.exti_init:00000000000000a0 .LVL5
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:143    .text.exti_init:00000000000000aa .LVL6
+C:\Users\test\AppData\Local\Temp\ccOdgYUe.s:386    .debug_info:0000000000000000 .Ldebug_info0
+
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccOdgYUe.s 			page 18
+
+
+NO UNDEFINED SYMBOLS

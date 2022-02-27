@@ -1,0 +1,1228 @@
+GAS LISTING C:\Users\test\AppData\Local\Temp\cck0erGo.s 			page 1
+
+
+   1              		.file	"gd32vf103_bkp.c"
+   2              		.option nopic
+   3              		.text
+   4              	.Ltext0:
+   5              		.cfi_sections	.debug_frame
+   6              		.section	.text.bkp_deinit,"ax",@progbits
+   7              		.align	1
+   8              		.globl	bkp_deinit
+  10              	bkp_deinit:
+  11              	.LFB2:
+  12              		.file 1 "arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c"
+   1:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** /*!
+   2:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     \file    gd32vf103_bkp.c
+   3:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     \brief   BKP driver
+   4:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** 
+   5:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     \version 2019-6-5, V1.0.0, firmware for GD32VF103
+   6:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** */
+   7:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** 
+   8:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** /*
+   9:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     Copyright (c) 2019, GigaDevice Semiconductor Inc.
+  10:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** 
+  11:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     Redistribution and use in source and binary forms, with or without modification, 
+  12:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** are permitted provided that the following conditions are met:
+  13:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** 
+  14:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     1. Redistributions of source code must retain the above copyright notice, this 
+  15:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****        list of conditions and the following disclaimer.
+  16:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     2. Redistributions in binary form must reproduce the above copyright notice, 
+  17:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****        this list of conditions and the following disclaimer in the documentation 
+  18:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****        and/or other materials provided with the distribution.
+  19:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     3. Neither the name of the copyright holder nor the names of its contributors 
+  20:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****        may be used to endorse or promote products derived from this software without 
+  21:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****        specific prior written permission.
+  22:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** 
+  23:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" 
+  24:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED 
+  25:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. 
+  26:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, 
+  27:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT 
+  28:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR 
+  29:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, 
+  30:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) 
+  31:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY 
+  32:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** OF SUCH DAMAGE.
+  33:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** */
+  34:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** 
+  35:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** #include "gd32vf103_bkp.h"
+  36:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** 
+  37:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** /* BKP register bits offset */
+  38:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** #define BKP_TAMPER_BITS_OFFSET          ((uint32_t)8U)
+  39:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** 
+  40:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** /*!
+  41:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     \brief      reset BKP registers
+  42:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     \param[in]  none
+  43:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     \param[out] none
+  44:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     \retval     none
+  45:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** */
+  46:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** void bkp_deinit(void)
+GAS LISTING C:\Users\test\AppData\Local\Temp\cck0erGo.s 			page 2
+
+
+  47:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** {
+  13              		.loc 1 47 1
+  14              		.cfi_startproc
+  48:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     /* reset BKP domain register*/
+  49:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     rcu_bkp_reset_enable();
+  15              		.loc 1 49 5
+  47:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     /* reset BKP domain register*/
+  16              		.loc 1 47 1 is_stmt 0
+  17 0000 4111     		addi	sp,sp,-16
+  18              	.LCFI0:
+  19              		.cfi_def_cfa_offset 16
+  20 0002 06C6     		sw	ra,12(sp)
+  21              		.cfi_offset 1, -4
+  22              		.loc 1 49 5
+  23 0004 97000000 		call	rcu_bkp_reset_enable
+  23      E7800000 
+  24              	.LVL0:
+  50:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     rcu_bkp_reset_disable();
+  25              		.loc 1 50 5 is_stmt 1
+  51:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** }
+  26              		.loc 1 51 1 is_stmt 0
+  27 000c B240     		lw	ra,12(sp)
+  28              		.cfi_restore 1
+  29 000e 4101     		addi	sp,sp,16
+  30              	.LCFI1:
+  31              		.cfi_def_cfa_offset 0
+  50:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     rcu_bkp_reset_disable();
+  32              		.loc 1 50 5
+  33 0010 17030000 		tail	rcu_bkp_reset_disable
+  33      67000300 
+  34              	.LVL1:
+  35              		.cfi_endproc
+  36              	.LFE2:
+  38              		.section	.text.bkp_data_write,"ax",@progbits
+  39              		.align	1
+  40              		.globl	bkp_data_write
+  42              	bkp_data_write:
+  43              	.LFB3:
+  52:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** 
+  53:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** /*!
+  54:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     \brief      write BKP data register
+  55:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     \param[in]  register_number: refer to bkp_data_register_enum
+  56:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****                 only one parameter can be selected which is shown as below:
+  57:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****       \arg        BKP_DATA_x(x = 0..41): bkp data register number x
+  58:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     \param[in]  data: the data to be write in BKP data register
+  59:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     \param[out] none
+  60:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     \retval     none
+  61:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** */
+  62:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** void bkp_data_write(bkp_data_register_enum register_number, uint16_t data)
+  63:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** {
+  44              		.loc 1 63 1 is_stmt 1
+  45              		.cfi_startproc
+  46              	.LVL2:
+  64:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     if((register_number >= BKP_DATA_10) && (register_number <= BKP_DATA_41)){
+  47              		.loc 1 64 5
+  48              		.loc 1 64 41 is_stmt 0
+  49 0000 130755FF 		addi	a4,a0,-11
+GAS LISTING C:\Users\test\AppData\Local\Temp\cck0erGo.s 			page 3
+
+
+  50              		.loc 1 64 7
+  51 0004 FD47     		li	a5,31
+  52 0006 63EBE700 		bgtu	a4,a5,.L5
+  65:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****         BKP_DATA10_41(register_number - 1U) = data;
+  53              		.loc 1 65 9 is_stmt 1
+  54 000a B7270010 		li	a5,268443648
+  55 000e 938757B0 		addi	a5,a5,-1275
+  56 0012 3E95     		add	a0,a0,a5
+  57              	.LVL3:
+  58 0014 0A05     		slli	a0,a0,2
+  59              	.LVL4:
+  60              		.loc 1 65 45 is_stmt 0
+  61 0016 2310B500 		sh	a1,0(a0)
+  62 001a 8280     		ret
+  63              	.LVL5:
+  64              	.L5:
+  66:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     }else if((register_number >= BKP_DATA_0) && (register_number <= BKP_DATA_9)){
+  65              		.loc 1 66 11 is_stmt 1
+  66              		.loc 1 66 46 is_stmt 0
+  67 001c 9307F5FF 		addi	a5,a0,-1
+  68              		.loc 1 66 13
+  69 0020 2547     		li	a4,9
+  70 0022 636AF700 		bgtu	a5,a4,.L4
+  67:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****         BKP_DATA0_9(register_number - 1U) = data;
+  71              		.loc 1 67 9 is_stmt 1
+  72 0026 B7270010 		li	a5,268443648
+  73 002a 938707B0 		addi	a5,a5,-1280
+  74 002e 3E95     		add	a0,a0,a5
+  75              	.LVL6:
+  76 0030 0A05     		slli	a0,a0,2
+  77              	.LVL7:
+  78              		.loc 1 67 43 is_stmt 0
+  79 0032 2310B500 		sh	a1,0(a0)
+  68:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     }else{
+  69:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****         /* illegal parameters */
+  70:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     }
+  80              		.loc 1 70 5 is_stmt 1
+  81              	.L4:
+  71:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** }
+  82              		.loc 1 71 1 is_stmt 0
+  83 0036 8280     		ret
+  84              		.cfi_endproc
+  85              	.LFE3:
+  87              		.section	.text.bkp_data_read,"ax",@progbits
+  88              		.align	1
+  89              		.globl	bkp_data_read
+  91              	bkp_data_read:
+  92              	.LFB4:
+  72:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** 
+  73:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** /*!
+  74:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     \brief      read BKP data register
+  75:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     \param[in]  register_number: refer to bkp_data_register_enum
+  76:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****                 only one parameter can be selected which is shown as below:
+  77:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****       \arg        BKP_DATA_x(x = 0..41): bkp data register number x
+  78:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     \param[out] none
+  79:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     \retval     data of BKP data register
+  80:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** */
+GAS LISTING C:\Users\test\AppData\Local\Temp\cck0erGo.s 			page 4
+
+
+  81:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** uint16_t bkp_data_read(bkp_data_register_enum register_number)
+  82:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** {
+  93              		.loc 1 82 1 is_stmt 1
+  94              		.cfi_startproc
+  95              	.LVL8:
+  83:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     uint16_t data = 0U;
+  96              		.loc 1 83 5
+  84:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     
+  85:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     /* get the data from the BKP data register */
+  86:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     if((register_number >= BKP_DATA_10) && (register_number <= BKP_DATA_41)){
+  97              		.loc 1 86 5
+  98              		.loc 1 86 41 is_stmt 0
+  99 0000 930655FF 		addi	a3,a0,-11
+ 100              		.loc 1 86 7
+ 101 0004 7D47     		li	a4,31
+  82:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     uint16_t data = 0U;
+ 102              		.loc 1 82 1
+ 103 0006 AA87     		mv	a5,a0
+ 104              		.loc 1 86 7
+ 105 0008 636DD700 		bgtu	a3,a4,.L8
+  87:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****         data = BKP_DATA10_41(register_number - 1U);
+ 106              		.loc 1 87 9 is_stmt 1
+ 107              		.loc 1 87 16 is_stmt 0
+ 108 000c 37250010 		li	a0,268443648
+ 109              	.LVL9:
+ 110 0010 130555B0 		addi	a0,a0,-1275
+  88:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     }else if((register_number >= BKP_DATA_0) && (register_number <= BKP_DATA_9)){
+  89:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****         data = BKP_DATA0_9(register_number - 1U);
+ 111              		.loc 1 89 16
+ 112 0014 AA97     		add	a5,a5,a0
+ 113              	.LVL10:
+ 114 0016 8A07     		slli	a5,a5,2
+ 115              	.LVL11:
+ 116              		.loc 1 89 14
+ 117 0018 03D50700 		lhu	a0,0(a5)
+ 118 001c 4205     		slli	a0,a0,16
+ 119 001e 4181     		srli	a0,a0,16
+ 120              	.LVL12:
+ 121              	.L9:
+  90:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     }else{
+  91:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****         /* illegal parameters */
+  92:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     }
+ 122              		.loc 1 92 5 is_stmt 1
+  93:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     return data;
+ 123              		.loc 1 93 5
+  94:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** }
+ 124              		.loc 1 94 1 is_stmt 0
+ 125 0020 8280     		ret
+ 126              	.LVL13:
+ 127              	.L8:
+  88:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****         data = BKP_DATA0_9(register_number - 1U);
+ 128              		.loc 1 88 11 is_stmt 1
+  88:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****         data = BKP_DATA0_9(register_number - 1U);
+ 129              		.loc 1 88 46 is_stmt 0
+ 130 0022 1307F5FF 		addi	a4,a0,-1
+  88:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****         data = BKP_DATA0_9(register_number - 1U);
+ 131              		.loc 1 88 13
+GAS LISTING C:\Users\test\AppData\Local\Temp\cck0erGo.s 			page 5
+
+
+ 132 0026 A546     		li	a3,9
+  83:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     
+ 133              		.loc 1 83 14
+ 134 0028 0145     		li	a0,0
+ 135              	.LVL14:
+  88:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****         data = BKP_DATA0_9(register_number - 1U);
+ 136              		.loc 1 88 13
+ 137 002a E3EBE6FE 		bgtu	a4,a3,.L9
+  89:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     }else{
+ 138              		.loc 1 89 9 is_stmt 1
+  89:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     }else{
+ 139              		.loc 1 89 16 is_stmt 0
+ 140 002e 37250010 		li	a0,268443648
+ 141 0032 130505B0 		addi	a0,a0,-1280
+ 142 0036 AA97     		add	a5,a5,a0
+ 143              	.LVL15:
+ 144 0038 8A07     		slli	a5,a5,2
+  89:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     }else{
+ 145              		.loc 1 89 14
+ 146 003a 03D50700 		lhu	a0,0(a5)
+ 147 003e 4205     		slli	a0,a0,16
+ 148 0040 4181     		srli	a0,a0,16
+ 149              	.LVL16:
+ 150 0042 F9BF     		j	.L9
+ 151              		.cfi_endproc
+ 152              	.LFE4:
+ 154              		.section	.text.bkp_rtc_calibration_output_enable,"ax",@progbits
+ 155              		.align	1
+ 156              		.globl	bkp_rtc_calibration_output_enable
+ 158              	bkp_rtc_calibration_output_enable:
+ 159              	.LFB5:
+  95:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** 
+  96:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** /*!
+  97:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     \brief      enable RTC clock calibration output
+  98:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     \param[in]  none
+  99:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     \param[out] none
+ 100:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     \retval     none
+ 101:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** */
+ 102:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** void bkp_rtc_calibration_output_enable(void)
+ 103:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** {
+ 160              		.loc 1 103 1 is_stmt 1
+ 161              		.cfi_startproc
+ 104:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     BKP_OCTL |= (uint16_t)BKP_OCTL_COEN;
+ 162              		.loc 1 104 5
+ 163              		.loc 1 104 14 is_stmt 0
+ 164 0000 37770040 		li	a4,1073770496
+ 165 0004 8357C7C2 		lhu	a5,-980(a4)
+ 166 0008 93E70708 		ori	a5,a5,128
+ 167 000c 2316F7C2 		sh	a5,-980(a4)
+ 105:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** }
+ 168              		.loc 1 105 1
+ 169 0010 8280     		ret
+ 170              		.cfi_endproc
+ 171              	.LFE5:
+ 173              		.section	.text.bkp_rtc_calibration_output_disable,"ax",@progbits
+ 174              		.align	1
+ 175              		.globl	bkp_rtc_calibration_output_disable
+GAS LISTING C:\Users\test\AppData\Local\Temp\cck0erGo.s 			page 6
+
+
+ 177              	bkp_rtc_calibration_output_disable:
+ 178              	.LFB6:
+ 106:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** 
+ 107:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** /*!
+ 108:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     \brief      disable RTC clock calibration output
+ 109:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     \param[in]  none
+ 110:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     \param[out] none
+ 111:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     \retval     none
+ 112:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** */
+ 113:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** void bkp_rtc_calibration_output_disable(void)
+ 114:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** {
+ 179              		.loc 1 114 1 is_stmt 1
+ 180              		.cfi_startproc
+ 115:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     BKP_OCTL &= (uint16_t)~BKP_OCTL_COEN;
+ 181              		.loc 1 115 5
+ 182              		.loc 1 115 14 is_stmt 0
+ 183 0000 37770040 		li	a4,1073770496
+ 184 0004 8357C7C2 		lhu	a5,-980(a4)
+ 185 0008 C207     		slli	a5,a5,16
+ 186 000a C183     		srli	a5,a5,16
+ 187 000c 93F7F7F7 		andi	a5,a5,-129
+ 188 0010 C207     		slli	a5,a5,16
+ 189 0012 C183     		srli	a5,a5,16
+ 190 0014 2316F7C2 		sh	a5,-980(a4)
+ 116:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** }
+ 191              		.loc 1 116 1
+ 192 0018 8280     		ret
+ 193              		.cfi_endproc
+ 194              	.LFE6:
+ 196              		.section	.text.bkp_rtc_signal_output_enable,"ax",@progbits
+ 197              		.align	1
+ 198              		.globl	bkp_rtc_signal_output_enable
+ 200              	bkp_rtc_signal_output_enable:
+ 201              	.LFB7:
+ 117:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** 
+ 118:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** /*!
+ 119:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     \brief      enable RTC alarm or second signal output
+ 120:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     \param[in]  none
+ 121:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     \param[out] none
+ 122:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     \retval     none
+ 123:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** */
+ 124:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** void bkp_rtc_signal_output_enable(void)
+ 125:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** {
+ 202              		.loc 1 125 1 is_stmt 1
+ 203              		.cfi_startproc
+ 126:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     BKP_OCTL |= (uint16_t)BKP_OCTL_ASOEN;
+ 204              		.loc 1 126 5
+ 205              		.loc 1 126 14 is_stmt 0
+ 206 0000 37770040 		li	a4,1073770496
+ 207 0004 8357C7C2 		lhu	a5,-980(a4)
+ 208 0008 93E70710 		ori	a5,a5,256
+ 209 000c 2316F7C2 		sh	a5,-980(a4)
+ 127:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** }
+ 210              		.loc 1 127 1
+ 211 0010 8280     		ret
+ 212              		.cfi_endproc
+ 213              	.LFE7:
+GAS LISTING C:\Users\test\AppData\Local\Temp\cck0erGo.s 			page 7
+
+
+ 215              		.section	.text.bkp_rtc_signal_output_disable,"ax",@progbits
+ 216              		.align	1
+ 217              		.globl	bkp_rtc_signal_output_disable
+ 219              	bkp_rtc_signal_output_disable:
+ 220              	.LFB8:
+ 128:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** 
+ 129:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** /*!
+ 130:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     \brief      disable RTC alarm or second signal output
+ 131:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     \param[in]  none
+ 132:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     \param[out] none
+ 133:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     \retval     none
+ 134:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** */
+ 135:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** void bkp_rtc_signal_output_disable(void)
+ 136:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** {
+ 221              		.loc 1 136 1 is_stmt 1
+ 222              		.cfi_startproc
+ 137:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     BKP_OCTL &= (uint16_t)~BKP_OCTL_ASOEN;
+ 223              		.loc 1 137 5
+ 224              		.loc 1 137 14 is_stmt 0
+ 225 0000 37770040 		li	a4,1073770496
+ 226 0004 8357C7C2 		lhu	a5,-980(a4)
+ 227 0008 C207     		slli	a5,a5,16
+ 228 000a C183     		srli	a5,a5,16
+ 229 000c 93F7F7EF 		andi	a5,a5,-257
+ 230 0010 C207     		slli	a5,a5,16
+ 231 0012 C183     		srli	a5,a5,16
+ 232 0014 2316F7C2 		sh	a5,-980(a4)
+ 138:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** }
+ 233              		.loc 1 138 1
+ 234 0018 8280     		ret
+ 235              		.cfi_endproc
+ 236              	.LFE8:
+ 238              		.section	.text.bkp_rtc_output_select,"ax",@progbits
+ 239              		.align	1
+ 240              		.globl	bkp_rtc_output_select
+ 242              	bkp_rtc_output_select:
+ 243              	.LFB9:
+ 139:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** 
+ 140:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** /*!
+ 141:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     \brief      select RTC output
+ 142:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     \param[in]  outputsel: RTC output selection
+ 143:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****                 only one parameter can be selected which is shown as below:
+ 144:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****       \arg        RTC_OUTPUT_ALARM_PULSE: RTC alarm pulse is selected as the RTC output
+ 145:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****       \arg        RTC_OUTPUT_SECOND_PULSE: RTC second pulse is selected as the RTC output
+ 146:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     \param[out] none
+ 147:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     \retval     none
+ 148:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** */
+ 149:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** void bkp_rtc_output_select(uint16_t outputsel)
+ 150:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** {
+ 244              		.loc 1 150 1 is_stmt 1
+ 245              		.cfi_startproc
+ 246              	.LVL17:
+ 151:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     uint16_t ctl = 0U;
+ 247              		.loc 1 151 5
+ 152:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     
+ 153:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     /* configure BKP_OCTL_ROSEL with outputsel */
+ 154:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     ctl = BKP_OCTL;
+GAS LISTING C:\Users\test\AppData\Local\Temp\cck0erGo.s 			page 8
+
+
+ 248              		.loc 1 154 5
+ 249              		.loc 1 154 9 is_stmt 0
+ 250 0000 37770040 		li	a4,1073770496
+ 251 0004 8357C7C2 		lhu	a5,-980(a4)
+ 252 0008 C207     		slli	a5,a5,16
+ 253 000a C183     		srli	a5,a5,16
+ 254              	.LVL18:
+ 155:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     ctl &= (uint16_t)~BKP_OCTL_ROSEL;
+ 255              		.loc 1 155 5 is_stmt 1
+ 256              		.loc 1 155 9 is_stmt 0
+ 257 000c 93F7F7DF 		andi	a5,a5,-513
+ 258              	.LVL19:
+ 156:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     ctl |= outputsel;
+ 259              		.loc 1 156 5 is_stmt 1
+ 260              		.loc 1 156 9 is_stmt 0
+ 261 0010 5D8D     		or	a0,a5,a0
+ 262              	.LVL20:
+ 157:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     BKP_OCTL = ctl;
+ 263              		.loc 1 157 5 is_stmt 1
+ 264              		.loc 1 157 14 is_stmt 0
+ 265 0012 2316A7C2 		sh	a0,-980(a4)
+ 158:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** }
+ 266              		.loc 1 158 1
+ 267 0016 8280     		ret
+ 268              		.cfi_endproc
+ 269              	.LFE9:
+ 271              		.section	.text.bkp_rtc_calibration_value_set,"ax",@progbits
+ 272              		.align	1
+ 273              		.globl	bkp_rtc_calibration_value_set
+ 275              	bkp_rtc_calibration_value_set:
+ 276              	.LFB10:
+ 159:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** 
+ 160:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** /*!
+ 161:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     \brief      set RTC clock calibration value 
+ 162:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     \param[in]  value: RTC clock calibration value
+ 163:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****       \arg        0x00 - 0x7F
+ 164:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     \param[out] none
+ 165:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     \retval     none
+ 166:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** */
+ 167:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** void bkp_rtc_calibration_value_set(uint8_t value)
+ 168:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** {
+ 277              		.loc 1 168 1 is_stmt 1
+ 278              		.cfi_startproc
+ 279              	.LVL21:
+ 169:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     uint16_t ctl;
+ 280              		.loc 1 169 5
+ 170:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     
+ 171:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     /* configure BKP_OCTL_RCCV with value */
+ 172:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     ctl = BKP_OCTL;
+ 281              		.loc 1 172 5
+ 282              		.loc 1 172 9 is_stmt 0
+ 283 0000 37770040 		li	a4,1073770496
+ 284 0004 8357C7C2 		lhu	a5,-980(a4)
+ 173:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     ctl &= (uint16_t)~BKP_OCTL_RCCV;
+ 174:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     ctl |= (uint16_t)OCTL_RCCV(value);
+ 285              		.loc 1 174 12
+ 286 0008 1375F507 		andi	a0,a0,127
+GAS LISTING C:\Users\test\AppData\Local\Temp\cck0erGo.s 			page 9
+
+
+ 287              	.LVL22:
+ 172:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     ctl &= (uint16_t)~BKP_OCTL_RCCV;
+ 288              		.loc 1 172 9
+ 289 000c C207     		slli	a5,a5,16
+ 290 000e C183     		srli	a5,a5,16
+ 291              	.LVL23:
+ 173:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     ctl &= (uint16_t)~BKP_OCTL_RCCV;
+ 292              		.loc 1 173 5 is_stmt 1
+ 293              		.loc 1 174 5
+ 173:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     ctl &= (uint16_t)~BKP_OCTL_RCCV;
+ 294              		.loc 1 173 9 is_stmt 0
+ 295 0010 93F707F8 		andi	a5,a5,-128
+ 296              	.LVL24:
+ 297              		.loc 1 174 9
+ 298 0014 C98F     		or	a5,a5,a0
+ 299              	.LVL25:
+ 175:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     BKP_OCTL = ctl;
+ 300              		.loc 1 175 5 is_stmt 1
+ 301              		.loc 1 175 14 is_stmt 0
+ 302 0016 2316F7C2 		sh	a5,-980(a4)
+ 176:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** }
+ 303              		.loc 1 176 1
+ 304 001a 8280     		ret
+ 305              		.cfi_endproc
+ 306              	.LFE10:
+ 308              		.section	.text.bkp_tamper_detection_enable,"ax",@progbits
+ 309              		.align	1
+ 310              		.globl	bkp_tamper_detection_enable
+ 312              	bkp_tamper_detection_enable:
+ 313              	.LFB11:
+ 177:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** 
+ 178:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** /*!
+ 179:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     \brief      enable tamper detection
+ 180:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     \param[in]  none
+ 181:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     \param[out] none
+ 182:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     \retval     none
+ 183:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** */
+ 184:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** void bkp_tamper_detection_enable(void)
+ 185:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** {
+ 314              		.loc 1 185 1 is_stmt 1
+ 315              		.cfi_startproc
+ 186:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     BKP_TPCTL |= (uint16_t)BKP_TPCTL_TPEN;
+ 316              		.loc 1 186 5
+ 317              		.loc 1 186 15 is_stmt 0
+ 318 0000 37770040 		li	a4,1073770496
+ 319 0004 835707C3 		lhu	a5,-976(a4)
+ 320 0008 93E71700 		ori	a5,a5,1
+ 321 000c 2318F7C2 		sh	a5,-976(a4)
+ 187:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** }
+ 322              		.loc 1 187 1
+ 323 0010 8280     		ret
+ 324              		.cfi_endproc
+ 325              	.LFE11:
+ 327              		.section	.text.bkp_tamper_detection_disable,"ax",@progbits
+ 328              		.align	1
+ 329              		.globl	bkp_tamper_detection_disable
+ 331              	bkp_tamper_detection_disable:
+GAS LISTING C:\Users\test\AppData\Local\Temp\cck0erGo.s 			page 10
+
+
+ 332              	.LFB12:
+ 188:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** 
+ 189:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** /*!
+ 190:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     \brief      disable tamper detection
+ 191:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     \param[in]  none
+ 192:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     \param[out] none
+ 193:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     \retval     none
+ 194:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** */
+ 195:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** void bkp_tamper_detection_disable(void)
+ 196:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** {
+ 333              		.loc 1 196 1 is_stmt 1
+ 334              		.cfi_startproc
+ 197:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     BKP_TPCTL &= (uint16_t)~BKP_TPCTL_TPEN;
+ 335              		.loc 1 197 5
+ 336              		.loc 1 197 15 is_stmt 0
+ 337 0000 37770040 		li	a4,1073770496
+ 338 0004 835707C3 		lhu	a5,-976(a4)
+ 339 0008 C207     		slli	a5,a5,16
+ 340 000a C183     		srli	a5,a5,16
+ 341 000c F99B     		andi	a5,a5,-2
+ 342 000e C207     		slli	a5,a5,16
+ 343 0010 C183     		srli	a5,a5,16
+ 344 0012 2318F7C2 		sh	a5,-976(a4)
+ 198:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** }
+ 345              		.loc 1 198 1
+ 346 0016 8280     		ret
+ 347              		.cfi_endproc
+ 348              	.LFE12:
+ 350              		.section	.text.bkp_tamper_active_level_set,"ax",@progbits
+ 351              		.align	1
+ 352              		.globl	bkp_tamper_active_level_set
+ 354              	bkp_tamper_active_level_set:
+ 355              	.LFB13:
+ 199:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** 
+ 200:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** /*!
+ 201:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     \brief      set tamper pin active level
+ 202:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     \param[in]  level: tamper active level
+ 203:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****                 only one parameter can be selected which is shown as below:
+ 204:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****       \arg        TAMPER_PIN_ACTIVE_HIGH: the tamper pin is active high
+ 205:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****       \arg        TAMPER_PIN_ACTIVE_LOW: the tamper pin is active low
+ 206:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     \param[out] none
+ 207:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     \retval     none
+ 208:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** */
+ 209:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** void bkp_tamper_active_level_set(uint16_t level)
+ 210:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** {
+ 356              		.loc 1 210 1 is_stmt 1
+ 357              		.cfi_startproc
+ 358              	.LVL26:
+ 211:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     uint16_t ctl = 0U;
+ 359              		.loc 1 211 5
+ 212:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     
+ 213:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     /* configure BKP_TPCTL_TPAL with level */
+ 214:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     ctl = BKP_TPCTL;
+ 360              		.loc 1 214 5
+ 361              		.loc 1 214 9 is_stmt 0
+ 362 0000 37770040 		li	a4,1073770496
+ 363 0004 835707C3 		lhu	a5,-976(a4)
+GAS LISTING C:\Users\test\AppData\Local\Temp\cck0erGo.s 			page 11
+
+
+ 364 0008 C207     		slli	a5,a5,16
+ 365 000a C183     		srli	a5,a5,16
+ 366              	.LVL27:
+ 215:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     ctl &= (uint16_t)~BKP_TPCTL_TPAL;
+ 367              		.loc 1 215 5 is_stmt 1
+ 368              		.loc 1 215 9 is_stmt 0
+ 369 000c F59B     		andi	a5,a5,-3
+ 370              	.LVL28:
+ 216:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     ctl |= level;
+ 371              		.loc 1 216 5 is_stmt 1
+ 372              		.loc 1 216 9 is_stmt 0
+ 373 000e 5D8D     		or	a0,a5,a0
+ 374              	.LVL29:
+ 217:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     BKP_TPCTL = ctl;
+ 375              		.loc 1 217 5 is_stmt 1
+ 376              		.loc 1 217 15 is_stmt 0
+ 377 0010 2318A7C2 		sh	a0,-976(a4)
+ 218:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** }
+ 378              		.loc 1 218 1
+ 379 0014 8280     		ret
+ 380              		.cfi_endproc
+ 381              	.LFE13:
+ 383              		.section	.text.bkp_interrupt_enable,"ax",@progbits
+ 384              		.align	1
+ 385              		.globl	bkp_interrupt_enable
+ 387              	bkp_interrupt_enable:
+ 388              	.LFB14:
+ 219:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** 
+ 220:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** /*!
+ 221:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     \brief      enable tamper interrupt
+ 222:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     \param[in]  none
+ 223:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     \param[out] none
+ 224:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     \retval     none
+ 225:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** */
+ 226:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** void bkp_interrupt_enable(void)
+ 227:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** {
+ 389              		.loc 1 227 1 is_stmt 1
+ 390              		.cfi_startproc
+ 228:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     BKP_TPCS |= (uint16_t)BKP_TPCS_TPIE;
+ 391              		.loc 1 228 5
+ 392              		.loc 1 228 14 is_stmt 0
+ 393 0000 37770040 		li	a4,1073770496
+ 394 0004 835747C3 		lhu	a5,-972(a4)
+ 395 0008 93E74700 		ori	a5,a5,4
+ 396 000c 231AF7C2 		sh	a5,-972(a4)
+ 229:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** }
+ 397              		.loc 1 229 1
+ 398 0010 8280     		ret
+ 399              		.cfi_endproc
+ 400              	.LFE14:
+ 402              		.section	.text.bkp_interrupt_disable,"ax",@progbits
+ 403              		.align	1
+ 404              		.globl	bkp_interrupt_disable
+ 406              	bkp_interrupt_disable:
+ 407              	.LFB15:
+ 230:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** 
+ 231:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** /*!
+GAS LISTING C:\Users\test\AppData\Local\Temp\cck0erGo.s 			page 12
+
+
+ 232:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     \brief      disable tamper interrupt
+ 233:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     \param[in]  none
+ 234:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     \param[out] none
+ 235:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     \retval     none
+ 236:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** */
+ 237:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** void bkp_interrupt_disable(void)
+ 238:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** {
+ 408              		.loc 1 238 1 is_stmt 1
+ 409              		.cfi_startproc
+ 239:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     BKP_TPCS &= (uint16_t)~BKP_TPCS_TPIE;
+ 410              		.loc 1 239 5
+ 411              		.loc 1 239 14 is_stmt 0
+ 412 0000 37770040 		li	a4,1073770496
+ 413 0004 835747C3 		lhu	a5,-972(a4)
+ 414 0008 C207     		slli	a5,a5,16
+ 415 000a C183     		srli	a5,a5,16
+ 416 000c ED9B     		andi	a5,a5,-5
+ 417 000e C207     		slli	a5,a5,16
+ 418 0010 C183     		srli	a5,a5,16
+ 419 0012 231AF7C2 		sh	a5,-972(a4)
+ 240:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** }
+ 420              		.loc 1 240 1
+ 421 0016 8280     		ret
+ 422              		.cfi_endproc
+ 423              	.LFE15:
+ 425              		.section	.text.bkp_flag_get,"ax",@progbits
+ 426              		.align	1
+ 427              		.globl	bkp_flag_get
+ 429              	bkp_flag_get:
+ 430              	.LFB16:
+ 241:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** 
+ 242:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** /*!
+ 243:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     \brief      get tamper flag state
+ 244:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     \param[in]  none
+ 245:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     \param[out] none
+ 246:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     \retval     FlagStatus: SET or RESET
+ 247:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** */
+ 248:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** FlagStatus bkp_flag_get(void)
+ 249:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** {
+ 431              		.loc 1 249 1 is_stmt 1
+ 432              		.cfi_startproc
+ 250:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     if(RESET != (BKP_TPCS & BKP_FLAG_TAMPER)){
+ 433              		.loc 1 250 5
+ 434              		.loc 1 250 18 is_stmt 0
+ 435 0000 B7770040 		li	a5,1073770496
+ 436 0004 03D547C3 		lhu	a0,-972(a5)
+ 437              		.loc 1 250 7
+ 438 0008 2181     		srli	a0,a0,8
+ 251:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****         return SET;
+ 252:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     }else{
+ 253:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****         return RESET;
+ 254:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     }
+ 255:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** }
+ 439              		.loc 1 255 1
+ 440 000a 0589     		andi	a0,a0,1
+ 441 000c 8280     		ret
+ 442              		.cfi_endproc
+GAS LISTING C:\Users\test\AppData\Local\Temp\cck0erGo.s 			page 13
+
+
+ 443              	.LFE16:
+ 445              		.section	.text.bkp_flag_clear,"ax",@progbits
+ 446              		.align	1
+ 447              		.globl	bkp_flag_clear
+ 449              	bkp_flag_clear:
+ 450              	.LFB17:
+ 256:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** 
+ 257:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** /*!
+ 258:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     \brief      clear tamper flag state
+ 259:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     \param[in]  none
+ 260:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     \param[out] none
+ 261:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     \retval     none
+ 262:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** */
+ 263:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** void bkp_flag_clear(void)
+ 264:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** {
+ 451              		.loc 1 264 1 is_stmt 1
+ 452              		.cfi_startproc
+ 265:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     BKP_TPCS |= (uint16_t)(BKP_FLAG_TAMPER >> BKP_TAMPER_BITS_OFFSET);
+ 453              		.loc 1 265 5
+ 454              		.loc 1 265 14 is_stmt 0
+ 455 0000 37770040 		li	a4,1073770496
+ 456 0004 835747C3 		lhu	a5,-972(a4)
+ 457 0008 93E71700 		ori	a5,a5,1
+ 458 000c 231AF7C2 		sh	a5,-972(a4)
+ 266:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** }
+ 459              		.loc 1 266 1
+ 460 0010 8280     		ret
+ 461              		.cfi_endproc
+ 462              	.LFE17:
+ 464              		.section	.text.bkp_interrupt_flag_get,"ax",@progbits
+ 465              		.align	1
+ 466              		.globl	bkp_interrupt_flag_get
+ 468              	bkp_interrupt_flag_get:
+ 469              	.LFB18:
+ 267:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** 
+ 268:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** /*!
+ 269:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     \brief      get tamper interrupt flag state
+ 270:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     \param[in]  none
+ 271:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     \param[out] none
+ 272:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     \retval     FlagStatus: SET or RESET
+ 273:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** */
+ 274:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** FlagStatus bkp_interrupt_flag_get(void)
+ 275:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** {
+ 470              		.loc 1 275 1 is_stmt 1
+ 471              		.cfi_startproc
+ 276:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     if(RESET != (BKP_TPCS & BKP_INT_FLAG_TAMPER)){
+ 472              		.loc 1 276 5
+ 473              		.loc 1 276 18 is_stmt 0
+ 474 0000 B7770040 		li	a5,1073770496
+ 475 0004 03D547C3 		lhu	a0,-972(a5)
+ 476              		.loc 1 276 7
+ 477 0008 2581     		srli	a0,a0,9
+ 277:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****         return SET;
+ 278:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     }else{
+ 279:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****         return RESET;
+ 280:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     }
+ 281:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** }
+GAS LISTING C:\Users\test\AppData\Local\Temp\cck0erGo.s 			page 14
+
+
+ 478              		.loc 1 281 1
+ 479 000a 0589     		andi	a0,a0,1
+ 480 000c 8280     		ret
+ 481              		.cfi_endproc
+ 482              	.LFE18:
+ 484              		.section	.text.bkp_interrupt_flag_clear,"ax",@progbits
+ 485              		.align	1
+ 486              		.globl	bkp_interrupt_flag_clear
+ 488              	bkp_interrupt_flag_clear:
+ 489              	.LFB19:
+ 282:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** 
+ 283:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** /*!
+ 284:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     \brief      clear tamper interrupt flag state
+ 285:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     \param[in]  none
+ 286:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     \param[out] none
+ 287:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     \retval     none
+ 288:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** */
+ 289:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** void bkp_interrupt_flag_clear(void)
+ 290:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** {
+ 490              		.loc 1 290 1 is_stmt 1
+ 491              		.cfi_startproc
+ 291:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c ****     BKP_TPCS |= (uint16_t)(BKP_INT_FLAG_TAMPER >> BKP_TAMPER_BITS_OFFSET);
+ 492              		.loc 1 291 5
+ 493              		.loc 1 291 14 is_stmt 0
+ 494 0000 37770040 		li	a4,1073770496
+ 495 0004 835747C3 		lhu	a5,-972(a4)
+ 496 0008 93E72700 		ori	a5,a5,2
+ 497 000c 231AF7C2 		sh	a5,-972(a4)
+ 292:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.c **** }
+ 498              		.loc 1 292 1
+ 499 0010 8280     		ret
+ 500              		.cfi_endproc
+ 501              	.LFE19:
+ 503              		.text
+ 504              	.Letext0:
+ 505              		.file 2 "d:\\risc_v_gcc\\riscv-none-embed\\include\\machine\\_default_types.h"
+ 506              		.file 3 "d:\\risc_v_gcc\\riscv-none-embed\\include\\sys\\_stdint.h"
+ 507              		.file 4 "arch/riscv/mach-gd32vf10x/system/gd32vf103.h"
+ 508              		.file 5 "arch/riscv/mach-gd32vf10x/bsp/gd32vf103_bkp.h"
+ 509              		.file 6 "arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rcu.h"
+ 510              		.file 7 "arch/riscv/mach-gd32vf10x/system/system_gd32vf103.h"
+GAS LISTING C:\Users\test\AppData\Local\Temp\cck0erGo.s 			page 15
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 gd32vf103_bkp.c
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:10     .text.bkp_deinit:0000000000000000 bkp_deinit
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:14     .text.bkp_deinit:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:15     .text.bkp_deinit:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:16     .text.bkp_deinit:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:17     .text.bkp_deinit:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:19     .text.bkp_deinit:0000000000000002 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:21     .text.bkp_deinit:0000000000000004 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:23     .text.bkp_deinit:0000000000000004 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:26     .text.bkp_deinit:000000000000000c .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:27     .text.bkp_deinit:000000000000000c .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:28     .text.bkp_deinit:000000000000000e .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:31     .text.bkp_deinit:0000000000000010 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:33     .text.bkp_deinit:0000000000000010 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:35     .text.bkp_deinit:0000000000000018 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:42     .text.bkp_data_write:0000000000000000 bkp_data_write
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:45     .text.bkp_data_write:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:47     .text.bkp_data_write:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:48     .text.bkp_data_write:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:49     .text.bkp_data_write:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:51     .text.bkp_data_write:0000000000000004 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:54     .text.bkp_data_write:000000000000000a .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:61     .text.bkp_data_write:0000000000000016 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:66     .text.bkp_data_write:000000000000001c .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:67     .text.bkp_data_write:000000000000001c .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:69     .text.bkp_data_write:0000000000000020 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:72     .text.bkp_data_write:0000000000000026 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:79     .text.bkp_data_write:0000000000000032 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:82     .text.bkp_data_write:0000000000000036 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:83     .text.bkp_data_write:0000000000000036 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:84     .text.bkp_data_write:0000000000000038 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:91     .text.bkp_data_read:0000000000000000 bkp_data_read
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:94     .text.bkp_data_read:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:96     .text.bkp_data_read:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:97     .text.bkp_data_read:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:98     .text.bkp_data_read:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:99     .text.bkp_data_read:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:101    .text.bkp_data_read:0000000000000004 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:103    .text.bkp_data_read:0000000000000006 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:105    .text.bkp_data_read:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:107    .text.bkp_data_read:000000000000000c .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:108    .text.bkp_data_read:000000000000000c .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:112    .text.bkp_data_read:0000000000000014 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:117    .text.bkp_data_read:0000000000000018 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:123    .text.bkp_data_read:0000000000000020 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:124    .text.bkp_data_read:0000000000000020 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:125    .text.bkp_data_read:0000000000000020 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:129    .text.bkp_data_read:0000000000000022 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:130    .text.bkp_data_read:0000000000000022 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:132    .text.bkp_data_read:0000000000000026 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:134    .text.bkp_data_read:0000000000000028 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:137    .text.bkp_data_read:000000000000002a .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:139    .text.bkp_data_read:000000000000002e .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:140    .text.bkp_data_read:000000000000002e .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:146    .text.bkp_data_read:000000000000003a .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:151    .text.bkp_data_read:0000000000000044 .L0 
+GAS LISTING C:\Users\test\AppData\Local\Temp\cck0erGo.s 			page 16
+
+
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:158    .text.bkp_rtc_calibration_output_enable:0000000000000000 bkp_rtc_calibration_output_enable
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:161    .text.bkp_rtc_calibration_output_enable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:162    .text.bkp_rtc_calibration_output_enable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:163    .text.bkp_rtc_calibration_output_enable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:164    .text.bkp_rtc_calibration_output_enable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:169    .text.bkp_rtc_calibration_output_enable:0000000000000010 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:170    .text.bkp_rtc_calibration_output_enable:0000000000000012 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:177    .text.bkp_rtc_calibration_output_disable:0000000000000000 bkp_rtc_calibration_output_disable
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:180    .text.bkp_rtc_calibration_output_disable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:181    .text.bkp_rtc_calibration_output_disable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:182    .text.bkp_rtc_calibration_output_disable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:183    .text.bkp_rtc_calibration_output_disable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:192    .text.bkp_rtc_calibration_output_disable:0000000000000018 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:193    .text.bkp_rtc_calibration_output_disable:000000000000001a .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:200    .text.bkp_rtc_signal_output_enable:0000000000000000 bkp_rtc_signal_output_enable
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:203    .text.bkp_rtc_signal_output_enable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:204    .text.bkp_rtc_signal_output_enable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:205    .text.bkp_rtc_signal_output_enable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:206    .text.bkp_rtc_signal_output_enable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:211    .text.bkp_rtc_signal_output_enable:0000000000000010 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:212    .text.bkp_rtc_signal_output_enable:0000000000000012 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:219    .text.bkp_rtc_signal_output_disable:0000000000000000 bkp_rtc_signal_output_disable
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:222    .text.bkp_rtc_signal_output_disable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:223    .text.bkp_rtc_signal_output_disable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:224    .text.bkp_rtc_signal_output_disable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:225    .text.bkp_rtc_signal_output_disable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:234    .text.bkp_rtc_signal_output_disable:0000000000000018 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:235    .text.bkp_rtc_signal_output_disable:000000000000001a .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:242    .text.bkp_rtc_output_select:0000000000000000 bkp_rtc_output_select
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:245    .text.bkp_rtc_output_select:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:247    .text.bkp_rtc_output_select:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:248    .text.bkp_rtc_output_select:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:249    .text.bkp_rtc_output_select:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:250    .text.bkp_rtc_output_select:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:256    .text.bkp_rtc_output_select:000000000000000c .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:257    .text.bkp_rtc_output_select:000000000000000c .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:260    .text.bkp_rtc_output_select:0000000000000010 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:261    .text.bkp_rtc_output_select:0000000000000010 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:264    .text.bkp_rtc_output_select:0000000000000012 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:265    .text.bkp_rtc_output_select:0000000000000012 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:267    .text.bkp_rtc_output_select:0000000000000016 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:268    .text.bkp_rtc_output_select:0000000000000018 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:275    .text.bkp_rtc_calibration_value_set:0000000000000000 bkp_rtc_calibration_value_set
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:278    .text.bkp_rtc_calibration_value_set:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:280    .text.bkp_rtc_calibration_value_set:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:281    .text.bkp_rtc_calibration_value_set:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:282    .text.bkp_rtc_calibration_value_set:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:283    .text.bkp_rtc_calibration_value_set:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:286    .text.bkp_rtc_calibration_value_set:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:289    .text.bkp_rtc_calibration_value_set:000000000000000c .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:293    .text.bkp_rtc_calibration_value_set:0000000000000010 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:294    .text.bkp_rtc_calibration_value_set:0000000000000010 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:295    .text.bkp_rtc_calibration_value_set:0000000000000010 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:298    .text.bkp_rtc_calibration_value_set:0000000000000014 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:301    .text.bkp_rtc_calibration_value_set:0000000000000016 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:302    .text.bkp_rtc_calibration_value_set:0000000000000016 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:304    .text.bkp_rtc_calibration_value_set:000000000000001a .L0 
+GAS LISTING C:\Users\test\AppData\Local\Temp\cck0erGo.s 			page 17
+
+
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:305    .text.bkp_rtc_calibration_value_set:000000000000001c .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:312    .text.bkp_tamper_detection_enable:0000000000000000 bkp_tamper_detection_enable
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:315    .text.bkp_tamper_detection_enable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:316    .text.bkp_tamper_detection_enable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:317    .text.bkp_tamper_detection_enable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:318    .text.bkp_tamper_detection_enable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:323    .text.bkp_tamper_detection_enable:0000000000000010 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:324    .text.bkp_tamper_detection_enable:0000000000000012 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:331    .text.bkp_tamper_detection_disable:0000000000000000 bkp_tamper_detection_disable
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:334    .text.bkp_tamper_detection_disable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:335    .text.bkp_tamper_detection_disable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:336    .text.bkp_tamper_detection_disable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:337    .text.bkp_tamper_detection_disable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:346    .text.bkp_tamper_detection_disable:0000000000000016 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:347    .text.bkp_tamper_detection_disable:0000000000000018 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:354    .text.bkp_tamper_active_level_set:0000000000000000 bkp_tamper_active_level_set
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:357    .text.bkp_tamper_active_level_set:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:359    .text.bkp_tamper_active_level_set:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:360    .text.bkp_tamper_active_level_set:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:361    .text.bkp_tamper_active_level_set:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:362    .text.bkp_tamper_active_level_set:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:368    .text.bkp_tamper_active_level_set:000000000000000c .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:369    .text.bkp_tamper_active_level_set:000000000000000c .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:372    .text.bkp_tamper_active_level_set:000000000000000e .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:373    .text.bkp_tamper_active_level_set:000000000000000e .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:376    .text.bkp_tamper_active_level_set:0000000000000010 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:377    .text.bkp_tamper_active_level_set:0000000000000010 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:379    .text.bkp_tamper_active_level_set:0000000000000014 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:380    .text.bkp_tamper_active_level_set:0000000000000016 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:387    .text.bkp_interrupt_enable:0000000000000000 bkp_interrupt_enable
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:390    .text.bkp_interrupt_enable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:391    .text.bkp_interrupt_enable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:392    .text.bkp_interrupt_enable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:393    .text.bkp_interrupt_enable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:398    .text.bkp_interrupt_enable:0000000000000010 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:399    .text.bkp_interrupt_enable:0000000000000012 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:406    .text.bkp_interrupt_disable:0000000000000000 bkp_interrupt_disable
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:409    .text.bkp_interrupt_disable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:410    .text.bkp_interrupt_disable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:411    .text.bkp_interrupt_disable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:412    .text.bkp_interrupt_disable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:421    .text.bkp_interrupt_disable:0000000000000016 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:422    .text.bkp_interrupt_disable:0000000000000018 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:429    .text.bkp_flag_get:0000000000000000 bkp_flag_get
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:432    .text.bkp_flag_get:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:433    .text.bkp_flag_get:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:434    .text.bkp_flag_get:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:435    .text.bkp_flag_get:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:438    .text.bkp_flag_get:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:440    .text.bkp_flag_get:000000000000000a .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:442    .text.bkp_flag_get:000000000000000e .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:449    .text.bkp_flag_clear:0000000000000000 bkp_flag_clear
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:452    .text.bkp_flag_clear:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:453    .text.bkp_flag_clear:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:454    .text.bkp_flag_clear:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:455    .text.bkp_flag_clear:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:460    .text.bkp_flag_clear:0000000000000010 .L0 
+GAS LISTING C:\Users\test\AppData\Local\Temp\cck0erGo.s 			page 18
+
+
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:461    .text.bkp_flag_clear:0000000000000012 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:468    .text.bkp_interrupt_flag_get:0000000000000000 bkp_interrupt_flag_get
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:471    .text.bkp_interrupt_flag_get:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:472    .text.bkp_interrupt_flag_get:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:473    .text.bkp_interrupt_flag_get:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:474    .text.bkp_interrupt_flag_get:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:477    .text.bkp_interrupt_flag_get:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:479    .text.bkp_interrupt_flag_get:000000000000000a .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:481    .text.bkp_interrupt_flag_get:000000000000000e .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:488    .text.bkp_interrupt_flag_clear:0000000000000000 bkp_interrupt_flag_clear
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:491    .text.bkp_interrupt_flag_clear:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:492    .text.bkp_interrupt_flag_clear:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:493    .text.bkp_interrupt_flag_clear:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:494    .text.bkp_interrupt_flag_clear:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:499    .text.bkp_interrupt_flag_clear:0000000000000010 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:500    .text.bkp_interrupt_flag_clear:0000000000000012 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:38     .text.bkp_deinit:0000000000000018 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:87     .text.bkp_data_write:0000000000000038 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:154    .text.bkp_data_read:0000000000000044 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:173    .text.bkp_rtc_calibration_output_enable:0000000000000012 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:196    .text.bkp_rtc_calibration_output_disable:000000000000001a .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:215    .text.bkp_rtc_signal_output_enable:0000000000000012 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:238    .text.bkp_rtc_signal_output_disable:000000000000001a .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:271    .text.bkp_rtc_output_select:0000000000000018 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:308    .text.bkp_rtc_calibration_value_set:000000000000001c .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:327    .text.bkp_tamper_detection_enable:0000000000000012 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:350    .text.bkp_tamper_detection_disable:0000000000000018 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:383    .text.bkp_tamper_active_level_set:0000000000000016 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:402    .text.bkp_interrupt_enable:0000000000000012 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:425    .text.bkp_interrupt_disable:0000000000000018 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:445    .text.bkp_flag_get:000000000000000e .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:464    .text.bkp_flag_clear:0000000000000012 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:484    .text.bkp_interrupt_flag_get:000000000000000e .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:503    .text.bkp_interrupt_flag_clear:0000000000000012 .L0 
+                     .debug_frame:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:64     .text.bkp_data_write:000000000000001c .L5
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:81     .text.bkp_data_write:0000000000000036 .L4
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:127    .text.bkp_data_read:0000000000000022 .L8
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:121    .text.bkp_data_read:0000000000000020 .L9
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:1118   .debug_abbrev:0000000000000000 .Ldebug_abbrev0
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:1931   .debug_str:00000000000002fb .LASF84
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:1843   .debug_str:0000000000000047 .LASF85
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:1991   .debug_str:00000000000004fe .LASF86
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:1795   .debug_ranges:0000000000000000 .Ldebug_ranges0
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:1835   .debug_line:0000000000000000 .Ldebug_line0
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:1937   .debug_str:0000000000000395 .LASF0
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:1883   .debug_str:000000000000016f .LASF1
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:1895   .debug_str:00000000000001e8 .LASF4
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:1907   .debug_str:000000000000025e .LASF2
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:1855   .debug_str:00000000000000bf .LASF3
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:1853   .debug_str:00000000000000b4 .LASF5
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:1961   .debug_str:0000000000000424 .LASF6
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:1889   .debug_str:00000000000001a7 .LASF7
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:1981   .debug_str:00000000000004d0 .LASF8
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:1975   .debug_str:00000000000004a6 .LASF9
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:1887   .debug_str:0000000000000199 .LASF10
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:1929   .debug_str:00000000000002e4 .LASF11
+GAS LISTING C:\Users\test\AppData\Local\Temp\cck0erGo.s 			page 19
+
+
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:1989   .debug_str:00000000000004f6 .LASF12
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:1939   .debug_str:00000000000003a2 .LASF13
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:1933   .debug_str:0000000000000375 .LASF14
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:1967   .debug_str:0000000000000459 .LASF87
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:1987   .debug_str:00000000000004f0 .LASF15
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:1999   .debug_str:0000000000000557 .LASF16
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:1941   .debug_str:00000000000003ab .LASF17
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:1943   .debug_str:00000000000003b6 .LASF18
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:1945   .debug_str:00000000000003c1 .LASF19
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:1947   .debug_str:00000000000003cc .LASF20
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:1949   .debug_str:00000000000003d7 .LASF21
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:1951   .debug_str:00000000000003e2 .LASF22
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:1879   .debug_str:0000000000000147 .LASF23
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:1955   .debug_str:0000000000000403 .LASF24
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:1957   .debug_str:000000000000040e .LASF25
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:1959   .debug_str:0000000000000419 .LASF26
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:1995   .debug_str:000000000000053f .LASF27
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:1997   .debug_str:000000000000054b .LASF28
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:1849   .debug_str:000000000000009e .LASF29
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:2001   .debug_str:0000000000000562 .LASF30
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:2003   .debug_str:000000000000056e .LASF31
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:2005   .debug_str:000000000000057a .LASF32
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:2007   .debug_str:0000000000000586 .LASF33
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:2009   .debug_str:0000000000000592 .LASF34
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:2011   .debug_str:000000000000059e .LASF35
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:2013   .debug_str:00000000000005aa .LASF36
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:1859   .debug_str:00000000000000cf .LASF37
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:1861   .debug_str:00000000000000db .LASF38
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:1863   .debug_str:00000000000000e7 .LASF39
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:1865   .debug_str:00000000000000f3 .LASF40
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:1867   .debug_str:00000000000000ff .LASF41
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:1869   .debug_str:000000000000010b .LASF42
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:1871   .debug_str:0000000000000117 .LASF43
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:1873   .debug_str:0000000000000123 .LASF44
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:1875   .debug_str:000000000000012f .LASF45
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:1877   .debug_str:000000000000013b .LASF46
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:1909   .debug_str:000000000000026c .LASF47
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:1911   .debug_str:0000000000000278 .LASF48
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:1913   .debug_str:0000000000000284 .LASF49
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:1915   .debug_str:0000000000000290 .LASF50
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:1917   .debug_str:000000000000029c .LASF51
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:1919   .debug_str:00000000000002a8 .LASF52
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:1921   .debug_str:00000000000002b4 .LASF53
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:1923   .debug_str:00000000000002c0 .LASF54
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:1925   .debug_str:00000000000002cc .LASF55
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:1927   .debug_str:00000000000002d8 .LASF56
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:1977   .debug_str:00000000000004b8 .LASF57
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:1979   .debug_str:00000000000004c4 .LASF58
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:1965   .debug_str:0000000000000442 .LASF59
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:1845   .debug_str:0000000000000075 .LASF60
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:489    .text.bkp_interrupt_flag_clear:0000000000000000 .LFB19
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:501    .text.bkp_interrupt_flag_clear:0000000000000012 .LFE19
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:1935   .debug_str:000000000000037e .LASF62
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:469    .text.bkp_interrupt_flag_get:0000000000000000 .LFB18
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:482    .text.bkp_interrupt_flag_get:000000000000000e .LFE18
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:1983   .debug_str:00000000000004db .LASF61
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:450    .text.bkp_flag_clear:0000000000000000 .LFB17
+GAS LISTING C:\Users\test\AppData\Local\Temp\cck0erGo.s 			page 20
+
+
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:462    .text.bkp_flag_clear:0000000000000012 .LFE17
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:1899   .debug_str:0000000000000208 .LASF63
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:430    .text.bkp_flag_get:0000000000000000 .LFB16
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:443    .text.bkp_flag_get:000000000000000e .LFE16
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:1953   .debug_str:00000000000003ed .LASF64
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:407    .text.bkp_interrupt_disable:0000000000000000 .LFB15
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:423    .text.bkp_interrupt_disable:0000000000000018 .LFE15
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:1841   .debug_str:0000000000000032 .LASF65
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:388    .text.bkp_interrupt_enable:0000000000000000 .LFB14
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:400    .text.bkp_interrupt_enable:0000000000000012 .LFE14
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:1891   .debug_str:00000000000001b0 .LASF68
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:355    .text.bkp_tamper_active_level_set:0000000000000000 .LFB13
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:381    .text.bkp_tamper_active_level_set:0000000000000016 .LFE13
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:1985   .debug_str:00000000000004ea .LASF70
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:1539   .debug_loc:0000000000000000 .LLST8
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:1553   .debug_loc:0000000000000021 .LLST9
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:1905   .debug_str:0000000000000241 .LASF66
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:332    .text.bkp_tamper_detection_disable:0000000000000000 .LFB12
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:348    .text.bkp_tamper_detection_disable:0000000000000018 .LFE12
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:1893   .debug_str:00000000000001cc .LASF67
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:313    .text.bkp_tamper_detection_enable:0000000000000000 .LFB11
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:325    .text.bkp_tamper_detection_enable:0000000000000012 .LFE11
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:1885   .debug_str:000000000000017b .LASF69
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:276    .text.bkp_rtc_calibration_value_set:0000000000000000 .LFB10
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:306    .text.bkp_rtc_calibration_value_set:000000000000001c .LFE10
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:1857   .debug_str:00000000000000c9 .LASF71
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:1569   .debug_loc:000000000000004b .LLST6
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:1583   .debug_loc:000000000000006c .LLST7
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:1971   .debug_str:000000000000046e .LASF72
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:243    .text.bkp_rtc_output_select:0000000000000000 .LFB9
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:269    .text.bkp_rtc_output_select:0000000000000018 .LFE9
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:1851   .debug_str:00000000000000aa .LASF73
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:1599   .debug_loc:000000000000008f .LLST4
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:1613   .debug_loc:00000000000000b0 .LLST5
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:1901   .debug_str:0000000000000215 .LASF74
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:220    .text.bkp_rtc_signal_output_disable:0000000000000000 .LFB8
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:236    .text.bkp_rtc_signal_output_disable:000000000000001a .LFE8
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:1881   .debug_str:0000000000000152 .LASF75
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:201    .text.bkp_rtc_signal_output_enable:0000000000000000 .LFB7
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:213    .text.bkp_rtc_signal_output_enable:0000000000000012 .LFE7
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:1839   .debug_str:000000000000000f .LASF76
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:178    .text.bkp_rtc_calibration_output_disable:0000000000000000 .LFB6
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:194    .text.bkp_rtc_calibration_output_disable:000000000000001a .LFE6
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:1973   .debug_str:0000000000000484 .LASF77
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:159    .text.bkp_rtc_calibration_output_enable:0000000000000000 .LFB5
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:171    .text.bkp_rtc_calibration_output_enable:0000000000000012 .LFE5
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:1903   .debug_str:0000000000000233 .LASF88
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:92     .text.bkp_data_read:0000000000000000 .LFB4
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:152    .text.bkp_data_read:0000000000000044 .LFE4
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:1847   .debug_str:000000000000008e .LASF78
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:1629   .debug_loc:00000000000000da .LLST2
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:1969   .debug_str:0000000000000469 .LASF79
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:1673   .debug_loc:0000000000000147 .LLST3
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:1837   .debug_str:0000000000000000 .LASF80
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:43     .text.bkp_data_write:0000000000000000 .LFB3
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:85     .text.bkp_data_write:0000000000000038 .LFE3
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:1694   .debug_loc:000000000000017d .LLST1
+GAS LISTING C:\Users\test\AppData\Local\Temp\cck0erGo.s 			page 21
+
+
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:1963   .debug_str:0000000000000437 .LASF81
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:11     .text.bkp_deinit:0000000000000000 .LFB2
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:36     .text.bkp_deinit:0000000000000018 .LFE2
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:1730   .debug_loc:00000000000001d8 .LLST0
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:24     .text.bkp_deinit:000000000000000c .LVL0
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:34     .text.bkp_deinit:0000000000000018 .LVL1
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:1993   .debug_str:000000000000052a .LASF82
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:1897   .debug_str:00000000000001f2 .LASF83
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:358    .text.bkp_tamper_active_level_set:0000000000000000 .LVL26
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:374    .text.bkp_tamper_active_level_set:0000000000000010 .LVL29
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:366    .text.bkp_tamper_active_level_set:000000000000000c .LVL27
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:279    .text.bkp_rtc_calibration_value_set:0000000000000000 .LVL21
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:287    .text.bkp_rtc_calibration_value_set:000000000000000c .LVL22
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:291    .text.bkp_rtc_calibration_value_set:0000000000000010 .LVL23
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:296    .text.bkp_rtc_calibration_value_set:0000000000000014 .LVL24
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:299    .text.bkp_rtc_calibration_value_set:0000000000000016 .LVL25
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:246    .text.bkp_rtc_output_select:0000000000000000 .LVL17
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:262    .text.bkp_rtc_output_select:0000000000000012 .LVL20
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:254    .text.bkp_rtc_output_select:000000000000000c .LVL18
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:95     .text.bkp_data_read:0000000000000000 .LVL8
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:109    .text.bkp_data_read:0000000000000010 .LVL9
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:113    .text.bkp_data_read:0000000000000016 .LVL10
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:115    .text.bkp_data_read:0000000000000018 .LVL11
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:120    .text.bkp_data_read:0000000000000020 .LVL12
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:126    .text.bkp_data_read:0000000000000022 .LVL13
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:135    .text.bkp_data_read:000000000000002a .LVL14
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:143    .text.bkp_data_read:0000000000000038 .LVL15
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:149    .text.bkp_data_read:0000000000000042 .LVL16
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:46     .text.bkp_data_write:0000000000000000 .LVL2
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:57     .text.bkp_data_write:0000000000000014 .LVL3
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:59     .text.bkp_data_write:0000000000000016 .LVL4
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:63     .text.bkp_data_write:000000000000001c .LVL5
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:75     .text.bkp_data_write:0000000000000030 .LVL6
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:77     .text.bkp_data_write:0000000000000032 .LVL7
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:18     .text.bkp_deinit:0000000000000002 .LCFI0
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:30     .text.bkp_deinit:0000000000000010 .LCFI1
+C:\Users\test\AppData\Local\Temp\cck0erGo.s:512    .debug_info:0000000000000000 .Ldebug_info0
+
+UNDEFINED SYMBOLS
+rcu_bkp_reset_enable
+rcu_bkp_reset_disable

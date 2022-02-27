@@ -1,0 +1,452 @@
+GAS LISTING C:\Users\test\AppData\Local\Temp\cc2pkszC.s 			page 1
+
+
+   1              		.file	"gd32vf103_crc.c"
+   2              		.option nopic
+   3              		.text
+   4              	.Ltext0:
+   5              		.cfi_sections	.debug_frame
+   6              		.section	.text.crc_deinit,"ax",@progbits
+   7              		.align	1
+   8              		.globl	crc_deinit
+  10              	crc_deinit:
+  11              	.LFB2:
+  12              		.file 1 "arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c"
+   1:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c **** /*!
+   2:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c ****     \file  gd32vf103_crc.c
+   3:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c ****     \brief CRC driver
+   4:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c **** 
+   5:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c ****     \version 2019-6-5, V1.0.0, firmware for GD32VF103
+   6:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c **** */
+   7:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c **** 
+   8:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c **** /*
+   9:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c ****     Copyright (c) 2019, GigaDevice Semiconductor Inc.
+  10:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c **** 
+  11:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c ****     Redistribution and use in source and binary forms, with or without modification,
+  12:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c **** are permitted provided that the following conditions are met:
+  13:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c **** 
+  14:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c ****     1. Redistributions of source code must retain the above copyright notice, this
+  15:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c ****        list of conditions and the following disclaimer.
+  16:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c ****     2. Redistributions in binary form must reproduce the above copyright notice,
+  17:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c ****        this list of conditions and the following disclaimer in the documentation
+  18:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c ****        and/or other materials provided with the distribution.
+  19:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c ****     3. Neither the name of the copyright holder nor the names of its contributors
+  20:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c ****        may be used to endorse or promote products derived from this software without
+  21:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c ****        specific prior written permission.
+  22:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c **** 
+  23:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c ****     THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+  24:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c **** AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+  25:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c **** WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
+  26:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c **** IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT,
+  27:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c **** INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
+  28:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c **** NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
+  29:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c **** PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+  30:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c **** WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+  31:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c **** ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY
+  32:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c **** OF SUCH DAMAGE.
+  33:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c **** */
+  34:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c **** 
+  35:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c **** #include "gd32vf103_crc.h"
+  36:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c **** 
+  37:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c **** #define CRC_DATA_RESET_VALUE      ((uint32_t)0xFFFFFFFFU)
+  38:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c **** #define CRC_FDATA_RESET_VALUE     ((uint32_t)0x00000000U)
+  39:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c **** 
+  40:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c **** /*!
+  41:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c ****     \brief      deinit CRC calculation unit
+  42:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c ****     \param[in]  none
+  43:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c ****     \param[out] none
+  44:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c ****     \retval     none
+  45:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c **** */
+  46:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c **** void crc_deinit(void)
+GAS LISTING C:\Users\test\AppData\Local\Temp\cc2pkszC.s 			page 2
+
+
+  47:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c **** {
+  13              		.loc 1 47 1
+  14              		.cfi_startproc
+  48:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c ****     CRC_DATA = CRC_DATA_RESET_VALUE;
+  15              		.loc 1 48 5
+  16              		.loc 1 48 14 is_stmt 0
+  17 0000 B7370240 		li	a5,1073885184
+  18 0004 7D57     		li	a4,-1
+  19 0006 98C3     		sw	a4,0(a5)
+  49:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c ****     CRC_FDATA = CRC_FDATA_RESET_VALUE;
+  20              		.loc 1 49 5 is_stmt 1
+  21              		.loc 1 49 15 is_stmt 0
+  22 0008 23A20700 		sw	zero,4(a5)
+  50:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c ****     CRC_CTL = (uint32_t)CRC_CTL_RST;
+  23              		.loc 1 50 5 is_stmt 1
+  24              		.loc 1 50 13 is_stmt 0
+  25 000c 0547     		li	a4,1
+  26 000e 98C7     		sw	a4,8(a5)
+  51:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c **** }
+  27              		.loc 1 51 1
+  28 0010 8280     		ret
+  29              		.cfi_endproc
+  30              	.LFE2:
+  32              		.section	.text.crc_data_register_reset,"ax",@progbits
+  33              		.align	1
+  34              		.globl	crc_data_register_reset
+  36              	crc_data_register_reset:
+  37              	.LFB3:
+  52:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c **** 
+  53:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c **** /*!
+  54:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c ****     \brief      reset data register(CRC_DATA) to the value of 0xFFFFFFFF
+  55:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c ****     \param[in]  none
+  56:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c ****     \param[out] none
+  57:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c ****     \retval     none
+  58:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c **** */
+  59:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c **** void crc_data_register_reset(void)
+  60:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c **** {
+  38              		.loc 1 60 1 is_stmt 1
+  39              		.cfi_startproc
+  61:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c ****     CRC_CTL |= (uint32_t)CRC_CTL_RST;
+  40              		.loc 1 61 5
+  41              		.loc 1 61 13 is_stmt 0
+  42 0000 37370240 		li	a4,1073885184
+  43 0004 1C47     		lw	a5,8(a4)
+  44 0006 93E71700 		ori	a5,a5,1
+  45 000a 1CC7     		sw	a5,8(a4)
+  62:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c **** }
+  46              		.loc 1 62 1
+  47 000c 8280     		ret
+  48              		.cfi_endproc
+  49              	.LFE3:
+  51              		.section	.text.crc_data_register_read,"ax",@progbits
+  52              		.align	1
+  53              		.globl	crc_data_register_read
+  55              	crc_data_register_read:
+  56              	.LFB4:
+  63:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c **** 
+GAS LISTING C:\Users\test\AppData\Local\Temp\cc2pkszC.s 			page 3
+
+
+  64:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c **** /*!
+  65:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c ****     \brief      read the value of the data register
+  66:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c ****     \param[in]  none
+  67:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c ****     \param[out] none
+  68:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c ****     \retval     32-bit value of the data register
+  69:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c **** */
+  70:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c **** uint32_t crc_data_register_read(void)
+  71:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c **** {
+  57              		.loc 1 71 1 is_stmt 1
+  58              		.cfi_startproc
+  72:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c ****     uint32_t data;
+  59              		.loc 1 72 5
+  73:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c ****     data = CRC_DATA;
+  60              		.loc 1 73 5
+  61              		.loc 1 73 10 is_stmt 0
+  62 0000 B7370240 		li	a5,1073885184
+  63 0004 8843     		lw	a0,0(a5)
+  64              	.LVL0:
+  74:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c ****     return (data);
+  65              		.loc 1 74 5 is_stmt 1
+  75:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c **** }
+  66              		.loc 1 75 1 is_stmt 0
+  67 0006 8280     		ret
+  68              		.cfi_endproc
+  69              	.LFE4:
+  71              		.section	.text.crc_free_data_register_read,"ax",@progbits
+  72              		.align	1
+  73              		.globl	crc_free_data_register_read
+  75              	crc_free_data_register_read:
+  76              	.LFB5:
+  76:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c **** 
+  77:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c **** /*!
+  78:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c ****     \brief      read the value of the free data register
+  79:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c ****     \param[in]  none
+  80:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c ****     \param[out] none
+  81:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c ****     \retval     8-bit value of the free data register
+  82:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c **** */
+  83:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c **** uint8_t crc_free_data_register_read(void)
+  84:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c **** {
+  77              		.loc 1 84 1 is_stmt 1
+  78              		.cfi_startproc
+  85:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c ****     uint8_t fdata;
+  79              		.loc 1 85 5
+  86:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c ****     fdata = (uint8_t)CRC_FDATA;
+  80              		.loc 1 86 5
+  81              		.loc 1 86 22 is_stmt 0
+  82 0000 B7370240 		li	a5,1073885184
+  83 0004 C843     		lw	a0,4(a5)
+  84              	.LVL1:
+  87:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c ****     return (fdata);
+  85              		.loc 1 87 5 is_stmt 1
+  88:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c **** }
+  86              		.loc 1 88 1 is_stmt 0
+  87 0006 1375F50F 		andi	a0,a0,0xff
+  88 000a 8280     		ret
+  89              		.cfi_endproc
+  90              	.LFE5:
+GAS LISTING C:\Users\test\AppData\Local\Temp\cc2pkszC.s 			page 4
+
+
+  92              		.section	.text.crc_free_data_register_write,"ax",@progbits
+  93              		.align	1
+  94              		.globl	crc_free_data_register_write
+  96              	crc_free_data_register_write:
+  97              	.LFB6:
+  89:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c **** 
+  90:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c **** /*!
+  91:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c ****     \brief      write data to the free data register
+  92:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c ****     \param[in]  free_data: specified 8-bit data
+  93:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c ****     \param[out] none
+  94:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c ****     \retval     none
+  95:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c **** */
+  96:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c **** void crc_free_data_register_write(uint8_t free_data)
+  97:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c **** {
+  98              		.loc 1 97 1 is_stmt 1
+  99              		.cfi_startproc
+ 100              	.LVL2:
+  98:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c ****     CRC_FDATA = (uint32_t)free_data;
+ 101              		.loc 1 98 5
+ 102              		.loc 1 98 15 is_stmt 0
+ 103 0000 B7370240 		li	a5,1073885184
+ 104 0004 C8C3     		sw	a0,4(a5)
+  99:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c **** }
+ 105              		.loc 1 99 1
+ 106 0006 8280     		ret
+ 107              		.cfi_endproc
+ 108              	.LFE6:
+ 110              		.section	.text.crc_single_data_calculate,"ax",@progbits
+ 111              		.align	1
+ 112              		.globl	crc_single_data_calculate
+ 114              	crc_single_data_calculate:
+ 115              	.LFB7:
+ 100:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c **** 
+ 101:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c **** /*!
+ 102:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c ****     \brief      calculate the CRC value of a 32-bit data
+ 103:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c ****     \param[in]  sdata: specified 32-bit data
+ 104:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c ****     \param[out] none
+ 105:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c ****     \retval     32-bit value calculated by CRC
+ 106:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c **** */
+ 107:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c **** uint32_t crc_single_data_calculate(uint32_t sdata)
+ 108:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c **** {
+ 116              		.loc 1 108 1 is_stmt 1
+ 117              		.cfi_startproc
+ 118              	.LVL3:
+ 109:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c ****     CRC_DATA = sdata;
+ 119              		.loc 1 109 5
+ 120              		.loc 1 109 14 is_stmt 0
+ 121 0000 B7370240 		li	a5,1073885184
+ 122 0004 88C3     		sw	a0,0(a5)
+ 110:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c ****     return (CRC_DATA);
+ 123              		.loc 1 110 5 is_stmt 1
+ 124              		.loc 1 110 13 is_stmt 0
+ 125 0006 8843     		lw	a0,0(a5)
+ 126              	.LVL4:
+ 111:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c **** }
+ 127              		.loc 1 111 1
+ 128 0008 8280     		ret
+GAS LISTING C:\Users\test\AppData\Local\Temp\cc2pkszC.s 			page 5
+
+
+ 129              		.cfi_endproc
+ 130              	.LFE7:
+ 132              		.section	.text.crc_block_data_calculate,"ax",@progbits
+ 133              		.align	1
+ 134              		.globl	crc_block_data_calculate
+ 136              	crc_block_data_calculate:
+ 137              	.LFB8:
+ 112:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c **** 
+ 113:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c **** /*!
+ 114:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c ****     \brief      calculate the CRC value of an array of 32-bit values
+ 115:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c ****     \param[in]  array: pointer to an array of 32-bit values
+ 116:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c ****     \param[in]  size: size of the array
+ 117:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c ****     \param[out] none
+ 118:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c ****     \retval     32-bit value calculated by CRC
+ 119:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c **** */
+ 120:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c **** uint32_t crc_block_data_calculate(uint32_t array[], uint32_t size)
+ 121:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c **** {
+ 138              		.loc 1 121 1 is_stmt 1
+ 139              		.cfi_startproc
+ 140              	.LVL5:
+ 122:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c ****     uint32_t index;
+ 141              		.loc 1 122 5
+ 123:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c ****     for(index = 0U; index < size; index++){
+ 142              		.loc 1 123 5
+ 143 0000 91C9     		beq	a1,zero,.L9
+ 144 0002 8A05     		slli	a1,a1,2
+ 145              	.LVL6:
+ 146 0004 AA95     		add	a1,a0,a1
+ 124:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c ****         CRC_DATA = array[index];
+ 147              		.loc 1 124 18 is_stmt 0
+ 148 0006 37370240 		li	a4,1073885184
+ 149              	.LVL7:
+ 150              	.L10:
+ 151              		.loc 1 124 9 is_stmt 1 discriminator 3
+ 152              		.loc 1 124 25 is_stmt 0 discriminator 3
+ 153 000a 1C41     		lw	a5,0(a0)
+ 154 000c 1105     		addi	a0,a0,4
+ 155              		.loc 1 124 18 discriminator 3
+ 156 000e 1CC3     		sw	a5,0(a4)
+ 123:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c ****     for(index = 0U; index < size; index++){
+ 157              		.loc 1 123 5 discriminator 3
+ 158 0010 E31DB5FE 		bne	a0,a1,.L10
+ 159              	.L9:
+ 125:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c ****     }
+ 126:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c ****     return (CRC_DATA);
+ 160              		.loc 1 126 5 is_stmt 1
+ 161              		.loc 1 126 13 is_stmt 0
+ 162 0014 B7370240 		li	a5,1073885184
+ 163 0018 8843     		lw	a0,0(a5)
+ 127:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c **** }
+ 164              		.loc 1 127 1
+ 165 001a 8280     		ret
+ 166              		.cfi_endproc
+ 167              	.LFE8:
+ 169              		.text
+ 170              	.Letext0:
+ 171              		.file 2 "d:\\risc_v_gcc\\riscv-none-embed\\include\\machine\\_default_types.h"
+GAS LISTING C:\Users\test\AppData\Local\Temp\cc2pkszC.s 			page 6
+
+
+ 172              		.file 3 "d:\\risc_v_gcc\\riscv-none-embed\\include\\sys\\_stdint.h"
+ 173              		.file 4 "arch/riscv/mach-gd32vf10x/system/system_gd32vf103.h"
+GAS LISTING C:\Users\test\AppData\Local\Temp\cc2pkszC.s 			page 7
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 gd32vf103_crc.c
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:10     .text.crc_deinit:0000000000000000 crc_deinit
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:14     .text.crc_deinit:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:15     .text.crc_deinit:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:16     .text.crc_deinit:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:17     .text.crc_deinit:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:21     .text.crc_deinit:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:22     .text.crc_deinit:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:24     .text.crc_deinit:000000000000000c .L0 
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:25     .text.crc_deinit:000000000000000c .L0 
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:28     .text.crc_deinit:0000000000000010 .L0 
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:29     .text.crc_deinit:0000000000000012 .L0 
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:36     .text.crc_data_register_reset:0000000000000000 crc_data_register_reset
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:39     .text.crc_data_register_reset:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:40     .text.crc_data_register_reset:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:41     .text.crc_data_register_reset:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:42     .text.crc_data_register_reset:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:47     .text.crc_data_register_reset:000000000000000c .L0 
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:48     .text.crc_data_register_reset:000000000000000e .L0 
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:55     .text.crc_data_register_read:0000000000000000 crc_data_register_read
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:58     .text.crc_data_register_read:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:59     .text.crc_data_register_read:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:60     .text.crc_data_register_read:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:61     .text.crc_data_register_read:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:62     .text.crc_data_register_read:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:66     .text.crc_data_register_read:0000000000000006 .L0 
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:67     .text.crc_data_register_read:0000000000000006 .L0 
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:68     .text.crc_data_register_read:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:75     .text.crc_free_data_register_read:0000000000000000 crc_free_data_register_read
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:78     .text.crc_free_data_register_read:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:79     .text.crc_free_data_register_read:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:80     .text.crc_free_data_register_read:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:81     .text.crc_free_data_register_read:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:82     .text.crc_free_data_register_read:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:86     .text.crc_free_data_register_read:0000000000000006 .L0 
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:87     .text.crc_free_data_register_read:0000000000000006 .L0 
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:89     .text.crc_free_data_register_read:000000000000000c .L0 
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:96     .text.crc_free_data_register_write:0000000000000000 crc_free_data_register_write
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:99     .text.crc_free_data_register_write:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:101    .text.crc_free_data_register_write:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:102    .text.crc_free_data_register_write:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:103    .text.crc_free_data_register_write:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:106    .text.crc_free_data_register_write:0000000000000006 .L0 
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:107    .text.crc_free_data_register_write:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:114    .text.crc_single_data_calculate:0000000000000000 crc_single_data_calculate
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:117    .text.crc_single_data_calculate:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:119    .text.crc_single_data_calculate:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:120    .text.crc_single_data_calculate:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:121    .text.crc_single_data_calculate:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:124    .text.crc_single_data_calculate:0000000000000006 .L0 
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:125    .text.crc_single_data_calculate:0000000000000006 .L0 
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:128    .text.crc_single_data_calculate:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:129    .text.crc_single_data_calculate:000000000000000a .L0 
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:136    .text.crc_block_data_calculate:0000000000000000 crc_block_data_calculate
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:139    .text.crc_block_data_calculate:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:141    .text.crc_block_data_calculate:0000000000000000 .L0 
+GAS LISTING C:\Users\test\AppData\Local\Temp\cc2pkszC.s 			page 8
+
+
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:142    .text.crc_block_data_calculate:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:143    .text.crc_block_data_calculate:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:148    .text.crc_block_data_calculate:0000000000000006 .L0 
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:152    .text.crc_block_data_calculate:000000000000000a .L0 
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:153    .text.crc_block_data_calculate:000000000000000a .L0 
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:156    .text.crc_block_data_calculate:000000000000000e .L0 
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:158    .text.crc_block_data_calculate:0000000000000010 .L0 
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:161    .text.crc_block_data_calculate:0000000000000014 .L0 
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:162    .text.crc_block_data_calculate:0000000000000014 .L0 
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:165    .text.crc_block_data_calculate:000000000000001a .L0 
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:166    .text.crc_block_data_calculate:000000000000001c .L0 
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:32     .text.crc_deinit:0000000000000012 .L0 
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:51     .text.crc_data_register_reset:000000000000000e .L0 
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:71     .text.crc_data_register_read:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:92     .text.crc_free_data_register_read:000000000000000c .L0 
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:110    .text.crc_free_data_register_write:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:132    .text.crc_single_data_calculate:000000000000000a .L0 
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:169    .text.crc_block_data_calculate:000000000000001c .L0 
+                     .debug_frame:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:159    .text.crc_block_data_calculate:0000000000000014 .L9
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:150    .text.crc_block_data_calculate:000000000000000a .L10
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:423    .debug_abbrev:0000000000000000 .Ldebug_abbrev0
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:755    .debug_str:0000000000000000 .LASF26
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:765    .debug_str:00000000000000a8 .LASF27
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:775    .debug_str:000000000000010f .LASF28
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:735    .debug_ranges:0000000000000000 .Ldebug_ranges0
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:753    .debug_line:0000000000000000 .Ldebug_line0
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:781    .debug_str:0000000000000162 .LASF0
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:811    .debug_str:000000000000022c .LASF1
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:757    .debug_str:000000000000007a .LASF6
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:773    .debug_str:0000000000000101 .LASF2
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:805    .debug_str:0000000000000210 .LASF3
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:769    .debug_str:00000000000000e8 .LASF4
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:809    .debug_str:0000000000000223 .LASF5
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:779    .debug_str:0000000000000157 .LASF7
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:767    .debug_str:00000000000000d6 .LASF8
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:797    .debug_str:00000000000001d4 .LASF9
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:787    .debug_str:000000000000017f .LASF10
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:789    .debug_str:0000000000000196 .LASF11
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:807    .debug_str:000000000000021a .LASF12
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:799    .debug_str:00000000000001e2 .LASF29
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:795    .debug_str:00000000000001bb .LASF15
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:137    .text.crc_block_data_calculate:0000000000000000 .LFB8
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:167    .text.crc_block_data_calculate:000000000000001c .LFE8
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:771    .debug_str:00000000000000fb .LASF13
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:662    .debug_loc:0000000000000000 .LLST1
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:763    .debug_str:00000000000000a3 .LASF14
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:676    .debug_loc:0000000000000021 .LLST2
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:801    .debug_str:00000000000001f2 .LASF20
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:690    .debug_loc:0000000000000042 .LLST3
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:759    .debug_str:0000000000000084 .LASF16
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:115    .text.crc_single_data_calculate:0000000000000000 .LFB7
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:130    .text.crc_single_data_calculate:000000000000000a .LFE7
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:791    .debug_str:000000000000019e .LASF17
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:698    .debug_loc:0000000000000056 .LLST0
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:815    .debug_str:0000000000000243 .LASF30
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:97     .text.crc_free_data_register_write:0000000000000000 .LFB6
+GAS LISTING C:\Users\test\AppData\Local\Temp\cc2pkszC.s 			page 9
+
+
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:108    .text.crc_free_data_register_write:0000000000000008 .LFE6
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:783    .debug_str:000000000000016f .LASF18
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:777    .debug_str:000000000000013b .LASF19
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:76     .text.crc_free_data_register_read:0000000000000000 .LFB5
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:90     .text.crc_free_data_register_read:000000000000000c .LFE5
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:785    .debug_str:0000000000000179 .LASF21
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:793    .debug_str:00000000000001a4 .LASF22
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:56     .text.crc_data_register_read:0000000000000000 .LFB4
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:69     .text.crc_data_register_read:0000000000000008 .LFE4
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:761    .debug_str:000000000000009e .LASF23
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:803    .debug_str:00000000000001f8 .LASF24
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:37     .text.crc_data_register_reset:0000000000000000 .LFB3
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:49     .text.crc_data_register_reset:000000000000000e .LFE3
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:813    .debug_str:0000000000000238 .LASF25
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:11     .text.crc_deinit:0000000000000000 .LFB2
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:30     .text.crc_deinit:0000000000000012 .LFE2
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:140    .text.crc_block_data_calculate:0000000000000000 .LVL5
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:149    .text.crc_block_data_calculate:000000000000000a .LVL7
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:145    .text.crc_block_data_calculate:0000000000000004 .LVL6
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:118    .text.crc_single_data_calculate:0000000000000000 .LVL3
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:126    .text.crc_single_data_calculate:0000000000000008 .LVL4
+C:\Users\test\AppData\Local\Temp\cc2pkszC.s:175    .debug_info:0000000000000000 .Ldebug_info0
+
+NO UNDEFINED SYMBOLS

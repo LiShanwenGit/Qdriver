@@ -1,0 +1,80 @@
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccfj5rOI.s 			page 1
+
+
+   1              		.file	"tmp112.c"
+   2              		.option nopic
+   3              		.text
+   4              	.Ltext0:
+   5              		.cfi_sections	.debug_frame
+   6              		.globl	tmp1122
+   7              		.section	.data.tmp1122,"aw"
+   8              		.align	2
+  11              	tmp1122:
+  12 0000 00       		.byte	0
+  13 0001 50       		.byte	80
+  14 0002 0000     		.zero	2
+  15 0004 10270000 		.word	10000
+  16 0008 00000000 		.zero	4
+  17              		.text
+  18              	.Letext0:
+  19              		.file 1 "d:\\risc_v_gcc\\riscv-none-embed\\include\\machine\\_default_types.h"
+  20              		.file 2 "d:\\risc_v_gcc\\riscv-none-embed\\include\\sys\\_stdint.h"
+  21              		.file 3 "core/module.h"
+  22              		.file 4 "core/i2c-core.h"
+  23              		.file 5 "drivers/tmp112.c"
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccfj5rOI.s 			page 2
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 tmp112.c
+C:\Users\test\AppData\Local\Temp\ccfj5rOI.s:11     .data.tmp1122:0000000000000000 tmp1122
+C:\Users\test\AppData\Local\Temp\ccfj5rOI.s:429    .debug_abbrev:0000000000000000 .Ldebug_abbrev0
+C:\Users\test\AppData\Local\Temp\ccfj5rOI.s:612    .debug_str:0000000000000000 .LASF42
+C:\Users\test\AppData\Local\Temp\ccfj5rOI.s:700    .debug_str:0000000000000292 .LASF43
+C:\Users\test\AppData\Local\Temp\ccfj5rOI.s:656    .debug_str:0000000000000177 .LASF44
+C:\Users\test\AppData\Local\Temp\ccfj5rOI.s:610    .debug_line:0000000000000000 .Ldebug_line0
+C:\Users\test\AppData\Local\Temp\ccfj5rOI.s:614    .debug_str:000000000000007a .LASF0
+C:\Users\test\AppData\Local\Temp\ccfj5rOI.s:694    .debug_str:000000000000026a .LASF2
+C:\Users\test\AppData\Local\Temp\ccfj5rOI.s:616    .debug_str:0000000000000083 .LASF1
+C:\Users\test\AppData\Local\Temp\ccfj5rOI.s:638    .debug_str:000000000000010b .LASF3
+C:\Users\test\AppData\Local\Temp\ccfj5rOI.s:682    .debug_str:000000000000022f .LASF4
+C:\Users\test\AppData\Local\Temp\ccfj5rOI.s:684    .debug_str:0000000000000239 .LASF5
+C:\Users\test\AppData\Local\Temp\ccfj5rOI.s:648    .debug_str:0000000000000147 .LASF6
+C:\Users\test\AppData\Local\Temp\ccfj5rOI.s:690    .debug_str:0000000000000256 .LASF7
+C:\Users\test\AppData\Local\Temp\ccfj5rOI.s:660    .debug_str:00000000000001a8 .LASF8
+C:\Users\test\AppData\Local\Temp\ccfj5rOI.s:644    .debug_str:000000000000012c .LASF9
+C:\Users\test\AppData\Local\Temp\ccfj5rOI.s:676    .debug_str:00000000000001ff .LASF10
+C:\Users\test\AppData\Local\Temp\ccfj5rOI.s:670    .debug_str:00000000000001d4 .LASF11
+C:\Users\test\AppData\Local\Temp\ccfj5rOI.s:666    .debug_str:00000000000001c1 .LASF12
+C:\Users\test\AppData\Local\Temp\ccfj5rOI.s:630    .debug_str:00000000000000e6 .LASF13
+C:\Users\test\AppData\Local\Temp\ccfj5rOI.s:672    .debug_str:00000000000001eb .LASF14
+C:\Users\test\AppData\Local\Temp\ccfj5rOI.s:686    .debug_str:0000000000000244 .LASF15
+C:\Users\test\AppData\Local\Temp\ccfj5rOI.s:688    .debug_str:000000000000024d .LASF16
+C:\Users\test\AppData\Local\Temp\ccfj5rOI.s:636    .debug_str:00000000000000fa .LASF17
+C:\Users\test\AppData\Local\Temp\ccfj5rOI.s:624    .debug_str:00000000000000b5 .LASF18
+C:\Users\test\AppData\Local\Temp\ccfj5rOI.s:678    .debug_str:000000000000020d .LASF19
+C:\Users\test\AppData\Local\Temp\ccfj5rOI.s:628    .debug_str:00000000000000d5 .LASF20
+C:\Users\test\AppData\Local\Temp\ccfj5rOI.s:626    .debug_str:00000000000000c5 .LASF21
+C:\Users\test\AppData\Local\Temp\ccfj5rOI.s:680    .debug_str:000000000000021d .LASF22
+C:\Users\test\AppData\Local\Temp\ccfj5rOI.s:654    .debug_str:0000000000000167 .LASF23
+C:\Users\test\AppData\Local\Temp\ccfj5rOI.s:620    .debug_str:000000000000009d .LASF24
+C:\Users\test\AppData\Local\Temp\ccfj5rOI.s:618    .debug_str:000000000000008d .LASF25
+C:\Users\test\AppData\Local\Temp\ccfj5rOI.s:696    .debug_str:0000000000000276 .LASF26
+C:\Users\test\AppData\Local\Temp\ccfj5rOI.s:692    .debug_str:000000000000025f .LASF31
+C:\Users\test\AppData\Local\Temp\ccfj5rOI.s:632    .debug_str:00000000000000ed .LASF27
+C:\Users\test\AppData\Local\Temp\ccfj5rOI.s:668    .debug_str:00000000000001ce .LASF28
+C:\Users\test\AppData\Local\Temp\ccfj5rOI.s:642    .debug_str:0000000000000123 .LASF29
+C:\Users\test\AppData\Local\Temp\ccfj5rOI.s:662    .debug_str:00000000000001b3 .LASF30
+C:\Users\test\AppData\Local\Temp\ccfj5rOI.s:674    .debug_str:00000000000001f3 .LASF32
+C:\Users\test\AppData\Local\Temp\ccfj5rOI.s:622    .debug_str:00000000000000ad .LASF33
+C:\Users\test\AppData\Local\Temp\ccfj5rOI.s:650    .debug_str:000000000000015a .LASF34
+C:\Users\test\AppData\Local\Temp\ccfj5rOI.s:652    .debug_str:0000000000000160 .LASF35
+C:\Users\test\AppData\Local\Temp\ccfj5rOI.s:640    .debug_str:0000000000000119 .LASF36
+C:\Users\test\AppData\Local\Temp\ccfj5rOI.s:664    .debug_str:00000000000001bb .LASF37
+C:\Users\test\AppData\Local\Temp\ccfj5rOI.s:658    .debug_str:00000000000001a3 .LASF38
+C:\Users\test\AppData\Local\Temp\ccfj5rOI.s:698    .debug_str:0000000000000288 .LASF39
+C:\Users\test\AppData\Local\Temp\ccfj5rOI.s:646    .debug_str:000000000000013e .LASF40
+C:\Users\test\AppData\Local\Temp\ccfj5rOI.s:634    .debug_str:00000000000000f2 .LASF41
+C:\Users\test\AppData\Local\Temp\ccfj5rOI.s:25     .debug_info:0000000000000000 .Ldebug_info0
+
+NO UNDEFINED SYMBOLS

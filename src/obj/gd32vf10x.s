@@ -11,8 +11,8 @@ Program Header:
     LOAD off    0x00002000 vaddr 0x20000000 paddr 0x08000abc align 2**12
          filesz 0x000000e4 memsz 0x000000e4 flags rw-
     LOAD off    0x000020e4 vaddr 0x200000e4 paddr 0x200000e4 align 2**12
-         filesz 0x00000000 memsz 0x00000090 flags rw-
-    LOAD off    0x00002800 vaddr 0x20007800 paddr 0x20000174 align 2**12
+         filesz 0x00000000 memsz 0x000000a0 flags rw-
+    LOAD off    0x00002800 vaddr 0x20007800 paddr 0x20000184 align 2**12
          filesz 0x00000000 memsz 0x00000800 flags rw-
 
 Sections:
@@ -33,27 +33,27 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS
   7 .data         000000e4  20000000  08000abc  00002000  2**2
                   CONTENTS, ALLOC, LOAD, DATA
-  8 .bss          00000090  200000e4  200000e4  000020e4  2**2
+  8 .bss          000000a0  200000e4  200000e4  000020e4  2**2
                   ALLOC
-  9 .stack        00000800  20007800  20000174  00002800  2**0
+  9 .stack        00000800  20007800  20000184  00002800  2**0
                   ALLOC
- 10 .debug_info   0000420c  00000000  00000000  000020e4  2**0
+ 10 .debug_info   000041fd  00000000  00000000  000020e4  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_abbrev 00001308  00000000  00000000  000062f0  2**0
+ 11 .debug_abbrev 000012e2  00000000  00000000  000062e1  2**0
                   CONTENTS, READONLY, DEBUGGING
- 12 .debug_loc    00001b84  00000000  00000000  000075f8  2**0
+ 12 .debug_loc    00001b92  00000000  00000000  000075c3  2**0
                   CONTENTS, READONLY, DEBUGGING
- 13 .debug_aranges 000004a8  00000000  00000000  00009180  2**3
+ 13 .debug_aranges 000004c8  00000000  00000000  00009158  2**3
                   CONTENTS, READONLY, DEBUGGING
- 14 .debug_ranges 00000768  00000000  00000000  00009628  2**3
+ 14 .debug_ranges 00000788  00000000  00000000  00009620  2**3
                   CONTENTS, READONLY, DEBUGGING
- 15 .debug_line   000041e2  00000000  00000000  00009d90  2**0
+ 15 .debug_line   0000425f  00000000  00000000  00009da8  2**0
                   CONTENTS, READONLY, DEBUGGING
- 16 .debug_str    00001c6f  00000000  00000000  0000df72  2**0
+ 16 .debug_str    00001c77  00000000  00000000  0000e007  2**0
                   CONTENTS, READONLY, DEBUGGING
- 17 .comment      00000033  00000000  00000000  0000fbe1  2**0
+ 17 .comment      00000033  00000000  00000000  0000fc7e  2**0
                   CONTENTS, READONLY
- 18 .debug_frame  000009ec  00000000  00000000  0000fc14  2**2
+ 18 .debug_frame  000009ec  00000000  00000000  0000fcb4  2**2
                   CONTENTS, READONLY, DEBUGGING
 SYMBOL TABLE:
 08000000 l    d  .init	00000000 .init
@@ -78,42 +78,42 @@ SYMBOL TABLE:
 00000000 l    df *ABS*	00000000 obj/startup.o
 08000000 l       .init	00000000 vector_base
 08000182 l       .init	00000000 _start0800
-00000000 l    df *ABS*	00000000 gd32vf10x-uart.c
-0800050a l     F .text	00000002 gd32vf10x_uart_remove
-0800050c l     F .text	00000002 gd32vf10x_uart_set_baud_rate
-0800050e l     F .text	00000002 gd32vf10x_uart_poll_read
-08000510 l     F .text	00000006 gd32vf10x_uart_set_handler
-08000516 l     F .text	00000074 gd32vf10x_uart_probe
-0800058a l     F .text	00000004 gd32vf10x_uart_poll_write
-08000280 l     O .text	00000010 nvic_addr
 00000000 l    df *ABS*	00000000 main.c
 00000000 l    df *ABS*	00000000 __call_atexit.c
-080002fa l     F .text	0000001c register_fini
+080002ea l     F .text	0000001c register_fini
 00000000 l    df *ABS*	00000000 gd32vf10x-spi.c
-08000316 l     F .text	00000002 gd32vf10x_spi_probe
-08000318 l     F .text	00000002 gd32vf10x_spi_write
-0800031a l     F .text	00000002 gd32vf10x_spi_transfer
-0800031c l     F .text	00000002 gd32vf10x_spi_set_speed
-0800031e l     F .text	00000004 gd32vf10x_spi_read
-08000322 l     F .text	00000004 gd32vf10x_spi_remove
+08000306 l     F .text	00000002 gd32vf10x_spi_probe
+08000308 l     F .text	00000002 gd32vf10x_spi_write
+0800030a l     F .text	00000002 gd32vf10x_spi_transfer
+0800030c l     F .text	00000002 gd32vf10x_spi_set_speed
+0800030e l     F .text	00000004 gd32vf10x_spi_read
+08000312 l     F .text	00000004 gd32vf10x_spi_remove
 00000000 l    df *ABS*	00000000 gd32vf10x-gpio.c
-08000326 l     F .text	0000007e gd32vf_gpio_get
-080003a4 l     F .text	0000007e gd32vf_gpio_set_direction
-08000422 l     F .text	0000002e gd32vf_gpio_set_value
-08000450 l     F .text	00000016 gd32vf_gpio_get_value
-08000466 l     F .text	00000002 gd32vf_gpio_put
+08000316 l     F .text	0000007e gd32vf_gpio_get
+08000394 l     F .text	0000007e gd32vf_gpio_set_direction
+08000412 l     F .text	0000002e gd32vf_gpio_set_value
+08000440 l     F .text	00000016 gd32vf_gpio_get_value
+08000456 l     F .text	00000002 gd32vf_gpio_put
 00000000 l    df *ABS*	00000000 gd32vf10x-delay.c
-08000468 l     F .text	00000030 gd32vf10x_udelay
-08000498 l     F .text	00000044 gd32vf10x_mdelay
-080004dc l     F .text	0000002e gd32vf10x_sdelay
+08000458 l     F .text	00000030 gd32vf10x_udelay
+08000488 l     F .text	00000044 gd32vf10x_mdelay
+080004cc l     F .text	0000002e gd32vf10x_sdelay
+00000000 l    df *ABS*	00000000 gd32vf10x-uart.c
+080004fa l     F .text	00000002 gd32vf10x_uart_remove
+080004fc l     F .text	00000002 gd32vf10x_uart_set_baud_rate
+080004fe l     F .text	00000002 gd32vf10x_uart_poll_read
+08000500 l     F .text	00000016 gd32vf10x_uart_set_handler
+08000516 l     F .text	0000005e gd32vf10x_uart_probe
+08000574 l     F .text	00000004 gd32vf10x_uart_poll_write
+200000e8 l     O .bss	00000010 uart_handler
 00000000 l    df *ABS*	00000000 gd32vf10x-i2c.c
-08000594 l     F .text	00000002 gd32vf10x_i2c_probe
-08000596 l     F .text	00000002 gd32vf10x_i2c_write
-08000598 l     F .text	00000002 gd32vf10x_i2c_cmd_write
-0800059a l     F .text	00000002 gd32vf10x_i2c_set_speed
-0800059c l     F .text	00000004 gd32vf10x_i2c_cmd_read
-080005a0 l     F .text	00000004 gd32vf10x_i2c_read
-080005a4 l     F .text	00000004 gd32vf10x_i2c_remove
+08000596 l     F .text	00000002 gd32vf10x_i2c_probe
+08000598 l     F .text	00000002 gd32vf10x_i2c_write
+0800059a l     F .text	00000002 gd32vf10x_i2c_cmd_write
+0800059c l     F .text	00000002 gd32vf10x_i2c_set_speed
+0800059e l     F .text	00000004 gd32vf10x_i2c_cmd_read
+080005a2 l     F .text	00000004 gd32vf10x_i2c_read
+080005a6 l     F .text	00000004 gd32vf10x_i2c_remove
 00000000 l    df *ABS*	00000000 handler.c
 00000000 l    df *ABS*	00000000 system_gd32vf103.c
 00000000 l    df *ABS*	00000000 n200_func.c
@@ -126,7 +126,7 @@ SYMBOL TABLE:
 00000000 l    df *ABS*	00000000 fini.c
 00000000 l    df *ABS*	00000000 init.c
 00000000 l    df *ABS*	00000000 __atexit.c
-200000e8 l     O .bss	0000008c _global_atexit0
+200000f8 l     O .bss	0000008c _global_atexit0
 00000000 l    df *ABS*	00000000 _exit.c
 00000000 l    df *ABS*	00000000 impure.c
 20000000 l     O .data	00000060 impure_data
@@ -140,44 +140,44 @@ SYMBOL TABLE:
 20000860 g       .data	00000000 __global_pointer$
 00000800 g       *ABS*	00000000 __stack_size
 200000d8 g       .data	00000000 __delay_core_init
-080005ac  w    F .text	00000014 handle_trap
+080005ae  w    F .text	00000014 handle_trap
 08000804  w      .text	00000000 irq_entry
 08000ab4 g     O .sdata2._global_impure_ptr	00000004 _global_impure_ptr
 080008f4 g     F .text	0000006a __libc_init_array
-08000714 g     F .text	0000002c _init
+08000716 g     F .text	0000002c _init
 080008bc g     F .text	00000038 __libc_fini_array
-080005a8  w    F .text	00000004 handle_nmi
+080005aa  w    F .text	00000004 handle_nmi
 20000068 g     O .data	00000018 gd32vf_gpio_ctrl
-0800058e g     F .text	00000002 USART0_IRQHandler
+08000578 g     F .text	0000000a USART0_IRQHandler
 20000060 g     O .data	00000008 led
 2000009c g     O .data	00000020 gd32vf10x_i2c_adaptor
 200000e4 g     O .bss	00000004 _global_atexit
 080009ea g     F .text	000000c8 __call_exitprocs
 20008000 g       .stack	00000000 _sp
 0800015c g     F .init	00000000 _start
-08000742 g     F .text	00000018 rcu_periph_clock_enable
+08000744 g     F .text	00000018 rcu_periph_clock_enable
 0800024c g       .init	00000000 enable_mcycle_minstret
 0800095e g     F .text	0000008c __register_exitproc
 200000bc g     O .data	0000001c gd32vf10x_uart_controller
 200000e4 g       .bss	00000000 __bss_start
-08000290 g     F .text	0000006a main
+08000280 g     F .text	0000006a main
 08000780  w      .text	00000000 trap_entry
 08000246 g       .init	00000000 disable_mcycle_minstret
-08000702 g     F .text	00000012 eclic_mode_enable
+08000704 g     F .text	00000012 eclic_mode_enable
 20000068 g       .data	00000000 __gpio_core_init
-080005c0 g     F .text	0000011e SystemInit
-08000740 g     F .text	00000002 _fini
+080005c2 g     F .text	0000011e SystemInit
+08000742 g     F .text	00000002 _fini
 08000876 g     F .text	00000010 atexit
 20000000 g       .dalign	00000000 _data
 200000e4 g       .bss	00000000 _edata
-20000178 g       .bss	00000000 _end
+20000188 g       .bss	00000000 _end
 08000abc g       .lalign	00000000 _data_lma
-08000592 g     F .text	00000002 USART2_IRQHandler
+0800058c g     F .text	0000000a USART2_IRQHandler
 08000886 g     F .text	00000036 exit
 200000d8 g     O .data	0000000c gd32vf10x_delay
-080006de g     F .text	00000024 eclic_init
+080006e0 g     F .text	00000024 eclic_init
 08000ab2 g     F .text	00000002 _exit
-08000590 g     F .text	00000002 USART1_IRQHandler
+08000582 g     F .text	0000000a USART1_IRQHandler
 20000080 g     O .data	0000001c gd32vf10x_spi_master
 
 
@@ -194,11 +194,11 @@ vector_base:
  8000000:	aab1                	j	800015c <_start>
  8000002:	0001                	nop
 	...
- 80000e0:	058e                	slli	a1,a1,0x3
+ 80000e0:	0578                	addi	a4,sp,652
  80000e2:	0800                	addi	s0,sp,16
- 80000e4:	0590                	addi	a2,sp,704
+ 80000e4:	0582                	c.slli64	a1
  80000e6:	0800                	addi	s0,sp,16
- 80000e8:	0592                	slli	a1,a1,0x4
+ 80000e8:	058c                	addi	a1,sp,704
  80000ea:	0800                	addi	s0,sp,16
 	...
 
@@ -307,7 +307,7 @@ _start0800:
  80001f2:	ef650513          	addi	a0,a0,-266 # 200000e4 <_global_atexit>
 	la a1, _end
  80001f6:	18000597          	auipc	a1,0x18000
- 80001fa:	f8258593          	addi	a1,a1,-126 # 20000178 <_end>
+ 80001fa:	f9258593          	addi	a1,a1,-110 # 20000188 <_end>
 	bgeu a0, a1, 2f
  80001fe:	00b57763          	bgeu	a0,a1,800020c <_start0800+0x8a>
 1:
@@ -340,10 +340,10 @@ _start0800:
  800022a:	4581                	li	a1,0
     call _init
  800022c:	00000097          	auipc	ra,0x0
- 8000230:	4e8080e7          	jalr	1256(ra) # 8000714 <_init>
+ 8000230:	4ea080e7          	jalr	1258(ra) # 8000716 <_init>
 	call main
  8000234:	00000097          	auipc	ra,0x0
- 8000238:	05c080e7          	jalr	92(ra) # 8000290 <main>
+ 8000238:	04c080e7          	jalr	76(ra) # 8000280 <main>
 	tail exit
  800023c:	00000317          	auipc	t1,0x0
  8000240:	64a30067          	jr	1610(t1) # 8000886 <exit>
@@ -373,469 +373,470 @@ enable_mcycle_minstret:
 
 Disassembly of section .text:
 
-08000280 <nvic_addr>:
- 8000280:	00e0 0000 00e4 0000 00e8 0000 011c 0000     ................
-
-08000290 <main>:
+08000280 <main>:
 }gpio_controller_t;
 
 
 static inline int8_t gpio_get(gpio_desp_t *gpio_desp)
 {
     gpio_desp->ctl = (gpio_controller_t*)&__gpio_core_init;
- 8000290:	200007b7          	lui	a5,0x20000
+ 8000280:	200007b7          	lui	a5,0x20000
     .mode = GPIO_PP_OUTPUT,
     .flag = 1,
 };
 
 int main(void)
 {
- 8000294:	1141                	addi	sp,sp,-16
- 8000296:	06878793          	addi	a5,a5,104 # 20000068 <gd32vf_gpio_ctrl>
+ 8000284:	1141                	addi	sp,sp,-16
+ 8000286:	06878793          	addi	a5,a5,104 # 20000068 <gd32vf_gpio_ctrl>
     return gpio_desp->ctl->ops.get(gpio_desp);
- 800029a:	43d8                	lw	a4,4(a5)
- 800029c:	c422                	sw	s0,8(sp)
+ 800028a:	43d8                	lw	a4,4(a5)
+ 800028c:	c422                	sw	s0,8(sp)
     gpio_desp->ctl = (gpio_controller_t*)&__gpio_core_init;
- 800029e:	20000437          	lui	s0,0x20000
- 80002a2:	c04a                	sw	s2,0(sp)
- 80002a4:	06040913          	addi	s2,s0,96 # 20000060 <led>
- 80002a8:	c606                	sw	ra,12(sp)
- 80002aa:	c226                	sw	s1,4(sp)
- 80002ac:	00f92223          	sw	a5,4(s2)
+ 800028e:	20000437          	lui	s0,0x20000
+ 8000292:	c04a                	sw	s2,0(sp)
+ 8000294:	06040913          	addi	s2,s0,96 # 20000060 <led>
+ 8000298:	c606                	sw	ra,12(sp)
+ 800029a:	c226                	sw	s1,4(sp)
+ 800029c:	00f92223          	sw	a5,4(s2)
     return gpio_desp->ctl->ops.get(gpio_desp);
- 80002b0:	06040513          	addi	a0,s0,96
- 80002b4:	9702                	jalr	a4
+ 80002a0:	06040513          	addi	a0,s0,96
+ 80002a4:	9702                	jalr	a4
 }
 
 static inline void gpio_set_direction(gpio_desp_t *gpio_desp, gpio_direction_t dir)
 {
     gpio_desp->ctl->ops.set_direction(gpio_desp,dir);
- 80002b6:	00492783          	lw	a5,4(s2)
- 80002ba:	4581                	li	a1,0
- 80002bc:	06040513          	addi	a0,s0,96
- 80002c0:	479c                	lw	a5,8(a5)
- 80002c2:	200004b7          	lui	s1,0x20000
- 80002c6:	0d848493          	addi	s1,s1,216 # 200000d8 <gd32vf10x_delay>
- 80002ca:	9782                	jalr	a5
+ 80002a6:	00492783          	lw	a5,4(s2)
+ 80002aa:	4581                	li	a1,0
+ 80002ac:	06040513          	addi	a0,s0,96
+ 80002b0:	479c                	lw	a5,8(a5)
+ 80002b2:	200004b7          	lui	s1,0x20000
+ 80002b6:	0d848493          	addi	s1,s1,216 # 200000d8 <gd32vf10x_delay>
+ 80002ba:	9782                	jalr	a5
 }
 
 static inline void gpio_set_value(gpio_desp_t *gpio_desp, uint8_t value)
 {
     gpio_desp->ctl->ops.set_value(gpio_desp,value);
- 80002cc:	00492783          	lw	a5,4(s2)
- 80002d0:	4581                	li	a1,0
- 80002d2:	06040513          	addi	a0,s0,96
- 80002d6:	47dc                	lw	a5,12(a5)
- 80002d8:	9782                	jalr	a5
+ 80002bc:	00492783          	lw	a5,4(s2)
+ 80002c0:	4581                	li	a1,0
+ 80002c2:	06040513          	addi	a0,s0,96
+ 80002c6:	47dc                	lw	a5,12(a5)
+ 80002c8:	9782                	jalr	a5
     __delay_core->udelay(us);
 }
 
 static inline void mdelay(uint32_t ms)
 {
     __delay_core->mdelay(ms);
- 80002da:	40dc                	lw	a5,4(s1)
- 80002dc:	1f400513          	li	a0,500
- 80002e0:	9782                	jalr	a5
- 80002e2:	00492783          	lw	a5,4(s2)
- 80002e6:	06040513          	addi	a0,s0,96
- 80002ea:	4585                	li	a1,1
- 80002ec:	47dc                	lw	a5,12(a5)
- 80002ee:	9782                	jalr	a5
- 80002f0:	40dc                	lw	a5,4(s1)
- 80002f2:	1f400513          	li	a0,500
- 80002f6:	9782                	jalr	a5
- 80002f8:	bfd1                	j	80002cc <main+0x3c>
+ 80002ca:	40dc                	lw	a5,4(s1)
+ 80002cc:	1f400513          	li	a0,500
+ 80002d0:	9782                	jalr	a5
+ 80002d2:	00492783          	lw	a5,4(s2)
+ 80002d6:	06040513          	addi	a0,s0,96
+ 80002da:	4585                	li	a1,1
+ 80002dc:	47dc                	lw	a5,12(a5)
+ 80002de:	9782                	jalr	a5
+ 80002e0:	40dc                	lw	a5,4(s1)
+ 80002e2:	1f400513          	li	a0,500
+ 80002e6:	9782                	jalr	a5
+ 80002e8:	bfd1                	j	80002bc <main+0x3c>
 
-080002fa <register_fini>:
- 80002fa:	f8000797          	auipc	a5,0xf8000
- 80002fe:	d0678793          	addi	a5,a5,-762 # 0 <__stack_size-0x800>
- 8000302:	cb89                	beqz	a5,8000314 <register_fini+0x1a>
- 8000304:	00000517          	auipc	a0,0x0
- 8000308:	5b850513          	addi	a0,a0,1464 # 80008bc <__libc_fini_array>
- 800030c:	00000317          	auipc	t1,0x0
- 8000310:	56a30067          	jr	1386(t1) # 8000876 <atexit>
- 8000314:	8082                	ret
+080002ea <register_fini>:
+ 80002ea:	f8000797          	auipc	a5,0xf8000
+ 80002ee:	d1678793          	addi	a5,a5,-746 # 0 <__stack_size-0x800>
+ 80002f2:	cb89                	beqz	a5,8000304 <register_fini+0x1a>
+ 80002f4:	00000517          	auipc	a0,0x0
+ 80002f8:	5c850513          	addi	a0,a0,1480 # 80008bc <__libc_fini_array>
+ 80002fc:	00000317          	auipc	t1,0x0
+ 8000300:	57a30067          	jr	1402(t1) # 8000876 <atexit>
+ 8000304:	8082                	ret
 
-08000316 <gd32vf10x_spi_probe>:
+08000306 <gd32vf10x_spi_probe>:
 
 
 static int8_t gd32vf10x_spi_probe(struct spi_device *dev)
 {
 
 }
- 8000316:	8082                	ret
+ 8000306:	8082                	ret
 
-08000318 <gd32vf10x_spi_write>:
+08000308 <gd32vf10x_spi_write>:
 }
 
 static uint32_t gd32vf10x_spi_write(struct spi_device *dev, uint8_t *buffer, uint32_t len)
 {
 
 }
- 8000318:	8082                	ret
+ 8000308:	8082                	ret
 
-0800031a <gd32vf10x_spi_transfer>:
+0800030a <gd32vf10x_spi_transfer>:
 }
 
 static uint32_t gd32vf10x_spi_transfer(struct spi_device *dev,struct  spi_xfer *xfer)
 {
     
 }
- 800031a:	8082                	ret
+ 800030a:	8082                	ret
 
-0800031c <gd32vf10x_spi_set_speed>:
+0800030c <gd32vf10x_spi_set_speed>:
 
 static int8_t gd32vf10x_spi_set_speed(struct spi_device *dev, uint32_t speed_hz)
 {
 
 }
- 800031c:	8082                	ret
+ 800030c:	8082                	ret
 
-0800031e <gd32vf10x_spi_read>:
- 800031e:	4501                	li	a0,0
- 8000320:	8082                	ret
+0800030e <gd32vf10x_spi_read>:
+ 800030e:	4501                	li	a0,0
+ 8000310:	8082                	ret
 
-08000322 <gd32vf10x_spi_remove>:
- 8000322:	4501                	li	a0,0
- 8000324:	8082                	ret
+08000312 <gd32vf10x_spi_remove>:
+ 8000312:	4501                	li	a0,0
+ 8000314:	8082                	ret
 
-08000326 <gd32vf_gpio_get>:
+08000316 <gd32vf_gpio_get>:
 #define GPIO_CTL1(gpiox)           REG32((gpiox) + 0x04U)    < GPIO port control register 1
 **************************************************************************************************/
 
 static int8_t gd32vf_gpio_get(gpio_desp_t *gpio_desp)
 {
     RCU_APB2EN |= 1<<(GPIO_NUM2PORT(gpio_desp->pin_num)+2);   //使能GPIO时钟
- 8000326:	00055603          	lhu	a2,0(a0)
- 800032a:	40021537          	lui	a0,0x40021
- 800032e:	4d0c                	lw	a1,24(a0)
- 8000330:	00565793          	srli	a5,a2,0x5
- 8000334:	4705                	li	a4,1
- 8000336:	00278693          	addi	a3,a5,2
- 800033a:	00d716b3          	sll	a3,a4,a3
- 800033e:	8ecd                	or	a3,a3,a1
+ 8000316:	00055603          	lhu	a2,0(a0)
+ 800031a:	40021537          	lui	a0,0x40021
+ 800031e:	4d0c                	lw	a1,24(a0)
+ 8000320:	00565793          	srli	a5,a2,0x5
+ 8000324:	4705                	li	a4,1
+ 8000326:	00278693          	addi	a3,a5,2
+ 800032a:	00d716b3          	sll	a3,a4,a3
+ 800032e:	8ecd                	or	a3,a3,a1
     //clear CTL
     *((volatile uint64_t*)(uint64_t)(GPIO_BASE + (GPIO_NUM2PORT(gpio_desp->pin_num)*0x400U))) &= 
- 8000340:	001005b7          	lui	a1,0x100
- 8000344:	04258593          	addi	a1,a1,66 # 100042 <__stack_size+0xff842>
- 8000348:	97ae                	add	a5,a5,a1
+ 8000330:	001005b7          	lui	a1,0x100
+ 8000334:	04258593          	addi	a1,a1,66 # 100042 <__stack_size+0xff842>
+ 8000338:	97ae                	add	a5,a5,a1
     RCU_APB2EN |= 1<<(GPIO_NUM2PORT(gpio_desp->pin_num)+2);   //使能GPIO时钟
- 800034a:	cd14                	sw	a3,24(a0)
+ 800033a:	cd14                	sw	a3,24(a0)
     *((volatile uint64_t*)(uint64_t)(GPIO_BASE + (GPIO_NUM2PORT(gpio_desp->pin_num)*0x400U))) &= 
- 800034c:	07aa                	slli	a5,a5,0xa
+ 800033c:	07aa                	slli	a5,a5,0xa
     ~(0xF<<(GPIO_NUM2PIN(gpio_desp->pin_num)*4));
- 800034e:	8a7d                	andi	a2,a2,31
+ 800033e:	8a7d                	andi	a2,a2,31
     *((volatile uint64_t*)(uint64_t)(GPIO_BASE + (GPIO_NUM2PORT(gpio_desp->pin_num)*0x400U))) &= 
- 8000350:	0007a803          	lw	a6,0(a5)
+ 8000340:	0007a803          	lw	a6,0(a5)
     ~(0xF<<(GPIO_NUM2PIN(gpio_desp->pin_num)*4));
- 8000354:	00261313          	slli	t1,a2,0x2
- 8000358:	46bd                	li	a3,15
+ 8000344:	00261313          	slli	t1,a2,0x2
+ 8000348:	46bd                	li	a3,15
     *((volatile uint64_t*)(uint64_t)(GPIO_BASE + (GPIO_NUM2PORT(gpio_desp->pin_num)*0x400U))) &= 
- 800035a:	0047a883          	lw	a7,4(a5)
+ 800034a:	0047a883          	lw	a7,4(a5)
     ~(0xF<<(GPIO_NUM2PIN(gpio_desp->pin_num)*4));
- 800035e:	006696b3          	sll	a3,a3,t1
- 8000362:	fff6c693          	not	a3,a3
+ 800034e:	006696b3          	sll	a3,a3,t1
+ 8000352:	fff6c693          	not	a3,a3
     *((volatile uint64_t*)(uint64_t)(GPIO_BASE + (GPIO_NUM2PORT(gpio_desp->pin_num)*0x400U))) &= 
- 8000366:	0106f533          	and	a0,a3,a6
+ 8000356:	0106f533          	and	a0,a3,a6
     ~(0xF<<(GPIO_NUM2PIN(gpio_desp->pin_num)*4));
- 800036a:	41f6de13          	srai	t3,a3,0x1f
+ 800035a:	41f6de13          	srai	t3,a3,0x1f
     *((volatile uint64_t*)(uint64_t)(GPIO_BASE + (GPIO_NUM2PORT(gpio_desp->pin_num)*0x400U))) &= 
- 800036e:	c388                	sw	a0,0(a5)
- 8000370:	011e75b3          	and	a1,t3,a7
- 8000374:	c3cc                	sw	a1,4(a5)
+ 800035e:	c388                	sw	a0,0(a5)
+ 8000360:	011e75b3          	and	a1,t3,a7
+ 8000364:	c3cc                	sw	a1,4(a5)
     //set CTL  output (default)
     *((volatile uint64_t*)(uint64_t)(GPIO_BASE + (GPIO_NUM2PORT(gpio_desp->pin_num)*0x400U))) |= 
- 8000376:	0007a803          	lw	a6,0(a5)
+ 8000366:	0007a803          	lw	a6,0(a5)
     (0x3<<(GPIO_NUM2PIN(gpio_desp->pin_num)*4));
- 800037a:	468d                	li	a3,3
+ 800036a:	468d                	li	a3,3
     *((volatile uint64_t*)(uint64_t)(GPIO_BASE + (GPIO_NUM2PORT(gpio_desp->pin_num)*0x400U))) |= 
- 800037c:	0047a883          	lw	a7,4(a5)
+ 800036c:	0047a883          	lw	a7,4(a5)
     (0x3<<(GPIO_NUM2PIN(gpio_desp->pin_num)*4));
- 8000380:	006696b3          	sll	a3,a3,t1
+ 8000370:	006696b3          	sll	a3,a3,t1
     *((volatile uint64_t*)(uint64_t)(GPIO_BASE + (GPIO_NUM2PORT(gpio_desp->pin_num)*0x400U))) |= 
- 8000384:	0106e533          	or	a0,a3,a6
+ 8000374:	0106e533          	or	a0,a3,a6
     (0x3<<(GPIO_NUM2PIN(gpio_desp->pin_num)*4));
- 8000388:	41f6d313          	srai	t1,a3,0x1f
+ 8000378:	41f6d313          	srai	t1,a3,0x1f
     *((volatile uint64_t*)(uint64_t)(GPIO_BASE + (GPIO_NUM2PORT(gpio_desp->pin_num)*0x400U))) |= 
- 800038c:	c388                	sw	a0,0(a5)
- 800038e:	011365b3          	or	a1,t1,a7
- 8000392:	c3cc                	sw	a1,4(a5)
+ 800037c:	c388                	sw	a0,0(a5)
+ 800037e:	011365b3          	or	a1,t1,a7
+ 8000382:	c3cc                	sw	a1,4(a5)
     //set 0CTL output (default)
     *((volatile uint32_t*)(uint32_t)(GPIO_BASE + 0x0C + (GPIO_NUM2PORT(gpio_desp->pin_num)*0x400U))) &= 
- 8000394:	47d4                	lw	a3,12(a5)
+ 8000384:	47d4                	lw	a3,12(a5)
     ~(1<<GPIO_NUM2PIN(gpio_desp->pin_num));
- 8000396:	00c71733          	sll	a4,a4,a2
- 800039a:	fff74713          	not	a4,a4
+ 8000386:	00c71733          	sll	a4,a4,a2
+ 800038a:	fff74713          	not	a4,a4
     *((volatile uint32_t*)(uint32_t)(GPIO_BASE + 0x0C + (GPIO_NUM2PORT(gpio_desp->pin_num)*0x400U))) &= 
- 800039e:	8f75                	and	a4,a4,a3
- 80003a0:	c7d8                	sw	a4,12(a5)
+ 800038e:	8f75                	and	a4,a4,a3
+ 8000390:	c7d8                	sw	a4,12(a5)
 }
- 80003a2:	8082                	ret
+ 8000392:	8082                	ret
 
-080003a4 <gd32vf_gpio_set_direction>:
+08000394 <gd32vf_gpio_set_direction>:
 
 static void  gd32vf_gpio_set_direction(gpio_desp_t *gpio_desp, gpio_direction_t dir)
 {
     //clear CTL
     *((volatile uint64_t*)(uint64_t)(GPIO_BASE + (GPIO_NUM2PORT(gpio_desp->pin_num)*0x400U))) &= 
- 80003a4:	00055703          	lhu	a4,0(a0) # 40021000 <_sp+0x20019000>
- 80003a8:	001006b7          	lui	a3,0x100
- 80003ac:	04268693          	addi	a3,a3,66 # 100042 <__stack_size+0xff842>
- 80003b0:	00575793          	srli	a5,a4,0x5
- 80003b4:	97b6                	add	a5,a5,a3
- 80003b6:	07aa                	slli	a5,a5,0xa
+ 8000394:	00055703          	lhu	a4,0(a0) # 40021000 <_sp+0x20019000>
+ 8000398:	001006b7          	lui	a3,0x100
+ 800039c:	04268693          	addi	a3,a3,66 # 100042 <__stack_size+0xff842>
+ 80003a0:	00575793          	srli	a5,a4,0x5
+ 80003a4:	97b6                	add	a5,a5,a3
+ 80003a6:	07aa                	slli	a5,a5,0xa
     ~(0xF<<(GPIO_NUM2PIN(gpio_desp->pin_num)*4));
- 80003b8:	01f77693          	andi	a3,a4,31
+ 80003a8:	01f77693          	andi	a3,a4,31
     *((volatile uint64_t*)(uint64_t)(GPIO_BASE + (GPIO_NUM2PORT(gpio_desp->pin_num)*0x400U))) &= 
- 80003bc:	0007a303          	lw	t1,0(a5)
+ 80003ac:	0007a303          	lw	t1,0(a5)
     ~(0xF<<(GPIO_NUM2PIN(gpio_desp->pin_num)*4));
- 80003c0:	00269613          	slli	a2,a3,0x2
- 80003c4:	473d                	li	a4,15
+ 80003b0:	00269613          	slli	a2,a3,0x2
+ 80003b4:	473d                	li	a4,15
     *((volatile uint64_t*)(uint64_t)(GPIO_BASE + (GPIO_NUM2PORT(gpio_desp->pin_num)*0x400U))) &= 
- 80003c6:	0047a383          	lw	t2,4(a5)
+ 80003b6:	0047a383          	lw	t2,4(a5)
     ~(0xF<<(GPIO_NUM2PIN(gpio_desp->pin_num)*4));
- 80003ca:	00c71733          	sll	a4,a4,a2
- 80003ce:	fff74713          	not	a4,a4
- 80003d2:	41f75e13          	srai	t3,a4,0x1f
+ 80003ba:	00c71733          	sll	a4,a4,a2
+ 80003be:	fff74713          	not	a4,a4
+ 80003c2:	41f75e13          	srai	t3,a4,0x1f
     *((volatile uint64_t*)(uint64_t)(GPIO_BASE + (GPIO_NUM2PORT(gpio_desp->pin_num)*0x400U))) &= 
- 80003d6:	00677833          	and	a6,a4,t1
- 80003da:	007e78b3          	and	a7,t3,t2
- 80003de:	0107a023          	sw	a6,0(a5)
- 80003e2:	0117a223          	sw	a7,4(a5)
+ 80003c6:	00677833          	and	a6,a4,t1
+ 80003ca:	007e78b3          	and	a7,t3,t2
+ 80003ce:	0107a023          	sw	a6,0(a5)
+ 80003d2:	0117a223          	sw	a7,4(a5)
     //set CTL  direction
     if(dir == GPIO_PP_OUTPUT)
- 80003e6:	e195                	bnez	a1,800040a <gd32vf_gpio_set_direction+0x66>
+ 80003d6:	e195                	bnez	a1,80003fa <gd32vf_gpio_set_direction+0x66>
     {
         *((volatile uint64_t*)(uint64_t)(GPIO_BASE + (GPIO_NUM2PORT(gpio_desp->pin_num)*0x400U))) |= 
- 80003e8:	0007a303          	lw	t1,0(a5)
+ 80003d8:	0007a303          	lw	t1,0(a5)
         (0x3<<(GPIO_NUM2PIN(gpio_desp->pin_num)*4));
- 80003ec:	470d                	li	a4,3
+ 80003dc:	470d                	li	a4,3
         *((volatile uint64_t*)(uint64_t)(GPIO_BASE + (GPIO_NUM2PORT(gpio_desp->pin_num)*0x400U))) |= 
- 80003ee:	0047a383          	lw	t2,4(a5)
+ 80003de:	0047a383          	lw	t2,4(a5)
         (0x3<<(GPIO_NUM2PIN(gpio_desp->pin_num)*4));
- 80003f2:	00c71733          	sll	a4,a4,a2
- 80003f6:	41f75613          	srai	a2,a4,0x1f
+ 80003e2:	00c71733          	sll	a4,a4,a2
+ 80003e6:	41f75613          	srai	a2,a4,0x1f
         *((volatile uint64_t*)(uint64_t)(GPIO_BASE + (GPIO_NUM2PORT(gpio_desp->pin_num)*0x400U))) |= 
- 80003fa:	00676833          	or	a6,a4,t1
- 80003fe:	007668b3          	or	a7,a2,t2
- 8000402:	0107a023          	sw	a6,0(a5)
- 8000406:	0117a223          	sw	a7,4(a5)
+ 80003ea:	00676833          	or	a6,a4,t1
+ 80003ee:	007668b3          	or	a7,a2,t2
+ 80003f2:	0107a023          	sw	a6,0(a5)
+ 80003f6:	0117a223          	sw	a7,4(a5)
     }
     if(gpio_desp->flag)
- 800040a:	00254703          	lbu	a4,2(a0)
- 800040e:	04077713          	andi	a4,a4,64
- 8000412:	c719                	beqz	a4,8000420 <gd32vf_gpio_set_direction+0x7c>
+ 80003fa:	00254703          	lbu	a4,2(a0)
+ 80003fe:	04077713          	andi	a4,a4,64
+ 8000402:	c719                	beqz	a4,8000410 <gd32vf_gpio_set_direction+0x7c>
     {
         *((volatile uint32_t*)(uint32_t)(GPIO_BASE + 0x0C + (GPIO_NUM2PORT(gpio_desp->pin_num)*0x400U))) |=
- 8000414:	47d0                	lw	a2,12(a5)
+ 8000404:	47d0                	lw	a2,12(a5)
         (1<<GPIO_NUM2PIN(gpio_desp->pin_num));
- 8000416:	4705                	li	a4,1
- 8000418:	00d71733          	sll	a4,a4,a3
+ 8000406:	4705                	li	a4,1
+ 8000408:	00d71733          	sll	a4,a4,a3
         *((volatile uint32_t*)(uint32_t)(GPIO_BASE + 0x0C + (GPIO_NUM2PORT(gpio_desp->pin_num)*0x400U))) |=
- 800041c:	8f51                	or	a4,a4,a2
- 800041e:	c7d8                	sw	a4,12(a5)
+ 800040c:	8f51                	or	a4,a4,a2
+ 800040e:	c7d8                	sw	a4,12(a5)
     }
 }
- 8000420:	8082                	ret
+ 8000410:	8082                	ret
 
-08000422 <gd32vf_gpio_set_value>:
+08000412 <gd32vf_gpio_set_value>:
 
 static void gd32vf_gpio_set_value(gpio_desp_t *gpio_desp, uint8_t value)
 {
     //clear 0CTL output (default)
     *((volatile uint32_t*)(uint32_t)(GPIO_BASE + 0x0C + (GPIO_NUM2PORT(gpio_desp->pin_num)*0x400U))) &= 
- 8000422:	00055603          	lhu	a2,0(a0)
- 8000426:	400116b7          	lui	a3,0x40011
- 800042a:	80c68693          	addi	a3,a3,-2036 # 4001080c <_sp+0x2000880c>
- 800042e:	00565793          	srli	a5,a2,0x5
- 8000432:	07aa                	slli	a5,a5,0xa
- 8000434:	97b6                	add	a5,a5,a3
- 8000436:	4388                	lw	a0,0(a5)
+ 8000412:	00055603          	lhu	a2,0(a0)
+ 8000416:	400116b7          	lui	a3,0x40011
+ 800041a:	80c68693          	addi	a3,a3,-2036 # 4001080c <_sp+0x2000880c>
+ 800041e:	00565793          	srli	a5,a2,0x5
+ 8000422:	07aa                	slli	a5,a5,0xa
+ 8000424:	97b6                	add	a5,a5,a3
+ 8000426:	4388                	lw	a0,0(a5)
     ~(1<<GPIO_NUM2PIN(gpio_desp->pin_num));
- 8000438:	4705                	li	a4,1
- 800043a:	00c71733          	sll	a4,a4,a2
- 800043e:	fff74693          	not	a3,a4
+ 8000428:	4705                	li	a4,1
+ 800042a:	00c71733          	sll	a4,a4,a2
+ 800042e:	fff74693          	not	a3,a4
     *((volatile uint32_t*)(uint32_t)(GPIO_BASE + 0x0C + (GPIO_NUM2PORT(gpio_desp->pin_num)*0x400U))) &= 
- 8000442:	8ee9                	and	a3,a3,a0
- 8000444:	c394                	sw	a3,0(a5)
+ 8000432:	8ee9                	and	a3,a3,a0
+ 8000434:	c394                	sw	a3,0(a5)
     //clear 0CTL output (default)
     if(value)
- 8000446:	c581                	beqz	a1,800044e <gd32vf_gpio_set_value+0x2c>
+ 8000436:	c581                	beqz	a1,800043e <gd32vf_gpio_set_value+0x2c>
     {
         *((volatile uint32_t*)(uint32_t)(GPIO_BASE + 0x0C + (GPIO_NUM2PORT(gpio_desp->pin_num)*0x400U))) |=
- 8000448:	4394                	lw	a3,0(a5)
- 800044a:	8f55                	or	a4,a4,a3
- 800044c:	c398                	sw	a4,0(a5)
+ 8000438:	4394                	lw	a3,0(a5)
+ 800043a:	8f55                	or	a4,a4,a3
+ 800043c:	c398                	sw	a4,0(a5)
         (1<<GPIO_NUM2PIN(gpio_desp->pin_num));
     }
 }
- 800044e:	8082                	ret
+ 800043e:	8082                	ret
 
-08000450 <gd32vf_gpio_get_value>:
+08000440 <gd32vf_gpio_get_value>:
 
 static uint32_t  gd32vf_gpio_get_value(gpio_desp_t *gpio_desp)
 {
     return *((volatile uint32_t*)(uint32_t)(GPIO_BASE + 0x0C + (GPIO_NUM2PORT(gpio_desp->pin_num)*0x400U)));
- 8000450:	00055783          	lhu	a5,0(a0)
- 8000454:	40011737          	lui	a4,0x40011
- 8000458:	80c70713          	addi	a4,a4,-2036 # 4001080c <_sp+0x2000880c>
- 800045c:	8395                	srli	a5,a5,0x5
- 800045e:	07aa                	slli	a5,a5,0xa
- 8000460:	97ba                	add	a5,a5,a4
- 8000462:	4388                	lw	a0,0(a5)
+ 8000440:	00055783          	lhu	a5,0(a0)
+ 8000444:	40011737          	lui	a4,0x40011
+ 8000448:	80c70713          	addi	a4,a4,-2036 # 4001080c <_sp+0x2000880c>
+ 800044c:	8395                	srli	a5,a5,0x5
+ 800044e:	07aa                	slli	a5,a5,0xa
+ 8000450:	97ba                	add	a5,a5,a4
+ 8000452:	4388                	lw	a0,0(a5)
 }
- 8000464:	8082                	ret
+ 8000454:	8082                	ret
 
-08000466 <gd32vf_gpio_put>:
+08000456 <gd32vf_gpio_put>:
 
 static void  gd32vf_gpio_put(gpio_desp_t *gpio_desp)
 {
     
 }
- 8000466:	8082                	ret
+ 8000456:	8082                	ret
 
-08000468 <gd32vf10x_udelay>:
+08000458 <gd32vf10x_udelay>:
 #include "delay-core.h"
 
 static void gd32vf10x_udelay(uint32_t us)
 {
- 8000468:	1141                	addi	sp,sp,-16
+ 8000458:	1141                	addi	sp,sp,-16
     volatile uint32_t i,j;
     for(i=0;i<us;i++)
- 800046a:	c402                	sw	zero,8(sp)
- 800046c:	47a2                	lw	a5,8(sp)
- 800046e:	02a7f363          	bgeu	a5,a0,8000494 <gd32vf10x_udelay+0x2c>
+ 800045a:	c402                	sw	zero,8(sp)
+ 800045c:	47a2                	lw	a5,8(sp)
+ 800045e:	02a7f363          	bgeu	a5,a0,8000484 <gd32vf10x_udelay+0x2c>
         for(j=0;j<10;j++);
- 8000472:	4725                	li	a4,9
- 8000474:	c602                	sw	zero,12(sp)
- 8000476:	47b2                	lw	a5,12(sp)
- 8000478:	00f76863          	bltu	a4,a5,8000488 <gd32vf10x_udelay+0x20>
- 800047c:	47b2                	lw	a5,12(sp)
- 800047e:	0785                	addi	a5,a5,1
- 8000480:	c63e                	sw	a5,12(sp)
- 8000482:	47b2                	lw	a5,12(sp)
- 8000484:	fef77ce3          	bgeu	a4,a5,800047c <gd32vf10x_udelay+0x14>
+ 8000462:	4725                	li	a4,9
+ 8000464:	c602                	sw	zero,12(sp)
+ 8000466:	47b2                	lw	a5,12(sp)
+ 8000468:	00f76863          	bltu	a4,a5,8000478 <gd32vf10x_udelay+0x20>
+ 800046c:	47b2                	lw	a5,12(sp)
+ 800046e:	0785                	addi	a5,a5,1
+ 8000470:	c63e                	sw	a5,12(sp)
+ 8000472:	47b2                	lw	a5,12(sp)
+ 8000474:	fef77ce3          	bgeu	a4,a5,800046c <gd32vf10x_udelay+0x14>
     for(i=0;i<us;i++)
- 8000488:	47a2                	lw	a5,8(sp)
- 800048a:	0785                	addi	a5,a5,1
- 800048c:	c43e                	sw	a5,8(sp)
- 800048e:	47a2                	lw	a5,8(sp)
- 8000490:	fea7e2e3          	bltu	a5,a0,8000474 <gd32vf10x_udelay+0xc>
+ 8000478:	47a2                	lw	a5,8(sp)
+ 800047a:	0785                	addi	a5,a5,1
+ 800047c:	c43e                	sw	a5,8(sp)
+ 800047e:	47a2                	lw	a5,8(sp)
+ 8000480:	fea7e2e3          	bltu	a5,a0,8000464 <gd32vf10x_udelay+0xc>
 }
- 8000494:	0141                	addi	sp,sp,16
- 8000496:	8082                	ret
+ 8000484:	0141                	addi	sp,sp,16
+ 8000486:	8082                	ret
 
-08000498 <gd32vf10x_mdelay>:
+08000488 <gd32vf10x_mdelay>:
 
 static void gd32vf10x_mdelay(uint32_t ms)
 {
     while(ms--)
- 8000498:	567d                	li	a2,-1
- 800049a:	157d                	addi	a0,a0,-1
+ 8000488:	567d                	li	a2,-1
+ 800048a:	157d                	addi	a0,a0,-1
     for(i=0;i<us;i++)
- 800049c:	3e700693          	li	a3,999
+ 800048c:	3e700693          	li	a3,999
         for(j=0;j<10;j++);
- 80004a0:	4725                	li	a4,9
+ 8000490:	4725                	li	a4,9
     while(ms--)
- 80004a2:	02c50c63          	beq	a0,a2,80004da <gd32vf10x_mdelay+0x42>
+ 8000492:	02c50c63          	beq	a0,a2,80004ca <gd32vf10x_mdelay+0x42>
 {
- 80004a6:	1141                	addi	sp,sp,-16
+ 8000496:	1141                	addi	sp,sp,-16
     for(i=0;i<us;i++)
- 80004a8:	c402                	sw	zero,8(sp)
- 80004aa:	47a2                	lw	a5,8(sp)
- 80004ac:	02f6e263          	bltu	a3,a5,80004d0 <gd32vf10x_mdelay+0x38>
+ 8000498:	c402                	sw	zero,8(sp)
+ 800049a:	47a2                	lw	a5,8(sp)
+ 800049c:	02f6e263          	bltu	a3,a5,80004c0 <gd32vf10x_mdelay+0x38>
         for(j=0;j<10;j++);
- 80004b0:	c602                	sw	zero,12(sp)
- 80004b2:	47b2                	lw	a5,12(sp)
- 80004b4:	00f76863          	bltu	a4,a5,80004c4 <gd32vf10x_mdelay+0x2c>
- 80004b8:	47b2                	lw	a5,12(sp)
- 80004ba:	0785                	addi	a5,a5,1
- 80004bc:	c63e                	sw	a5,12(sp)
- 80004be:	47b2                	lw	a5,12(sp)
- 80004c0:	fef77ce3          	bgeu	a4,a5,80004b8 <gd32vf10x_mdelay+0x20>
+ 80004a0:	c602                	sw	zero,12(sp)
+ 80004a2:	47b2                	lw	a5,12(sp)
+ 80004a4:	00f76863          	bltu	a4,a5,80004b4 <gd32vf10x_mdelay+0x2c>
+ 80004a8:	47b2                	lw	a5,12(sp)
+ 80004aa:	0785                	addi	a5,a5,1
+ 80004ac:	c63e                	sw	a5,12(sp)
+ 80004ae:	47b2                	lw	a5,12(sp)
+ 80004b0:	fef77ce3          	bgeu	a4,a5,80004a8 <gd32vf10x_mdelay+0x20>
     for(i=0;i<us;i++)
- 80004c4:	47a2                	lw	a5,8(sp)
- 80004c6:	0785                	addi	a5,a5,1
- 80004c8:	c43e                	sw	a5,8(sp)
- 80004ca:	47a2                	lw	a5,8(sp)
- 80004cc:	fef6f2e3          	bgeu	a3,a5,80004b0 <gd32vf10x_mdelay+0x18>
+ 80004b4:	47a2                	lw	a5,8(sp)
+ 80004b6:	0785                	addi	a5,a5,1
+ 80004b8:	c43e                	sw	a5,8(sp)
+ 80004ba:	47a2                	lw	a5,8(sp)
+ 80004bc:	fef6f2e3          	bgeu	a3,a5,80004a0 <gd32vf10x_mdelay+0x18>
     while(ms--)
- 80004d0:	157d                	addi	a0,a0,-1
- 80004d2:	fcc51be3          	bne	a0,a2,80004a8 <gd32vf10x_mdelay+0x10>
+ 80004c0:	157d                	addi	a0,a0,-1
+ 80004c2:	fcc51be3          	bne	a0,a2,8000498 <gd32vf10x_mdelay+0x10>
     {
         gd32vf10x_udelay(1000);
     }
 }
- 80004d6:	0141                	addi	sp,sp,16
- 80004d8:	8082                	ret
- 80004da:	8082                	ret
+ 80004c6:	0141                	addi	sp,sp,16
+ 80004c8:	8082                	ret
+ 80004ca:	8082                	ret
 
-080004dc <gd32vf10x_sdelay>:
+080004cc <gd32vf10x_sdelay>:
 
 static void gd32vf10x_sdelay(uint32_t s)
 {
     while(s--)
- 80004dc:	c515                	beqz	a0,8000508 <gd32vf10x_sdelay+0x2c>
+ 80004cc:	c515                	beqz	a0,80004f8 <gd32vf10x_sdelay+0x2c>
 {
- 80004de:	1141                	addi	sp,sp,-16
- 80004e0:	c422                	sw	s0,8(sp)
- 80004e2:	c226                	sw	s1,4(sp)
- 80004e4:	c606                	sw	ra,12(sp)
- 80004e6:	fff50413          	addi	s0,a0,-1
+ 80004ce:	1141                	addi	sp,sp,-16
+ 80004d0:	c422                	sw	s0,8(sp)
+ 80004d2:	c226                	sw	s1,4(sp)
+ 80004d4:	c606                	sw	ra,12(sp)
+ 80004d6:	fff50413          	addi	s0,a0,-1
     while(s--)
- 80004ea:	54fd                	li	s1,-1
- 80004ec:	147d                	addi	s0,s0,-1
+ 80004da:	54fd                	li	s1,-1
+ 80004dc:	147d                	addi	s0,s0,-1
     {
         gd32vf10x_mdelay(1000);
- 80004ee:	3e800513          	li	a0,1000
- 80004f2:	00000097          	auipc	ra,0x0
- 80004f6:	fa6080e7          	jalr	-90(ra) # 8000498 <gd32vf10x_mdelay>
+ 80004de:	3e800513          	li	a0,1000
+ 80004e2:	00000097          	auipc	ra,0x0
+ 80004e6:	fa6080e7          	jalr	-90(ra) # 8000488 <gd32vf10x_mdelay>
     while(s--)
- 80004fa:	fe9419e3          	bne	s0,s1,80004ec <gd32vf10x_sdelay+0x10>
+ 80004ea:	fe9419e3          	bne	s0,s1,80004dc <gd32vf10x_sdelay+0x10>
     }
 }
- 80004fe:	40b2                	lw	ra,12(sp)
- 8000500:	4422                	lw	s0,8(sp)
- 8000502:	4492                	lw	s1,4(sp)
- 8000504:	0141                	addi	sp,sp,16
- 8000506:	8082                	ret
- 8000508:	8082                	ret
+ 80004ee:	40b2                	lw	ra,12(sp)
+ 80004f0:	4422                	lw	s0,8(sp)
+ 80004f2:	4492                	lw	s1,4(sp)
+ 80004f4:	0141                	addi	sp,sp,16
+ 80004f6:	8082                	ret
+ 80004f8:	8082                	ret
 
-0800050a <gd32vf10x_uart_remove>:
+080004fa <gd32vf10x_uart_remove>:
 }
 
 static int8_t gd32vf10x_uart_remove(struct uart_device *dev)
 {
 
 }
- 800050a:	8082                	ret
+ 80004fa:	8082                	ret
 
-0800050c <gd32vf10x_uart_set_baud_rate>:
+080004fc <gd32vf10x_uart_set_baud_rate>:
 
 static int8_t gd32vf10x_uart_set_baud_rate(struct uart_device *dev, uint32_t baud_rate)
 {
 
 }
- 800050c:	8082                	ret
+ 80004fc:	8082                	ret
 
-0800050e <gd32vf10x_uart_poll_read>:
+080004fe <gd32vf10x_uart_poll_read>:
 
 static int32_t gd32vf10x_uart_poll_read(struct uart_device *dev, uint8_t *buffer, uint32_t len)
 {
 
 }
- 800050e:	8082                	ret
+ 80004fe:	8082                	ret
 
-08000510 <gd32vf10x_uart_set_handler>:
+08000500 <gd32vf10x_uart_set_handler>:
     
 }
 
-static int8_t gd32vf10x_uart_set_handler(struct uart_device *dev, void (*handler)(void *data))
+static int8_t gd32vf10x_uart_set_handler(struct uart_device *dev, void (*handler)(void))
 {
-    dev->handler = handler;
- 8000510:	c54c                	sw	a1,12(a0)
+    uart_handler[dev->uart] = handler;
+ 8000500:	00054783          	lbu	a5,0(a0)
+ 8000504:	00279713          	slli	a4,a5,0x2
+ 8000508:	200007b7          	lui	a5,0x20000
+ 800050c:	0e878793          	addi	a5,a5,232 # 200000e8 <uart_handler>
+ 8000510:	97ba                	add	a5,a5,a4
+ 8000512:	c38c                	sw	a1,0(a5)
 }
- 8000512:	853e                	mv	a0,a5
  8000514:	8082                	ret
 
 08000516 <gd32vf10x_uart_probe>:
@@ -849,11 +850,11 @@ static int8_t gd32vf10x_uart_set_handler(struct uart_device *dev, void (*handler
  8000520:	c606                	sw	ra,12(sp)
     rcu_periph_clock_enable(RCU_USART0);  //打开USART0时钟
  8000522:	00000097          	auipc	ra,0x0
- 8000526:	220080e7          	jalr	544(ra) # 8000742 <rcu_periph_clock_enable>
+ 8000526:	222080e7          	jalr	546(ra) # 8000744 <rcu_periph_clock_enable>
     rcu_periph_clock_enable(RCU_GPIOA);   //打开GPIOA时钟
  800052a:	60200513          	li	a0,1538
  800052e:	00000097          	auipc	ra,0x0
- 8000532:	214080e7          	jalr	532(ra) # 8000742 <rcu_periph_clock_enable>
+ 8000532:	216080e7          	jalr	534(ra) # 8000744 <rcu_periph_clock_enable>
     switch(dev->uart)
  8000536:	00044783          	lbu	a5,0(s0)
  800053a:	c395                	beqz	a5,800055e <gd32vf10x_uart_probe+0x48>
@@ -878,443 +879,443 @@ static int8_t gd32vf10x_uart_set_handler(struct uart_device *dev, void (*handler
             RCU_APB2EN |= (1<<14); //enable uart0 clock
  800055e:	40021737          	lui	a4,0x40021
  8000562:	4f1c                	lw	a5,24(a4)
- 8000564:	6691                	lui	a3,0x4
 }
- 8000566:	40b2                	lw	ra,12(sp)
+ 8000564:	40b2                	lw	ra,12(sp)
+ 8000566:	4422                	lw	s0,8(sp)
             RCU_APB2EN |= (1<<14); //enable uart0 clock
- 8000568:	8fd5                	or	a5,a5,a3
- 800056a:	cf1c                	sw	a5,24(a4)
-    dev->nvic_addr = nvic_addr[dev->uart]; //set nvic addr
- 800056c:	00044783          	lbu	a5,0(s0)
- 8000570:	4501                	li	a0,0
- 8000572:	00279713          	slli	a4,a5,0x2
- 8000576:	080007b7          	lui	a5,0x8000
- 800057a:	28078793          	addi	a5,a5,640 # 8000280 <nvic_addr>
- 800057e:	97ba                	add	a5,a5,a4
- 8000580:	439c                	lw	a5,0(a5)
- 8000582:	c81c                	sw	a5,16(s0)
+ 8000568:	6691                	lui	a3,0x4
+ 800056a:	8fd5                	or	a5,a5,a3
+ 800056c:	cf1c                	sw	a5,24(a4)
+ 800056e:	4501                	li	a0,0
 }
- 8000584:	4422                	lw	s0,8(sp)
- 8000586:	0141                	addi	sp,sp,16
- 8000588:	8082                	ret
+ 8000570:	0141                	addi	sp,sp,16
+ 8000572:	8082                	ret
 
-0800058a <gd32vf10x_uart_poll_write>:
- 800058a:	4501                	li	a0,0
- 800058c:	8082                	ret
+08000574 <gd32vf10x_uart_poll_write>:
+ 8000574:	4501                	li	a0,0
+ 8000576:	8082                	ret
 
-0800058e <USART0_IRQHandler>:
-}
- 800058e:	8082                	ret
+08000578 <USART0_IRQHandler>:
+    (*uart_handler[0])();
+ 8000578:	200007b7          	lui	a5,0x20000
+ 800057c:	0e87a303          	lw	t1,232(a5) # 200000e8 <uart_handler>
+ 8000580:	8302                	jr	t1
 
-08000590 <USART1_IRQHandler>:
- 8000590:	8082                	ret
+08000582 <USART1_IRQHandler>:
+    (*uart_handler[1])();
+ 8000582:	200007b7          	lui	a5,0x20000
+ 8000586:	0ec7a303          	lw	t1,236(a5) # 200000ec <uart_handler+0x4>
+ 800058a:	8302                	jr	t1
 
-08000592 <USART2_IRQHandler>:
- 8000592:	8082                	ret
+0800058c <USART2_IRQHandler>:
+    (*uart_handler[2])();
+ 800058c:	200007b7          	lui	a5,0x20000
+ 8000590:	0f07a303          	lw	t1,240(a5) # 200000f0 <uart_handler+0x8>
+ 8000594:	8302                	jr	t1
 
-08000594 <gd32vf10x_i2c_probe>:
+08000596 <gd32vf10x_i2c_probe>:
 
 
 static int8_t gd32vf10x_i2c_probe(struct i2c_client *client)
 {
     
 }
- 8000594:	8082                	ret
+ 8000596:	8082                	ret
 
-08000596 <gd32vf10x_i2c_write>:
+08000598 <gd32vf10x_i2c_write>:
     
 }
 static uint32_t gd32vf10x_i2c_write(struct i2c_client *client, uint8_t *buffer, uint32_t len)
 {
 
 }
- 8000596:	8082                	ret
+ 8000598:	8082                	ret
 
-08000598 <gd32vf10x_i2c_cmd_write>:
+0800059a <gd32vf10x_i2c_cmd_write>:
 }
 
 static uint32_t gd32vf10x_i2c_cmd_write(struct i2c_client *client, uint8_t *cmd, uint8_t *buffer,uint32_t cmd_size,uint32_t len)
 {
 
 }
- 8000598:	8082                	ret
+ 800059a:	8082                	ret
 
-0800059a <gd32vf10x_i2c_set_speed>:
+0800059c <gd32vf10x_i2c_set_speed>:
 }
 
 static int8_t gd32vf10x_i2c_set_speed(struct i2c_client *client, uint32_t speed_hz)
 {
 
 }
- 800059a:	8082                	ret
+ 800059c:	8082                	ret
 
-0800059c <gd32vf10x_i2c_cmd_read>:
- 800059c:	4501                	li	a0,0
- 800059e:	8082                	ret
+0800059e <gd32vf10x_i2c_cmd_read>:
+ 800059e:	4501                	li	a0,0
+ 80005a0:	8082                	ret
 
-080005a0 <gd32vf10x_i2c_read>:
- 80005a0:	4501                	li	a0,0
- 80005a2:	8082                	ret
+080005a2 <gd32vf10x_i2c_read>:
+ 80005a2:	4501                	li	a0,0
+ 80005a4:	8082                	ret
 
-080005a4 <gd32vf10x_i2c_remove>:
- 80005a4:	4501                	li	a0,0
- 80005a6:	8082                	ret
+080005a6 <gd32vf10x_i2c_remove>:
+ 80005a6:	4501                	li	a0,0
+ 80005a8:	8082                	ret
 
-080005a8 <handle_nmi>:
+080005aa <handle_nmi>:
 __attribute__((weak)) unsigned int handle_nmi()
 {
   //write(1, "nmi\n", 5);
   //_exit(1);
   return 0;
 }
- 80005a8:	4501                	li	a0,0
- 80005aa:	8082                	ret
+ 80005aa:	4501                	li	a0,0
+ 80005ac:	8082                	ret
 
-080005ac <handle_trap>:
+080005ae <handle_trap>:
 
 
 __attribute__((weak)) unsigned int handle_trap(unsigned int mcause, unsigned int sp)
 {
- 80005ac:	1141                	addi	sp,sp,-16
- 80005ae:	c606                	sw	ra,12(sp)
+ 80005ae:	1141                	addi	sp,sp,-16
+ 80005b0:	c606                	sw	ra,12(sp)
   //if(mcause == 0xFFF) {
       handle_nmi();
- 80005b0:	00000097          	auipc	ra,0x0
- 80005b4:	ff8080e7          	jalr	-8(ra) # 80005a8 <handle_nmi>
+ 80005b2:	00000097          	auipc	ra,0x0
+ 80005b6:	ff8080e7          	jalr	-8(ra) # 80005aa <handle_nmi>
   //printf("In trap handler, the mcause is %d\n", mcause);
   //printf("In trap handler, the mepc is 0x%x\n", read_csr(mepc));
   //printf("In trap handler, the mtval is 0x%x\n", read_csr(mbadaddr));
   //_exit(mcause);
   return 0;
 }
- 80005b8:	40b2                	lw	ra,12(sp)
- 80005ba:	4501                	li	a0,0
- 80005bc:	0141                	addi	sp,sp,16
- 80005be:	8082                	ret
+ 80005ba:	40b2                	lw	ra,12(sp)
+ 80005bc:	4501                	li	a0,0
+ 80005be:	0141                	addi	sp,sp,16
+ 80005c0:	8082                	ret
 
-080005c0 <SystemInit>:
+080005c2 <SystemInit>:
 */
 void SystemInit(void)
 {
     /* reset the RCC clock configuration to the default reset state */
     /* enable IRC8M */
     RCU_CTL |= RCU_CTL_IRC8MEN;
- 80005c0:	400217b7          	lui	a5,0x40021
- 80005c4:	4398                	lw	a4,0(a5)
+ 80005c2:	400217b7          	lui	a5,0x40021
+ 80005c6:	4398                	lw	a4,0(a5)
     
     /* reset SCS, AHBPSC, APB1PSC, APB2PSC, ADCPSC, CKOUT0SEL bits */
     RCU_CFG0 &= ~(RCU_CFG0_SCS | RCU_CFG0_AHBPSC | RCU_CFG0_APB1PSC | RCU_CFG0_APB2PSC |
- 80005c6:	e0ff06b7          	lui	a3,0xe0ff0
- 80005ca:	06b1                	addi	a3,a3,12
+ 80005c8:	e0ff06b7          	lui	a3,0xe0ff0
+ 80005cc:	06b1                	addi	a3,a3,12
     RCU_CTL |= RCU_CTL_IRC8MEN;
- 80005cc:	00176713          	ori	a4,a4,1
- 80005d0:	c398                	sw	a4,0(a5)
+ 80005ce:	00176713          	ori	a4,a4,1
+ 80005d2:	c398                	sw	a4,0(a5)
     RCU_CFG0 &= ~(RCU_CFG0_SCS | RCU_CFG0_AHBPSC | RCU_CFG0_APB1PSC | RCU_CFG0_APB2PSC |
- 80005d2:	43d8                	lw	a4,4(a5)
+ 80005d4:	43d8                	lw	a4,4(a5)
     RCU_CFG0 &= ~(RCU_CFG0_PLLSEL | RCU_CFG0_PREDV0_LSB | RCU_CFG0_PLLMF |
                   RCU_CFG0_USBFSPSC | RCU_CFG0_PLLMF_4);
     RCU_CFG1 = 0x00000000U;
 
     /* Reset HXTALEN, CKMEN, PLLEN, PLL1EN and PLL2EN bits */
     RCU_CTL &= ~(RCU_CTL_PLLEN | RCU_CTL_PLL1EN | RCU_CTL_PLL2EN | RCU_CTL_CKMEN | RCU_CTL_HXTALEN);
- 80005d4:	eaf70637          	lui	a2,0xeaf70
- 80005d8:	167d                	addi	a2,a2,-1
+ 80005d6:	eaf70637          	lui	a2,0xeaf70
+ 80005da:	167d                	addi	a2,a2,-1
     RCU_CFG0 &= ~(RCU_CFG0_SCS | RCU_CFG0_AHBPSC | RCU_CFG0_APB1PSC | RCU_CFG0_APB2PSC |
- 80005da:	8f75                	and	a4,a4,a3
- 80005dc:	c3d8                	sw	a4,4(a5)
+ 80005dc:	8f75                	and	a4,a4,a3
+ 80005de:	c3d8                	sw	a4,4(a5)
     RCU_CTL &= ~(RCU_CTL_HXTALEN | RCU_CTL_CKMEN | RCU_CTL_PLLEN);
- 80005de:	4398                	lw	a4,0(a5)
- 80005e0:	fef706b7          	lui	a3,0xfef70
- 80005e4:	16fd                	addi	a3,a3,-1
- 80005e6:	8f75                	and	a4,a4,a3
- 80005e8:	c398                	sw	a4,0(a5)
+ 80005e0:	4398                	lw	a4,0(a5)
+ 80005e2:	fef706b7          	lui	a3,0xfef70
+ 80005e6:	16fd                	addi	a3,a3,-1
+ 80005e8:	8f75                	and	a4,a4,a3
+ 80005ea:	c398                	sw	a4,0(a5)
     RCU_CTL &= ~(RCU_CTL_HXTALBPS);
- 80005ea:	4398                	lw	a4,0(a5)
- 80005ec:	fffc06b7          	lui	a3,0xfffc0
- 80005f0:	16fd                	addi	a3,a3,-1
- 80005f2:	8f75                	and	a4,a4,a3
- 80005f4:	c398                	sw	a4,0(a5)
+ 80005ec:	4398                	lw	a4,0(a5)
+ 80005ee:	fffc06b7          	lui	a3,0xfffc0
+ 80005f2:	16fd                	addi	a3,a3,-1
+ 80005f4:	8f75                	and	a4,a4,a3
+ 80005f6:	c398                	sw	a4,0(a5)
     RCU_CFG0 &= ~(RCU_CFG0_PLLSEL | RCU_CFG0_PREDV0_LSB | RCU_CFG0_PLLMF |
- 80005f6:	43d8                	lw	a4,4(a5)
- 80005f8:	df0106b7          	lui	a3,0xdf010
- 80005fc:	16fd                	addi	a3,a3,-1
- 80005fe:	8f75                	and	a4,a4,a3
- 8000600:	c3d8                	sw	a4,4(a5)
+ 80005f8:	43d8                	lw	a4,4(a5)
+ 80005fa:	df0106b7          	lui	a3,0xdf010
+ 80005fe:	16fd                	addi	a3,a3,-1
+ 8000600:	8f75                	and	a4,a4,a3
+ 8000602:	c3d8                	sw	a4,4(a5)
     RCU_CFG1 = 0x00000000U;
- 8000602:	0207a623          	sw	zero,44(a5) # 4002102c <_sp+0x2001902c>
+ 8000604:	0207a623          	sw	zero,44(a5) # 4002102c <_sp+0x2001902c>
     RCU_CTL &= ~(RCU_CTL_PLLEN | RCU_CTL_PLL1EN | RCU_CTL_PLL2EN | RCU_CTL_CKMEN | RCU_CTL_HXTALEN);
- 8000606:	4394                	lw	a3,0(a5)
+ 8000608:	4394                	lw	a3,0(a5)
     /* disable all interrupts */
     RCU_INT = 0x00FF0000U;
- 8000608:	00ff0737          	lui	a4,0xff0
+ 800060a:	00ff0737          	lui	a4,0xff0
 {
     uint32_t timeout   = 0U;
     uint32_t stab_flag = 0U;
 
     /* enable HXTAL */
     RCU_CTL |= RCU_CTL_HXTALEN;
- 800060c:	65c1                	lui	a1,0x10
+ 800060e:	65c1                	lui	a1,0x10
     RCU_CTL &= ~(RCU_CTL_PLLEN | RCU_CTL_PLL1EN | RCU_CTL_PLL2EN | RCU_CTL_CKMEN | RCU_CTL_HXTALEN);
- 800060e:	8ef1                	and	a3,a3,a2
- 8000610:	c394                	sw	a3,0(a5)
+ 8000610:	8ef1                	and	a3,a3,a2
+ 8000612:	c394                	sw	a3,0(a5)
     RCU_INT = 0x00FF0000U;
- 8000612:	c798                	sw	a4,8(a5)
+ 8000614:	c798                	sw	a4,8(a5)
     RCU_CTL |= RCU_CTL_HXTALEN;
- 8000614:	4398                	lw	a4,0(a5)
- 8000616:	fff58693          	addi	a3,a1,-1 # ffff <__stack_size+0xf7ff>
+ 8000616:	4398                	lw	a4,0(a5)
+ 8000618:	fff58693          	addi	a3,a1,-1 # ffff <__stack_size+0xf7ff>
 
     /* wait until HXTAL is stable or the startup time is longer than HXTAL_STARTUP_TIMEOUT */
     do{
         timeout++;
         stab_flag = (RCU_CTL & RCU_CTL_HXTALSTB);
- 800061a:	40021637          	lui	a2,0x40021
+ 800061c:	40021637          	lui	a2,0x40021
     RCU_CTL |= RCU_CTL_HXTALEN;
- 800061e:	8f4d                	or	a4,a4,a1
- 8000620:	c398                	sw	a4,0(a5)
- 8000622:	a011                	j	8000626 <SystemInit+0x66>
+ 8000620:	8f4d                	or	a4,a4,a1
+ 8000622:	c398                	sw	a4,0(a5)
+ 8000624:	a011                	j	8000628 <SystemInit+0x66>
     }while((0U == stab_flag) && (HXTAL_STARTUP_TIMEOUT != timeout));
- 8000624:	c699                	beqz	a3,8000632 <SystemInit+0x72>
+ 8000626:	c699                	beqz	a3,8000634 <SystemInit+0x72>
         stab_flag = (RCU_CTL & RCU_CTL_HXTALSTB);
- 8000626:	421c                	lw	a5,0(a2)
- 8000628:	16fd                	addi	a3,a3,-1
+ 8000628:	421c                	lw	a5,0(a2)
+ 800062a:	16fd                	addi	a3,a3,-1
     }while((0U == stab_flag) && (HXTAL_STARTUP_TIMEOUT != timeout));
- 800062a:	00e79713          	slli	a4,a5,0xe
- 800062e:	fe075be3          	bgez	a4,8000624 <SystemInit+0x64>
+ 800062c:	00e79713          	slli	a4,a5,0xe
+ 8000630:	fe075be3          	bgez	a4,8000626 <SystemInit+0x64>
 
     /* if fail */
     if(0U == (RCU_CTL & RCU_CTL_HXTALSTB)){
- 8000632:	400217b7          	lui	a5,0x40021
- 8000636:	4398                	lw	a4,0(a5)
- 8000638:	00e71693          	slli	a3,a4,0xe
- 800063c:	0a06d063          	bgez	a3,80006dc <SystemInit+0x11c>
+ 8000634:	400217b7          	lui	a5,0x40021
+ 8000638:	4398                	lw	a4,0(a5)
+ 800063a:	00e71693          	slli	a3,a4,0xe
+ 800063e:	0a06d063          	bgez	a3,80006de <SystemInit+0x11c>
         }
     }
 
     /* HXTAL is stable */
     /* AHB = SYSCLK */
     RCU_CFG0 |= RCU_AHB_CKSYS_DIV1;
- 8000640:	43d8                	lw	a4,4(a5)
+ 8000642:	43d8                	lw	a4,4(a5)
     RCU_CFG0 |= RCU_APB2_CKAHB_DIV1;
     /* APB1 = AHB/2 */
     RCU_CFG0 |= RCU_APB1_CKAHB_DIV2;
 
     /* CK_PLL = (CK_PREDIV0) * 27 = 108 MHz */ 
     RCU_CFG0 &= ~(RCU_CFG0_PLLMF | RCU_CFG0_PLLMF_4);
- 8000642:	dfc40637          	lui	a2,0xdfc40
- 8000646:	167d                	addi	a2,a2,-1
+ 8000644:	dfc40637          	lui	a2,0xdfc40
+ 8000648:	167d                	addi	a2,a2,-1
     RCU_CFG0 |= RCU_AHB_CKSYS_DIV1;
- 8000648:	c3d8                	sw	a4,4(a5)
+ 800064a:	c3d8                	sw	a4,4(a5)
     RCU_CFG0 |= RCU_APB2_CKAHB_DIV1;
- 800064a:	43d8                	lw	a4,4(a5)
+ 800064c:	43d8                	lw	a4,4(a5)
 		RCU_CFG1 |= (RCU_PREDV0SRC_HXTAL | RCU_PREDV0_DIV2 | RCU_PREDV1_DIV2 | RCU_PLL1_MUL20 | RCU_PLL2_MUL20);
 
 		/* enable PLL1 */
 		RCU_CTL |= RCU_CTL_PLL1EN;
 		/* wait till PLL1 is ready */
 		while(0U == (RCU_CTL & RCU_CTL_PLL1STB)){
- 800064c:	400216b7          	lui	a3,0x40021
+ 800064e:	400216b7          	lui	a3,0x40021
     RCU_CFG0 |= RCU_APB2_CKAHB_DIV1;
- 8000650:	c3d8                	sw	a4,4(a5)
+ 8000652:	c3d8                	sw	a4,4(a5)
     RCU_CFG0 |= RCU_APB1_CKAHB_DIV2;
- 8000652:	43d8                	lw	a4,4(a5)
- 8000654:	40076713          	ori	a4,a4,1024
- 8000658:	c3d8                	sw	a4,4(a5)
+ 8000654:	43d8                	lw	a4,4(a5)
+ 8000656:	40076713          	ori	a4,a4,1024
+ 800065a:	c3d8                	sw	a4,4(a5)
     RCU_CFG0 &= ~(RCU_CFG0_PLLMF | RCU_CFG0_PLLMF_4);
- 800065a:	43d8                	lw	a4,4(a5)
- 800065c:	8f71                	and	a4,a4,a2
- 800065e:	c3d8                	sw	a4,4(a5)
+ 800065c:	43d8                	lw	a4,4(a5)
+ 800065e:	8f71                	and	a4,a4,a2
+ 8000660:	c3d8                	sw	a4,4(a5)
     RCU_CFG0 |= (RCU_PLLSRC_HXTAL | RCU_PLL_MUL27);
- 8000660:	43d8                	lw	a4,4(a5)
- 8000662:	20290637          	lui	a2,0x20290
- 8000666:	8f51                	or	a4,a4,a2
- 8000668:	c3d8                	sw	a4,4(a5)
+ 8000662:	43d8                	lw	a4,4(a5)
+ 8000664:	20290637          	lui	a2,0x20290
+ 8000668:	8f51                	or	a4,a4,a2
+ 800066a:	c3d8                	sw	a4,4(a5)
 		RCU_CFG1 &= ~(RCU_CFG1_PREDV0SEL | RCU_CFG1_PREDV1 | RCU_CFG1_PLL1MF | RCU_CFG1_PREDV0);
- 800066a:	57d8                	lw	a4,44(a5)
- 800066c:	763d                	lui	a2,0xfffef
- 800066e:	8f71                	and	a4,a4,a2
- 8000670:	d7d8                	sw	a4,44(a5)
+ 800066c:	57d8                	lw	a4,44(a5)
+ 800066e:	763d                	lui	a2,0xfffef
+ 8000670:	8f71                	and	a4,a4,a2
+ 8000672:	d7d8                	sw	a4,44(a5)
 		RCU_CFG1 |= (RCU_PREDV0SRC_HXTAL | RCU_PREDV0_DIV2 | RCU_PREDV1_DIV2 | RCU_PLL1_MUL20 | RCU_PLL2_MUL20);
- 8000672:	57d8                	lw	a4,44(a5)
- 8000674:	6641                	lui	a2,0x10
- 8000676:	f1160613          	addi	a2,a2,-239 # ff11 <__stack_size+0xf711>
- 800067a:	8f51                	or	a4,a4,a2
- 800067c:	d7d8                	sw	a4,44(a5)
+ 8000674:	57d8                	lw	a4,44(a5)
+ 8000676:	6641                	lui	a2,0x10
+ 8000678:	f1160613          	addi	a2,a2,-239 # ff11 <__stack_size+0xf711>
+ 800067c:	8f51                	or	a4,a4,a2
+ 800067e:	d7d8                	sw	a4,44(a5)
 		RCU_CTL |= RCU_CTL_PLL1EN;
- 800067e:	4398                	lw	a4,0(a5)
- 8000680:	04000637          	lui	a2,0x4000
- 8000684:	8f51                	or	a4,a4,a2
- 8000686:	c398                	sw	a4,0(a5)
+ 8000680:	4398                	lw	a4,0(a5)
+ 8000682:	04000637          	lui	a2,0x4000
+ 8000686:	8f51                	or	a4,a4,a2
+ 8000688:	c398                	sw	a4,0(a5)
 		while(0U == (RCU_CTL & RCU_CTL_PLL1STB)){
- 8000688:	429c                	lw	a5,0(a3)
- 800068a:	00479713          	slli	a4,a5,0x4
- 800068e:	fe075de3          	bgez	a4,8000688 <SystemInit+0xc8>
+ 800068a:	429c                	lw	a5,0(a3)
+ 800068c:	00479713          	slli	a4,a5,0x4
+ 8000690:	fe075de3          	bgez	a4,800068a <SystemInit+0xc8>
 		}
 
 		/* enable PLL2 */
 		RCU_CTL |= RCU_CTL_PLL2EN;
- 8000692:	429c                	lw	a5,0(a3)
- 8000694:	10000637          	lui	a2,0x10000
+ 8000694:	429c                	lw	a5,0(a3)
+ 8000696:	10000637          	lui	a2,0x10000
 		/* wait till PLL1 is ready */
 		while(0U == (RCU_CTL & RCU_CTL_PLL2STB)){
- 8000698:	40021737          	lui	a4,0x40021
+ 800069a:	40021737          	lui	a4,0x40021
 		RCU_CTL |= RCU_CTL_PLL2EN;
- 800069c:	8fd1                	or	a5,a5,a2
- 800069e:	c29c                	sw	a5,0(a3)
+ 800069e:	8fd1                	or	a5,a5,a2
+ 80006a0:	c29c                	sw	a5,0(a3)
 		while(0U == (RCU_CTL & RCU_CTL_PLL2STB)){
- 80006a0:	431c                	lw	a5,0(a4)
- 80006a2:	00279693          	slli	a3,a5,0x2
- 80006a6:	fe06dde3          	bgez	a3,80006a0 <SystemInit+0xe0>
+ 80006a2:	431c                	lw	a5,0(a4)
+ 80006a4:	00279693          	slli	a3,a5,0x2
+ 80006a8:	fe06dde3          	bgez	a3,80006a2 <SystemInit+0xe0>
 		}
 
     }
     /* enable PLL */
     RCU_CTL |= RCU_CTL_PLLEN;
- 80006aa:	4314                	lw	a3,0(a4)
- 80006ac:	01000637          	lui	a2,0x1000
+ 80006ac:	4314                	lw	a3,0(a4)
+ 80006ae:	01000637          	lui	a2,0x1000
 
     /* wait until PLL is stable */
     while(0U == (RCU_CTL & RCU_CTL_PLLSTB)){
- 80006b0:	400217b7          	lui	a5,0x40021
+ 80006b2:	400217b7          	lui	a5,0x40021
     RCU_CTL |= RCU_CTL_PLLEN;
- 80006b4:	8ed1                	or	a3,a3,a2
- 80006b6:	c314                	sw	a3,0(a4)
+ 80006b6:	8ed1                	or	a3,a3,a2
+ 80006b8:	c314                	sw	a3,0(a4)
     while(0U == (RCU_CTL & RCU_CTL_PLLSTB)){
- 80006b8:	4398                	lw	a4,0(a5)
- 80006ba:	00671693          	slli	a3,a4,0x6
- 80006be:	fe06dde3          	bgez	a3,80006b8 <SystemInit+0xf8>
+ 80006ba:	4398                	lw	a4,0(a5)
+ 80006bc:	00671693          	slli	a3,a4,0x6
+ 80006c0:	fe06dde3          	bgez	a3,80006ba <SystemInit+0xf8>
     }
 
     /* select PLL as system clock */
     RCU_CFG0 &= ~RCU_CFG0_SCS;
- 80006c2:	43d8                	lw	a4,4(a5)
+ 80006c4:	43d8                	lw	a4,4(a5)
     RCU_CFG0 |= RCU_CKSYSSRC_PLL;
 
     /* wait until PLL is selected as system clock */
     while(0U == (RCU_CFG0 & RCU_SCSS_PLL)){
- 80006c4:	400216b7          	lui	a3,0x40021
+ 80006c6:	400216b7          	lui	a3,0x40021
     RCU_CFG0 &= ~RCU_CFG0_SCS;
- 80006c8:	9b71                	andi	a4,a4,-4
- 80006ca:	c3d8                	sw	a4,4(a5)
+ 80006ca:	9b71                	andi	a4,a4,-4
+ 80006cc:	c3d8                	sw	a4,4(a5)
     RCU_CFG0 |= RCU_CKSYSSRC_PLL;
- 80006cc:	43d8                	lw	a4,4(a5)
- 80006ce:	00276713          	ori	a4,a4,2
- 80006d2:	c3d8                	sw	a4,4(a5)
+ 80006ce:	43d8                	lw	a4,4(a5)
+ 80006d0:	00276713          	ori	a4,a4,2
+ 80006d4:	c3d8                	sw	a4,4(a5)
     while(0U == (RCU_CFG0 & RCU_SCSS_PLL)){
- 80006d4:	42dc                	lw	a5,4(a3)
- 80006d6:	8ba1                	andi	a5,a5,8
- 80006d8:	dff5                	beqz	a5,80006d4 <SystemInit+0x114>
+ 80006d6:	42dc                	lw	a5,4(a3)
+ 80006d8:	8ba1                	andi	a5,a5,8
+ 80006da:	dff5                	beqz	a5,80006d6 <SystemInit+0x114>
 }
- 80006da:	8082                	ret
+ 80006dc:	8082                	ret
         }
- 80006dc:	a001                	j	80006dc <SystemInit+0x11c>
+ 80006de:	a001                	j	80006de <SystemInit+0x11c>
 
-080006de <eclic_init>:
+080006e0 <eclic_init>:
 {
 
   typedef volatile unsigned int vuint32_t;
 
   //clear cfg register 
   *(volatile unsigned char*)(ECLIC_ADDR_BASE+ECLIC_CFG_OFFSET)=0;
- 80006de:	d2000737          	lui	a4,0xd2000
- 80006e2:	00070023          	sb	zero,0(a4) # d2000000 <_sp+0xb1ff8000>
+ 80006e0:	d2000737          	lui	a4,0xd2000
+ 80006e4:	00070023          	sb	zero,0(a4) # d2000000 <_sp+0xb1ff8000>
 
   //clear all IP/IE/ATTR/CTRL bits for all interrupt sources
   vuint32_t * ptr;
 
   vuint32_t * base = (vuint32_t*)(ECLIC_ADDR_BASE + ECLIC_INT_IP_OFFSET);
   vuint32_t * upper = (vuint32_t*)(base + num_irq*4);
- 80006e6:	0512                	slli	a0,a0,0x4
- 80006e8:	d20017b7          	lui	a5,0xd2001
+ 80006e8:	0512                	slli	a0,a0,0x4
+ 80006ea:	d20017b7          	lui	a5,0xd2001
   *(volatile unsigned char*)(ECLIC_ADDR_BASE+ECLIC_MTH_OFFSET)=0;
- 80006ec:	000705a3          	sb	zero,11(a4)
+ 80006ee:	000705a3          	sb	zero,11(a4)
   vuint32_t * upper = (vuint32_t*)(base + num_irq*4);
- 80006f0:	953e                	add	a0,a0,a5
+ 80006f2:	953e                	add	a0,a0,a5
 
   for (ptr = base; ptr < upper; ptr=ptr+4){
- 80006f2:	00a7f763          	bgeu	a5,a0,8000700 <eclic_init+0x22>
+ 80006f4:	00a7f763          	bgeu	a5,a0,8000702 <eclic_init+0x22>
     *ptr = 0;
- 80006f6:	0007a023          	sw	zero,0(a5) # d2001000 <_sp+0xb1ff9000>
+ 80006f8:	0007a023          	sw	zero,0(a5) # d2001000 <_sp+0xb1ff9000>
   for (ptr = base; ptr < upper; ptr=ptr+4){
- 80006fa:	07c1                	addi	a5,a5,16
- 80006fc:	fea7ede3          	bltu	a5,a0,80006f6 <eclic_init+0x18>
+ 80006fc:	07c1                	addi	a5,a5,16
+ 80006fe:	fea7ede3          	bltu	a5,a0,80006f8 <eclic_init+0x18>
   }
 }
- 8000700:	8082                	ret
+ 8000702:	8082                	ret
 
-08000702 <eclic_mode_enable>:
+08000704 <eclic_mode_enable>:
 
 	return priority;
 }
 
 void eclic_mode_enable() {
   unsigned int mtvec_value = read_csr(mtvec);
- 8000702:	305027f3          	csrr	a5,mtvec
+ 8000704:	305027f3          	csrr	a5,mtvec
   mtvec_value = mtvec_value & 0xFFFFFFC0;
- 8000706:	fc07f793          	andi	a5,a5,-64
+ 8000708:	fc07f793          	andi	a5,a5,-64
   mtvec_value = mtvec_value | 0x00000003;
- 800070a:	0037e793          	ori	a5,a5,3
+ 800070c:	0037e793          	ori	a5,a5,3
   write_csr(mtvec,mtvec_value);
- 800070e:	30579073          	csrw	mtvec,a5
+ 8000710:	30579073          	csrw	mtvec,a5
 }
- 8000712:	8082                	ret
+ 8000714:	8082                	ret
 
-08000714 <_init>:
+08000716 <_init>:
 #include "riscv_encoding.h"
 #include "n200_func.h"
 
 extern unsigned int disable_mcycle_minstret();
 void _init()
 {
- 8000714:	1141                	addi	sp,sp,-16
- 8000716:	c606                	sw	ra,12(sp)
+ 8000716:	1141                	addi	sp,sp,-16
+ 8000718:	c606                	sw	ra,12(sp)
 	SystemInit();
- 8000718:	00000097          	auipc	ra,0x0
- 800071c:	ea8080e7          	jalr	-344(ra) # 80005c0 <SystemInit>
+ 800071a:	00000097          	auipc	ra,0x0
+ 800071e:	ea8080e7          	jalr	-344(ra) # 80005c2 <SystemInit>
 
 	//ECLIC init
 	eclic_init(ECLIC_NUM_INTERRUPTS);
- 8000720:	05700513          	li	a0,87
- 8000724:	00000097          	auipc	ra,0x0
- 8000728:	fba080e7          	jalr	-70(ra) # 80006de <eclic_init>
+ 8000722:	05700513          	li	a0,87
+ 8000726:	00000097          	auipc	ra,0x0
+ 800072a:	fba080e7          	jalr	-70(ra) # 80006e0 <eclic_init>
 	eclic_mode_enable();
- 800072c:	00000097          	auipc	ra,0x0
- 8000730:	fd6080e7          	jalr	-42(ra) # 8000702 <eclic_mode_enable>
+ 800072e:	00000097          	auipc	ra,0x0
+ 8000732:	fd6080e7          	jalr	-42(ra) # 8000704 <eclic_mode_enable>
 	//switch_m2u_mode();
 	
     /* Before enter into main, add the cycle/instret disable by default to save power,
     only use them when needed to measure the cycle/instret */
 	disable_mcycle_minstret();
 }
- 8000734:	40b2                	lw	ra,12(sp)
- 8000736:	0141                	addi	sp,sp,16
+ 8000736:	40b2                	lw	ra,12(sp)
+ 8000738:	0141                	addi	sp,sp,16
 	disable_mcycle_minstret();
- 8000738:	00000317          	auipc	t1,0x0
- 800073c:	b0e30067          	jr	-1266(t1) # 8000246 <disable_mcycle_minstret>
+ 800073a:	00000317          	auipc	t1,0x0
+ 800073e:	b0c30067          	jr	-1268(t1) # 8000246 <disable_mcycle_minstret>
 
-08000740 <_fini>:
+08000742 <_fini>:
 
 void _fini()
 {
 }
- 8000740:	8082                	ret
+ 8000742:	8082                	ret
 
-08000742 <rcu_periph_clock_enable>:
+08000744 <rcu_periph_clock_enable>:
     \param[out] none
     \retval     none
 */
 void rcu_periph_clock_enable(rcu_periph_enum periph)
 {
     RCU_REG_VAL(periph) |= BIT(RCU_BIT_POS(periph));
- 8000742:	400217b7          	lui	a5,0x40021
- 8000746:	00655713          	srli	a4,a0,0x6
- 800074a:	973e                	add	a4,a4,a5
- 800074c:	4314                	lw	a3,0(a4)
- 800074e:	4785                	li	a5,1
- 8000750:	00a797b3          	sll	a5,a5,a0
- 8000754:	8fd5                	or	a5,a5,a3
- 8000756:	c31c                	sw	a5,0(a4)
+ 8000744:	400217b7          	lui	a5,0x40021
+ 8000748:	00655713          	srli	a4,a0,0x6
+ 800074c:	973e                	add	a4,a4,a5
+ 800074e:	4314                	lw	a3,0(a4)
+ 8000750:	4785                	li	a5,1
+ 8000752:	00a797b3          	sll	a5,a5,a0
+ 8000756:	8fd5                	or	a5,a5,a3
+ 8000758:	c31c                	sw	a5,0(a4)
 }
- 8000758:	8082                	ret
+ 800075a:	8082                	ret
 	...
 
 08000780 <trap_entry>:
@@ -1359,7 +1360,7 @@ trap_entry:
      // Call the function
   call handle_trap
  80007bc:	00000097          	auipc	ra,0x0
- 80007c0:	df0080e7          	jalr	-528(ra) # 80005ac <handle_trap>
+ 80007c0:	df2080e7          	jalr	-526(ra) # 80005ae <handle_trap>
 
   // Restore the MEPC/Mstatus/Msubm reg
   RESTORE_EPC_STATUS
@@ -1593,7 +1594,7 @@ service_loop:
  8000968:	8e2a                	mv	t3,a0
  800096a:	e78d                	bnez	a5,8000994 <__register_exitproc+0x36>
  800096c:	17fff717          	auipc	a4,0x17fff
- 8000970:	77c70713          	addi	a4,a4,1916 # 200000e8 <_global_atexit0>
+ 8000970:	78c70713          	addi	a4,a4,1932 # 200000f8 <_global_atexit0>
  8000974:	17fff797          	auipc	a5,0x17fff
  8000978:	76e7a823          	sw	a4,1904(a5) # 200000e4 <_global_atexit>
  800097c:	f7fff517          	auipc	a0,0xf7fff
@@ -1602,7 +1603,7 @@ service_loop:
  8000986:	c519                	beqz	a0,8000994 <__register_exitproc+0x36>
  8000988:	411c                	lw	a5,0(a0)
  800098a:	17fff517          	auipc	a0,0x17fff
- 800098e:	7ef52323          	sw	a5,2022(a0) # 20000170 <_global_atexit0+0x88>
+ 800098e:	7ef52b23          	sw	a5,2038(a0) # 20000180 <_global_atexit0+0x88>
  8000992:	87ba                	mv	a5,a4
  8000994:	43d8                	lw	a4,4(a5)
  8000996:	487d                	li	a6,31
@@ -1727,8 +1728,8 @@ Program Header:
     LOAD off    0x00002000 vaddr 0x20000000 paddr 0x08000abc align 2**12
          filesz 0x000000e4 memsz 0x000000e4 flags rw-
     LOAD off    0x000020e4 vaddr 0x200000e4 paddr 0x200000e4 align 2**12
-         filesz 0x00000000 memsz 0x00000090 flags rw-
-    LOAD off    0x00002800 vaddr 0x20007800 paddr 0x20000174 align 2**12
+         filesz 0x00000000 memsz 0x000000a0 flags rw-
+    LOAD off    0x00002800 vaddr 0x20007800 paddr 0x20000184 align 2**12
          filesz 0x00000000 memsz 0x00000800 flags rw-
 
 Sections:
@@ -1749,27 +1750,27 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS
   7 .data         000000e4  20000000  08000abc  00002000  2**2
                   CONTENTS, ALLOC, LOAD, DATA
-  8 .bss          00000090  200000e4  200000e4  000020e4  2**2
+  8 .bss          000000a0  200000e4  200000e4  000020e4  2**2
                   ALLOC
-  9 .stack        00000800  20007800  20000174  00002800  2**0
+  9 .stack        00000800  20007800  20000184  00002800  2**0
                   ALLOC
- 10 .debug_info   0000420c  00000000  00000000  000020e4  2**0
+ 10 .debug_info   000041fd  00000000  00000000  000020e4  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_abbrev 00001308  00000000  00000000  000062f0  2**0
+ 11 .debug_abbrev 000012e2  00000000  00000000  000062e1  2**0
                   CONTENTS, READONLY, DEBUGGING
- 12 .debug_loc    00001b84  00000000  00000000  000075f8  2**0
+ 12 .debug_loc    00001b92  00000000  00000000  000075c3  2**0
                   CONTENTS, READONLY, DEBUGGING
- 13 .debug_aranges 000004a8  00000000  00000000  00009180  2**3
+ 13 .debug_aranges 000004c8  00000000  00000000  00009158  2**3
                   CONTENTS, READONLY, DEBUGGING
- 14 .debug_ranges 00000768  00000000  00000000  00009628  2**3
+ 14 .debug_ranges 00000788  00000000  00000000  00009620  2**3
                   CONTENTS, READONLY, DEBUGGING
- 15 .debug_line   000041e2  00000000  00000000  00009d90  2**0
+ 15 .debug_line   0000425f  00000000  00000000  00009da8  2**0
                   CONTENTS, READONLY, DEBUGGING
- 16 .debug_str    00001c6f  00000000  00000000  0000df72  2**0
+ 16 .debug_str    00001c77  00000000  00000000  0000e007  2**0
                   CONTENTS, READONLY, DEBUGGING
- 17 .comment      00000033  00000000  00000000  0000fbe1  2**0
+ 17 .comment      00000033  00000000  00000000  0000fc7e  2**0
                   CONTENTS, READONLY
- 18 .debug_frame  000009ec  00000000  00000000  0000fc14  2**2
+ 18 .debug_frame  000009ec  00000000  00000000  0000fcb4  2**2
                   CONTENTS, READONLY, DEBUGGING
 SYMBOL TABLE:
 08000000 l    d  .init	00000000 .init
@@ -1794,42 +1795,42 @@ SYMBOL TABLE:
 00000000 l    df *ABS*	00000000 obj/startup.o
 08000000 l       .init	00000000 vector_base
 08000182 l       .init	00000000 _start0800
-00000000 l    df *ABS*	00000000 gd32vf10x-uart.c
-0800050a l     F .text	00000002 gd32vf10x_uart_remove
-0800050c l     F .text	00000002 gd32vf10x_uart_set_baud_rate
-0800050e l     F .text	00000002 gd32vf10x_uart_poll_read
-08000510 l     F .text	00000006 gd32vf10x_uart_set_handler
-08000516 l     F .text	00000074 gd32vf10x_uart_probe
-0800058a l     F .text	00000004 gd32vf10x_uart_poll_write
-08000280 l     O .text	00000010 nvic_addr
 00000000 l    df *ABS*	00000000 main.c
 00000000 l    df *ABS*	00000000 __call_atexit.c
-080002fa l     F .text	0000001c register_fini
+080002ea l     F .text	0000001c register_fini
 00000000 l    df *ABS*	00000000 gd32vf10x-spi.c
-08000316 l     F .text	00000002 gd32vf10x_spi_probe
-08000318 l     F .text	00000002 gd32vf10x_spi_write
-0800031a l     F .text	00000002 gd32vf10x_spi_transfer
-0800031c l     F .text	00000002 gd32vf10x_spi_set_speed
-0800031e l     F .text	00000004 gd32vf10x_spi_read
-08000322 l     F .text	00000004 gd32vf10x_spi_remove
+08000306 l     F .text	00000002 gd32vf10x_spi_probe
+08000308 l     F .text	00000002 gd32vf10x_spi_write
+0800030a l     F .text	00000002 gd32vf10x_spi_transfer
+0800030c l     F .text	00000002 gd32vf10x_spi_set_speed
+0800030e l     F .text	00000004 gd32vf10x_spi_read
+08000312 l     F .text	00000004 gd32vf10x_spi_remove
 00000000 l    df *ABS*	00000000 gd32vf10x-gpio.c
-08000326 l     F .text	0000007e gd32vf_gpio_get
-080003a4 l     F .text	0000007e gd32vf_gpio_set_direction
-08000422 l     F .text	0000002e gd32vf_gpio_set_value
-08000450 l     F .text	00000016 gd32vf_gpio_get_value
-08000466 l     F .text	00000002 gd32vf_gpio_put
+08000316 l     F .text	0000007e gd32vf_gpio_get
+08000394 l     F .text	0000007e gd32vf_gpio_set_direction
+08000412 l     F .text	0000002e gd32vf_gpio_set_value
+08000440 l     F .text	00000016 gd32vf_gpio_get_value
+08000456 l     F .text	00000002 gd32vf_gpio_put
 00000000 l    df *ABS*	00000000 gd32vf10x-delay.c
-08000468 l     F .text	00000030 gd32vf10x_udelay
-08000498 l     F .text	00000044 gd32vf10x_mdelay
-080004dc l     F .text	0000002e gd32vf10x_sdelay
+08000458 l     F .text	00000030 gd32vf10x_udelay
+08000488 l     F .text	00000044 gd32vf10x_mdelay
+080004cc l     F .text	0000002e gd32vf10x_sdelay
+00000000 l    df *ABS*	00000000 gd32vf10x-uart.c
+080004fa l     F .text	00000002 gd32vf10x_uart_remove
+080004fc l     F .text	00000002 gd32vf10x_uart_set_baud_rate
+080004fe l     F .text	00000002 gd32vf10x_uart_poll_read
+08000500 l     F .text	00000016 gd32vf10x_uart_set_handler
+08000516 l     F .text	0000005e gd32vf10x_uart_probe
+08000574 l     F .text	00000004 gd32vf10x_uart_poll_write
+200000e8 l     O .bss	00000010 uart_handler
 00000000 l    df *ABS*	00000000 gd32vf10x-i2c.c
-08000594 l     F .text	00000002 gd32vf10x_i2c_probe
-08000596 l     F .text	00000002 gd32vf10x_i2c_write
-08000598 l     F .text	00000002 gd32vf10x_i2c_cmd_write
-0800059a l     F .text	00000002 gd32vf10x_i2c_set_speed
-0800059c l     F .text	00000004 gd32vf10x_i2c_cmd_read
-080005a0 l     F .text	00000004 gd32vf10x_i2c_read
-080005a4 l     F .text	00000004 gd32vf10x_i2c_remove
+08000596 l     F .text	00000002 gd32vf10x_i2c_probe
+08000598 l     F .text	00000002 gd32vf10x_i2c_write
+0800059a l     F .text	00000002 gd32vf10x_i2c_cmd_write
+0800059c l     F .text	00000002 gd32vf10x_i2c_set_speed
+0800059e l     F .text	00000004 gd32vf10x_i2c_cmd_read
+080005a2 l     F .text	00000004 gd32vf10x_i2c_read
+080005a6 l     F .text	00000004 gd32vf10x_i2c_remove
 00000000 l    df *ABS*	00000000 handler.c
 00000000 l    df *ABS*	00000000 system_gd32vf103.c
 00000000 l    df *ABS*	00000000 n200_func.c
@@ -1842,7 +1843,7 @@ SYMBOL TABLE:
 00000000 l    df *ABS*	00000000 fini.c
 00000000 l    df *ABS*	00000000 init.c
 00000000 l    df *ABS*	00000000 __atexit.c
-200000e8 l     O .bss	0000008c _global_atexit0
+200000f8 l     O .bss	0000008c _global_atexit0
 00000000 l    df *ABS*	00000000 _exit.c
 00000000 l    df *ABS*	00000000 impure.c
 20000000 l     O .data	00000060 impure_data
@@ -1856,44 +1857,44 @@ SYMBOL TABLE:
 20000860 g       .data	00000000 __global_pointer$
 00000800 g       *ABS*	00000000 __stack_size
 200000d8 g       .data	00000000 __delay_core_init
-080005ac  w    F .text	00000014 handle_trap
+080005ae  w    F .text	00000014 handle_trap
 08000804  w      .text	00000000 irq_entry
 08000ab4 g     O .sdata2._global_impure_ptr	00000004 _global_impure_ptr
 080008f4 g     F .text	0000006a __libc_init_array
-08000714 g     F .text	0000002c _init
+08000716 g     F .text	0000002c _init
 080008bc g     F .text	00000038 __libc_fini_array
-080005a8  w    F .text	00000004 handle_nmi
+080005aa  w    F .text	00000004 handle_nmi
 20000068 g     O .data	00000018 gd32vf_gpio_ctrl
-0800058e g     F .text	00000002 USART0_IRQHandler
+08000578 g     F .text	0000000a USART0_IRQHandler
 20000060 g     O .data	00000008 led
 2000009c g     O .data	00000020 gd32vf10x_i2c_adaptor
 200000e4 g     O .bss	00000004 _global_atexit
 080009ea g     F .text	000000c8 __call_exitprocs
 20008000 g       .stack	00000000 _sp
 0800015c g     F .init	00000000 _start
-08000742 g     F .text	00000018 rcu_periph_clock_enable
+08000744 g     F .text	00000018 rcu_periph_clock_enable
 0800024c g       .init	00000000 enable_mcycle_minstret
 0800095e g     F .text	0000008c __register_exitproc
 200000bc g     O .data	0000001c gd32vf10x_uart_controller
 200000e4 g       .bss	00000000 __bss_start
-08000290 g     F .text	0000006a main
+08000280 g     F .text	0000006a main
 08000780  w      .text	00000000 trap_entry
 08000246 g       .init	00000000 disable_mcycle_minstret
-08000702 g     F .text	00000012 eclic_mode_enable
+08000704 g     F .text	00000012 eclic_mode_enable
 20000068 g       .data	00000000 __gpio_core_init
-080005c0 g     F .text	0000011e SystemInit
-08000740 g     F .text	00000002 _fini
+080005c2 g     F .text	0000011e SystemInit
+08000742 g     F .text	00000002 _fini
 08000876 g     F .text	00000010 atexit
 20000000 g       .dalign	00000000 _data
 200000e4 g       .bss	00000000 _edata
-20000178 g       .bss	00000000 _end
+20000188 g       .bss	00000000 _end
 08000abc g       .lalign	00000000 _data_lma
-08000592 g     F .text	00000002 USART2_IRQHandler
+0800058c g     F .text	0000000a USART2_IRQHandler
 08000886 g     F .text	00000036 exit
 200000d8 g     O .data	0000000c gd32vf10x_delay
-080006de g     F .text	00000024 eclic_init
+080006e0 g     F .text	00000024 eclic_init
 08000ab2 g     F .text	00000002 _exit
-08000590 g     F .text	00000002 USART1_IRQHandler
+08000582 g     F .text	0000000a USART1_IRQHandler
 20000080 g     O .data	0000001c gd32vf10x_spi_master
 
 
@@ -1910,11 +1911,11 @@ vector_base:
  8000000:	aab1                	j	800015c <_start>
  8000002:	0001                	nop
 	...
- 80000e0:	058e                	slli	a1,a1,0x3
+ 80000e0:	0578                	addi	a4,sp,652
  80000e2:	0800                	addi	s0,sp,16
- 80000e4:	0590                	addi	a2,sp,704
+ 80000e4:	0582                	c.slli64	a1
  80000e6:	0800                	addi	s0,sp,16
- 80000e8:	0592                	slli	a1,a1,0x4
+ 80000e8:	058c                	addi	a1,sp,704
  80000ea:	0800                	addi	s0,sp,16
 	...
 
@@ -2023,7 +2024,7 @@ _start0800:
  80001f2:	ef650513          	addi	a0,a0,-266 # 200000e4 <_global_atexit>
 	la a1, _end
  80001f6:	18000597          	auipc	a1,0x18000
- 80001fa:	f8258593          	addi	a1,a1,-126 # 20000178 <_end>
+ 80001fa:	f9258593          	addi	a1,a1,-110 # 20000188 <_end>
 	bgeu a0, a1, 2f
  80001fe:	00b57763          	bgeu	a0,a1,800020c <_start0800+0x8a>
 1:
@@ -2056,10 +2057,10 @@ _start0800:
  800022a:	4581                	li	a1,0
     call _init
  800022c:	00000097          	auipc	ra,0x0
- 8000230:	4e8080e7          	jalr	1256(ra) # 8000714 <_init>
+ 8000230:	4ea080e7          	jalr	1258(ra) # 8000716 <_init>
 	call main
  8000234:	00000097          	auipc	ra,0x0
- 8000238:	05c080e7          	jalr	92(ra) # 8000290 <main>
+ 8000238:	04c080e7          	jalr	76(ra) # 8000280 <main>
 	tail exit
  800023c:	00000317          	auipc	t1,0x0
  8000240:	64a30067          	jr	1610(t1) # 8000886 <exit>
@@ -2089,469 +2090,470 @@ enable_mcycle_minstret:
 
 Disassembly of section .text:
 
-08000280 <nvic_addr>:
- 8000280:	00e0 0000 00e4 0000 00e8 0000 011c 0000     ................
-
-08000290 <main>:
+08000280 <main>:
 }gpio_controller_t;
 
 
 static inline int8_t gpio_get(gpio_desp_t *gpio_desp)
 {
     gpio_desp->ctl = (gpio_controller_t*)&__gpio_core_init;
- 8000290:	200007b7          	lui	a5,0x20000
+ 8000280:	200007b7          	lui	a5,0x20000
     .mode = GPIO_PP_OUTPUT,
     .flag = 1,
 };
 
 int main(void)
 {
- 8000294:	1141                	addi	sp,sp,-16
- 8000296:	06878793          	addi	a5,a5,104 # 20000068 <gd32vf_gpio_ctrl>
+ 8000284:	1141                	addi	sp,sp,-16
+ 8000286:	06878793          	addi	a5,a5,104 # 20000068 <gd32vf_gpio_ctrl>
     return gpio_desp->ctl->ops.get(gpio_desp);
- 800029a:	43d8                	lw	a4,4(a5)
- 800029c:	c422                	sw	s0,8(sp)
+ 800028a:	43d8                	lw	a4,4(a5)
+ 800028c:	c422                	sw	s0,8(sp)
     gpio_desp->ctl = (gpio_controller_t*)&__gpio_core_init;
- 800029e:	20000437          	lui	s0,0x20000
- 80002a2:	c04a                	sw	s2,0(sp)
- 80002a4:	06040913          	addi	s2,s0,96 # 20000060 <led>
- 80002a8:	c606                	sw	ra,12(sp)
- 80002aa:	c226                	sw	s1,4(sp)
- 80002ac:	00f92223          	sw	a5,4(s2)
+ 800028e:	20000437          	lui	s0,0x20000
+ 8000292:	c04a                	sw	s2,0(sp)
+ 8000294:	06040913          	addi	s2,s0,96 # 20000060 <led>
+ 8000298:	c606                	sw	ra,12(sp)
+ 800029a:	c226                	sw	s1,4(sp)
+ 800029c:	00f92223          	sw	a5,4(s2)
     return gpio_desp->ctl->ops.get(gpio_desp);
- 80002b0:	06040513          	addi	a0,s0,96
- 80002b4:	9702                	jalr	a4
+ 80002a0:	06040513          	addi	a0,s0,96
+ 80002a4:	9702                	jalr	a4
 }
 
 static inline void gpio_set_direction(gpio_desp_t *gpio_desp, gpio_direction_t dir)
 {
     gpio_desp->ctl->ops.set_direction(gpio_desp,dir);
- 80002b6:	00492783          	lw	a5,4(s2)
- 80002ba:	4581                	li	a1,0
- 80002bc:	06040513          	addi	a0,s0,96
- 80002c0:	479c                	lw	a5,8(a5)
- 80002c2:	200004b7          	lui	s1,0x20000
- 80002c6:	0d848493          	addi	s1,s1,216 # 200000d8 <gd32vf10x_delay>
- 80002ca:	9782                	jalr	a5
+ 80002a6:	00492783          	lw	a5,4(s2)
+ 80002aa:	4581                	li	a1,0
+ 80002ac:	06040513          	addi	a0,s0,96
+ 80002b0:	479c                	lw	a5,8(a5)
+ 80002b2:	200004b7          	lui	s1,0x20000
+ 80002b6:	0d848493          	addi	s1,s1,216 # 200000d8 <gd32vf10x_delay>
+ 80002ba:	9782                	jalr	a5
 }
 
 static inline void gpio_set_value(gpio_desp_t *gpio_desp, uint8_t value)
 {
     gpio_desp->ctl->ops.set_value(gpio_desp,value);
- 80002cc:	00492783          	lw	a5,4(s2)
- 80002d0:	4581                	li	a1,0
- 80002d2:	06040513          	addi	a0,s0,96
- 80002d6:	47dc                	lw	a5,12(a5)
- 80002d8:	9782                	jalr	a5
+ 80002bc:	00492783          	lw	a5,4(s2)
+ 80002c0:	4581                	li	a1,0
+ 80002c2:	06040513          	addi	a0,s0,96
+ 80002c6:	47dc                	lw	a5,12(a5)
+ 80002c8:	9782                	jalr	a5
     __delay_core->udelay(us);
 }
 
 static inline void mdelay(uint32_t ms)
 {
     __delay_core->mdelay(ms);
- 80002da:	40dc                	lw	a5,4(s1)
- 80002dc:	1f400513          	li	a0,500
- 80002e0:	9782                	jalr	a5
- 80002e2:	00492783          	lw	a5,4(s2)
- 80002e6:	06040513          	addi	a0,s0,96
- 80002ea:	4585                	li	a1,1
- 80002ec:	47dc                	lw	a5,12(a5)
- 80002ee:	9782                	jalr	a5
- 80002f0:	40dc                	lw	a5,4(s1)
- 80002f2:	1f400513          	li	a0,500
- 80002f6:	9782                	jalr	a5
- 80002f8:	bfd1                	j	80002cc <main+0x3c>
+ 80002ca:	40dc                	lw	a5,4(s1)
+ 80002cc:	1f400513          	li	a0,500
+ 80002d0:	9782                	jalr	a5
+ 80002d2:	00492783          	lw	a5,4(s2)
+ 80002d6:	06040513          	addi	a0,s0,96
+ 80002da:	4585                	li	a1,1
+ 80002dc:	47dc                	lw	a5,12(a5)
+ 80002de:	9782                	jalr	a5
+ 80002e0:	40dc                	lw	a5,4(s1)
+ 80002e2:	1f400513          	li	a0,500
+ 80002e6:	9782                	jalr	a5
+ 80002e8:	bfd1                	j	80002bc <main+0x3c>
 
-080002fa <register_fini>:
- 80002fa:	f8000797          	auipc	a5,0xf8000
- 80002fe:	d0678793          	addi	a5,a5,-762 # 0 <__stack_size-0x800>
- 8000302:	cb89                	beqz	a5,8000314 <register_fini+0x1a>
- 8000304:	00000517          	auipc	a0,0x0
- 8000308:	5b850513          	addi	a0,a0,1464 # 80008bc <__libc_fini_array>
- 800030c:	00000317          	auipc	t1,0x0
- 8000310:	56a30067          	jr	1386(t1) # 8000876 <atexit>
- 8000314:	8082                	ret
+080002ea <register_fini>:
+ 80002ea:	f8000797          	auipc	a5,0xf8000
+ 80002ee:	d1678793          	addi	a5,a5,-746 # 0 <__stack_size-0x800>
+ 80002f2:	cb89                	beqz	a5,8000304 <register_fini+0x1a>
+ 80002f4:	00000517          	auipc	a0,0x0
+ 80002f8:	5c850513          	addi	a0,a0,1480 # 80008bc <__libc_fini_array>
+ 80002fc:	00000317          	auipc	t1,0x0
+ 8000300:	57a30067          	jr	1402(t1) # 8000876 <atexit>
+ 8000304:	8082                	ret
 
-08000316 <gd32vf10x_spi_probe>:
+08000306 <gd32vf10x_spi_probe>:
 
 
 static int8_t gd32vf10x_spi_probe(struct spi_device *dev)
 {
 
 }
- 8000316:	8082                	ret
+ 8000306:	8082                	ret
 
-08000318 <gd32vf10x_spi_write>:
+08000308 <gd32vf10x_spi_write>:
 }
 
 static uint32_t gd32vf10x_spi_write(struct spi_device *dev, uint8_t *buffer, uint32_t len)
 {
 
 }
- 8000318:	8082                	ret
+ 8000308:	8082                	ret
 
-0800031a <gd32vf10x_spi_transfer>:
+0800030a <gd32vf10x_spi_transfer>:
 }
 
 static uint32_t gd32vf10x_spi_transfer(struct spi_device *dev,struct  spi_xfer *xfer)
 {
     
 }
- 800031a:	8082                	ret
+ 800030a:	8082                	ret
 
-0800031c <gd32vf10x_spi_set_speed>:
+0800030c <gd32vf10x_spi_set_speed>:
 
 static int8_t gd32vf10x_spi_set_speed(struct spi_device *dev, uint32_t speed_hz)
 {
 
 }
- 800031c:	8082                	ret
+ 800030c:	8082                	ret
 
-0800031e <gd32vf10x_spi_read>:
- 800031e:	4501                	li	a0,0
- 8000320:	8082                	ret
+0800030e <gd32vf10x_spi_read>:
+ 800030e:	4501                	li	a0,0
+ 8000310:	8082                	ret
 
-08000322 <gd32vf10x_spi_remove>:
- 8000322:	4501                	li	a0,0
- 8000324:	8082                	ret
+08000312 <gd32vf10x_spi_remove>:
+ 8000312:	4501                	li	a0,0
+ 8000314:	8082                	ret
 
-08000326 <gd32vf_gpio_get>:
+08000316 <gd32vf_gpio_get>:
 #define GPIO_CTL1(gpiox)           REG32((gpiox) + 0x04U)    < GPIO port control register 1
 **************************************************************************************************/
 
 static int8_t gd32vf_gpio_get(gpio_desp_t *gpio_desp)
 {
     RCU_APB2EN |= 1<<(GPIO_NUM2PORT(gpio_desp->pin_num)+2);   //使能GPIO时钟
- 8000326:	00055603          	lhu	a2,0(a0)
- 800032a:	40021537          	lui	a0,0x40021
- 800032e:	4d0c                	lw	a1,24(a0)
- 8000330:	00565793          	srli	a5,a2,0x5
- 8000334:	4705                	li	a4,1
- 8000336:	00278693          	addi	a3,a5,2
- 800033a:	00d716b3          	sll	a3,a4,a3
- 800033e:	8ecd                	or	a3,a3,a1
+ 8000316:	00055603          	lhu	a2,0(a0)
+ 800031a:	40021537          	lui	a0,0x40021
+ 800031e:	4d0c                	lw	a1,24(a0)
+ 8000320:	00565793          	srli	a5,a2,0x5
+ 8000324:	4705                	li	a4,1
+ 8000326:	00278693          	addi	a3,a5,2
+ 800032a:	00d716b3          	sll	a3,a4,a3
+ 800032e:	8ecd                	or	a3,a3,a1
     //clear CTL
     *((volatile uint64_t*)(uint64_t)(GPIO_BASE + (GPIO_NUM2PORT(gpio_desp->pin_num)*0x400U))) &= 
- 8000340:	001005b7          	lui	a1,0x100
- 8000344:	04258593          	addi	a1,a1,66 # 100042 <__stack_size+0xff842>
- 8000348:	97ae                	add	a5,a5,a1
+ 8000330:	001005b7          	lui	a1,0x100
+ 8000334:	04258593          	addi	a1,a1,66 # 100042 <__stack_size+0xff842>
+ 8000338:	97ae                	add	a5,a5,a1
     RCU_APB2EN |= 1<<(GPIO_NUM2PORT(gpio_desp->pin_num)+2);   //使能GPIO时钟
- 800034a:	cd14                	sw	a3,24(a0)
+ 800033a:	cd14                	sw	a3,24(a0)
     *((volatile uint64_t*)(uint64_t)(GPIO_BASE + (GPIO_NUM2PORT(gpio_desp->pin_num)*0x400U))) &= 
- 800034c:	07aa                	slli	a5,a5,0xa
+ 800033c:	07aa                	slli	a5,a5,0xa
     ~(0xF<<(GPIO_NUM2PIN(gpio_desp->pin_num)*4));
- 800034e:	8a7d                	andi	a2,a2,31
+ 800033e:	8a7d                	andi	a2,a2,31
     *((volatile uint64_t*)(uint64_t)(GPIO_BASE + (GPIO_NUM2PORT(gpio_desp->pin_num)*0x400U))) &= 
- 8000350:	0007a803          	lw	a6,0(a5)
+ 8000340:	0007a803          	lw	a6,0(a5)
     ~(0xF<<(GPIO_NUM2PIN(gpio_desp->pin_num)*4));
- 8000354:	00261313          	slli	t1,a2,0x2
- 8000358:	46bd                	li	a3,15
+ 8000344:	00261313          	slli	t1,a2,0x2
+ 8000348:	46bd                	li	a3,15
     *((volatile uint64_t*)(uint64_t)(GPIO_BASE + (GPIO_NUM2PORT(gpio_desp->pin_num)*0x400U))) &= 
- 800035a:	0047a883          	lw	a7,4(a5)
+ 800034a:	0047a883          	lw	a7,4(a5)
     ~(0xF<<(GPIO_NUM2PIN(gpio_desp->pin_num)*4));
- 800035e:	006696b3          	sll	a3,a3,t1
- 8000362:	fff6c693          	not	a3,a3
+ 800034e:	006696b3          	sll	a3,a3,t1
+ 8000352:	fff6c693          	not	a3,a3
     *((volatile uint64_t*)(uint64_t)(GPIO_BASE + (GPIO_NUM2PORT(gpio_desp->pin_num)*0x400U))) &= 
- 8000366:	0106f533          	and	a0,a3,a6
+ 8000356:	0106f533          	and	a0,a3,a6
     ~(0xF<<(GPIO_NUM2PIN(gpio_desp->pin_num)*4));
- 800036a:	41f6de13          	srai	t3,a3,0x1f
+ 800035a:	41f6de13          	srai	t3,a3,0x1f
     *((volatile uint64_t*)(uint64_t)(GPIO_BASE + (GPIO_NUM2PORT(gpio_desp->pin_num)*0x400U))) &= 
- 800036e:	c388                	sw	a0,0(a5)
- 8000370:	011e75b3          	and	a1,t3,a7
- 8000374:	c3cc                	sw	a1,4(a5)
+ 800035e:	c388                	sw	a0,0(a5)
+ 8000360:	011e75b3          	and	a1,t3,a7
+ 8000364:	c3cc                	sw	a1,4(a5)
     //set CTL  output (default)
     *((volatile uint64_t*)(uint64_t)(GPIO_BASE + (GPIO_NUM2PORT(gpio_desp->pin_num)*0x400U))) |= 
- 8000376:	0007a803          	lw	a6,0(a5)
+ 8000366:	0007a803          	lw	a6,0(a5)
     (0x3<<(GPIO_NUM2PIN(gpio_desp->pin_num)*4));
- 800037a:	468d                	li	a3,3
+ 800036a:	468d                	li	a3,3
     *((volatile uint64_t*)(uint64_t)(GPIO_BASE + (GPIO_NUM2PORT(gpio_desp->pin_num)*0x400U))) |= 
- 800037c:	0047a883          	lw	a7,4(a5)
+ 800036c:	0047a883          	lw	a7,4(a5)
     (0x3<<(GPIO_NUM2PIN(gpio_desp->pin_num)*4));
- 8000380:	006696b3          	sll	a3,a3,t1
+ 8000370:	006696b3          	sll	a3,a3,t1
     *((volatile uint64_t*)(uint64_t)(GPIO_BASE + (GPIO_NUM2PORT(gpio_desp->pin_num)*0x400U))) |= 
- 8000384:	0106e533          	or	a0,a3,a6
+ 8000374:	0106e533          	or	a0,a3,a6
     (0x3<<(GPIO_NUM2PIN(gpio_desp->pin_num)*4));
- 8000388:	41f6d313          	srai	t1,a3,0x1f
+ 8000378:	41f6d313          	srai	t1,a3,0x1f
     *((volatile uint64_t*)(uint64_t)(GPIO_BASE + (GPIO_NUM2PORT(gpio_desp->pin_num)*0x400U))) |= 
- 800038c:	c388                	sw	a0,0(a5)
- 800038e:	011365b3          	or	a1,t1,a7
- 8000392:	c3cc                	sw	a1,4(a5)
+ 800037c:	c388                	sw	a0,0(a5)
+ 800037e:	011365b3          	or	a1,t1,a7
+ 8000382:	c3cc                	sw	a1,4(a5)
     //set 0CTL output (default)
     *((volatile uint32_t*)(uint32_t)(GPIO_BASE + 0x0C + (GPIO_NUM2PORT(gpio_desp->pin_num)*0x400U))) &= 
- 8000394:	47d4                	lw	a3,12(a5)
+ 8000384:	47d4                	lw	a3,12(a5)
     ~(1<<GPIO_NUM2PIN(gpio_desp->pin_num));
- 8000396:	00c71733          	sll	a4,a4,a2
- 800039a:	fff74713          	not	a4,a4
+ 8000386:	00c71733          	sll	a4,a4,a2
+ 800038a:	fff74713          	not	a4,a4
     *((volatile uint32_t*)(uint32_t)(GPIO_BASE + 0x0C + (GPIO_NUM2PORT(gpio_desp->pin_num)*0x400U))) &= 
- 800039e:	8f75                	and	a4,a4,a3
- 80003a0:	c7d8                	sw	a4,12(a5)
+ 800038e:	8f75                	and	a4,a4,a3
+ 8000390:	c7d8                	sw	a4,12(a5)
 }
- 80003a2:	8082                	ret
+ 8000392:	8082                	ret
 
-080003a4 <gd32vf_gpio_set_direction>:
+08000394 <gd32vf_gpio_set_direction>:
 
 static void  gd32vf_gpio_set_direction(gpio_desp_t *gpio_desp, gpio_direction_t dir)
 {
     //clear CTL
     *((volatile uint64_t*)(uint64_t)(GPIO_BASE + (GPIO_NUM2PORT(gpio_desp->pin_num)*0x400U))) &= 
- 80003a4:	00055703          	lhu	a4,0(a0) # 40021000 <_sp+0x20019000>
- 80003a8:	001006b7          	lui	a3,0x100
- 80003ac:	04268693          	addi	a3,a3,66 # 100042 <__stack_size+0xff842>
- 80003b0:	00575793          	srli	a5,a4,0x5
- 80003b4:	97b6                	add	a5,a5,a3
- 80003b6:	07aa                	slli	a5,a5,0xa
+ 8000394:	00055703          	lhu	a4,0(a0) # 40021000 <_sp+0x20019000>
+ 8000398:	001006b7          	lui	a3,0x100
+ 800039c:	04268693          	addi	a3,a3,66 # 100042 <__stack_size+0xff842>
+ 80003a0:	00575793          	srli	a5,a4,0x5
+ 80003a4:	97b6                	add	a5,a5,a3
+ 80003a6:	07aa                	slli	a5,a5,0xa
     ~(0xF<<(GPIO_NUM2PIN(gpio_desp->pin_num)*4));
- 80003b8:	01f77693          	andi	a3,a4,31
+ 80003a8:	01f77693          	andi	a3,a4,31
     *((volatile uint64_t*)(uint64_t)(GPIO_BASE + (GPIO_NUM2PORT(gpio_desp->pin_num)*0x400U))) &= 
- 80003bc:	0007a303          	lw	t1,0(a5)
+ 80003ac:	0007a303          	lw	t1,0(a5)
     ~(0xF<<(GPIO_NUM2PIN(gpio_desp->pin_num)*4));
- 80003c0:	00269613          	slli	a2,a3,0x2
- 80003c4:	473d                	li	a4,15
+ 80003b0:	00269613          	slli	a2,a3,0x2
+ 80003b4:	473d                	li	a4,15
     *((volatile uint64_t*)(uint64_t)(GPIO_BASE + (GPIO_NUM2PORT(gpio_desp->pin_num)*0x400U))) &= 
- 80003c6:	0047a383          	lw	t2,4(a5)
+ 80003b6:	0047a383          	lw	t2,4(a5)
     ~(0xF<<(GPIO_NUM2PIN(gpio_desp->pin_num)*4));
- 80003ca:	00c71733          	sll	a4,a4,a2
- 80003ce:	fff74713          	not	a4,a4
- 80003d2:	41f75e13          	srai	t3,a4,0x1f
+ 80003ba:	00c71733          	sll	a4,a4,a2
+ 80003be:	fff74713          	not	a4,a4
+ 80003c2:	41f75e13          	srai	t3,a4,0x1f
     *((volatile uint64_t*)(uint64_t)(GPIO_BASE + (GPIO_NUM2PORT(gpio_desp->pin_num)*0x400U))) &= 
- 80003d6:	00677833          	and	a6,a4,t1
- 80003da:	007e78b3          	and	a7,t3,t2
- 80003de:	0107a023          	sw	a6,0(a5)
- 80003e2:	0117a223          	sw	a7,4(a5)
+ 80003c6:	00677833          	and	a6,a4,t1
+ 80003ca:	007e78b3          	and	a7,t3,t2
+ 80003ce:	0107a023          	sw	a6,0(a5)
+ 80003d2:	0117a223          	sw	a7,4(a5)
     //set CTL  direction
     if(dir == GPIO_PP_OUTPUT)
- 80003e6:	e195                	bnez	a1,800040a <gd32vf_gpio_set_direction+0x66>
+ 80003d6:	e195                	bnez	a1,80003fa <gd32vf_gpio_set_direction+0x66>
     {
         *((volatile uint64_t*)(uint64_t)(GPIO_BASE + (GPIO_NUM2PORT(gpio_desp->pin_num)*0x400U))) |= 
- 80003e8:	0007a303          	lw	t1,0(a5)
+ 80003d8:	0007a303          	lw	t1,0(a5)
         (0x3<<(GPIO_NUM2PIN(gpio_desp->pin_num)*4));
- 80003ec:	470d                	li	a4,3
+ 80003dc:	470d                	li	a4,3
         *((volatile uint64_t*)(uint64_t)(GPIO_BASE + (GPIO_NUM2PORT(gpio_desp->pin_num)*0x400U))) |= 
- 80003ee:	0047a383          	lw	t2,4(a5)
+ 80003de:	0047a383          	lw	t2,4(a5)
         (0x3<<(GPIO_NUM2PIN(gpio_desp->pin_num)*4));
- 80003f2:	00c71733          	sll	a4,a4,a2
- 80003f6:	41f75613          	srai	a2,a4,0x1f
+ 80003e2:	00c71733          	sll	a4,a4,a2
+ 80003e6:	41f75613          	srai	a2,a4,0x1f
         *((volatile uint64_t*)(uint64_t)(GPIO_BASE + (GPIO_NUM2PORT(gpio_desp->pin_num)*0x400U))) |= 
- 80003fa:	00676833          	or	a6,a4,t1
- 80003fe:	007668b3          	or	a7,a2,t2
- 8000402:	0107a023          	sw	a6,0(a5)
- 8000406:	0117a223          	sw	a7,4(a5)
+ 80003ea:	00676833          	or	a6,a4,t1
+ 80003ee:	007668b3          	or	a7,a2,t2
+ 80003f2:	0107a023          	sw	a6,0(a5)
+ 80003f6:	0117a223          	sw	a7,4(a5)
     }
     if(gpio_desp->flag)
- 800040a:	00254703          	lbu	a4,2(a0)
- 800040e:	04077713          	andi	a4,a4,64
- 8000412:	c719                	beqz	a4,8000420 <gd32vf_gpio_set_direction+0x7c>
+ 80003fa:	00254703          	lbu	a4,2(a0)
+ 80003fe:	04077713          	andi	a4,a4,64
+ 8000402:	c719                	beqz	a4,8000410 <gd32vf_gpio_set_direction+0x7c>
     {
         *((volatile uint32_t*)(uint32_t)(GPIO_BASE + 0x0C + (GPIO_NUM2PORT(gpio_desp->pin_num)*0x400U))) |=
- 8000414:	47d0                	lw	a2,12(a5)
+ 8000404:	47d0                	lw	a2,12(a5)
         (1<<GPIO_NUM2PIN(gpio_desp->pin_num));
- 8000416:	4705                	li	a4,1
- 8000418:	00d71733          	sll	a4,a4,a3
+ 8000406:	4705                	li	a4,1
+ 8000408:	00d71733          	sll	a4,a4,a3
         *((volatile uint32_t*)(uint32_t)(GPIO_BASE + 0x0C + (GPIO_NUM2PORT(gpio_desp->pin_num)*0x400U))) |=
- 800041c:	8f51                	or	a4,a4,a2
- 800041e:	c7d8                	sw	a4,12(a5)
+ 800040c:	8f51                	or	a4,a4,a2
+ 800040e:	c7d8                	sw	a4,12(a5)
     }
 }
- 8000420:	8082                	ret
+ 8000410:	8082                	ret
 
-08000422 <gd32vf_gpio_set_value>:
+08000412 <gd32vf_gpio_set_value>:
 
 static void gd32vf_gpio_set_value(gpio_desp_t *gpio_desp, uint8_t value)
 {
     //clear 0CTL output (default)
     *((volatile uint32_t*)(uint32_t)(GPIO_BASE + 0x0C + (GPIO_NUM2PORT(gpio_desp->pin_num)*0x400U))) &= 
- 8000422:	00055603          	lhu	a2,0(a0)
- 8000426:	400116b7          	lui	a3,0x40011
- 800042a:	80c68693          	addi	a3,a3,-2036 # 4001080c <_sp+0x2000880c>
- 800042e:	00565793          	srli	a5,a2,0x5
- 8000432:	07aa                	slli	a5,a5,0xa
- 8000434:	97b6                	add	a5,a5,a3
- 8000436:	4388                	lw	a0,0(a5)
+ 8000412:	00055603          	lhu	a2,0(a0)
+ 8000416:	400116b7          	lui	a3,0x40011
+ 800041a:	80c68693          	addi	a3,a3,-2036 # 4001080c <_sp+0x2000880c>
+ 800041e:	00565793          	srli	a5,a2,0x5
+ 8000422:	07aa                	slli	a5,a5,0xa
+ 8000424:	97b6                	add	a5,a5,a3
+ 8000426:	4388                	lw	a0,0(a5)
     ~(1<<GPIO_NUM2PIN(gpio_desp->pin_num));
- 8000438:	4705                	li	a4,1
- 800043a:	00c71733          	sll	a4,a4,a2
- 800043e:	fff74693          	not	a3,a4
+ 8000428:	4705                	li	a4,1
+ 800042a:	00c71733          	sll	a4,a4,a2
+ 800042e:	fff74693          	not	a3,a4
     *((volatile uint32_t*)(uint32_t)(GPIO_BASE + 0x0C + (GPIO_NUM2PORT(gpio_desp->pin_num)*0x400U))) &= 
- 8000442:	8ee9                	and	a3,a3,a0
- 8000444:	c394                	sw	a3,0(a5)
+ 8000432:	8ee9                	and	a3,a3,a0
+ 8000434:	c394                	sw	a3,0(a5)
     //clear 0CTL output (default)
     if(value)
- 8000446:	c581                	beqz	a1,800044e <gd32vf_gpio_set_value+0x2c>
+ 8000436:	c581                	beqz	a1,800043e <gd32vf_gpio_set_value+0x2c>
     {
         *((volatile uint32_t*)(uint32_t)(GPIO_BASE + 0x0C + (GPIO_NUM2PORT(gpio_desp->pin_num)*0x400U))) |=
- 8000448:	4394                	lw	a3,0(a5)
- 800044a:	8f55                	or	a4,a4,a3
- 800044c:	c398                	sw	a4,0(a5)
+ 8000438:	4394                	lw	a3,0(a5)
+ 800043a:	8f55                	or	a4,a4,a3
+ 800043c:	c398                	sw	a4,0(a5)
         (1<<GPIO_NUM2PIN(gpio_desp->pin_num));
     }
 }
- 800044e:	8082                	ret
+ 800043e:	8082                	ret
 
-08000450 <gd32vf_gpio_get_value>:
+08000440 <gd32vf_gpio_get_value>:
 
 static uint32_t  gd32vf_gpio_get_value(gpio_desp_t *gpio_desp)
 {
     return *((volatile uint32_t*)(uint32_t)(GPIO_BASE + 0x0C + (GPIO_NUM2PORT(gpio_desp->pin_num)*0x400U)));
- 8000450:	00055783          	lhu	a5,0(a0)
- 8000454:	40011737          	lui	a4,0x40011
- 8000458:	80c70713          	addi	a4,a4,-2036 # 4001080c <_sp+0x2000880c>
- 800045c:	8395                	srli	a5,a5,0x5
- 800045e:	07aa                	slli	a5,a5,0xa
- 8000460:	97ba                	add	a5,a5,a4
- 8000462:	4388                	lw	a0,0(a5)
+ 8000440:	00055783          	lhu	a5,0(a0)
+ 8000444:	40011737          	lui	a4,0x40011
+ 8000448:	80c70713          	addi	a4,a4,-2036 # 4001080c <_sp+0x2000880c>
+ 800044c:	8395                	srli	a5,a5,0x5
+ 800044e:	07aa                	slli	a5,a5,0xa
+ 8000450:	97ba                	add	a5,a5,a4
+ 8000452:	4388                	lw	a0,0(a5)
 }
- 8000464:	8082                	ret
+ 8000454:	8082                	ret
 
-08000466 <gd32vf_gpio_put>:
+08000456 <gd32vf_gpio_put>:
 
 static void  gd32vf_gpio_put(gpio_desp_t *gpio_desp)
 {
     
 }
- 8000466:	8082                	ret
+ 8000456:	8082                	ret
 
-08000468 <gd32vf10x_udelay>:
+08000458 <gd32vf10x_udelay>:
 #include "delay-core.h"
 
 static void gd32vf10x_udelay(uint32_t us)
 {
- 8000468:	1141                	addi	sp,sp,-16
+ 8000458:	1141                	addi	sp,sp,-16
     volatile uint32_t i,j;
     for(i=0;i<us;i++)
- 800046a:	c402                	sw	zero,8(sp)
- 800046c:	47a2                	lw	a5,8(sp)
- 800046e:	02a7f363          	bgeu	a5,a0,8000494 <gd32vf10x_udelay+0x2c>
+ 800045a:	c402                	sw	zero,8(sp)
+ 800045c:	47a2                	lw	a5,8(sp)
+ 800045e:	02a7f363          	bgeu	a5,a0,8000484 <gd32vf10x_udelay+0x2c>
         for(j=0;j<10;j++);
- 8000472:	4725                	li	a4,9
- 8000474:	c602                	sw	zero,12(sp)
- 8000476:	47b2                	lw	a5,12(sp)
- 8000478:	00f76863          	bltu	a4,a5,8000488 <gd32vf10x_udelay+0x20>
- 800047c:	47b2                	lw	a5,12(sp)
- 800047e:	0785                	addi	a5,a5,1
- 8000480:	c63e                	sw	a5,12(sp)
- 8000482:	47b2                	lw	a5,12(sp)
- 8000484:	fef77ce3          	bgeu	a4,a5,800047c <gd32vf10x_udelay+0x14>
+ 8000462:	4725                	li	a4,9
+ 8000464:	c602                	sw	zero,12(sp)
+ 8000466:	47b2                	lw	a5,12(sp)
+ 8000468:	00f76863          	bltu	a4,a5,8000478 <gd32vf10x_udelay+0x20>
+ 800046c:	47b2                	lw	a5,12(sp)
+ 800046e:	0785                	addi	a5,a5,1
+ 8000470:	c63e                	sw	a5,12(sp)
+ 8000472:	47b2                	lw	a5,12(sp)
+ 8000474:	fef77ce3          	bgeu	a4,a5,800046c <gd32vf10x_udelay+0x14>
     for(i=0;i<us;i++)
- 8000488:	47a2                	lw	a5,8(sp)
- 800048a:	0785                	addi	a5,a5,1
- 800048c:	c43e                	sw	a5,8(sp)
- 800048e:	47a2                	lw	a5,8(sp)
- 8000490:	fea7e2e3          	bltu	a5,a0,8000474 <gd32vf10x_udelay+0xc>
+ 8000478:	47a2                	lw	a5,8(sp)
+ 800047a:	0785                	addi	a5,a5,1
+ 800047c:	c43e                	sw	a5,8(sp)
+ 800047e:	47a2                	lw	a5,8(sp)
+ 8000480:	fea7e2e3          	bltu	a5,a0,8000464 <gd32vf10x_udelay+0xc>
 }
- 8000494:	0141                	addi	sp,sp,16
- 8000496:	8082                	ret
+ 8000484:	0141                	addi	sp,sp,16
+ 8000486:	8082                	ret
 
-08000498 <gd32vf10x_mdelay>:
+08000488 <gd32vf10x_mdelay>:
 
 static void gd32vf10x_mdelay(uint32_t ms)
 {
     while(ms--)
- 8000498:	567d                	li	a2,-1
- 800049a:	157d                	addi	a0,a0,-1
+ 8000488:	567d                	li	a2,-1
+ 800048a:	157d                	addi	a0,a0,-1
     for(i=0;i<us;i++)
- 800049c:	3e700693          	li	a3,999
+ 800048c:	3e700693          	li	a3,999
         for(j=0;j<10;j++);
- 80004a0:	4725                	li	a4,9
+ 8000490:	4725                	li	a4,9
     while(ms--)
- 80004a2:	02c50c63          	beq	a0,a2,80004da <gd32vf10x_mdelay+0x42>
+ 8000492:	02c50c63          	beq	a0,a2,80004ca <gd32vf10x_mdelay+0x42>
 {
- 80004a6:	1141                	addi	sp,sp,-16
+ 8000496:	1141                	addi	sp,sp,-16
     for(i=0;i<us;i++)
- 80004a8:	c402                	sw	zero,8(sp)
- 80004aa:	47a2                	lw	a5,8(sp)
- 80004ac:	02f6e263          	bltu	a3,a5,80004d0 <gd32vf10x_mdelay+0x38>
+ 8000498:	c402                	sw	zero,8(sp)
+ 800049a:	47a2                	lw	a5,8(sp)
+ 800049c:	02f6e263          	bltu	a3,a5,80004c0 <gd32vf10x_mdelay+0x38>
         for(j=0;j<10;j++);
- 80004b0:	c602                	sw	zero,12(sp)
- 80004b2:	47b2                	lw	a5,12(sp)
- 80004b4:	00f76863          	bltu	a4,a5,80004c4 <gd32vf10x_mdelay+0x2c>
- 80004b8:	47b2                	lw	a5,12(sp)
- 80004ba:	0785                	addi	a5,a5,1
- 80004bc:	c63e                	sw	a5,12(sp)
- 80004be:	47b2                	lw	a5,12(sp)
- 80004c0:	fef77ce3          	bgeu	a4,a5,80004b8 <gd32vf10x_mdelay+0x20>
+ 80004a0:	c602                	sw	zero,12(sp)
+ 80004a2:	47b2                	lw	a5,12(sp)
+ 80004a4:	00f76863          	bltu	a4,a5,80004b4 <gd32vf10x_mdelay+0x2c>
+ 80004a8:	47b2                	lw	a5,12(sp)
+ 80004aa:	0785                	addi	a5,a5,1
+ 80004ac:	c63e                	sw	a5,12(sp)
+ 80004ae:	47b2                	lw	a5,12(sp)
+ 80004b0:	fef77ce3          	bgeu	a4,a5,80004a8 <gd32vf10x_mdelay+0x20>
     for(i=0;i<us;i++)
- 80004c4:	47a2                	lw	a5,8(sp)
- 80004c6:	0785                	addi	a5,a5,1
- 80004c8:	c43e                	sw	a5,8(sp)
- 80004ca:	47a2                	lw	a5,8(sp)
- 80004cc:	fef6f2e3          	bgeu	a3,a5,80004b0 <gd32vf10x_mdelay+0x18>
+ 80004b4:	47a2                	lw	a5,8(sp)
+ 80004b6:	0785                	addi	a5,a5,1
+ 80004b8:	c43e                	sw	a5,8(sp)
+ 80004ba:	47a2                	lw	a5,8(sp)
+ 80004bc:	fef6f2e3          	bgeu	a3,a5,80004a0 <gd32vf10x_mdelay+0x18>
     while(ms--)
- 80004d0:	157d                	addi	a0,a0,-1
- 80004d2:	fcc51be3          	bne	a0,a2,80004a8 <gd32vf10x_mdelay+0x10>
+ 80004c0:	157d                	addi	a0,a0,-1
+ 80004c2:	fcc51be3          	bne	a0,a2,8000498 <gd32vf10x_mdelay+0x10>
     {
         gd32vf10x_udelay(1000);
     }
 }
- 80004d6:	0141                	addi	sp,sp,16
- 80004d8:	8082                	ret
- 80004da:	8082                	ret
+ 80004c6:	0141                	addi	sp,sp,16
+ 80004c8:	8082                	ret
+ 80004ca:	8082                	ret
 
-080004dc <gd32vf10x_sdelay>:
+080004cc <gd32vf10x_sdelay>:
 
 static void gd32vf10x_sdelay(uint32_t s)
 {
     while(s--)
- 80004dc:	c515                	beqz	a0,8000508 <gd32vf10x_sdelay+0x2c>
+ 80004cc:	c515                	beqz	a0,80004f8 <gd32vf10x_sdelay+0x2c>
 {
- 80004de:	1141                	addi	sp,sp,-16
- 80004e0:	c422                	sw	s0,8(sp)
- 80004e2:	c226                	sw	s1,4(sp)
- 80004e4:	c606                	sw	ra,12(sp)
- 80004e6:	fff50413          	addi	s0,a0,-1
+ 80004ce:	1141                	addi	sp,sp,-16
+ 80004d0:	c422                	sw	s0,8(sp)
+ 80004d2:	c226                	sw	s1,4(sp)
+ 80004d4:	c606                	sw	ra,12(sp)
+ 80004d6:	fff50413          	addi	s0,a0,-1
     while(s--)
- 80004ea:	54fd                	li	s1,-1
- 80004ec:	147d                	addi	s0,s0,-1
+ 80004da:	54fd                	li	s1,-1
+ 80004dc:	147d                	addi	s0,s0,-1
     {
         gd32vf10x_mdelay(1000);
- 80004ee:	3e800513          	li	a0,1000
- 80004f2:	00000097          	auipc	ra,0x0
- 80004f6:	fa6080e7          	jalr	-90(ra) # 8000498 <gd32vf10x_mdelay>
+ 80004de:	3e800513          	li	a0,1000
+ 80004e2:	00000097          	auipc	ra,0x0
+ 80004e6:	fa6080e7          	jalr	-90(ra) # 8000488 <gd32vf10x_mdelay>
     while(s--)
- 80004fa:	fe9419e3          	bne	s0,s1,80004ec <gd32vf10x_sdelay+0x10>
+ 80004ea:	fe9419e3          	bne	s0,s1,80004dc <gd32vf10x_sdelay+0x10>
     }
 }
- 80004fe:	40b2                	lw	ra,12(sp)
- 8000500:	4422                	lw	s0,8(sp)
- 8000502:	4492                	lw	s1,4(sp)
- 8000504:	0141                	addi	sp,sp,16
- 8000506:	8082                	ret
- 8000508:	8082                	ret
+ 80004ee:	40b2                	lw	ra,12(sp)
+ 80004f0:	4422                	lw	s0,8(sp)
+ 80004f2:	4492                	lw	s1,4(sp)
+ 80004f4:	0141                	addi	sp,sp,16
+ 80004f6:	8082                	ret
+ 80004f8:	8082                	ret
 
-0800050a <gd32vf10x_uart_remove>:
+080004fa <gd32vf10x_uart_remove>:
 }
 
 static int8_t gd32vf10x_uart_remove(struct uart_device *dev)
 {
 
 }
- 800050a:	8082                	ret
+ 80004fa:	8082                	ret
 
-0800050c <gd32vf10x_uart_set_baud_rate>:
+080004fc <gd32vf10x_uart_set_baud_rate>:
 
 static int8_t gd32vf10x_uart_set_baud_rate(struct uart_device *dev, uint32_t baud_rate)
 {
 
 }
- 800050c:	8082                	ret
+ 80004fc:	8082                	ret
 
-0800050e <gd32vf10x_uart_poll_read>:
+080004fe <gd32vf10x_uart_poll_read>:
 
 static int32_t gd32vf10x_uart_poll_read(struct uart_device *dev, uint8_t *buffer, uint32_t len)
 {
 
 }
- 800050e:	8082                	ret
+ 80004fe:	8082                	ret
 
-08000510 <gd32vf10x_uart_set_handler>:
+08000500 <gd32vf10x_uart_set_handler>:
     
 }
 
-static int8_t gd32vf10x_uart_set_handler(struct uart_device *dev, void (*handler)(void *data))
+static int8_t gd32vf10x_uart_set_handler(struct uart_device *dev, void (*handler)(void))
 {
-    dev->handler = handler;
- 8000510:	c54c                	sw	a1,12(a0)
+    uart_handler[dev->uart] = handler;
+ 8000500:	00054783          	lbu	a5,0(a0)
+ 8000504:	00279713          	slli	a4,a5,0x2
+ 8000508:	200007b7          	lui	a5,0x20000
+ 800050c:	0e878793          	addi	a5,a5,232 # 200000e8 <uart_handler>
+ 8000510:	97ba                	add	a5,a5,a4
+ 8000512:	c38c                	sw	a1,0(a5)
 }
- 8000512:	853e                	mv	a0,a5
  8000514:	8082                	ret
 
 08000516 <gd32vf10x_uart_probe>:
@@ -2565,11 +2567,11 @@ static int8_t gd32vf10x_uart_set_handler(struct uart_device *dev, void (*handler
  8000520:	c606                	sw	ra,12(sp)
     rcu_periph_clock_enable(RCU_USART0);  //打开USART0时钟
  8000522:	00000097          	auipc	ra,0x0
- 8000526:	220080e7          	jalr	544(ra) # 8000742 <rcu_periph_clock_enable>
+ 8000526:	222080e7          	jalr	546(ra) # 8000744 <rcu_periph_clock_enable>
     rcu_periph_clock_enable(RCU_GPIOA);   //打开GPIOA时钟
  800052a:	60200513          	li	a0,1538
  800052e:	00000097          	auipc	ra,0x0
- 8000532:	214080e7          	jalr	532(ra) # 8000742 <rcu_periph_clock_enable>
+ 8000532:	216080e7          	jalr	534(ra) # 8000744 <rcu_periph_clock_enable>
     switch(dev->uart)
  8000536:	00044783          	lbu	a5,0(s0)
  800053a:	c395                	beqz	a5,800055e <gd32vf10x_uart_probe+0x48>
@@ -2594,443 +2596,443 @@ static int8_t gd32vf10x_uart_set_handler(struct uart_device *dev, void (*handler
             RCU_APB2EN |= (1<<14); //enable uart0 clock
  800055e:	40021737          	lui	a4,0x40021
  8000562:	4f1c                	lw	a5,24(a4)
- 8000564:	6691                	lui	a3,0x4
 }
- 8000566:	40b2                	lw	ra,12(sp)
+ 8000564:	40b2                	lw	ra,12(sp)
+ 8000566:	4422                	lw	s0,8(sp)
             RCU_APB2EN |= (1<<14); //enable uart0 clock
- 8000568:	8fd5                	or	a5,a5,a3
- 800056a:	cf1c                	sw	a5,24(a4)
-    dev->nvic_addr = nvic_addr[dev->uart]; //set nvic addr
- 800056c:	00044783          	lbu	a5,0(s0)
- 8000570:	4501                	li	a0,0
- 8000572:	00279713          	slli	a4,a5,0x2
- 8000576:	080007b7          	lui	a5,0x8000
- 800057a:	28078793          	addi	a5,a5,640 # 8000280 <nvic_addr>
- 800057e:	97ba                	add	a5,a5,a4
- 8000580:	439c                	lw	a5,0(a5)
- 8000582:	c81c                	sw	a5,16(s0)
+ 8000568:	6691                	lui	a3,0x4
+ 800056a:	8fd5                	or	a5,a5,a3
+ 800056c:	cf1c                	sw	a5,24(a4)
+ 800056e:	4501                	li	a0,0
 }
- 8000584:	4422                	lw	s0,8(sp)
- 8000586:	0141                	addi	sp,sp,16
- 8000588:	8082                	ret
+ 8000570:	0141                	addi	sp,sp,16
+ 8000572:	8082                	ret
 
-0800058a <gd32vf10x_uart_poll_write>:
- 800058a:	4501                	li	a0,0
- 800058c:	8082                	ret
+08000574 <gd32vf10x_uart_poll_write>:
+ 8000574:	4501                	li	a0,0
+ 8000576:	8082                	ret
 
-0800058e <USART0_IRQHandler>:
-}
- 800058e:	8082                	ret
+08000578 <USART0_IRQHandler>:
+    (*uart_handler[0])();
+ 8000578:	200007b7          	lui	a5,0x20000
+ 800057c:	0e87a303          	lw	t1,232(a5) # 200000e8 <uart_handler>
+ 8000580:	8302                	jr	t1
 
-08000590 <USART1_IRQHandler>:
- 8000590:	8082                	ret
+08000582 <USART1_IRQHandler>:
+    (*uart_handler[1])();
+ 8000582:	200007b7          	lui	a5,0x20000
+ 8000586:	0ec7a303          	lw	t1,236(a5) # 200000ec <uart_handler+0x4>
+ 800058a:	8302                	jr	t1
 
-08000592 <USART2_IRQHandler>:
- 8000592:	8082                	ret
+0800058c <USART2_IRQHandler>:
+    (*uart_handler[2])();
+ 800058c:	200007b7          	lui	a5,0x20000
+ 8000590:	0f07a303          	lw	t1,240(a5) # 200000f0 <uart_handler+0x8>
+ 8000594:	8302                	jr	t1
 
-08000594 <gd32vf10x_i2c_probe>:
+08000596 <gd32vf10x_i2c_probe>:
 
 
 static int8_t gd32vf10x_i2c_probe(struct i2c_client *client)
 {
     
 }
- 8000594:	8082                	ret
+ 8000596:	8082                	ret
 
-08000596 <gd32vf10x_i2c_write>:
+08000598 <gd32vf10x_i2c_write>:
     
 }
 static uint32_t gd32vf10x_i2c_write(struct i2c_client *client, uint8_t *buffer, uint32_t len)
 {
 
 }
- 8000596:	8082                	ret
+ 8000598:	8082                	ret
 
-08000598 <gd32vf10x_i2c_cmd_write>:
+0800059a <gd32vf10x_i2c_cmd_write>:
 }
 
 static uint32_t gd32vf10x_i2c_cmd_write(struct i2c_client *client, uint8_t *cmd, uint8_t *buffer,uint32_t cmd_size,uint32_t len)
 {
 
 }
- 8000598:	8082                	ret
+ 800059a:	8082                	ret
 
-0800059a <gd32vf10x_i2c_set_speed>:
+0800059c <gd32vf10x_i2c_set_speed>:
 }
 
 static int8_t gd32vf10x_i2c_set_speed(struct i2c_client *client, uint32_t speed_hz)
 {
 
 }
- 800059a:	8082                	ret
+ 800059c:	8082                	ret
 
-0800059c <gd32vf10x_i2c_cmd_read>:
- 800059c:	4501                	li	a0,0
- 800059e:	8082                	ret
+0800059e <gd32vf10x_i2c_cmd_read>:
+ 800059e:	4501                	li	a0,0
+ 80005a0:	8082                	ret
 
-080005a0 <gd32vf10x_i2c_read>:
- 80005a0:	4501                	li	a0,0
- 80005a2:	8082                	ret
+080005a2 <gd32vf10x_i2c_read>:
+ 80005a2:	4501                	li	a0,0
+ 80005a4:	8082                	ret
 
-080005a4 <gd32vf10x_i2c_remove>:
- 80005a4:	4501                	li	a0,0
- 80005a6:	8082                	ret
+080005a6 <gd32vf10x_i2c_remove>:
+ 80005a6:	4501                	li	a0,0
+ 80005a8:	8082                	ret
 
-080005a8 <handle_nmi>:
+080005aa <handle_nmi>:
 __attribute__((weak)) unsigned int handle_nmi()
 {
   //write(1, "nmi\n", 5);
   //_exit(1);
   return 0;
 }
- 80005a8:	4501                	li	a0,0
- 80005aa:	8082                	ret
+ 80005aa:	4501                	li	a0,0
+ 80005ac:	8082                	ret
 
-080005ac <handle_trap>:
+080005ae <handle_trap>:
 
 
 __attribute__((weak)) unsigned int handle_trap(unsigned int mcause, unsigned int sp)
 {
- 80005ac:	1141                	addi	sp,sp,-16
- 80005ae:	c606                	sw	ra,12(sp)
+ 80005ae:	1141                	addi	sp,sp,-16
+ 80005b0:	c606                	sw	ra,12(sp)
   //if(mcause == 0xFFF) {
       handle_nmi();
- 80005b0:	00000097          	auipc	ra,0x0
- 80005b4:	ff8080e7          	jalr	-8(ra) # 80005a8 <handle_nmi>
+ 80005b2:	00000097          	auipc	ra,0x0
+ 80005b6:	ff8080e7          	jalr	-8(ra) # 80005aa <handle_nmi>
   //printf("In trap handler, the mcause is %d\n", mcause);
   //printf("In trap handler, the mepc is 0x%x\n", read_csr(mepc));
   //printf("In trap handler, the mtval is 0x%x\n", read_csr(mbadaddr));
   //_exit(mcause);
   return 0;
 }
- 80005b8:	40b2                	lw	ra,12(sp)
- 80005ba:	4501                	li	a0,0
- 80005bc:	0141                	addi	sp,sp,16
- 80005be:	8082                	ret
+ 80005ba:	40b2                	lw	ra,12(sp)
+ 80005bc:	4501                	li	a0,0
+ 80005be:	0141                	addi	sp,sp,16
+ 80005c0:	8082                	ret
 
-080005c0 <SystemInit>:
+080005c2 <SystemInit>:
 */
 void SystemInit(void)
 {
     /* reset the RCC clock configuration to the default reset state */
     /* enable IRC8M */
     RCU_CTL |= RCU_CTL_IRC8MEN;
- 80005c0:	400217b7          	lui	a5,0x40021
- 80005c4:	4398                	lw	a4,0(a5)
+ 80005c2:	400217b7          	lui	a5,0x40021
+ 80005c6:	4398                	lw	a4,0(a5)
     
     /* reset SCS, AHBPSC, APB1PSC, APB2PSC, ADCPSC, CKOUT0SEL bits */
     RCU_CFG0 &= ~(RCU_CFG0_SCS | RCU_CFG0_AHBPSC | RCU_CFG0_APB1PSC | RCU_CFG0_APB2PSC |
- 80005c6:	e0ff06b7          	lui	a3,0xe0ff0
- 80005ca:	06b1                	addi	a3,a3,12
+ 80005c8:	e0ff06b7          	lui	a3,0xe0ff0
+ 80005cc:	06b1                	addi	a3,a3,12
     RCU_CTL |= RCU_CTL_IRC8MEN;
- 80005cc:	00176713          	ori	a4,a4,1
- 80005d0:	c398                	sw	a4,0(a5)
+ 80005ce:	00176713          	ori	a4,a4,1
+ 80005d2:	c398                	sw	a4,0(a5)
     RCU_CFG0 &= ~(RCU_CFG0_SCS | RCU_CFG0_AHBPSC | RCU_CFG0_APB1PSC | RCU_CFG0_APB2PSC |
- 80005d2:	43d8                	lw	a4,4(a5)
+ 80005d4:	43d8                	lw	a4,4(a5)
     RCU_CFG0 &= ~(RCU_CFG0_PLLSEL | RCU_CFG0_PREDV0_LSB | RCU_CFG0_PLLMF |
                   RCU_CFG0_USBFSPSC | RCU_CFG0_PLLMF_4);
     RCU_CFG1 = 0x00000000U;
 
     /* Reset HXTALEN, CKMEN, PLLEN, PLL1EN and PLL2EN bits */
     RCU_CTL &= ~(RCU_CTL_PLLEN | RCU_CTL_PLL1EN | RCU_CTL_PLL2EN | RCU_CTL_CKMEN | RCU_CTL_HXTALEN);
- 80005d4:	eaf70637          	lui	a2,0xeaf70
- 80005d8:	167d                	addi	a2,a2,-1
+ 80005d6:	eaf70637          	lui	a2,0xeaf70
+ 80005da:	167d                	addi	a2,a2,-1
     RCU_CFG0 &= ~(RCU_CFG0_SCS | RCU_CFG0_AHBPSC | RCU_CFG0_APB1PSC | RCU_CFG0_APB2PSC |
- 80005da:	8f75                	and	a4,a4,a3
- 80005dc:	c3d8                	sw	a4,4(a5)
+ 80005dc:	8f75                	and	a4,a4,a3
+ 80005de:	c3d8                	sw	a4,4(a5)
     RCU_CTL &= ~(RCU_CTL_HXTALEN | RCU_CTL_CKMEN | RCU_CTL_PLLEN);
- 80005de:	4398                	lw	a4,0(a5)
- 80005e0:	fef706b7          	lui	a3,0xfef70
- 80005e4:	16fd                	addi	a3,a3,-1
- 80005e6:	8f75                	and	a4,a4,a3
- 80005e8:	c398                	sw	a4,0(a5)
+ 80005e0:	4398                	lw	a4,0(a5)
+ 80005e2:	fef706b7          	lui	a3,0xfef70
+ 80005e6:	16fd                	addi	a3,a3,-1
+ 80005e8:	8f75                	and	a4,a4,a3
+ 80005ea:	c398                	sw	a4,0(a5)
     RCU_CTL &= ~(RCU_CTL_HXTALBPS);
- 80005ea:	4398                	lw	a4,0(a5)
- 80005ec:	fffc06b7          	lui	a3,0xfffc0
- 80005f0:	16fd                	addi	a3,a3,-1
- 80005f2:	8f75                	and	a4,a4,a3
- 80005f4:	c398                	sw	a4,0(a5)
+ 80005ec:	4398                	lw	a4,0(a5)
+ 80005ee:	fffc06b7          	lui	a3,0xfffc0
+ 80005f2:	16fd                	addi	a3,a3,-1
+ 80005f4:	8f75                	and	a4,a4,a3
+ 80005f6:	c398                	sw	a4,0(a5)
     RCU_CFG0 &= ~(RCU_CFG0_PLLSEL | RCU_CFG0_PREDV0_LSB | RCU_CFG0_PLLMF |
- 80005f6:	43d8                	lw	a4,4(a5)
- 80005f8:	df0106b7          	lui	a3,0xdf010
- 80005fc:	16fd                	addi	a3,a3,-1
- 80005fe:	8f75                	and	a4,a4,a3
- 8000600:	c3d8                	sw	a4,4(a5)
+ 80005f8:	43d8                	lw	a4,4(a5)
+ 80005fa:	df0106b7          	lui	a3,0xdf010
+ 80005fe:	16fd                	addi	a3,a3,-1
+ 8000600:	8f75                	and	a4,a4,a3
+ 8000602:	c3d8                	sw	a4,4(a5)
     RCU_CFG1 = 0x00000000U;
- 8000602:	0207a623          	sw	zero,44(a5) # 4002102c <_sp+0x2001902c>
+ 8000604:	0207a623          	sw	zero,44(a5) # 4002102c <_sp+0x2001902c>
     RCU_CTL &= ~(RCU_CTL_PLLEN | RCU_CTL_PLL1EN | RCU_CTL_PLL2EN | RCU_CTL_CKMEN | RCU_CTL_HXTALEN);
- 8000606:	4394                	lw	a3,0(a5)
+ 8000608:	4394                	lw	a3,0(a5)
     /* disable all interrupts */
     RCU_INT = 0x00FF0000U;
- 8000608:	00ff0737          	lui	a4,0xff0
+ 800060a:	00ff0737          	lui	a4,0xff0
 {
     uint32_t timeout   = 0U;
     uint32_t stab_flag = 0U;
 
     /* enable HXTAL */
     RCU_CTL |= RCU_CTL_HXTALEN;
- 800060c:	65c1                	lui	a1,0x10
+ 800060e:	65c1                	lui	a1,0x10
     RCU_CTL &= ~(RCU_CTL_PLLEN | RCU_CTL_PLL1EN | RCU_CTL_PLL2EN | RCU_CTL_CKMEN | RCU_CTL_HXTALEN);
- 800060e:	8ef1                	and	a3,a3,a2
- 8000610:	c394                	sw	a3,0(a5)
+ 8000610:	8ef1                	and	a3,a3,a2
+ 8000612:	c394                	sw	a3,0(a5)
     RCU_INT = 0x00FF0000U;
- 8000612:	c798                	sw	a4,8(a5)
+ 8000614:	c798                	sw	a4,8(a5)
     RCU_CTL |= RCU_CTL_HXTALEN;
- 8000614:	4398                	lw	a4,0(a5)
- 8000616:	fff58693          	addi	a3,a1,-1 # ffff <__stack_size+0xf7ff>
+ 8000616:	4398                	lw	a4,0(a5)
+ 8000618:	fff58693          	addi	a3,a1,-1 # ffff <__stack_size+0xf7ff>
 
     /* wait until HXTAL is stable or the startup time is longer than HXTAL_STARTUP_TIMEOUT */
     do{
         timeout++;
         stab_flag = (RCU_CTL & RCU_CTL_HXTALSTB);
- 800061a:	40021637          	lui	a2,0x40021
+ 800061c:	40021637          	lui	a2,0x40021
     RCU_CTL |= RCU_CTL_HXTALEN;
- 800061e:	8f4d                	or	a4,a4,a1
- 8000620:	c398                	sw	a4,0(a5)
- 8000622:	a011                	j	8000626 <SystemInit+0x66>
+ 8000620:	8f4d                	or	a4,a4,a1
+ 8000622:	c398                	sw	a4,0(a5)
+ 8000624:	a011                	j	8000628 <SystemInit+0x66>
     }while((0U == stab_flag) && (HXTAL_STARTUP_TIMEOUT != timeout));
- 8000624:	c699                	beqz	a3,8000632 <SystemInit+0x72>
+ 8000626:	c699                	beqz	a3,8000634 <SystemInit+0x72>
         stab_flag = (RCU_CTL & RCU_CTL_HXTALSTB);
- 8000626:	421c                	lw	a5,0(a2)
- 8000628:	16fd                	addi	a3,a3,-1
+ 8000628:	421c                	lw	a5,0(a2)
+ 800062a:	16fd                	addi	a3,a3,-1
     }while((0U == stab_flag) && (HXTAL_STARTUP_TIMEOUT != timeout));
- 800062a:	00e79713          	slli	a4,a5,0xe
- 800062e:	fe075be3          	bgez	a4,8000624 <SystemInit+0x64>
+ 800062c:	00e79713          	slli	a4,a5,0xe
+ 8000630:	fe075be3          	bgez	a4,8000626 <SystemInit+0x64>
 
     /* if fail */
     if(0U == (RCU_CTL & RCU_CTL_HXTALSTB)){
- 8000632:	400217b7          	lui	a5,0x40021
- 8000636:	4398                	lw	a4,0(a5)
- 8000638:	00e71693          	slli	a3,a4,0xe
- 800063c:	0a06d063          	bgez	a3,80006dc <SystemInit+0x11c>
+ 8000634:	400217b7          	lui	a5,0x40021
+ 8000638:	4398                	lw	a4,0(a5)
+ 800063a:	00e71693          	slli	a3,a4,0xe
+ 800063e:	0a06d063          	bgez	a3,80006de <SystemInit+0x11c>
         }
     }
 
     /* HXTAL is stable */
     /* AHB = SYSCLK */
     RCU_CFG0 |= RCU_AHB_CKSYS_DIV1;
- 8000640:	43d8                	lw	a4,4(a5)
+ 8000642:	43d8                	lw	a4,4(a5)
     RCU_CFG0 |= RCU_APB2_CKAHB_DIV1;
     /* APB1 = AHB/2 */
     RCU_CFG0 |= RCU_APB1_CKAHB_DIV2;
 
     /* CK_PLL = (CK_PREDIV0) * 27 = 108 MHz */ 
     RCU_CFG0 &= ~(RCU_CFG0_PLLMF | RCU_CFG0_PLLMF_4);
- 8000642:	dfc40637          	lui	a2,0xdfc40
- 8000646:	167d                	addi	a2,a2,-1
+ 8000644:	dfc40637          	lui	a2,0xdfc40
+ 8000648:	167d                	addi	a2,a2,-1
     RCU_CFG0 |= RCU_AHB_CKSYS_DIV1;
- 8000648:	c3d8                	sw	a4,4(a5)
+ 800064a:	c3d8                	sw	a4,4(a5)
     RCU_CFG0 |= RCU_APB2_CKAHB_DIV1;
- 800064a:	43d8                	lw	a4,4(a5)
+ 800064c:	43d8                	lw	a4,4(a5)
 		RCU_CFG1 |= (RCU_PREDV0SRC_HXTAL | RCU_PREDV0_DIV2 | RCU_PREDV1_DIV2 | RCU_PLL1_MUL20 | RCU_PLL2_MUL20);
 
 		/* enable PLL1 */
 		RCU_CTL |= RCU_CTL_PLL1EN;
 		/* wait till PLL1 is ready */
 		while(0U == (RCU_CTL & RCU_CTL_PLL1STB)){
- 800064c:	400216b7          	lui	a3,0x40021
+ 800064e:	400216b7          	lui	a3,0x40021
     RCU_CFG0 |= RCU_APB2_CKAHB_DIV1;
- 8000650:	c3d8                	sw	a4,4(a5)
+ 8000652:	c3d8                	sw	a4,4(a5)
     RCU_CFG0 |= RCU_APB1_CKAHB_DIV2;
- 8000652:	43d8                	lw	a4,4(a5)
- 8000654:	40076713          	ori	a4,a4,1024
- 8000658:	c3d8                	sw	a4,4(a5)
+ 8000654:	43d8                	lw	a4,4(a5)
+ 8000656:	40076713          	ori	a4,a4,1024
+ 800065a:	c3d8                	sw	a4,4(a5)
     RCU_CFG0 &= ~(RCU_CFG0_PLLMF | RCU_CFG0_PLLMF_4);
- 800065a:	43d8                	lw	a4,4(a5)
- 800065c:	8f71                	and	a4,a4,a2
- 800065e:	c3d8                	sw	a4,4(a5)
+ 800065c:	43d8                	lw	a4,4(a5)
+ 800065e:	8f71                	and	a4,a4,a2
+ 8000660:	c3d8                	sw	a4,4(a5)
     RCU_CFG0 |= (RCU_PLLSRC_HXTAL | RCU_PLL_MUL27);
- 8000660:	43d8                	lw	a4,4(a5)
- 8000662:	20290637          	lui	a2,0x20290
- 8000666:	8f51                	or	a4,a4,a2
- 8000668:	c3d8                	sw	a4,4(a5)
+ 8000662:	43d8                	lw	a4,4(a5)
+ 8000664:	20290637          	lui	a2,0x20290
+ 8000668:	8f51                	or	a4,a4,a2
+ 800066a:	c3d8                	sw	a4,4(a5)
 		RCU_CFG1 &= ~(RCU_CFG1_PREDV0SEL | RCU_CFG1_PREDV1 | RCU_CFG1_PLL1MF | RCU_CFG1_PREDV0);
- 800066a:	57d8                	lw	a4,44(a5)
- 800066c:	763d                	lui	a2,0xfffef
- 800066e:	8f71                	and	a4,a4,a2
- 8000670:	d7d8                	sw	a4,44(a5)
+ 800066c:	57d8                	lw	a4,44(a5)
+ 800066e:	763d                	lui	a2,0xfffef
+ 8000670:	8f71                	and	a4,a4,a2
+ 8000672:	d7d8                	sw	a4,44(a5)
 		RCU_CFG1 |= (RCU_PREDV0SRC_HXTAL | RCU_PREDV0_DIV2 | RCU_PREDV1_DIV2 | RCU_PLL1_MUL20 | RCU_PLL2_MUL20);
- 8000672:	57d8                	lw	a4,44(a5)
- 8000674:	6641                	lui	a2,0x10
- 8000676:	f1160613          	addi	a2,a2,-239 # ff11 <__stack_size+0xf711>
- 800067a:	8f51                	or	a4,a4,a2
- 800067c:	d7d8                	sw	a4,44(a5)
+ 8000674:	57d8                	lw	a4,44(a5)
+ 8000676:	6641                	lui	a2,0x10
+ 8000678:	f1160613          	addi	a2,a2,-239 # ff11 <__stack_size+0xf711>
+ 800067c:	8f51                	or	a4,a4,a2
+ 800067e:	d7d8                	sw	a4,44(a5)
 		RCU_CTL |= RCU_CTL_PLL1EN;
- 800067e:	4398                	lw	a4,0(a5)
- 8000680:	04000637          	lui	a2,0x4000
- 8000684:	8f51                	or	a4,a4,a2
- 8000686:	c398                	sw	a4,0(a5)
+ 8000680:	4398                	lw	a4,0(a5)
+ 8000682:	04000637          	lui	a2,0x4000
+ 8000686:	8f51                	or	a4,a4,a2
+ 8000688:	c398                	sw	a4,0(a5)
 		while(0U == (RCU_CTL & RCU_CTL_PLL1STB)){
- 8000688:	429c                	lw	a5,0(a3)
- 800068a:	00479713          	slli	a4,a5,0x4
- 800068e:	fe075de3          	bgez	a4,8000688 <SystemInit+0xc8>
+ 800068a:	429c                	lw	a5,0(a3)
+ 800068c:	00479713          	slli	a4,a5,0x4
+ 8000690:	fe075de3          	bgez	a4,800068a <SystemInit+0xc8>
 		}
 
 		/* enable PLL2 */
 		RCU_CTL |= RCU_CTL_PLL2EN;
- 8000692:	429c                	lw	a5,0(a3)
- 8000694:	10000637          	lui	a2,0x10000
+ 8000694:	429c                	lw	a5,0(a3)
+ 8000696:	10000637          	lui	a2,0x10000
 		/* wait till PLL1 is ready */
 		while(0U == (RCU_CTL & RCU_CTL_PLL2STB)){
- 8000698:	40021737          	lui	a4,0x40021
+ 800069a:	40021737          	lui	a4,0x40021
 		RCU_CTL |= RCU_CTL_PLL2EN;
- 800069c:	8fd1                	or	a5,a5,a2
- 800069e:	c29c                	sw	a5,0(a3)
+ 800069e:	8fd1                	or	a5,a5,a2
+ 80006a0:	c29c                	sw	a5,0(a3)
 		while(0U == (RCU_CTL & RCU_CTL_PLL2STB)){
- 80006a0:	431c                	lw	a5,0(a4)
- 80006a2:	00279693          	slli	a3,a5,0x2
- 80006a6:	fe06dde3          	bgez	a3,80006a0 <SystemInit+0xe0>
+ 80006a2:	431c                	lw	a5,0(a4)
+ 80006a4:	00279693          	slli	a3,a5,0x2
+ 80006a8:	fe06dde3          	bgez	a3,80006a2 <SystemInit+0xe0>
 		}
 
     }
     /* enable PLL */
     RCU_CTL |= RCU_CTL_PLLEN;
- 80006aa:	4314                	lw	a3,0(a4)
- 80006ac:	01000637          	lui	a2,0x1000
+ 80006ac:	4314                	lw	a3,0(a4)
+ 80006ae:	01000637          	lui	a2,0x1000
 
     /* wait until PLL is stable */
     while(0U == (RCU_CTL & RCU_CTL_PLLSTB)){
- 80006b0:	400217b7          	lui	a5,0x40021
+ 80006b2:	400217b7          	lui	a5,0x40021
     RCU_CTL |= RCU_CTL_PLLEN;
- 80006b4:	8ed1                	or	a3,a3,a2
- 80006b6:	c314                	sw	a3,0(a4)
+ 80006b6:	8ed1                	or	a3,a3,a2
+ 80006b8:	c314                	sw	a3,0(a4)
     while(0U == (RCU_CTL & RCU_CTL_PLLSTB)){
- 80006b8:	4398                	lw	a4,0(a5)
- 80006ba:	00671693          	slli	a3,a4,0x6
- 80006be:	fe06dde3          	bgez	a3,80006b8 <SystemInit+0xf8>
+ 80006ba:	4398                	lw	a4,0(a5)
+ 80006bc:	00671693          	slli	a3,a4,0x6
+ 80006c0:	fe06dde3          	bgez	a3,80006ba <SystemInit+0xf8>
     }
 
     /* select PLL as system clock */
     RCU_CFG0 &= ~RCU_CFG0_SCS;
- 80006c2:	43d8                	lw	a4,4(a5)
+ 80006c4:	43d8                	lw	a4,4(a5)
     RCU_CFG0 |= RCU_CKSYSSRC_PLL;
 
     /* wait until PLL is selected as system clock */
     while(0U == (RCU_CFG0 & RCU_SCSS_PLL)){
- 80006c4:	400216b7          	lui	a3,0x40021
+ 80006c6:	400216b7          	lui	a3,0x40021
     RCU_CFG0 &= ~RCU_CFG0_SCS;
- 80006c8:	9b71                	andi	a4,a4,-4
- 80006ca:	c3d8                	sw	a4,4(a5)
+ 80006ca:	9b71                	andi	a4,a4,-4
+ 80006cc:	c3d8                	sw	a4,4(a5)
     RCU_CFG0 |= RCU_CKSYSSRC_PLL;
- 80006cc:	43d8                	lw	a4,4(a5)
- 80006ce:	00276713          	ori	a4,a4,2
- 80006d2:	c3d8                	sw	a4,4(a5)
+ 80006ce:	43d8                	lw	a4,4(a5)
+ 80006d0:	00276713          	ori	a4,a4,2
+ 80006d4:	c3d8                	sw	a4,4(a5)
     while(0U == (RCU_CFG0 & RCU_SCSS_PLL)){
- 80006d4:	42dc                	lw	a5,4(a3)
- 80006d6:	8ba1                	andi	a5,a5,8
- 80006d8:	dff5                	beqz	a5,80006d4 <SystemInit+0x114>
+ 80006d6:	42dc                	lw	a5,4(a3)
+ 80006d8:	8ba1                	andi	a5,a5,8
+ 80006da:	dff5                	beqz	a5,80006d6 <SystemInit+0x114>
 }
- 80006da:	8082                	ret
+ 80006dc:	8082                	ret
         }
- 80006dc:	a001                	j	80006dc <SystemInit+0x11c>
+ 80006de:	a001                	j	80006de <SystemInit+0x11c>
 
-080006de <eclic_init>:
+080006e0 <eclic_init>:
 {
 
   typedef volatile unsigned int vuint32_t;
 
   //clear cfg register 
   *(volatile unsigned char*)(ECLIC_ADDR_BASE+ECLIC_CFG_OFFSET)=0;
- 80006de:	d2000737          	lui	a4,0xd2000
- 80006e2:	00070023          	sb	zero,0(a4) # d2000000 <_sp+0xb1ff8000>
+ 80006e0:	d2000737          	lui	a4,0xd2000
+ 80006e4:	00070023          	sb	zero,0(a4) # d2000000 <_sp+0xb1ff8000>
 
   //clear all IP/IE/ATTR/CTRL bits for all interrupt sources
   vuint32_t * ptr;
 
   vuint32_t * base = (vuint32_t*)(ECLIC_ADDR_BASE + ECLIC_INT_IP_OFFSET);
   vuint32_t * upper = (vuint32_t*)(base + num_irq*4);
- 80006e6:	0512                	slli	a0,a0,0x4
- 80006e8:	d20017b7          	lui	a5,0xd2001
+ 80006e8:	0512                	slli	a0,a0,0x4
+ 80006ea:	d20017b7          	lui	a5,0xd2001
   *(volatile unsigned char*)(ECLIC_ADDR_BASE+ECLIC_MTH_OFFSET)=0;
- 80006ec:	000705a3          	sb	zero,11(a4)
+ 80006ee:	000705a3          	sb	zero,11(a4)
   vuint32_t * upper = (vuint32_t*)(base + num_irq*4);
- 80006f0:	953e                	add	a0,a0,a5
+ 80006f2:	953e                	add	a0,a0,a5
 
   for (ptr = base; ptr < upper; ptr=ptr+4){
- 80006f2:	00a7f763          	bgeu	a5,a0,8000700 <eclic_init+0x22>
+ 80006f4:	00a7f763          	bgeu	a5,a0,8000702 <eclic_init+0x22>
     *ptr = 0;
- 80006f6:	0007a023          	sw	zero,0(a5) # d2001000 <_sp+0xb1ff9000>
+ 80006f8:	0007a023          	sw	zero,0(a5) # d2001000 <_sp+0xb1ff9000>
   for (ptr = base; ptr < upper; ptr=ptr+4){
- 80006fa:	07c1                	addi	a5,a5,16
- 80006fc:	fea7ede3          	bltu	a5,a0,80006f6 <eclic_init+0x18>
+ 80006fc:	07c1                	addi	a5,a5,16
+ 80006fe:	fea7ede3          	bltu	a5,a0,80006f8 <eclic_init+0x18>
   }
 }
- 8000700:	8082                	ret
+ 8000702:	8082                	ret
 
-08000702 <eclic_mode_enable>:
+08000704 <eclic_mode_enable>:
 
 	return priority;
 }
 
 void eclic_mode_enable() {
   unsigned int mtvec_value = read_csr(mtvec);
- 8000702:	305027f3          	csrr	a5,mtvec
+ 8000704:	305027f3          	csrr	a5,mtvec
   mtvec_value = mtvec_value & 0xFFFFFFC0;
- 8000706:	fc07f793          	andi	a5,a5,-64
+ 8000708:	fc07f793          	andi	a5,a5,-64
   mtvec_value = mtvec_value | 0x00000003;
- 800070a:	0037e793          	ori	a5,a5,3
+ 800070c:	0037e793          	ori	a5,a5,3
   write_csr(mtvec,mtvec_value);
- 800070e:	30579073          	csrw	mtvec,a5
+ 8000710:	30579073          	csrw	mtvec,a5
 }
- 8000712:	8082                	ret
+ 8000714:	8082                	ret
 
-08000714 <_init>:
+08000716 <_init>:
 #include "riscv_encoding.h"
 #include "n200_func.h"
 
 extern unsigned int disable_mcycle_minstret();
 void _init()
 {
- 8000714:	1141                	addi	sp,sp,-16
- 8000716:	c606                	sw	ra,12(sp)
+ 8000716:	1141                	addi	sp,sp,-16
+ 8000718:	c606                	sw	ra,12(sp)
 	SystemInit();
- 8000718:	00000097          	auipc	ra,0x0
- 800071c:	ea8080e7          	jalr	-344(ra) # 80005c0 <SystemInit>
+ 800071a:	00000097          	auipc	ra,0x0
+ 800071e:	ea8080e7          	jalr	-344(ra) # 80005c2 <SystemInit>
 
 	//ECLIC init
 	eclic_init(ECLIC_NUM_INTERRUPTS);
- 8000720:	05700513          	li	a0,87
- 8000724:	00000097          	auipc	ra,0x0
- 8000728:	fba080e7          	jalr	-70(ra) # 80006de <eclic_init>
+ 8000722:	05700513          	li	a0,87
+ 8000726:	00000097          	auipc	ra,0x0
+ 800072a:	fba080e7          	jalr	-70(ra) # 80006e0 <eclic_init>
 	eclic_mode_enable();
- 800072c:	00000097          	auipc	ra,0x0
- 8000730:	fd6080e7          	jalr	-42(ra) # 8000702 <eclic_mode_enable>
+ 800072e:	00000097          	auipc	ra,0x0
+ 8000732:	fd6080e7          	jalr	-42(ra) # 8000704 <eclic_mode_enable>
 	//switch_m2u_mode();
 	
     /* Before enter into main, add the cycle/instret disable by default to save power,
     only use them when needed to measure the cycle/instret */
 	disable_mcycle_minstret();
 }
- 8000734:	40b2                	lw	ra,12(sp)
- 8000736:	0141                	addi	sp,sp,16
+ 8000736:	40b2                	lw	ra,12(sp)
+ 8000738:	0141                	addi	sp,sp,16
 	disable_mcycle_minstret();
- 8000738:	00000317          	auipc	t1,0x0
- 800073c:	b0e30067          	jr	-1266(t1) # 8000246 <disable_mcycle_minstret>
+ 800073a:	00000317          	auipc	t1,0x0
+ 800073e:	b0c30067          	jr	-1268(t1) # 8000246 <disable_mcycle_minstret>
 
-08000740 <_fini>:
+08000742 <_fini>:
 
 void _fini()
 {
 }
- 8000740:	8082                	ret
+ 8000742:	8082                	ret
 
-08000742 <rcu_periph_clock_enable>:
+08000744 <rcu_periph_clock_enable>:
     \param[out] none
     \retval     none
 */
 void rcu_periph_clock_enable(rcu_periph_enum periph)
 {
     RCU_REG_VAL(periph) |= BIT(RCU_BIT_POS(periph));
- 8000742:	400217b7          	lui	a5,0x40021
- 8000746:	00655713          	srli	a4,a0,0x6
- 800074a:	973e                	add	a4,a4,a5
- 800074c:	4314                	lw	a3,0(a4)
- 800074e:	4785                	li	a5,1
- 8000750:	00a797b3          	sll	a5,a5,a0
- 8000754:	8fd5                	or	a5,a5,a3
- 8000756:	c31c                	sw	a5,0(a4)
+ 8000744:	400217b7          	lui	a5,0x40021
+ 8000748:	00655713          	srli	a4,a0,0x6
+ 800074c:	973e                	add	a4,a4,a5
+ 800074e:	4314                	lw	a3,0(a4)
+ 8000750:	4785                	li	a5,1
+ 8000752:	00a797b3          	sll	a5,a5,a0
+ 8000756:	8fd5                	or	a5,a5,a3
+ 8000758:	c31c                	sw	a5,0(a4)
 }
- 8000758:	8082                	ret
+ 800075a:	8082                	ret
 	...
 
 08000780 <trap_entry>:
@@ -3075,7 +3077,7 @@ trap_entry:
      // Call the function
   call handle_trap
  80007bc:	00000097          	auipc	ra,0x0
- 80007c0:	df0080e7          	jalr	-528(ra) # 80005ac <handle_trap>
+ 80007c0:	df2080e7          	jalr	-526(ra) # 80005ae <handle_trap>
 
   // Restore the MEPC/Mstatus/Msubm reg
   RESTORE_EPC_STATUS
@@ -3309,7 +3311,7 @@ service_loop:
  8000968:	8e2a                	mv	t3,a0
  800096a:	e78d                	bnez	a5,8000994 <__register_exitproc+0x36>
  800096c:	17fff717          	auipc	a4,0x17fff
- 8000970:	77c70713          	addi	a4,a4,1916 # 200000e8 <_global_atexit0>
+ 8000970:	78c70713          	addi	a4,a4,1932 # 200000f8 <_global_atexit0>
  8000974:	17fff797          	auipc	a5,0x17fff
  8000978:	76e7a823          	sw	a4,1904(a5) # 200000e4 <_global_atexit>
  800097c:	f7fff517          	auipc	a0,0xf7fff
@@ -3318,7 +3320,7 @@ service_loop:
  8000986:	c519                	beqz	a0,8000994 <__register_exitproc+0x36>
  8000988:	411c                	lw	a5,0(a0)
  800098a:	17fff517          	auipc	a0,0x17fff
- 800098e:	7ef52323          	sw	a5,2022(a0) # 20000170 <_global_atexit0+0x88>
+ 800098e:	7ef52b23          	sw	a5,2038(a0) # 20000180 <_global_atexit0+0x88>
  8000992:	87ba                	mv	a5,a4
  8000994:	43d8                	lw	a4,4(a5)
  8000996:	487d                	li	a6,31

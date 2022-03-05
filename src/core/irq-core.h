@@ -9,7 +9,7 @@ typedef struct irq_desp
 {
     uint8_t  hw_num;
     uint8_t  pin_num;
-    void     (*handler)(void *data);
+    void     (*handler)(void);
     struct   irq_controller *ctrller;
 
 }irq_desp_t;
@@ -33,7 +33,7 @@ static inline int8_t irq_request(struct irq_desp *desp)
     desp->ctrller->request(desp);
 }
 
-static inline int8_t irq_set_handler(struct irq_desp *desp, void (*handler)(void *data))
+static inline int8_t irq_set_handler(struct irq_desp *desp, void (*handler)(void))
 {
     desp->ctrller->set_handler(desp,handler);
 }

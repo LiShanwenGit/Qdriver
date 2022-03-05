@@ -61,5 +61,5 @@ uint32_t spi_gpio_write(struct spi_gpio_device *dev, uint8_t *buffer, uint32_t l
 
 uint32_t spi_gpio_read(struct spi_gpio_device *dev, uint8_t *buffer, uint32_t len)
 {
-
+    
 }

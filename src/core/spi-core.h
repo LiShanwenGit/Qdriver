@@ -51,7 +51,6 @@ static inline uint32_t spi_transfer(struct spi_device *dev,struct  spi_xfer *xfe
     return dev->master->ops.transfer(dev,xfer);
 }
 
-
 static inline uint32_t spi_write(struct spi_device *dev, uint8_t *buffer, uint32_t len)
 {
     struct  spi_xfer xfer;

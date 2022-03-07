@@ -1,4 +1,4 @@
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccx4RdM6.s 			page 1
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccQKVhc1.s 			page 1
 
 
    1              		.file	"gd32vf103_dbg.c"
@@ -58,7 +58,7 @@ GAS LISTING C:\Users\test\AppData\Local\Temp\ccx4RdM6.s 			page 1
   44:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_dbg.c **** {
   13              		.loc 1 44 1
   14              		.cfi_startproc
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccx4RdM6.s 			page 2
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccQKVhc1.s 			page 2
 
 
   45:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_dbg.c ****     return DBG_ID;
@@ -118,7 +118,7 @@ GAS LISTING C:\Users\test\AppData\Local\Temp\ccx4RdM6.s 			page 1
   67:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_dbg.c ****       \arg        DBG_LOW_POWER_SLEEP: donot keep debugger connection during sleep mode
   68:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_dbg.c ****       \arg        DBG_LOW_POWER_DEEPSLEEP: donot keep debugger connection during deepsleep mode
   69:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_dbg.c ****       \arg        DBG_LOW_POWER_STANDBY: donot keep debugger connection during standby mode
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccx4RdM6.s 			page 3
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccQKVhc1.s 			page 3
 
 
   70:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_dbg.c ****     \param[out] none
@@ -178,7 +178,7 @@ GAS LISTING C:\Users\test\AppData\Local\Temp\ccx4RdM6.s 			page 1
   84              	.LVL6:
   85 0008 48C3     		sw	a0,4(a4)
   93:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_dbg.c **** }
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccx4RdM6.s 			page 4
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccQKVhc1.s 			page 4
 
 
   86              		.loc 1 93 1
@@ -231,122 +231,122 @@ GAS LISTING C:\Users\test\AppData\Local\Temp\ccx4RdM6.s 			page 1
  119              		.file 3 "d:\\risc_v_gcc\\riscv-none-embed\\include\\sys\\_stdint.h"
  120              		.file 4 "arch/riscv/mach-gd32vf10x/bsp/gd32vf103_dbg.h"
  121              		.file 5 "arch/riscv/mach-gd32vf10x/system/system_gd32vf103.h"
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccx4RdM6.s 			page 5
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccQKVhc1.s 			page 5
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 gd32vf103_dbg.c
-C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:10     .text.dbg_id_get:0000000000000000 dbg_id_get
-C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:14     .text.dbg_id_get:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:15     .text.dbg_id_get:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:16     .text.dbg_id_get:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:17     .text.dbg_id_get:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:20     .text.dbg_id_get:0000000000000006 .L0 
-C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:21     .text.dbg_id_get:0000000000000008 .L0 
-C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:28     .text.dbg_low_power_enable:0000000000000000 dbg_low_power_enable
-C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:31     .text.dbg_low_power_enable:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:33     .text.dbg_low_power_enable:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:34     .text.dbg_low_power_enable:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:35     .text.dbg_low_power_enable:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:41     .text.dbg_low_power_enable:000000000000000a .L0 
-C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:42     .text.dbg_low_power_enable:000000000000000c .L0 
-C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:49     .text.dbg_low_power_disable:0000000000000000 dbg_low_power_disable
-C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:52     .text.dbg_low_power_disable:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:54     .text.dbg_low_power_disable:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:55     .text.dbg_low_power_disable:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:56     .text.dbg_low_power_disable:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:59     .text.dbg_low_power_disable:0000000000000006 .L0 
-C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:62     .text.dbg_low_power_disable:000000000000000a .L0 
-C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:66     .text.dbg_low_power_disable:000000000000000e .L0 
-C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:67     .text.dbg_low_power_disable:0000000000000010 .L0 
-C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:74     .text.dbg_periph_enable:0000000000000000 dbg_periph_enable
-C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:77     .text.dbg_periph_enable:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:79     .text.dbg_periph_enable:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:80     .text.dbg_periph_enable:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:81     .text.dbg_periph_enable:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:87     .text.dbg_periph_enable:000000000000000a .L0 
-C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:88     .text.dbg_periph_enable:000000000000000c .L0 
-C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:95     .text.dbg_periph_disable:0000000000000000 dbg_periph_disable
-C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:98     .text.dbg_periph_disable:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:100    .text.dbg_periph_disable:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:101    .text.dbg_periph_disable:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:102    .text.dbg_periph_disable:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:105    .text.dbg_periph_disable:0000000000000006 .L0 
-C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:108    .text.dbg_periph_disable:000000000000000a .L0 
-C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:112    .text.dbg_periph_disable:000000000000000e .L0 
-C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:113    .text.dbg_periph_disable:0000000000000010 .L0 
-C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:24     .text.dbg_id_get:0000000000000008 .L0 
-C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:45     .text.dbg_low_power_enable:000000000000000c .L0 
-C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:70     .text.dbg_low_power_disable:0000000000000010 .L0 
-C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:91     .text.dbg_periph_enable:000000000000000c .L0 
-C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:116    .text.dbg_periph_disable:0000000000000010 .L0 
+C:\Users\test\AppData\Local\Temp\ccQKVhc1.s:10     .text.dbg_id_get:0000000000000000 dbg_id_get
+C:\Users\test\AppData\Local\Temp\ccQKVhc1.s:14     .text.dbg_id_get:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccQKVhc1.s:15     .text.dbg_id_get:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccQKVhc1.s:16     .text.dbg_id_get:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccQKVhc1.s:17     .text.dbg_id_get:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccQKVhc1.s:20     .text.dbg_id_get:0000000000000006 .L0 
+C:\Users\test\AppData\Local\Temp\ccQKVhc1.s:21     .text.dbg_id_get:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\ccQKVhc1.s:28     .text.dbg_low_power_enable:0000000000000000 dbg_low_power_enable
+C:\Users\test\AppData\Local\Temp\ccQKVhc1.s:31     .text.dbg_low_power_enable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccQKVhc1.s:33     .text.dbg_low_power_enable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccQKVhc1.s:34     .text.dbg_low_power_enable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccQKVhc1.s:35     .text.dbg_low_power_enable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccQKVhc1.s:41     .text.dbg_low_power_enable:000000000000000a .L0 
+C:\Users\test\AppData\Local\Temp\ccQKVhc1.s:42     .text.dbg_low_power_enable:000000000000000c .L0 
+C:\Users\test\AppData\Local\Temp\ccQKVhc1.s:49     .text.dbg_low_power_disable:0000000000000000 dbg_low_power_disable
+C:\Users\test\AppData\Local\Temp\ccQKVhc1.s:52     .text.dbg_low_power_disable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccQKVhc1.s:54     .text.dbg_low_power_disable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccQKVhc1.s:55     .text.dbg_low_power_disable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccQKVhc1.s:56     .text.dbg_low_power_disable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccQKVhc1.s:59     .text.dbg_low_power_disable:0000000000000006 .L0 
+C:\Users\test\AppData\Local\Temp\ccQKVhc1.s:62     .text.dbg_low_power_disable:000000000000000a .L0 
+C:\Users\test\AppData\Local\Temp\ccQKVhc1.s:66     .text.dbg_low_power_disable:000000000000000e .L0 
+C:\Users\test\AppData\Local\Temp\ccQKVhc1.s:67     .text.dbg_low_power_disable:0000000000000010 .L0 
+C:\Users\test\AppData\Local\Temp\ccQKVhc1.s:74     .text.dbg_periph_enable:0000000000000000 dbg_periph_enable
+C:\Users\test\AppData\Local\Temp\ccQKVhc1.s:77     .text.dbg_periph_enable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccQKVhc1.s:79     .text.dbg_periph_enable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccQKVhc1.s:80     .text.dbg_periph_enable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccQKVhc1.s:81     .text.dbg_periph_enable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccQKVhc1.s:87     .text.dbg_periph_enable:000000000000000a .L0 
+C:\Users\test\AppData\Local\Temp\ccQKVhc1.s:88     .text.dbg_periph_enable:000000000000000c .L0 
+C:\Users\test\AppData\Local\Temp\ccQKVhc1.s:95     .text.dbg_periph_disable:0000000000000000 dbg_periph_disable
+C:\Users\test\AppData\Local\Temp\ccQKVhc1.s:98     .text.dbg_periph_disable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccQKVhc1.s:100    .text.dbg_periph_disable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccQKVhc1.s:101    .text.dbg_periph_disable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccQKVhc1.s:102    .text.dbg_periph_disable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccQKVhc1.s:105    .text.dbg_periph_disable:0000000000000006 .L0 
+C:\Users\test\AppData\Local\Temp\ccQKVhc1.s:108    .text.dbg_periph_disable:000000000000000a .L0 
+C:\Users\test\AppData\Local\Temp\ccQKVhc1.s:112    .text.dbg_periph_disable:000000000000000e .L0 
+C:\Users\test\AppData\Local\Temp\ccQKVhc1.s:113    .text.dbg_periph_disable:0000000000000010 .L0 
+C:\Users\test\AppData\Local\Temp\ccQKVhc1.s:24     .text.dbg_id_get:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\ccQKVhc1.s:45     .text.dbg_low_power_enable:000000000000000c .L0 
+C:\Users\test\AppData\Local\Temp\ccQKVhc1.s:70     .text.dbg_low_power_disable:0000000000000010 .L0 
+C:\Users\test\AppData\Local\Temp\ccQKVhc1.s:91     .text.dbg_periph_enable:000000000000000c .L0 
+C:\Users\test\AppData\Local\Temp\ccQKVhc1.s:116    .text.dbg_periph_disable:0000000000000010 .L0 
                      .debug_frame:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:355    .debug_abbrev:0000000000000000 .Ldebug_abbrev0
-C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:653    .debug_str:000000000000000b .LASF31
-C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:691    .debug_str:00000000000001b6 .LASF32
-C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:687    .debug_str:000000000000017f .LASF33
-C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:635    .debug_ranges:0000000000000000 .Ldebug_ranges0
-C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:649    .debug_line:0000000000000000 .Ldebug_line0
-C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:695    .debug_str:00000000000001f2 .LASF0
-C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:715    .debug_str:0000000000000288 .LASF1
-C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:675    .debug_str:000000000000011e .LASF2
-C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:709    .debug_str:0000000000000262 .LASF3
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccx4RdM6.s 			page 6
+C:\Users\test\AppData\Local\Temp\ccQKVhc1.s:355    .debug_abbrev:0000000000000000 .Ldebug_abbrev0
+C:\Users\test\AppData\Local\Temp\ccQKVhc1.s:653    .debug_str:000000000000000b .LASF31
+C:\Users\test\AppData\Local\Temp\ccQKVhc1.s:691    .debug_str:00000000000001b6 .LASF32
+C:\Users\test\AppData\Local\Temp\ccQKVhc1.s:687    .debug_str:000000000000017f .LASF33
+C:\Users\test\AppData\Local\Temp\ccQKVhc1.s:635    .debug_ranges:0000000000000000 .Ldebug_ranges0
+C:\Users\test\AppData\Local\Temp\ccQKVhc1.s:649    .debug_line:0000000000000000 .Ldebug_line0
+C:\Users\test\AppData\Local\Temp\ccQKVhc1.s:695    .debug_str:00000000000001f2 .LASF0
+C:\Users\test\AppData\Local\Temp\ccQKVhc1.s:715    .debug_str:0000000000000288 .LASF1
+C:\Users\test\AppData\Local\Temp\ccQKVhc1.s:675    .debug_str:000000000000011e .LASF2
+C:\Users\test\AppData\Local\Temp\ccQKVhc1.s:709    .debug_str:0000000000000262 .LASF3
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccQKVhc1.s 			page 6
 
 
-C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:681    .debug_str:000000000000014c .LASF4
-C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:661    .debug_str:00000000000000ae .LASF5
-C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:689    .debug_str:00000000000001ab .LASF9
-C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:679    .debug_str:000000000000013a .LASF6
-C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:705    .debug_str:0000000000000244 .LASF7
-C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:699    .debug_str:000000000000020d .LASF8
-C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:711    .debug_str:000000000000026c .LASF10
-C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:707    .debug_str:0000000000000252 .LASF34
-C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:673    .debug_str:000000000000010f .LASF11
-C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:665    .debug_str:00000000000000cc .LASF12
-C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:717    .debug_str:0000000000000294 .LASF13
-C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:685    .debug_str:000000000000016f .LASF14
-C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:703    .debug_str:0000000000000234 .LASF15
-C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:655    .debug_str:0000000000000085 .LASF16
-C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:659    .debug_str:00000000000000a0 .LASF17
-C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:667    .debug_str:00000000000000db .LASF18
-C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:697    .debug_str:00000000000001ff .LASF19
-C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:683    .debug_str:000000000000015f .LASF20
-C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:701    .debug_str:0000000000000224 .LASF21
-C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:719    .debug_str:00000000000002a4 .LASF22
-C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:677    .debug_str:000000000000012c .LASF23
-C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:669    .debug_str:00000000000000e9 .LASF24
-C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:713    .debug_str:0000000000000275 .LASF25
-C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:96     .text.dbg_periph_disable:0000000000000000 .LFB6
-C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:114    .text.dbg_periph_disable:0000000000000010 .LFE6
-C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:651    .debug_str:0000000000000000 .LASF27
-C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:544    .debug_loc:0000000000000000 .LLST3
-C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:721    .debug_str:00000000000002b4 .LASF26
-C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:75     .text.dbg_periph_enable:0000000000000000 .LFB5
-C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:89     .text.dbg_periph_enable:000000000000000c .LFE5
-C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:565    .debug_loc:000000000000002f .LLST2
-C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:671    .debug_str:00000000000000f9 .LASF28
-C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:50     .text.dbg_low_power_disable:0000000000000000 .LFB4
-C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:68     .text.dbg_low_power_disable:0000000000000010 .LFE4
-C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:693    .debug_str:00000000000001e4 .LASF29
-C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:579    .debug_loc:0000000000000050 .LLST1
-C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:663    .debug_str:00000000000000b7 .LASF30
-C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:29     .text.dbg_low_power_enable:0000000000000000 .LFB3
-C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:43     .text.dbg_low_power_enable:000000000000000c .LFE3
-C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:600    .debug_loc:000000000000007f .LLST0
-C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:657    .debug_str:0000000000000095 .LASF35
-C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:11     .text.dbg_id_get:0000000000000000 .LFB2
-C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:22     .text.dbg_id_get:0000000000000008 .LFE2
-C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:99     .text.dbg_periph_disable:0000000000000000 .LVL7
-C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:106    .text.dbg_periph_disable:000000000000000a .LVL8
-C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:109    .text.dbg_periph_disable:000000000000000c .LVL9
-C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:78     .text.dbg_periph_enable:0000000000000000 .LVL5
-C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:84     .text.dbg_periph_enable:0000000000000008 .LVL6
-C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:53     .text.dbg_low_power_disable:0000000000000000 .LVL2
-C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:60     .text.dbg_low_power_disable:000000000000000a .LVL3
-C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:63     .text.dbg_low_power_disable:000000000000000c .LVL4
-C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:32     .text.dbg_low_power_enable:0000000000000000 .LVL0
-C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:38     .text.dbg_low_power_enable:0000000000000008 .LVL1
-C:\Users\test\AppData\Local\Temp\ccx4RdM6.s:123    .debug_info:0000000000000000 .Ldebug_info0
+C:\Users\test\AppData\Local\Temp\ccQKVhc1.s:681    .debug_str:000000000000014c .LASF4
+C:\Users\test\AppData\Local\Temp\ccQKVhc1.s:661    .debug_str:00000000000000ae .LASF5
+C:\Users\test\AppData\Local\Temp\ccQKVhc1.s:689    .debug_str:00000000000001ab .LASF9
+C:\Users\test\AppData\Local\Temp\ccQKVhc1.s:679    .debug_str:000000000000013a .LASF6
+C:\Users\test\AppData\Local\Temp\ccQKVhc1.s:705    .debug_str:0000000000000244 .LASF7
+C:\Users\test\AppData\Local\Temp\ccQKVhc1.s:699    .debug_str:000000000000020d .LASF8
+C:\Users\test\AppData\Local\Temp\ccQKVhc1.s:711    .debug_str:000000000000026c .LASF10
+C:\Users\test\AppData\Local\Temp\ccQKVhc1.s:707    .debug_str:0000000000000252 .LASF34
+C:\Users\test\AppData\Local\Temp\ccQKVhc1.s:673    .debug_str:000000000000010f .LASF11
+C:\Users\test\AppData\Local\Temp\ccQKVhc1.s:665    .debug_str:00000000000000cc .LASF12
+C:\Users\test\AppData\Local\Temp\ccQKVhc1.s:717    .debug_str:0000000000000294 .LASF13
+C:\Users\test\AppData\Local\Temp\ccQKVhc1.s:685    .debug_str:000000000000016f .LASF14
+C:\Users\test\AppData\Local\Temp\ccQKVhc1.s:703    .debug_str:0000000000000234 .LASF15
+C:\Users\test\AppData\Local\Temp\ccQKVhc1.s:655    .debug_str:0000000000000085 .LASF16
+C:\Users\test\AppData\Local\Temp\ccQKVhc1.s:659    .debug_str:00000000000000a0 .LASF17
+C:\Users\test\AppData\Local\Temp\ccQKVhc1.s:667    .debug_str:00000000000000db .LASF18
+C:\Users\test\AppData\Local\Temp\ccQKVhc1.s:697    .debug_str:00000000000001ff .LASF19
+C:\Users\test\AppData\Local\Temp\ccQKVhc1.s:683    .debug_str:000000000000015f .LASF20
+C:\Users\test\AppData\Local\Temp\ccQKVhc1.s:701    .debug_str:0000000000000224 .LASF21
+C:\Users\test\AppData\Local\Temp\ccQKVhc1.s:719    .debug_str:00000000000002a4 .LASF22
+C:\Users\test\AppData\Local\Temp\ccQKVhc1.s:677    .debug_str:000000000000012c .LASF23
+C:\Users\test\AppData\Local\Temp\ccQKVhc1.s:669    .debug_str:00000000000000e9 .LASF24
+C:\Users\test\AppData\Local\Temp\ccQKVhc1.s:713    .debug_str:0000000000000275 .LASF25
+C:\Users\test\AppData\Local\Temp\ccQKVhc1.s:96     .text.dbg_periph_disable:0000000000000000 .LFB6
+C:\Users\test\AppData\Local\Temp\ccQKVhc1.s:114    .text.dbg_periph_disable:0000000000000010 .LFE6
+C:\Users\test\AppData\Local\Temp\ccQKVhc1.s:651    .debug_str:0000000000000000 .LASF27
+C:\Users\test\AppData\Local\Temp\ccQKVhc1.s:544    .debug_loc:0000000000000000 .LLST3
+C:\Users\test\AppData\Local\Temp\ccQKVhc1.s:721    .debug_str:00000000000002b4 .LASF26
+C:\Users\test\AppData\Local\Temp\ccQKVhc1.s:75     .text.dbg_periph_enable:0000000000000000 .LFB5
+C:\Users\test\AppData\Local\Temp\ccQKVhc1.s:89     .text.dbg_periph_enable:000000000000000c .LFE5
+C:\Users\test\AppData\Local\Temp\ccQKVhc1.s:565    .debug_loc:000000000000002f .LLST2
+C:\Users\test\AppData\Local\Temp\ccQKVhc1.s:671    .debug_str:00000000000000f9 .LASF28
+C:\Users\test\AppData\Local\Temp\ccQKVhc1.s:50     .text.dbg_low_power_disable:0000000000000000 .LFB4
+C:\Users\test\AppData\Local\Temp\ccQKVhc1.s:68     .text.dbg_low_power_disable:0000000000000010 .LFE4
+C:\Users\test\AppData\Local\Temp\ccQKVhc1.s:693    .debug_str:00000000000001e4 .LASF29
+C:\Users\test\AppData\Local\Temp\ccQKVhc1.s:579    .debug_loc:0000000000000050 .LLST1
+C:\Users\test\AppData\Local\Temp\ccQKVhc1.s:663    .debug_str:00000000000000b7 .LASF30
+C:\Users\test\AppData\Local\Temp\ccQKVhc1.s:29     .text.dbg_low_power_enable:0000000000000000 .LFB3
+C:\Users\test\AppData\Local\Temp\ccQKVhc1.s:43     .text.dbg_low_power_enable:000000000000000c .LFE3
+C:\Users\test\AppData\Local\Temp\ccQKVhc1.s:600    .debug_loc:000000000000007f .LLST0
+C:\Users\test\AppData\Local\Temp\ccQKVhc1.s:657    .debug_str:0000000000000095 .LASF35
+C:\Users\test\AppData\Local\Temp\ccQKVhc1.s:11     .text.dbg_id_get:0000000000000000 .LFB2
+C:\Users\test\AppData\Local\Temp\ccQKVhc1.s:22     .text.dbg_id_get:0000000000000008 .LFE2
+C:\Users\test\AppData\Local\Temp\ccQKVhc1.s:99     .text.dbg_periph_disable:0000000000000000 .LVL7
+C:\Users\test\AppData\Local\Temp\ccQKVhc1.s:106    .text.dbg_periph_disable:000000000000000a .LVL8
+C:\Users\test\AppData\Local\Temp\ccQKVhc1.s:109    .text.dbg_periph_disable:000000000000000c .LVL9
+C:\Users\test\AppData\Local\Temp\ccQKVhc1.s:78     .text.dbg_periph_enable:0000000000000000 .LVL5
+C:\Users\test\AppData\Local\Temp\ccQKVhc1.s:84     .text.dbg_periph_enable:0000000000000008 .LVL6
+C:\Users\test\AppData\Local\Temp\ccQKVhc1.s:53     .text.dbg_low_power_disable:0000000000000000 .LVL2
+C:\Users\test\AppData\Local\Temp\ccQKVhc1.s:60     .text.dbg_low_power_disable:000000000000000a .LVL3
+C:\Users\test\AppData\Local\Temp\ccQKVhc1.s:63     .text.dbg_low_power_disable:000000000000000c .LVL4
+C:\Users\test\AppData\Local\Temp\ccQKVhc1.s:32     .text.dbg_low_power_enable:0000000000000000 .LVL0
+C:\Users\test\AppData\Local\Temp\ccQKVhc1.s:38     .text.dbg_low_power_enable:0000000000000008 .LVL1
+C:\Users\test\AppData\Local\Temp\ccQKVhc1.s:123    .debug_info:0000000000000000 .Ldebug_info0
 
 NO UNDEFINED SYMBOLS

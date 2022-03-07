@@ -1,4 +1,4 @@
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccEpiWtP.s 			page 1
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccVk7YLv.s 			page 1
 
 
    1              		.file	"gd32vf103_gpio.c"
@@ -58,7 +58,7 @@ GAS LISTING C:\Users\test\AppData\Local\Temp\ccEpiWtP.s 			page 1
   44:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** #define AFIO_PCF1_FIELDS                   ((uint32_t)0x80000000U)  /*!< select AFIO_PCF1 register 
   45:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** #define GPIO_OUTPUT_PORT_OFFSET            ((uint32_t)4U)           /*!< GPIO event output port off
   46:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** 
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccEpiWtP.s 			page 2
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccVk7YLv.s 			page 2
 
 
   47:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** /*!
@@ -118,7 +118,7 @@ GAS LISTING C:\Users\test\AppData\Local\Temp\ccEpiWtP.s 			page 1
   34              	.LVL1:
   35 0028 97000000 		call	rcu_periph_reset_enable
   35      E7800000 
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccEpiWtP.s 			page 3
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccVk7YLv.s 			page 3
 
 
   36              	.LVL2:
@@ -178,7 +178,7 @@ GAS LISTING C:\Users\test\AppData\Local\Temp\ccEpiWtP.s 			page 1
   75              		.loc 1 64 9
   76 0064 17030000 		tail	rcu_periph_reset_disable
   76      67000300 
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccEpiWtP.s 			page 4
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccVk7YLv.s 			page 4
 
 
   77              	.LVL6:
@@ -238,7 +238,7 @@ GAS LISTING C:\Users\test\AppData\Local\Temp\ccEpiWtP.s 			page 1
  120 009c 17030000 		tail	rcu_periph_reset_disable
  120      67000300 
  121              	.LVL12:
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccEpiWtP.s 			page 5
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccVk7YLv.s 			page 5
 
 
  122              	.L1:
@@ -298,7 +298,7 @@ GAS LISTING C:\Users\test\AppData\Local\Temp\ccEpiWtP.s 			page 1
  163              		.loc 1 93 1 is_stmt 1
  164              		.cfi_startproc
   94:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     rcu_periph_reset_enable(RCU_AFRST);
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccEpiWtP.s 			page 6
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccVk7YLv.s 			page 6
 
 
  165              		.loc 1 94 5
@@ -358,7 +358,7 @@ GAS LISTING C:\Users\test\AppData\Local\Temp\ccEpiWtP.s 			page 1
  110:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****       \arg        GPIO_MODE_AF_PP: AFIO output with push-pull
  111:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     \param[in]  speed: gpio output max speed value
  112:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****                 only one parameter can be selected which is shown as below:
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccEpiWtP.s 			page 7
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccVk7YLv.s 			page 7
 
 
  113:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****       \arg        GPIO_OSPEED_10MHZ: output max speed 10MHz
@@ -418,7 +418,7 @@ GAS LISTING C:\Users\test\AppData\Local\Temp\ccEpiWtP.s 			page 1
  223              		.loc 1 141 17
  224 0010 854E     		li	t4,1
  142:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****             reg = GPIO_CTL0(gpio_periph);
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccEpiWtP.s 			page 8
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccVk7YLv.s 			page 8
 
 
  143:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** 
@@ -478,7 +478,7 @@ GAS LISTING C:\Users\test\AppData\Local\Temp\ccEpiWtP.s 			page 1
  145:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****             /* set the specified pin mode bits */
  255              		.loc 1 145 17 is_stmt 0
  256 003a 3378E801 		and	a6,a6,t5
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccEpiWtP.s 			page 9
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccVk7YLv.s 			page 9
 
 
  257              	.LVL23:
@@ -538,7 +538,7 @@ GAS LISTING C:\Users\test\AppData\Local\Temp\ccEpiWtP.s 			page 1
  179:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****                 if (GPIO_MODE_IPU == mode) {
  283              		.loc 1 179 20
  284 005a 93028004 		li	t0,72
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccEpiWtP.s 			page 10
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccVk7YLv.s 			page 10
 
 
  164:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****         if ((1U << i) & pin) {
@@ -598,7 +598,7 @@ GAS LISTING C:\Users\test\AppData\Local\Temp\ccEpiWtP.s 			page 1
  322 008a 63895500 		beq	a1,t0,.L38
  323              	.L22:
  180:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****                     GPIO_BOP(gpio_periph) = (uint32_t) ((1U << i) & pin);
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccEpiWtP.s 			page 11
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccVk7YLv.s 			page 11
 
 
  181:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****                 }
@@ -658,7 +658,7 @@ GAS LISTING C:\Users\test\AppData\Local\Temp\ccEpiWtP.s 			page 1
  363              		.align	1
  364              		.globl	gpio_bit_set
  366              	gpio_bit_set:
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccEpiWtP.s 			page 12
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccVk7YLv.s 			page 12
 
 
  367              	.LFB5:
@@ -718,7 +718,7 @@ GAS LISTING C:\Users\test\AppData\Local\Temp\ccEpiWtP.s 			page 1
  396              		.section	.text.gpio_bit_write,"ax",@progbits
  397              		.align	1
  398              		.globl	gpio_bit_write
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccEpiWtP.s 			page 13
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccVk7YLv.s 			page 13
 
 
  400              	gpio_bit_write:
@@ -778,7 +778,7 @@ GAS LISTING C:\Users\test\AppData\Local\Temp\ccEpiWtP.s 			page 1
  245:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** */
  246:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** void gpio_port_write(uint32_t gpio_periph, uint16_t data)
  247:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** {
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccEpiWtP.s 			page 14
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccVk7YLv.s 			page 14
 
 
  427              		.loc 1 247 1 is_stmt 1
@@ -838,7 +838,7 @@ GAS LISTING C:\Users\test\AppData\Local\Temp\ccEpiWtP.s 			page 1
  268:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** 
  269:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** /*!
  270:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     \brief      get GPIO port input status
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccEpiWtP.s 			page 15
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccVk7YLv.s 			page 15
 
 
  271:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     \param[in]  gpio_periph: GPIOx(x = A,B,C,D,E)
@@ -898,7 +898,7 @@ GAS LISTING C:\Users\test\AppData\Local\Temp\ccEpiWtP.s 			page 1
  495 0004 3335A000 		snez	a0,a0
  496 0008 8280     		ret
  497              		.cfi_endproc
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccEpiWtP.s 			page 16
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccVk7YLv.s 			page 16
 
 
  498              	.LFE11:
@@ -958,7 +958,7 @@ GAS LISTING C:\Users\test\AppData\Local\Temp\ccEpiWtP.s 			page 1
  327:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****       \arg        GPIO_CAN0_PARTIAL_REMAP: CAN0 partial remapping
  328:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****       \arg        GPIO_CAN0_FULL_REMAP: CAN0 full remapping
  329:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****       \arg        GPIO_PD01_REMAP: PD01 remapping
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccEpiWtP.s 			page 17
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccVk7YLv.s 			page 17
 
 
  330:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****       \arg        GPIO_TIMER4CH3_IREMAP: TIMER4 channel3 internal remapping
@@ -1018,7 +1018,7 @@ GAS LISTING C:\Users\test\AppData\Local\Temp\ccEpiWtP.s 			page 1
  546 0012 3376E500 		and	a2,a0,a4
  354:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** 
  547              		.loc 1 354 12
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccEpiWtP.s 			page 18
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccVk7YLv.s 			page 18
 
 
  548 0016 C182     		srli	a3,a3,16
@@ -1078,7 +1078,7 @@ GAS LISTING C:\Users\test\AppData\Local\Temp\ccEpiWtP.s 			page 1
  583              		.loc 1 372 9 is_stmt 1
  584              		.loc 1 372 40 is_stmt 0
  585 0040 13575501 		srli	a4,a0,21
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccEpiWtP.s 			page 19
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccVk7YLv.s 			page 19
 
 
  586              		.loc 1 372 50
@@ -1138,7 +1138,7 @@ GAS LISTING C:\Users\test\AppData\Local\Temp\ccEpiWtP.s 			page 1
  621 0068 B707000F 		li	a5,251658240
  622 006c D98F     		or	a5,a4,a5
  623              	.LVL60:
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccEpiWtP.s 			page 20
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccVk7YLv.s 			page 20
 
 
  624 006e C1BF     		j	.L53
@@ -1198,7 +1198,7 @@ GAS LISTING C:\Users\test\AppData\Local\Temp\ccEpiWtP.s 			page 1
  359:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****         AFIO_PCF0 &= PCF_SWJCFG_MASK;
  662              		.loc 1 359 18
  663 0098 F98F     		and	a5,a5,a4
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccEpiWtP.s 			page 21
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccVk7YLv.s 			page 21
 
 
  664              	.LVL66:
@@ -1258,7 +1258,7 @@ GAS LISTING C:\Users\test\AppData\Local\Temp\ccEpiWtP.s 			page 1
  695 0012 3315F500 		sll	a0,a0,a5
  696              	.LVL69:
  697 0016 63EBB600 		bgtu	a1,a3,.L65
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccEpiWtP.s 			page 22
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccVk7YLv.s 			page 22
 
 
  405:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****         /* select EXTI0/EXTI1/EXTI2/EXTI3 */
@@ -1318,7 +1318,7 @@ GAS LISTING C:\Users\test\AppData\Local\Temp\ccEpiWtP.s 			page 1
  737 004a 63E9B700 		bgtu	a1,a5,.L68
  738              		.loc 1 418 9 is_stmt 1
  739              		.loc 1 418 22 is_stmt 0
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccEpiWtP.s 			page 23
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccVk7YLv.s 			page 23
 
 
  740 004e 9C4A     		lw	a5,16(a3)
@@ -1378,7 +1378,7 @@ GAS LISTING C:\Users\test\AppData\Local\Temp\ccEpiWtP.s 			page 1
  444:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     \retval     none
  445:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** */
  446:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** void gpio_event_output_config(uint8_t output_port, uint8_t output_pin)
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccEpiWtP.s 			page 24
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccVk7YLv.s 			page 24
 
 
  447:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** {
@@ -1438,7 +1438,7 @@ GAS LISTING C:\Users\test\AppData\Local\Temp\ccEpiWtP.s 			page 1
  465:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** */
  466:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** void gpio_event_output_enable(void)
  467:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** {
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccEpiWtP.s 			page 25
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccVk7YLv.s 			page 25
 
 
  807              		.loc 1 467 1 is_stmt 1
@@ -1498,7 +1498,7 @@ GAS LISTING C:\Users\test\AppData\Local\Temp\ccEpiWtP.s 			page 1
  488:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     \param[out] none
  489:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c ****     \retval     none
  490:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** */
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccEpiWtP.s 			page 26
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccVk7YLv.s 			page 26
 
 
  491:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.c **** void gpio_pin_lock(uint32_t gpio_periph, uint32_t pin)
@@ -1550,698 +1550,698 @@ GAS LISTING C:\Users\test\AppData\Local\Temp\ccEpiWtP.s 			page 1
  880              		.file 5 "arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rcu.h"
  881              		.file 6 "arch/riscv/mach-gd32vf10x/bsp/gd32vf103_gpio.h"
  882              		.file 7 "arch/riscv/mach-gd32vf10x/system/system_gd32vf103.h"
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccEpiWtP.s 			page 27
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccVk7YLv.s 			page 27
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 gd32vf103_gpio.c
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:10     .text.gpio_deinit:0000000000000000 gpio_deinit
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:14     .text.gpio_deinit:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:16     .text.gpio_deinit:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:17     .text.gpio_deinit:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:18     .text.gpio_deinit:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:20     .text.gpio_deinit:0000000000000002 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:22     .text.gpio_deinit:0000000000000004 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:24     .text.gpio_deinit:0000000000000004 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:33     .text.gpio_deinit:0000000000000024 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:38     .text.gpio_deinit:0000000000000030 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:39     .text.gpio_deinit:0000000000000030 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:40     .text.gpio_deinit:0000000000000032 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:41     .text.gpio_deinit:0000000000000032 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:43     .text.gpio_deinit:0000000000000032 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:45     .text.gpio_deinit:0000000000000036 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:47     .text.gpio_deinit:0000000000000038 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:49     .text.gpio_deinit:0000000000000038 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:53     .text.gpio_deinit:0000000000000040 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:55     .text.gpio_deinit:0000000000000040 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:60     .text.gpio_deinit:0000000000000050 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:65     .text.gpio_deinit:000000000000005c .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:66     .text.gpio_deinit:000000000000005c .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:67     .text.gpio_deinit:000000000000005e .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:68     .text.gpio_deinit:000000000000005e .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:70     .text.gpio_deinit:000000000000005e .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:72     .text.gpio_deinit:0000000000000062 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:74     .text.gpio_deinit:0000000000000064 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:76     .text.gpio_deinit:0000000000000064 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:80     .text.gpio_deinit:000000000000006c .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:82     .text.gpio_deinit:000000000000006c .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:87     .text.gpio_deinit:0000000000000078 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:88     .text.gpio_deinit:0000000000000078 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:89     .text.gpio_deinit:000000000000007a .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:90     .text.gpio_deinit:000000000000007a .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:92     .text.gpio_deinit:000000000000007a .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:94     .text.gpio_deinit:000000000000007e .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:96     .text.gpio_deinit:0000000000000080 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:98     .text.gpio_deinit:0000000000000080 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:102    .text.gpio_deinit:0000000000000088 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:104    .text.gpio_deinit:0000000000000088 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:109    .text.gpio_deinit:0000000000000094 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:110    .text.gpio_deinit:0000000000000094 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:111    .text.gpio_deinit:0000000000000096 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:112    .text.gpio_deinit:0000000000000096 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:114    .text.gpio_deinit:0000000000000096 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:116    .text.gpio_deinit:000000000000009a .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:118    .text.gpio_deinit:000000000000009c .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:120    .text.gpio_deinit:000000000000009c .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:124    .text.gpio_deinit:00000000000000a4 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:126    .text.gpio_deinit:00000000000000a4 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:127    .text.gpio_deinit:00000000000000a6 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:128    .text.gpio_deinit:00000000000000a6 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:131    .text.gpio_deinit:00000000000000a8 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:135    .text.gpio_deinit:00000000000000aa .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:137    .text.gpio_deinit:00000000000000aa .L0 
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccEpiWtP.s 			page 28
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:10     .text.gpio_deinit:0000000000000000 gpio_deinit
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:14     .text.gpio_deinit:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:16     .text.gpio_deinit:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:17     .text.gpio_deinit:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:18     .text.gpio_deinit:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:20     .text.gpio_deinit:0000000000000002 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:22     .text.gpio_deinit:0000000000000004 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:24     .text.gpio_deinit:0000000000000004 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:33     .text.gpio_deinit:0000000000000024 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:38     .text.gpio_deinit:0000000000000030 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:39     .text.gpio_deinit:0000000000000030 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:40     .text.gpio_deinit:0000000000000032 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:41     .text.gpio_deinit:0000000000000032 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:43     .text.gpio_deinit:0000000000000032 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:45     .text.gpio_deinit:0000000000000036 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:47     .text.gpio_deinit:0000000000000038 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:49     .text.gpio_deinit:0000000000000038 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:53     .text.gpio_deinit:0000000000000040 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:55     .text.gpio_deinit:0000000000000040 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:60     .text.gpio_deinit:0000000000000050 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:65     .text.gpio_deinit:000000000000005c .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:66     .text.gpio_deinit:000000000000005c .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:67     .text.gpio_deinit:000000000000005e .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:68     .text.gpio_deinit:000000000000005e .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:70     .text.gpio_deinit:000000000000005e .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:72     .text.gpio_deinit:0000000000000062 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:74     .text.gpio_deinit:0000000000000064 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:76     .text.gpio_deinit:0000000000000064 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:80     .text.gpio_deinit:000000000000006c .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:82     .text.gpio_deinit:000000000000006c .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:87     .text.gpio_deinit:0000000000000078 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:88     .text.gpio_deinit:0000000000000078 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:89     .text.gpio_deinit:000000000000007a .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:90     .text.gpio_deinit:000000000000007a .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:92     .text.gpio_deinit:000000000000007a .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:94     .text.gpio_deinit:000000000000007e .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:96     .text.gpio_deinit:0000000000000080 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:98     .text.gpio_deinit:0000000000000080 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:102    .text.gpio_deinit:0000000000000088 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:104    .text.gpio_deinit:0000000000000088 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:109    .text.gpio_deinit:0000000000000094 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:110    .text.gpio_deinit:0000000000000094 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:111    .text.gpio_deinit:0000000000000096 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:112    .text.gpio_deinit:0000000000000096 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:114    .text.gpio_deinit:0000000000000096 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:116    .text.gpio_deinit:000000000000009a .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:118    .text.gpio_deinit:000000000000009c .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:120    .text.gpio_deinit:000000000000009c .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:124    .text.gpio_deinit:00000000000000a4 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:126    .text.gpio_deinit:00000000000000a4 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:127    .text.gpio_deinit:00000000000000a6 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:128    .text.gpio_deinit:00000000000000a6 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:131    .text.gpio_deinit:00000000000000a8 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:135    .text.gpio_deinit:00000000000000aa .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:137    .text.gpio_deinit:00000000000000aa .L0 
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccVk7YLv.s 			page 28
 
 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:142    .text.gpio_deinit:00000000000000b6 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:143    .text.gpio_deinit:00000000000000b6 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:144    .text.gpio_deinit:00000000000000b8 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:146    .text.gpio_deinit:00000000000000b8 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:148    .text.gpio_deinit:00000000000000bc .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:150    .text.gpio_deinit:00000000000000be .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:152    .text.gpio_deinit:00000000000000be .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:154    .text.gpio_deinit:00000000000000c6 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:161    .text.gpio_afio_deinit:0000000000000000 gpio_afio_deinit
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:164    .text.gpio_afio_deinit:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:165    .text.gpio_afio_deinit:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:166    .text.gpio_afio_deinit:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:167    .text.gpio_afio_deinit:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:169    .text.gpio_afio_deinit:0000000000000002 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:171    .text.gpio_afio_deinit:0000000000000002 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:173    .text.gpio_afio_deinit:0000000000000006 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:174    .text.gpio_afio_deinit:0000000000000008 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:176    .text.gpio_afio_deinit:0000000000000008 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:179    .text.gpio_afio_deinit:0000000000000010 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:180    .text.gpio_afio_deinit:0000000000000010 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:181    .text.gpio_afio_deinit:0000000000000012 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:183    .text.gpio_afio_deinit:0000000000000012 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:185    .text.gpio_afio_deinit:0000000000000016 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:187    .text.gpio_afio_deinit:0000000000000018 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:189    .text.gpio_afio_deinit:0000000000000018 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:191    .text.gpio_afio_deinit:0000000000000020 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:198    .text.gpio_init:0000000000000000 gpio_init
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:201    .text.gpio_init:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:203    .text.gpio_init:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:204    .text.gpio_init:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:205    .text.gpio_init:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:206    .text.gpio_init:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:207    .text.gpio_init:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:208    .text.gpio_init:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:210    .text.gpio_init:0000000000000004 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:213    .text.gpio_init:0000000000000008 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:214    .text.gpio_init:0000000000000008 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:216    .text.gpio_init:000000000000000a .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:217    .text.gpio_init:000000000000000a .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:221    .text.gpio_init:000000000000000e .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:222    .text.gpio_init:000000000000000e .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:224    .text.gpio_init:0000000000000010 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:226    .text.gpio_init:0000000000000012 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:228    .text.gpio_init:0000000000000014 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:230    .text.gpio_init:0000000000000018 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:232    .text.gpio_init:000000000000001c .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:236    .text.gpio_init:000000000000001e .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:237    .text.gpio_init:000000000000001e .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:239    .text.gpio_init:0000000000000022 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:241    .text.gpio_init:0000000000000026 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:243    .text.gpio_init:000000000000002a .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:245    .text.gpio_init:000000000000002c .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:247    .text.gpio_init:0000000000000030 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:249    .text.gpio_init:0000000000000034 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:251    .text.gpio_init:0000000000000036 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:252    .text.gpio_init:0000000000000036 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:255    .text.gpio_init:000000000000003a .L0 
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccEpiWtP.s 			page 29
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:142    .text.gpio_deinit:00000000000000b6 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:143    .text.gpio_deinit:00000000000000b6 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:144    .text.gpio_deinit:00000000000000b8 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:146    .text.gpio_deinit:00000000000000b8 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:148    .text.gpio_deinit:00000000000000bc .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:150    .text.gpio_deinit:00000000000000be .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:152    .text.gpio_deinit:00000000000000be .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:154    .text.gpio_deinit:00000000000000c6 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:161    .text.gpio_afio_deinit:0000000000000000 gpio_afio_deinit
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:164    .text.gpio_afio_deinit:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:165    .text.gpio_afio_deinit:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:166    .text.gpio_afio_deinit:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:167    .text.gpio_afio_deinit:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:169    .text.gpio_afio_deinit:0000000000000002 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:171    .text.gpio_afio_deinit:0000000000000002 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:173    .text.gpio_afio_deinit:0000000000000006 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:174    .text.gpio_afio_deinit:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:176    .text.gpio_afio_deinit:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:179    .text.gpio_afio_deinit:0000000000000010 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:180    .text.gpio_afio_deinit:0000000000000010 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:181    .text.gpio_afio_deinit:0000000000000012 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:183    .text.gpio_afio_deinit:0000000000000012 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:185    .text.gpio_afio_deinit:0000000000000016 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:187    .text.gpio_afio_deinit:0000000000000018 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:189    .text.gpio_afio_deinit:0000000000000018 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:191    .text.gpio_afio_deinit:0000000000000020 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:198    .text.gpio_init:0000000000000000 gpio_init
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:201    .text.gpio_init:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:203    .text.gpio_init:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:204    .text.gpio_init:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:205    .text.gpio_init:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:206    .text.gpio_init:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:207    .text.gpio_init:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:208    .text.gpio_init:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:210    .text.gpio_init:0000000000000004 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:213    .text.gpio_init:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:214    .text.gpio_init:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:216    .text.gpio_init:000000000000000a .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:217    .text.gpio_init:000000000000000a .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:221    .text.gpio_init:000000000000000e .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:222    .text.gpio_init:000000000000000e .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:224    .text.gpio_init:0000000000000010 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:226    .text.gpio_init:0000000000000012 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:228    .text.gpio_init:0000000000000014 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:230    .text.gpio_init:0000000000000018 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:232    .text.gpio_init:000000000000001c .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:236    .text.gpio_init:000000000000001e .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:237    .text.gpio_init:000000000000001e .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:239    .text.gpio_init:0000000000000022 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:241    .text.gpio_init:0000000000000026 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:243    .text.gpio_init:000000000000002a .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:245    .text.gpio_init:000000000000002c .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:247    .text.gpio_init:0000000000000030 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:249    .text.gpio_init:0000000000000034 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:251    .text.gpio_init:0000000000000036 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:252    .text.gpio_init:0000000000000036 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:255    .text.gpio_init:000000000000003a .L0 
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccVk7YLv.s 			page 29
 
 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:256    .text.gpio_init:000000000000003a .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:259    .text.gpio_init:000000000000003e .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:260    .text.gpio_init:000000000000003e .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:263    .text.gpio_init:0000000000000042 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:264    .text.gpio_init:0000000000000042 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:266    .text.gpio_init:0000000000000046 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:269    .text.gpio_init:000000000000004a .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:270    .text.gpio_init:000000000000004a .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:276    .text.gpio_init:000000000000004e .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:278    .text.gpio_init:0000000000000052 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:280    .text.gpio_init:0000000000000054 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:282    .text.gpio_init:0000000000000056 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:284    .text.gpio_init:000000000000005a .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:286    .text.gpio_init:000000000000005e .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:290    .text.gpio_init:0000000000000060 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:291    .text.gpio_init:0000000000000060 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:292    .text.gpio_init:0000000000000060 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:295    .text.gpio_init:0000000000000066 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:297    .text.gpio_init:000000000000006a .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:299    .text.gpio_init:000000000000006e .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:301    .text.gpio_init:0000000000000070 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:303    .text.gpio_init:0000000000000074 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:305    .text.gpio_init:0000000000000078 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:307    .text.gpio_init:000000000000007a .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:308    .text.gpio_init:000000000000007a .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:311    .text.gpio_init:000000000000007e .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:312    .text.gpio_init:000000000000007e .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:315    .text.gpio_init:0000000000000082 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:316    .text.gpio_init:0000000000000082 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:319    .text.gpio_init:0000000000000086 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:320    .text.gpio_init:0000000000000086 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:322    .text.gpio_init:000000000000008a .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:325    .text.gpio_init:000000000000008e .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:326    .text.gpio_init:000000000000008e .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:332    .text.gpio_init:0000000000000092 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:334    .text.gpio_init:0000000000000096 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:338    .text.gpio_init:0000000000000098 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:339    .text.gpio_init:0000000000000098 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:344    .text.gpio_init:000000000000009c .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:345    .text.gpio_init:000000000000009c .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:350    .text.gpio_init:00000000000000a0 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:351    .text.gpio_init:00000000000000a0 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:356    .text.gpio_init:00000000000000a4 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:357    .text.gpio_init:00000000000000a4 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:359    .text.gpio_init:00000000000000a8 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:366    .text.gpio_bit_set:0000000000000000 gpio_bit_set
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:369    .text.gpio_bit_set:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:371    .text.gpio_bit_set:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:372    .text.gpio_bit_set:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:373    .text.gpio_bit_set:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:375    .text.gpio_bit_set:0000000000000002 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:376    .text.gpio_bit_set:0000000000000004 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:383    .text.gpio_bit_reset:0000000000000000 gpio_bit_reset
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:386    .text.gpio_bit_reset:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:388    .text.gpio_bit_reset:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:389    .text.gpio_bit_reset:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:390    .text.gpio_bit_reset:0000000000000000 .L0 
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccEpiWtP.s 			page 30
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:256    .text.gpio_init:000000000000003a .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:259    .text.gpio_init:000000000000003e .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:260    .text.gpio_init:000000000000003e .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:263    .text.gpio_init:0000000000000042 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:264    .text.gpio_init:0000000000000042 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:266    .text.gpio_init:0000000000000046 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:269    .text.gpio_init:000000000000004a .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:270    .text.gpio_init:000000000000004a .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:276    .text.gpio_init:000000000000004e .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:278    .text.gpio_init:0000000000000052 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:280    .text.gpio_init:0000000000000054 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:282    .text.gpio_init:0000000000000056 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:284    .text.gpio_init:000000000000005a .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:286    .text.gpio_init:000000000000005e .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:290    .text.gpio_init:0000000000000060 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:291    .text.gpio_init:0000000000000060 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:292    .text.gpio_init:0000000000000060 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:295    .text.gpio_init:0000000000000066 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:297    .text.gpio_init:000000000000006a .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:299    .text.gpio_init:000000000000006e .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:301    .text.gpio_init:0000000000000070 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:303    .text.gpio_init:0000000000000074 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:305    .text.gpio_init:0000000000000078 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:307    .text.gpio_init:000000000000007a .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:308    .text.gpio_init:000000000000007a .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:311    .text.gpio_init:000000000000007e .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:312    .text.gpio_init:000000000000007e .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:315    .text.gpio_init:0000000000000082 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:316    .text.gpio_init:0000000000000082 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:319    .text.gpio_init:0000000000000086 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:320    .text.gpio_init:0000000000000086 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:322    .text.gpio_init:000000000000008a .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:325    .text.gpio_init:000000000000008e .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:326    .text.gpio_init:000000000000008e .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:332    .text.gpio_init:0000000000000092 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:334    .text.gpio_init:0000000000000096 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:338    .text.gpio_init:0000000000000098 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:339    .text.gpio_init:0000000000000098 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:344    .text.gpio_init:000000000000009c .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:345    .text.gpio_init:000000000000009c .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:350    .text.gpio_init:00000000000000a0 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:351    .text.gpio_init:00000000000000a0 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:356    .text.gpio_init:00000000000000a4 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:357    .text.gpio_init:00000000000000a4 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:359    .text.gpio_init:00000000000000a8 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:366    .text.gpio_bit_set:0000000000000000 gpio_bit_set
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:369    .text.gpio_bit_set:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:371    .text.gpio_bit_set:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:372    .text.gpio_bit_set:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:373    .text.gpio_bit_set:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:375    .text.gpio_bit_set:0000000000000002 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:376    .text.gpio_bit_set:0000000000000004 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:383    .text.gpio_bit_reset:0000000000000000 gpio_bit_reset
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:386    .text.gpio_bit_reset:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:388    .text.gpio_bit_reset:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:389    .text.gpio_bit_reset:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:390    .text.gpio_bit_reset:0000000000000000 .L0 
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccVk7YLv.s 			page 30
 
 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:392    .text.gpio_bit_reset:0000000000000002 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:393    .text.gpio_bit_reset:0000000000000004 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:400    .text.gpio_bit_write:0000000000000000 gpio_bit_write
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:403    .text.gpio_bit_write:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:405    .text.gpio_bit_write:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:406    .text.gpio_bit_write:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:407    .text.gpio_bit_write:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:409    .text.gpio_bit_write:0000000000000002 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:410    .text.gpio_bit_write:0000000000000002 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:414    .text.gpio_bit_write:0000000000000006 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:415    .text.gpio_bit_write:0000000000000006 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:417    .text.gpio_bit_write:0000000000000008 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:418    .text.gpio_bit_write:000000000000000a .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:425    .text.gpio_port_write:0000000000000000 gpio_port_write
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:428    .text.gpio_port_write:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:430    .text.gpio_port_write:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:431    .text.gpio_port_write:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:432    .text.gpio_port_write:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:434    .text.gpio_port_write:0000000000000002 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:435    .text.gpio_port_write:0000000000000004 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:442    .text.gpio_input_bit_get:0000000000000000 gpio_input_bit_get
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:445    .text.gpio_input_bit_get:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:447    .text.gpio_input_bit_get:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:448    .text.gpio_input_bit_get:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:449    .text.gpio_input_bit_get:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:452    .text.gpio_input_bit_get:0000000000000002 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:454    .text.gpio_input_bit_get:0000000000000004 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:456    .text.gpio_input_bit_get:000000000000000a .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:463    .text.gpio_input_port_get:0000000000000000 gpio_input_port_get
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:466    .text.gpio_input_port_get:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:468    .text.gpio_input_port_get:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:469    .text.gpio_input_port_get:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:470    .text.gpio_input_port_get:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:473    .text.gpio_input_port_get:0000000000000002 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:476    .text.gpio_input_port_get:0000000000000008 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:483    .text.gpio_output_bit_get:0000000000000000 gpio_output_bit_get
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:486    .text.gpio_output_bit_get:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:488    .text.gpio_output_bit_get:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:489    .text.gpio_output_bit_get:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:490    .text.gpio_output_bit_get:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:493    .text.gpio_output_bit_get:0000000000000002 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:495    .text.gpio_output_bit_get:0000000000000004 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:497    .text.gpio_output_bit_get:000000000000000a .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:504    .text.gpio_output_port_get:0000000000000000 gpio_output_port_get
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:507    .text.gpio_output_port_get:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:509    .text.gpio_output_port_get:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:510    .text.gpio_output_port_get:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:511    .text.gpio_output_port_get:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:514    .text.gpio_output_port_get:0000000000000002 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:517    .text.gpio_output_port_get:0000000000000008 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:524    .text.gpio_pin_remap_config:0000000000000000 gpio_pin_remap_config
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:527    .text.gpio_pin_remap_config:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:529    .text.gpio_pin_remap_config:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:530    .text.gpio_pin_remap_config:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:531    .text.gpio_pin_remap_config:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:532    .text.gpio_pin_remap_config:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:534    .text.gpio_pin_remap_config:0000000000000004 .L0 
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccEpiWtP.s 			page 31
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:392    .text.gpio_bit_reset:0000000000000002 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:393    .text.gpio_bit_reset:0000000000000004 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:400    .text.gpio_bit_write:0000000000000000 gpio_bit_write
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:403    .text.gpio_bit_write:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:405    .text.gpio_bit_write:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:406    .text.gpio_bit_write:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:407    .text.gpio_bit_write:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:409    .text.gpio_bit_write:0000000000000002 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:410    .text.gpio_bit_write:0000000000000002 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:414    .text.gpio_bit_write:0000000000000006 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:415    .text.gpio_bit_write:0000000000000006 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:417    .text.gpio_bit_write:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:418    .text.gpio_bit_write:000000000000000a .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:425    .text.gpio_port_write:0000000000000000 gpio_port_write
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:428    .text.gpio_port_write:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:430    .text.gpio_port_write:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:431    .text.gpio_port_write:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:432    .text.gpio_port_write:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:434    .text.gpio_port_write:0000000000000002 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:435    .text.gpio_port_write:0000000000000004 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:442    .text.gpio_input_bit_get:0000000000000000 gpio_input_bit_get
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:445    .text.gpio_input_bit_get:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:447    .text.gpio_input_bit_get:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:448    .text.gpio_input_bit_get:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:449    .text.gpio_input_bit_get:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:452    .text.gpio_input_bit_get:0000000000000002 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:454    .text.gpio_input_bit_get:0000000000000004 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:456    .text.gpio_input_bit_get:000000000000000a .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:463    .text.gpio_input_port_get:0000000000000000 gpio_input_port_get
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:466    .text.gpio_input_port_get:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:468    .text.gpio_input_port_get:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:469    .text.gpio_input_port_get:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:470    .text.gpio_input_port_get:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:473    .text.gpio_input_port_get:0000000000000002 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:476    .text.gpio_input_port_get:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:483    .text.gpio_output_bit_get:0000000000000000 gpio_output_bit_get
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:486    .text.gpio_output_bit_get:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:488    .text.gpio_output_bit_get:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:489    .text.gpio_output_bit_get:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:490    .text.gpio_output_bit_get:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:493    .text.gpio_output_bit_get:0000000000000002 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:495    .text.gpio_output_bit_get:0000000000000004 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:497    .text.gpio_output_bit_get:000000000000000a .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:504    .text.gpio_output_port_get:0000000000000000 gpio_output_port_get
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:507    .text.gpio_output_port_get:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:509    .text.gpio_output_port_get:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:510    .text.gpio_output_port_get:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:511    .text.gpio_output_port_get:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:514    .text.gpio_output_port_get:0000000000000002 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:517    .text.gpio_output_port_get:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:524    .text.gpio_pin_remap_config:0000000000000000 gpio_pin_remap_config
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:527    .text.gpio_pin_remap_config:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:529    .text.gpio_pin_remap_config:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:530    .text.gpio_pin_remap_config:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:531    .text.gpio_pin_remap_config:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:532    .text.gpio_pin_remap_config:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:534    .text.gpio_pin_remap_config:0000000000000004 .L0 
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccVk7YLv.s 			page 31
 
 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:536    .text.gpio_pin_remap_config:0000000000000008 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:537    .text.gpio_pin_remap_config:0000000000000008 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:539    .text.gpio_pin_remap_config:000000000000000c .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:542    .text.gpio_pin_remap_config:000000000000000e .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:543    .text.gpio_pin_remap_config:000000000000000e .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:544    .text.gpio_pin_remap_config:000000000000000e .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:546    .text.gpio_pin_remap_config:0000000000000012 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:548    .text.gpio_pin_remap_config:0000000000000016 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:551    .text.gpio_pin_remap_config:0000000000000018 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:552    .text.gpio_pin_remap_config:0000000000000018 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:556    .text.gpio_pin_remap_config:000000000000001c .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:557    .text.gpio_pin_remap_config:000000000000001c .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:561    .text.gpio_pin_remap_config:0000000000000024 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:562    .text.gpio_pin_remap_config:0000000000000024 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:563    .text.gpio_pin_remap_config:0000000000000024 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:565    .text.gpio_pin_remap_config:0000000000000028 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:567    .text.gpio_pin_remap_config:000000000000002c .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:570    .text.gpio_pin_remap_config:0000000000000032 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:572    .text.gpio_pin_remap_config:0000000000000036 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:575    .text.gpio_pin_remap_config:0000000000000038 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:576    .text.gpio_pin_remap_config:0000000000000038 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:581    .text.gpio_pin_remap_config:000000000000003e .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:582    .text.gpio_pin_remap_config:000000000000003e .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:584    .text.gpio_pin_remap_config:0000000000000040 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:585    .text.gpio_pin_remap_config:0000000000000040 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:587    .text.gpio_pin_remap_config:0000000000000044 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:589    .text.gpio_pin_remap_config:0000000000000046 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:592    .text.gpio_pin_remap_config:000000000000004a .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:596    .text.gpio_pin_remap_config:000000000000004c .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:597    .text.gpio_pin_remap_config:000000000000004c .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:599    .text.gpio_pin_remap_config:0000000000000050 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:601    .text.gpio_pin_remap_config:0000000000000054 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:602    .text.gpio_pin_remap_config:0000000000000054 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:604    .text.gpio_pin_remap_config:0000000000000056 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:608    .text.gpio_pin_remap_config:0000000000000058 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:609    .text.gpio_pin_remap_config:0000000000000058 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:611    .text.gpio_pin_remap_config:000000000000005c .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:613    .text.gpio_pin_remap_config:000000000000005e .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:615    .text.gpio_pin_remap_config:0000000000000062 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:617    .text.gpio_pin_remap_config:0000000000000066 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:620    .text.gpio_pin_remap_config:0000000000000068 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:621    .text.gpio_pin_remap_config:0000000000000068 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:628    .text.gpio_pin_remap_config:0000000000000070 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:629    .text.gpio_pin_remap_config:0000000000000070 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:634    .text.gpio_pin_remap_config:0000000000000074 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:635    .text.gpio_pin_remap_config:0000000000000074 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:637    .text.gpio_pin_remap_config:0000000000000078 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:640    .text.gpio_pin_remap_config:000000000000007a .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:641    .text.gpio_pin_remap_config:000000000000007a .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:642    .text.gpio_pin_remap_config:000000000000007a .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:644    .text.gpio_pin_remap_config:000000000000007e .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:646    .text.gpio_pin_remap_config:0000000000000082 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:649    .text.gpio_pin_remap_config:0000000000000084 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:650    .text.gpio_pin_remap_config:0000000000000084 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:654    .text.gpio_pin_remap_config:0000000000000088 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:655    .text.gpio_pin_remap_config:0000000000000088 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:658    .text.gpio_pin_remap_config:0000000000000090 .L0 
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccEpiWtP.s 			page 32
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:536    .text.gpio_pin_remap_config:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:537    .text.gpio_pin_remap_config:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:539    .text.gpio_pin_remap_config:000000000000000c .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:542    .text.gpio_pin_remap_config:000000000000000e .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:543    .text.gpio_pin_remap_config:000000000000000e .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:544    .text.gpio_pin_remap_config:000000000000000e .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:546    .text.gpio_pin_remap_config:0000000000000012 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:548    .text.gpio_pin_remap_config:0000000000000016 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:551    .text.gpio_pin_remap_config:0000000000000018 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:552    .text.gpio_pin_remap_config:0000000000000018 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:556    .text.gpio_pin_remap_config:000000000000001c .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:557    .text.gpio_pin_remap_config:000000000000001c .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:561    .text.gpio_pin_remap_config:0000000000000024 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:562    .text.gpio_pin_remap_config:0000000000000024 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:563    .text.gpio_pin_remap_config:0000000000000024 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:565    .text.gpio_pin_remap_config:0000000000000028 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:567    .text.gpio_pin_remap_config:000000000000002c .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:570    .text.gpio_pin_remap_config:0000000000000032 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:572    .text.gpio_pin_remap_config:0000000000000036 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:575    .text.gpio_pin_remap_config:0000000000000038 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:576    .text.gpio_pin_remap_config:0000000000000038 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:581    .text.gpio_pin_remap_config:000000000000003e .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:582    .text.gpio_pin_remap_config:000000000000003e .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:584    .text.gpio_pin_remap_config:0000000000000040 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:585    .text.gpio_pin_remap_config:0000000000000040 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:587    .text.gpio_pin_remap_config:0000000000000044 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:589    .text.gpio_pin_remap_config:0000000000000046 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:592    .text.gpio_pin_remap_config:000000000000004a .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:596    .text.gpio_pin_remap_config:000000000000004c .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:597    .text.gpio_pin_remap_config:000000000000004c .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:599    .text.gpio_pin_remap_config:0000000000000050 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:601    .text.gpio_pin_remap_config:0000000000000054 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:602    .text.gpio_pin_remap_config:0000000000000054 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:604    .text.gpio_pin_remap_config:0000000000000056 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:608    .text.gpio_pin_remap_config:0000000000000058 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:609    .text.gpio_pin_remap_config:0000000000000058 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:611    .text.gpio_pin_remap_config:000000000000005c .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:613    .text.gpio_pin_remap_config:000000000000005e .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:615    .text.gpio_pin_remap_config:0000000000000062 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:617    .text.gpio_pin_remap_config:0000000000000066 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:620    .text.gpio_pin_remap_config:0000000000000068 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:621    .text.gpio_pin_remap_config:0000000000000068 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:628    .text.gpio_pin_remap_config:0000000000000070 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:629    .text.gpio_pin_remap_config:0000000000000070 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:634    .text.gpio_pin_remap_config:0000000000000074 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:635    .text.gpio_pin_remap_config:0000000000000074 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:637    .text.gpio_pin_remap_config:0000000000000078 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:640    .text.gpio_pin_remap_config:000000000000007a .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:641    .text.gpio_pin_remap_config:000000000000007a .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:642    .text.gpio_pin_remap_config:000000000000007a .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:644    .text.gpio_pin_remap_config:000000000000007e .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:646    .text.gpio_pin_remap_config:0000000000000082 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:649    .text.gpio_pin_remap_config:0000000000000084 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:650    .text.gpio_pin_remap_config:0000000000000084 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:654    .text.gpio_pin_remap_config:0000000000000088 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:655    .text.gpio_pin_remap_config:0000000000000088 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:658    .text.gpio_pin_remap_config:0000000000000090 .L0 
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccVk7YLv.s 			page 32
 
 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:661    .text.gpio_pin_remap_config:0000000000000096 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:663    .text.gpio_pin_remap_config:0000000000000098 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:666    .text.gpio_pin_remap_config:000000000000009a .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:667    .text.gpio_pin_remap_config:000000000000009a .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:669    .text.gpio_pin_remap_config:00000000000000a0 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:676    .text.gpio_exti_source_select:0000000000000000 gpio_exti_source_select
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:679    .text.gpio_exti_source_select:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:681    .text.gpio_exti_source_select:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:682    .text.gpio_exti_source_select:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:683    .text.gpio_exti_source_select:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:684    .text.gpio_exti_source_select:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:686    .text.gpio_exti_source_select:0000000000000004 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:689    .text.gpio_exti_source_select:0000000000000006 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:690    .text.gpio_exti_source_select:0000000000000006 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:693    .text.gpio_exti_source_select:000000000000000c .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:699    .text.gpio_exti_source_select:000000000000001a .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:700    .text.gpio_exti_source_select:000000000000001a .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:706    .text.gpio_exti_source_select:0000000000000024 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:707    .text.gpio_exti_source_select:0000000000000024 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:714    .text.gpio_exti_source_select:000000000000002c .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:715    .text.gpio_exti_source_select:000000000000002c .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:719    .text.gpio_exti_source_select:0000000000000032 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:720    .text.gpio_exti_source_select:0000000000000032 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:725    .text.gpio_exti_source_select:000000000000003c .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:726    .text.gpio_exti_source_select:000000000000003c .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:732    .text.gpio_exti_source_select:0000000000000044 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:733    .text.gpio_exti_source_select:0000000000000044 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:735    .text.gpio_exti_source_select:0000000000000046 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:737    .text.gpio_exti_source_select:000000000000004a .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:739    .text.gpio_exti_source_select:000000000000004e .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:740    .text.gpio_exti_source_select:000000000000004e .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:744    .text.gpio_exti_source_select:0000000000000054 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:745    .text.gpio_exti_source_select:0000000000000054 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:751    .text.gpio_exti_source_select:000000000000005c .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:752    .text.gpio_exti_source_select:000000000000005c .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:756    .text.gpio_exti_source_select:0000000000000062 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:757    .text.gpio_exti_source_select:0000000000000062 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:761    .text.gpio_exti_source_select:0000000000000068 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:762    .text.gpio_exti_source_select:000000000000006a .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:769    .text.gpio_event_output_config:0000000000000000 gpio_event_output_config
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:772    .text.gpio_event_output_config:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:774    .text.gpio_event_output_config:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:775    .text.gpio_event_output_config:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:776    .text.gpio_event_output_config:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:777    .text.gpio_event_output_config:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:781    .text.gpio_event_output_config:0000000000000006 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:782    .text.gpio_event_output_config:0000000000000006 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:783    .text.gpio_event_output_config:0000000000000006 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:784    .text.gpio_event_output_config:0000000000000006 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:787    .text.gpio_event_output_config:0000000000000008 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:791    .text.gpio_event_output_config:000000000000000e .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:794    .text.gpio_event_output_config:0000000000000010 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:795    .text.gpio_event_output_config:0000000000000010 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:797    .text.gpio_event_output_config:0000000000000012 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:798    .text.gpio_event_output_config:0000000000000014 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:805    .text.gpio_event_output_enable:0000000000000000 gpio_event_output_enable
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:808    .text.gpio_event_output_enable:0000000000000000 .L0 
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccEpiWtP.s 			page 33
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:661    .text.gpio_pin_remap_config:0000000000000096 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:663    .text.gpio_pin_remap_config:0000000000000098 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:666    .text.gpio_pin_remap_config:000000000000009a .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:667    .text.gpio_pin_remap_config:000000000000009a .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:669    .text.gpio_pin_remap_config:00000000000000a0 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:676    .text.gpio_exti_source_select:0000000000000000 gpio_exti_source_select
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:679    .text.gpio_exti_source_select:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:681    .text.gpio_exti_source_select:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:682    .text.gpio_exti_source_select:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:683    .text.gpio_exti_source_select:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:684    .text.gpio_exti_source_select:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:686    .text.gpio_exti_source_select:0000000000000004 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:689    .text.gpio_exti_source_select:0000000000000006 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:690    .text.gpio_exti_source_select:0000000000000006 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:693    .text.gpio_exti_source_select:000000000000000c .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:699    .text.gpio_exti_source_select:000000000000001a .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:700    .text.gpio_exti_source_select:000000000000001a .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:706    .text.gpio_exti_source_select:0000000000000024 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:707    .text.gpio_exti_source_select:0000000000000024 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:714    .text.gpio_exti_source_select:000000000000002c .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:715    .text.gpio_exti_source_select:000000000000002c .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:719    .text.gpio_exti_source_select:0000000000000032 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:720    .text.gpio_exti_source_select:0000000000000032 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:725    .text.gpio_exti_source_select:000000000000003c .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:726    .text.gpio_exti_source_select:000000000000003c .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:732    .text.gpio_exti_source_select:0000000000000044 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:733    .text.gpio_exti_source_select:0000000000000044 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:735    .text.gpio_exti_source_select:0000000000000046 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:737    .text.gpio_exti_source_select:000000000000004a .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:739    .text.gpio_exti_source_select:000000000000004e .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:740    .text.gpio_exti_source_select:000000000000004e .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:744    .text.gpio_exti_source_select:0000000000000054 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:745    .text.gpio_exti_source_select:0000000000000054 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:751    .text.gpio_exti_source_select:000000000000005c .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:752    .text.gpio_exti_source_select:000000000000005c .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:756    .text.gpio_exti_source_select:0000000000000062 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:757    .text.gpio_exti_source_select:0000000000000062 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:761    .text.gpio_exti_source_select:0000000000000068 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:762    .text.gpio_exti_source_select:000000000000006a .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:769    .text.gpio_event_output_config:0000000000000000 gpio_event_output_config
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:772    .text.gpio_event_output_config:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:774    .text.gpio_event_output_config:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:775    .text.gpio_event_output_config:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:776    .text.gpio_event_output_config:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:777    .text.gpio_event_output_config:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:781    .text.gpio_event_output_config:0000000000000006 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:782    .text.gpio_event_output_config:0000000000000006 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:783    .text.gpio_event_output_config:0000000000000006 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:784    .text.gpio_event_output_config:0000000000000006 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:787    .text.gpio_event_output_config:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:791    .text.gpio_event_output_config:000000000000000e .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:794    .text.gpio_event_output_config:0000000000000010 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:795    .text.gpio_event_output_config:0000000000000010 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:797    .text.gpio_event_output_config:0000000000000012 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:798    .text.gpio_event_output_config:0000000000000014 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:805    .text.gpio_event_output_enable:0000000000000000 gpio_event_output_enable
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:808    .text.gpio_event_output_enable:0000000000000000 .L0 
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccVk7YLv.s 			page 33
 
 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:809    .text.gpio_event_output_enable:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:810    .text.gpio_event_output_enable:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:811    .text.gpio_event_output_enable:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:816    .text.gpio_event_output_enable:000000000000000c .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:817    .text.gpio_event_output_enable:000000000000000e .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:824    .text.gpio_event_output_disable:0000000000000000 gpio_event_output_disable
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:827    .text.gpio_event_output_disable:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:828    .text.gpio_event_output_disable:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:829    .text.gpio_event_output_disable:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:830    .text.gpio_event_output_disable:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:835    .text.gpio_event_output_disable:000000000000000c .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:836    .text.gpio_event_output_disable:000000000000000e .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:843    .text.gpio_pin_lock:0000000000000000 gpio_pin_lock
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:846    .text.gpio_pin_lock:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:848    .text.gpio_pin_lock:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:849    .text.gpio_pin_lock:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:850    .text.gpio_pin_lock:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:851    .text.gpio_pin_lock:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:855    .text.gpio_pin_lock:0000000000000004 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:856    .text.gpio_pin_lock:0000000000000004 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:858    .text.gpio_pin_lock:0000000000000006 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:859    .text.gpio_pin_lock:0000000000000006 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:861    .text.gpio_pin_lock:0000000000000008 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:862    .text.gpio_pin_lock:0000000000000008 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:864    .text.gpio_pin_lock:000000000000000a .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:865    .text.gpio_pin_lock:000000000000000a .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:868    .text.gpio_pin_lock:000000000000000c .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:869    .text.gpio_pin_lock:000000000000000c .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:871    .text.gpio_pin_lock:000000000000000e .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:872    .text.gpio_pin_lock:0000000000000010 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:157    .text.gpio_deinit:00000000000000c6 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:194    .text.gpio_afio_deinit:0000000000000020 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:362    .text.gpio_init:00000000000000a8 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:379    .text.gpio_bit_set:0000000000000004 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:396    .text.gpio_bit_reset:0000000000000004 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:421    .text.gpio_bit_write:000000000000000a .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:438    .text.gpio_port_write:0000000000000004 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:459    .text.gpio_input_bit_get:000000000000000a .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:479    .text.gpio_input_port_get:0000000000000008 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:500    .text.gpio_output_bit_get:000000000000000a .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:520    .text.gpio_output_port_get:0000000000000008 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:672    .text.gpio_pin_remap_config:00000000000000a0 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:765    .text.gpio_exti_source_select:000000000000006a .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:801    .text.gpio_event_output_config:0000000000000014 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:820    .text.gpio_event_output_enable:000000000000000e .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:839    .text.gpio_event_output_disable:000000000000000e .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:875    .text.gpio_pin_lock:0000000000000010 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:809    .text.gpio_event_output_enable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:810    .text.gpio_event_output_enable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:811    .text.gpio_event_output_enable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:816    .text.gpio_event_output_enable:000000000000000c .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:817    .text.gpio_event_output_enable:000000000000000e .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:824    .text.gpio_event_output_disable:0000000000000000 gpio_event_output_disable
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:827    .text.gpio_event_output_disable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:828    .text.gpio_event_output_disable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:829    .text.gpio_event_output_disable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:830    .text.gpio_event_output_disable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:835    .text.gpio_event_output_disable:000000000000000c .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:836    .text.gpio_event_output_disable:000000000000000e .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:843    .text.gpio_pin_lock:0000000000000000 gpio_pin_lock
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:846    .text.gpio_pin_lock:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:848    .text.gpio_pin_lock:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:849    .text.gpio_pin_lock:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:850    .text.gpio_pin_lock:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:851    .text.gpio_pin_lock:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:855    .text.gpio_pin_lock:0000000000000004 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:856    .text.gpio_pin_lock:0000000000000004 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:858    .text.gpio_pin_lock:0000000000000006 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:859    .text.gpio_pin_lock:0000000000000006 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:861    .text.gpio_pin_lock:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:862    .text.gpio_pin_lock:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:864    .text.gpio_pin_lock:000000000000000a .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:865    .text.gpio_pin_lock:000000000000000a .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:868    .text.gpio_pin_lock:000000000000000c .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:869    .text.gpio_pin_lock:000000000000000c .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:871    .text.gpio_pin_lock:000000000000000e .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:872    .text.gpio_pin_lock:0000000000000010 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:157    .text.gpio_deinit:00000000000000c6 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:194    .text.gpio_afio_deinit:0000000000000020 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:362    .text.gpio_init:00000000000000a8 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:379    .text.gpio_bit_set:0000000000000004 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:396    .text.gpio_bit_reset:0000000000000004 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:421    .text.gpio_bit_write:000000000000000a .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:438    .text.gpio_port_write:0000000000000004 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:459    .text.gpio_input_bit_get:000000000000000a .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:479    .text.gpio_input_port_get:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:500    .text.gpio_output_bit_get:000000000000000a .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:520    .text.gpio_output_port_get:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:672    .text.gpio_pin_remap_config:00000000000000a0 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:765    .text.gpio_exti_source_select:000000000000006a .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:801    .text.gpio_event_output_config:0000000000000014 .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:820    .text.gpio_event_output_enable:000000000000000e .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:839    .text.gpio_event_output_disable:000000000000000e .L0 
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:875    .text.gpio_pin_lock:0000000000000010 .L0 
                      .debug_frame:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:78     .text.gpio_deinit:000000000000006c .L2
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:51     .text.gpio_deinit:0000000000000040 .L11
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:100    .text.gpio_deinit:0000000000000088 .L7
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:122    .text.gpio_deinit:00000000000000a4 .L1
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:133    .text.gpio_deinit:00000000000000aa .L4
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:219    .text.gpio_init:000000000000000e .L15
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:272    .text.gpio_init:000000000000004c .L16
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:348    .text.gpio_init:00000000000000a0 .L35
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:336    .text.gpio_init:0000000000000098 .L36
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccEpiWtP.s 			page 34
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:78     .text.gpio_deinit:000000000000006c .L2
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:51     .text.gpio_deinit:0000000000000040 .L11
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:100    .text.gpio_deinit:0000000000000088 .L7
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:122    .text.gpio_deinit:00000000000000a4 .L1
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:133    .text.gpio_deinit:00000000000000aa .L4
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:219    .text.gpio_init:000000000000000e .L15
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:272    .text.gpio_init:000000000000004c .L16
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:348    .text.gpio_init:00000000000000a0 .L35
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:336    .text.gpio_init:0000000000000098 .L36
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccVk7YLv.s 			page 34
 
 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:234    .text.gpio_init:000000000000001e .L19
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:328    .text.gpio_init:0000000000000090 .L20
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:354    .text.gpio_init:00000000000000a4 .L37
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:342    .text.gpio_init:000000000000009c .L38
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:287    .text.gpio_init:0000000000000060 .L23
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:267    .text.gpio_init:000000000000004a .L18
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:323    .text.gpio_init:000000000000008e .L22
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:412    .text.gpio_bit_write:0000000000000006 .L42
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:632    .text.gpio_pin_remap_config:0000000000000074 .L61
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:652    .text.gpio_pin_remap_config:0000000000000088 .L62
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:606    .text.gpio_pin_remap_config:0000000000000058 .L54
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:594    .text.gpio_pin_remap_config:000000000000004c .L55
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:626    .text.gpio_pin_remap_config:0000000000000070 .L63
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:579    .text.gpio_pin_remap_config:000000000000003e .L53
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:554    .text.gpio_pin_remap_config:000000000000001c .L52
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:712    .text.gpio_exti_source_select:000000000000002c .L65
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:730    .text.gpio_exti_source_select:0000000000000044 .L67
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:749    .text.gpio_exti_source_select:000000000000005c .L68
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:1829   .debug_abbrev:0000000000000000 .Ldebug_abbrev0
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:3100   .debug_str:0000000000000221 .LASF88
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:3032   .debug_str:0000000000000054 .LASF89
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:3152   .debug_str:00000000000003fa .LASF90
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:2980   .debug_ranges:0000000000000000 .Ldebug_ranges0
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:3018   .debug_line:0000000000000000 .Ldebug_line0
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:3116   .debug_str:000000000000030d .LASF0
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:3104   .debug_str:00000000000002b3 .LASF1
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:3080   .debug_str:00000000000001ac .LASF4
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:3094   .debug_str:00000000000001fd .LASF2
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:3058   .debug_str:000000000000012e .LASF3
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:3052   .debug_str:00000000000000ff .LASF5
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:3130   .debug_str:000000000000035e .LASF6
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:3074   .debug_str:000000000000018b .LASF7
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:3044   .debug_str:00000000000000d8 .LASF8
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:3162   .debug_str:000000000000045c .LASF9
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:3072   .debug_str:000000000000017d .LASF10
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:3108   .debug_str:00000000000002ca .LASF11
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:3060   .debug_str:0000000000000138 .LASF12
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:3118   .debug_str:000000000000031a .LASF13
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:3112   .debug_str:00000000000002ee .LASF14
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:3150   .debug_str:00000000000003ea .LASF91
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:3062   .debug_str:0000000000000140 .LASF15
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:3198   .debug_str:0000000000000541 .LASF16
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:3136   .debug_str:0000000000000393 .LASF17
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:3178   .debug_str:00000000000004c4 .LASF18
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:3194   .debug_str:000000000000052a .LASF19
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:3024   .debug_str:0000000000000021 .LASF20
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:3138   .debug_str:00000000000003a1 .LASF21
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:3064   .debug_str:0000000000000148 .LASF22
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:3088   .debug_str:00000000000001d1 .LASF23
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:3084   .debug_str:00000000000001bd .LASF24
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:3148   .debug_str:00000000000003dc .LASF25
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:3192   .debug_str:000000000000051c .LASF26
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:3202   .debug_str:0000000000000556 .LASF27
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:3038   .debug_str:000000000000009a .LASF28
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:3078   .debug_str:00000000000001a0 .LASF29
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:3158   .debug_str:000000000000043a .LASF30
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:3200   .debug_str:0000000000000548 .LASF31
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccEpiWtP.s 			page 35
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:234    .text.gpio_init:000000000000001e .L19
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:328    .text.gpio_init:0000000000000090 .L20
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:354    .text.gpio_init:00000000000000a4 .L37
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:342    .text.gpio_init:000000000000009c .L38
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:287    .text.gpio_init:0000000000000060 .L23
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:267    .text.gpio_init:000000000000004a .L18
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:323    .text.gpio_init:000000000000008e .L22
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:412    .text.gpio_bit_write:0000000000000006 .L42
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:632    .text.gpio_pin_remap_config:0000000000000074 .L61
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:652    .text.gpio_pin_remap_config:0000000000000088 .L62
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:606    .text.gpio_pin_remap_config:0000000000000058 .L54
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:594    .text.gpio_pin_remap_config:000000000000004c .L55
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:626    .text.gpio_pin_remap_config:0000000000000070 .L63
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:579    .text.gpio_pin_remap_config:000000000000003e .L53
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:554    .text.gpio_pin_remap_config:000000000000001c .L52
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:712    .text.gpio_exti_source_select:000000000000002c .L65
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:730    .text.gpio_exti_source_select:0000000000000044 .L67
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:749    .text.gpio_exti_source_select:000000000000005c .L68
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:1829   .debug_abbrev:0000000000000000 .Ldebug_abbrev0
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:3100   .debug_str:0000000000000221 .LASF88
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:3032   .debug_str:0000000000000054 .LASF89
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:3152   .debug_str:00000000000003fa .LASF90
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:2980   .debug_ranges:0000000000000000 .Ldebug_ranges0
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:3018   .debug_line:0000000000000000 .Ldebug_line0
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:3116   .debug_str:000000000000030d .LASF0
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:3104   .debug_str:00000000000002b3 .LASF1
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:3080   .debug_str:00000000000001ac .LASF4
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:3094   .debug_str:00000000000001fd .LASF2
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:3058   .debug_str:000000000000012e .LASF3
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:3052   .debug_str:00000000000000ff .LASF5
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:3130   .debug_str:000000000000035e .LASF6
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:3074   .debug_str:000000000000018b .LASF7
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:3044   .debug_str:00000000000000d8 .LASF8
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:3162   .debug_str:000000000000045c .LASF9
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:3072   .debug_str:000000000000017d .LASF10
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:3108   .debug_str:00000000000002ca .LASF11
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:3060   .debug_str:0000000000000138 .LASF12
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:3118   .debug_str:000000000000031a .LASF13
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:3112   .debug_str:00000000000002ee .LASF14
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:3150   .debug_str:00000000000003ea .LASF91
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:3062   .debug_str:0000000000000140 .LASF15
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:3198   .debug_str:0000000000000541 .LASF16
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:3136   .debug_str:0000000000000393 .LASF17
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:3178   .debug_str:00000000000004c4 .LASF18
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:3194   .debug_str:000000000000052a .LASF19
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:3024   .debug_str:0000000000000021 .LASF20
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:3138   .debug_str:00000000000003a1 .LASF21
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:3064   .debug_str:0000000000000148 .LASF22
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:3088   .debug_str:00000000000001d1 .LASF23
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:3084   .debug_str:00000000000001bd .LASF24
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:3148   .debug_str:00000000000003dc .LASF25
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:3192   .debug_str:000000000000051c .LASF26
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:3202   .debug_str:0000000000000556 .LASF27
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:3038   .debug_str:000000000000009a .LASF28
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:3078   .debug_str:00000000000001a0 .LASF29
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:3158   .debug_str:000000000000043a .LASF30
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:3200   .debug_str:0000000000000548 .LASF31
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccVk7YLv.s 			page 35
 
 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:3164   .debug_str:000000000000046e .LASF32
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:3026   .debug_str:000000000000002e .LASF33
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:3196   .debug_str:0000000000000535 .LASF34
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:3172   .debug_str:00000000000004a3 .LASF35
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:3030   .debug_str:0000000000000048 .LASF36
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:3068   .debug_str:0000000000000163 .LASF37
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:3036   .debug_str:000000000000008e .LASF38
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:3174   .debug_str:00000000000004af .LASF39
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:3106   .debug_str:00000000000002bf .LASF40
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:3096   .debug_str:000000000000020b .LASF41
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:3110   .debug_str:00000000000002e1 .LASF42
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:3168   .debug_str:000000000000048c .LASF43
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:3028   .debug_str:000000000000003b .LASF44
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:3066   .debug_str:0000000000000156 .LASF45
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:3120   .debug_str:0000000000000323 .LASF46
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:3126   .debug_str:000000000000033d .LASF47
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:3180   .debug_str:00000000000004ca .LASF48
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:3022   .debug_str:0000000000000013 .LASF49
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:3184   .debug_str:00000000000004e2 .LASF50
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:3092   .debug_str:00000000000001ef .LASF51
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:3034   .debug_str:0000000000000083 .LASF52
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:3070   .debug_str:000000000000016f .LASF56
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:844    .text.gpio_pin_lock:0000000000000000 .LFB18
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:873    .text.gpio_pin_lock:0000000000000010 .LFE18
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:3098   .debug_str:0000000000000215 .LASF53
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:3146   .debug_str:00000000000003d7 .LASF60
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:2367   .debug_loc:0000000000000000 .LLST19
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:3056   .debug_str:0000000000000114 .LASF54
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:825    .text.gpio_event_output_disable:0000000000000000 .LFB17
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:837    .text.gpio_event_output_disable:000000000000000e .LFE17
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:3042   .debug_str:00000000000000bf .LASF55
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:806    .text.gpio_event_output_enable:0000000000000000 .LFB16
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:818    .text.gpio_event_output_enable:000000000000000e .LFE16
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:3134   .debug_str:000000000000037a .LASF57
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:770    .text.gpio_event_output_config:0000000000000000 .LFB15
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:799    .text.gpio_event_output_config:0000000000000014 .LFE15
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:3076   .debug_str:0000000000000194 .LASF58
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:2381   .debug_loc:0000000000000021 .LLST17
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:3140   .debug_str:00000000000003af .LASF59
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:2395   .debug_loc:0000000000000042 .LLST18
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:3102   .debug_str:000000000000029b .LASF61
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:677    .text.gpio_exti_source_select:0000000000000000 .LFB14
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:763    .text.gpio_exti_source_select:000000000000006a .LFE14
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:2442   .debug_loc:0000000000000092 .LLST15
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:3082   .debug_str:00000000000001b6 .LASF62
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:2456   .debug_loc:00000000000000b3 .LLST16
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:3114   .debug_str:00000000000002f7 .LASF63
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:525    .text.gpio_pin_remap_config:0000000000000000 .LFB13
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:670    .text.gpio_pin_remap_config:00000000000000a0 .LFE13
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:3086   .debug_str:00000000000001cb .LASF64
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:3132   .debug_str:0000000000000371 .LASF65
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:3188   .debug_str:00000000000004fd .LASF66
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:2504   .debug_loc:000000000000010b .LLST11
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:3124   .debug_str:0000000000000336 .LASF67
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:2529   .debug_loc:000000000000014c .LLST12
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:3142   .debug_str:00000000000003ba .LASF68
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:2559   .debug_loc:000000000000018b .LLST13
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccEpiWtP.s 			page 36
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:3164   .debug_str:000000000000046e .LASF32
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:3026   .debug_str:000000000000002e .LASF33
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:3196   .debug_str:0000000000000535 .LASF34
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:3172   .debug_str:00000000000004a3 .LASF35
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:3030   .debug_str:0000000000000048 .LASF36
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:3068   .debug_str:0000000000000163 .LASF37
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:3036   .debug_str:000000000000008e .LASF38
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:3174   .debug_str:00000000000004af .LASF39
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:3106   .debug_str:00000000000002bf .LASF40
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:3096   .debug_str:000000000000020b .LASF41
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:3110   .debug_str:00000000000002e1 .LASF42
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:3168   .debug_str:000000000000048c .LASF43
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:3028   .debug_str:000000000000003b .LASF44
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:3066   .debug_str:0000000000000156 .LASF45
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:3120   .debug_str:0000000000000323 .LASF46
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:3126   .debug_str:000000000000033d .LASF47
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:3180   .debug_str:00000000000004ca .LASF48
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:3022   .debug_str:0000000000000013 .LASF49
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:3184   .debug_str:00000000000004e2 .LASF50
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:3092   .debug_str:00000000000001ef .LASF51
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:3034   .debug_str:0000000000000083 .LASF52
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:3070   .debug_str:000000000000016f .LASF56
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:844    .text.gpio_pin_lock:0000000000000000 .LFB18
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:873    .text.gpio_pin_lock:0000000000000010 .LFE18
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:3098   .debug_str:0000000000000215 .LASF53
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:3146   .debug_str:00000000000003d7 .LASF60
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:2367   .debug_loc:0000000000000000 .LLST19
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:3056   .debug_str:0000000000000114 .LASF54
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:825    .text.gpio_event_output_disable:0000000000000000 .LFB17
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:837    .text.gpio_event_output_disable:000000000000000e .LFE17
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:3042   .debug_str:00000000000000bf .LASF55
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:806    .text.gpio_event_output_enable:0000000000000000 .LFB16
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:818    .text.gpio_event_output_enable:000000000000000e .LFE16
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:3134   .debug_str:000000000000037a .LASF57
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:770    .text.gpio_event_output_config:0000000000000000 .LFB15
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:799    .text.gpio_event_output_config:0000000000000014 .LFE15
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:3076   .debug_str:0000000000000194 .LASF58
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:2381   .debug_loc:0000000000000021 .LLST17
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:3140   .debug_str:00000000000003af .LASF59
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:2395   .debug_loc:0000000000000042 .LLST18
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:3102   .debug_str:000000000000029b .LASF61
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:677    .text.gpio_exti_source_select:0000000000000000 .LFB14
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:763    .text.gpio_exti_source_select:000000000000006a .LFE14
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:2442   .debug_loc:0000000000000092 .LLST15
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:3082   .debug_str:00000000000001b6 .LASF62
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:2456   .debug_loc:00000000000000b3 .LLST16
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:3114   .debug_str:00000000000002f7 .LASF63
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:525    .text.gpio_pin_remap_config:0000000000000000 .LFB13
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:670    .text.gpio_pin_remap_config:00000000000000a0 .LFE13
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:3086   .debug_str:00000000000001cb .LASF64
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:3132   .debug_str:0000000000000371 .LASF65
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:3188   .debug_str:00000000000004fd .LASF66
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:2504   .debug_loc:000000000000010b .LLST11
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:3124   .debug_str:0000000000000336 .LASF67
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:2529   .debug_loc:000000000000014c .LLST12
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:3142   .debug_str:00000000000003ba .LASF68
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:2559   .debug_loc:000000000000018b .LLST13
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccVk7YLv.s 			page 36
 
 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:3176   .debug_str:00000000000004ba .LASF69
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:2596   .debug_loc:00000000000001ed .LLST14
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:3128   .debug_str:0000000000000349 .LASF70
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:505    .text.gpio_output_port_get:0000000000000000 .LFB12
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:518    .text.gpio_output_port_get:0000000000000008 .LFE12
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:2629   .debug_loc:000000000000022f .LLST10
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:3144   .debug_str:00000000000003c3 .LASF71
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:484    .text.gpio_output_bit_get:0000000000000000 .LFB11
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:498    .text.gpio_output_bit_get:000000000000000a .LFE11
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:2643   .debug_loc:0000000000000250 .LLST9
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:3160   .debug_str:0000000000000448 .LASF72
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:464    .text.gpio_input_port_get:0000000000000000 .LFB10
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:477    .text.gpio_input_port_get:0000000000000008 .LFE10
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:2657   .debug_loc:0000000000000271 .LLST8
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:3020   .debug_str:0000000000000000 .LASF73
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:443    .text.gpio_input_bit_get:0000000000000000 .LFB9
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:457    .text.gpio_input_bit_get:000000000000000a .LFE9
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:2671   .debug_loc:0000000000000292 .LLST7
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:3090   .debug_str:00000000000001df .LASF74
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:426    .text.gpio_port_write:0000000000000000 .LFB8
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:436    .text.gpio_port_write:0000000000000004 .LFE8
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:3156   .debug_str:0000000000000435 .LASF75
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:3186   .debug_str:00000000000004ee .LASF76
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:401    .text.gpio_bit_write:0000000000000000 .LFB7
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:419    .text.gpio_bit_write:000000000000000a .LFE7
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:3054   .debug_str:000000000000010a .LASF77
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:3154   .debug_str:0000000000000426 .LASF78
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:384    .text.gpio_bit_reset:0000000000000000 .LFB6
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:394    .text.gpio_bit_reset:0000000000000004 .LFE6
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:3046   .debug_str:00000000000000e3 .LASF79
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:367    .text.gpio_bit_set:0000000000000000 .LFB5
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:377    .text.gpio_bit_set:0000000000000004 .LFE5
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:3170   .debug_str:0000000000000499 .LASF80
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:199    .text.gpio_init:0000000000000000 .LFB4
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:360    .text.gpio_init:00000000000000a8 .LFE4
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:3048   .debug_str:00000000000000f0 .LASF81
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:3122   .debug_str:0000000000000330 .LASF82
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:2685   .debug_loc:00000000000002b3 .LLST3
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:2699   .debug_loc:00000000000002d4 .LLST4
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:3050   .debug_str:00000000000000f5 .LASF83
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:2731   .debug_loc:0000000000000323 .LLST5
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:2743   .debug_loc:0000000000000342 .LLST6
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:3166   .debug_str:000000000000047b .LASF84
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:162    .text.gpio_afio_deinit:0000000000000000 .LFB3
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:192    .text.gpio_afio_deinit:0000000000000020 .LFE3
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:2791   .debug_loc:00000000000003c4 .LLST2
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:177    .text.gpio_afio_deinit:0000000000000010 .LVL16
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:190    .text.gpio_afio_deinit:0000000000000020 .LVL17
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:3182   .debug_str:00000000000004d6 .LASF85
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:11     .text.gpio_deinit:0000000000000000 .LFB2
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:155    .text.gpio_deinit:00000000000000c6 .LFE2
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:2809   .debug_loc:00000000000003f0 .LLST0
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:2877   .debug_loc:0000000000000494 .LLST1
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:36     .text.gpio_deinit:0000000000000030 .LVL2
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:50     .text.gpio_deinit:0000000000000040 .LVL3
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:63     .text.gpio_deinit:000000000000005c .LVL5
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:77     .text.gpio_deinit:000000000000006c .LVL6
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccEpiWtP.s 			page 37
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:3176   .debug_str:00000000000004ba .LASF69
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:2596   .debug_loc:00000000000001ed .LLST14
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:3128   .debug_str:0000000000000349 .LASF70
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:505    .text.gpio_output_port_get:0000000000000000 .LFB12
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:518    .text.gpio_output_port_get:0000000000000008 .LFE12
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:2629   .debug_loc:000000000000022f .LLST10
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:3144   .debug_str:00000000000003c3 .LASF71
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:484    .text.gpio_output_bit_get:0000000000000000 .LFB11
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:498    .text.gpio_output_bit_get:000000000000000a .LFE11
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:2643   .debug_loc:0000000000000250 .LLST9
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:3160   .debug_str:0000000000000448 .LASF72
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:464    .text.gpio_input_port_get:0000000000000000 .LFB10
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:477    .text.gpio_input_port_get:0000000000000008 .LFE10
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:2657   .debug_loc:0000000000000271 .LLST8
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:3020   .debug_str:0000000000000000 .LASF73
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:443    .text.gpio_input_bit_get:0000000000000000 .LFB9
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:457    .text.gpio_input_bit_get:000000000000000a .LFE9
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:2671   .debug_loc:0000000000000292 .LLST7
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:3090   .debug_str:00000000000001df .LASF74
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:426    .text.gpio_port_write:0000000000000000 .LFB8
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:436    .text.gpio_port_write:0000000000000004 .LFE8
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:3156   .debug_str:0000000000000435 .LASF75
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:3186   .debug_str:00000000000004ee .LASF76
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:401    .text.gpio_bit_write:0000000000000000 .LFB7
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:419    .text.gpio_bit_write:000000000000000a .LFE7
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:3054   .debug_str:000000000000010a .LASF77
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:3154   .debug_str:0000000000000426 .LASF78
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:384    .text.gpio_bit_reset:0000000000000000 .LFB6
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:394    .text.gpio_bit_reset:0000000000000004 .LFE6
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:3046   .debug_str:00000000000000e3 .LASF79
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:367    .text.gpio_bit_set:0000000000000000 .LFB5
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:377    .text.gpio_bit_set:0000000000000004 .LFE5
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:3170   .debug_str:0000000000000499 .LASF80
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:199    .text.gpio_init:0000000000000000 .LFB4
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:360    .text.gpio_init:00000000000000a8 .LFE4
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:3048   .debug_str:00000000000000f0 .LASF81
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:3122   .debug_str:0000000000000330 .LASF82
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:2685   .debug_loc:00000000000002b3 .LLST3
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:2699   .debug_loc:00000000000002d4 .LLST4
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:3050   .debug_str:00000000000000f5 .LASF83
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:2731   .debug_loc:0000000000000323 .LLST5
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:2743   .debug_loc:0000000000000342 .LLST6
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:3166   .debug_str:000000000000047b .LASF84
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:162    .text.gpio_afio_deinit:0000000000000000 .LFB3
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:192    .text.gpio_afio_deinit:0000000000000020 .LFE3
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:2791   .debug_loc:00000000000003c4 .LLST2
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:177    .text.gpio_afio_deinit:0000000000000010 .LVL16
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:190    .text.gpio_afio_deinit:0000000000000020 .LVL17
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:3182   .debug_str:00000000000004d6 .LASF85
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:11     .text.gpio_deinit:0000000000000000 .LFB2
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:155    .text.gpio_deinit:00000000000000c6 .LFE2
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:2809   .debug_loc:00000000000003f0 .LLST0
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:2877   .debug_loc:0000000000000494 .LLST1
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:36     .text.gpio_deinit:0000000000000030 .LVL2
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:50     .text.gpio_deinit:0000000000000040 .LVL3
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:63     .text.gpio_deinit:000000000000005c .LVL5
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:77     .text.gpio_deinit:000000000000006c .LVL6
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccVk7YLv.s 			page 37
 
 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:85     .text.gpio_deinit:0000000000000078 .LVL8
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:99     .text.gpio_deinit:0000000000000088 .LVL9
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:107    .text.gpio_deinit:0000000000000094 .LVL11
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:121    .text.gpio_deinit:00000000000000a4 .LVL12
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:140    .text.gpio_deinit:00000000000000b6 .LVL14
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:153    .text.gpio_deinit:00000000000000c6 .LVL15
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:3190   .debug_str:0000000000000504 .LASF86
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:3040   .debug_str:00000000000000a6 .LASF87
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:847    .text.gpio_pin_lock:0000000000000000 .LVL78
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:853    .text.gpio_pin_lock:0000000000000004 .LVL79
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:866    .text.gpio_pin_lock:000000000000000c .LVL80
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:773    .text.gpio_event_output_config:0000000000000000 .LVL73
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:785    .text.gpio_event_output_config:0000000000000008 .LVL75
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:779    .text.gpio_event_output_config:0000000000000006 .LVL74
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:788    .text.gpio_event_output_config:000000000000000c .LVL76
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:792    .text.gpio_event_output_config:0000000000000010 .LVL77
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:680    .text.gpio_exti_source_select:0000000000000000 .LVL67
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:696    .text.gpio_exti_source_select:0000000000000016 .LVL69
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:687    .text.gpio_exti_source_select:0000000000000006 .LVL68
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:702    .text.gpio_exti_source_select:0000000000000020 .LVL70
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:711    .text.gpio_exti_source_select:000000000000002c .LVL71
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:716    .text.gpio_exti_source_select:000000000000002e .LVL72
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:528    .text.gpio_pin_remap_config:0000000000000000 .LVL49
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:549    .text.gpio_pin_remap_config:0000000000000018 .LVL51
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:590    .text.gpio_pin_remap_config:000000000000004a .LVL56
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:605    .text.gpio_pin_remap_config:0000000000000058 .LVL58
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:625    .text.gpio_pin_remap_config:0000000000000070 .LVL61
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:631    .text.gpio_pin_remap_config:0000000000000074 .LVL62
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:647    .text.gpio_pin_remap_config:0000000000000084 .LVL64
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:560    .text.gpio_pin_remap_config:0000000000000024 .LVL53
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:578    .text.gpio_pin_remap_config:000000000000003e .LVL55
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:540    .text.gpio_pin_remap_config:000000000000000e .LVL50
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:573    .text.gpio_pin_remap_config:0000000000000038 .LVL54
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:618    .text.gpio_pin_remap_config:0000000000000068 .LVL59
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:623    .text.gpio_pin_remap_config:000000000000006e .LVL60
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:638    .text.gpio_pin_remap_config:000000000000007a .LVL63
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:553    .text.gpio_pin_remap_config:000000000000001c .LVL52
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:651    .text.gpio_pin_remap_config:0000000000000088 .LVL65
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:508    .text.gpio_output_port_get:0000000000000000 .LVL47
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:512    .text.gpio_output_port_get:0000000000000002 .LVL48
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:487    .text.gpio_output_bit_get:0000000000000000 .LVL45
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:491    .text.gpio_output_bit_get:0000000000000002 .LVL46
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:467    .text.gpio_input_port_get:0000000000000000 .LVL43
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:471    .text.gpio_input_port_get:0000000000000002 .LVL44
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:446    .text.gpio_input_bit_get:0000000000000000 .LVL41
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:450    .text.gpio_input_bit_get:0000000000000002 .LVL42
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:202    .text.gpio_init:0000000000000000 .LVL18
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:233    .text.gpio_init:000000000000001e .LVL21
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:218    .text.gpio_init:000000000000000e .LVL20
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:271    .text.gpio_init:000000000000004c .LVL25
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:274    .text.gpio_init:000000000000004e .LVL26
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:288    .text.gpio_init:0000000000000060 .LVL27
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:327    .text.gpio_init:0000000000000090 .LVL31
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:330    .text.gpio_init:0000000000000092 .LVL32
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:335    .text.gpio_init:0000000000000098 .LVL33
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:211    .text.gpio_init:0000000000000008 .LVL19
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:253    .text.gpio_init:000000000000003a .LVL22
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccEpiWtP.s 			page 38
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:85     .text.gpio_deinit:0000000000000078 .LVL8
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:99     .text.gpio_deinit:0000000000000088 .LVL9
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:107    .text.gpio_deinit:0000000000000094 .LVL11
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:121    .text.gpio_deinit:00000000000000a4 .LVL12
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:140    .text.gpio_deinit:00000000000000b6 .LVL14
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:153    .text.gpio_deinit:00000000000000c6 .LVL15
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:3190   .debug_str:0000000000000504 .LASF86
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:3040   .debug_str:00000000000000a6 .LASF87
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:847    .text.gpio_pin_lock:0000000000000000 .LVL78
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:853    .text.gpio_pin_lock:0000000000000004 .LVL79
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:866    .text.gpio_pin_lock:000000000000000c .LVL80
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:773    .text.gpio_event_output_config:0000000000000000 .LVL73
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:785    .text.gpio_event_output_config:0000000000000008 .LVL75
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:779    .text.gpio_event_output_config:0000000000000006 .LVL74
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:788    .text.gpio_event_output_config:000000000000000c .LVL76
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:792    .text.gpio_event_output_config:0000000000000010 .LVL77
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:680    .text.gpio_exti_source_select:0000000000000000 .LVL67
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:696    .text.gpio_exti_source_select:0000000000000016 .LVL69
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:687    .text.gpio_exti_source_select:0000000000000006 .LVL68
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:702    .text.gpio_exti_source_select:0000000000000020 .LVL70
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:711    .text.gpio_exti_source_select:000000000000002c .LVL71
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:716    .text.gpio_exti_source_select:000000000000002e .LVL72
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:528    .text.gpio_pin_remap_config:0000000000000000 .LVL49
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:549    .text.gpio_pin_remap_config:0000000000000018 .LVL51
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:590    .text.gpio_pin_remap_config:000000000000004a .LVL56
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:605    .text.gpio_pin_remap_config:0000000000000058 .LVL58
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:625    .text.gpio_pin_remap_config:0000000000000070 .LVL61
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:631    .text.gpio_pin_remap_config:0000000000000074 .LVL62
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:647    .text.gpio_pin_remap_config:0000000000000084 .LVL64
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:560    .text.gpio_pin_remap_config:0000000000000024 .LVL53
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:578    .text.gpio_pin_remap_config:000000000000003e .LVL55
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:540    .text.gpio_pin_remap_config:000000000000000e .LVL50
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:573    .text.gpio_pin_remap_config:0000000000000038 .LVL54
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:618    .text.gpio_pin_remap_config:0000000000000068 .LVL59
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:623    .text.gpio_pin_remap_config:000000000000006e .LVL60
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:638    .text.gpio_pin_remap_config:000000000000007a .LVL63
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:553    .text.gpio_pin_remap_config:000000000000001c .LVL52
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:651    .text.gpio_pin_remap_config:0000000000000088 .LVL65
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:508    .text.gpio_output_port_get:0000000000000000 .LVL47
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:512    .text.gpio_output_port_get:0000000000000002 .LVL48
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:487    .text.gpio_output_bit_get:0000000000000000 .LVL45
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:491    .text.gpio_output_bit_get:0000000000000002 .LVL46
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:467    .text.gpio_input_port_get:0000000000000000 .LVL43
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:471    .text.gpio_input_port_get:0000000000000002 .LVL44
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:446    .text.gpio_input_bit_get:0000000000000000 .LVL41
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:450    .text.gpio_input_bit_get:0000000000000002 .LVL42
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:202    .text.gpio_init:0000000000000000 .LVL18
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:233    .text.gpio_init:000000000000001e .LVL21
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:218    .text.gpio_init:000000000000000e .LVL20
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:271    .text.gpio_init:000000000000004c .LVL25
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:274    .text.gpio_init:000000000000004e .LVL26
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:288    .text.gpio_init:0000000000000060 .LVL27
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:327    .text.gpio_init:0000000000000090 .LVL31
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:330    .text.gpio_init:0000000000000092 .LVL32
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:335    .text.gpio_init:0000000000000098 .LVL33
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:211    .text.gpio_init:0000000000000008 .LVL19
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:253    .text.gpio_init:000000000000003a .LVL22
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccVk7YLv.s 			page 38
 
 
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:257    .text.gpio_init:000000000000003e .LVL23
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:261    .text.gpio_init:0000000000000042 .LVL24
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:309    .text.gpio_init:000000000000007e .LVL28
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:313    .text.gpio_init:0000000000000082 .LVL29
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:317    .text.gpio_init:0000000000000086 .LVL30
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:341    .text.gpio_init:000000000000009c .LVL34
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:347    .text.gpio_init:00000000000000a0 .LVL35
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:353    .text.gpio_init:00000000000000a4 .LVL36
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:168    .text.gpio_afio_deinit:0000000000000002 .LCFI12
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:186    .text.gpio_afio_deinit:0000000000000018 .LCFI13
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:19     .text.gpio_deinit:0000000000000002 .LCFI0
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:46     .text.gpio_deinit:0000000000000038 .LCFI1
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:52     .text.gpio_deinit:0000000000000040 .LCFI2
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:73     .text.gpio_deinit:0000000000000064 .LCFI3
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:79     .text.gpio_deinit:000000000000006c .LCFI4
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:95     .text.gpio_deinit:0000000000000080 .LCFI5
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:101    .text.gpio_deinit:0000000000000088 .LCFI6
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:117    .text.gpio_deinit:000000000000009c .LCFI7
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:123    .text.gpio_deinit:00000000000000a4 .LCFI8
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:130    .text.gpio_deinit:00000000000000a8 .LCFI9
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:134    .text.gpio_deinit:00000000000000aa .LCFI10
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:149    .text.gpio_deinit:00000000000000be .LCFI11
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:15     .text.gpio_deinit:0000000000000000 .LVL0
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:34     .text.gpio_deinit:0000000000000028 .LVL1
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:61     .text.gpio_deinit:0000000000000054 .LVL4
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:83     .text.gpio_deinit:0000000000000070 .LVL7
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:105    .text.gpio_deinit:000000000000008c .LVL10
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:138    .text.gpio_deinit:00000000000000ae .LVL13
-C:\Users\test\AppData\Local\Temp\ccEpiWtP.s:884    .debug_info:0000000000000000 .Ldebug_info0
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:257    .text.gpio_init:000000000000003e .LVL23
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:261    .text.gpio_init:0000000000000042 .LVL24
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:309    .text.gpio_init:000000000000007e .LVL28
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:313    .text.gpio_init:0000000000000082 .LVL29
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:317    .text.gpio_init:0000000000000086 .LVL30
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:341    .text.gpio_init:000000000000009c .LVL34
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:347    .text.gpio_init:00000000000000a0 .LVL35
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:353    .text.gpio_init:00000000000000a4 .LVL36
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:168    .text.gpio_afio_deinit:0000000000000002 .LCFI12
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:186    .text.gpio_afio_deinit:0000000000000018 .LCFI13
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:19     .text.gpio_deinit:0000000000000002 .LCFI0
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:46     .text.gpio_deinit:0000000000000038 .LCFI1
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:52     .text.gpio_deinit:0000000000000040 .LCFI2
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:73     .text.gpio_deinit:0000000000000064 .LCFI3
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:79     .text.gpio_deinit:000000000000006c .LCFI4
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:95     .text.gpio_deinit:0000000000000080 .LCFI5
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:101    .text.gpio_deinit:0000000000000088 .LCFI6
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:117    .text.gpio_deinit:000000000000009c .LCFI7
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:123    .text.gpio_deinit:00000000000000a4 .LCFI8
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:130    .text.gpio_deinit:00000000000000a8 .LCFI9
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:134    .text.gpio_deinit:00000000000000aa .LCFI10
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:149    .text.gpio_deinit:00000000000000be .LCFI11
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:15     .text.gpio_deinit:0000000000000000 .LVL0
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:34     .text.gpio_deinit:0000000000000028 .LVL1
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:61     .text.gpio_deinit:0000000000000054 .LVL4
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:83     .text.gpio_deinit:0000000000000070 .LVL7
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:105    .text.gpio_deinit:000000000000008c .LVL10
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:138    .text.gpio_deinit:00000000000000ae .LVL13
+C:\Users\test\AppData\Local\Temp\ccVk7YLv.s:884    .debug_info:0000000000000000 .Ldebug_info0
 
 UNDEFINED SYMBOLS
 rcu_periph_reset_enable

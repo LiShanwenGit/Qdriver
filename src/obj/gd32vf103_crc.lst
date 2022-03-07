@@ -1,4 +1,4 @@
-GAS LISTING C:\Users\test\AppData\Local\Temp\cc2pkszC.s 			page 1
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccRuIBTn.s 			page 1
 
 
    1              		.file	"gd32vf103_crc.c"
@@ -58,7 +58,7 @@ GAS LISTING C:\Users\test\AppData\Local\Temp\cc2pkszC.s 			page 1
   44:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c ****     \retval     none
   45:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c **** */
   46:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c **** void crc_deinit(void)
-GAS LISTING C:\Users\test\AppData\Local\Temp\cc2pkszC.s 			page 2
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccRuIBTn.s 			page 2
 
 
   47:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c **** {
@@ -118,7 +118,7 @@ GAS LISTING C:\Users\test\AppData\Local\Temp\cc2pkszC.s 			page 1
   55              	crc_data_register_read:
   56              	.LFB4:
   63:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c **** 
-GAS LISTING C:\Users\test\AppData\Local\Temp\cc2pkszC.s 			page 3
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccRuIBTn.s 			page 3
 
 
   64:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c **** /*!
@@ -178,7 +178,7 @@ GAS LISTING C:\Users\test\AppData\Local\Temp\cc2pkszC.s 			page 1
   88 000a 8280     		ret
   89              		.cfi_endproc
   90              	.LFE5:
-GAS LISTING C:\Users\test\AppData\Local\Temp\cc2pkszC.s 			page 4
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccRuIBTn.s 			page 4
 
 
   92              		.section	.text.crc_free_data_register_write,"ax",@progbits
@@ -238,7 +238,7 @@ GAS LISTING C:\Users\test\AppData\Local\Temp\cc2pkszC.s 			page 1
  111:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_crc.c **** }
  127              		.loc 1 111 1
  128 0008 8280     		ret
-GAS LISTING C:\Users\test\AppData\Local\Temp\cc2pkszC.s 			page 5
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccRuIBTn.s 			page 5
 
 
  129              		.cfi_endproc
@@ -298,155 +298,155 @@ GAS LISTING C:\Users\test\AppData\Local\Temp\cc2pkszC.s 			page 1
  169              		.text
  170              	.Letext0:
  171              		.file 2 "d:\\risc_v_gcc\\riscv-none-embed\\include\\machine\\_default_types.h"
-GAS LISTING C:\Users\test\AppData\Local\Temp\cc2pkszC.s 			page 6
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccRuIBTn.s 			page 6
 
 
  172              		.file 3 "d:\\risc_v_gcc\\riscv-none-embed\\include\\sys\\_stdint.h"
  173              		.file 4 "arch/riscv/mach-gd32vf10x/system/system_gd32vf103.h"
-GAS LISTING C:\Users\test\AppData\Local\Temp\cc2pkszC.s 			page 7
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccRuIBTn.s 			page 7
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 gd32vf103_crc.c
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:10     .text.crc_deinit:0000000000000000 crc_deinit
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:14     .text.crc_deinit:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:15     .text.crc_deinit:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:16     .text.crc_deinit:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:17     .text.crc_deinit:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:21     .text.crc_deinit:0000000000000008 .L0 
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:22     .text.crc_deinit:0000000000000008 .L0 
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:24     .text.crc_deinit:000000000000000c .L0 
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:25     .text.crc_deinit:000000000000000c .L0 
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:28     .text.crc_deinit:0000000000000010 .L0 
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:29     .text.crc_deinit:0000000000000012 .L0 
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:36     .text.crc_data_register_reset:0000000000000000 crc_data_register_reset
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:39     .text.crc_data_register_reset:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:40     .text.crc_data_register_reset:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:41     .text.crc_data_register_reset:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:42     .text.crc_data_register_reset:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:47     .text.crc_data_register_reset:000000000000000c .L0 
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:48     .text.crc_data_register_reset:000000000000000e .L0 
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:55     .text.crc_data_register_read:0000000000000000 crc_data_register_read
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:58     .text.crc_data_register_read:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:59     .text.crc_data_register_read:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:60     .text.crc_data_register_read:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:61     .text.crc_data_register_read:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:62     .text.crc_data_register_read:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:66     .text.crc_data_register_read:0000000000000006 .L0 
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:67     .text.crc_data_register_read:0000000000000006 .L0 
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:68     .text.crc_data_register_read:0000000000000008 .L0 
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:75     .text.crc_free_data_register_read:0000000000000000 crc_free_data_register_read
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:78     .text.crc_free_data_register_read:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:79     .text.crc_free_data_register_read:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:80     .text.crc_free_data_register_read:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:81     .text.crc_free_data_register_read:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:82     .text.crc_free_data_register_read:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:86     .text.crc_free_data_register_read:0000000000000006 .L0 
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:87     .text.crc_free_data_register_read:0000000000000006 .L0 
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:89     .text.crc_free_data_register_read:000000000000000c .L0 
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:96     .text.crc_free_data_register_write:0000000000000000 crc_free_data_register_write
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:99     .text.crc_free_data_register_write:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:101    .text.crc_free_data_register_write:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:102    .text.crc_free_data_register_write:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:103    .text.crc_free_data_register_write:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:106    .text.crc_free_data_register_write:0000000000000006 .L0 
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:107    .text.crc_free_data_register_write:0000000000000008 .L0 
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:114    .text.crc_single_data_calculate:0000000000000000 crc_single_data_calculate
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:117    .text.crc_single_data_calculate:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:119    .text.crc_single_data_calculate:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:120    .text.crc_single_data_calculate:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:121    .text.crc_single_data_calculate:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:124    .text.crc_single_data_calculate:0000000000000006 .L0 
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:125    .text.crc_single_data_calculate:0000000000000006 .L0 
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:128    .text.crc_single_data_calculate:0000000000000008 .L0 
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:129    .text.crc_single_data_calculate:000000000000000a .L0 
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:136    .text.crc_block_data_calculate:0000000000000000 crc_block_data_calculate
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:139    .text.crc_block_data_calculate:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:141    .text.crc_block_data_calculate:0000000000000000 .L0 
-GAS LISTING C:\Users\test\AppData\Local\Temp\cc2pkszC.s 			page 8
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:10     .text.crc_deinit:0000000000000000 crc_deinit
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:14     .text.crc_deinit:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:15     .text.crc_deinit:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:16     .text.crc_deinit:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:17     .text.crc_deinit:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:21     .text.crc_deinit:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:22     .text.crc_deinit:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:24     .text.crc_deinit:000000000000000c .L0 
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:25     .text.crc_deinit:000000000000000c .L0 
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:28     .text.crc_deinit:0000000000000010 .L0 
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:29     .text.crc_deinit:0000000000000012 .L0 
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:36     .text.crc_data_register_reset:0000000000000000 crc_data_register_reset
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:39     .text.crc_data_register_reset:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:40     .text.crc_data_register_reset:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:41     .text.crc_data_register_reset:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:42     .text.crc_data_register_reset:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:47     .text.crc_data_register_reset:000000000000000c .L0 
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:48     .text.crc_data_register_reset:000000000000000e .L0 
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:55     .text.crc_data_register_read:0000000000000000 crc_data_register_read
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:58     .text.crc_data_register_read:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:59     .text.crc_data_register_read:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:60     .text.crc_data_register_read:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:61     .text.crc_data_register_read:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:62     .text.crc_data_register_read:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:66     .text.crc_data_register_read:0000000000000006 .L0 
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:67     .text.crc_data_register_read:0000000000000006 .L0 
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:68     .text.crc_data_register_read:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:75     .text.crc_free_data_register_read:0000000000000000 crc_free_data_register_read
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:78     .text.crc_free_data_register_read:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:79     .text.crc_free_data_register_read:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:80     .text.crc_free_data_register_read:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:81     .text.crc_free_data_register_read:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:82     .text.crc_free_data_register_read:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:86     .text.crc_free_data_register_read:0000000000000006 .L0 
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:87     .text.crc_free_data_register_read:0000000000000006 .L0 
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:89     .text.crc_free_data_register_read:000000000000000c .L0 
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:96     .text.crc_free_data_register_write:0000000000000000 crc_free_data_register_write
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:99     .text.crc_free_data_register_write:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:101    .text.crc_free_data_register_write:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:102    .text.crc_free_data_register_write:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:103    .text.crc_free_data_register_write:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:106    .text.crc_free_data_register_write:0000000000000006 .L0 
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:107    .text.crc_free_data_register_write:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:114    .text.crc_single_data_calculate:0000000000000000 crc_single_data_calculate
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:117    .text.crc_single_data_calculate:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:119    .text.crc_single_data_calculate:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:120    .text.crc_single_data_calculate:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:121    .text.crc_single_data_calculate:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:124    .text.crc_single_data_calculate:0000000000000006 .L0 
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:125    .text.crc_single_data_calculate:0000000000000006 .L0 
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:128    .text.crc_single_data_calculate:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:129    .text.crc_single_data_calculate:000000000000000a .L0 
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:136    .text.crc_block_data_calculate:0000000000000000 crc_block_data_calculate
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:139    .text.crc_block_data_calculate:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:141    .text.crc_block_data_calculate:0000000000000000 .L0 
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccRuIBTn.s 			page 8
 
 
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:142    .text.crc_block_data_calculate:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:143    .text.crc_block_data_calculate:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:148    .text.crc_block_data_calculate:0000000000000006 .L0 
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:152    .text.crc_block_data_calculate:000000000000000a .L0 
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:153    .text.crc_block_data_calculate:000000000000000a .L0 
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:156    .text.crc_block_data_calculate:000000000000000e .L0 
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:158    .text.crc_block_data_calculate:0000000000000010 .L0 
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:161    .text.crc_block_data_calculate:0000000000000014 .L0 
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:162    .text.crc_block_data_calculate:0000000000000014 .L0 
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:165    .text.crc_block_data_calculate:000000000000001a .L0 
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:166    .text.crc_block_data_calculate:000000000000001c .L0 
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:32     .text.crc_deinit:0000000000000012 .L0 
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:51     .text.crc_data_register_reset:000000000000000e .L0 
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:71     .text.crc_data_register_read:0000000000000008 .L0 
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:92     .text.crc_free_data_register_read:000000000000000c .L0 
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:110    .text.crc_free_data_register_write:0000000000000008 .L0 
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:132    .text.crc_single_data_calculate:000000000000000a .L0 
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:169    .text.crc_block_data_calculate:000000000000001c .L0 
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:142    .text.crc_block_data_calculate:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:143    .text.crc_block_data_calculate:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:148    .text.crc_block_data_calculate:0000000000000006 .L0 
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:152    .text.crc_block_data_calculate:000000000000000a .L0 
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:153    .text.crc_block_data_calculate:000000000000000a .L0 
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:156    .text.crc_block_data_calculate:000000000000000e .L0 
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:158    .text.crc_block_data_calculate:0000000000000010 .L0 
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:161    .text.crc_block_data_calculate:0000000000000014 .L0 
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:162    .text.crc_block_data_calculate:0000000000000014 .L0 
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:165    .text.crc_block_data_calculate:000000000000001a .L0 
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:166    .text.crc_block_data_calculate:000000000000001c .L0 
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:32     .text.crc_deinit:0000000000000012 .L0 
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:51     .text.crc_data_register_reset:000000000000000e .L0 
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:71     .text.crc_data_register_read:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:92     .text.crc_free_data_register_read:000000000000000c .L0 
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:110    .text.crc_free_data_register_write:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:132    .text.crc_single_data_calculate:000000000000000a .L0 
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:169    .text.crc_block_data_calculate:000000000000001c .L0 
                      .debug_frame:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:159    .text.crc_block_data_calculate:0000000000000014 .L9
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:150    .text.crc_block_data_calculate:000000000000000a .L10
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:423    .debug_abbrev:0000000000000000 .Ldebug_abbrev0
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:755    .debug_str:0000000000000000 .LASF26
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:765    .debug_str:00000000000000a8 .LASF27
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:775    .debug_str:000000000000010f .LASF28
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:735    .debug_ranges:0000000000000000 .Ldebug_ranges0
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:753    .debug_line:0000000000000000 .Ldebug_line0
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:781    .debug_str:0000000000000162 .LASF0
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:811    .debug_str:000000000000022c .LASF1
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:757    .debug_str:000000000000007a .LASF6
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:773    .debug_str:0000000000000101 .LASF2
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:805    .debug_str:0000000000000210 .LASF3
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:769    .debug_str:00000000000000e8 .LASF4
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:809    .debug_str:0000000000000223 .LASF5
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:779    .debug_str:0000000000000157 .LASF7
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:767    .debug_str:00000000000000d6 .LASF8
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:797    .debug_str:00000000000001d4 .LASF9
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:787    .debug_str:000000000000017f .LASF10
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:789    .debug_str:0000000000000196 .LASF11
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:807    .debug_str:000000000000021a .LASF12
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:799    .debug_str:00000000000001e2 .LASF29
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:795    .debug_str:00000000000001bb .LASF15
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:137    .text.crc_block_data_calculate:0000000000000000 .LFB8
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:167    .text.crc_block_data_calculate:000000000000001c .LFE8
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:771    .debug_str:00000000000000fb .LASF13
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:662    .debug_loc:0000000000000000 .LLST1
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:763    .debug_str:00000000000000a3 .LASF14
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:676    .debug_loc:0000000000000021 .LLST2
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:801    .debug_str:00000000000001f2 .LASF20
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:690    .debug_loc:0000000000000042 .LLST3
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:759    .debug_str:0000000000000084 .LASF16
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:115    .text.crc_single_data_calculate:0000000000000000 .LFB7
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:130    .text.crc_single_data_calculate:000000000000000a .LFE7
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:791    .debug_str:000000000000019e .LASF17
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:698    .debug_loc:0000000000000056 .LLST0
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:815    .debug_str:0000000000000243 .LASF30
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:97     .text.crc_free_data_register_write:0000000000000000 .LFB6
-GAS LISTING C:\Users\test\AppData\Local\Temp\cc2pkszC.s 			page 9
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:159    .text.crc_block_data_calculate:0000000000000014 .L9
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:150    .text.crc_block_data_calculate:000000000000000a .L10
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:423    .debug_abbrev:0000000000000000 .Ldebug_abbrev0
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:755    .debug_str:0000000000000000 .LASF26
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:765    .debug_str:00000000000000a8 .LASF27
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:775    .debug_str:000000000000010f .LASF28
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:735    .debug_ranges:0000000000000000 .Ldebug_ranges0
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:753    .debug_line:0000000000000000 .Ldebug_line0
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:781    .debug_str:0000000000000162 .LASF0
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:811    .debug_str:000000000000022c .LASF1
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:757    .debug_str:000000000000007a .LASF6
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:773    .debug_str:0000000000000101 .LASF2
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:805    .debug_str:0000000000000210 .LASF3
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:769    .debug_str:00000000000000e8 .LASF4
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:809    .debug_str:0000000000000223 .LASF5
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:779    .debug_str:0000000000000157 .LASF7
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:767    .debug_str:00000000000000d6 .LASF8
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:797    .debug_str:00000000000001d4 .LASF9
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:787    .debug_str:000000000000017f .LASF10
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:789    .debug_str:0000000000000196 .LASF11
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:807    .debug_str:000000000000021a .LASF12
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:799    .debug_str:00000000000001e2 .LASF29
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:795    .debug_str:00000000000001bb .LASF15
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:137    .text.crc_block_data_calculate:0000000000000000 .LFB8
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:167    .text.crc_block_data_calculate:000000000000001c .LFE8
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:771    .debug_str:00000000000000fb .LASF13
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:662    .debug_loc:0000000000000000 .LLST1
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:763    .debug_str:00000000000000a3 .LASF14
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:676    .debug_loc:0000000000000021 .LLST2
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:801    .debug_str:00000000000001f2 .LASF20
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:690    .debug_loc:0000000000000042 .LLST3
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:759    .debug_str:0000000000000084 .LASF16
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:115    .text.crc_single_data_calculate:0000000000000000 .LFB7
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:130    .text.crc_single_data_calculate:000000000000000a .LFE7
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:791    .debug_str:000000000000019e .LASF17
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:698    .debug_loc:0000000000000056 .LLST0
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:815    .debug_str:0000000000000243 .LASF30
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:97     .text.crc_free_data_register_write:0000000000000000 .LFB6
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccRuIBTn.s 			page 9
 
 
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:108    .text.crc_free_data_register_write:0000000000000008 .LFE6
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:783    .debug_str:000000000000016f .LASF18
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:777    .debug_str:000000000000013b .LASF19
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:76     .text.crc_free_data_register_read:0000000000000000 .LFB5
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:90     .text.crc_free_data_register_read:000000000000000c .LFE5
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:785    .debug_str:0000000000000179 .LASF21
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:793    .debug_str:00000000000001a4 .LASF22
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:56     .text.crc_data_register_read:0000000000000000 .LFB4
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:69     .text.crc_data_register_read:0000000000000008 .LFE4
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:761    .debug_str:000000000000009e .LASF23
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:803    .debug_str:00000000000001f8 .LASF24
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:37     .text.crc_data_register_reset:0000000000000000 .LFB3
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:49     .text.crc_data_register_reset:000000000000000e .LFE3
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:813    .debug_str:0000000000000238 .LASF25
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:11     .text.crc_deinit:0000000000000000 .LFB2
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:30     .text.crc_deinit:0000000000000012 .LFE2
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:140    .text.crc_block_data_calculate:0000000000000000 .LVL5
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:149    .text.crc_block_data_calculate:000000000000000a .LVL7
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:145    .text.crc_block_data_calculate:0000000000000004 .LVL6
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:118    .text.crc_single_data_calculate:0000000000000000 .LVL3
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:126    .text.crc_single_data_calculate:0000000000000008 .LVL4
-C:\Users\test\AppData\Local\Temp\cc2pkszC.s:175    .debug_info:0000000000000000 .Ldebug_info0
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:108    .text.crc_free_data_register_write:0000000000000008 .LFE6
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:783    .debug_str:000000000000016f .LASF18
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:777    .debug_str:000000000000013b .LASF19
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:76     .text.crc_free_data_register_read:0000000000000000 .LFB5
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:90     .text.crc_free_data_register_read:000000000000000c .LFE5
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:785    .debug_str:0000000000000179 .LASF21
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:793    .debug_str:00000000000001a4 .LASF22
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:56     .text.crc_data_register_read:0000000000000000 .LFB4
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:69     .text.crc_data_register_read:0000000000000008 .LFE4
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:761    .debug_str:000000000000009e .LASF23
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:803    .debug_str:00000000000001f8 .LASF24
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:37     .text.crc_data_register_reset:0000000000000000 .LFB3
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:49     .text.crc_data_register_reset:000000000000000e .LFE3
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:813    .debug_str:0000000000000238 .LASF25
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:11     .text.crc_deinit:0000000000000000 .LFB2
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:30     .text.crc_deinit:0000000000000012 .LFE2
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:140    .text.crc_block_data_calculate:0000000000000000 .LVL5
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:149    .text.crc_block_data_calculate:000000000000000a .LVL7
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:145    .text.crc_block_data_calculate:0000000000000004 .LVL6
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:118    .text.crc_single_data_calculate:0000000000000000 .LVL3
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:126    .text.crc_single_data_calculate:0000000000000008 .LVL4
+C:\Users\test\AppData\Local\Temp\ccRuIBTn.s:175    .debug_info:0000000000000000 .Ldebug_info0
 
 NO UNDEFINED SYMBOLS

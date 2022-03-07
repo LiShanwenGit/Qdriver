@@ -28,7 +28,7 @@ obj/gd32vf10x-uart.o: arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-uart.c \
  arch/riscv/mach-gd32vf10x/system/n200_timer.h \
  arch/riscv/mach-gd32vf10x/system/n200_eclic.h \
  arch/riscv/mach-gd32vf10x/system/riscv_encoding.h \
- arch/riscv/mach-gd32vf10x/system/riscv_const.h
+ arch/riscv/mach-gd32vf10x/system/riscv_const.h core/delay-core.h
 
 core/uart-core.h:
 
@@ -91,3 +91,5 @@ arch/riscv/mach-gd32vf10x/system/n200_eclic.h:
 arch/riscv/mach-gd32vf10x/system/riscv_encoding.h:
 
 arch/riscv/mach-gd32vf10x/system/riscv_const.h:
+
+core/delay-core.h:

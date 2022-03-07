@@ -1,4 +1,4 @@
-GAS LISTING C:\Users\test\AppData\Local\Temp\cc0ywZae.s 			page 1
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccUTGwgh.s 			page 1
 
 
    1              		.file	"gd32vf10x-i2c.c"
@@ -58,7 +58,7 @@ GAS LISTING C:\Users\test\AppData\Local\Temp\cc0ywZae.s 			page 1
   21:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-i2c.c **** }
   22:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-i2c.c **** 
   23:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-i2c.c **** static uint32_t gd32vf10x_i2c_cmd_write(struct i2c_client *client, uint8_t *cmd, uint8_t *buffer,ui
-GAS LISTING C:\Users\test\AppData\Local\Temp\cc0ywZae.s 			page 2
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccUTGwgh.s 			page 2
 
 
   24:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-i2c.c **** {
@@ -118,7 +118,7 @@ GAS LISTING C:\Users\test\AppData\Local\Temp\cc0ywZae.s 			page 1
   89              	.LFB15:
   90              		.cfi_startproc
   91 0000 0145     		li	a0,0
-GAS LISTING C:\Users\test\AppData\Local\Temp\cc0ywZae.s 			page 3
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccUTGwgh.s 			page 3
 
 
   92 0002 8280     		ret
@@ -142,130 +142,130 @@ GAS LISTING C:\Users\test\AppData\Local\Temp\cc0ywZae.s 			page 1
  113              		.file 3 "d:\\risc_v_gcc\\riscv-none-embed\\include\\sys\\_stdint.h"
  114              		.file 4 "core/module.h"
  115              		.file 5 "core/i2c-core.h"
-GAS LISTING C:\Users\test\AppData\Local\Temp\cc0ywZae.s 			page 4
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccUTGwgh.s 			page 4
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 gd32vf10x-i2c.c
-C:\Users\test\AppData\Local\Temp\cc0ywZae.s:9      .text.gd32vf10x_i2c_probe:0000000000000000 gd32vf10x_i2c_probe
-C:\Users\test\AppData\Local\Temp\cc0ywZae.s:13     .text.gd32vf10x_i2c_probe:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\cc0ywZae.s:15     .text.gd32vf10x_i2c_probe:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\cc0ywZae.s:17     .text.gd32vf10x_i2c_probe:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\cc0ywZae.s:18     .text.gd32vf10x_i2c_probe:0000000000000002 .L0 
-C:\Users\test\AppData\Local\Temp\cc0ywZae.s:24     .text.gd32vf10x_i2c_write:0000000000000000 gd32vf10x_i2c_write
-C:\Users\test\AppData\Local\Temp\cc0ywZae.s:27     .text.gd32vf10x_i2c_write:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\cc0ywZae.s:29     .text.gd32vf10x_i2c_write:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\cc0ywZae.s:31     .text.gd32vf10x_i2c_write:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\cc0ywZae.s:32     .text.gd32vf10x_i2c_write:0000000000000002 .L0 
-C:\Users\test\AppData\Local\Temp\cc0ywZae.s:38     .text.gd32vf10x_i2c_cmd_write:0000000000000000 gd32vf10x_i2c_cmd_write
-C:\Users\test\AppData\Local\Temp\cc0ywZae.s:41     .text.gd32vf10x_i2c_cmd_write:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\cc0ywZae.s:43     .text.gd32vf10x_i2c_cmd_write:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\cc0ywZae.s:45     .text.gd32vf10x_i2c_cmd_write:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\cc0ywZae.s:46     .text.gd32vf10x_i2c_cmd_write:0000000000000002 .L0 
-C:\Users\test\AppData\Local\Temp\cc0ywZae.s:52     .text.gd32vf10x_i2c_set_speed:0000000000000000 gd32vf10x_i2c_set_speed
-C:\Users\test\AppData\Local\Temp\cc0ywZae.s:55     .text.gd32vf10x_i2c_set_speed:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\cc0ywZae.s:57     .text.gd32vf10x_i2c_set_speed:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\cc0ywZae.s:59     .text.gd32vf10x_i2c_set_speed:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\cc0ywZae.s:60     .text.gd32vf10x_i2c_set_speed:0000000000000002 .L0 
-C:\Users\test\AppData\Local\Temp\cc0ywZae.s:66     .text.gd32vf10x_i2c_cmd_read:0000000000000000 gd32vf10x_i2c_cmd_read
-C:\Users\test\AppData\Local\Temp\cc0ywZae.s:68     .text.gd32vf10x_i2c_cmd_read:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\cc0ywZae.s:71     .text.gd32vf10x_i2c_cmd_read:0000000000000004 .L0 
-C:\Users\test\AppData\Local\Temp\cc0ywZae.s:77     .text.gd32vf10x_i2c_read:0000000000000000 gd32vf10x_i2c_read
-C:\Users\test\AppData\Local\Temp\cc0ywZae.s:79     .text.gd32vf10x_i2c_read:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\cc0ywZae.s:82     .text.gd32vf10x_i2c_read:0000000000000004 .L0 
-C:\Users\test\AppData\Local\Temp\cc0ywZae.s:88     .text.gd32vf10x_i2c_remove:0000000000000000 gd32vf10x_i2c_remove
-C:\Users\test\AppData\Local\Temp\cc0ywZae.s:90     .text.gd32vf10x_i2c_remove:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\cc0ywZae.s:93     .text.gd32vf10x_i2c_remove:0000000000000004 .L0 
-C:\Users\test\AppData\Local\Temp\cc0ywZae.s:101    .__i2c_core_init:0000000000000000 gd32vf10x_i2c_adaptor
-C:\Users\test\AppData\Local\Temp\cc0ywZae.s:21     .text.gd32vf10x_i2c_probe:0000000000000002 .L0 
-C:\Users\test\AppData\Local\Temp\cc0ywZae.s:35     .text.gd32vf10x_i2c_write:0000000000000002 .L0 
-C:\Users\test\AppData\Local\Temp\cc0ywZae.s:49     .text.gd32vf10x_i2c_cmd_write:0000000000000002 .L0 
-C:\Users\test\AppData\Local\Temp\cc0ywZae.s:63     .text.gd32vf10x_i2c_set_speed:0000000000000002 .L0 
+C:\Users\test\AppData\Local\Temp\ccUTGwgh.s:9      .text.gd32vf10x_i2c_probe:0000000000000000 gd32vf10x_i2c_probe
+C:\Users\test\AppData\Local\Temp\ccUTGwgh.s:13     .text.gd32vf10x_i2c_probe:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccUTGwgh.s:15     .text.gd32vf10x_i2c_probe:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccUTGwgh.s:17     .text.gd32vf10x_i2c_probe:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccUTGwgh.s:18     .text.gd32vf10x_i2c_probe:0000000000000002 .L0 
+C:\Users\test\AppData\Local\Temp\ccUTGwgh.s:24     .text.gd32vf10x_i2c_write:0000000000000000 gd32vf10x_i2c_write
+C:\Users\test\AppData\Local\Temp\ccUTGwgh.s:27     .text.gd32vf10x_i2c_write:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccUTGwgh.s:29     .text.gd32vf10x_i2c_write:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccUTGwgh.s:31     .text.gd32vf10x_i2c_write:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccUTGwgh.s:32     .text.gd32vf10x_i2c_write:0000000000000002 .L0 
+C:\Users\test\AppData\Local\Temp\ccUTGwgh.s:38     .text.gd32vf10x_i2c_cmd_write:0000000000000000 gd32vf10x_i2c_cmd_write
+C:\Users\test\AppData\Local\Temp\ccUTGwgh.s:41     .text.gd32vf10x_i2c_cmd_write:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccUTGwgh.s:43     .text.gd32vf10x_i2c_cmd_write:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccUTGwgh.s:45     .text.gd32vf10x_i2c_cmd_write:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccUTGwgh.s:46     .text.gd32vf10x_i2c_cmd_write:0000000000000002 .L0 
+C:\Users\test\AppData\Local\Temp\ccUTGwgh.s:52     .text.gd32vf10x_i2c_set_speed:0000000000000000 gd32vf10x_i2c_set_speed
+C:\Users\test\AppData\Local\Temp\ccUTGwgh.s:55     .text.gd32vf10x_i2c_set_speed:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccUTGwgh.s:57     .text.gd32vf10x_i2c_set_speed:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccUTGwgh.s:59     .text.gd32vf10x_i2c_set_speed:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccUTGwgh.s:60     .text.gd32vf10x_i2c_set_speed:0000000000000002 .L0 
+C:\Users\test\AppData\Local\Temp\ccUTGwgh.s:66     .text.gd32vf10x_i2c_cmd_read:0000000000000000 gd32vf10x_i2c_cmd_read
+C:\Users\test\AppData\Local\Temp\ccUTGwgh.s:68     .text.gd32vf10x_i2c_cmd_read:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccUTGwgh.s:71     .text.gd32vf10x_i2c_cmd_read:0000000000000004 .L0 
+C:\Users\test\AppData\Local\Temp\ccUTGwgh.s:77     .text.gd32vf10x_i2c_read:0000000000000000 gd32vf10x_i2c_read
+C:\Users\test\AppData\Local\Temp\ccUTGwgh.s:79     .text.gd32vf10x_i2c_read:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccUTGwgh.s:82     .text.gd32vf10x_i2c_read:0000000000000004 .L0 
+C:\Users\test\AppData\Local\Temp\ccUTGwgh.s:88     .text.gd32vf10x_i2c_remove:0000000000000000 gd32vf10x_i2c_remove
+C:\Users\test\AppData\Local\Temp\ccUTGwgh.s:90     .text.gd32vf10x_i2c_remove:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccUTGwgh.s:93     .text.gd32vf10x_i2c_remove:0000000000000004 .L0 
+C:\Users\test\AppData\Local\Temp\ccUTGwgh.s:101    .__i2c_core_init:0000000000000000 gd32vf10x_i2c_adaptor
+C:\Users\test\AppData\Local\Temp\ccUTGwgh.s:21     .text.gd32vf10x_i2c_probe:0000000000000002 .L0 
+C:\Users\test\AppData\Local\Temp\ccUTGwgh.s:35     .text.gd32vf10x_i2c_write:0000000000000002 .L0 
+C:\Users\test\AppData\Local\Temp\ccUTGwgh.s:49     .text.gd32vf10x_i2c_cmd_write:0000000000000002 .L0 
+C:\Users\test\AppData\Local\Temp\ccUTGwgh.s:63     .text.gd32vf10x_i2c_set_speed:0000000000000002 .L0 
                      .debug_frame:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\cc0ywZae.s:781    .debug_abbrev:0000000000000000 .Ldebug_abbrev0
-C:\Users\test\AppData\Local\Temp\cc0ywZae.s:1283   .debug_str:0000000000000140 .LASF51
-C:\Users\test\AppData\Local\Temp\cc0ywZae.s:1303   .debug_str:0000000000000227 .LASF52
-C:\Users\test\AppData\Local\Temp\cc0ywZae.s:1323   .debug_str:00000000000002cb .LASF53
-C:\Users\test\AppData\Local\Temp\cc0ywZae.s:1215   .debug_ranges:0000000000000000 .Ldebug_ranges0
-C:\Users\test\AppData\Local\Temp\cc0ywZae.s:1227   .debug_line:0000000000000000 .Ldebug_line0
-C:\Users\test\AppData\Local\Temp\cc0ywZae.s:1299   .debug_str:000000000000020e .LASF0
-C:\Users\test\AppData\Local\Temp\cc0ywZae.s:1277   .debug_str:0000000000000117 .LASF2
-C:\Users\test\AppData\Local\Temp\cc0ywZae.s:1265   .debug_str:00000000000000b8 .LASF1
-C:\Users\test\AppData\Local\Temp\cc0ywZae.s:1275   .debug_str:0000000000000109 .LASF3
-C:\Users\test\AppData\Local\Temp\cc0ywZae.s:1235   .debug_str:0000000000000022 .LASF4
-C:\Users\test\AppData\Local\Temp\cc0ywZae.s:1243   .debug_str:0000000000000048 .LASF5
-C:\Users\test\AppData\Local\Temp\cc0ywZae.s:1297   .debug_str:00000000000001fb .LASF6
-C:\Users\test\AppData\Local\Temp\cc0ywZae.s:1259   .debug_str:000000000000009a .LASF7
-C:\Users\test\AppData\Local\Temp\cc0ywZae.s:1241   .debug_str:000000000000003d .LASF8
-C:\Users\test\AppData\Local\Temp\cc0ywZae.s:1313   .debug_str:000000000000028b .LASF9
-C:\Users\test\AppData\Local\Temp\cc0ywZae.s:1253   .debug_str:0000000000000073 .LASF10
-C:\Users\test\AppData\Local\Temp\cc0ywZae.s:1281   .debug_str:0000000000000129 .LASF11
-C:\Users\test\AppData\Local\Temp\cc0ywZae.s:1287   .debug_str:00000000000001c3 .LASF12
-C:\Users\test\AppData\Local\Temp\cc0ywZae.s:1233   .debug_str:000000000000001b .LASF13
-GAS LISTING C:\Users\test\AppData\Local\Temp\cc0ywZae.s 			page 5
+C:\Users\test\AppData\Local\Temp\ccUTGwgh.s:781    .debug_abbrev:0000000000000000 .Ldebug_abbrev0
+C:\Users\test\AppData\Local\Temp\ccUTGwgh.s:1283   .debug_str:0000000000000140 .LASF51
+C:\Users\test\AppData\Local\Temp\ccUTGwgh.s:1303   .debug_str:0000000000000227 .LASF52
+C:\Users\test\AppData\Local\Temp\ccUTGwgh.s:1323   .debug_str:00000000000002cb .LASF53
+C:\Users\test\AppData\Local\Temp\ccUTGwgh.s:1215   .debug_ranges:0000000000000000 .Ldebug_ranges0
+C:\Users\test\AppData\Local\Temp\ccUTGwgh.s:1227   .debug_line:0000000000000000 .Ldebug_line0
+C:\Users\test\AppData\Local\Temp\ccUTGwgh.s:1299   .debug_str:000000000000020e .LASF0
+C:\Users\test\AppData\Local\Temp\ccUTGwgh.s:1277   .debug_str:0000000000000117 .LASF2
+C:\Users\test\AppData\Local\Temp\ccUTGwgh.s:1265   .debug_str:00000000000000b8 .LASF1
+C:\Users\test\AppData\Local\Temp\ccUTGwgh.s:1275   .debug_str:0000000000000109 .LASF3
+C:\Users\test\AppData\Local\Temp\ccUTGwgh.s:1235   .debug_str:0000000000000022 .LASF4
+C:\Users\test\AppData\Local\Temp\ccUTGwgh.s:1243   .debug_str:0000000000000048 .LASF5
+C:\Users\test\AppData\Local\Temp\ccUTGwgh.s:1297   .debug_str:00000000000001fb .LASF6
+C:\Users\test\AppData\Local\Temp\ccUTGwgh.s:1259   .debug_str:000000000000009a .LASF7
+C:\Users\test\AppData\Local\Temp\ccUTGwgh.s:1241   .debug_str:000000000000003d .LASF8
+C:\Users\test\AppData\Local\Temp\ccUTGwgh.s:1313   .debug_str:000000000000028b .LASF9
+C:\Users\test\AppData\Local\Temp\ccUTGwgh.s:1253   .debug_str:0000000000000073 .LASF10
+C:\Users\test\AppData\Local\Temp\ccUTGwgh.s:1281   .debug_str:0000000000000129 .LASF11
+C:\Users\test\AppData\Local\Temp\ccUTGwgh.s:1287   .debug_str:00000000000001c3 .LASF12
+C:\Users\test\AppData\Local\Temp\ccUTGwgh.s:1233   .debug_str:000000000000001b .LASF13
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccUTGwgh.s 			page 5
 
 
-C:\Users\test\AppData\Local\Temp\cc0ywZae.s:1245   .debug_str:0000000000000053 .LASF14
-C:\Users\test\AppData\Local\Temp\cc0ywZae.s:1289   .debug_str:00000000000001d0 .LASF15
-C:\Users\test\AppData\Local\Temp\cc0ywZae.s:1285   .debug_str:00000000000001ba .LASF16
-C:\Users\test\AppData\Local\Temp\cc0ywZae.s:1331   .debug_str:0000000000000339 .LASF17
-C:\Users\test\AppData\Local\Temp\cc0ywZae.s:1255   .debug_str:0000000000000081 .LASF18
-C:\Users\test\AppData\Local\Temp\cc0ywZae.s:1301   .debug_str:0000000000000217 .LASF19
-C:\Users\test\AppData\Local\Temp\cc0ywZae.s:1309   .debug_str:0000000000000270 .LASF20
-C:\Users\test\AppData\Local\Temp\cc0ywZae.s:1333   .debug_str:000000000000034a .LASF21
-C:\Users\test\AppData\Local\Temp\cc0ywZae.s:1335   .debug_str:000000000000035a .LASF22
-C:\Users\test\AppData\Local\Temp\cc0ywZae.s:1305   .debug_str:0000000000000259 .LASF23
-C:\Users\test\AppData\Local\Temp\cc0ywZae.s:1267   .debug_str:00000000000000c2 .LASF24
-C:\Users\test\AppData\Local\Temp\cc0ywZae.s:1263   .debug_str:00000000000000a8 .LASF25
-C:\Users\test\AppData\Local\Temp\cc0ywZae.s:1327   .debug_str:000000000000030f .LASF26
-C:\Users\test\AppData\Local\Temp\cc0ywZae.s:1249   .debug_str:0000000000000063 .LASF31
-C:\Users\test\AppData\Local\Temp\cc0ywZae.s:1261   .debug_str:00000000000000a3 .LASF27
-C:\Users\test\AppData\Local\Temp\cc0ywZae.s:1279   .debug_str:0000000000000123 .LASF28
-C:\Users\test\AppData\Local\Temp\cc0ywZae.s:1257   .debug_str:0000000000000091 .LASF29
-C:\Users\test\AppData\Local\Temp\cc0ywZae.s:1239   .debug_str:0000000000000035 .LASF30
-C:\Users\test\AppData\Local\Temp\cc0ywZae.s:1271   .debug_str:00000000000000e9 .LASF32
-C:\Users\test\AppData\Local\Temp\cc0ywZae.s:1247   .debug_str:000000000000005b .LASF33
-C:\Users\test\AppData\Local\Temp\cc0ywZae.s:1293   .debug_str:00000000000001ec .LASF34
-C:\Users\test\AppData\Local\Temp\cc0ywZae.s:1315   .debug_str:000000000000029d .LASF35
-C:\Users\test\AppData\Local\Temp\cc0ywZae.s:1317   .debug_str:00000000000002a4 .LASF36
-C:\Users\test\AppData\Local\Temp\cc0ywZae.s:1231   .debug_str:0000000000000015 .LASF37
-C:\Users\test\AppData\Local\Temp\cc0ywZae.s:1251   .debug_str:000000000000006e .LASF38
-C:\Users\test\AppData\Local\Temp\cc0ywZae.s:1311   .debug_str:0000000000000281 .LASF39
-C:\Users\test\AppData\Local\Temp\cc0ywZae.s:1237   .debug_str:000000000000002c .LASF40
-C:\Users\test\AppData\Local\Temp\cc0ywZae.s:1319   .debug_str:00000000000002ae .LASF41
-C:\Users\test\AppData\Local\Temp\cc0ywZae.s:1329   .debug_str:0000000000000321 .LASF54
-C:\Users\test\AppData\Local\Temp\cc0ywZae.s:53     .text.gd32vf10x_i2c_set_speed:0000000000000000 .LFB13
-C:\Users\test\AppData\Local\Temp\cc0ywZae.s:61     .text.gd32vf10x_i2c_set_speed:0000000000000002 .LFE13
-C:\Users\test\AppData\Local\Temp\cc0ywZae.s:1321   .debug_str:00000000000002c4 .LASF42
-C:\Users\test\AppData\Local\Temp\cc0ywZae.s:1140   .debug_loc:0000000000000000 .LLST3
-C:\Users\test\AppData\Local\Temp\cc0ywZae.s:1269   .debug_str:00000000000000d2 .LASF45
-C:\Users\test\AppData\Local\Temp\cc0ywZae.s:1307   .debug_str:0000000000000269 .LASF43
-C:\Users\test\AppData\Local\Temp\cc0ywZae.s:1295   .debug_str:00000000000001f2 .LASF44
-C:\Users\test\AppData\Local\Temp\cc0ywZae.s:1325   .debug_str:00000000000002f7 .LASF47
-C:\Users\test\AppData\Local\Temp\cc0ywZae.s:1291   .debug_str:00000000000001d9 .LASF46
-C:\Users\test\AppData\Local\Temp\cc0ywZae.s:1273   .debug_str:00000000000000f5 .LASF48
-C:\Users\test\AppData\Local\Temp\cc0ywZae.s:1229   .debug_str:0000000000000000 .LASF49
-C:\Users\test\AppData\Local\Temp\cc0ywZae.s:1337   .debug_str:000000000000036c .LASF50
-C:\Users\test\AppData\Local\Temp\cc0ywZae.s:10     .text.gd32vf10x_i2c_probe:0000000000000000 .LFB7
-C:\Users\test\AppData\Local\Temp\cc0ywZae.s:19     .text.gd32vf10x_i2c_probe:0000000000000002 .LFE7
-C:\Users\test\AppData\Local\Temp\cc0ywZae.s:1154   .debug_loc:0000000000000021 .LLST0
-C:\Users\test\AppData\Local\Temp\cc0ywZae.s:25     .text.gd32vf10x_i2c_write:0000000000000000 .LFB9
-C:\Users\test\AppData\Local\Temp\cc0ywZae.s:33     .text.gd32vf10x_i2c_write:0000000000000002 .LFE9
-C:\Users\test\AppData\Local\Temp\cc0ywZae.s:1168   .debug_loc:0000000000000042 .LLST1
-C:\Users\test\AppData\Local\Temp\cc0ywZae.s:39     .text.gd32vf10x_i2c_cmd_write:0000000000000000 .LFB11
-C:\Users\test\AppData\Local\Temp\cc0ywZae.s:47     .text.gd32vf10x_i2c_cmd_write:0000000000000002 .LFE11
-C:\Users\test\AppData\Local\Temp\cc0ywZae.s:1182   .debug_loc:0000000000000063 .LLST2
-C:\Users\test\AppData\Local\Temp\cc0ywZae.s:56     .text.gd32vf10x_i2c_set_speed:0000000000000000 .LVL6
-C:\Users\test\AppData\Local\Temp\cc0ywZae.s:58     .text.gd32vf10x_i2c_set_speed:0000000000000000 .LVL7
-C:\Users\test\AppData\Local\Temp\cc0ywZae.s:14     .text.gd32vf10x_i2c_probe:0000000000000000 .LVL0
-C:\Users\test\AppData\Local\Temp\cc0ywZae.s:16     .text.gd32vf10x_i2c_probe:0000000000000000 .LVL1
-C:\Users\test\AppData\Local\Temp\cc0ywZae.s:28     .text.gd32vf10x_i2c_write:0000000000000000 .LVL2
-C:\Users\test\AppData\Local\Temp\cc0ywZae.s:30     .text.gd32vf10x_i2c_write:0000000000000000 .LVL3
-C:\Users\test\AppData\Local\Temp\cc0ywZae.s:42     .text.gd32vf10x_i2c_cmd_write:0000000000000000 .LVL4
-GAS LISTING C:\Users\test\AppData\Local\Temp\cc0ywZae.s 			page 6
+C:\Users\test\AppData\Local\Temp\ccUTGwgh.s:1245   .debug_str:0000000000000053 .LASF14
+C:\Users\test\AppData\Local\Temp\ccUTGwgh.s:1289   .debug_str:00000000000001d0 .LASF15
+C:\Users\test\AppData\Local\Temp\ccUTGwgh.s:1285   .debug_str:00000000000001ba .LASF16
+C:\Users\test\AppData\Local\Temp\ccUTGwgh.s:1331   .debug_str:0000000000000339 .LASF17
+C:\Users\test\AppData\Local\Temp\ccUTGwgh.s:1255   .debug_str:0000000000000081 .LASF18
+C:\Users\test\AppData\Local\Temp\ccUTGwgh.s:1301   .debug_str:0000000000000217 .LASF19
+C:\Users\test\AppData\Local\Temp\ccUTGwgh.s:1309   .debug_str:0000000000000270 .LASF20
+C:\Users\test\AppData\Local\Temp\ccUTGwgh.s:1333   .debug_str:000000000000034a .LASF21
+C:\Users\test\AppData\Local\Temp\ccUTGwgh.s:1335   .debug_str:000000000000035a .LASF22
+C:\Users\test\AppData\Local\Temp\ccUTGwgh.s:1305   .debug_str:0000000000000259 .LASF23
+C:\Users\test\AppData\Local\Temp\ccUTGwgh.s:1267   .debug_str:00000000000000c2 .LASF24
+C:\Users\test\AppData\Local\Temp\ccUTGwgh.s:1263   .debug_str:00000000000000a8 .LASF25
+C:\Users\test\AppData\Local\Temp\ccUTGwgh.s:1327   .debug_str:000000000000030f .LASF26
+C:\Users\test\AppData\Local\Temp\ccUTGwgh.s:1249   .debug_str:0000000000000063 .LASF31
+C:\Users\test\AppData\Local\Temp\ccUTGwgh.s:1261   .debug_str:00000000000000a3 .LASF27
+C:\Users\test\AppData\Local\Temp\ccUTGwgh.s:1279   .debug_str:0000000000000123 .LASF28
+C:\Users\test\AppData\Local\Temp\ccUTGwgh.s:1257   .debug_str:0000000000000091 .LASF29
+C:\Users\test\AppData\Local\Temp\ccUTGwgh.s:1239   .debug_str:0000000000000035 .LASF30
+C:\Users\test\AppData\Local\Temp\ccUTGwgh.s:1271   .debug_str:00000000000000e9 .LASF32
+C:\Users\test\AppData\Local\Temp\ccUTGwgh.s:1247   .debug_str:000000000000005b .LASF33
+C:\Users\test\AppData\Local\Temp\ccUTGwgh.s:1293   .debug_str:00000000000001ec .LASF34
+C:\Users\test\AppData\Local\Temp\ccUTGwgh.s:1315   .debug_str:000000000000029d .LASF35
+C:\Users\test\AppData\Local\Temp\ccUTGwgh.s:1317   .debug_str:00000000000002a4 .LASF36
+C:\Users\test\AppData\Local\Temp\ccUTGwgh.s:1231   .debug_str:0000000000000015 .LASF37
+C:\Users\test\AppData\Local\Temp\ccUTGwgh.s:1251   .debug_str:000000000000006e .LASF38
+C:\Users\test\AppData\Local\Temp\ccUTGwgh.s:1311   .debug_str:0000000000000281 .LASF39
+C:\Users\test\AppData\Local\Temp\ccUTGwgh.s:1237   .debug_str:000000000000002c .LASF40
+C:\Users\test\AppData\Local\Temp\ccUTGwgh.s:1319   .debug_str:00000000000002ae .LASF41
+C:\Users\test\AppData\Local\Temp\ccUTGwgh.s:1329   .debug_str:0000000000000321 .LASF54
+C:\Users\test\AppData\Local\Temp\ccUTGwgh.s:53     .text.gd32vf10x_i2c_set_speed:0000000000000000 .LFB13
+C:\Users\test\AppData\Local\Temp\ccUTGwgh.s:61     .text.gd32vf10x_i2c_set_speed:0000000000000002 .LFE13
+C:\Users\test\AppData\Local\Temp\ccUTGwgh.s:1321   .debug_str:00000000000002c4 .LASF42
+C:\Users\test\AppData\Local\Temp\ccUTGwgh.s:1140   .debug_loc:0000000000000000 .LLST3
+C:\Users\test\AppData\Local\Temp\ccUTGwgh.s:1269   .debug_str:00000000000000d2 .LASF45
+C:\Users\test\AppData\Local\Temp\ccUTGwgh.s:1307   .debug_str:0000000000000269 .LASF43
+C:\Users\test\AppData\Local\Temp\ccUTGwgh.s:1295   .debug_str:00000000000001f2 .LASF44
+C:\Users\test\AppData\Local\Temp\ccUTGwgh.s:1325   .debug_str:00000000000002f7 .LASF47
+C:\Users\test\AppData\Local\Temp\ccUTGwgh.s:1291   .debug_str:00000000000001d9 .LASF46
+C:\Users\test\AppData\Local\Temp\ccUTGwgh.s:1273   .debug_str:00000000000000f5 .LASF48
+C:\Users\test\AppData\Local\Temp\ccUTGwgh.s:1229   .debug_str:0000000000000000 .LASF49
+C:\Users\test\AppData\Local\Temp\ccUTGwgh.s:1337   .debug_str:000000000000036c .LASF50
+C:\Users\test\AppData\Local\Temp\ccUTGwgh.s:10     .text.gd32vf10x_i2c_probe:0000000000000000 .LFB7
+C:\Users\test\AppData\Local\Temp\ccUTGwgh.s:19     .text.gd32vf10x_i2c_probe:0000000000000002 .LFE7
+C:\Users\test\AppData\Local\Temp\ccUTGwgh.s:1154   .debug_loc:0000000000000021 .LLST0
+C:\Users\test\AppData\Local\Temp\ccUTGwgh.s:25     .text.gd32vf10x_i2c_write:0000000000000000 .LFB9
+C:\Users\test\AppData\Local\Temp\ccUTGwgh.s:33     .text.gd32vf10x_i2c_write:0000000000000002 .LFE9
+C:\Users\test\AppData\Local\Temp\ccUTGwgh.s:1168   .debug_loc:0000000000000042 .LLST1
+C:\Users\test\AppData\Local\Temp\ccUTGwgh.s:39     .text.gd32vf10x_i2c_cmd_write:0000000000000000 .LFB11
+C:\Users\test\AppData\Local\Temp\ccUTGwgh.s:47     .text.gd32vf10x_i2c_cmd_write:0000000000000002 .LFE11
+C:\Users\test\AppData\Local\Temp\ccUTGwgh.s:1182   .debug_loc:0000000000000063 .LLST2
+C:\Users\test\AppData\Local\Temp\ccUTGwgh.s:56     .text.gd32vf10x_i2c_set_speed:0000000000000000 .LVL6
+C:\Users\test\AppData\Local\Temp\ccUTGwgh.s:58     .text.gd32vf10x_i2c_set_speed:0000000000000000 .LVL7
+C:\Users\test\AppData\Local\Temp\ccUTGwgh.s:14     .text.gd32vf10x_i2c_probe:0000000000000000 .LVL0
+C:\Users\test\AppData\Local\Temp\ccUTGwgh.s:16     .text.gd32vf10x_i2c_probe:0000000000000000 .LVL1
+C:\Users\test\AppData\Local\Temp\ccUTGwgh.s:28     .text.gd32vf10x_i2c_write:0000000000000000 .LVL2
+C:\Users\test\AppData\Local\Temp\ccUTGwgh.s:30     .text.gd32vf10x_i2c_write:0000000000000000 .LVL3
+C:\Users\test\AppData\Local\Temp\ccUTGwgh.s:42     .text.gd32vf10x_i2c_cmd_write:0000000000000000 .LVL4
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccUTGwgh.s 			page 6
 
 
-C:\Users\test\AppData\Local\Temp\cc0ywZae.s:44     .text.gd32vf10x_i2c_cmd_write:0000000000000000 .LVL5
-C:\Users\test\AppData\Local\Temp\cc0ywZae.s:117    .debug_info:0000000000000000 .Ldebug_info0
+C:\Users\test\AppData\Local\Temp\ccUTGwgh.s:44     .text.gd32vf10x_i2c_cmd_write:0000000000000000 .LVL5
+C:\Users\test\AppData\Local\Temp\ccUTGwgh.s:117    .debug_info:0000000000000000 .Ldebug_info0
 
 NO UNDEFINED SYMBOLS

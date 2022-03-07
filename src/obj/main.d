@@ -28,7 +28,7 @@ obj/main.o: application/main.c \
  arch/riscv/mach-gd32vf10x/system/n200_eclic.h \
  arch/riscv/mach-gd32vf10x/system/riscv_encoding.h \
  arch/riscv/mach-gd32vf10x/system/riscv_const.h core/gpio-core.h \
- core/module.h core/spi-core.h core/delay-core.h
+ core/module.h core/spi-core.h core/delay-core.h core/uart-core.h
 
 arch/riscv/mach-gd32vf10x/system/gd32vf103.h:
 
@@ -95,3 +95,5 @@ core/module.h:
 core/spi-core.h:
 
 core/delay-core.h:
+
+core/uart-core.h:

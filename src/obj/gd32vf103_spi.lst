@@ -1,4 +1,4 @@
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccIKwpaA.s 			page 1
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s 			page 1
 
 
    1              		.file	"gd32vf103_spi.c"
@@ -58,7 +58,7 @@ GAS LISTING C:\Users\test\AppData\Local\Temp\ccIKwpaA.s 			page 1
   44:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_spi.c **** #define I2S_CLOCK_MUL_MASK              ((uint32_t)0x0000F000U)  /* I2S clock multiplication mask *
   45:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_spi.c **** #define I2S_CLOCK_DIV_MASK              ((uint32_t)0x000000F0U)  /* I2S clock division mask */
   46:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_spi.c **** 
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccIKwpaA.s 			page 2
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s 			page 2
 
 
   47:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_spi.c **** /* default value and offset */
@@ -118,7 +118,7 @@ GAS LISTING C:\Users\test\AppData\Local\Temp\ccIKwpaA.s 			page 1
   79:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_spi.c **** }
   33              		.loc 1 79 1
   34 0020 B240     		lw	ra,12(sp)
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccIKwpaA.s 			page 3
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s 			page 3
 
 
   35              		.cfi_remember_state
@@ -178,7 +178,7 @@ GAS LISTING C:\Users\test\AppData\Local\Temp\ccIKwpaA.s 			page 1
   79 0054 4101     		addi	sp,sp,16
   80              	.LCFI5:
   81              		.cfi_def_cfa_offset 0
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccIKwpaA.s 			page 4
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s 			page 4
 
 
   69:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_spi.c ****         break;
@@ -238,7 +238,7 @@ GAS LISTING C:\Users\test\AppData\Local\Temp\ccIKwpaA.s 			page 1
  119              		.loc 1 90 29 is_stmt 0
  120 0000 23200500 		sw	zero,0(a0)
   91:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_spi.c ****     spi_struct->trans_mode = SPI_TRANSMODE_FULLDUPLEX;
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccIKwpaA.s 			page 5
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s 			page 5
 
 
  121              		.loc 1 91 5 is_stmt 1
@@ -298,7 +298,7 @@ GAS LISTING C:\Users\test\AppData\Local\Temp\ccIKwpaA.s 			page 1
  118:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_spi.c ****     reg = SPI_CTL0(spi_periph);
  151              		.loc 1 118 5
  119:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_spi.c ****     reg &= SPI_INIT_MASK;
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccIKwpaA.s 			page 6
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s 			page 6
 
 
  120:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_spi.c **** 
@@ -358,7 +358,7 @@ GAS LISTING C:\Users\test\AppData\Local\Temp\ccIKwpaA.s 			page 1
  182              		.loc 1 134 9 is_stmt 0
  183 002a D18F     		or	a5,a5,a2
  184 002c D98F     		or	a5,a5,a4
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccIKwpaA.s 			page 7
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s 			page 7
 
 
  185              	.LVL14:
@@ -418,7 +418,7 @@ GAS LISTING C:\Users\test\AppData\Local\Temp\ccIKwpaA.s 			page 1
  226              	spi_disable:
  227              	.LFB6:
  152:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_spi.c **** 
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccIKwpaA.s 			page 8
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s 			page 8
 
 
  153:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_spi.c **** /*!
@@ -478,7 +478,7 @@ GAS LISTING C:\Users\test\AppData\Local\Temp\ccIKwpaA.s 			page 1
  248              		.cfi_startproc
  249              	.LVL19:
  189:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_spi.c ****     uint32_t reg = 0U;
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccIKwpaA.s 			page 9
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s 			page 9
 
 
  250              		.loc 1 189 5
@@ -538,7 +538,7 @@ GAS LISTING C:\Users\test\AppData\Local\Temp\ccIKwpaA.s 			page 1
  206:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_spi.c **** /*!
  207:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_spi.c ****     \brief      configure I2S prescaler 
  208:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_spi.c ****     \param[in]  spi_periph: SPIx(x=1,2)
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccIKwpaA.s 			page 10
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s 			page 10
 
 
  209:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_spi.c ****     \param[in]  audiosample: I2S audio sample rate
@@ -598,7 +598,7 @@ GAS LISTING C:\Users\test\AppData\Local\Temp\ccIKwpaA.s 			page 1
  307 0008 37470040 		li	a4,1073758208
  234:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_spi.c ****     uint32_t i2sdiv = 2U, i2sof = 0U;
  308              		.loc 1 234 1
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccIKwpaA.s 			page 11
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s 			page 11
 
 
  309 000c 2A84     		mv	s0,a0
@@ -658,7 +658,7 @@ GAS LISTING C:\Users\test\AppData\Local\Temp\ccIKwpaA.s 			page 1
  256:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_spi.c ****             /* multiplier is between 8 and 16 */
  257:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_spi.c ****             clks += 2U;
  347              		.loc 1 257 13 is_stmt 1
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccIKwpaA.s 			page 12
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s 			page 12
 
 
  348              		.loc 1 257 18 is_stmt 0
@@ -718,7 +718,7 @@ GAS LISTING C:\Users\test\AppData\Local\Temp\ccIKwpaA.s 			page 1
  379              		.loc 1 278 11 is_stmt 0
  380 0066 35E2     		bne	a2,zero,.L23
  279:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_spi.c ****             clks = (uint32_t)(((i2sclock / 32U) *10U ) / audiosample);
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccIKwpaA.s 			page 13
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s 			page 13
 
 
  381              		.loc 1 279 13 is_stmt 1
@@ -778,7 +778,7 @@ GAS LISTING C:\Users\test\AppData\Local\Temp\ccIKwpaA.s 			page 1
  416              		.loc 1 292 5 is_stmt 1
  417              		.loc 1 292 7 is_stmt 0
  418 008e 63650501 		bgtu	a6,a0,.L24
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccIKwpaA.s 			page 14
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s 			page 14
 
 
  289:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_spi.c **** 
@@ -838,7 +838,7 @@ GAS LISTING C:\Users\test\AppData\Local\Temp\ccIKwpaA.s 			page 1
  457              		.loc 1 259 13 is_stmt 1
  259:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_spi.c ****                 /* multiplier is 20 */
  458              		.loc 1 259 15 is_stmt 0
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccIKwpaA.s 			page 15
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s 			page 15
 
 
  459 00b0 3D47     		li	a4,15
@@ -898,7 +898,7 @@ GAS LISTING C:\Users\test\AppData\Local\Temp\ccIKwpaA.s 			page 1
  271:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_spi.c ****     }
  502              		.loc 1 271 20 is_stmt 0
  503 00e2 97000000 		call	rcu_clock_freq_get
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccIKwpaA.s 			page 16
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s 			page 16
 
 
  503      E7800000 
@@ -958,7 +958,7 @@ GAS LISTING C:\Users\test\AppData\Local\Temp\ccIKwpaA.s 			page 1
  324:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_spi.c ****     SPI_I2SCTL(spi_periph) &= (uint32_t)(~SPI_I2SCTL_I2SEN);
  541              		.loc 1 324 5
  542              		.loc 1 324 28 is_stmt 0
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccIKwpaA.s 			page 17
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s 			page 17
 
 
  543 0000 5C4D     		lw	a5,28(a0)
@@ -1018,7 +1018,7 @@ GAS LISTING C:\Users\test\AppData\Local\Temp\ccIKwpaA.s 			page 1
  579              		.loc 1 346 5
  580              		.loc 1 346 26 is_stmt 0
  581 0000 5C41     		lw	a5,4(a0)
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccIKwpaA.s 			page 18
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s 			page 18
 
 
  582 0002 ED9B     		andi	a5,a5,-5
@@ -1078,7 +1078,7 @@ GAS LISTING C:\Users\test\AppData\Local\Temp\ccIKwpaA.s 			page 1
  618              		.loc 1 368 26 is_stmt 0
  619 0000 1C41     		lw	a5,0(a0)
  620 0002 93F7F7EF 		andi	a5,a5,-257
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccIKwpaA.s 			page 19
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s 			page 19
 
 
  621 0006 1CC1     		sw	a5,0(a0)
@@ -1138,7 +1138,7 @@ GAS LISTING C:\Users\test\AppData\Local\Temp\ccIKwpaA.s 			page 1
  657              		.align	1
  658              		.globl	spi_dma_disable
  660              	spi_dma_disable:
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccIKwpaA.s 			page 20
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s 			page 20
 
 
  661              	.LFB16:
@@ -1198,7 +1198,7 @@ GAS LISTING C:\Users\test\AppData\Local\Temp\ccIKwpaA.s 			page 1
  414:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_spi.c ****       \arg        SPI_FRAMESIZE_16BIT: SPI frame size is 16 bits
  415:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_spi.c ****       \arg        SPI_FRAMESIZE_8BIT: SPI frame size is 8 bits
  416:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_spi.c ****     \param[out] none
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccIKwpaA.s 			page 21
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s 			page 21
 
 
  417:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_spi.c ****     \retval     none
@@ -1258,7 +1258,7 @@ GAS LISTING C:\Users\test\AppData\Local\Temp\ccIKwpaA.s 			page 1
  726              		.cfi_endproc
  727              	.LFE18:
  729              		.section	.text.spi_i2s_data_receive,"ax",@progbits
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccIKwpaA.s 			page 22
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s 			page 22
 
 
  730              		.align	1
@@ -1318,7 +1318,7 @@ GAS LISTING C:\Users\test\AppData\Local\Temp\ccIKwpaA.s 			page 1
  463:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_spi.c ****         /* set the transmit-only mode */
  464:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_spi.c ****         SPI_CTL0(spi_periph) |= (uint32_t)SPI_BIDIRECTIONAL_TRANSMIT;
  465:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_spi.c ****     }else{
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccIKwpaA.s 			page 23
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s 			page 23
 
 
  466:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_spi.c ****         /* set the receive-only mode */
@@ -1378,7 +1378,7 @@ GAS LISTING C:\Users\test\AppData\Local\Temp\ccIKwpaA.s 			page 1
  797              		.loc 1 484 5 is_stmt 1
  798              		.loc 1 484 29 is_stmt 0
  799 0008 0CC9     		sw	a1,16(a0)
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccIKwpaA.s 			page 24
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s 			page 24
 
 
  485:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_spi.c **** }
@@ -1438,7 +1438,7 @@ GAS LISTING C:\Users\test\AppData\Local\Temp\ccIKwpaA.s 			page 1
  836 0000 1C41     		lw	a5,0(a0)
  837 0002 0967     		li	a4,8192
  838 0004 D98F     		or	a5,a5,a4
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccIKwpaA.s 			page 25
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s 			page 25
 
 
  839 0006 1CC1     		sw	a5,0(a0)
@@ -1498,7 +1498,7 @@ GAS LISTING C:\Users\test\AppData\Local\Temp\ccIKwpaA.s 			page 1
  875              		.loc 1 528 5
  876              		.loc 1 528 26 is_stmt 0
  877 0000 1C41     		lw	a5,0(a0)
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccIKwpaA.s 			page 26
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s 			page 26
 
 
  878 0002 0567     		li	a4,4096
@@ -1558,7 +1558,7 @@ GAS LISTING C:\Users\test\AppData\Local\Temp\ccIKwpaA.s 			page 1
  548:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_spi.c **** }
  915              		.loc 1 548 1
  916 0010 8280     		ret
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccIKwpaA.s 			page 27
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s 			page 27
 
 
  917              		.cfi_endproc
@@ -1618,7 +1618,7 @@ GAS LISTING C:\Users\test\AppData\Local\Temp\ccIKwpaA.s 			page 1
  953              		.loc 1 570 1
  954 0006 8280     		ret
  955              		.cfi_endproc
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccIKwpaA.s 			page 28
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s 			page 28
 
 
  956              	.LFE28:
@@ -1678,7 +1678,7 @@ GAS LISTING C:\Users\test\AppData\Local\Temp\ccIKwpaA.s 			page 1
  992 0006 8280     		ret
  993              		.cfi_endproc
  994              	.LFE30:
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccIKwpaA.s 			page 29
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s 			page 29
 
 
  996              		.section	.text.spi_i2s_interrupt_enable,"ax",@progbits
@@ -1738,7 +1738,7 @@ GAS LISTING C:\Users\test\AppData\Local\Temp\ccIKwpaA.s 			page 1
  1018 0016 8280     		ret
  1019              	.L66:
  1020 0018 8280     		ret
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccIKwpaA.s 			page 30
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s 			page 30
 
 
  1021              	.L62:
@@ -1798,7 +1798,7 @@ GAS LISTING C:\Users\test\AppData\Local\Temp\ccIKwpaA.s 			page 1
  642:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_spi.c ****     /* SPI/I2S transmit buffer empty interrupt */
  643:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_spi.c ****     case SPI_I2S_INT_TBE:
  644:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_spi.c ****         SPI_CTL1(spi_periph) &= (uint32_t)(~SPI_CTL1_TBEIE);
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccIKwpaA.s 			page 31
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s 			page 31
 
 
  645:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_spi.c ****         break;
@@ -1858,7 +1858,7 @@ GAS LISTING C:\Users\test\AppData\Local\Temp\ccIKwpaA.s 			page 1
  660:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_spi.c ****     \brief      get SPI and I2S interrupt flag status
  661:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_spi.c ****     \param[in]  spi_periph: SPIx(x=0,1,2)
  662:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_spi.c ****     \param[in]  interrupt: SPI/I2S interrupt flag status
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccIKwpaA.s 			page 32
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s 			page 32
 
 
  663:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_spi.c ****                 only one parameter can be selected which is shown as below:
@@ -1918,7 +1918,7 @@ GAS LISTING C:\Users\test\AppData\Local\Temp\ccIKwpaA.s 			page 1
  1124              		.loc 1 682 9
  1125              		.loc 1 682 14 is_stmt 0
  1126 001a 898B     		andi	a5,a5,2
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccIKwpaA.s 			page 33
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s 			page 33
 
 
  1127              	.LVL91:
@@ -1978,7 +1978,7 @@ GAS LISTING C:\Users\test\AppData\Local\Temp\ccIKwpaA.s 			page 1
  723:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_spi.c ****     }
  724:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_spi.c **** }
  1141              		.loc 1 724 1
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccIKwpaA.s 			page 34
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s 			page 34
 
 
  1142 0026 3E85     		mv	a0,a5
@@ -2038,7 +2038,7 @@ GAS LISTING C:\Users\test\AppData\Local\Temp\ccIKwpaA.s 			page 1
  1180              		.loc 1 692 9
  692:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_spi.c ****         reg2 = reg2 & SPI_CTL1_ERRIE;
  1181              		.loc 1 692 14 is_stmt 0
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccIKwpaA.s 			page 35
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s 			page 35
 
 
  1182 0044 93F70704 		andi	a5,a5,64
@@ -2098,7 +2098,7 @@ GAS LISTING C:\Users\test\AppData\Local\Temp\ccIKwpaA.s 			page 1
  729:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_spi.c ****     \param[in]  flag: SPI/I2S flag status
  730:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_spi.c ****                 one or more parameters can be selected which are shown as below:
  731:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_spi.c ****       \arg        SPI_FLAG_TBE: transmit buffer empty flag
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccIKwpaA.s 			page 36
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s 			page 36
 
 
  732:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_spi.c ****       \arg        SPI_FLAG_RBNE: receive buffer not empty flag
@@ -2158,7 +2158,7 @@ GAS LISTING C:\Users\test\AppData\Local\Temp\ccIKwpaA.s 			page 1
  1244              	.LVL110:
  765:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_spi.c ****     SPI_STAT(spi_periph) &= (uint32_t)(~SPI_FLAG_CRCERR);
  1245              		.loc 1 765 5
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccIKwpaA.s 			page 37
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s 			page 37
 
 
  1246              		.loc 1 765 26 is_stmt 0
@@ -2178,899 +2178,899 @@ GAS LISTING C:\Users\test\AppData\Local\Temp\ccIKwpaA.s 			page 1
  1260              		.file 5 "arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rcu.h"
  1261              		.file 6 "arch/riscv/mach-gd32vf10x/bsp/gd32vf103_spi.h"
  1262              		.file 7 "arch/riscv/mach-gd32vf10x/system/system_gd32vf103.h"
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccIKwpaA.s 			page 38
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s 			page 38
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 gd32vf103_spi.c
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:10     .text.spi_i2s_deinit:0000000000000000 spi_i2s_deinit
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:14     .text.spi_i2s_deinit:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:16     .text.spi_i2s_deinit:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:17     .text.spi_i2s_deinit:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:18     .text.spi_i2s_deinit:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:20     .text.spi_i2s_deinit:0000000000000002 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:22     .text.spi_i2s_deinit:0000000000000002 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:24     .text.spi_i2s_deinit:0000000000000006 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:25     .text.spi_i2s_deinit:0000000000000008 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:27     .text.spi_i2s_deinit:0000000000000008 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:34     .text.spi_i2s_deinit:0000000000000020 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:35     .text.spi_i2s_deinit:0000000000000022 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:36     .text.spi_i2s_deinit:0000000000000022 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:39     .text.spi_i2s_deinit:0000000000000024 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:43     .text.spi_i2s_deinit:0000000000000026 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:45     .text.spi_i2s_deinit:0000000000000026 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:50     .text.spi_i2s_deinit:0000000000000032 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:51     .text.spi_i2s_deinit:0000000000000032 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:52     .text.spi_i2s_deinit:0000000000000034 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:53     .text.spi_i2s_deinit:0000000000000034 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:55     .text.spi_i2s_deinit:0000000000000034 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:57     .text.spi_i2s_deinit:0000000000000038 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:59     .text.spi_i2s_deinit:000000000000003a .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:61     .text.spi_i2s_deinit:000000000000003a .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:65     .text.spi_i2s_deinit:0000000000000042 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:67     .text.spi_i2s_deinit:0000000000000042 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:72     .text.spi_i2s_deinit:000000000000004e .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:73     .text.spi_i2s_deinit:000000000000004e .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:74     .text.spi_i2s_deinit:0000000000000050 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:75     .text.spi_i2s_deinit:0000000000000050 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:77     .text.spi_i2s_deinit:0000000000000050 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:79     .text.spi_i2s_deinit:0000000000000054 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:81     .text.spi_i2s_deinit:0000000000000056 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:83     .text.spi_i2s_deinit:0000000000000056 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:87     .text.spi_i2s_deinit:000000000000005e .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:89     .text.spi_i2s_deinit:000000000000005e .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:94     .text.spi_i2s_deinit:000000000000006a .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:95     .text.spi_i2s_deinit:000000000000006a .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:96     .text.spi_i2s_deinit:000000000000006c .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:98     .text.spi_i2s_deinit:000000000000006c .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:100    .text.spi_i2s_deinit:0000000000000070 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:102    .text.spi_i2s_deinit:0000000000000072 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:104    .text.spi_i2s_deinit:0000000000000072 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:106    .text.spi_i2s_deinit:000000000000007a .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:113    .text.spi_struct_para_init:0000000000000000 spi_struct_para_init
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:116    .text.spi_struct_para_init:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:118    .text.spi_struct_para_init:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:119    .text.spi_struct_para_init:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:120    .text.spi_struct_para_init:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:122    .text.spi_struct_para_init:0000000000000004 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:123    .text.spi_struct_para_init:0000000000000004 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:125    .text.spi_struct_para_init:0000000000000008 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:126    .text.spi_struct_para_init:0000000000000008 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:128    .text.spi_struct_para_init:000000000000000c .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:129    .text.spi_struct_para_init:000000000000000c .L0 
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccIKwpaA.s 			page 39
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:10     .text.spi_i2s_deinit:0000000000000000 spi_i2s_deinit
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:14     .text.spi_i2s_deinit:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:16     .text.spi_i2s_deinit:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:17     .text.spi_i2s_deinit:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:18     .text.spi_i2s_deinit:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:20     .text.spi_i2s_deinit:0000000000000002 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:22     .text.spi_i2s_deinit:0000000000000002 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:24     .text.spi_i2s_deinit:0000000000000006 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:25     .text.spi_i2s_deinit:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:27     .text.spi_i2s_deinit:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:34     .text.spi_i2s_deinit:0000000000000020 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:35     .text.spi_i2s_deinit:0000000000000022 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:36     .text.spi_i2s_deinit:0000000000000022 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:39     .text.spi_i2s_deinit:0000000000000024 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:43     .text.spi_i2s_deinit:0000000000000026 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:45     .text.spi_i2s_deinit:0000000000000026 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:50     .text.spi_i2s_deinit:0000000000000032 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:51     .text.spi_i2s_deinit:0000000000000032 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:52     .text.spi_i2s_deinit:0000000000000034 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:53     .text.spi_i2s_deinit:0000000000000034 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:55     .text.spi_i2s_deinit:0000000000000034 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:57     .text.spi_i2s_deinit:0000000000000038 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:59     .text.spi_i2s_deinit:000000000000003a .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:61     .text.spi_i2s_deinit:000000000000003a .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:65     .text.spi_i2s_deinit:0000000000000042 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:67     .text.spi_i2s_deinit:0000000000000042 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:72     .text.spi_i2s_deinit:000000000000004e .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:73     .text.spi_i2s_deinit:000000000000004e .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:74     .text.spi_i2s_deinit:0000000000000050 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:75     .text.spi_i2s_deinit:0000000000000050 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:77     .text.spi_i2s_deinit:0000000000000050 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:79     .text.spi_i2s_deinit:0000000000000054 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:81     .text.spi_i2s_deinit:0000000000000056 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:83     .text.spi_i2s_deinit:0000000000000056 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:87     .text.spi_i2s_deinit:000000000000005e .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:89     .text.spi_i2s_deinit:000000000000005e .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:94     .text.spi_i2s_deinit:000000000000006a .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:95     .text.spi_i2s_deinit:000000000000006a .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:96     .text.spi_i2s_deinit:000000000000006c .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:98     .text.spi_i2s_deinit:000000000000006c .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:100    .text.spi_i2s_deinit:0000000000000070 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:102    .text.spi_i2s_deinit:0000000000000072 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:104    .text.spi_i2s_deinit:0000000000000072 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:106    .text.spi_i2s_deinit:000000000000007a .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:113    .text.spi_struct_para_init:0000000000000000 spi_struct_para_init
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:116    .text.spi_struct_para_init:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:118    .text.spi_struct_para_init:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:119    .text.spi_struct_para_init:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:120    .text.spi_struct_para_init:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:122    .text.spi_struct_para_init:0000000000000004 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:123    .text.spi_struct_para_init:0000000000000004 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:125    .text.spi_struct_para_init:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:126    .text.spi_struct_para_init:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:128    .text.spi_struct_para_init:000000000000000c .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:129    .text.spi_struct_para_init:000000000000000c .L0 
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s 			page 39
 
 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:131    .text.spi_struct_para_init:0000000000000010 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:132    .text.spi_struct_para_init:0000000000000010 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:134    .text.spi_struct_para_init:0000000000000014 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:135    .text.spi_struct_para_init:0000000000000014 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:137    .text.spi_struct_para_init:0000000000000018 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:138    .text.spi_struct_para_init:000000000000001a .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:145    .text.spi_init:0000000000000000 spi_init
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:148    .text.spi_init:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:150    .text.spi_init:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:151    .text.spi_init:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:152    .text.spi_init:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:153    .text.spi_init:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:163    .text.spi_init:0000000000000018 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:166    .text.spi_init:000000000000001a .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:167    .text.spi_init:000000000000001a .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:171    .text.spi_init:0000000000000022 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:176    .text.spi_init:000000000000002a .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:177    .text.spi_init:000000000000002a .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:178    .text.spi_init:000000000000002a .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:179    .text.spi_init:000000000000002a .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:180    .text.spi_init:000000000000002a .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:181    .text.spi_init:000000000000002a .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:182    .text.spi_init:000000000000002a .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:183    .text.spi_init:000000000000002a .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:187    .text.spi_init:000000000000002e .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:188    .text.spi_init:000000000000002e .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:190    .text.spi_init:0000000000000030 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:191    .text.spi_init:0000000000000030 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:199    .text.spi_init:000000000000003c .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:200    .text.spi_init:000000000000003e .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:207    .text.spi_enable:0000000000000000 spi_enable
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:210    .text.spi_enable:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:212    .text.spi_enable:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:213    .text.spi_enable:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:214    .text.spi_enable:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:218    .text.spi_enable:0000000000000008 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:219    .text.spi_enable:000000000000000a .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:226    .text.spi_disable:0000000000000000 spi_disable
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:229    .text.spi_disable:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:231    .text.spi_disable:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:232    .text.spi_disable:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:233    .text.spi_disable:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:237    .text.spi_disable:0000000000000008 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:238    .text.spi_disable:000000000000000a .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:245    .text.i2s_init:0000000000000000 i2s_init
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:248    .text.i2s_init:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:250    .text.i2s_init:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:251    .text.i2s_init:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:252    .text.i2s_init:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:253    .text.i2s_init:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:256    .text.i2s_init:0000000000000002 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:257    .text.i2s_init:0000000000000002 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:258    .text.i2s_init:0000000000000002 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:259    .text.i2s_init:0000000000000002 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:260    .text.i2s_init:0000000000000002 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:269    .text.i2s_init:0000000000000010 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:270    .text.i2s_init:0000000000000010 .L0 
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccIKwpaA.s 			page 40
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:131    .text.spi_struct_para_init:0000000000000010 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:132    .text.spi_struct_para_init:0000000000000010 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:134    .text.spi_struct_para_init:0000000000000014 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:135    .text.spi_struct_para_init:0000000000000014 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:137    .text.spi_struct_para_init:0000000000000018 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:138    .text.spi_struct_para_init:000000000000001a .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:145    .text.spi_init:0000000000000000 spi_init
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:148    .text.spi_init:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:150    .text.spi_init:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:151    .text.spi_init:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:152    .text.spi_init:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:153    .text.spi_init:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:163    .text.spi_init:0000000000000018 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:166    .text.spi_init:000000000000001a .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:167    .text.spi_init:000000000000001a .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:171    .text.spi_init:0000000000000022 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:176    .text.spi_init:000000000000002a .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:177    .text.spi_init:000000000000002a .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:178    .text.spi_init:000000000000002a .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:179    .text.spi_init:000000000000002a .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:180    .text.spi_init:000000000000002a .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:181    .text.spi_init:000000000000002a .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:182    .text.spi_init:000000000000002a .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:183    .text.spi_init:000000000000002a .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:187    .text.spi_init:000000000000002e .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:188    .text.spi_init:000000000000002e .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:190    .text.spi_init:0000000000000030 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:191    .text.spi_init:0000000000000030 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:199    .text.spi_init:000000000000003c .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:200    .text.spi_init:000000000000003e .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:207    .text.spi_enable:0000000000000000 spi_enable
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:210    .text.spi_enable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:212    .text.spi_enable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:213    .text.spi_enable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:214    .text.spi_enable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:218    .text.spi_enable:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:219    .text.spi_enable:000000000000000a .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:226    .text.spi_disable:0000000000000000 spi_disable
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:229    .text.spi_disable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:231    .text.spi_disable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:232    .text.spi_disable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:233    .text.spi_disable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:237    .text.spi_disable:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:238    .text.spi_disable:000000000000000a .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:245    .text.i2s_init:0000000000000000 i2s_init
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:248    .text.i2s_init:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:250    .text.i2s_init:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:251    .text.i2s_init:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:252    .text.i2s_init:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:253    .text.i2s_init:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:256    .text.i2s_init:0000000000000002 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:257    .text.i2s_init:0000000000000002 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:258    .text.i2s_init:0000000000000002 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:259    .text.i2s_init:0000000000000002 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:260    .text.i2s_init:0000000000000002 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:269    .text.i2s_init:0000000000000010 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:270    .text.i2s_init:0000000000000010 .L0 
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s 			page 40
 
 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:276    .text.i2s_init:0000000000000018 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:277    .text.i2s_init:0000000000000018 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:279    .text.i2s_init:000000000000001a .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:280    .text.i2s_init:000000000000001c .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:287    .text.i2s_psc_config:0000000000000000 i2s_psc_config
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:290    .text.i2s_psc_config:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:292    .text.i2s_psc_config:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:293    .text.i2s_psc_config:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:294    .text.i2s_psc_config:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:295    .text.i2s_psc_config:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:296    .text.i2s_psc_config:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:297    .text.i2s_psc_config:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:299    .text.i2s_psc_config:0000000000000002 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:302    .text.i2s_psc_config:0000000000000006 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:303    .text.i2s_psc_config:0000000000000006 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:305    .text.i2s_psc_config:0000000000000006 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:307    .text.i2s_psc_config:0000000000000008 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:309    .text.i2s_psc_config:000000000000000c .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:311    .text.i2s_psc_config:000000000000000e .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:313    .text.i2s_psc_config:0000000000000010 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:314    .text.i2s_psc_config:0000000000000010 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:316    .text.i2s_psc_config:0000000000000014 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:319    .text.i2s_psc_config:0000000000000018 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:324    .text.i2s_psc_config:0000000000000020 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:325    .text.i2s_psc_config:0000000000000020 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:328    .text.i2s_psc_config:0000000000000026 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:330    .text.i2s_psc_config:0000000000000028 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:332    .text.i2s_psc_config:000000000000002a .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:333    .text.i2s_psc_config:000000000000002a .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:336    .text.i2s_psc_config:000000000000002c .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:338    .text.i2s_psc_config:000000000000002e .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:340    .text.i2s_psc_config:0000000000000030 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:343    .text.i2s_psc_config:0000000000000034 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:344    .text.i2s_psc_config:0000000000000034 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:346    .text.i2s_psc_config:0000000000000038 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:348    .text.i2s_psc_config:000000000000003c .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:349    .text.i2s_psc_config:000000000000003c .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:353    .text.i2s_psc_config:000000000000003e .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:354    .text.i2s_psc_config:000000000000003e .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:358    .text.i2s_psc_config:0000000000000044 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:359    .text.i2s_psc_config:0000000000000044 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:363    .text.i2s_psc_config:0000000000000048 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:366    .text.i2s_psc_config:000000000000004c .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:371    .text.i2s_psc_config:000000000000005c .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:375    .text.i2s_psc_config:000000000000005e .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:376    .text.i2s_psc_config:000000000000005e .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:379    .text.i2s_psc_config:0000000000000066 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:380    .text.i2s_psc_config:0000000000000066 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:382    .text.i2s_psc_config:0000000000000068 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:383    .text.i2s_psc_config:0000000000000068 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:386    .text.i2s_psc_config:000000000000006a .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:390    .text.i2s_psc_config:0000000000000072 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:394    .text.i2s_psc_config:0000000000000076 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:395    .text.i2s_psc_config:0000000000000076 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:397    .text.i2s_psc_config:0000000000000078 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:400    .text.i2s_psc_config:000000000000007a .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:403    .text.i2s_psc_config:0000000000000080 .L0 
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccIKwpaA.s 			page 41
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:276    .text.i2s_init:0000000000000018 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:277    .text.i2s_init:0000000000000018 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:279    .text.i2s_init:000000000000001a .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:280    .text.i2s_init:000000000000001c .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:287    .text.i2s_psc_config:0000000000000000 i2s_psc_config
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:290    .text.i2s_psc_config:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:292    .text.i2s_psc_config:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:293    .text.i2s_psc_config:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:294    .text.i2s_psc_config:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:295    .text.i2s_psc_config:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:296    .text.i2s_psc_config:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:297    .text.i2s_psc_config:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:299    .text.i2s_psc_config:0000000000000002 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:302    .text.i2s_psc_config:0000000000000006 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:303    .text.i2s_psc_config:0000000000000006 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:305    .text.i2s_psc_config:0000000000000006 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:307    .text.i2s_psc_config:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:309    .text.i2s_psc_config:000000000000000c .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:311    .text.i2s_psc_config:000000000000000e .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:313    .text.i2s_psc_config:0000000000000010 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:314    .text.i2s_psc_config:0000000000000010 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:316    .text.i2s_psc_config:0000000000000014 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:319    .text.i2s_psc_config:0000000000000018 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:324    .text.i2s_psc_config:0000000000000020 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:325    .text.i2s_psc_config:0000000000000020 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:328    .text.i2s_psc_config:0000000000000026 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:330    .text.i2s_psc_config:0000000000000028 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:332    .text.i2s_psc_config:000000000000002a .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:333    .text.i2s_psc_config:000000000000002a .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:336    .text.i2s_psc_config:000000000000002c .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:338    .text.i2s_psc_config:000000000000002e .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:340    .text.i2s_psc_config:0000000000000030 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:343    .text.i2s_psc_config:0000000000000034 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:344    .text.i2s_psc_config:0000000000000034 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:346    .text.i2s_psc_config:0000000000000038 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:348    .text.i2s_psc_config:000000000000003c .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:349    .text.i2s_psc_config:000000000000003c .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:353    .text.i2s_psc_config:000000000000003e .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:354    .text.i2s_psc_config:000000000000003e .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:358    .text.i2s_psc_config:0000000000000044 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:359    .text.i2s_psc_config:0000000000000044 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:363    .text.i2s_psc_config:0000000000000048 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:366    .text.i2s_psc_config:000000000000004c .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:371    .text.i2s_psc_config:000000000000005c .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:375    .text.i2s_psc_config:000000000000005e .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:376    .text.i2s_psc_config:000000000000005e .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:379    .text.i2s_psc_config:0000000000000066 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:380    .text.i2s_psc_config:0000000000000066 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:382    .text.i2s_psc_config:0000000000000068 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:383    .text.i2s_psc_config:0000000000000068 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:386    .text.i2s_psc_config:000000000000006a .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:390    .text.i2s_psc_config:0000000000000072 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:394    .text.i2s_psc_config:0000000000000076 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:395    .text.i2s_psc_config:0000000000000076 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:397    .text.i2s_psc_config:0000000000000078 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:400    .text.i2s_psc_config:000000000000007a .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:403    .text.i2s_psc_config:0000000000000080 .L0 
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s 			page 41
 
 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:406    .text.i2s_psc_config:0000000000000084 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:407    .text.i2s_psc_config:0000000000000084 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:408    .text.i2s_psc_config:0000000000000084 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:411    .text.i2s_psc_config:0000000000000088 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:412    .text.i2s_psc_config:0000000000000088 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:414    .text.i2s_psc_config:000000000000008c .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:417    .text.i2s_psc_config:000000000000008e .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:418    .text.i2s_psc_config:000000000000008e .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:420    .text.i2s_psc_config:0000000000000092 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:426    .text.i2s_psc_config:0000000000000098 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:427    .text.i2s_psc_config:0000000000000098 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:429    .text.i2s_psc_config:000000000000009a .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:431    .text.i2s_psc_config:000000000000009c .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:432    .text.i2s_psc_config:000000000000009c .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:434    .text.i2s_psc_config:000000000000009e .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:435    .text.i2s_psc_config:00000000000000a0 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:436    .text.i2s_psc_config:00000000000000a0 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:438    .text.i2s_psc_config:00000000000000a0 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:441    .text.i2s_psc_config:00000000000000a4 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:442    .text.i2s_psc_config:00000000000000a4 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:446    .text.i2s_psc_config:00000000000000aa .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:447    .text.i2s_psc_config:00000000000000ac .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:451    .text.i2s_psc_config:00000000000000ae .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:456    .text.i2s_psc_config:00000000000000b0 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:458    .text.i2s_psc_config:00000000000000b0 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:459    .text.i2s_psc_config:00000000000000b0 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:462    .text.i2s_psc_config:00000000000000b6 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:468    .text.i2s_psc_config:00000000000000ba .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:469    .text.i2s_psc_config:00000000000000ba .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:472    .text.i2s_psc_config:00000000000000bc .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:476    .text.i2s_psc_config:00000000000000c4 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:482    .text.i2s_psc_config:00000000000000ca .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:483    .text.i2s_psc_config:00000000000000ca .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:486    .text.i2s_psc_config:00000000000000cc .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:490    .text.i2s_psc_config:00000000000000d4 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:496    .text.i2s_psc_config:00000000000000da .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:502    .text.i2s_psc_config:00000000000000e2 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:503    .text.i2s_psc_config:00000000000000e2 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:510    .text.i2s_psc_config:00000000000000f2 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:517    .text.i2s_enable:0000000000000000 i2s_enable
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:520    .text.i2s_enable:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:522    .text.i2s_enable:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:523    .text.i2s_enable:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:524    .text.i2s_enable:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:528    .text.i2s_enable:0000000000000008 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:529    .text.i2s_enable:000000000000000a .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:536    .text.i2s_disable:0000000000000000 i2s_disable
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:539    .text.i2s_disable:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:541    .text.i2s_disable:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:542    .text.i2s_disable:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:543    .text.i2s_disable:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:547    .text.i2s_disable:0000000000000008 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:548    .text.i2s_disable:000000000000000a .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:555    .text.spi_nss_output_enable:0000000000000000 spi_nss_output_enable
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:558    .text.spi_nss_output_enable:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:560    .text.spi_nss_output_enable:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:561    .text.spi_nss_output_enable:0000000000000000 .L0 
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccIKwpaA.s 			page 42
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:406    .text.i2s_psc_config:0000000000000084 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:407    .text.i2s_psc_config:0000000000000084 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:408    .text.i2s_psc_config:0000000000000084 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:411    .text.i2s_psc_config:0000000000000088 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:412    .text.i2s_psc_config:0000000000000088 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:414    .text.i2s_psc_config:000000000000008c .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:417    .text.i2s_psc_config:000000000000008e .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:418    .text.i2s_psc_config:000000000000008e .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:420    .text.i2s_psc_config:0000000000000092 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:426    .text.i2s_psc_config:0000000000000098 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:427    .text.i2s_psc_config:0000000000000098 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:429    .text.i2s_psc_config:000000000000009a .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:431    .text.i2s_psc_config:000000000000009c .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:432    .text.i2s_psc_config:000000000000009c .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:434    .text.i2s_psc_config:000000000000009e .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:435    .text.i2s_psc_config:00000000000000a0 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:436    .text.i2s_psc_config:00000000000000a0 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:438    .text.i2s_psc_config:00000000000000a0 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:441    .text.i2s_psc_config:00000000000000a4 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:442    .text.i2s_psc_config:00000000000000a4 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:446    .text.i2s_psc_config:00000000000000aa .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:447    .text.i2s_psc_config:00000000000000ac .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:451    .text.i2s_psc_config:00000000000000ae .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:456    .text.i2s_psc_config:00000000000000b0 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:458    .text.i2s_psc_config:00000000000000b0 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:459    .text.i2s_psc_config:00000000000000b0 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:462    .text.i2s_psc_config:00000000000000b6 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:468    .text.i2s_psc_config:00000000000000ba .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:469    .text.i2s_psc_config:00000000000000ba .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:472    .text.i2s_psc_config:00000000000000bc .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:476    .text.i2s_psc_config:00000000000000c4 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:482    .text.i2s_psc_config:00000000000000ca .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:483    .text.i2s_psc_config:00000000000000ca .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:486    .text.i2s_psc_config:00000000000000cc .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:490    .text.i2s_psc_config:00000000000000d4 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:496    .text.i2s_psc_config:00000000000000da .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:502    .text.i2s_psc_config:00000000000000e2 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:503    .text.i2s_psc_config:00000000000000e2 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:510    .text.i2s_psc_config:00000000000000f2 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:517    .text.i2s_enable:0000000000000000 i2s_enable
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:520    .text.i2s_enable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:522    .text.i2s_enable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:523    .text.i2s_enable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:524    .text.i2s_enable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:528    .text.i2s_enable:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:529    .text.i2s_enable:000000000000000a .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:536    .text.i2s_disable:0000000000000000 i2s_disable
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:539    .text.i2s_disable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:541    .text.i2s_disable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:542    .text.i2s_disable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:543    .text.i2s_disable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:547    .text.i2s_disable:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:548    .text.i2s_disable:000000000000000a .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:555    .text.spi_nss_output_enable:0000000000000000 spi_nss_output_enable
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:558    .text.spi_nss_output_enable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:560    .text.spi_nss_output_enable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:561    .text.spi_nss_output_enable:0000000000000000 .L0 
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s 			page 42
 
 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:562    .text.spi_nss_output_enable:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:566    .text.spi_nss_output_enable:0000000000000008 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:567    .text.spi_nss_output_enable:000000000000000a .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:574    .text.spi_nss_output_disable:0000000000000000 spi_nss_output_disable
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:577    .text.spi_nss_output_disable:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:579    .text.spi_nss_output_disable:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:580    .text.spi_nss_output_disable:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:581    .text.spi_nss_output_disable:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:585    .text.spi_nss_output_disable:0000000000000006 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:586    .text.spi_nss_output_disable:0000000000000008 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:593    .text.spi_nss_internal_high:0000000000000000 spi_nss_internal_high
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:596    .text.spi_nss_internal_high:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:598    .text.spi_nss_internal_high:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:599    .text.spi_nss_internal_high:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:600    .text.spi_nss_internal_high:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:604    .text.spi_nss_internal_high:0000000000000008 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:605    .text.spi_nss_internal_high:000000000000000a .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:612    .text.spi_nss_internal_low:0000000000000000 spi_nss_internal_low
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:615    .text.spi_nss_internal_low:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:617    .text.spi_nss_internal_low:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:618    .text.spi_nss_internal_low:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:619    .text.spi_nss_internal_low:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:623    .text.spi_nss_internal_low:0000000000000008 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:624    .text.spi_nss_internal_low:000000000000000a .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:631    .text.spi_dma_enable:0000000000000000 spi_dma_enable
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:634    .text.spi_dma_enable:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:636    .text.spi_dma_enable:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:637    .text.spi_dma_enable:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:638    .text.spi_dma_enable:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:640    .text.spi_dma_enable:0000000000000002 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:642    .text.spi_dma_enable:0000000000000004 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:643    .text.spi_dma_enable:0000000000000004 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:648    .text.spi_dma_enable:000000000000000c .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:649    .text.spi_dma_enable:000000000000000c .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:652    .text.spi_dma_enable:0000000000000012 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:653    .text.spi_dma_enable:0000000000000014 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:660    .text.spi_dma_disable:0000000000000000 spi_dma_disable
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:663    .text.spi_dma_disable:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:665    .text.spi_dma_disable:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:666    .text.spi_dma_disable:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:667    .text.spi_dma_disable:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:669    .text.spi_dma_disable:0000000000000002 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:671    .text.spi_dma_disable:0000000000000004 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:672    .text.spi_dma_disable:0000000000000004 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:677    .text.spi_dma_disable:000000000000000a .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:678    .text.spi_dma_disable:000000000000000a .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:681    .text.spi_dma_disable:000000000000000e .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:682    .text.spi_dma_disable:0000000000000010 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:689    .text.spi_i2s_data_frame_format_config:0000000000000000 spi_i2s_data_frame_format_config
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:692    .text.spi_i2s_data_frame_format_config:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:694    .text.spi_i2s_data_frame_format_config:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:695    .text.spi_i2s_data_frame_format_config:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:696    .text.spi_i2s_data_frame_format_config:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:702    .text.spi_i2s_data_frame_format_config:000000000000000c .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:703    .text.spi_i2s_data_frame_format_config:000000000000000c .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:708    .text.spi_i2s_data_frame_format_config:0000000000000012 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:709    .text.spi_i2s_data_frame_format_config:0000000000000014 .L0 
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccIKwpaA.s 			page 43
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:562    .text.spi_nss_output_enable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:566    .text.spi_nss_output_enable:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:567    .text.spi_nss_output_enable:000000000000000a .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:574    .text.spi_nss_output_disable:0000000000000000 spi_nss_output_disable
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:577    .text.spi_nss_output_disable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:579    .text.spi_nss_output_disable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:580    .text.spi_nss_output_disable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:581    .text.spi_nss_output_disable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:585    .text.spi_nss_output_disable:0000000000000006 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:586    .text.spi_nss_output_disable:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:593    .text.spi_nss_internal_high:0000000000000000 spi_nss_internal_high
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:596    .text.spi_nss_internal_high:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:598    .text.spi_nss_internal_high:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:599    .text.spi_nss_internal_high:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:600    .text.spi_nss_internal_high:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:604    .text.spi_nss_internal_high:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:605    .text.spi_nss_internal_high:000000000000000a .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:612    .text.spi_nss_internal_low:0000000000000000 spi_nss_internal_low
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:615    .text.spi_nss_internal_low:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:617    .text.spi_nss_internal_low:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:618    .text.spi_nss_internal_low:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:619    .text.spi_nss_internal_low:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:623    .text.spi_nss_internal_low:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:624    .text.spi_nss_internal_low:000000000000000a .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:631    .text.spi_dma_enable:0000000000000000 spi_dma_enable
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:634    .text.spi_dma_enable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:636    .text.spi_dma_enable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:637    .text.spi_dma_enable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:638    .text.spi_dma_enable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:640    .text.spi_dma_enable:0000000000000002 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:642    .text.spi_dma_enable:0000000000000004 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:643    .text.spi_dma_enable:0000000000000004 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:648    .text.spi_dma_enable:000000000000000c .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:649    .text.spi_dma_enable:000000000000000c .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:652    .text.spi_dma_enable:0000000000000012 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:653    .text.spi_dma_enable:0000000000000014 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:660    .text.spi_dma_disable:0000000000000000 spi_dma_disable
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:663    .text.spi_dma_disable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:665    .text.spi_dma_disable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:666    .text.spi_dma_disable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:667    .text.spi_dma_disable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:669    .text.spi_dma_disable:0000000000000002 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:671    .text.spi_dma_disable:0000000000000004 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:672    .text.spi_dma_disable:0000000000000004 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:677    .text.spi_dma_disable:000000000000000a .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:678    .text.spi_dma_disable:000000000000000a .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:681    .text.spi_dma_disable:000000000000000e .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:682    .text.spi_dma_disable:0000000000000010 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:689    .text.spi_i2s_data_frame_format_config:0000000000000000 spi_i2s_data_frame_format_config
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:692    .text.spi_i2s_data_frame_format_config:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:694    .text.spi_i2s_data_frame_format_config:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:695    .text.spi_i2s_data_frame_format_config:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:696    .text.spi_i2s_data_frame_format_config:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:702    .text.spi_i2s_data_frame_format_config:000000000000000c .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:703    .text.spi_i2s_data_frame_format_config:000000000000000c .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:708    .text.spi_i2s_data_frame_format_config:0000000000000012 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:709    .text.spi_i2s_data_frame_format_config:0000000000000014 .L0 
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s 			page 43
 
 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:716    .text.spi_i2s_data_transmit:0000000000000000 spi_i2s_data_transmit
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:719    .text.spi_i2s_data_transmit:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:721    .text.spi_i2s_data_transmit:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:722    .text.spi_i2s_data_transmit:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:723    .text.spi_i2s_data_transmit:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:725    .text.spi_i2s_data_transmit:0000000000000002 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:726    .text.spi_i2s_data_transmit:0000000000000004 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:733    .text.spi_i2s_data_receive:0000000000000000 spi_i2s_data_receive
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:736    .text.spi_i2s_data_receive:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:738    .text.spi_i2s_data_receive:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:739    .text.spi_i2s_data_receive:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:740    .text.spi_i2s_data_receive:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:743    .text.spi_i2s_data_receive:0000000000000002 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:746    .text.spi_i2s_data_receive:0000000000000008 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:753    .text.spi_bidirectional_transfer_config:0000000000000000 spi_bidirectional_transfer_config
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:756    .text.spi_bidirectional_transfer_config:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:758    .text.spi_bidirectional_transfer_config:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:759    .text.spi_bidirectional_transfer_config:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:760    .text.spi_bidirectional_transfer_config:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:763    .text.spi_bidirectional_transfer_config:0000000000000006 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:764    .text.spi_bidirectional_transfer_config:0000000000000006 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:770    .text.spi_bidirectional_transfer_config:0000000000000010 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:773    .text.spi_bidirectional_transfer_config:0000000000000012 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:774    .text.spi_bidirectional_transfer_config:0000000000000012 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:779    .text.spi_bidirectional_transfer_config:000000000000001a .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:786    .text.spi_crc_polynomial_set:0000000000000000 spi_crc_polynomial_set
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:789    .text.spi_crc_polynomial_set:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:791    .text.spi_crc_polynomial_set:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:792    .text.spi_crc_polynomial_set:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:793    .text.spi_crc_polynomial_set:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:798    .text.spi_crc_polynomial_set:0000000000000008 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:799    .text.spi_crc_polynomial_set:0000000000000008 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:801    .text.spi_crc_polynomial_set:000000000000000a .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:802    .text.spi_crc_polynomial_set:000000000000000c .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:809    .text.spi_crc_polynomial_get:0000000000000000 spi_crc_polynomial_get
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:812    .text.spi_crc_polynomial_get:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:814    .text.spi_crc_polynomial_get:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:815    .text.spi_crc_polynomial_get:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:816    .text.spi_crc_polynomial_get:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:819    .text.spi_crc_polynomial_get:0000000000000002 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:822    .text.spi_crc_polynomial_get:0000000000000008 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:829    .text.spi_crc_on:0000000000000000 spi_crc_on
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:832    .text.spi_crc_on:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:834    .text.spi_crc_on:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:835    .text.spi_crc_on:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:836    .text.spi_crc_on:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:841    .text.spi_crc_on:0000000000000008 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:842    .text.spi_crc_on:000000000000000a .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:849    .text.spi_crc_off:0000000000000000 spi_crc_off
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:852    .text.spi_crc_off:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:854    .text.spi_crc_off:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:855    .text.spi_crc_off:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:856    .text.spi_crc_off:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:862    .text.spi_crc_off:000000000000000a .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:863    .text.spi_crc_off:000000000000000c .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:870    .text.spi_crc_next:0000000000000000 spi_crc_next
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:873    .text.spi_crc_next:0000000000000000 .L0 
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccIKwpaA.s 			page 44
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:716    .text.spi_i2s_data_transmit:0000000000000000 spi_i2s_data_transmit
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:719    .text.spi_i2s_data_transmit:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:721    .text.spi_i2s_data_transmit:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:722    .text.spi_i2s_data_transmit:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:723    .text.spi_i2s_data_transmit:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:725    .text.spi_i2s_data_transmit:0000000000000002 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:726    .text.spi_i2s_data_transmit:0000000000000004 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:733    .text.spi_i2s_data_receive:0000000000000000 spi_i2s_data_receive
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:736    .text.spi_i2s_data_receive:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:738    .text.spi_i2s_data_receive:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:739    .text.spi_i2s_data_receive:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:740    .text.spi_i2s_data_receive:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:743    .text.spi_i2s_data_receive:0000000000000002 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:746    .text.spi_i2s_data_receive:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:753    .text.spi_bidirectional_transfer_config:0000000000000000 spi_bidirectional_transfer_config
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:756    .text.spi_bidirectional_transfer_config:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:758    .text.spi_bidirectional_transfer_config:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:759    .text.spi_bidirectional_transfer_config:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:760    .text.spi_bidirectional_transfer_config:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:763    .text.spi_bidirectional_transfer_config:0000000000000006 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:764    .text.spi_bidirectional_transfer_config:0000000000000006 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:770    .text.spi_bidirectional_transfer_config:0000000000000010 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:773    .text.spi_bidirectional_transfer_config:0000000000000012 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:774    .text.spi_bidirectional_transfer_config:0000000000000012 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:779    .text.spi_bidirectional_transfer_config:000000000000001a .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:786    .text.spi_crc_polynomial_set:0000000000000000 spi_crc_polynomial_set
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:789    .text.spi_crc_polynomial_set:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:791    .text.spi_crc_polynomial_set:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:792    .text.spi_crc_polynomial_set:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:793    .text.spi_crc_polynomial_set:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:798    .text.spi_crc_polynomial_set:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:799    .text.spi_crc_polynomial_set:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:801    .text.spi_crc_polynomial_set:000000000000000a .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:802    .text.spi_crc_polynomial_set:000000000000000c .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:809    .text.spi_crc_polynomial_get:0000000000000000 spi_crc_polynomial_get
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:812    .text.spi_crc_polynomial_get:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:814    .text.spi_crc_polynomial_get:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:815    .text.spi_crc_polynomial_get:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:816    .text.spi_crc_polynomial_get:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:819    .text.spi_crc_polynomial_get:0000000000000002 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:822    .text.spi_crc_polynomial_get:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:829    .text.spi_crc_on:0000000000000000 spi_crc_on
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:832    .text.spi_crc_on:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:834    .text.spi_crc_on:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:835    .text.spi_crc_on:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:836    .text.spi_crc_on:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:841    .text.spi_crc_on:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:842    .text.spi_crc_on:000000000000000a .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:849    .text.spi_crc_off:0000000000000000 spi_crc_off
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:852    .text.spi_crc_off:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:854    .text.spi_crc_off:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:855    .text.spi_crc_off:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:856    .text.spi_crc_off:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:862    .text.spi_crc_off:000000000000000a .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:863    .text.spi_crc_off:000000000000000c .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:870    .text.spi_crc_next:0000000000000000 spi_crc_next
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:873    .text.spi_crc_next:0000000000000000 .L0 
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s 			page 44
 
 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:875    .text.spi_crc_next:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:876    .text.spi_crc_next:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:877    .text.spi_crc_next:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:882    .text.spi_crc_next:0000000000000008 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:883    .text.spi_crc_next:000000000000000a .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:890    .text.spi_crc_get:0000000000000000 spi_crc_get
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:893    .text.spi_crc_get:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:895    .text.spi_crc_get:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:896    .text.spi_crc_get:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:897    .text.spi_crc_get:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:899    .text.spi_crc_get:0000000000000002 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:900    .text.spi_crc_get:0000000000000002 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:903    .text.spi_crc_get:0000000000000004 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:909    .text.spi_crc_get:000000000000000a .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:910    .text.spi_crc_get:000000000000000a .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:913    .text.spi_crc_get:000000000000000c .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:916    .text.spi_crc_get:0000000000000010 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:917    .text.spi_crc_get:0000000000000012 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:924    .text.spi_ti_mode_enable:0000000000000000 spi_ti_mode_enable
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:927    .text.spi_ti_mode_enable:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:929    .text.spi_ti_mode_enable:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:930    .text.spi_ti_mode_enable:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:931    .text.spi_ti_mode_enable:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:935    .text.spi_ti_mode_enable:0000000000000008 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:936    .text.spi_ti_mode_enable:000000000000000a .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:943    .text.spi_ti_mode_disable:0000000000000000 spi_ti_mode_disable
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:946    .text.spi_ti_mode_disable:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:948    .text.spi_ti_mode_disable:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:949    .text.spi_ti_mode_disable:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:950    .text.spi_ti_mode_disable:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:954    .text.spi_ti_mode_disable:0000000000000006 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:955    .text.spi_ti_mode_disable:0000000000000008 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:962    .text.spi_nssp_mode_enable:0000000000000000 spi_nssp_mode_enable
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:965    .text.spi_nssp_mode_enable:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:967    .text.spi_nssp_mode_enable:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:968    .text.spi_nssp_mode_enable:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:969    .text.spi_nssp_mode_enable:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:973    .text.spi_nssp_mode_enable:0000000000000008 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:974    .text.spi_nssp_mode_enable:000000000000000a .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:981    .text.spi_nssp_mode_disable:0000000000000000 spi_nssp_mode_disable
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:984    .text.spi_nssp_mode_disable:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:986    .text.spi_nssp_mode_disable:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:987    .text.spi_nssp_mode_disable:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:988    .text.spi_nssp_mode_disable:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:992    .text.spi_nssp_mode_disable:0000000000000006 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:993    .text.spi_nssp_mode_disable:0000000000000008 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1000   .text.spi_i2s_interrupt_enable:0000000000000000 spi_i2s_interrupt_enable
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1003   .text.spi_i2s_interrupt_enable:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1005   .text.spi_i2s_interrupt_enable:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1006   .text.spi_i2s_interrupt_enable:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1012   .text.spi_i2s_interrupt_enable:000000000000000e .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1013   .text.spi_i2s_interrupt_enable:000000000000000e .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1017   .text.spi_i2s_interrupt_enable:0000000000000016 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1018   .text.spi_i2s_interrupt_enable:0000000000000016 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1023   .text.spi_i2s_interrupt_enable:000000000000001a .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1024   .text.spi_i2s_interrupt_enable:000000000000001a .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1028   .text.spi_i2s_interrupt_enable:0000000000000022 .L0 
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccIKwpaA.s 			page 45
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:875    .text.spi_crc_next:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:876    .text.spi_crc_next:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:877    .text.spi_crc_next:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:882    .text.spi_crc_next:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:883    .text.spi_crc_next:000000000000000a .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:890    .text.spi_crc_get:0000000000000000 spi_crc_get
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:893    .text.spi_crc_get:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:895    .text.spi_crc_get:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:896    .text.spi_crc_get:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:897    .text.spi_crc_get:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:899    .text.spi_crc_get:0000000000000002 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:900    .text.spi_crc_get:0000000000000002 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:903    .text.spi_crc_get:0000000000000004 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:909    .text.spi_crc_get:000000000000000a .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:910    .text.spi_crc_get:000000000000000a .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:913    .text.spi_crc_get:000000000000000c .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:916    .text.spi_crc_get:0000000000000010 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:917    .text.spi_crc_get:0000000000000012 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:924    .text.spi_ti_mode_enable:0000000000000000 spi_ti_mode_enable
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:927    .text.spi_ti_mode_enable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:929    .text.spi_ti_mode_enable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:930    .text.spi_ti_mode_enable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:931    .text.spi_ti_mode_enable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:935    .text.spi_ti_mode_enable:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:936    .text.spi_ti_mode_enable:000000000000000a .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:943    .text.spi_ti_mode_disable:0000000000000000 spi_ti_mode_disable
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:946    .text.spi_ti_mode_disable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:948    .text.spi_ti_mode_disable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:949    .text.spi_ti_mode_disable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:950    .text.spi_ti_mode_disable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:954    .text.spi_ti_mode_disable:0000000000000006 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:955    .text.spi_ti_mode_disable:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:962    .text.spi_nssp_mode_enable:0000000000000000 spi_nssp_mode_enable
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:965    .text.spi_nssp_mode_enable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:967    .text.spi_nssp_mode_enable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:968    .text.spi_nssp_mode_enable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:969    .text.spi_nssp_mode_enable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:973    .text.spi_nssp_mode_enable:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:974    .text.spi_nssp_mode_enable:000000000000000a .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:981    .text.spi_nssp_mode_disable:0000000000000000 spi_nssp_mode_disable
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:984    .text.spi_nssp_mode_disable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:986    .text.spi_nssp_mode_disable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:987    .text.spi_nssp_mode_disable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:988    .text.spi_nssp_mode_disable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:992    .text.spi_nssp_mode_disable:0000000000000006 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:993    .text.spi_nssp_mode_disable:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1000   .text.spi_i2s_interrupt_enable:0000000000000000 spi_i2s_interrupt_enable
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1003   .text.spi_i2s_interrupt_enable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1005   .text.spi_i2s_interrupt_enable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1006   .text.spi_i2s_interrupt_enable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1012   .text.spi_i2s_interrupt_enable:000000000000000e .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1013   .text.spi_i2s_interrupt_enable:000000000000000e .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1017   .text.spi_i2s_interrupt_enable:0000000000000016 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1018   .text.spi_i2s_interrupt_enable:0000000000000016 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1023   .text.spi_i2s_interrupt_enable:000000000000001a .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1024   .text.spi_i2s_interrupt_enable:000000000000001a .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1028   .text.spi_i2s_interrupt_enable:0000000000000022 .L0 
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s 			page 45
 
 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1031   .text.spi_i2s_interrupt_enable:0000000000000024 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1032   .text.spi_i2s_interrupt_enable:0000000000000024 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1036   .text.spi_i2s_interrupt_enable:000000000000002c .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1037   .text.spi_i2s_interrupt_enable:000000000000002e .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1044   .text.spi_i2s_interrupt_disable:0000000000000000 spi_i2s_interrupt_disable
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1047   .text.spi_i2s_interrupt_disable:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1049   .text.spi_i2s_interrupt_disable:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1050   .text.spi_i2s_interrupt_disable:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1056   .text.spi_i2s_interrupt_disable:000000000000000e .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1057   .text.spi_i2s_interrupt_disable:000000000000000e .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1061   .text.spi_i2s_interrupt_disable:0000000000000016 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1062   .text.spi_i2s_interrupt_disable:0000000000000016 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1067   .text.spi_i2s_interrupt_disable:000000000000001a .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1068   .text.spi_i2s_interrupt_disable:000000000000001a .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1072   .text.spi_i2s_interrupt_disable:0000000000000022 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1075   .text.spi_i2s_interrupt_disable:0000000000000024 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1076   .text.spi_i2s_interrupt_disable:0000000000000024 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1080   .text.spi_i2s_interrupt_disable:000000000000002c .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1081   .text.spi_i2s_interrupt_disable:000000000000002e .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1088   .text.spi_i2s_interrupt_flag_get:0000000000000000 spi_i2s_interrupt_flag_get
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1091   .text.spi_i2s_interrupt_flag_get:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1093   .text.spi_i2s_interrupt_flag_get:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1094   .text.spi_i2s_interrupt_flag_get:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1095   .text.spi_i2s_interrupt_flag_get:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1098   .text.spi_i2s_interrupt_flag_get:0000000000000002 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1099   .text.spi_i2s_interrupt_flag_get:0000000000000002 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1102   .text.spi_i2s_interrupt_flag_get:0000000000000004 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1125   .text.spi_i2s_interrupt_flag_get:000000000000001a .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1126   .text.spi_i2s_interrupt_flag_get:000000000000001a .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1129   .text.spi_i2s_interrupt_flag_get:000000000000001c .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1130   .text.spi_i2s_interrupt_flag_get:000000000000001c .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1134   .text.spi_i2s_interrupt_flag_get:0000000000000020 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1135   .text.spi_i2s_interrupt_flag_get:0000000000000020 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1136   .text.spi_i2s_interrupt_flag_get:0000000000000020 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1138   .text.spi_i2s_interrupt_flag_get:0000000000000022 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1142   .text.spi_i2s_interrupt_flag_get:0000000000000026 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1148   .text.spi_i2s_interrupt_flag_get:000000000000002a .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1149   .text.spi_i2s_interrupt_flag_get:000000000000002a .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1152   .text.spi_i2s_interrupt_flag_get:000000000000002c .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1153   .text.spi_i2s_interrupt_flag_get:000000000000002c .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1156   .text.spi_i2s_interrupt_flag_get:0000000000000030 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1159   .text.spi_i2s_interrupt_flag_get:0000000000000032 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1160   .text.spi_i2s_interrupt_flag_get:0000000000000032 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1163   .text.spi_i2s_interrupt_flag_get:0000000000000036 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1164   .text.spi_i2s_interrupt_flag_get:0000000000000036 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1167   .text.spi_i2s_interrupt_flag_get:000000000000003a .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1170   .text.spi_i2s_interrupt_flag_get:000000000000003c .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1171   .text.spi_i2s_interrupt_flag_get:000000000000003c .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1174   .text.spi_i2s_interrupt_flag_get:000000000000003e .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1175   .text.spi_i2s_interrupt_flag_get:000000000000003e .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1178   .text.spi_i2s_interrupt_flag_get:0000000000000042 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1181   .text.spi_i2s_interrupt_flag_get:0000000000000044 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1182   .text.spi_i2s_interrupt_flag_get:0000000000000044 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1185   .text.spi_i2s_interrupt_flag_get:0000000000000048 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1186   .text.spi_i2s_interrupt_flag_get:0000000000000048 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1189   .text.spi_i2s_interrupt_flag_get:000000000000004c .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1192   .text.spi_i2s_interrupt_flag_get:000000000000004e .L0 
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccIKwpaA.s 			page 46
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1031   .text.spi_i2s_interrupt_enable:0000000000000024 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1032   .text.spi_i2s_interrupt_enable:0000000000000024 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1036   .text.spi_i2s_interrupt_enable:000000000000002c .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1037   .text.spi_i2s_interrupt_enable:000000000000002e .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1044   .text.spi_i2s_interrupt_disable:0000000000000000 spi_i2s_interrupt_disable
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1047   .text.spi_i2s_interrupt_disable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1049   .text.spi_i2s_interrupt_disable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1050   .text.spi_i2s_interrupt_disable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1056   .text.spi_i2s_interrupt_disable:000000000000000e .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1057   .text.spi_i2s_interrupt_disable:000000000000000e .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1061   .text.spi_i2s_interrupt_disable:0000000000000016 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1062   .text.spi_i2s_interrupt_disable:0000000000000016 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1067   .text.spi_i2s_interrupt_disable:000000000000001a .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1068   .text.spi_i2s_interrupt_disable:000000000000001a .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1072   .text.spi_i2s_interrupt_disable:0000000000000022 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1075   .text.spi_i2s_interrupt_disable:0000000000000024 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1076   .text.spi_i2s_interrupt_disable:0000000000000024 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1080   .text.spi_i2s_interrupt_disable:000000000000002c .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1081   .text.spi_i2s_interrupt_disable:000000000000002e .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1088   .text.spi_i2s_interrupt_flag_get:0000000000000000 spi_i2s_interrupt_flag_get
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1091   .text.spi_i2s_interrupt_flag_get:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1093   .text.spi_i2s_interrupt_flag_get:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1094   .text.spi_i2s_interrupt_flag_get:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1095   .text.spi_i2s_interrupt_flag_get:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1098   .text.spi_i2s_interrupt_flag_get:0000000000000002 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1099   .text.spi_i2s_interrupt_flag_get:0000000000000002 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1102   .text.spi_i2s_interrupt_flag_get:0000000000000004 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1125   .text.spi_i2s_interrupt_flag_get:000000000000001a .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1126   .text.spi_i2s_interrupt_flag_get:000000000000001a .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1129   .text.spi_i2s_interrupt_flag_get:000000000000001c .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1130   .text.spi_i2s_interrupt_flag_get:000000000000001c .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1134   .text.spi_i2s_interrupt_flag_get:0000000000000020 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1135   .text.spi_i2s_interrupt_flag_get:0000000000000020 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1136   .text.spi_i2s_interrupt_flag_get:0000000000000020 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1138   .text.spi_i2s_interrupt_flag_get:0000000000000022 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1142   .text.spi_i2s_interrupt_flag_get:0000000000000026 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1148   .text.spi_i2s_interrupt_flag_get:000000000000002a .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1149   .text.spi_i2s_interrupt_flag_get:000000000000002a .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1152   .text.spi_i2s_interrupt_flag_get:000000000000002c .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1153   .text.spi_i2s_interrupt_flag_get:000000000000002c .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1156   .text.spi_i2s_interrupt_flag_get:0000000000000030 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1159   .text.spi_i2s_interrupt_flag_get:0000000000000032 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1160   .text.spi_i2s_interrupt_flag_get:0000000000000032 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1163   .text.spi_i2s_interrupt_flag_get:0000000000000036 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1164   .text.spi_i2s_interrupt_flag_get:0000000000000036 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1167   .text.spi_i2s_interrupt_flag_get:000000000000003a .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1170   .text.spi_i2s_interrupt_flag_get:000000000000003c .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1171   .text.spi_i2s_interrupt_flag_get:000000000000003c .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1174   .text.spi_i2s_interrupt_flag_get:000000000000003e .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1175   .text.spi_i2s_interrupt_flag_get:000000000000003e .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1178   .text.spi_i2s_interrupt_flag_get:0000000000000042 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1181   .text.spi_i2s_interrupt_flag_get:0000000000000044 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1182   .text.spi_i2s_interrupt_flag_get:0000000000000044 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1185   .text.spi_i2s_interrupt_flag_get:0000000000000048 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1186   .text.spi_i2s_interrupt_flag_get:0000000000000048 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1189   .text.spi_i2s_interrupt_flag_get:000000000000004c .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1192   .text.spi_i2s_interrupt_flag_get:000000000000004e .L0 
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s 			page 46
 
 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1193   .text.spi_i2s_interrupt_flag_get:000000000000004e .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1196   .text.spi_i2s_interrupt_flag_get:0000000000000052 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1197   .text.spi_i2s_interrupt_flag_get:0000000000000052 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1200   .text.spi_i2s_interrupt_flag_get:0000000000000056 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1203   .text.spi_i2s_interrupt_flag_get:0000000000000058 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1204   .text.spi_i2s_interrupt_flag_get:0000000000000058 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1207   .text.spi_i2s_interrupt_flag_get:000000000000005a .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1208   .text.spi_i2s_interrupt_flag_get:000000000000005a .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1211   .text.spi_i2s_interrupt_flag_get:000000000000005e .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1212   .text.spi_i2s_interrupt_flag_get:0000000000000060 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1219   .text.spi_i2s_flag_get:0000000000000000 spi_i2s_flag_get
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1222   .text.spi_i2s_flag_get:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1224   .text.spi_i2s_flag_get:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1225   .text.spi_i2s_flag_get:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1226   .text.spi_i2s_flag_get:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1229   .text.spi_i2s_flag_get:0000000000000002 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1231   .text.spi_i2s_flag_get:0000000000000004 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1233   .text.spi_i2s_flag_get:000000000000000a .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1240   .text.spi_crc_error_clear:0000000000000000 spi_crc_error_clear
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1243   .text.spi_crc_error_clear:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1245   .text.spi_crc_error_clear:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1246   .text.spi_crc_error_clear:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1247   .text.spi_crc_error_clear:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1251   .text.spi_crc_error_clear:0000000000000006 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1252   .text.spi_crc_error_clear:0000000000000008 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:109    .text.spi_i2s_deinit:000000000000007a .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:141    .text.spi_struct_para_init:000000000000001a .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:203    .text.spi_init:000000000000003e .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:222    .text.spi_enable:000000000000000a .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:241    .text.spi_disable:000000000000000a .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:283    .text.i2s_init:000000000000001c .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:513    .text.i2s_psc_config:00000000000000f2 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:532    .text.i2s_enable:000000000000000a .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:551    .text.i2s_disable:000000000000000a .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:570    .text.spi_nss_output_enable:000000000000000a .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:589    .text.spi_nss_output_disable:0000000000000008 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:608    .text.spi_nss_internal_high:000000000000000a .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:627    .text.spi_nss_internal_low:000000000000000a .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:656    .text.spi_dma_enable:0000000000000014 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:685    .text.spi_dma_disable:0000000000000010 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:712    .text.spi_i2s_data_frame_format_config:0000000000000014 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:729    .text.spi_i2s_data_transmit:0000000000000004 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:749    .text.spi_i2s_data_receive:0000000000000008 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:782    .text.spi_bidirectional_transfer_config:000000000000001a .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:805    .text.spi_crc_polynomial_set:000000000000000c .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:825    .text.spi_crc_polynomial_get:0000000000000008 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:845    .text.spi_crc_on:000000000000000a .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:866    .text.spi_crc_off:000000000000000c .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:886    .text.spi_crc_next:000000000000000a .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:920    .text.spi_crc_get:0000000000000012 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:939    .text.spi_ti_mode_enable:000000000000000a .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:958    .text.spi_ti_mode_disable:0000000000000008 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:977    .text.spi_nssp_mode_enable:000000000000000a .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:996    .text.spi_nssp_mode_disable:0000000000000008 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1040   .text.spi_i2s_interrupt_enable:000000000000002e .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1084   .text.spi_i2s_interrupt_disable:000000000000002e .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1215   .text.spi_i2s_interrupt_flag_get:0000000000000060 .L0 
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccIKwpaA.s 			page 47
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1193   .text.spi_i2s_interrupt_flag_get:000000000000004e .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1196   .text.spi_i2s_interrupt_flag_get:0000000000000052 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1197   .text.spi_i2s_interrupt_flag_get:0000000000000052 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1200   .text.spi_i2s_interrupt_flag_get:0000000000000056 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1203   .text.spi_i2s_interrupt_flag_get:0000000000000058 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1204   .text.spi_i2s_interrupt_flag_get:0000000000000058 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1207   .text.spi_i2s_interrupt_flag_get:000000000000005a .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1208   .text.spi_i2s_interrupt_flag_get:000000000000005a .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1211   .text.spi_i2s_interrupt_flag_get:000000000000005e .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1212   .text.spi_i2s_interrupt_flag_get:0000000000000060 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1219   .text.spi_i2s_flag_get:0000000000000000 spi_i2s_flag_get
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1222   .text.spi_i2s_flag_get:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1224   .text.spi_i2s_flag_get:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1225   .text.spi_i2s_flag_get:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1226   .text.spi_i2s_flag_get:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1229   .text.spi_i2s_flag_get:0000000000000002 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1231   .text.spi_i2s_flag_get:0000000000000004 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1233   .text.spi_i2s_flag_get:000000000000000a .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1240   .text.spi_crc_error_clear:0000000000000000 spi_crc_error_clear
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1243   .text.spi_crc_error_clear:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1245   .text.spi_crc_error_clear:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1246   .text.spi_crc_error_clear:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1247   .text.spi_crc_error_clear:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1251   .text.spi_crc_error_clear:0000000000000006 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1252   .text.spi_crc_error_clear:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:109    .text.spi_i2s_deinit:000000000000007a .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:141    .text.spi_struct_para_init:000000000000001a .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:203    .text.spi_init:000000000000003e .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:222    .text.spi_enable:000000000000000a .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:241    .text.spi_disable:000000000000000a .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:283    .text.i2s_init:000000000000001c .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:513    .text.i2s_psc_config:00000000000000f2 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:532    .text.i2s_enable:000000000000000a .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:551    .text.i2s_disable:000000000000000a .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:570    .text.spi_nss_output_enable:000000000000000a .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:589    .text.spi_nss_output_disable:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:608    .text.spi_nss_internal_high:000000000000000a .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:627    .text.spi_nss_internal_low:000000000000000a .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:656    .text.spi_dma_enable:0000000000000014 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:685    .text.spi_dma_disable:0000000000000010 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:712    .text.spi_i2s_data_frame_format_config:0000000000000014 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:729    .text.spi_i2s_data_transmit:0000000000000004 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:749    .text.spi_i2s_data_receive:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:782    .text.spi_bidirectional_transfer_config:000000000000001a .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:805    .text.spi_crc_polynomial_set:000000000000000c .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:825    .text.spi_crc_polynomial_get:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:845    .text.spi_crc_on:000000000000000a .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:866    .text.spi_crc_off:000000000000000c .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:886    .text.spi_crc_next:000000000000000a .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:920    .text.spi_crc_get:0000000000000012 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:939    .text.spi_ti_mode_enable:000000000000000a .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:958    .text.spi_ti_mode_disable:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:977    .text.spi_nssp_mode_enable:000000000000000a .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:996    .text.spi_nssp_mode_disable:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1040   .text.spi_i2s_interrupt_enable:000000000000002e .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1084   .text.spi_i2s_interrupt_disable:000000000000002e .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1215   .text.spi_i2s_interrupt_flag_get:0000000000000060 .L0 
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s 			page 47
 
 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1236   .text.spi_i2s_flag_get:000000000000000a .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1255   .text.spi_crc_error_clear:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1236   .text.spi_i2s_flag_get:000000000000000a .L0 
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1255   .text.spi_crc_error_clear:0000000000000008 .L0 
                      .debug_frame:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:41     .text.spi_i2s_deinit:0000000000000026 .L2
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:85     .text.spi_i2s_deinit:000000000000005e .L3
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:63     .text.spi_i2s_deinit:0000000000000042 .L9
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:321    .text.i2s_psc_config:0000000000000020 .L16
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:494    .text.i2s_psc_config:00000000000000da .L17
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:454    .text.i2s_psc_config:00000000000000b0 .L18
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:466    .text.i2s_psc_config:00000000000000ba .L29
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:480    .text.i2s_psc_config:00000000000000ca .L23
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:424    .text.i2s_psc_config:0000000000000098 .L24
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:351    .text.i2s_psc_config:000000000000003e .L19
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:392    .text.i2s_psc_config:0000000000000076 .L22
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:373    .text.i2s_psc_config:000000000000005e .L20
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:646    .text.spi_dma_enable:000000000000000c .L37
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:675    .text.spi_dma_disable:000000000000000a .L40
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:771    .text.spi_bidirectional_transfer_config:0000000000000012 .L48
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:907    .text.spi_crc_get:000000000000000a .L55
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1021   .text.spi_i2s_interrupt_enable:000000000000001a .L62
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1029   .text.spi_i2s_interrupt_enable:0000000000000024 .L63
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1019   .text.spi_i2s_interrupt_enable:0000000000000018 .L66
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1065   .text.spi_i2s_interrupt_disable:000000000000001a .L68
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1073   .text.spi_i2s_interrupt_disable:0000000000000024 .L69
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1063   .text.spi_i2s_interrupt_disable:0000000000000018 .L72
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1114   .rodata.spi_i2s_interrupt_flag_get:0000000000000000 .L76
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1133   .text.spi_i2s_interrupt_flag_get:0000000000000020 .L74
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1140   .text.spi_i2s_interrupt_flag_get:0000000000000026 .L73
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1123   .text.spi_i2s_interrupt_flag_get:000000000000001a .L82
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1168   .text.spi_i2s_interrupt_flag_get:000000000000003c .L81
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1179   .text.spi_i2s_interrupt_flag_get:0000000000000044 .L80
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1190   .text.spi_i2s_interrupt_flag_get:000000000000004e .L79
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1201   .text.spi_i2s_interrupt_flag_get:0000000000000058 .L78
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1146   .text.spi_i2s_interrupt_flag_get:000000000000002a .L77
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1157   .text.spi_i2s_interrupt_flag_get:0000000000000032 .L75
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:2663   .debug_abbrev:0000000000000000 .Ldebug_abbrev0
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:4125   .debug_str:00000000000003d0 .LASF117
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:4035   .debug_str:000000000000011f .LASF118
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:4195   .debug_str:00000000000005ef .LASF119
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:3917   .debug_ranges:0000000000000000 .Ldebug_ranges0
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:3989   .debug_line:0000000000000000 .Ldebug_line0
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:4007   .debug_str:000000000000006f .LASF0
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:4223   .debug_str:00000000000006e6 .LASF1
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:4185   .debug_str:00000000000005b1 .LASF4
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:4205   .debug_str:000000000000065a .LASF2
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:4155   .debug_str:00000000000004f2 .LASF3
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:4059   .debug_str:00000000000001fd .LASF5
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:4225   .debug_str:00000000000006f2 .LASF6
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:4161   .debug_str:000000000000051b .LASF7
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:4207   .debug_str:0000000000000668 .LASF8
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:4201   .debug_str:0000000000000633 .LASF9
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:4115   .debug_str:0000000000000387 .LASF10
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:4053   .debug_str:00000000000001c9 .LASF11
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:4101   .debug_str:0000000000000336 .LASF12
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:4145   .debug_str:00000000000004c3 .LASF13
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:4037   .debug_str:000000000000014d .LASF14
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:3993   .debug_str:0000000000000009 .LASF120
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccIKwpaA.s 			page 48
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:41     .text.spi_i2s_deinit:0000000000000026 .L2
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:85     .text.spi_i2s_deinit:000000000000005e .L3
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:63     .text.spi_i2s_deinit:0000000000000042 .L9
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:321    .text.i2s_psc_config:0000000000000020 .L16
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:494    .text.i2s_psc_config:00000000000000da .L17
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:454    .text.i2s_psc_config:00000000000000b0 .L18
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:466    .text.i2s_psc_config:00000000000000ba .L29
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:480    .text.i2s_psc_config:00000000000000ca .L23
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:424    .text.i2s_psc_config:0000000000000098 .L24
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:351    .text.i2s_psc_config:000000000000003e .L19
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:392    .text.i2s_psc_config:0000000000000076 .L22
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:373    .text.i2s_psc_config:000000000000005e .L20
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:646    .text.spi_dma_enable:000000000000000c .L37
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:675    .text.spi_dma_disable:000000000000000a .L40
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:771    .text.spi_bidirectional_transfer_config:0000000000000012 .L48
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:907    .text.spi_crc_get:000000000000000a .L55
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1021   .text.spi_i2s_interrupt_enable:000000000000001a .L62
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1029   .text.spi_i2s_interrupt_enable:0000000000000024 .L63
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1019   .text.spi_i2s_interrupt_enable:0000000000000018 .L66
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1065   .text.spi_i2s_interrupt_disable:000000000000001a .L68
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1073   .text.spi_i2s_interrupt_disable:0000000000000024 .L69
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1063   .text.spi_i2s_interrupt_disable:0000000000000018 .L72
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1114   .rodata.spi_i2s_interrupt_flag_get:0000000000000000 .L76
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1133   .text.spi_i2s_interrupt_flag_get:0000000000000020 .L74
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1140   .text.spi_i2s_interrupt_flag_get:0000000000000026 .L73
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1123   .text.spi_i2s_interrupt_flag_get:000000000000001a .L82
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1168   .text.spi_i2s_interrupt_flag_get:000000000000003c .L81
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1179   .text.spi_i2s_interrupt_flag_get:0000000000000044 .L80
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1190   .text.spi_i2s_interrupt_flag_get:000000000000004e .L79
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1201   .text.spi_i2s_interrupt_flag_get:0000000000000058 .L78
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1146   .text.spi_i2s_interrupt_flag_get:000000000000002a .L77
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1157   .text.spi_i2s_interrupt_flag_get:0000000000000032 .L75
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:2663   .debug_abbrev:0000000000000000 .Ldebug_abbrev0
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:4125   .debug_str:00000000000003d0 .LASF117
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:4035   .debug_str:000000000000011f .LASF118
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:4195   .debug_str:00000000000005ef .LASF119
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:3917   .debug_ranges:0000000000000000 .Ldebug_ranges0
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:3989   .debug_line:0000000000000000 .Ldebug_line0
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:4007   .debug_str:000000000000006f .LASF0
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:4223   .debug_str:00000000000006e6 .LASF1
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:4185   .debug_str:00000000000005b1 .LASF4
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:4205   .debug_str:000000000000065a .LASF2
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:4155   .debug_str:00000000000004f2 .LASF3
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:4059   .debug_str:00000000000001fd .LASF5
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:4225   .debug_str:00000000000006f2 .LASF6
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:4161   .debug_str:000000000000051b .LASF7
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:4207   .debug_str:0000000000000668 .LASF8
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:4201   .debug_str:0000000000000633 .LASF9
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:4115   .debug_str:0000000000000387 .LASF10
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:4053   .debug_str:00000000000001c9 .LASF11
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:4101   .debug_str:0000000000000336 .LASF12
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:4145   .debug_str:00000000000004c3 .LASF13
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:4037   .debug_str:000000000000014d .LASF14
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:3993   .debug_str:0000000000000009 .LASF120
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s 			page 48
 
 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:4173   .debug_str:0000000000000570 .LASF15
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:4023   .debug_str:00000000000000c8 .LASF16
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:4103   .debug_str:000000000000033e .LASF17
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:4077   .debug_str:0000000000000280 .LASF18
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:4221   .debug_str:00000000000006d8 .LASF19
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:4109   .debug_str:0000000000000364 .LASF20
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:3999   .debug_str:000000000000003c .LASF21
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:4147   .debug_str:00000000000004cc .LASF22
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:4047   .debug_str:0000000000000196 .LASF23
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:4215   .debug_str:00000000000006a8 .LASF24
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:4013   .debug_str:000000000000008c .LASF25
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:4153   .debug_str:00000000000004e6 .LASF26
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:4197   .debug_str:000000000000061b .LASF27
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:4085   .debug_str:00000000000002af .LASF28
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:4191   .debug_str:00000000000005d5 .LASF29
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:4079   .debug_str:000000000000028e .LASF30
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:4211   .debug_str:0000000000000688 .LASF31
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:4095   .debug_str:0000000000000312 .LASF32
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:4163   .debug_str:0000000000000524 .LASF33
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:4061   .debug_str:0000000000000208 .LASF34
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:4227   .debug_str:0000000000000705 .LASF35
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:4119   .debug_str:00000000000003aa .LASF36
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:4001   .debug_str:000000000000004a .LASF37
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:4157   .debug_str:00000000000004fc .LASF38
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:4105   .debug_str:000000000000034b .LASF39
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:3995   .debug_str:0000000000000019 .LASF40
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:4143   .debug_str:00000000000004b6 .LASF41
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:4033   .debug_str:0000000000000112 .LASF42
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:4193   .debug_str:00000000000005e2 .LASF43
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:4075   .debug_str:0000000000000274 .LASF44
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:4217   .debug_str:00000000000006b5 .LASF45
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:4187   .debug_str:00000000000005bb .LASF46
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:4123   .debug_str:00000000000003c4 .LASF47
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:4039   .debug_str:0000000000000156 .LASF48
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:4135   .debug_str:000000000000048f .LASF49
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:4071   .debug_str:0000000000000261 .LASF50
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:4177   .debug_str:000000000000057b .LASF51
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:4179   .debug_str:0000000000000583 .LASF52
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:4051   .debug_str:00000000000001bd .LASF53
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:4005   .debug_str:0000000000000064 .LASF54
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:4081   .debug_str:000000000000029b .LASF55
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:4011   .debug_str:0000000000000085 .LASF56
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:4209   .debug_str:0000000000000673 .LASF57
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:4113   .debug_str:000000000000037e .LASF58
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:4093   .debug_str:00000000000002fd .LASF59
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:4213   .debug_str:0000000000000694 .LASF67
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1241   .text.spi_crc_error_clear:0000000000000000 .LFB35
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1253   .text.spi_crc_error_clear:0000000000000008 .LFE35
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:4043   .debug_str:000000000000016a .LASF60
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:4057   .debug_str:00000000000001ec .LASF62
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1220   .text.spi_i2s_flag_get:0000000000000000 .LFB34
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1234   .text.spi_i2s_flag_get:000000000000000a .LFE34
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:3211   .debug_loc:0000000000000000 .LLST23
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:4175   .debug_str:0000000000000576 .LASF61
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:4015   .debug_str:0000000000000098 .LASF63
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1089   .text.spi_i2s_interrupt_flag_get:0000000000000000 .LFB33
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1213   .text.spi_i2s_interrupt_flag_get:0000000000000060 .LFE33
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccIKwpaA.s 			page 49
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:4173   .debug_str:0000000000000570 .LASF15
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:4023   .debug_str:00000000000000c8 .LASF16
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:4103   .debug_str:000000000000033e .LASF17
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:4077   .debug_str:0000000000000280 .LASF18
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:4221   .debug_str:00000000000006d8 .LASF19
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:4109   .debug_str:0000000000000364 .LASF20
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:3999   .debug_str:000000000000003c .LASF21
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:4147   .debug_str:00000000000004cc .LASF22
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:4047   .debug_str:0000000000000196 .LASF23
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:4215   .debug_str:00000000000006a8 .LASF24
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:4013   .debug_str:000000000000008c .LASF25
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:4153   .debug_str:00000000000004e6 .LASF26
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:4197   .debug_str:000000000000061b .LASF27
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:4085   .debug_str:00000000000002af .LASF28
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:4191   .debug_str:00000000000005d5 .LASF29
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:4079   .debug_str:000000000000028e .LASF30
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:4211   .debug_str:0000000000000688 .LASF31
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:4095   .debug_str:0000000000000312 .LASF32
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:4163   .debug_str:0000000000000524 .LASF33
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:4061   .debug_str:0000000000000208 .LASF34
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:4227   .debug_str:0000000000000705 .LASF35
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:4119   .debug_str:00000000000003aa .LASF36
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:4001   .debug_str:000000000000004a .LASF37
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:4157   .debug_str:00000000000004fc .LASF38
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:4105   .debug_str:000000000000034b .LASF39
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:3995   .debug_str:0000000000000019 .LASF40
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:4143   .debug_str:00000000000004b6 .LASF41
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:4033   .debug_str:0000000000000112 .LASF42
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:4193   .debug_str:00000000000005e2 .LASF43
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:4075   .debug_str:0000000000000274 .LASF44
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:4217   .debug_str:00000000000006b5 .LASF45
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:4187   .debug_str:00000000000005bb .LASF46
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:4123   .debug_str:00000000000003c4 .LASF47
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:4039   .debug_str:0000000000000156 .LASF48
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:4135   .debug_str:000000000000048f .LASF49
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:4071   .debug_str:0000000000000261 .LASF50
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:4177   .debug_str:000000000000057b .LASF51
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:4179   .debug_str:0000000000000583 .LASF52
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:4051   .debug_str:00000000000001bd .LASF53
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:4005   .debug_str:0000000000000064 .LASF54
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:4081   .debug_str:000000000000029b .LASF55
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:4011   .debug_str:0000000000000085 .LASF56
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:4209   .debug_str:0000000000000673 .LASF57
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:4113   .debug_str:000000000000037e .LASF58
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:4093   .debug_str:00000000000002fd .LASF59
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:4213   .debug_str:0000000000000694 .LASF67
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1241   .text.spi_crc_error_clear:0000000000000000 .LFB35
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1253   .text.spi_crc_error_clear:0000000000000008 .LFE35
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:4043   .debug_str:000000000000016a .LASF60
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:4057   .debug_str:00000000000001ec .LASF62
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1220   .text.spi_i2s_flag_get:0000000000000000 .LFB34
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1234   .text.spi_i2s_flag_get:000000000000000a .LFE34
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:3211   .debug_loc:0000000000000000 .LLST23
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:4175   .debug_str:0000000000000576 .LASF61
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:4015   .debug_str:0000000000000098 .LASF63
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1089   .text.spi_i2s_interrupt_flag_get:0000000000000000 .LFB33
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1213   .text.spi_i2s_interrupt_flag_get:0000000000000060 .LFE33
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s 			page 49
 
 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:3225   .debug_loc:0000000000000021 .LLST20
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:4199   .debug_str:0000000000000629 .LASF64
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:3243   .debug_loc:000000000000004d .LLST21
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:4017   .debug_str:00000000000000b3 .LASF65
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:3257   .debug_loc:000000000000006e .LLST22
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:4019   .debug_str:00000000000000b8 .LASF66
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:4087   .debug_str:00000000000002bd .LASF68
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1045   .text.spi_i2s_interrupt_disable:0000000000000000 .LFB32
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1082   .text.spi_i2s_interrupt_disable:000000000000002e .LFE32
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:4049   .debug_str:00000000000001a4 .LASF69
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1001   .text.spi_i2s_interrupt_enable:0000000000000000 .LFB31
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1038   .text.spi_i2s_interrupt_enable:000000000000002e .LFE31
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:3997   .debug_str:0000000000000026 .LASF70
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:982    .text.spi_nssp_mode_disable:0000000000000000 .LFB30
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:994    .text.spi_nssp_mode_disable:0000000000000008 .LFE30
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:4159   .debug_str:0000000000000506 .LASF71
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:963    .text.spi_nssp_mode_enable:0000000000000000 .LFB29
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:975    .text.spi_nssp_mode_enable:000000000000000a .LFE29
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:4063   .debug_str:0000000000000214 .LASF72
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:944    .text.spi_ti_mode_disable:0000000000000000 .LFB28
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:956    .text.spi_ti_mode_disable:0000000000000008 .LFE28
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:4127   .debug_str:000000000000044a .LASF73
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:925    .text.spi_ti_mode_enable:0000000000000000 .LFB27
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:937    .text.spi_ti_mode_enable:000000000000000a .LFE27
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:4055   .debug_str:00000000000001e0 .LASF74
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:891    .text.spi_crc_get:0000000000000000 .LFB26
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:918    .text.spi_crc_get:0000000000000012 .LFE26
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:3268   .debug_loc:000000000000008c .LLST19
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:4029   .debug_str:00000000000000ef .LASF75
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:871    .text.spi_crc_next:0000000000000000 .LFB25
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:884    .text.spi_crc_next:000000000000000a .LFE25
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:4107   .debug_str:0000000000000358 .LASF76
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:850    .text.spi_crc_off:0000000000000000 .LFB24
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:864    .text.spi_crc_off:000000000000000c .LFE24
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:4021   .debug_str:00000000000000bd .LASF77
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:830    .text.spi_crc_on:0000000000000000 .LFB23
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:843    .text.spi_crc_on:000000000000000a .LFE23
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:4091   .debug_str:00000000000002e6 .LASF78
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:810    .text.spi_crc_polynomial_get:0000000000000000 .LFB22
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:823    .text.spi_crc_polynomial_get:0000000000000008 .LFE22
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:3293   .debug_loc:00000000000000c6 .LLST18
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:4027   .debug_str:00000000000000d8 .LASF79
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:787    .text.spi_crc_polynomial_set:0000000000000000 .LFB21
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:803    .text.spi_crc_polynomial_set:000000000000000c .LFE21
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:4167   .debug_str:0000000000000546 .LASF80
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:4133   .debug_str:000000000000046d .LASF81
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:754    .text.spi_bidirectional_transfer_config:0000000000000000 .LFB20
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:780    .text.spi_bidirectional_transfer_config:000000000000001a .LFE20
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:4229   .debug_str:0000000000000711 .LASF82
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:3307   .debug_loc:00000000000000e7 .LLST17
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:4203   .debug_str:0000000000000645 .LASF83
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:734    .text.spi_i2s_data_receive:0000000000000000 .LFB19
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:747    .text.spi_i2s_data_receive:0000000000000008 .LFE19
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:3321   .debug_loc:0000000000000108 .LLST16
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:4031   .debug_str:00000000000000fc .LASF84
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:717    .text.spi_i2s_data_transmit:0000000000000000 .LFB18
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:727    .text.spi_i2s_data_transmit:0000000000000004 .LFE18
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccIKwpaA.s 			page 50
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:3225   .debug_loc:0000000000000021 .LLST20
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:4199   .debug_str:0000000000000629 .LASF64
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:3243   .debug_loc:000000000000004d .LLST21
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:4017   .debug_str:00000000000000b3 .LASF65
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:3257   .debug_loc:000000000000006e .LLST22
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:4019   .debug_str:00000000000000b8 .LASF66
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:4087   .debug_str:00000000000002bd .LASF68
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1045   .text.spi_i2s_interrupt_disable:0000000000000000 .LFB32
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1082   .text.spi_i2s_interrupt_disable:000000000000002e .LFE32
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:4049   .debug_str:00000000000001a4 .LASF69
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1001   .text.spi_i2s_interrupt_enable:0000000000000000 .LFB31
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1038   .text.spi_i2s_interrupt_enable:000000000000002e .LFE31
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:3997   .debug_str:0000000000000026 .LASF70
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:982    .text.spi_nssp_mode_disable:0000000000000000 .LFB30
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:994    .text.spi_nssp_mode_disable:0000000000000008 .LFE30
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:4159   .debug_str:0000000000000506 .LASF71
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:963    .text.spi_nssp_mode_enable:0000000000000000 .LFB29
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:975    .text.spi_nssp_mode_enable:000000000000000a .LFE29
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:4063   .debug_str:0000000000000214 .LASF72
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:944    .text.spi_ti_mode_disable:0000000000000000 .LFB28
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:956    .text.spi_ti_mode_disable:0000000000000008 .LFE28
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:4127   .debug_str:000000000000044a .LASF73
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:925    .text.spi_ti_mode_enable:0000000000000000 .LFB27
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:937    .text.spi_ti_mode_enable:000000000000000a .LFE27
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:4055   .debug_str:00000000000001e0 .LASF74
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:891    .text.spi_crc_get:0000000000000000 .LFB26
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:918    .text.spi_crc_get:0000000000000012 .LFE26
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:3268   .debug_loc:000000000000008c .LLST19
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:4029   .debug_str:00000000000000ef .LASF75
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:871    .text.spi_crc_next:0000000000000000 .LFB25
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:884    .text.spi_crc_next:000000000000000a .LFE25
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:4107   .debug_str:0000000000000358 .LASF76
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:850    .text.spi_crc_off:0000000000000000 .LFB24
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:864    .text.spi_crc_off:000000000000000c .LFE24
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:4021   .debug_str:00000000000000bd .LASF77
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:830    .text.spi_crc_on:0000000000000000 .LFB23
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:843    .text.spi_crc_on:000000000000000a .LFE23
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:4091   .debug_str:00000000000002e6 .LASF78
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:810    .text.spi_crc_polynomial_get:0000000000000000 .LFB22
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:823    .text.spi_crc_polynomial_get:0000000000000008 .LFE22
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:3293   .debug_loc:00000000000000c6 .LLST18
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:4027   .debug_str:00000000000000d8 .LASF79
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:787    .text.spi_crc_polynomial_set:0000000000000000 .LFB21
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:803    .text.spi_crc_polynomial_set:000000000000000c .LFE21
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:4167   .debug_str:0000000000000546 .LASF80
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:4133   .debug_str:000000000000046d .LASF81
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:754    .text.spi_bidirectional_transfer_config:0000000000000000 .LFB20
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:780    .text.spi_bidirectional_transfer_config:000000000000001a .LFE20
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:4229   .debug_str:0000000000000711 .LASF82
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:3307   .debug_loc:00000000000000e7 .LLST17
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:4203   .debug_str:0000000000000645 .LASF83
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:734    .text.spi_i2s_data_receive:0000000000000000 .LFB19
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:747    .text.spi_i2s_data_receive:0000000000000008 .LFE19
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:3321   .debug_loc:0000000000000108 .LLST16
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:4031   .debug_str:00000000000000fc .LASF84
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:717    .text.spi_i2s_data_transmit:0000000000000000 .LFB18
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:727    .text.spi_i2s_data_transmit:0000000000000004 .LFE18
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s 			page 50
 
 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:4097   .debug_str:000000000000031e .LASF85
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:4045   .debug_str:0000000000000175 .LASF86
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:690    .text.spi_i2s_data_frame_format_config:0000000000000000 .LFB17
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:710    .text.spi_i2s_data_frame_format_config:0000000000000014 .LFE17
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:4181   .debug_str:000000000000058b .LASF87
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:3335   .debug_loc:0000000000000129 .LLST15
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:4141   .debug_str:00000000000004a6 .LASF88
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:661    .text.spi_dma_disable:0000000000000000 .LFB16
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:683    .text.spi_dma_disable:0000000000000010 .LFE16
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:4003   .debug_str:0000000000000055 .LASF89
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:632    .text.spi_dma_enable:0000000000000000 .LFB15
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:654    .text.spi_dma_enable:0000000000000014 .LFE15
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:4117   .debug_str:0000000000000395 .LASF90
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:613    .text.spi_nss_internal_low:0000000000000000 .LFB14
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:625    .text.spi_nss_internal_low:000000000000000a .LFE14
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:4171   .debug_str:000000000000055a .LASF91
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:594    .text.spi_nss_internal_high:0000000000000000 .LFB13
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:606    .text.spi_nss_internal_high:000000000000000a .LFE13
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:4219   .debug_str:00000000000006c1 .LASF92
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:575    .text.spi_nss_output_disable:0000000000000000 .LFB12
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:587    .text.spi_nss_output_disable:0000000000000008 .LFE12
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:4165   .debug_str:0000000000000530 .LASF93
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:556    .text.spi_nss_output_enable:0000000000000000 .LFB11
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:568    .text.spi_nss_output_enable:000000000000000a .LFE11
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:4067   .debug_str:0000000000000240 .LASF94
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:537    .text.i2s_disable:0000000000000000 .LFB10
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:549    .text.i2s_disable:000000000000000a .LFE10
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:4231   .debug_str:0000000000000724 .LASF95
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:518    .text.i2s_enable:0000000000000000 .LFB9
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:530    .text.i2s_enable:000000000000000a .LFE9
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:4089   .debug_str:00000000000002d7 .LASF96
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:288    .text.i2s_psc_config:0000000000000000 .LFB8
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:511    .text.i2s_psc_config:00000000000000f2 .LFE8
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:3349   .debug_loc:000000000000014a .LLST6
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:3372   .debug_loc:0000000000000182 .LLST7
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:4189   .debug_str:00000000000005c9 .LASF97
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:3394   .debug_loc:00000000000001b9 .LLST8
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:4111   .debug_str:0000000000000372 .LASF98
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:3428   .debug_loc:000000000000020a .LLST9
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:4131   .debug_str:0000000000000466 .LASF99
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:3462   .debug_loc:000000000000025b .LLST10
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:4149   .debug_str:00000000000004da .LASF100
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:3496   .debug_loc:00000000000002ac .LLST11
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:4041   .debug_str:0000000000000164 .LASF101
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:3513   .debug_loc:00000000000002d7 .LLST12
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:4151   .debug_str:00000000000004e1 .LASF102
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:3546   .debug_loc:0000000000000320 .LLST13
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:4129   .debug_str:000000000000045d .LASF103
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:3598   .debug_loc:00000000000003a6 .LLST14
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:504    .text.i2s_psc_config:00000000000000ea .LVL54
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:4009   .debug_str:000000000000007c .LASF104
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:246    .text.i2s_init:0000000000000000 .LFB7
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:281    .text.i2s_init:000000000000001c .LFE7
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:4025   .debug_str:00000000000000d3 .LASF105
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:3648   .debug_loc:000000000000041c .LLST3
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:3991   .debug_str:0000000000000000 .LASF106
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:4137   .debug_str:0000000000000496 .LASF107
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccIKwpaA.s 			page 51
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:4097   .debug_str:000000000000031e .LASF85
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:4045   .debug_str:0000000000000175 .LASF86
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:690    .text.spi_i2s_data_frame_format_config:0000000000000000 .LFB17
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:710    .text.spi_i2s_data_frame_format_config:0000000000000014 .LFE17
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:4181   .debug_str:000000000000058b .LASF87
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:3335   .debug_loc:0000000000000129 .LLST15
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:4141   .debug_str:00000000000004a6 .LASF88
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:661    .text.spi_dma_disable:0000000000000000 .LFB16
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:683    .text.spi_dma_disable:0000000000000010 .LFE16
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:4003   .debug_str:0000000000000055 .LASF89
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:632    .text.spi_dma_enable:0000000000000000 .LFB15
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:654    .text.spi_dma_enable:0000000000000014 .LFE15
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:4117   .debug_str:0000000000000395 .LASF90
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:613    .text.spi_nss_internal_low:0000000000000000 .LFB14
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:625    .text.spi_nss_internal_low:000000000000000a .LFE14
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:4171   .debug_str:000000000000055a .LASF91
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:594    .text.spi_nss_internal_high:0000000000000000 .LFB13
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:606    .text.spi_nss_internal_high:000000000000000a .LFE13
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:4219   .debug_str:00000000000006c1 .LASF92
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:575    .text.spi_nss_output_disable:0000000000000000 .LFB12
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:587    .text.spi_nss_output_disable:0000000000000008 .LFE12
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:4165   .debug_str:0000000000000530 .LASF93
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:556    .text.spi_nss_output_enable:0000000000000000 .LFB11
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:568    .text.spi_nss_output_enable:000000000000000a .LFE11
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:4067   .debug_str:0000000000000240 .LASF94
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:537    .text.i2s_disable:0000000000000000 .LFB10
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:549    .text.i2s_disable:000000000000000a .LFE10
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:4231   .debug_str:0000000000000724 .LASF95
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:518    .text.i2s_enable:0000000000000000 .LFB9
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:530    .text.i2s_enable:000000000000000a .LFE9
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:4089   .debug_str:00000000000002d7 .LASF96
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:288    .text.i2s_psc_config:0000000000000000 .LFB8
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:511    .text.i2s_psc_config:00000000000000f2 .LFE8
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:3349   .debug_loc:000000000000014a .LLST6
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:3372   .debug_loc:0000000000000182 .LLST7
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:4189   .debug_str:00000000000005c9 .LASF97
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:3394   .debug_loc:00000000000001b9 .LLST8
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:4111   .debug_str:0000000000000372 .LASF98
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:3428   .debug_loc:000000000000020a .LLST9
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:4131   .debug_str:0000000000000466 .LASF99
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:3462   .debug_loc:000000000000025b .LLST10
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:4149   .debug_str:00000000000004da .LASF100
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:3496   .debug_loc:00000000000002ac .LLST11
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:4041   .debug_str:0000000000000164 .LASF101
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:3513   .debug_loc:00000000000002d7 .LLST12
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:4151   .debug_str:00000000000004e1 .LASF102
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:3546   .debug_loc:0000000000000320 .LLST13
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:4129   .debug_str:000000000000045d .LASF103
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:3598   .debug_loc:00000000000003a6 .LLST14
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:504    .text.i2s_psc_config:00000000000000ea .LVL54
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:4009   .debug_str:000000000000007c .LASF104
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:246    .text.i2s_init:0000000000000000 .LFB7
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:281    .text.i2s_init:000000000000001c .LFE7
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:4025   .debug_str:00000000000000d3 .LASF105
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:3648   .debug_loc:000000000000041c .LLST3
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:3991   .debug_str:0000000000000000 .LASF106
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:4137   .debug_str:0000000000000496 .LASF107
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s 			page 51
 
 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:3662   .debug_loc:000000000000043d .LLST4
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:3676   .debug_loc:000000000000045e .LLST5
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:4073   .debug_str:0000000000000268 .LASF108
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:227    .text.spi_disable:0000000000000000 .LFB6
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:239    .text.spi_disable:000000000000000a .LFE6
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:4139   .debug_str:000000000000049b .LASF109
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:208    .text.spi_enable:0000000000000000 .LFB5
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:220    .text.spi_enable:000000000000000a .LFE5
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:4083   .debug_str:00000000000002a6 .LASF110
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:146    .text.spi_init:0000000000000000 .LFB4
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:201    .text.spi_init:000000000000003e .LFE4
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:4169   .debug_str:000000000000054f .LASF111
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:3703   .debug_loc:0000000000000495 .LLST2
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:4069   .debug_str:000000000000024c .LASF112
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:114    .text.spi_struct_para_init:0000000000000000 .LFB3
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:139    .text.spi_struct_para_init:000000000000001a .LFE3
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:4121   .debug_str:00000000000003b5 .LASF113
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:11     .text.spi_i2s_deinit:0000000000000000 .LFB2
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:107    .text.spi_i2s_deinit:000000000000007a .LFE2
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:3754   .debug_loc:00000000000004f0 .LLST0
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:3802   .debug_loc:0000000000000564 .LLST1
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:48     .text.spi_i2s_deinit:0000000000000032 .LVL2
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:62     .text.spi_i2s_deinit:0000000000000042 .LVL3
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:70     .text.spi_i2s_deinit:000000000000004e .LVL5
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:84     .text.spi_i2s_deinit:000000000000005e .LVL6
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:92     .text.spi_i2s_deinit:000000000000006a .LVL8
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:105    .text.spi_i2s_deinit:000000000000007a .LVL9
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:4099   .debug_str:0000000000000323 .LASF114
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:4065   .debug_str:0000000000000228 .LASF115
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:4183   .debug_str:0000000000000598 .LASF116
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1223   .text.spi_i2s_flag_get:0000000000000000 .LVL108
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1227   .text.spi_i2s_flag_get:0000000000000002 .LVL109
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1092   .text.spi_i2s_interrupt_flag_get:0000000000000000 .LVL87
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1143   .text.spi_i2s_interrupt_flag_get:0000000000000028 .LVL94
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1145   .text.spi_i2s_interrupt_flag_get:000000000000002a .LVL95
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1107   .text.spi_i2s_interrupt_flag_get:0000000000000014 .LVL90
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1096   .text.spi_i2s_interrupt_flag_get:0000000000000002 .LVL88
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1139   .text.spi_i2s_interrupt_flag_get:0000000000000026 .LVL93
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:894    .text.spi_crc_get:0000000000000000 .LVL77
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:901    .text.spi_crc_get:0000000000000004 .LVL78
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:906    .text.spi_crc_get:000000000000000a .LVL79
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:911    .text.spi_crc_get:000000000000000c .LVL80
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:813    .text.spi_crc_polynomial_get:0000000000000000 .LVL72
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:817    .text.spi_crc_polynomial_get:0000000000000002 .LVL73
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:757    .text.spi_bidirectional_transfer_config:0000000000000000 .LVL69
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:776    .text.spi_bidirectional_transfer_config:0000000000000016 .LVL70
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:737    .text.spi_i2s_data_receive:0000000000000000 .LVL67
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:741    .text.spi_i2s_data_receive:0000000000000002 .LVL68
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:693    .text.spi_i2s_data_frame_format_config:0000000000000000 .LVL64
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:705    .text.spi_i2s_data_frame_format_config:0000000000000010 .LVL65
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:298    .text.i2s_psc_config:0000000000000002 .LCFI8
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:450    .text.i2s_psc_config:00000000000000ae .LCFI9
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:455    .text.i2s_psc_config:00000000000000b0 .LCFI10
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:291    .text.i2s_psc_config:0000000000000000 .LVL25
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:317    .text.i2s_psc_config:0000000000000018 .LVL26
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:448    .text.i2s_psc_config:00000000000000ac .LVL43
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:453    .text.i2s_psc_config:00000000000000b0 .LVL44
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccIKwpaA.s 			page 52
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:3662   .debug_loc:000000000000043d .LLST4
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:3676   .debug_loc:000000000000045e .LLST5
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:4073   .debug_str:0000000000000268 .LASF108
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:227    .text.spi_disable:0000000000000000 .LFB6
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:239    .text.spi_disable:000000000000000a .LFE6
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:4139   .debug_str:000000000000049b .LASF109
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:208    .text.spi_enable:0000000000000000 .LFB5
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:220    .text.spi_enable:000000000000000a .LFE5
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:4083   .debug_str:00000000000002a6 .LASF110
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:146    .text.spi_init:0000000000000000 .LFB4
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:201    .text.spi_init:000000000000003e .LFE4
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:4169   .debug_str:000000000000054f .LASF111
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:3703   .debug_loc:0000000000000495 .LLST2
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:4069   .debug_str:000000000000024c .LASF112
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:114    .text.spi_struct_para_init:0000000000000000 .LFB3
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:139    .text.spi_struct_para_init:000000000000001a .LFE3
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:4121   .debug_str:00000000000003b5 .LASF113
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:11     .text.spi_i2s_deinit:0000000000000000 .LFB2
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:107    .text.spi_i2s_deinit:000000000000007a .LFE2
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:3754   .debug_loc:00000000000004f0 .LLST0
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:3802   .debug_loc:0000000000000564 .LLST1
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:48     .text.spi_i2s_deinit:0000000000000032 .LVL2
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:62     .text.spi_i2s_deinit:0000000000000042 .LVL3
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:70     .text.spi_i2s_deinit:000000000000004e .LVL5
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:84     .text.spi_i2s_deinit:000000000000005e .LVL6
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:92     .text.spi_i2s_deinit:000000000000006a .LVL8
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:105    .text.spi_i2s_deinit:000000000000007a .LVL9
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:4099   .debug_str:0000000000000323 .LASF114
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:4065   .debug_str:0000000000000228 .LASF115
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:4183   .debug_str:0000000000000598 .LASF116
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1223   .text.spi_i2s_flag_get:0000000000000000 .LVL108
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1227   .text.spi_i2s_flag_get:0000000000000002 .LVL109
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1092   .text.spi_i2s_interrupt_flag_get:0000000000000000 .LVL87
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1143   .text.spi_i2s_interrupt_flag_get:0000000000000028 .LVL94
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1145   .text.spi_i2s_interrupt_flag_get:000000000000002a .LVL95
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1107   .text.spi_i2s_interrupt_flag_get:0000000000000014 .LVL90
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1096   .text.spi_i2s_interrupt_flag_get:0000000000000002 .LVL88
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1139   .text.spi_i2s_interrupt_flag_get:0000000000000026 .LVL93
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:894    .text.spi_crc_get:0000000000000000 .LVL77
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:901    .text.spi_crc_get:0000000000000004 .LVL78
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:906    .text.spi_crc_get:000000000000000a .LVL79
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:911    .text.spi_crc_get:000000000000000c .LVL80
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:813    .text.spi_crc_polynomial_get:0000000000000000 .LVL72
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:817    .text.spi_crc_polynomial_get:0000000000000002 .LVL73
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:757    .text.spi_bidirectional_transfer_config:0000000000000000 .LVL69
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:776    .text.spi_bidirectional_transfer_config:0000000000000016 .LVL70
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:737    .text.spi_i2s_data_receive:0000000000000000 .LVL67
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:741    .text.spi_i2s_data_receive:0000000000000002 .LVL68
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:693    .text.spi_i2s_data_frame_format_config:0000000000000000 .LVL64
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:705    .text.spi_i2s_data_frame_format_config:0000000000000010 .LVL65
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:298    .text.i2s_psc_config:0000000000000002 .LCFI8
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:450    .text.i2s_psc_config:00000000000000ae .LCFI9
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:455    .text.i2s_psc_config:00000000000000b0 .LCFI10
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:291    .text.i2s_psc_config:0000000000000000 .LVL25
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:317    .text.i2s_psc_config:0000000000000018 .LVL26
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:448    .text.i2s_psc_config:00000000000000ac .LVL43
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:453    .text.i2s_psc_config:00000000000000b0 .LVL44
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s 			page 52
 
 
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:372    .text.i2s_psc_config:000000000000005e .LVL34
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:465    .text.i2s_psc_config:00000000000000ba .LVL46
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:493    .text.i2s_psc_config:00000000000000da .LVL52
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:409    .text.i2s_psc_config:0000000000000088 .LVL39
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:423    .text.i2s_psc_config:0000000000000098 .LVL42
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:404    .text.i2s_psc_config:0000000000000084 .LVL38
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:415    .text.i2s_psc_config:000000000000008e .LVL40
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:421    .text.i2s_psc_config:0000000000000094 .LVL41
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:322    .text.i2s_psc_config:0000000000000020 .LVL27
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:334    .text.i2s_psc_config:000000000000002c .LVL28
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:341    .text.i2s_psc_config:0000000000000034 .LVL29
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:391    .text.i2s_psc_config:0000000000000076 .LVL36
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:398    .text.i2s_psc_config:000000000000007a .LVL37
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:463    .text.i2s_psc_config:00000000000000b8 .LVL45
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:477    .text.i2s_psc_config:00000000000000c8 .LVL48
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:479    .text.i2s_psc_config:00000000000000ca .LVL49
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:491    .text.i2s_psc_config:00000000000000d8 .LVL51
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:497    .text.i2s_psc_config:00000000000000dc .LVL53
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:356    .text.i2s_psc_config:0000000000000044 .LVL31
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:360    .text.i2s_psc_config:0000000000000046 .LVL32
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:364    .text.i2s_psc_config:000000000000004c .LVL33
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:384    .text.i2s_psc_config:000000000000006a .LVL35
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:470    .text.i2s_psc_config:00000000000000bc .LVL47
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:484    .text.i2s_psc_config:00000000000000cc .LVL50
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:508    .text.i2s_psc_config:00000000000000f0 .LVL55
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:249    .text.i2s_init:0000000000000000 .LVL19
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:271    .text.i2s_init:0000000000000012 .LVL23
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:265    .text.i2s_init:000000000000000c .LVL22
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:254    .text.i2s_init:0000000000000002 .LVL20
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:263    .text.i2s_init:000000000000000a .LVL21
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:274    .text.i2s_init:0000000000000018 .LVL24
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:149    .text.spi_init:0000000000000000 .LVL11
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:164    .text.spi_init:000000000000001a .LVL12
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:174    .text.spi_init:000000000000002a .LVL13
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:185    .text.spi_init:000000000000002e .LVL14
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:192    .text.spi_init:0000000000000032 .LVL15
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:197    .text.spi_init:000000000000003c .LVL16
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:19     .text.spi_i2s_deinit:0000000000000002 .LCFI0
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:38     .text.spi_i2s_deinit:0000000000000024 .LCFI1
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:42     .text.spi_i2s_deinit:0000000000000026 .LCFI2
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:58     .text.spi_i2s_deinit:000000000000003a .LCFI3
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:64     .text.spi_i2s_deinit:0000000000000042 .LCFI4
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:80     .text.spi_i2s_deinit:0000000000000056 .LCFI5
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:86     .text.spi_i2s_deinit:000000000000005e .LCFI6
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:101    .text.spi_i2s_deinit:0000000000000072 .LCFI7
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:15     .text.spi_i2s_deinit:0000000000000000 .LVL0
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:46     .text.spi_i2s_deinit:000000000000002a .LVL1
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:68     .text.spi_i2s_deinit:0000000000000046 .LVL4
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:90     .text.spi_i2s_deinit:0000000000000062 .LVL7
-C:\Users\test\AppData\Local\Temp\ccIKwpaA.s:1264   .debug_info:0000000000000000 .Ldebug_info0
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:372    .text.i2s_psc_config:000000000000005e .LVL34
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:465    .text.i2s_psc_config:00000000000000ba .LVL46
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:493    .text.i2s_psc_config:00000000000000da .LVL52
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:409    .text.i2s_psc_config:0000000000000088 .LVL39
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:423    .text.i2s_psc_config:0000000000000098 .LVL42
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:404    .text.i2s_psc_config:0000000000000084 .LVL38
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:415    .text.i2s_psc_config:000000000000008e .LVL40
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:421    .text.i2s_psc_config:0000000000000094 .LVL41
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:322    .text.i2s_psc_config:0000000000000020 .LVL27
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:334    .text.i2s_psc_config:000000000000002c .LVL28
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:341    .text.i2s_psc_config:0000000000000034 .LVL29
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:391    .text.i2s_psc_config:0000000000000076 .LVL36
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:398    .text.i2s_psc_config:000000000000007a .LVL37
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:463    .text.i2s_psc_config:00000000000000b8 .LVL45
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:477    .text.i2s_psc_config:00000000000000c8 .LVL48
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:479    .text.i2s_psc_config:00000000000000ca .LVL49
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:491    .text.i2s_psc_config:00000000000000d8 .LVL51
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:497    .text.i2s_psc_config:00000000000000dc .LVL53
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:356    .text.i2s_psc_config:0000000000000044 .LVL31
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:360    .text.i2s_psc_config:0000000000000046 .LVL32
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:364    .text.i2s_psc_config:000000000000004c .LVL33
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:384    .text.i2s_psc_config:000000000000006a .LVL35
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:470    .text.i2s_psc_config:00000000000000bc .LVL47
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:484    .text.i2s_psc_config:00000000000000cc .LVL50
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:508    .text.i2s_psc_config:00000000000000f0 .LVL55
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:249    .text.i2s_init:0000000000000000 .LVL19
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:271    .text.i2s_init:0000000000000012 .LVL23
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:265    .text.i2s_init:000000000000000c .LVL22
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:254    .text.i2s_init:0000000000000002 .LVL20
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:263    .text.i2s_init:000000000000000a .LVL21
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:274    .text.i2s_init:0000000000000018 .LVL24
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:149    .text.spi_init:0000000000000000 .LVL11
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:164    .text.spi_init:000000000000001a .LVL12
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:174    .text.spi_init:000000000000002a .LVL13
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:185    .text.spi_init:000000000000002e .LVL14
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:192    .text.spi_init:0000000000000032 .LVL15
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:197    .text.spi_init:000000000000003c .LVL16
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:19     .text.spi_i2s_deinit:0000000000000002 .LCFI0
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:38     .text.spi_i2s_deinit:0000000000000024 .LCFI1
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:42     .text.spi_i2s_deinit:0000000000000026 .LCFI2
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:58     .text.spi_i2s_deinit:000000000000003a .LCFI3
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:64     .text.spi_i2s_deinit:0000000000000042 .LCFI4
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:80     .text.spi_i2s_deinit:0000000000000056 .LCFI5
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:86     .text.spi_i2s_deinit:000000000000005e .LCFI6
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:101    .text.spi_i2s_deinit:0000000000000072 .LCFI7
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:15     .text.spi_i2s_deinit:0000000000000000 .LVL0
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:46     .text.spi_i2s_deinit:000000000000002a .LVL1
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:68     .text.spi_i2s_deinit:0000000000000046 .LVL4
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:90     .text.spi_i2s_deinit:0000000000000062 .LVL7
+C:\Users\test\AppData\Local\Temp\ccJ7WdPA.s:1264   .debug_info:0000000000000000 .Ldebug_info0
 
 UNDEFINED SYMBOLS
 rcu_periph_reset_enable

@@ -1,4 +1,4 @@
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccDLtO5i.s 			page 1
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccCveaze.s 			page 1
 
 
    1              		.file	"gd32vf103_wwdgt.c"
@@ -58,7 +58,7 @@ GAS LISTING C:\Users\test\AppData\Local\Temp\ccDLtO5i.s 			page 1
   44:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_wwdgt.c ****     \param[in]  none
   45:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_wwdgt.c ****     \param[out] none
   46:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_wwdgt.c ****     \retval     none
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccDLtO5i.s 			page 2
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccCveaze.s 			page 2
 
 
   47:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_wwdgt.c **** */
@@ -118,7 +118,7 @@ GAS LISTING C:\Users\test\AppData\Local\Temp\ccDLtO5i.s 			page 1
   60:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_wwdgt.c **** void wwdgt_enable(void)
   61:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_wwdgt.c **** {
   50              		.loc 1 61 1 is_stmt 1
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccDLtO5i.s 			page 3
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccCveaze.s 			page 3
 
 
   51              		.cfi_startproc
@@ -178,7 +178,7 @@ GAS LISTING C:\Users\test\AppData\Local\Temp\ccDLtO5i.s 			page 1
   89 0012 2320A7C0 		sw	a0,-1024(a4)
   79:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_wwdgt.c **** }
   90              		.loc 1 79 1
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccDLtO5i.s 			page 4
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccCveaze.s 			page 4
 
 
   91 0016 8280     		ret
@@ -238,7 +238,7 @@ GAS LISTING C:\Users\test\AppData\Local\Temp\ccDLtO5i.s 			page 1
  119              		.loc 1 100 13
  120 0014 93F606F8 		andi	a3,a3,-128
  121              	.LVL10:
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccDLtO5i.s 			page 5
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccCveaze.s 			page 5
 
 
  103:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_wwdgt.c ****     reg_cfg |= prescaler;
@@ -298,7 +298,7 @@ GAS LISTING C:\Users\test\AppData\Local\Temp\ccDLtO5i.s 			page 1
  120:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_wwdgt.c **** }
  160              		.loc 1 120 1
  161 0010 8280     		ret
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccDLtO5i.s 			page 6
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccCveaze.s 			page 6
 
 
  162              		.cfi_endproc
@@ -358,7 +358,7 @@ GAS LISTING C:\Users\test\AppData\Local\Temp\ccDLtO5i.s 			page 1
  195 0008 F99B     		andi	a5,a5,-2
  196 000a 2324F7C0 		sw	a5,-1016(a4)
  146:arch/riscv/mach-gd32vf10x/bsp/gd32vf103_wwdgt.c **** }
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccDLtO5i.s 			page 7
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccCveaze.s 			page 7
 
 
  197              		.loc 1 146 1
@@ -372,218 +372,218 @@ GAS LISTING C:\Users\test\AppData\Local\Temp\ccDLtO5i.s 			page 1
  206              		.file 4 "arch/riscv/mach-gd32vf10x/system/gd32vf103.h"
  207              		.file 5 "arch/riscv/mach-gd32vf10x/bsp/gd32vf103_rcu.h"
  208              		.file 6 "arch/riscv/mach-gd32vf10x/system/system_gd32vf103.h"
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccDLtO5i.s 			page 8
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccCveaze.s 			page 8
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 gd32vf103_wwdgt.c
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:10     .text.wwdgt_deinit:0000000000000000 wwdgt_deinit
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:14     .text.wwdgt_deinit:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:15     .text.wwdgt_deinit:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:16     .text.wwdgt_deinit:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:17     .text.wwdgt_deinit:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:19     .text.wwdgt_deinit:0000000000000002 .L0 
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:21     .text.wwdgt_deinit:0000000000000002 .L0 
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:23     .text.wwdgt_deinit:0000000000000006 .L0 
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:24     .text.wwdgt_deinit:0000000000000008 .L0 
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:26     .text.wwdgt_deinit:0000000000000008 .L0 
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:29     .text.wwdgt_deinit:0000000000000010 .L0 
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:30     .text.wwdgt_deinit:0000000000000010 .L0 
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:31     .text.wwdgt_deinit:0000000000000012 .L0 
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:33     .text.wwdgt_deinit:0000000000000012 .L0 
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:35     .text.wwdgt_deinit:0000000000000016 .L0 
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:37     .text.wwdgt_deinit:0000000000000018 .L0 
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:39     .text.wwdgt_deinit:0000000000000018 .L0 
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:41     .text.wwdgt_deinit:0000000000000020 .L0 
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:48     .text.wwdgt_enable:0000000000000000 wwdgt_enable
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:51     .text.wwdgt_enable:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:52     .text.wwdgt_enable:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:53     .text.wwdgt_enable:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:54     .text.wwdgt_enable:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:59     .text.wwdgt_enable:0000000000000010 .L0 
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:60     .text.wwdgt_enable:0000000000000012 .L0 
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:67     .text.wwdgt_counter_update:0000000000000000 wwdgt_counter_update
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:70     .text.wwdgt_counter_update:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:72     .text.wwdgt_counter_update:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:73     .text.wwdgt_counter_update:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:74     .text.wwdgt_counter_update:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:75     .text.wwdgt_counter_update:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:78     .text.wwdgt_counter_update:0000000000000008 .L0 
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:81     .text.wwdgt_counter_update:000000000000000c .L0 
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:84     .text.wwdgt_counter_update:0000000000000010 .L0 
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:85     .text.wwdgt_counter_update:0000000000000010 .L0 
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:88     .text.wwdgt_counter_update:0000000000000012 .L0 
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:89     .text.wwdgt_counter_update:0000000000000012 .L0 
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:91     .text.wwdgt_counter_update:0000000000000016 .L0 
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:92     .text.wwdgt_counter_update:0000000000000018 .L0 
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:99     .text.wwdgt_config:0000000000000000 wwdgt_config
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:102    .text.wwdgt_config:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:104    .text.wwdgt_config:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:105    .text.wwdgt_config:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:106    .text.wwdgt_config:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:107    .text.wwdgt_config:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:111    .text.wwdgt_config:0000000000000008 .L0 
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:112    .text.wwdgt_config:0000000000000008 .L0 
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:114    .text.wwdgt_config:000000000000000c .L0 
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:117    .text.wwdgt_config:0000000000000010 .L0 
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:120    .text.wwdgt_config:0000000000000014 .L0 
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:123    .text.wwdgt_config:0000000000000018 .L0 
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:126    .text.wwdgt_config:000000000000001a .L0 
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:127    .text.wwdgt_config:000000000000001a .L0 
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:130    .text.wwdgt_config:000000000000001e .L0 
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:132    .text.wwdgt_config:0000000000000020 .L0 
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccDLtO5i.s 			page 9
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:10     .text.wwdgt_deinit:0000000000000000 wwdgt_deinit
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:14     .text.wwdgt_deinit:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:15     .text.wwdgt_deinit:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:16     .text.wwdgt_deinit:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:17     .text.wwdgt_deinit:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:19     .text.wwdgt_deinit:0000000000000002 .L0 
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:21     .text.wwdgt_deinit:0000000000000002 .L0 
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:23     .text.wwdgt_deinit:0000000000000006 .L0 
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:24     .text.wwdgt_deinit:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:26     .text.wwdgt_deinit:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:29     .text.wwdgt_deinit:0000000000000010 .L0 
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:30     .text.wwdgt_deinit:0000000000000010 .L0 
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:31     .text.wwdgt_deinit:0000000000000012 .L0 
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:33     .text.wwdgt_deinit:0000000000000012 .L0 
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:35     .text.wwdgt_deinit:0000000000000016 .L0 
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:37     .text.wwdgt_deinit:0000000000000018 .L0 
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:39     .text.wwdgt_deinit:0000000000000018 .L0 
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:41     .text.wwdgt_deinit:0000000000000020 .L0 
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:48     .text.wwdgt_enable:0000000000000000 wwdgt_enable
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:51     .text.wwdgt_enable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:52     .text.wwdgt_enable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:53     .text.wwdgt_enable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:54     .text.wwdgt_enable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:59     .text.wwdgt_enable:0000000000000010 .L0 
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:60     .text.wwdgt_enable:0000000000000012 .L0 
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:67     .text.wwdgt_counter_update:0000000000000000 wwdgt_counter_update
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:70     .text.wwdgt_counter_update:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:72     .text.wwdgt_counter_update:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:73     .text.wwdgt_counter_update:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:74     .text.wwdgt_counter_update:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:75     .text.wwdgt_counter_update:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:78     .text.wwdgt_counter_update:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:81     .text.wwdgt_counter_update:000000000000000c .L0 
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:84     .text.wwdgt_counter_update:0000000000000010 .L0 
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:85     .text.wwdgt_counter_update:0000000000000010 .L0 
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:88     .text.wwdgt_counter_update:0000000000000012 .L0 
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:89     .text.wwdgt_counter_update:0000000000000012 .L0 
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:91     .text.wwdgt_counter_update:0000000000000016 .L0 
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:92     .text.wwdgt_counter_update:0000000000000018 .L0 
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:99     .text.wwdgt_config:0000000000000000 wwdgt_config
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:102    .text.wwdgt_config:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:104    .text.wwdgt_config:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:105    .text.wwdgt_config:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:106    .text.wwdgt_config:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:107    .text.wwdgt_config:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:111    .text.wwdgt_config:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:112    .text.wwdgt_config:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:114    .text.wwdgt_config:000000000000000c .L0 
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:117    .text.wwdgt_config:0000000000000010 .L0 
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:120    .text.wwdgt_config:0000000000000014 .L0 
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:123    .text.wwdgt_config:0000000000000018 .L0 
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:126    .text.wwdgt_config:000000000000001a .L0 
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:127    .text.wwdgt_config:000000000000001a .L0 
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:130    .text.wwdgt_config:000000000000001e .L0 
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:132    .text.wwdgt_config:0000000000000020 .L0 
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccCveaze.s 			page 9
 
 
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:135    .text.wwdgt_config:0000000000000022 .L0 
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:136    .text.wwdgt_config:0000000000000022 .L0 
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:137    .text.wwdgt_config:0000000000000022 .L0 
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:139    .text.wwdgt_config:0000000000000026 .L0 
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:140    .text.wwdgt_config:0000000000000026 .L0 
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:142    .text.wwdgt_config:000000000000002a .L0 
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:143    .text.wwdgt_config:000000000000002c .L0 
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:150    .text.wwdgt_interrupt_enable:0000000000000000 wwdgt_interrupt_enable
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:153    .text.wwdgt_interrupt_enable:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:154    .text.wwdgt_interrupt_enable:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:155    .text.wwdgt_interrupt_enable:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:156    .text.wwdgt_interrupt_enable:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:161    .text.wwdgt_interrupt_enable:0000000000000010 .L0 
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:162    .text.wwdgt_interrupt_enable:0000000000000012 .L0 
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:169    .text.wwdgt_flag_get:0000000000000000 wwdgt_flag_get
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:172    .text.wwdgt_flag_get:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:173    .text.wwdgt_flag_get:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:174    .text.wwdgt_flag_get:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:175    .text.wwdgt_flag_get:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:178    .text.wwdgt_flag_get:0000000000000008 .L0 
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:180    .text.wwdgt_flag_get:000000000000000c .L0 
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:187    .text.wwdgt_flag_clear:0000000000000000 wwdgt_flag_clear
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:190    .text.wwdgt_flag_clear:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:191    .text.wwdgt_flag_clear:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:192    .text.wwdgt_flag_clear:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:193    .text.wwdgt_flag_clear:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:198    .text.wwdgt_flag_clear:000000000000000e .L0 
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:199    .text.wwdgt_flag_clear:0000000000000010 .L0 
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:44     .text.wwdgt_deinit:0000000000000020 .L0 
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:63     .text.wwdgt_enable:0000000000000012 .L0 
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:95     .text.wwdgt_counter_update:0000000000000018 .L0 
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:146    .text.wwdgt_config:000000000000002c .L0 
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:165    .text.wwdgt_interrupt_enable:0000000000000012 .L0 
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:183    .text.wwdgt_flag_get:000000000000000c .L0 
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:202    .text.wwdgt_flag_clear:0000000000000010 .L0 
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:135    .text.wwdgt_config:0000000000000022 .L0 
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:136    .text.wwdgt_config:0000000000000022 .L0 
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:137    .text.wwdgt_config:0000000000000022 .L0 
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:139    .text.wwdgt_config:0000000000000026 .L0 
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:140    .text.wwdgt_config:0000000000000026 .L0 
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:142    .text.wwdgt_config:000000000000002a .L0 
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:143    .text.wwdgt_config:000000000000002c .L0 
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:150    .text.wwdgt_interrupt_enable:0000000000000000 wwdgt_interrupt_enable
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:153    .text.wwdgt_interrupt_enable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:154    .text.wwdgt_interrupt_enable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:155    .text.wwdgt_interrupt_enable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:156    .text.wwdgt_interrupt_enable:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:161    .text.wwdgt_interrupt_enable:0000000000000010 .L0 
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:162    .text.wwdgt_interrupt_enable:0000000000000012 .L0 
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:169    .text.wwdgt_flag_get:0000000000000000 wwdgt_flag_get
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:172    .text.wwdgt_flag_get:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:173    .text.wwdgt_flag_get:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:174    .text.wwdgt_flag_get:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:175    .text.wwdgt_flag_get:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:178    .text.wwdgt_flag_get:0000000000000008 .L0 
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:180    .text.wwdgt_flag_get:000000000000000c .L0 
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:187    .text.wwdgt_flag_clear:0000000000000000 wwdgt_flag_clear
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:190    .text.wwdgt_flag_clear:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:191    .text.wwdgt_flag_clear:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:192    .text.wwdgt_flag_clear:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:193    .text.wwdgt_flag_clear:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:198    .text.wwdgt_flag_clear:000000000000000e .L0 
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:199    .text.wwdgt_flag_clear:0000000000000010 .L0 
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:44     .text.wwdgt_deinit:0000000000000020 .L0 
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:63     .text.wwdgt_enable:0000000000000012 .L0 
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:95     .text.wwdgt_counter_update:0000000000000018 .L0 
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:146    .text.wwdgt_config:000000000000002c .L0 
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:165    .text.wwdgt_interrupt_enable:0000000000000012 .L0 
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:183    .text.wwdgt_flag_get:000000000000000c .L0 
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:202    .text.wwdgt_flag_clear:0000000000000010 .L0 
                      .debug_frame:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:611    .debug_abbrev:0000000000000000 .Ldebug_abbrev0
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:1210   .debug_str:00000000000001c2 .LASF61
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:1202   .debug_str:0000000000000172 .LASF62
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:1186   .debug_str:00000000000000ee .LASF63
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:1132   .debug_ranges:0000000000000000 .Ldebug_ranges0
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:1150   .debug_line:0000000000000000 .Ldebug_line0
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:1222   .debug_str:0000000000000280 .LASF0
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:1212   .debug_str:000000000000023c .LASF1
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:1204   .debug_str:00000000000001a2 .LASF2
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:1182   .debug_str:00000000000000cf .LASF3
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:1178   .debug_str:00000000000000ad .LASF6
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:1232   .debug_str:00000000000002b9 .LASF4
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:1194   .debug_str:0000000000000141 .LASF5
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:1174   .debug_str:0000000000000094 .LASF7
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:1246   .debug_str:0000000000000326 .LASF8
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:1192   .debug_str:0000000000000133 .LASF9
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:1216   .debug_str:0000000000000253 .LASF10
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:1224   .debug_str:000000000000028d .LASF11
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:1220   .debug_str:0000000000000277 .LASF12
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:1240   .debug_str:00000000000002f9 .LASF64
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:1256   .debug_str:0000000000000369 .LASF13
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccDLtO5i.s 			page 10
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:611    .debug_abbrev:0000000000000000 .Ldebug_abbrev0
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:1210   .debug_str:00000000000001c2 .LASF61
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:1202   .debug_str:0000000000000172 .LASF62
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:1186   .debug_str:00000000000000ee .LASF63
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:1132   .debug_ranges:0000000000000000 .Ldebug_ranges0
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:1150   .debug_line:0000000000000000 .Ldebug_line0
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:1222   .debug_str:0000000000000280 .LASF0
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:1212   .debug_str:000000000000023c .LASF1
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:1204   .debug_str:00000000000001a2 .LASF2
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:1182   .debug_str:00000000000000cf .LASF3
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:1178   .debug_str:00000000000000ad .LASF6
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:1232   .debug_str:00000000000002b9 .LASF4
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:1194   .debug_str:0000000000000141 .LASF5
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:1174   .debug_str:0000000000000094 .LASF7
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:1246   .debug_str:0000000000000326 .LASF8
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:1192   .debug_str:0000000000000133 .LASF9
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:1216   .debug_str:0000000000000253 .LASF10
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:1224   .debug_str:000000000000028d .LASF11
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:1220   .debug_str:0000000000000277 .LASF12
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:1240   .debug_str:00000000000002f9 .LASF64
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:1256   .debug_str:0000000000000369 .LASF13
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccCveaze.s 			page 10
 
 
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:1276   .debug_str:00000000000003e5 .LASF14
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:1156   .debug_str:000000000000001b .LASF15
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:1236   .debug_str:00000000000002dd .LASF16
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:1268   .debug_str:00000000000003a3 .LASF17
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:1176   .debug_str:000000000000009f .LASF18
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:1198   .debug_str:0000000000000156 .LASF19
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:1238   .debug_str:00000000000002eb .LASF20
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:1272   .debug_str:00000000000003c9 .LASF21
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:1282   .debug_str:000000000000040a .LASF22
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:1170   .debug_str:000000000000006f .LASF23
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:1196   .debug_str:000000000000014a .LASF24
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:1244   .debug_str:0000000000000318 .LASF25
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:1280   .debug_str:00000000000003fc .LASF26
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:1248   .debug_str:0000000000000338 .LASF27
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:1158   .debug_str:0000000000000028 .LASF28
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:1278   .debug_str:00000000000003f0 .LASF29
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:1252   .debug_str:0000000000000352 .LASF30
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:1164   .debug_str:000000000000004f .LASF31
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:1190   .debug_str:0000000000000127 .LASF32
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:1168   .debug_str:0000000000000063 .LASF33
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:1254   .debug_str:000000000000035e .LASF34
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:1214   .debug_str:0000000000000248 .LASF35
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:1206   .debug_str:00000000000001b0 .LASF36
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:1218   .debug_str:000000000000026a .LASF37
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:1250   .debug_str:0000000000000345 .LASF38
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:1162   .debug_str:0000000000000042 .LASF39
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:1188   .debug_str:000000000000011a .LASF40
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:1226   .debug_str:0000000000000296 .LASF41
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:1228   .debug_str:00000000000002a3 .LASF42
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:1260   .debug_str:000000000000037c .LASF43
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:1152   .debug_str:0000000000000000 .LASF44
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:1266   .debug_str:0000000000000397 .LASF45
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:1200   .debug_str:0000000000000164 .LASF46
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:1234   .debug_str:00000000000002cc .LASF47
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:188    .text.wwdgt_flag_clear:0000000000000000 .LFB8
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:200    .text.wwdgt_flag_clear:0000000000000010 .LFE8
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:1242   .debug_str:0000000000000309 .LASF65
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:170    .text.wwdgt_flag_get:0000000000000000 .LFB7
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:181    .text.wwdgt_flag_get:000000000000000c .LFE7
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:1180   .debug_str:00000000000000b8 .LASF48
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:151    .text.wwdgt_interrupt_enable:0000000000000000 .LFB6
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:163    .text.wwdgt_interrupt_enable:0000000000000012 .LFE6
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:1154   .debug_str:000000000000000e .LASF54
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:100    .text.wwdgt_config:0000000000000000 .LFB5
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:144    .text.wwdgt_config:000000000000002c .LFE5
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:1208   .debug_str:00000000000001ba .LASF49
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:990    .debug_loc:0000000000000000 .LLST3
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:1264   .debug_str:0000000000000390 .LASF50
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:1004   .debug_loc:0000000000000021 .LLST4
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:1230   .debug_str:00000000000002af .LASF51
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:1166   .debug_str:000000000000005b .LASF52
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:1018   .debug_loc:0000000000000042 .LLST5
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:1262   .debug_str:0000000000000388 .LASF53
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:1043   .debug_loc:000000000000007d .LLST6
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:1184   .debug_str:00000000000000d9 .LASF55
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:68     .text.wwdgt_counter_update:0000000000000000 .LFB4
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:93     .text.wwdgt_counter_update:0000000000000018 .LFE4
-GAS LISTING C:\Users\test\AppData\Local\Temp\ccDLtO5i.s 			page 11
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:1276   .debug_str:00000000000003e5 .LASF14
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:1156   .debug_str:000000000000001b .LASF15
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:1236   .debug_str:00000000000002dd .LASF16
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:1268   .debug_str:00000000000003a3 .LASF17
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:1176   .debug_str:000000000000009f .LASF18
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:1198   .debug_str:0000000000000156 .LASF19
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:1238   .debug_str:00000000000002eb .LASF20
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:1272   .debug_str:00000000000003c9 .LASF21
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:1282   .debug_str:000000000000040a .LASF22
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:1170   .debug_str:000000000000006f .LASF23
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:1196   .debug_str:000000000000014a .LASF24
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:1244   .debug_str:0000000000000318 .LASF25
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:1280   .debug_str:00000000000003fc .LASF26
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:1248   .debug_str:0000000000000338 .LASF27
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:1158   .debug_str:0000000000000028 .LASF28
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:1278   .debug_str:00000000000003f0 .LASF29
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:1252   .debug_str:0000000000000352 .LASF30
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:1164   .debug_str:000000000000004f .LASF31
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:1190   .debug_str:0000000000000127 .LASF32
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:1168   .debug_str:0000000000000063 .LASF33
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:1254   .debug_str:000000000000035e .LASF34
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:1214   .debug_str:0000000000000248 .LASF35
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:1206   .debug_str:00000000000001b0 .LASF36
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:1218   .debug_str:000000000000026a .LASF37
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:1250   .debug_str:0000000000000345 .LASF38
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:1162   .debug_str:0000000000000042 .LASF39
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:1188   .debug_str:000000000000011a .LASF40
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:1226   .debug_str:0000000000000296 .LASF41
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:1228   .debug_str:00000000000002a3 .LASF42
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:1260   .debug_str:000000000000037c .LASF43
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:1152   .debug_str:0000000000000000 .LASF44
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:1266   .debug_str:0000000000000397 .LASF45
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:1200   .debug_str:0000000000000164 .LASF46
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:1234   .debug_str:00000000000002cc .LASF47
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:188    .text.wwdgt_flag_clear:0000000000000000 .LFB8
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:200    .text.wwdgt_flag_clear:0000000000000010 .LFE8
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:1242   .debug_str:0000000000000309 .LASF65
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:170    .text.wwdgt_flag_get:0000000000000000 .LFB7
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:181    .text.wwdgt_flag_get:000000000000000c .LFE7
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:1180   .debug_str:00000000000000b8 .LASF48
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:151    .text.wwdgt_interrupt_enable:0000000000000000 .LFB6
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:163    .text.wwdgt_interrupt_enable:0000000000000012 .LFE6
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:1154   .debug_str:000000000000000e .LASF54
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:100    .text.wwdgt_config:0000000000000000 .LFB5
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:144    .text.wwdgt_config:000000000000002c .LFE5
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:1208   .debug_str:00000000000001ba .LASF49
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:990    .debug_loc:0000000000000000 .LLST3
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:1264   .debug_str:0000000000000390 .LASF50
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:1004   .debug_loc:0000000000000021 .LLST4
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:1230   .debug_str:00000000000002af .LASF51
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:1166   .debug_str:000000000000005b .LASF52
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:1018   .debug_loc:0000000000000042 .LLST5
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:1262   .debug_str:0000000000000388 .LASF53
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:1043   .debug_loc:000000000000007d .LLST6
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:1184   .debug_str:00000000000000d9 .LASF55
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:68     .text.wwdgt_counter_update:0000000000000000 .LFB4
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:93     .text.wwdgt_counter_update:0000000000000018 .LFE4
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccCveaze.s 			page 11
 
 
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:1274   .debug_str:00000000000003d7 .LASF56
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:1059   .debug_loc:00000000000000a7 .LLST1
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:1073   .debug_loc:00000000000000c8 .LLST2
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:1160   .debug_str:0000000000000035 .LASF57
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:49     .text.wwdgt_enable:0000000000000000 .LFB3
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:61     .text.wwdgt_enable:0000000000000012 .LFE3
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:1258   .debug_str:000000000000036f .LASF58
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:11     .text.wwdgt_deinit:0000000000000000 .LFB2
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:42     .text.wwdgt_deinit:0000000000000020 .LFE2
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:1089   .debug_loc:00000000000000f2 .LLST0
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:27     .text.wwdgt_deinit:0000000000000010 .LVL0
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:40     .text.wwdgt_deinit:0000000000000020 .LVL1
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:1270   .debug_str:00000000000003b1 .LASF59
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:1172   .debug_str:000000000000007b .LASF60
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:103    .text.wwdgt_config:0000000000000000 .LVL6
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:115    .text.wwdgt_config:0000000000000010 .LVL8
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:128    .text.wwdgt_config:000000000000001e .LVL12
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:109    .text.wwdgt_config:0000000000000008 .LVL7
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:118    .text.wwdgt_config:0000000000000014 .LVL9
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:124    .text.wwdgt_config:000000000000001a .LVL11
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:133    .text.wwdgt_config:0000000000000022 .LVL13
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:121    .text.wwdgt_config:0000000000000018 .LVL10
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:71     .text.wwdgt_counter_update:0000000000000000 .LVL2
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:79     .text.wwdgt_counter_update:000000000000000c .LVL3
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:82     .text.wwdgt_counter_update:0000000000000010 .LVL4
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:86     .text.wwdgt_counter_update:0000000000000012 .LVL5
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:18     .text.wwdgt_deinit:0000000000000002 .LCFI0
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:36     .text.wwdgt_deinit:0000000000000018 .LCFI1
-C:\Users\test\AppData\Local\Temp\ccDLtO5i.s:210    .debug_info:0000000000000000 .Ldebug_info0
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:1274   .debug_str:00000000000003d7 .LASF56
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:1059   .debug_loc:00000000000000a7 .LLST1
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:1073   .debug_loc:00000000000000c8 .LLST2
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:1160   .debug_str:0000000000000035 .LASF57
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:49     .text.wwdgt_enable:0000000000000000 .LFB3
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:61     .text.wwdgt_enable:0000000000000012 .LFE3
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:1258   .debug_str:000000000000036f .LASF58
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:11     .text.wwdgt_deinit:0000000000000000 .LFB2
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:42     .text.wwdgt_deinit:0000000000000020 .LFE2
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:1089   .debug_loc:00000000000000f2 .LLST0
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:27     .text.wwdgt_deinit:0000000000000010 .LVL0
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:40     .text.wwdgt_deinit:0000000000000020 .LVL1
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:1270   .debug_str:00000000000003b1 .LASF59
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:1172   .debug_str:000000000000007b .LASF60
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:103    .text.wwdgt_config:0000000000000000 .LVL6
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:115    .text.wwdgt_config:0000000000000010 .LVL8
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:128    .text.wwdgt_config:000000000000001e .LVL12
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:109    .text.wwdgt_config:0000000000000008 .LVL7
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:118    .text.wwdgt_config:0000000000000014 .LVL9
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:124    .text.wwdgt_config:000000000000001a .LVL11
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:133    .text.wwdgt_config:0000000000000022 .LVL13
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:121    .text.wwdgt_config:0000000000000018 .LVL10
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:71     .text.wwdgt_counter_update:0000000000000000 .LVL2
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:79     .text.wwdgt_counter_update:000000000000000c .LVL3
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:82     .text.wwdgt_counter_update:0000000000000010 .LVL4
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:86     .text.wwdgt_counter_update:0000000000000012 .LVL5
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:18     .text.wwdgt_deinit:0000000000000002 .LCFI0
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:36     .text.wwdgt_deinit:0000000000000018 .LCFI1
+C:\Users\test\AppData\Local\Temp\ccCveaze.s:210    .debug_info:0000000000000000 .Ldebug_info0
 
 UNDEFINED SYMBOLS
 rcu_periph_reset_enable

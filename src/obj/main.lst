@@ -1,4 +1,4 @@
-GAS LISTING C:\Users\test\AppData\Local\Temp\cc1106j5.s 			page 1
+GAS LISTING C:\Users\test\AppData\Local\Temp\cchOJDch.s 			page 1
 
 
    1              		.file	"main.c"
@@ -10,30 +10,39 @@ GAS LISTING C:\Users\test\AppData\Local\Temp\cc1106j5.s 			page 1
    7              		.align	1
    8              		.globl	main
   10              	main:
-  11              	.LFB16:
+  11              	.LFB22:
   12              		.file 1 "application/main.c"
    1:application/main.c **** #include "gd32vf103.h"
    2:application/main.c **** #include "gd32vf103_usart.h"
    3:application/main.c **** #include "gpio-core.h"
    4:application/main.c **** #include "spi-core.h"
    5:application/main.c **** #include "delay-core.h"
-   6:application/main.c **** 
-   7:application/main.c **** struct gpio_desp led =
-   8:application/main.c **** {
-   9:application/main.c ****     .pin_num = 2, //GPIOA2
-  10:application/main.c ****     .mode = GPIO_PP_OUTPUT,
-  11:application/main.c ****     .flag = 1,
-  12:application/main.c **** };
-  13:application/main.c **** 
-  14:application/main.c **** int main(void)
-  15:application/main.c **** {
-  13              		.loc 1 15 1
+   6:application/main.c **** #include "uart-core.h"
+   7:application/main.c **** 
+   8:application/main.c **** struct gpio_desp led =
+   9:application/main.c **** {
+  10:application/main.c ****     .pin_num = 2, //GPIOA2
+  11:application/main.c ****     .mode = GPIO_PP_OUTPUT,
+  12:application/main.c ****     .flag = 1,
+  13:application/main.c **** };
+  14:application/main.c **** 
+  15:application/main.c **** 
+  16:application/main.c **** struct uart_device tty0 =
+  17:application/main.c **** {
+  18:application/main.c ****     .baud_rate = 115200,
+  19:application/main.c ****     .uart = 0,
+  20:application/main.c **** };
+  21:application/main.c **** 
+  22:application/main.c **** 
+  23:application/main.c **** int main(void)
+  24:application/main.c **** {
+  13              		.loc 1 24 1
   14              		.cfi_startproc
-  16:application/main.c ****     gpio_get(&led); //申请一个GPIO资源
-  15              		.loc 1 16 5
+  25:application/main.c ****     gpio_get(&led); //申请一个GPIO资源
+  15              		.loc 1 25 5
   16              	.LVL0:
-  17              	.LBB14:
-  18              	.LBB15:
+  17              	.LBB18:
+  18              	.LBB19:
   19              		.file 2 "core/gpio-core.h"
    1:core/gpio-core.h **** #ifndef __GPIO_CORE_H_
    2:core/gpio-core.h **** #define __GPIO_CORE_H_
@@ -49,6 +58,9 @@ GAS LISTING C:\Users\test\AppData\Local\Temp\cc1106j5.s 			page 1
   12:core/gpio-core.h ****     uint16_t status:1;
   13:core/gpio-core.h ****     uint16_t mode:4;
   14:core/gpio-core.h ****     uint16_t flag:1;
+GAS LISTING C:\Users\test\AppData\Local\Temp\cchOJDch.s 			page 2
+
+
   15:core/gpio-core.h ****     struct gpio_controller *ctl;
   16:core/gpio-core.h ****     
   17:core/gpio-core.h **** }gpio_desp_t;
@@ -58,9 +70,6 @@ GAS LISTING C:\Users\test\AppData\Local\Temp\cc1106j5.s 			page 1
   21:core/gpio-core.h ****     GPIO_PP_OUTPUT = 0,
   22:core/gpio-core.h ****     GPIO_FINPUT,
   23:core/gpio-core.h ****     GPIO_PU_OUTPUT,
-GAS LISTING C:\Users\test\AppData\Local\Temp\cc1106j5.s 			page 2
-
-
   24:core/gpio-core.h ****     GPIO_PD_OUTPUT,
   25:core/gpio-core.h ****     
   26:core/gpio-core.h **** }gpio_direction_t;
@@ -90,121 +99,208 @@ GAS LISTING C:\Users\test\AppData\Local\Temp\cc1106j5.s 			page 1
   20              		.loc 2 49 5
   21              		.loc 2 49 20 is_stmt 0
   22 0000 B7070000 		lui	a5,%hi(__gpio_core_init)
-  23              	.LBE15:
-  24              	.LBE14:
-  15:application/main.c ****     gpio_get(&led); //申请一个GPIO资源
-  25              		.loc 1 15 1
-  26 0004 4111     		addi	sp,sp,-16
+  23              	.LBE19:
+  24              	.LBE18:
+  24:application/main.c ****     gpio_get(&led); //申请一个GPIO资源
+  25              		.loc 1 24 1
+  26 0004 0111     		addi	sp,sp,-32
   27              	.LCFI0:
-  28              		.cfi_def_cfa_offset 16
-  29              	.LBB20:
-  30              	.LBB16:
+  28              		.cfi_def_cfa_offset 32
+  29              	.LBB24:
+  30              	.LBB20:
   31              		.loc 2 49 20
   32 0006 93870700 		addi	a5,a5,%lo(__gpio_core_init)
   50:core/gpio-core.h ****     return gpio_desp->ctl->ops.get(gpio_desp);
   33              		.loc 2 50 12
   34 000a D843     		lw	a4,4(a5)
-  35              	.LBE16:
-  36              	.LBE20:
-  15:application/main.c ****     gpio_get(&led); //申请一个GPIO资源
-  37              		.loc 1 15 1
-  38 000c 22C4     		sw	s0,8(sp)
+  35              	.LBE20:
+  36              	.LBE24:
+  24:application/main.c ****     gpio_get(&led); //申请一个GPIO资源
+  37              		.loc 1 24 1
+  38 000c 22CC     		sw	s0,24(sp)
+GAS LISTING C:\Users\test\AppData\Local\Temp\cchOJDch.s 			page 3
+
+
   39              		.cfi_offset 8, -8
-  40              	.LBB21:
-  41              	.LBB17:
+  40              	.LBB25:
+  41              	.LBB21:
   49:core/gpio-core.h ****     return gpio_desp->ctl->ops.get(gpio_desp);
   42              		.loc 2 49 20
   43 000e 37040000 		lui	s0,%hi(.LANCHOR0)
-  44              	.LBE17:
-  45              	.LBE21:
-  15:application/main.c ****     gpio_get(&led); //申请一个GPIO资源
-GAS LISTING C:\Users\test\AppData\Local\Temp\cc1106j5.s 			page 3
-
-
-  46              		.loc 1 15 1
-  47 0012 4AC0     		sw	s2,0(sp)
+  44              	.LBE21:
+  45              	.LBE25:
+  24:application/main.c ****     gpio_get(&led); //申请一个GPIO资源
+  46              		.loc 1 24 1
+  47 0012 4AC8     		sw	s2,16(sp)
   48              		.cfi_offset 18, -16
-  49              	.LBB22:
-  50              	.LBB18:
+  49              	.LBB26:
+  50              	.LBB22:
   49:core/gpio-core.h ****     return gpio_desp->ctl->ops.get(gpio_desp);
   51              		.loc 2 49 20
   52 0014 13090400 		addi	s2,s0,%lo(.LANCHOR0)
-  53              	.LBE18:
-  54              	.LBE22:
-  15:application/main.c ****     gpio_get(&led); //申请一个GPIO资源
-  55              		.loc 1 15 1
-  56 0018 06C6     		sw	ra,12(sp)
-  57 001a 26C2     		sw	s1,4(sp)
-  58              		.cfi_offset 1, -4
-  59              		.cfi_offset 9, -12
-  60              	.LBB23:
-  61              	.LBB19:
+  53              	.LBE22:
+  54              	.LBE26:
+  24:application/main.c ****     gpio_get(&led); //申请一个GPIO资源
+  55              		.loc 1 24 1
+  56 0018 06CE     		sw	ra,28(sp)
+  57 001a 26CA     		sw	s1,20(sp)
+  58 001c 4EC6     		sw	s3,12(sp)
+  59 001e 52C4     		sw	s4,8(sp)
+  60 0020 56C2     		sw	s5,4(sp)
+  61              		.cfi_offset 1, -4
+  62              		.cfi_offset 9, -12
+  63              		.cfi_offset 19, -20
+  64              		.cfi_offset 20, -24
+  65              		.cfi_offset 21, -28
+  66              	.LBB27:
+  67              	.LBB23:
   49:core/gpio-core.h ****     return gpio_desp->ctl->ops.get(gpio_desp);
-  62              		.loc 2 49 20
-  63 001c 2322F900 		sw	a5,4(s2)
-  64              		.loc 2 50 5 is_stmt 1
-  65              		.loc 2 50 12 is_stmt 0
-  66 0020 13050400 		addi	a0,s0,%lo(.LANCHOR0)
-  67 0024 0297     		jalr	a4
-  68              	.LVL1:
-  69              	.LBE19:
-  70              	.LBE23:
-  17:application/main.c ****     gpio_set_direction(&led,GPIO_PP_OUTPUT);//设置GPIO为推挽输出
-  71              		.loc 1 17 5 is_stmt 1
-  72              	.LBB24:
-  73              	.LBB25:
+  68              		.loc 2 49 20
+  69 0022 2322F900 		sw	a5,4(s2)
+  70              		.loc 2 50 5 is_stmt 1
+  71              		.loc 2 50 12 is_stmt 0
+  72 0026 13050400 		addi	a0,s0,%lo(.LANCHOR0)
+  73 002a 0297     		jalr	a4
+  74              	.LVL1:
+  75              	.LBE23:
+  76              	.LBE27:
+  26:application/main.c ****     gpio_set_direction(&led,GPIO_PP_OUTPUT);//设置GPIO为推挽输出
+  77              		.loc 1 26 5 is_stmt 1
+  78              	.LBB28:
+  79              	.LBB29:
   51:core/gpio-core.h **** }
   52:core/gpio-core.h **** 
   53:core/gpio-core.h **** static inline void gpio_set_direction(gpio_desp_t *gpio_desp, gpio_direction_t dir)
   54:core/gpio-core.h **** {
   55:core/gpio-core.h ****     gpio_desp->ctl->ops.set_direction(gpio_desp,dir);
-  74              		.loc 2 55 5
-  75              		.loc 2 55 24 is_stmt 0
-  76 0026 83274900 		lw	a5,4(s2)
-  77              		.loc 2 55 5
-  78 002a 8145     		li	a1,0
-  79 002c 13050400 		addi	a0,s0,%lo(.LANCHOR0)
-  80 0030 9C47     		lw	a5,8(a5)
-  81 0032 B7040000 		lui	s1,%hi(__delay_core_init)
-  82 0036 93840400 		addi	s1,s1,%lo(__delay_core_init)
-  83 003a 8297     		jalr	a5
-  84              	.LVL2:
-  85              	.L2:
-  86              	.LBE25:
-  87              	.LBE24:
-  18:application/main.c ****     while (1)
-  88              		.loc 1 18 5 is_stmt 1 discriminator 1
-  19:application/main.c ****     {
-  20:application/main.c ****          gpio_set_value(&led,0);
-  89              		.loc 1 20 10 discriminator 1
-  90              	.LBB26:
-GAS LISTING C:\Users\test\AppData\Local\Temp\cc1106j5.s 			page 4
+  80              		.loc 2 55 5
+  81              		.loc 2 55 24 is_stmt 0
+  82 002c 83274900 		lw	a5,4(s2)
+  83              		.loc 2 55 5
+  84 0030 8145     		li	a1,0
+GAS LISTING C:\Users\test\AppData\Local\Temp\cchOJDch.s 			page 4
 
 
-  91              	.LBB27:
+  85 0032 13050400 		addi	a0,s0,%lo(.LANCHOR0)
+  86 0036 9C47     		lw	a5,8(a5)
+  87              	.LBE29:
+  88              	.LBE28:
+  89              	.LBB31:
+  90              	.LBB32:
+  91              		.file 3 "core/uart-core.h"
+   1:core/uart-core.h **** #ifndef  __UART_CORE_H_
+   2:core/uart-core.h **** #define  __UART_CORE_H_
+   3:core/uart-core.h **** 
+   4:core/uart-core.h **** #include "module.h"
+   5:core/uart-core.h **** 
+   6:core/uart-core.h **** typedef struct uart_device
+   7:core/uart-core.h **** {
+   8:core/uart-core.h ****     uint8_t  uart;
+   9:core/uart-core.h ****     uint8_t  irq_en;
+  10:core/uart-core.h ****     uint32_t baud_rate;
+  11:core/uart-core.h ****     struct   uart_controller *ctrller;
+  12:core/uart-core.h ****     
+  13:core/uart-core.h **** }uart_device_t;
+  14:core/uart-core.h **** 
+  15:core/uart-core.h **** typedef struct uart_ops
+  16:core/uart-core.h **** {
+  17:core/uart-core.h ****     int8_t (*probe)(struct uart_device *dev);
+  18:core/uart-core.h ****     int8_t (*remove)(struct uart_device *dev);
+  19:core/uart-core.h ****     int8_t (*set_baud_rate)(struct uart_device *dev, uint32_t baud_rate);
+  20:core/uart-core.h ****     int32_t (*poll_read)(struct uart_device *dev, uint8_t *buffer, uint32_t len);
+  21:core/uart-core.h ****     int32_t (*poll_write)(struct uart_device *dev, uint8_t *buffer, uint32_t len);
+  22:core/uart-core.h ****     int8_t (*set_handler)(struct uart_device *dev, void (*handler)(void));
+  23:core/uart-core.h **** 
+  24:core/uart-core.h **** }uart_ops_t;
+  25:core/uart-core.h **** 
+  26:core/uart-core.h **** typedef struct uart_controller
+  27:core/uart-core.h **** {
+  28:core/uart-core.h ****     uint32_t    baud_rate;
+  29:core/uart-core.h ****     uart_ops_t  ops;
+  30:core/uart-core.h **** 
+  31:core/uart-core.h **** }uart_controller_t;
+  32:core/uart-core.h **** 
+  33:core/uart-core.h **** 
+  34:core/uart-core.h **** static inline int8_t uart_probe(struct uart_device *dev)
+  35:core/uart-core.h **** {
+  36:core/uart-core.h ****     dev->ctrller = (struct uart_controller *)&__uart_core_init;
+  92              		.loc 3 36 18
+  93 0038 B7090000 		lui	s3,%hi(.LANCHOR1)
+  94 003c 138A0900 		addi	s4,s3,%lo(.LANCHOR1)
+  95              	.LBE32:
+  96              	.LBE31:
+  97              	.LBB34:
+  98              	.LBB30:
+  99              		.loc 2 55 5
+ 100 0040 8297     		jalr	a5
+ 101              	.LVL2:
+ 102              	.LBE30:
+ 103              	.LBE34:
+  27:application/main.c ****     uart_probe(&tty0);
+ 104              		.loc 1 27 5 is_stmt 1
+GAS LISTING C:\Users\test\AppData\Local\Temp\cchOJDch.s 			page 5
+
+
+ 105              	.LBB35:
+ 106              	.LBB33:
+ 107              		.loc 3 36 5
+ 108              		.loc 3 36 18 is_stmt 0
+ 109 0042 B7070000 		lui	a5,%hi(__uart_core_init)
+ 110 0046 93870700 		addi	a5,a5,%lo(__uart_core_init)
+  37:core/uart-core.h ****     return dev->ctrller->ops.probe(dev);
+ 111              		.loc 3 37 12
+ 112 004a D843     		lw	a4,4(a5)
+ 113 004c 13850900 		addi	a0,s3,%lo(.LANCHOR1)
+  36:core/uart-core.h ****     return dev->ctrller->ops.probe(dev);
+ 114              		.loc 3 36 18
+ 115 0050 2324FA00 		sw	a5,8(s4)
+ 116              		.loc 3 37 5 is_stmt 1
+ 117 0054 B7040000 		lui	s1,%hi(__delay_core_init)
+ 118              		.loc 3 37 12 is_stmt 0
+ 119 0058 0297     		jalr	a4
+ 120              	.LVL3:
+ 121              	.LBE33:
+ 122              	.LBE35:
+  28:application/main.c **** 
+  29:application/main.c ****     char *test = "hello Qdriver";
+ 123              		.loc 1 29 5 is_stmt 1
+ 124 005a 93840400 		addi	s1,s1,%lo(__delay_core_init)
+ 125 005e B70A0000 		lui	s5,%hi(.LC0)
+ 126              	.L2:
+  30:application/main.c ****     while (1)
+ 127              		.loc 1 30 5 discriminator 1
+  31:application/main.c ****     {
+  32:application/main.c ****          gpio_set_value(&led,0);
+ 128              		.loc 1 32 10 discriminator 1
+ 129              	.LVL4:
+ 130              	.LBB36:
+ 131              	.LBB37:
   56:core/gpio-core.h **** }
   57:core/gpio-core.h **** 
   58:core/gpio-core.h **** static inline void gpio_set_value(gpio_desp_t *gpio_desp, uint8_t value)
   59:core/gpio-core.h **** {
   60:core/gpio-core.h ****     gpio_desp->ctl->ops.set_value(gpio_desp,value);
-  92              		.loc 2 60 5 discriminator 1
-  93              		.loc 2 60 24 is_stmt 0 discriminator 1
-  94 003c 83274900 		lw	a5,4(s2)
-  95              		.loc 2 60 5 discriminator 1
-  96 0040 8145     		li	a1,0
-  97 0042 13050400 		addi	a0,s0,%lo(.LANCHOR0)
-  98 0046 DC47     		lw	a5,12(a5)
-  99 0048 8297     		jalr	a5
- 100              	.LVL3:
- 101              	.LBE27:
- 102              	.LBE26:
-  21:application/main.c ****          mdelay(500);      //使用延时函数，延时500ms
- 103              		.loc 1 21 10 is_stmt 1 discriminator 1
- 104              	.LBB28:
- 105              	.LBB29:
- 106              		.file 3 "core/delay-core.h"
+ 132              		.loc 2 60 5 discriminator 1
+ 133              		.loc 2 60 24 is_stmt 0 discriminator 1
+ 134 0062 83274900 		lw	a5,4(s2)
+ 135              		.loc 2 60 5 discriminator 1
+ 136 0066 8145     		li	a1,0
+ 137 0068 13050400 		addi	a0,s0,%lo(.LANCHOR0)
+ 138 006c DC47     		lw	a5,12(a5)
+ 139 006e 8297     		jalr	a5
+ 140              	.LVL5:
+ 141              	.LBE37:
+ 142              	.LBE36:
+  33:application/main.c ****          mdelay(500);      //使用延时函数，延时500ms
+ 143              		.loc 1 33 10 is_stmt 1 discriminator 1
+ 144              	.LBB38:
+ 145              	.LBB39:
+ 146              		.file 4 "core/delay-core.h"
    1:core/delay-core.h **** #ifndef __DELAY_CORE_H_
    2:core/delay-core.h **** #define __DELAY_CORE_H_
+GAS LISTING C:\Users\test\AppData\Local\Temp\cchOJDch.s 			page 6
+
+
    3:core/delay-core.h **** 
    4:core/delay-core.h **** #include "module.h"
    5:core/delay-core.h **** 
@@ -225,220 +321,336 @@ GAS LISTING C:\Users\test\AppData\Local\Temp\cc1106j5.s 			page 1
   20:core/delay-core.h **** static inline void mdelay(uint32_t ms)
   21:core/delay-core.h **** {
   22:core/delay-core.h ****     __delay_core->mdelay(ms);
- 107              		.loc 3 22 5 discriminator 1
- 108 004a DC40     		lw	a5,4(s1)
- 109 004c 1305401F 		li	a0,500
- 110 0050 8297     		jalr	a5
- 111              	.LVL4:
- 112              	.LBE29:
- 113              	.LBE28:
-  22:application/main.c ****          gpio_set_value(&led,1);
- 114              		.loc 1 22 10 discriminator 1
- 115              	.LBB30:
- 116              	.LBB31:
- 117              		.loc 2 60 5 discriminator 1
- 118              		.loc 2 60 24 is_stmt 0 discriminator 1
-GAS LISTING C:\Users\test\AppData\Local\Temp\cc1106j5.s 			page 5
+ 147              		.loc 4 22 5 discriminator 1
+ 148 0070 DC40     		lw	a5,4(s1)
+ 149 0072 1305401F 		li	a0,500
+ 150 0076 8297     		jalr	a5
+ 151              	.LVL6:
+ 152              	.LBE39:
+ 153              	.LBE38:
+  34:application/main.c ****          gpio_set_value(&led,1);
+ 154              		.loc 1 34 10 discriminator 1
+ 155              	.LBB40:
+ 156              	.LBB41:
+ 157              		.loc 2 60 5 discriminator 1
+ 158              		.loc 2 60 24 is_stmt 0 discriminator 1
+ 159 0078 83274900 		lw	a5,4(s2)
+ 160              		.loc 2 60 5 discriminator 1
+ 161 007c 8545     		li	a1,1
+ 162 007e 13050400 		addi	a0,s0,%lo(.LANCHOR0)
+ 163 0082 DC47     		lw	a5,12(a5)
+ 164 0084 8297     		jalr	a5
+ 165              	.LVL7:
+ 166              	.LBE41:
+ 167              	.LBE40:
+  35:application/main.c ****          mdelay(500);      //使用延时函数，延时500ms
+ 168              		.loc 1 35 10 is_stmt 1 discriminator 1
+ 169              	.LBB42:
+ 170              	.LBB43:
+ 171              		.loc 4 22 5 discriminator 1
+ 172 0086 DC40     		lw	a5,4(s1)
+ 173 0088 1305401F 		li	a0,500
+ 174 008c 8297     		jalr	a5
+ 175              	.LVL8:
+ 176              	.LBE43:
+ 177              	.LBE42:
+  36:application/main.c ****          uart_poll_write(&tty0,test,15);
+ 178              		.loc 1 36 10 discriminator 1
+ 179              	.LBB44:
+ 180              	.LBB45:
+GAS LISTING C:\Users\test\AppData\Local\Temp\cchOJDch.s 			page 7
 
 
- 119 0052 83274900 		lw	a5,4(s2)
- 120              		.loc 2 60 5 discriminator 1
- 121 0056 13050400 		addi	a0,s0,%lo(.LANCHOR0)
- 122 005a 8545     		li	a1,1
- 123 005c DC47     		lw	a5,12(a5)
- 124 005e 8297     		jalr	a5
- 125              	.LVL5:
- 126              	.LBE31:
- 127              	.LBE30:
-  23:application/main.c ****          mdelay(500);      //使用延时函数，延时500ms
- 128              		.loc 1 23 10 is_stmt 1 discriminator 1
- 129              	.LBB32:
- 130              	.LBB33:
- 131              		.loc 3 22 5 discriminator 1
- 132 0060 DC40     		lw	a5,4(s1)
- 133 0062 1305401F 		li	a0,500
- 134 0066 8297     		jalr	a5
- 135              	.LVL6:
- 136 0068 D1BF     		j	.L2
- 137              	.LBE33:
- 138              	.LBE32:
- 139              		.cfi_endproc
- 140              	.LFE16:
- 142              		.globl	led
- 143              		.section	.sdata.led,"aw"
- 144              		.align	2
- 145              		.set	.LANCHOR0,. + 0
- 148              	led:
- 149 0000 0200     		.half	2
- 150 0002 40       		.byte	64
- 151 0003 00000000 		.zero	5
- 151      00
- 152              		.text
- 153              	.Letext0:
- 154              		.file 4 "d:\\risc_v_gcc\\riscv-none-embed\\include\\machine\\_default_types.h"
- 155              		.file 5 "d:\\risc_v_gcc\\riscv-none-embed\\include\\sys\\_stdint.h"
- 156              		.file 6 "arch/riscv/mach-gd32vf10x/system/system_gd32vf103.h"
- 157              		.file 7 "core/module.h"
-GAS LISTING C:\Users\test\AppData\Local\Temp\cc1106j5.s 			page 6
+  38:core/uart-core.h **** }
+  39:core/uart-core.h **** 
+  40:core/uart-core.h **** static inline int8_t uart_remove(struct uart_device *dev)
+  41:core/uart-core.h **** {
+  42:core/uart-core.h ****     return dev->ctrller->ops.remove(dev);
+  43:core/uart-core.h **** }
+  44:core/uart-core.h **** 
+  45:core/uart-core.h **** static inline int8_t uart_set_baud_rate(struct uart_device *dev, uint32_t baud_rate)
+  46:core/uart-core.h **** {
+  47:core/uart-core.h ****     return dev->ctrller->ops.set_baud_rate(dev,baud_rate);
+  48:core/uart-core.h **** }
+  49:core/uart-core.h **** 
+  50:core/uart-core.h **** static inline int32_t uart_poll_read(struct uart_device *dev, uint8_t *buffer, uint32_t len)
+  51:core/uart-core.h **** {
+  52:core/uart-core.h ****     return dev->ctrller->ops.poll_read(dev,buffer,len);
+  53:core/uart-core.h **** }
+  54:core/uart-core.h **** 
+  55:core/uart-core.h **** static inline int32_t uart_poll_write(struct uart_device *dev, uint8_t *buffer, uint32_t len)
+  56:core/uart-core.h **** {
+  57:core/uart-core.h ****     return dev->ctrller->ops.poll_write(dev,buffer,len);
+ 181              		.loc 3 57 5 discriminator 1
+ 182              		.loc 3 57 29 is_stmt 0 discriminator 1
+ 183 008e 83278A00 		lw	a5,8(s4)
+ 184              		.loc 3 57 12 discriminator 1
+ 185 0092 3D46     		li	a2,15
+ 186 0094 93850A00 		addi	a1,s5,%lo(.LC0)
+ 187 0098 DC4B     		lw	a5,20(a5)
+ 188 009a 13850900 		addi	a0,s3,%lo(.LANCHOR1)
+ 189 009e 8297     		jalr	a5
+ 190              	.LVL9:
+ 191 00a0 C9B7     		j	.L2
+ 192              	.LBE45:
+ 193              	.LBE44:
+ 194              		.cfi_endproc
+ 195              	.LFE22:
+ 197              		.globl	tty0
+ 198              		.globl	led
+ 199              		.section	.data.tty0,"aw"
+ 200              		.align	2
+ 201              		.set	.LANCHOR1,. + 0
+ 204              	tty0:
+ 205 0000 00       		.byte	0
+ 206 0001 000000   		.zero	3
+ 207 0004 00C20100 		.word	115200
+ 208 0008 00000000 		.zero	4
+ 209              		.section	.rodata.main.str1.4,"aMS",@progbits,1
+ 210              		.align	2
+ 211              	.LC0:
+ 212 0000 68656C6C 		.string	"hello Qdriver"
+ 212      6F205164 
+ 212      72697665 
+ 212      7200
+ 213              		.section	.sdata.led,"aw"
+ 214              		.align	2
+ 215              		.set	.LANCHOR0,. + 0
+ 218              	led:
+ 219 0000 0200     		.half	2
+GAS LISTING C:\Users\test\AppData\Local\Temp\cchOJDch.s 			page 8
+
+
+ 220 0002 40       		.byte	64
+ 221 0003 00000000 		.zero	5
+ 221      00
+ 222              		.text
+ 223              	.Letext0:
+ 224              		.file 5 "d:\\risc_v_gcc\\riscv-none-embed\\include\\machine\\_default_types.h"
+ 225              		.file 6 "d:\\risc_v_gcc\\riscv-none-embed\\include\\sys\\_stdint.h"
+ 226              		.file 7 "arch/riscv/mach-gd32vf10x/system/system_gd32vf103.h"
+ 227              		.file 8 "core/module.h"
+GAS LISTING C:\Users\test\AppData\Local\Temp\cchOJDch.s 			page 9
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 main.c
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:10     .text.startup.main:0000000000000000 main
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:14     .text.startup.main:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:15     .text.startup.main:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:20     .text.startup.main:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:21     .text.startup.main:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:22     .text.startup.main:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:26     .text.startup.main:0000000000000004 .L0 
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:28     .text.startup.main:0000000000000006 .L0 
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:32     .text.startup.main:0000000000000006 .L0 
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:34     .text.startup.main:000000000000000a .L0 
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:38     .text.startup.main:000000000000000c .L0 
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:39     .text.startup.main:000000000000000e .L0 
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:43     .text.startup.main:000000000000000e .L0 
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:47     .text.startup.main:0000000000000012 .L0 
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:48     .text.startup.main:0000000000000014 .L0 
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:52     .text.startup.main:0000000000000014 .L0 
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:56     .text.startup.main:0000000000000018 .L0 
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:58     .text.startup.main:000000000000001c .L0 
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:59     .text.startup.main:000000000000001c .L0 
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:63     .text.startup.main:000000000000001c .L0 
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:65     .text.startup.main:0000000000000020 .L0 
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:66     .text.startup.main:0000000000000020 .L0 
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:74     .text.startup.main:0000000000000026 .L0 
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:75     .text.startup.main:0000000000000026 .L0 
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:76     .text.startup.main:0000000000000026 .L0 
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:78     .text.startup.main:000000000000002a .L0 
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:89     .text.startup.main:000000000000003c .L0 
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:92     .text.startup.main:000000000000003c .L0 
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:93     .text.startup.main:000000000000003c .L0 
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:94     .text.startup.main:000000000000003c .L0 
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:96     .text.startup.main:0000000000000040 .L0 
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:107    .text.startup.main:000000000000004a .L0 
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:108    .text.startup.main:000000000000004a .L0 
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:117    .text.startup.main:0000000000000052 .L0 
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:118    .text.startup.main:0000000000000052 .L0 
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:119    .text.startup.main:0000000000000052 .L0 
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:121    .text.startup.main:0000000000000056 .L0 
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:131    .text.startup.main:0000000000000060 .L0 
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:132    .text.startup.main:0000000000000060 .L0 
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:139    .text.startup.main:000000000000006a .L0 
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:148    .sdata.led:0000000000000000 led
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:145    .sdata.led:0000000000000000 .LANCHOR0
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:143    .text.startup.main:000000000000006a .L0 
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:10     .text.startup.main:0000000000000000 main
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:14     .text.startup.main:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:15     .text.startup.main:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:20     .text.startup.main:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:21     .text.startup.main:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:22     .text.startup.main:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:26     .text.startup.main:0000000000000004 .L0 
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:28     .text.startup.main:0000000000000006 .L0 
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:32     .text.startup.main:0000000000000006 .L0 
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:34     .text.startup.main:000000000000000a .L0 
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:38     .text.startup.main:000000000000000c .L0 
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:39     .text.startup.main:000000000000000e .L0 
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:43     .text.startup.main:000000000000000e .L0 
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:47     .text.startup.main:0000000000000012 .L0 
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:48     .text.startup.main:0000000000000014 .L0 
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:52     .text.startup.main:0000000000000014 .L0 
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:56     .text.startup.main:0000000000000018 .L0 
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:61     .text.startup.main:0000000000000022 .L0 
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:62     .text.startup.main:0000000000000022 .L0 
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:63     .text.startup.main:0000000000000022 .L0 
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:64     .text.startup.main:0000000000000022 .L0 
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:65     .text.startup.main:0000000000000022 .L0 
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:69     .text.startup.main:0000000000000022 .L0 
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:71     .text.startup.main:0000000000000026 .L0 
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:72     .text.startup.main:0000000000000026 .L0 
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:80     .text.startup.main:000000000000002c .L0 
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:81     .text.startup.main:000000000000002c .L0 
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:82     .text.startup.main:000000000000002c .L0 
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:84     .text.startup.main:0000000000000030 .L0 
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:93     .text.startup.main:0000000000000038 .L0 
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:100    .text.startup.main:0000000000000040 .L0 
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:107    .text.startup.main:0000000000000042 .L0 
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:108    .text.startup.main:0000000000000042 .L0 
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:109    .text.startup.main:0000000000000042 .L0 
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:112    .text.startup.main:000000000000004a .L0 
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:115    .text.startup.main:0000000000000050 .L0 
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:117    .text.startup.main:0000000000000054 .L0 
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:119    .text.startup.main:0000000000000058 .L0 
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:124    .text.startup.main:000000000000005a .L0 
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:128    .text.startup.main:0000000000000062 .L0 
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:132    .text.startup.main:0000000000000062 .L0 
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:133    .text.startup.main:0000000000000062 .L0 
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:134    .text.startup.main:0000000000000062 .L0 
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:136    .text.startup.main:0000000000000066 .L0 
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:147    .text.startup.main:0000000000000070 .L0 
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:148    .text.startup.main:0000000000000070 .L0 
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:157    .text.startup.main:0000000000000078 .L0 
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:158    .text.startup.main:0000000000000078 .L0 
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:159    .text.startup.main:0000000000000078 .L0 
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:161    .text.startup.main:000000000000007c .L0 
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:171    .text.startup.main:0000000000000086 .L0 
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:172    .text.startup.main:0000000000000086 .L0 
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:181    .text.startup.main:000000000000008e .L0 
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:182    .text.startup.main:000000000000008e .L0 
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:183    .text.startup.main:000000000000008e .L0 
+GAS LISTING C:\Users\test\AppData\Local\Temp\cchOJDch.s 			page 10
+
+
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:185    .text.startup.main:0000000000000092 .L0 
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:194    .text.startup.main:00000000000000a2 .L0 
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:204    .data.tty0:0000000000000000 tty0
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:218    .sdata.led:0000000000000000 led
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:201    .data.tty0:0000000000000000 .LANCHOR1
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:215    .sdata.led:0000000000000000 .LANCHOR0
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:199    .text.startup.main:00000000000000a2 .L0 
                      .debug_frame:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:85     .text.startup.main:000000000000003c .L2
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:908    .debug_abbrev:0000000000000000 .Ldebug_abbrev0
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:1527   .debug_str:0000000000000177 .LASF56
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:1543   .debug_str:0000000000000245 .LASF57
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:1569   .debug_str:00000000000002f7 .LASF58
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:1445   .debug_ranges:0000000000000000 .Ldebug_ranges0
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:1463   .debug_line:0000000000000000 .Ldebug_line0
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:1533   .debug_str:0000000000000206 .LASF0
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:1519   .debug_str:000000000000013d .LASF2
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:1523   .debug_str:0000000000000154 .LASF1
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:1585   .debug_str:0000000000000381 .LASF3
-GAS LISTING C:\Users\test\AppData\Local\Temp\cc1106j5.s 			page 7
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:211    .rodata.main.str1.4:0000000000000000 .LC0
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:126    .text.startup.main:0000000000000062 .L2
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:1323   .debug_abbrev:0000000000000000 .Ldebug_abbrev0
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:2064   .debug_str:00000000000001d8 .LASF77
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:2088   .debug_str:00000000000002d4 .LASF78
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:2130   .debug_str:00000000000003c4 .LASF79
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:1950   .debug_ranges:0000000000000000 .Ldebug_ranges0
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:1980   .debug_line:0000000000000000 .Ldebug_line0
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:2070   .debug_str:0000000000000267 .LASF0
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:2054   .debug_str:0000000000000196 .LASF2
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:2058   .debug_str:00000000000001ad .LASF1
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:2146   .debug_str:000000000000044e .LASF3
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:2056   .debug_str:000000000000019f .LASF4
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:1992   .debug_str:000000000000003a .LASF5
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:2010   .debug_str:0000000000000083 .LASF6
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:2098   .debug_str:000000000000030a .LASF7
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:2124   .debug_str:000000000000039f .LASF8
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:2040   .debug_str:0000000000000134 .LASF9
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:2002   .debug_str:0000000000000065 .LASF10
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:2076   .debug_str:000000000000028c .LASF11
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:2032   .debug_str:00000000000000f5 .LASF12
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:2062   .debug_str:00000000000001c1 .LASF13
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:1990   .debug_str:0000000000000033 .LASF14
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:2020   .debug_str:00000000000000b9 .LASF15
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:2072   .debug_str:0000000000000274 .LASF16
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:2060   .debug_str:00000000000001b9 .LASF17
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:2066   .debug_str:0000000000000252 .LASF18
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:2104   .debug_str:000000000000032d .LASF19
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:2140   .debug_str:0000000000000423 .LASF20
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:2038   .debug_str:0000000000000124 .LASF21
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:2094   .debug_str:00000000000002f3 .LASF22
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:2050   .debug_str:0000000000000175 .LASF23
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:2142   .debug_str:0000000000000434 .LASF24
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:2148   .debug_str:0000000000000458 .LASF25
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:2110   .debug_str:0000000000000352 .LASF26
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:2052   .debug_str:0000000000000186 .LASF27
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:2044   .debug_str:000000000000014b .LASF28
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:2136   .debug_str:0000000000000400 .LASF29
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:2012   .debug_str:000000000000008e .LASF35
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:2116   .debug_str:0000000000000379 .LASF34
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:1998   .debug_str:0000000000000056 .LASF30
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:2086   .debug_str:00000000000002cd .LASF31
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:2006   .debug_str:0000000000000075 .LASF32
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:2134   .debug_str:00000000000003fb .LASF33
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:2048   .debug_str:0000000000000165 .LASF36
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:1984   .debug_str:000000000000000f .LASF37
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:2068   .debug_str:000000000000025b .LASF38
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:1982   .debug_str:0000000000000000 .LASF80
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:2128   .debug_str:00000000000003b5 .LASF39
+GAS LISTING C:\Users\test\AppData\Local\Temp\cchOJDch.s 			page 11
 
 
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:1521   .debug_str:0000000000000146 .LASF4
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:1475   .debug_str:000000000000003a .LASF5
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:1487   .debug_str:000000000000006a .LASF6
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:1549   .debug_str:000000000000026f .LASF7
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:1507   .debug_str:00000000000000e9 .LASF8
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:1483   .debug_str:000000000000005a .LASF9
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:1563   .debug_str:00000000000002ca .LASF10
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:1499   .debug_str:00000000000000aa .LASF11
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:1525   .debug_str:0000000000000160 .LASF12
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:1473   .debug_str:0000000000000033 .LASF13
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:1493   .debug_str:0000000000000085 .LASF14
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:1535   .debug_str:0000000000000213 .LASF15
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:1529   .debug_str:00000000000001f1 .LASF16
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:1555   .debug_str:0000000000000292 .LASF17
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:1579   .debug_str:0000000000000356 .LASF18
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:1505   .debug_str:00000000000000d9 .LASF19
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:1547   .debug_str:000000000000025f .LASF20
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:1515   .debug_str:000000000000011c .LASF21
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:1581   .debug_str:0000000000000367 .LASF22
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:1587   .debug_str:000000000000038b .LASF23
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:1557   .debug_str:00000000000002a2 .LASF24
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:1517   .debug_str:000000000000012d .LASF25
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:1509   .debug_str:00000000000000f2 .LASF26
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:1575   .debug_str:0000000000000333 .LASF27
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:1489   .debug_str:0000000000000075 .LASF33
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:1561   .debug_str:00000000000002c2 .LASF32
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:1479   .debug_str:000000000000004b .LASF28
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:1541   .debug_str:000000000000023e .LASF29
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:1485   .debug_str:0000000000000065 .LASF30
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:1573   .debug_str:000000000000032e .LASF31
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:1513   .debug_str:000000000000010c .LASF34
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:1467   .debug_str:000000000000000f .LASF35
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:1531   .debug_str:00000000000001fa .LASF36
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:1465   .debug_str:0000000000000000 .LASF59
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:1567   .debug_str:00000000000002e8 .LASF37
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:1565   .debug_str:00000000000002dc .LASF38
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:1537   .debug_str:000000000000021c .LASF39
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:1501   .debug_str:00000000000000b8 .LASF40
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:1577   .debug_str:0000000000000345 .LASF41
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:1559   .debug_str:00000000000002b2 .LASF42
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:1495   .debug_str:000000000000008d .LASF43
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:1511   .debug_str:0000000000000102 .LASF44
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:1583   .debug_str:0000000000000377 .LASF45
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:1503   .debug_str:00000000000000c7 .LASF46
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:1471   .debug_str:0000000000000021 .LASF47
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:1571   .debug_str:0000000000000323 .LASF48
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:1477   .debug_str:0000000000000044 .LASF49
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:1553   .debug_str:000000000000028b .LASF50
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:1545   .debug_str:0000000000000258 .LASF51
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:1469   .debug_str:0000000000000014 .LASF60
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:1481   .debug_str:0000000000000055 .LASF61
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:11     .text.startup.main:0000000000000000 .LFB16
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:140    .text.startup.main:000000000000006a .LFE16
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:1367   .debug_loc:0000000000000000 .LLST0
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:17     .text.startup.main:0000000000000000 .LBB14
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:1380   .debug_loc:0000000000000020 .LLST1
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:68     .text.startup.main:0000000000000026 .LVL1
-GAS LISTING C:\Users\test\AppData\Local\Temp\cc1106j5.s 			page 8
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:2126   .debug_str:00000000000003a9 .LASF40
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:2074   .debug_str:000000000000027d .LASF41
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:2034   .debug_str:0000000000000103 .LASF42
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:2138   .debug_str:0000000000000412 .LASF43
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:2114   .debug_str:0000000000000369 .LASF44
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:2022   .debug_str:00000000000000c1 .LASF45
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:2046   .debug_str:000000000000015b .LASF46
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:2144   .debug_str:0000000000000444 .LASF47
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:2036   .debug_str:0000000000000112 .LASF48
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:1988   .debug_str:0000000000000021 .LASF49
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:2132   .debug_str:00000000000003f0 .LASF50
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:1996   .debug_str:000000000000004f .LASF51
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:2102   .debug_str:0000000000000326 .LASF52
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:2092   .debug_str:00000000000002ec .LASF53
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:1986   .debug_str:0000000000000014 .LASF81
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:2122   .debug_str:0000000000000393 .LASF54
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:2004   .debug_str:0000000000000070 .LASF55
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:2096   .debug_str:0000000000000303 .LASF56
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:2024   .debug_str:00000000000000cf .LASF57
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:2030   .debug_str:00000000000000ed .LASF58
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:2018   .debug_str:00000000000000a9 .LASF59
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:2008   .debug_str:000000000000007a .LASF60
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:2078   .debug_str:000000000000029e .LASF61
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:2120   .debug_str:000000000000038c .LASF62
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:2042   .debug_str:000000000000013d .LASF63
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:2082   .debug_str:00000000000002b0 .LASF64
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:2118   .debug_str:0000000000000381 .LASF65
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:2080   .debug_str:00000000000002a4 .LASF66
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:1994   .debug_str:0000000000000044 .LASF67
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:2028   .debug_str:00000000000000e8 .LASF68
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:2000   .debug_str:0000000000000060 .LASF82
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:11     .text.startup.main:0000000000000000 .LFB22
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:195    .text.startup.main:00000000000000a2 .LFE22
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:1837   .debug_loc:0000000000000000 .LLST0
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:2108   .debug_str:000000000000034d .LASF83
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:17     .text.startup.main:0000000000000000 .LBB18
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:1850   .debug_loc:0000000000000020 .LLST1
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:74     .text.startup.main:000000000000002c .LVL1
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:78     .text.startup.main:000000000000002c .LBB28
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:1859   .debug_loc:0000000000000038 .LLST2
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:1867   .debug_loc:000000000000004c .LLST3
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:101    .text.startup.main:0000000000000042 .LVL2
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:89     .text.startup.main:0000000000000038 .LBB31
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:1876   .debug_loc:0000000000000064 .LLST4
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:120    .text.startup.main:000000000000005a .LVL3
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:130    .text.startup.main:0000000000000062 .LBB36
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:142    .text.startup.main:0000000000000070 .LBE36
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:1885   .debug_loc:000000000000007c .LLST5
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:1893   .debug_loc:0000000000000090 .LLST6
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:140    .text.startup.main:0000000000000070 .LVL5
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:144    .text.startup.main:0000000000000070 .LBB38
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:153    .text.startup.main:0000000000000078 .LBE38
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:1902   .debug_loc:00000000000000a8 .LLST7
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:151    .text.startup.main:0000000000000078 .LVL6
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:155    .text.startup.main:0000000000000078 .LBB40
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:167    .text.startup.main:0000000000000086 .LBE40
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:1911   .debug_loc:00000000000000be .LLST8
+GAS LISTING C:\Users\test\AppData\Local\Temp\cchOJDch.s 			page 12
 
 
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:72     .text.startup.main:0000000000000026 .LBB24
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:87     .text.startup.main:000000000000003c .LBE24
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:84     .text.startup.main:000000000000003c .LVL2
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:90     .text.startup.main:000000000000003c .LBB26
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:102    .text.startup.main:000000000000004a .LBE26
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:1389   .debug_loc:0000000000000038 .LLST2
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:1397   .debug_loc:000000000000004c .LLST3
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:100    .text.startup.main:000000000000004a .LVL3
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:104    .text.startup.main:000000000000004a .LBB28
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:113    .text.startup.main:0000000000000052 .LBE28
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:1406   .debug_loc:0000000000000064 .LLST4
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:111    .text.startup.main:0000000000000052 .LVL4
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:115    .text.startup.main:0000000000000052 .LBB30
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:127    .text.startup.main:0000000000000060 .LBE30
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:1415   .debug_loc:000000000000007a .LLST5
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:1423   .debug_loc:000000000000008e .LLST6
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:125    .text.startup.main:0000000000000060 .LVL5
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:129    .text.startup.main:0000000000000060 .LBB32
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:138    .text.startup.main:000000000000006a .LBE32
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:135    .text.startup.main:0000000000000068 .LVL6
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:1497   .debug_str:000000000000009b .LASF52
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:1491   .debug_str:000000000000007f .LASF53
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:1539   .debug_str:000000000000022b .LASF54
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:1551   .debug_str:0000000000000282 .LASF55
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:27     .text.startup.main:0000000000000006 .LCFI0
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:16     .text.startup.main:0000000000000000 .LVL0
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:159    .debug_info:0000000000000000 .Ldebug_info0
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:24     .text.startup.main:0000000000000004 .LBE14
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:29     .text.startup.main:0000000000000006 .LBB20
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:36     .text.startup.main:000000000000000c .LBE20
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:40     .text.startup.main:000000000000000e .LBB21
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:45     .text.startup.main:0000000000000012 .LBE21
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:49     .text.startup.main:0000000000000014 .LBB22
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:54     .text.startup.main:0000000000000018 .LBE22
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:60     .text.startup.main:000000000000001c .LBB23
-C:\Users\test\AppData\Local\Temp\cc1106j5.s:70     .text.startup.main:0000000000000026 .LBE23
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:1919   .debug_loc:00000000000000d2 .LLST9
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:165    .text.startup.main:0000000000000086 .LVL7
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:169    .text.startup.main:0000000000000086 .LBB42
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:177    .text.startup.main:000000000000008e .LBE42
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:1928   .debug_loc:00000000000000ea .LLST10
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:175    .text.startup.main:000000000000008e .LVL8
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:179    .text.startup.main:000000000000008e .LBB44
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:193    .text.startup.main:00000000000000a2 .LBE44
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:190    .text.startup.main:00000000000000a0 .LVL9
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:2090   .debug_str:00000000000002e7 .LASF69
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:2106   .debug_str:000000000000033d .LASF71
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:2112   .debug_str:0000000000000362 .LASF70
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:2016   .debug_str:000000000000009e .LASF72
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:2026   .debug_str:00000000000000d9 .LASF73
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:2014   .debug_str:0000000000000098 .LASF74
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:2084   .debug_str:00000000000002ba .LASF75
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:2100   .debug_str:000000000000031d .LASF76
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:27     .text.startup.main:0000000000000006 .LCFI0
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:16     .text.startup.main:0000000000000000 .LVL0
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:129    .text.startup.main:0000000000000062 .LVL4
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:229    .debug_info:0000000000000000 .Ldebug_info0
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:24     .text.startup.main:0000000000000004 .LBE18
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:29     .text.startup.main:0000000000000006 .LBB24
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:36     .text.startup.main:000000000000000c .LBE24
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:40     .text.startup.main:000000000000000e .LBB25
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:45     .text.startup.main:0000000000000012 .LBE25
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:49     .text.startup.main:0000000000000014 .LBB26
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:54     .text.startup.main:0000000000000018 .LBE26
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:66     .text.startup.main:0000000000000022 .LBB27
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:76     .text.startup.main:000000000000002c .LBE27
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:88     .text.startup.main:0000000000000038 .LBE28
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:97     .text.startup.main:0000000000000040 .LBB34
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:103    .text.startup.main:0000000000000042 .LBE34
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:96     .text.startup.main:0000000000000040 .LBE31
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:105    .text.startup.main:0000000000000042 .LBB35
+C:\Users\test\AppData\Local\Temp\cchOJDch.s:122    .text.startup.main:000000000000005a .LBE35
 
 UNDEFINED SYMBOLS
 __gpio_core_init
+__uart_core_init
 __delay_core_init

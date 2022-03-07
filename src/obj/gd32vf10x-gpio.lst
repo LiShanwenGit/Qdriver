@@ -1,4 +1,4 @@
-GAS LISTING C:\Users\test\AppData\Local\Temp\cc0jn5wk.s 			page 1
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccHxcGVm.s 			page 1
 
 
    1              		.file	"gd32vf10x-gpio.c"
@@ -58,7 +58,7 @@ GAS LISTING C:\Users\test\AppData\Local\Temp\cc0jn5wk.s 			page 1
   25:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-gpio.c ****     *((volatile uint64_t*)(uint64_t)(GPIO_BASE + (GPIO_NUM2PORT(gpio_desp->pin_num)*0x400U))) &= 
   32              		.loc 1 25 95
   33 001a B7051000 		li	a1,1048576
-GAS LISTING C:\Users\test\AppData\Local\Temp\cc0jn5wk.s 			page 2
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccHxcGVm.s 			page 2
 
 
   34 001e 93852504 		addi	a1,a1,66
@@ -118,7 +118,7 @@ GAS LISTING C:\Users\test\AppData\Local\Temp\cc0jn5wk.s 			page 1
   76              		.loc 1 28 95
   77 0066 88C3     		sw	a0,0(a5)
   78 0068 B3651301 		or	a1,t1,a7
-GAS LISTING C:\Users\test\AppData\Local\Temp\cc0jn5wk.s 			page 3
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccHxcGVm.s 			page 3
 
 
   79 006c CCC3     		sw	a1,4(a5)
@@ -178,7 +178,7 @@ GAS LISTING C:\Users\test\AppData\Local\Temp\cc0jn5wk.s 			page 1
  122              		.loc 1 39 10
  123 0026 3317C700 		sll	a4,a4,a2
  124              		.loc 1 39 5
-GAS LISTING C:\Users\test\AppData\Local\Temp\cc0jn5wk.s 			page 4
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccHxcGVm.s 			page 4
 
 
  125 002a 1347F7FF 		not	a4,a4
@@ -238,7 +238,7 @@ GAS LISTING C:\Users\test\AppData\Local\Temp\cc0jn5wk.s 			page 1
  165 007a D8C7     		sw	a4,12(a5)
  166              	.L3:
   50:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-gpio.c ****     }
-GAS LISTING C:\Users\test\AppData\Local\Temp\cc0jn5wk.s 			page 5
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccHxcGVm.s 			page 5
 
 
   51:arch/riscv/mach-gd32vf10x/drivers/gd32vf10x-gpio.c **** }
@@ -298,7 +298,7 @@ GAS LISTING C:\Users\test\AppData\Local\Temp\cc0jn5wk.s 			page 1
  208              		.loc 1 64 1
  209 002c 8280     		ret
  210              		.cfi_endproc
-GAS LISTING C:\Users\test\AppData\Local\Temp\cc0jn5wk.s 			page 6
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccHxcGVm.s 			page 6
 
 
  211              	.LFE9:
@@ -358,7 +358,7 @@ GAS LISTING C:\Users\test\AppData\Local\Temp\cc0jn5wk.s 			page 1
  262 0008 00000000 		.word	gd32vf_gpio_set_direction
  263 000c 00000000 		.word	gd32vf_gpio_set_value
  264 0010 00000000 		.word	gd32vf_gpio_get_value
-GAS LISTING C:\Users\test\AppData\Local\Temp\cc0jn5wk.s 			page 7
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccHxcGVm.s 			page 7
 
 
  265 0014 00000000 		.word	gd32vf_gpio_put
@@ -369,216 +369,216 @@ GAS LISTING C:\Users\test\AppData\Local\Temp\cc0jn5wk.s 			page 1
  270              		.file 4 "core/module.h"
  271              		.file 5 "core/gpio-core.h"
  272              		.file 6 "arch/riscv/mach-gd32vf10x/system/system_gd32vf103.h"
-GAS LISTING C:\Users\test\AppData\Local\Temp\cc0jn5wk.s 			page 8
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccHxcGVm.s 			page 8
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 gd32vf10x-gpio.c
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:9      .text.gd32vf_gpio_get:0000000000000000 gd32vf_gpio_get
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:13     .text.gd32vf_gpio_get:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:15     .text.gd32vf_gpio_get:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:16     .text.gd32vf_gpio_get:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:17     .text.gd32vf_gpio_get:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:19     .text.gd32vf_gpio_get:0000000000000004 .L0 
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:23     .text.gd32vf_gpio_get:000000000000000a .L0 
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:25     .text.gd32vf_gpio_get:000000000000000e .L0 
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:27     .text.gd32vf_gpio_get:0000000000000010 .L0 
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:29     .text.gd32vf_gpio_get:0000000000000014 .L0 
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:31     .text.gd32vf_gpio_get:0000000000000018 .L0 
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:33     .text.gd32vf_gpio_get:000000000000001a .L0 
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:37     .text.gd32vf_gpio_get:0000000000000024 .L0 
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:39     .text.gd32vf_gpio_get:0000000000000026 .L0 
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:40     .text.gd32vf_gpio_get:0000000000000026 .L0 
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:42     .text.gd32vf_gpio_get:0000000000000028 .L0 
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:44     .text.gd32vf_gpio_get:000000000000002a .L0 
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:46     .text.gd32vf_gpio_get:000000000000002e .L0 
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:48     .text.gd32vf_gpio_get:0000000000000032 .L0 
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:50     .text.gd32vf_gpio_get:0000000000000034 .L0 
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:52     .text.gd32vf_gpio_get:0000000000000038 .L0 
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:54     .text.gd32vf_gpio_get:000000000000003c .L0 
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:56     .text.gd32vf_gpio_get:0000000000000040 .L0 
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:58     .text.gd32vf_gpio_get:0000000000000044 .L0 
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:60     .text.gd32vf_gpio_get:0000000000000048 .L0 
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:64     .text.gd32vf_gpio_get:0000000000000050 .L0 
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:65     .text.gd32vf_gpio_get:0000000000000050 .L0 
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:67     .text.gd32vf_gpio_get:0000000000000054 .L0 
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:69     .text.gd32vf_gpio_get:0000000000000056 .L0 
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:71     .text.gd32vf_gpio_get:000000000000005a .L0 
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:73     .text.gd32vf_gpio_get:000000000000005e .L0 
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:75     .text.gd32vf_gpio_get:0000000000000062 .L0 
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:77     .text.gd32vf_gpio_get:0000000000000066 .L0 
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:81     .text.gd32vf_gpio_get:000000000000006e .L0 
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:82     .text.gd32vf_gpio_get:000000000000006e .L0 
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:84     .text.gd32vf_gpio_get:0000000000000070 .L0 
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:86     .text.gd32vf_gpio_get:0000000000000074 .L0 
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:88     .text.gd32vf_gpio_get:0000000000000078 .L0 
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:91     .text.gd32vf_gpio_get:000000000000007c .L0 
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:92     .text.gd32vf_gpio_get:000000000000007e .L0 
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:98     .text.gd32vf_gpio_set_direction:0000000000000000 gd32vf_gpio_set_direction
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:101    .text.gd32vf_gpio_set_direction:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:103    .text.gd32vf_gpio_set_direction:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:104    .text.gd32vf_gpio_set_direction:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:105    .text.gd32vf_gpio_set_direction:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:107    .text.gd32vf_gpio_set_direction:0000000000000004 .L0 
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:113    .text.gd32vf_gpio_set_direction:0000000000000014 .L0 
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:115    .text.gd32vf_gpio_set_direction:0000000000000018 .L0 
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:117    .text.gd32vf_gpio_set_direction:000000000000001c .L0 
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:119    .text.gd32vf_gpio_set_direction:0000000000000020 .L0 
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:121    .text.gd32vf_gpio_set_direction:0000000000000022 .L0 
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:123    .text.gd32vf_gpio_set_direction:0000000000000026 .L0 
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:125    .text.gd32vf_gpio_set_direction:000000000000002a .L0 
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:128    .text.gd32vf_gpio_set_direction:0000000000000032 .L0 
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:133    .text.gd32vf_gpio_set_direction:0000000000000042 .L0 
-GAS LISTING C:\Users\test\AppData\Local\Temp\cc0jn5wk.s 			page 9
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:9      .text.gd32vf_gpio_get:0000000000000000 gd32vf_gpio_get
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:13     .text.gd32vf_gpio_get:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:15     .text.gd32vf_gpio_get:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:16     .text.gd32vf_gpio_get:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:17     .text.gd32vf_gpio_get:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:19     .text.gd32vf_gpio_get:0000000000000004 .L0 
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:23     .text.gd32vf_gpio_get:000000000000000a .L0 
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:25     .text.gd32vf_gpio_get:000000000000000e .L0 
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:27     .text.gd32vf_gpio_get:0000000000000010 .L0 
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:29     .text.gd32vf_gpio_get:0000000000000014 .L0 
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:31     .text.gd32vf_gpio_get:0000000000000018 .L0 
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:33     .text.gd32vf_gpio_get:000000000000001a .L0 
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:37     .text.gd32vf_gpio_get:0000000000000024 .L0 
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:39     .text.gd32vf_gpio_get:0000000000000026 .L0 
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:40     .text.gd32vf_gpio_get:0000000000000026 .L0 
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:42     .text.gd32vf_gpio_get:0000000000000028 .L0 
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:44     .text.gd32vf_gpio_get:000000000000002a .L0 
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:46     .text.gd32vf_gpio_get:000000000000002e .L0 
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:48     .text.gd32vf_gpio_get:0000000000000032 .L0 
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:50     .text.gd32vf_gpio_get:0000000000000034 .L0 
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:52     .text.gd32vf_gpio_get:0000000000000038 .L0 
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:54     .text.gd32vf_gpio_get:000000000000003c .L0 
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:56     .text.gd32vf_gpio_get:0000000000000040 .L0 
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:58     .text.gd32vf_gpio_get:0000000000000044 .L0 
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:60     .text.gd32vf_gpio_get:0000000000000048 .L0 
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:64     .text.gd32vf_gpio_get:0000000000000050 .L0 
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:65     .text.gd32vf_gpio_get:0000000000000050 .L0 
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:67     .text.gd32vf_gpio_get:0000000000000054 .L0 
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:69     .text.gd32vf_gpio_get:0000000000000056 .L0 
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:71     .text.gd32vf_gpio_get:000000000000005a .L0 
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:73     .text.gd32vf_gpio_get:000000000000005e .L0 
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:75     .text.gd32vf_gpio_get:0000000000000062 .L0 
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:77     .text.gd32vf_gpio_get:0000000000000066 .L0 
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:81     .text.gd32vf_gpio_get:000000000000006e .L0 
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:82     .text.gd32vf_gpio_get:000000000000006e .L0 
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:84     .text.gd32vf_gpio_get:0000000000000070 .L0 
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:86     .text.gd32vf_gpio_get:0000000000000074 .L0 
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:88     .text.gd32vf_gpio_get:0000000000000078 .L0 
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:91     .text.gd32vf_gpio_get:000000000000007c .L0 
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:92     .text.gd32vf_gpio_get:000000000000007e .L0 
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:98     .text.gd32vf_gpio_set_direction:0000000000000000 gd32vf_gpio_set_direction
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:101    .text.gd32vf_gpio_set_direction:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:103    .text.gd32vf_gpio_set_direction:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:104    .text.gd32vf_gpio_set_direction:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:105    .text.gd32vf_gpio_set_direction:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:107    .text.gd32vf_gpio_set_direction:0000000000000004 .L0 
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:113    .text.gd32vf_gpio_set_direction:0000000000000014 .L0 
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:115    .text.gd32vf_gpio_set_direction:0000000000000018 .L0 
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:117    .text.gd32vf_gpio_set_direction:000000000000001c .L0 
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:119    .text.gd32vf_gpio_set_direction:0000000000000020 .L0 
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:121    .text.gd32vf_gpio_set_direction:0000000000000022 .L0 
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:123    .text.gd32vf_gpio_set_direction:0000000000000026 .L0 
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:125    .text.gd32vf_gpio_set_direction:000000000000002a .L0 
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:128    .text.gd32vf_gpio_set_direction:0000000000000032 .L0 
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:133    .text.gd32vf_gpio_set_direction:0000000000000042 .L0 
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccHxcGVm.s 			page 9
 
 
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:134    .text.gd32vf_gpio_set_direction:0000000000000042 .L0 
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:136    .text.gd32vf_gpio_set_direction:0000000000000044 .L0 
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:137    .text.gd32vf_gpio_set_direction:0000000000000044 .L0 
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:139    .text.gd32vf_gpio_set_direction:0000000000000048 .L0 
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:141    .text.gd32vf_gpio_set_direction:000000000000004a .L0 
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:143    .text.gd32vf_gpio_set_direction:000000000000004e .L0 
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:146    .text.gd32vf_gpio_set_direction:0000000000000056 .L0 
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:152    .text.gd32vf_gpio_set_direction:0000000000000066 .L0 
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:153    .text.gd32vf_gpio_set_direction:0000000000000066 .L0 
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:155    .text.gd32vf_gpio_set_direction:000000000000006a .L0 
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:158    .text.gd32vf_gpio_set_direction:0000000000000070 .L0 
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:159    .text.gd32vf_gpio_set_direction:0000000000000070 .L0 
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:161    .text.gd32vf_gpio_set_direction:0000000000000072 .L0 
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:164    .text.gd32vf_gpio_set_direction:0000000000000078 .L0 
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:168    .text.gd32vf_gpio_set_direction:000000000000007c .L0 
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:169    .text.gd32vf_gpio_set_direction:000000000000007e .L0 
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:175    .text.gd32vf_gpio_set_value:0000000000000000 gd32vf_gpio_set_value
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:178    .text.gd32vf_gpio_set_value:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:180    .text.gd32vf_gpio_set_value:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:181    .text.gd32vf_gpio_set_value:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:182    .text.gd32vf_gpio_set_value:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:184    .text.gd32vf_gpio_set_value:0000000000000004 .L0 
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:192    .text.gd32vf_gpio_set_value:0000000000000016 .L0 
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:195    .text.gd32vf_gpio_set_value:000000000000001c .L0 
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:197    .text.gd32vf_gpio_set_value:0000000000000020 .L0 
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:200    .text.gd32vf_gpio_set_value:0000000000000024 .L0 
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:201    .text.gd32vf_gpio_set_value:0000000000000024 .L0 
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:203    .text.gd32vf_gpio_set_value:0000000000000026 .L0 
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:204    .text.gd32vf_gpio_set_value:0000000000000026 .L0 
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:209    .text.gd32vf_gpio_set_value:000000000000002c .L0 
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:210    .text.gd32vf_gpio_set_value:000000000000002e .L0 
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:216    .text.gd32vf_gpio_get_value:0000000000000000 gd32vf_gpio_get_value
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:219    .text.gd32vf_gpio_get_value:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:221    .text.gd32vf_gpio_get_value:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:222    .text.gd32vf_gpio_get_value:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:223    .text.gd32vf_gpio_get_value:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:225    .text.gd32vf_gpio_get_value:0000000000000004 .L0 
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:228    .text.gd32vf_gpio_get_value:000000000000000c .L0 
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:230    .text.gd32vf_gpio_get_value:000000000000000e .L0 
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:232    .text.gd32vf_gpio_get_value:0000000000000010 .L0 
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:234    .text.gd32vf_gpio_get_value:0000000000000012 .L0 
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:237    .text.gd32vf_gpio_get_value:0000000000000014 .L0 
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:238    .text.gd32vf_gpio_get_value:0000000000000016 .L0 
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:244    .text.gd32vf_gpio_put:0000000000000000 gd32vf_gpio_put
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:247    .text.gd32vf_gpio_put:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:249    .text.gd32vf_gpio_put:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:250    .text.gd32vf_gpio_put:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:251    .text.gd32vf_gpio_put:0000000000000002 .L0 
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:259    .__gpio_core_init:0000000000000000 gd32vf_gpio_ctrl
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:95     .text.gd32vf_gpio_get:000000000000007e .L0 
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:172    .text.gd32vf_gpio_set_direction:000000000000007e .L0 
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:213    .text.gd32vf_gpio_set_value:000000000000002e .L0 
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:241    .text.gd32vf_gpio_get_value:0000000000000016 .L0 
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:255    .text.gd32vf_gpio_put:0000000000000002 .L0 
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:134    .text.gd32vf_gpio_set_direction:0000000000000042 .L0 
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:136    .text.gd32vf_gpio_set_direction:0000000000000044 .L0 
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:137    .text.gd32vf_gpio_set_direction:0000000000000044 .L0 
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:139    .text.gd32vf_gpio_set_direction:0000000000000048 .L0 
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:141    .text.gd32vf_gpio_set_direction:000000000000004a .L0 
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:143    .text.gd32vf_gpio_set_direction:000000000000004e .L0 
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:146    .text.gd32vf_gpio_set_direction:0000000000000056 .L0 
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:152    .text.gd32vf_gpio_set_direction:0000000000000066 .L0 
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:153    .text.gd32vf_gpio_set_direction:0000000000000066 .L0 
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:155    .text.gd32vf_gpio_set_direction:000000000000006a .L0 
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:158    .text.gd32vf_gpio_set_direction:0000000000000070 .L0 
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:159    .text.gd32vf_gpio_set_direction:0000000000000070 .L0 
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:161    .text.gd32vf_gpio_set_direction:0000000000000072 .L0 
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:164    .text.gd32vf_gpio_set_direction:0000000000000078 .L0 
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:168    .text.gd32vf_gpio_set_direction:000000000000007c .L0 
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:169    .text.gd32vf_gpio_set_direction:000000000000007e .L0 
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:175    .text.gd32vf_gpio_set_value:0000000000000000 gd32vf_gpio_set_value
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:178    .text.gd32vf_gpio_set_value:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:180    .text.gd32vf_gpio_set_value:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:181    .text.gd32vf_gpio_set_value:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:182    .text.gd32vf_gpio_set_value:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:184    .text.gd32vf_gpio_set_value:0000000000000004 .L0 
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:192    .text.gd32vf_gpio_set_value:0000000000000016 .L0 
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:195    .text.gd32vf_gpio_set_value:000000000000001c .L0 
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:197    .text.gd32vf_gpio_set_value:0000000000000020 .L0 
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:200    .text.gd32vf_gpio_set_value:0000000000000024 .L0 
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:201    .text.gd32vf_gpio_set_value:0000000000000024 .L0 
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:203    .text.gd32vf_gpio_set_value:0000000000000026 .L0 
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:204    .text.gd32vf_gpio_set_value:0000000000000026 .L0 
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:209    .text.gd32vf_gpio_set_value:000000000000002c .L0 
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:210    .text.gd32vf_gpio_set_value:000000000000002e .L0 
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:216    .text.gd32vf_gpio_get_value:0000000000000000 gd32vf_gpio_get_value
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:219    .text.gd32vf_gpio_get_value:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:221    .text.gd32vf_gpio_get_value:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:222    .text.gd32vf_gpio_get_value:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:223    .text.gd32vf_gpio_get_value:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:225    .text.gd32vf_gpio_get_value:0000000000000004 .L0 
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:228    .text.gd32vf_gpio_get_value:000000000000000c .L0 
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:230    .text.gd32vf_gpio_get_value:000000000000000e .L0 
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:232    .text.gd32vf_gpio_get_value:0000000000000010 .L0 
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:234    .text.gd32vf_gpio_get_value:0000000000000012 .L0 
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:237    .text.gd32vf_gpio_get_value:0000000000000014 .L0 
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:238    .text.gd32vf_gpio_get_value:0000000000000016 .L0 
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:244    .text.gd32vf_gpio_put:0000000000000000 gd32vf_gpio_put
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:247    .text.gd32vf_gpio_put:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:249    .text.gd32vf_gpio_put:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:250    .text.gd32vf_gpio_put:0000000000000000 .L0 
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:251    .text.gd32vf_gpio_put:0000000000000002 .L0 
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:259    .__gpio_core_init:0000000000000000 gd32vf_gpio_ctrl
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:95     .text.gd32vf_gpio_get:000000000000007e .L0 
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:172    .text.gd32vf_gpio_set_direction:000000000000007e .L0 
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:213    .text.gd32vf_gpio_set_value:000000000000002e .L0 
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:241    .text.gd32vf_gpio_get_value:0000000000000016 .L0 
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:255    .text.gd32vf_gpio_put:0000000000000002 .L0 
                      .debug_frame:0000000000000000 .L0 
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:150    .text.gd32vf_gpio_set_direction:0000000000000066 .L4
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:166    .text.gd32vf_gpio_set_direction:000000000000007c .L3
-GAS LISTING C:\Users\test\AppData\Local\Temp\cc0jn5wk.s 			page 10
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:150    .text.gd32vf_gpio_set_direction:0000000000000066 .L4
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:166    .text.gd32vf_gpio_set_direction:000000000000007c .L3
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccHxcGVm.s 			page 10
 
 
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:207    .text.gd32vf_gpio_set_value:000000000000002c .L9
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:868    .debug_abbrev:0000000000000000 .Ldebug_abbrev0
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:1379   .debug_str:00000000000001cb .LASF56
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:1343   .debug_str:000000000000009b .LASF57
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:1417   .debug_str:000000000000033f .LASF58
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:1299   .debug_ranges:0000000000000000 .Ldebug_ranges0
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:1313   .debug_line:0000000000000000 .Ldebug_line0
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:1369   .debug_str:0000000000000177 .LASF0
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:1375   .debug_str:00000000000001a8 .LASF2
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:1433   .debug_str:00000000000003cf .LASF1
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:1371   .debug_str:0000000000000180 .LASF3
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:1327   .debug_str:0000000000000046 .LASF4
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:1337   .debug_str:0000000000000080 .LASF5
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:1391   .debug_str:000000000000027f .LASF6
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:1357   .debug_str:0000000000000123 .LASF7
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:1333   .debug_str:0000000000000070 .LASF8
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:1409   .debug_str:0000000000000302 .LASF9
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:1349   .debug_str:00000000000000e4 .LASF10
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:1401   .debug_str:00000000000002c1 .LASF11
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:1377   .debug_str:00000000000001b4 .LASF12
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:1385   .debug_str:000000000000025a .LASF13
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:1323   .debug_str:0000000000000036 .LASF14
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:1345   .debug_str:00000000000000ce .LASF15
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:1387   .debug_str:0000000000000267 .LASF16
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:1381   .debug_str:0000000000000245 .LASF17
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:1325   .debug_str:000000000000003d .LASF18
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:1425   .debug_str:0000000000000393 .LASF19
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:1355   .debug_str:0000000000000113 .LASF20
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:1395   .debug_str:0000000000000299 .LASF21
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:1365   .debug_str:0000000000000156 .LASF22
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:1429   .debug_str:00000000000003b5 .LASF23
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:1435   .debug_str:00000000000003d9 .LASF24
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:1405   .debug_str:00000000000002e2 .LASF25
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:1367   .debug_str:0000000000000167 .LASF26
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:1359   .debug_str:000000000000012c .LASF27
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:1421   .debug_str:0000000000000370 .LASF28
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:1339   .debug_str:000000000000008b .LASF34
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:1397   .debug_str:00000000000002a9 .LASF33
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:1331   .debug_str:0000000000000066 .LASF29
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:1393   .debug_str:0000000000000292 .LASF30
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:1335   .debug_str:000000000000007b .LASF31
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:1419   .debug_str:000000000000036b .LASF32
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:1363   .debug_str:0000000000000146 .LASF35
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:1317   .debug_str:000000000000000f .LASF36
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:1383   .debug_str:000000000000024e .LASF37
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:1315   .debug_str:0000000000000000 .LASF59
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:1415   .debug_str:0000000000000330 .LASF38
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:1413   .debug_str:0000000000000324 .LASF39
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:1389   .debug_str:0000000000000270 .LASF40
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:1351   .debug_str:00000000000000f2 .LASF41
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:1423   .debug_str:0000000000000382 .LASF42
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:1407   .debug_str:00000000000002f2 .LASF43
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:1347   .debug_str:00000000000000d6 .LASF44
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:1361   .debug_str:000000000000013c .LASF45
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:1431   .debug_str:00000000000003c5 .LASF46
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:1353   .debug_str:0000000000000101 .LASF47
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:1321   .debug_str:0000000000000024 .LASF48
-GAS LISTING C:\Users\test\AppData\Local\Temp\cc0jn5wk.s 			page 11
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:207    .text.gd32vf_gpio_set_value:000000000000002c .L9
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:868    .debug_abbrev:0000000000000000 .Ldebug_abbrev0
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:1379   .debug_str:00000000000001cb .LASF56
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:1343   .debug_str:000000000000009b .LASF57
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:1417   .debug_str:000000000000033f .LASF58
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:1299   .debug_ranges:0000000000000000 .Ldebug_ranges0
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:1313   .debug_line:0000000000000000 .Ldebug_line0
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:1369   .debug_str:0000000000000177 .LASF0
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:1375   .debug_str:00000000000001a8 .LASF2
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:1433   .debug_str:00000000000003cf .LASF1
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:1371   .debug_str:0000000000000180 .LASF3
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:1327   .debug_str:0000000000000046 .LASF4
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:1337   .debug_str:0000000000000080 .LASF5
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:1391   .debug_str:000000000000027f .LASF6
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:1357   .debug_str:0000000000000123 .LASF7
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:1333   .debug_str:0000000000000070 .LASF8
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:1409   .debug_str:0000000000000302 .LASF9
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:1349   .debug_str:00000000000000e4 .LASF10
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:1401   .debug_str:00000000000002c1 .LASF11
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:1377   .debug_str:00000000000001b4 .LASF12
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:1385   .debug_str:000000000000025a .LASF13
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:1323   .debug_str:0000000000000036 .LASF14
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:1345   .debug_str:00000000000000ce .LASF15
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:1387   .debug_str:0000000000000267 .LASF16
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:1381   .debug_str:0000000000000245 .LASF17
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:1325   .debug_str:000000000000003d .LASF18
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:1425   .debug_str:0000000000000393 .LASF19
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:1355   .debug_str:0000000000000113 .LASF20
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:1395   .debug_str:0000000000000299 .LASF21
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:1365   .debug_str:0000000000000156 .LASF22
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:1429   .debug_str:00000000000003b5 .LASF23
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:1435   .debug_str:00000000000003d9 .LASF24
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:1405   .debug_str:00000000000002e2 .LASF25
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:1367   .debug_str:0000000000000167 .LASF26
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:1359   .debug_str:000000000000012c .LASF27
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:1421   .debug_str:0000000000000370 .LASF28
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:1339   .debug_str:000000000000008b .LASF34
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:1397   .debug_str:00000000000002a9 .LASF33
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:1331   .debug_str:0000000000000066 .LASF29
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:1393   .debug_str:0000000000000292 .LASF30
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:1335   .debug_str:000000000000007b .LASF31
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:1419   .debug_str:000000000000036b .LASF32
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:1363   .debug_str:0000000000000146 .LASF35
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:1317   .debug_str:000000000000000f .LASF36
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:1383   .debug_str:000000000000024e .LASF37
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:1315   .debug_str:0000000000000000 .LASF59
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:1415   .debug_str:0000000000000330 .LASF38
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:1413   .debug_str:0000000000000324 .LASF39
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:1389   .debug_str:0000000000000270 .LASF40
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:1351   .debug_str:00000000000000f2 .LASF41
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:1423   .debug_str:0000000000000382 .LASF42
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:1407   .debug_str:00000000000002f2 .LASF43
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:1347   .debug_str:00000000000000d6 .LASF44
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:1361   .debug_str:000000000000013c .LASF45
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:1431   .debug_str:00000000000003c5 .LASF46
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:1353   .debug_str:0000000000000101 .LASF47
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:1321   .debug_str:0000000000000024 .LASF48
+GAS LISTING C:\Users\test\AppData\Local\Temp\ccHxcGVm.s 			page 11
 
 
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:1399   .debug_str:00000000000002b1 .LASF49
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:1427   .debug_str:00000000000003a4 .LASF50
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:1319   .debug_str:0000000000000014 .LASF51
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:245    .text.gd32vf_gpio_put:0000000000000000 .LFB11
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:252    .text.gd32vf_gpio_put:0000000000000002 .LFE11
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:1403   .debug_str:00000000000002cc .LASF60
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:217    .text.gd32vf_gpio_get_value:0000000000000000 .LFB10
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:239    .text.gd32vf_gpio_get_value:0000000000000016 .LFE10
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:1236   .debug_loc:0000000000000000 .LLST2
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:1329   .debug_str:0000000000000050 .LASF52
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:176    .text.gd32vf_gpio_set_value:0000000000000000 .LFB9
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:211    .text.gd32vf_gpio_set_value:000000000000002e .LFE9
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:1250   .debug_loc:0000000000000021 .LLST1
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:1341   .debug_str:0000000000000095 .LASF53
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:1373   .debug_str:000000000000018e .LASF54
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:99     .text.gd32vf_gpio_set_direction:0000000000000000 .LFB8
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:170    .text.gd32vf_gpio_set_direction:000000000000007e .LFE8
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:1411   .debug_str:0000000000000314 .LASF55
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:10     .text.gd32vf_gpio_get:0000000000000000 .LFB7
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:93     .text.gd32vf_gpio_get:000000000000007e .LFE7
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:1264   .debug_loc:0000000000000042 .LLST0
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:220    .text.gd32vf_gpio_get_value:0000000000000000 .LVL5
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:235    .text.gd32vf_gpio_get_value:0000000000000014 .LVL6
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:179    .text.gd32vf_gpio_set_value:0000000000000000 .LVL3
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:190    .text.gd32vf_gpio_set_value:0000000000000016 .LVL4
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:14     .text.gd32vf_gpio_get:0000000000000000 .LVL0
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:20     .text.gd32vf_gpio_get:0000000000000008 .LVL1
-C:\Users\test\AppData\Local\Temp\cc0jn5wk.s:274    .debug_info:0000000000000000 .Ldebug_info0
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:1399   .debug_str:00000000000002b1 .LASF49
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:1427   .debug_str:00000000000003a4 .LASF50
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:1319   .debug_str:0000000000000014 .LASF51
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:245    .text.gd32vf_gpio_put:0000000000000000 .LFB11
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:252    .text.gd32vf_gpio_put:0000000000000002 .LFE11
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:1403   .debug_str:00000000000002cc .LASF60
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:217    .text.gd32vf_gpio_get_value:0000000000000000 .LFB10
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:239    .text.gd32vf_gpio_get_value:0000000000000016 .LFE10
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:1236   .debug_loc:0000000000000000 .LLST2
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:1329   .debug_str:0000000000000050 .LASF52
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:176    .text.gd32vf_gpio_set_value:0000000000000000 .LFB9
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:211    .text.gd32vf_gpio_set_value:000000000000002e .LFE9
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:1250   .debug_loc:0000000000000021 .LLST1
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:1341   .debug_str:0000000000000095 .LASF53
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:1373   .debug_str:000000000000018e .LASF54
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:99     .text.gd32vf_gpio_set_direction:0000000000000000 .LFB8
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:170    .text.gd32vf_gpio_set_direction:000000000000007e .LFE8
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:1411   .debug_str:0000000000000314 .LASF55
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:10     .text.gd32vf_gpio_get:0000000000000000 .LFB7
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:93     .text.gd32vf_gpio_get:000000000000007e .LFE7
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:1264   .debug_loc:0000000000000042 .LLST0
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:220    .text.gd32vf_gpio_get_value:0000000000000000 .LVL5
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:235    .text.gd32vf_gpio_get_value:0000000000000014 .LVL6
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:179    .text.gd32vf_gpio_set_value:0000000000000000 .LVL3
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:190    .text.gd32vf_gpio_set_value:0000000000000016 .LVL4
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:14     .text.gd32vf_gpio_get:0000000000000000 .LVL0
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:20     .text.gd32vf_gpio_get:0000000000000008 .LVL1
+C:\Users\test\AppData\Local\Temp\ccHxcGVm.s:274    .debug_info:0000000000000000 .Ldebug_info0
 
 NO UNDEFINED SYMBOLS

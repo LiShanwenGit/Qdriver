@@ -6,6 +6,7 @@
 typedef struct uart_device
 {
     uint8_t  uart;
+    uint8_t  irq_en;
     uint32_t baud_rate;
     struct   uart_controller *ctrller;
     

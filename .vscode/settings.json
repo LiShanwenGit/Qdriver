@@ -10,6 +10,7 @@
         "delay-core.h": "c",
         "irq-core.h": "c",
         "i2c-gpio-core.h": "c",
-        "i2c-core.h": "c"
+        "i2c-core.h": "c",
+        "uart-core.h": "c"
     }
 }

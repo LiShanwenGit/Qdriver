@@ -4,8 +4,7 @@
 #define GPIO2PORT_SHIFT     (5)
 #define GPIO2PORT_MASK      (31)
 
-#define GPIO_NUM2PORT(num)  ((num)>>GPIO2PORT_SHIFT)
-#define GPIO_NUM2PIN(num)   ((num)&GPIO2PORT_MASK)
+
 
 /**************************************************************************************************
 #define GPIOA                      (GPIO_BASE + 0x00000000U)

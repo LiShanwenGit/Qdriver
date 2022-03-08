@@ -63,6 +63,13 @@ extern gpio_controller_t module __attribute__((section(".__dac_core_init")))
 #define MACH_DELAY_ADD(module)  \
 extern struct delay_core module __attribute__((section(".__delay_core_init")))
 
+
+#define GPIO2PORT_SHIFT     (5)
+#define GPIO2PORT_MASK      (31)
+
+#define GPIO_NUM2PORT(num)  ((num)>>GPIO2PORT_SHIFT)
+#define GPIO_NUM2PIN(num)   ((num)&GPIO2PORT_MASK)
+
 // /*
 
 // */

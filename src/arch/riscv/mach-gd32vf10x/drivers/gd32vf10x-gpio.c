@@ -84,5 +84,4 @@ gpio_controller_t  gd32vf_gpio_ctrl =
     },
 };
 
-
 MACH_GPIO_ADD(gd32vf_gpio_ctrl);

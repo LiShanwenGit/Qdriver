@@ -10,7 +10,6 @@
 #define NULL ((void *)0)
 #endif
 
-
 extern uint32_t __gpio_core_init;
 extern uint32_t __spi_core_init;
 extern uint32_t __i2c_core_init;
@@ -21,6 +20,7 @@ extern uint32_t __adc_core_init;
 extern uint32_t __dac_core_init;
 extern uint32_t __pwm_core_init;
 extern uint32_t __delay_core_init;
+
 
 #define __gpio_init     __attribute__((section(".__gpio_core_init")))
 #define __spi_init      __attribute__((section(".__spi_core_init")))

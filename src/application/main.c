@@ -21,6 +21,7 @@ int main(void)
     gpio_get(&led); //申请一个GPIO资源
     gpio_set_direction(&led,GPIO_PP_OUTPUT);//设置GPIO为推挽输出
     uart_probe(&tty0);
+    delay_probe();
     mdelay(1000);
     char test[100] = "hello Qdriver 9079613232342414";
     while (1)

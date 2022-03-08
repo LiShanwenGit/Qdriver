@@ -274,7 +274,7 @@ LOAD e:/nxp_mcu/ft1_mcu_make/toolschain/bin/../lib/gcc/arm-none-eabi/10.2.1/thum
 .eh_frame       0x0800010c        0x0
  .eh_frame      0x0800010c        0x0 e:/nxp_mcu/ft1_mcu_make/toolschain/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v7-m/nofp/crtbegin.o
 
-.text           0x0800010c      0xb94
+.text           0x0800010c      0xb98
                 0x0800010c                . = ALIGN (0x4)
  *(.text)
  .text          0x0800010c       0x40 e:/nxp_mcu/ft1_mcu_make/toolschain/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v7-m/nofp/crtbegin.o
@@ -332,155 +332,155 @@ LOAD e:/nxp_mcu/ft1_mcu_make/toolschain/bin/../lib/gcc/arm-none-eabi/10.2.1/thum
                 0x080009e0      0x100 obj/system_stm32f10x.o
                 0x080009e0                SystemInit
  .text.startup.main
-                0x08000ae0       0xa0 obj/main.o
+                0x08000ae0       0xa4 obj/main.o
                 0x08000ae0                main
  .text.Reset_Handler
-                0x08000b80       0x48 obj/stm32f10x_startup.o
-                0x08000b80                Reset_Handler
+                0x08000b84       0x48 obj/stm32f10x_startup.o
+                0x08000b84                Reset_Handler
  .text.Default_Handler
-                0x08000bc8        0x2 obj/stm32f10x_startup.o
-                0x08000bc8                EXTI2_IRQHandler
-                0x08000bc8                DebugMon_Handler
-                0x08000bc8                TIM1_CC_IRQHandler
-                0x08000bc8                HardFault_Handler
-                0x08000bc8                PVD_IRQHandler
-                0x08000bc8                PendSV_Handler
-                0x08000bc8                NMI_Handler
-                0x08000bc8                EXTI3_IRQHandler
-                0x08000bc8                EXTI0_IRQHandler
-                0x08000bc8                I2C2_EV_IRQHandler
-                0x08000bc8                UsageFault_Handler
-                0x08000bc8                ADC1_2_IRQHandler
-                0x08000bc8                SPI1_IRQHandler
-                0x08000bc8                TAMPER_IRQHandler
-                0x08000bc8                DMA1_Channel4_IRQHandler
-                0x08000bc8                RTC_IRQHandler
-                0x08000bc8                DMA1_Channel7_IRQHandler
-                0x08000bc8                CAN1_RX1_IRQHandler
-                0x08000bc8                TIM4_IRQHandler
-                0x08000bc8                I2C1_EV_IRQHandler
-                0x08000bc8                DMA1_Channel6_IRQHandler
-                0x08000bc8                TIM3_IRQHandler
-                0x08000bc8                RCC_IRQHandler
-                0x08000bc8                TIM1_TRG_COM_IRQHandler
-                0x08000bc8                DMA1_Channel1_IRQHandler
-                0x08000bc8                Default_Handler
-                0x08000bc8                EXTI15_10_IRQHandler
-                0x08000bc8                EXTI9_5_IRQHandler
-                0x08000bc8                SPI2_IRQHandler
-                0x08000bc8                MemManage_Handler
-                0x08000bc8                SVC_Handler
-                0x08000bc8                DMA1_Channel5_IRQHandler
-                0x08000bc8                EXTI4_IRQHandler
-                0x08000bc8                USB_LP_CAN1_RX0_IRQHandler
-                0x08000bc8                USB_HP_CAN1_TX_IRQHandler
-                0x08000bc8                DMA1_Channel3_IRQHandler
-                0x08000bc8                TIM1_UP_IRQHandler
-                0x08000bc8                WWDG_IRQHandler
-                0x08000bc8                TIM2_IRQHandler
-                0x08000bc8                TIM1_BRK_IRQHandler
-                0x08000bc8                EXTI1_IRQHandler
-                0x08000bc8                RTCAlarm_IRQHandler
-                0x08000bc8                I2C2_ER_IRQHandler
-                0x08000bc8                DMA1_Channel2_IRQHandler
-                0x08000bc8                CAN1_SCE_IRQHandler
-                0x08000bc8                FLASH_IRQHandler
-                0x08000bc8                BusFault_Handler
-                0x08000bc8                I2C1_ER_IRQHandler
-                0x08000bc8                USBWakeUp_IRQHandler
- *fill*         0x08000bca        0x2 
+                0x08000bcc        0x2 obj/stm32f10x_startup.o
+                0x08000bcc                EXTI2_IRQHandler
+                0x08000bcc                DebugMon_Handler
+                0x08000bcc                TIM1_CC_IRQHandler
+                0x08000bcc                HardFault_Handler
+                0x08000bcc                PVD_IRQHandler
+                0x08000bcc                PendSV_Handler
+                0x08000bcc                NMI_Handler
+                0x08000bcc                EXTI3_IRQHandler
+                0x08000bcc                EXTI0_IRQHandler
+                0x08000bcc                I2C2_EV_IRQHandler
+                0x08000bcc                UsageFault_Handler
+                0x08000bcc                ADC1_2_IRQHandler
+                0x08000bcc                SPI1_IRQHandler
+                0x08000bcc                TAMPER_IRQHandler
+                0x08000bcc                DMA1_Channel4_IRQHandler
+                0x08000bcc                RTC_IRQHandler
+                0x08000bcc                DMA1_Channel7_IRQHandler
+                0x08000bcc                CAN1_RX1_IRQHandler
+                0x08000bcc                TIM4_IRQHandler
+                0x08000bcc                I2C1_EV_IRQHandler
+                0x08000bcc                DMA1_Channel6_IRQHandler
+                0x08000bcc                TIM3_IRQHandler
+                0x08000bcc                RCC_IRQHandler
+                0x08000bcc                TIM1_TRG_COM_IRQHandler
+                0x08000bcc                DMA1_Channel1_IRQHandler
+                0x08000bcc                Default_Handler
+                0x08000bcc                EXTI15_10_IRQHandler
+                0x08000bcc                EXTI9_5_IRQHandler
+                0x08000bcc                SPI2_IRQHandler
+                0x08000bcc                MemManage_Handler
+                0x08000bcc                SVC_Handler
+                0x08000bcc                DMA1_Channel5_IRQHandler
+                0x08000bcc                EXTI4_IRQHandler
+                0x08000bcc                USB_LP_CAN1_RX0_IRQHandler
+                0x08000bcc                USB_HP_CAN1_TX_IRQHandler
+                0x08000bcc                DMA1_Channel3_IRQHandler
+                0x08000bcc                TIM1_UP_IRQHandler
+                0x08000bcc                WWDG_IRQHandler
+                0x08000bcc                TIM2_IRQHandler
+                0x08000bcc                TIM1_BRK_IRQHandler
+                0x08000bcc                EXTI1_IRQHandler
+                0x08000bcc                RTCAlarm_IRQHandler
+                0x08000bcc                I2C2_ER_IRQHandler
+                0x08000bcc                DMA1_Channel2_IRQHandler
+                0x08000bcc                CAN1_SCE_IRQHandler
+                0x08000bcc                FLASH_IRQHandler
+                0x08000bcc                BusFault_Handler
+                0x08000bcc                I2C1_ER_IRQHandler
+                0x08000bcc                USBWakeUp_IRQHandler
+ *fill*         0x08000bce        0x2 
  .text.__libc_init_array
-                0x08000bcc       0x48 e:/nxp_mcu/ft1_mcu_make/toolschain/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(lib_a-init.o)
-                0x08000bcc                __libc_init_array
- .text.memset   0x08000c14       0x10 e:/nxp_mcu/ft1_mcu_make/toolschain/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(lib_a-memset.o)
-                0x08000c14                memset
+                0x08000bd0       0x48 e:/nxp_mcu/ft1_mcu_make/toolschain/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(lib_a-init.o)
+                0x08000bd0                __libc_init_array
+ .text.memset   0x08000c18       0x10 e:/nxp_mcu/ft1_mcu_make/toolschain/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(lib_a-memset.o)
+                0x08000c18                memset
  *(.rodata)
- .rodata        0x08000c24       0x64 obj/main.o
+ .rodata        0x08000c28       0x64 obj/main.o
  *(.rodata*)
  *(.glue_7)
- .glue_7        0x08000c88        0x0 linker stubs
+ .glue_7        0x08000c8c        0x0 linker stubs
  *(.glue_7t)
- .glue_7t       0x08000c88        0x0 linker stubs
+ .glue_7t       0x08000c8c        0x0 linker stubs
  *(.init)
- .init          0x08000c88        0x4 e:/nxp_mcu/ft1_mcu_make/toolschain/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v7-m/nofp/crti.o
-                0x08000c88                _init
- .init          0x08000c8c        0x8 e:/nxp_mcu/ft1_mcu_make/toolschain/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v7-m/nofp/crtn.o
+ .init          0x08000c8c        0x4 e:/nxp_mcu/ft1_mcu_make/toolschain/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v7-m/nofp/crti.o
+                0x08000c8c                _init
+ .init          0x08000c90        0x8 e:/nxp_mcu/ft1_mcu_make/toolschain/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v7-m/nofp/crtn.o
  *(.fini)
- .fini          0x08000c94        0x4 e:/nxp_mcu/ft1_mcu_make/toolschain/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v7-m/nofp/crti.o
-                0x08000c94                _fini
- .fini          0x08000c98        0x8 e:/nxp_mcu/ft1_mcu_make/toolschain/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v7-m/nofp/crtn.o
-                0x08000ca0                . = ALIGN (0x4)
-                0x08000ca0                _etext = .
+ .fini          0x08000c98        0x4 e:/nxp_mcu/ft1_mcu_make/toolschain/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v7-m/nofp/crti.o
+                0x08000c98                _fini
+ .fini          0x08000c9c        0x8 e:/nxp_mcu/ft1_mcu_make/toolschain/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v7-m/nofp/crtn.o
+                0x08000ca4                . = ALIGN (0x4)
+                0x08000ca4                _etext = .
 
-.vfp11_veneer   0x08000ca0        0x0
- .vfp11_veneer  0x08000ca0        0x0 linker stubs
+.vfp11_veneer   0x08000ca4        0x0
+ .vfp11_veneer  0x08000ca4        0x0 linker stubs
 
-.v4_bx          0x08000ca0        0x0
- .v4_bx         0x08000ca0        0x0 linker stubs
+.v4_bx          0x08000ca4        0x0
+ .v4_bx         0x08000ca4        0x0 linker stubs
 
-.iplt           0x08000ca0        0x0
- .iplt          0x08000ca0        0x0 e:/nxp_mcu/ft1_mcu_make/toolschain/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v7-m/nofp/crtbegin.o
+.iplt           0x08000ca4        0x0
+ .iplt          0x08000ca4        0x0 e:/nxp_mcu/ft1_mcu_make/toolschain/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v7-m/nofp/crtbegin.o
 
-.rel.dyn        0x08000ca0        0x0
- .rel.iplt      0x08000ca0        0x0 e:/nxp_mcu/ft1_mcu_make/toolschain/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v7-m/nofp/crtbegin.o
+.rel.dyn        0x08000ca4        0x0
+ .rel.iplt      0x08000ca4        0x0 e:/nxp_mcu/ft1_mcu_make/toolschain/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v7-m/nofp/crtbegin.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
 
-.ARM            0x08000ca0        0x0
-                0x08000ca0                __exidx_start = .
+.ARM            0x08000ca4        0x0
+                0x08000ca4                __exidx_start = .
  *(.ARM.exidx*)
-                0x08000ca0                __exidx_end = .
+                0x08000ca4                __exidx_end = .
 
 .ARM.attributes
-                0x08000ca0       0x2b
+                0x08000ca4       0x2b
  *(.ARM.attributes)
  .ARM.attributes
-                0x08000ca0       0x1d e:/nxp_mcu/ft1_mcu_make/toolschain/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v7-m/nofp/crti.o
+                0x08000ca4       0x1d e:/nxp_mcu/ft1_mcu_make/toolschain/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v7-m/nofp/crti.o
  .ARM.attributes
-                0x08000cbd       0x2d e:/nxp_mcu/ft1_mcu_make/toolschain/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v7-m/nofp/crtbegin.o
+                0x08000cc1       0x2d e:/nxp_mcu/ft1_mcu_make/toolschain/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v7-m/nofp/crtbegin.o
  .ARM.attributes
-                0x08000cea       0x2d obj/stm32f10x-delay.o
+                0x08000cee       0x2d obj/stm32f10x-delay.o
  .ARM.attributes
-                0x08000d17       0x2d obj/stm32f10x-uart.o
+                0x08000d1b       0x2d obj/stm32f10x-uart.o
  .ARM.attributes
-                0x08000d44       0x2d obj/system_stm32f10x.o
+                0x08000d48       0x2d obj/system_stm32f10x.o
  .ARM.attributes
-                0x08000d71       0x2d obj/main.o
+                0x08000d75       0x2d obj/main.o
  .ARM.attributes
-                0x08000d9e       0x21 obj/stm32f10x_startup.o
+                0x08000da2       0x21 obj/stm32f10x_startup.o
  .ARM.attributes
-                0x08000dbf       0x1d e:/nxp_mcu/ft1_mcu_make/toolschain/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v7-m/nofp\libgcc.a(_arm_addsubsf3.o)
+                0x08000dc3       0x1d e:/nxp_mcu/ft1_mcu_make/toolschain/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v7-m/nofp\libgcc.a(_arm_addsubsf3.o)
  .ARM.attributes
-                0x08000ddc       0x1d e:/nxp_mcu/ft1_mcu_make/toolschain/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v7-m/nofp\libgcc.a(_arm_fixunssfsi.o)
+                0x08000de0       0x1d e:/nxp_mcu/ft1_mcu_make/toolschain/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v7-m/nofp\libgcc.a(_arm_fixunssfsi.o)
  .ARM.attributes
-                0x08000df9       0x2d e:/nxp_mcu/ft1_mcu_make/toolschain/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(lib_a-init.o)
+                0x08000dfd       0x2d e:/nxp_mcu/ft1_mcu_make/toolschain/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(lib_a-init.o)
  .ARM.attributes
-                0x08000e26       0x2d e:/nxp_mcu/ft1_mcu_make/toolschain/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(lib_a-memset.o)
+                0x08000e2a       0x2d e:/nxp_mcu/ft1_mcu_make/toolschain/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(lib_a-memset.o)
  .ARM.attributes
-                0x08000e53       0x1d e:/nxp_mcu/ft1_mcu_make/toolschain/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v7-m/nofp/crtn.o
+                0x08000e57       0x1d e:/nxp_mcu/ft1_mcu_make/toolschain/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v7-m/nofp/crtn.o
 
-.preinit_array  0x08000ca0        0x0
-                0x08000ca0                PROVIDE (__preinit_array_start = .)
+.preinit_array  0x08000ca4        0x0
+                0x08000ca4                PROVIDE (__preinit_array_start = .)
  *(.preinit_array*)
-                0x08000ca0                PROVIDE (__preinit_array_end = .)
+                0x08000ca4                PROVIDE (__preinit_array_end = .)
 
-.init_array     0x08000ca0        0x4
-                0x08000ca0                PROVIDE (__init_array_start = .)
+.init_array     0x08000ca4        0x4
+                0x08000ca4                PROVIDE (__init_array_start = .)
  *(SORT_BY_NAME(.init_array.*))
  *(.init_array*)
- .init_array    0x08000ca0        0x4 e:/nxp_mcu/ft1_mcu_make/toolschain/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v7-m/nofp/crtbegin.o
-                0x08000ca4                PROVIDE (__init_array_end = .)
+ .init_array    0x08000ca4        0x4 e:/nxp_mcu/ft1_mcu_make/toolschain/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v7-m/nofp/crtbegin.o
+                0x08000ca8                PROVIDE (__init_array_end = .)
 
-.fini_array     0x08000ca4        0x4
+.fini_array     0x08000ca8        0x4
                 [!provide]                PROVIDE (__fini_array_start = .)
  *(.fini_array*)
- .fini_array    0x08000ca4        0x4 e:/nxp_mcu/ft1_mcu_make/toolschain/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v7-m/nofp/crtbegin.o
+ .fini_array    0x08000ca8        0x4 e:/nxp_mcu/ft1_mcu_make/toolschain/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v7-m/nofp/crtbegin.o
  *(SORT_BY_NAME(.fini_array.*))
                 [!provide]                PROVIDE (__fini_array_end = .)
-                0x08000ca8                _sidata = .
+                0x08000cac                _sidata = .
 
-.data           0x20000000       0x44 load address 0x08000ca8
+.data           0x20000000       0x44 load address 0x08000cac
                 0x20000000                . = ALIGN (0x4)
                 0x20000000                _sdata = .
  *(.data)
@@ -512,11 +512,11 @@ LOAD e:/nxp_mcu/ft1_mcu_make/toolschain/bin/../lib/gcc/arm-none-eabi/10.2.1/thum
                 0x20000044                . = ALIGN (0x4)
                 0x20000044                _edata = .
 
-.igot.plt       0x20000044        0x0 load address 0x08000cec
+.igot.plt       0x20000044        0x0 load address 0x08000cf0
  .igot.plt      0x20000044        0x0 e:/nxp_mcu/ft1_mcu_make/toolschain/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v7-m/nofp/crtbegin.o
                 0x20000044                . = ALIGN (0x4)
 
-.bss            0x20000044       0x30 load address 0x08000cec
+.bss            0x20000044       0x30 load address 0x08000cf0
                 0x20000044                _sbss = .
                 0x20000044                __bss_start__ = _sbss
  *(.bss)
@@ -532,7 +532,7 @@ LOAD e:/nxp_mcu/ft1_mcu_make/toolschain/bin/../lib/gcc/arm-none-eabi/10.2.1/thum
                 [!provide]                PROVIDE (_end = _ebss)
 
 ._user_heap_stack
-                0x20000074      0x200 load address 0x08000d1c
+                0x20000074      0x200 load address 0x08000d20
                 0x20000074                . = ALIGN (0x4)
                 0x20000074                . = (. + _Min_Heap_Size)
                 0x20000274                . = (. + _Min_Stack_Size)
@@ -555,19 +555,19 @@ LOAD e:/nxp_mcu/ft1_mcu_make/toolschain/bin/../lib/gcc/arm-none-eabi/10.2.1/../.
 LOAD e:/nxp_mcu/ft1_mcu_make/toolschain/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libm.a
 LOAD e:/nxp_mcu/ft1_mcu_make/toolschain/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v7-m/nofp\libgcc.a
 
-.debug_info     0x00000000     0x20a9
+.debug_info     0x00000000     0x20c4
  .debug_info    0x00000000      0x2e5 obj/stm32f10x-delay.o
  .debug_info    0x000002e5     0x1057 obj/stm32f10x-uart.o
  .debug_info    0x0000133c      0x507 obj/system_stm32f10x.o
- .debug_info    0x00001843      0x844 obj/main.o
- .debug_info    0x00002087       0x22 obj/stm32f10x_startup.o
+ .debug_info    0x00001843      0x85f obj/main.o
+ .debug_info    0x000020a2       0x22 obj/stm32f10x_startup.o
 
-.debug_abbrev   0x00000000      0x89c
+.debug_abbrev   0x00000000      0x8c1
  .debug_abbrev  0x00000000      0x1d1 obj/stm32f10x-delay.o
  .debug_abbrev  0x000001d1      0x2c3 obj/stm32f10x-uart.o
  .debug_abbrev  0x00000494      0x1db obj/system_stm32f10x.o
- .debug_abbrev  0x0000066f      0x21b obj/main.o
- .debug_abbrev  0x0000088a       0x12 obj/stm32f10x_startup.o
+ .debug_abbrev  0x0000066f      0x240 obj/main.o
+ .debug_abbrev  0x000008af       0x12 obj/stm32f10x_startup.o
 
 .debug_loc      0x00000000      0xc0e
  .debug_loc     0x00000000      0x1e3 obj/stm32f10x-delay.o
@@ -587,30 +587,30 @@ LOAD e:/nxp_mcu/ft1_mcu_make/toolschain/bin/../lib/gcc/arm-none-eabi/10.2.1/thum
  .debug_aranges
                 0x000000f8       0x28 obj/stm32f10x_startup.o
 
-.debug_ranges   0x00000000      0x400
+.debug_ranges   0x00000000      0x410
  .debug_ranges  0x00000000       0xb8 obj/stm32f10x-delay.o
  .debug_ranges  0x000000b8      0x260 obj/stm32f10x-uart.o
  .debug_ranges  0x00000318       0x60 obj/system_stm32f10x.o
- .debug_ranges  0x00000378       0x68 obj/main.o
- .debug_ranges  0x000003e0       0x20 obj/stm32f10x_startup.o
+ .debug_ranges  0x00000378       0x78 obj/main.o
+ .debug_ranges  0x000003f0       0x20 obj/stm32f10x_startup.o
 
-.debug_line     0x00000000     0x150a
+.debug_line     0x00000000     0x1519
  .debug_line    0x00000000      0x27d obj/stm32f10x-delay.o
  .debug_line    0x0000027d      0xc1d obj/stm32f10x-uart.o
  .debug_line    0x00000e9a      0x32b obj/system_stm32f10x.o
- .debug_line    0x000011c5      0x2b1 obj/main.o
- .debug_line    0x00001476       0x94 obj/stm32f10x_startup.o
+ .debug_line    0x000011c5      0x2c0 obj/main.o
+ .debug_line    0x00001485       0x94 obj/stm32f10x_startup.o
 
-.debug_str      0x00000000      0xc2d
+.debug_str      0x00000000      0xc39
  .debug_str     0x00000000      0x219 obj/stm32f10x-delay.o
                                 0x27c (size before relaxing)
  .debug_str     0x00000219      0x789 obj/stm32f10x-uart.o
                                 0x99e (size before relaxing)
  .debug_str     0x000009a2       0xe2 obj/system_stm32f10x.o
                                 0x32c (size before relaxing)
- .debug_str     0x00000a84      0x163 obj/main.o
-                                0x454 (size before relaxing)
- .debug_str     0x00000be7       0x46 obj/stm32f10x_startup.o
+ .debug_str     0x00000a84      0x16f obj/main.o
+                                0x460 (size before relaxing)
+ .debug_str     0x00000bf3       0x46 obj/stm32f10x_startup.o
                                  0x72 (size before relaxing)
 
 .comment        0x00000000       0x4d

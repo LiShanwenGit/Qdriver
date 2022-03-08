@@ -2,7 +2,7 @@
 
 static void gd32vf10x_probe(void)
 {
-
+    
 }
 
 static void gd32vf10x_udelay(uint32_t us)

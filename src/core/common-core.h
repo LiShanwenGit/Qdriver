@@ -11,7 +11,5 @@
 #include "delay-core.h"
 #include "pwm-core.h"
 
-
-
 #endif // !_COMMON_CORE_H_
 

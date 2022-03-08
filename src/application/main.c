@@ -29,7 +29,7 @@ int main(void)
          mdelay(50);      //使用延时函数，延时500ms
          gpio_set_value(&led,1);
          mdelay(50);      //使用延时函数，延时500ms
-         //uart_poll_write(&tty0,test,sizeof(test));
+         uart_poll_write(&tty0,test,sizeof(test));
     }
 }
 

@@ -4,15 +4,6 @@
 
 #define  UART_ALL_NUM    4
 
-#define  UART0_NVIC      0x000000E0
-#define  UART1_NVIC      0x000000E4
-#define  UART2_NVIC      0x000000E8
-#define  UART3_NVIC      0x0000011C
-#define  UART4_NVIC      0x00000120
-
-//[TX][RX]
-static const char uart_pin[UART_ALL_NUM][2] = {{9,10},{} };
-
 static void (*uart_handler[UART_ALL_NUM])(void);
 
 void USART0_IRQHandler(void)

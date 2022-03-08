@@ -37,6 +37,7 @@ HEX = $(CP) -O ihex
 BIN = $(CP) -O binary -S
 ARCH_PAR = -march=rv32imac -mabi=ilp32 -mcmodel=medlow -nostartfiles
 
+
 #---------------------arm arch------------------------------------------------------
 else ifeq ($(ARCH),arm)
 

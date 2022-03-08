@@ -7,10 +7,16 @@ static struct delay_core *__delay_core = (struct delay_core*)&__delay_core_init;
 
 struct delay_core
 {
+    void (*probe)(void);
     void (*udelay)(uint32_t us);
     void (*mdelay)(uint32_t ms);
     void (*sdelay)(uint32_t s);
 };
+
+static inline void delay_probe(void)
+{
+    __delay_core->probe();
+}
 
 static inline void udelay(uint32_t us)
 {

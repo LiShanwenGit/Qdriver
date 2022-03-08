@@ -1,5 +1,10 @@
 #include "delay-core.h"
 
+static void gd32vf10x_probe(void)
+{
+
+}
+
 static void gd32vf10x_udelay(uint32_t us)
 {
     volatile uint32_t i,j;
@@ -23,9 +28,9 @@ static void gd32vf10x_sdelay(uint32_t s)
     }
 }
 
-
 struct delay_core gd32vf10x_delay = 
 {
+    .probe = gd32vf10x_probe,
     .udelay = gd32vf10x_udelay,
     .mdelay = gd32vf10x_mdelay,
     .sdelay = gd32vf10x_sdelay,

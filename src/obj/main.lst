@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\test\AppData\Local\Temp\ccwqrrBM.s 			page 1
+ARM GAS  C:\Users\test\AppData\Local\Temp\ccJd20rM.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -25,7 +25,7 @@ ARM GAS  C:\Users\test\AppData\Local\Temp\ccwqrrBM.s 			page 1
   22              		.thumb_func
   23              		.fpu softvfp
   25              	main:
-  26              	.LFB20:
+  26              	.LFB21:
   27              		.file 1 "application/main.c"
    1:application/main.c **** #include "gpio-core.h"
    2:application/main.c **** #include "spi-core.h"
@@ -50,15 +50,15 @@ ARM GAS  C:\Users\test\AppData\Local\Temp\ccwqrrBM.s 			page 1
   28              		.loc 1 20 1 view -0
   29              		.cfi_startproc
   30              		@ Volatile: function does not return.
-  31              		@ args = 0, pretend = 0, frame = 0
+  31              		@ args = 0, pretend = 0, frame = 104
   32              		@ frame_needed = 0, uses_anonymous_args = 0
   21:application/main.c ****     gpio_get(&led); //申请一个GPIO资源
   33              		.loc 1 21 5 view .LVU1
   34              	.LVL0:
-  35              	.LBB18:
-  36              	.LBI18:
+  35              	.LBB20:
+  36              	.LBI20:
   37              		.file 2 "core/gpio-core.h"
-ARM GAS  C:\Users\test\AppData\Local\Temp\ccwqrrBM.s 			page 2
+ARM GAS  C:\Users\test\AppData\Local\Temp\ccJd20rM.s 			page 2
 
 
    1:core/gpio-core.h **** #ifndef __GPIO_CORE_H_
@@ -109,78 +109,87 @@ ARM GAS  C:\Users\test\AppData\Local\Temp\ccwqrrBM.s 			page 1
   46:core/gpio-core.h **** 
   47:core/gpio-core.h **** static inline int8_t gpio_get(gpio_desp_t *gpio_desp)
   38              		.loc 2 47 22 view .LVU2
-  39              	.LBB19:
+  39              	.LBB21:
   48:core/gpio-core.h **** {
   49:core/gpio-core.h ****     gpio_desp->ctl = (gpio_controller_t*)&__gpio_core_init;
   40              		.loc 2 49 5 view .LVU3
-  41              	.LBE19:
-  42              	.LBE18:
+  41              	.LBE21:
+  42              	.LBE20:
   20:application/main.c ****     gpio_get(&led); //申请一个GPIO资源
   43              		.loc 1 20 1 is_stmt 0 view .LVU4
-  44 0000 08B5     		push	{r3, lr}
-ARM GAS  C:\Users\test\AppData\Local\Temp\ccwqrrBM.s 			page 3
+  44 0000 80B5     		push	{r7, lr}
+ARM GAS  C:\Users\test\AppData\Local\Temp\ccJd20rM.s 			page 3
 
 
   45              	.LCFI0:
   46              		.cfi_def_cfa_offset 8
-  47              		.cfi_offset 3, -8
+  47              		.cfi_offset 7, -8
   48              		.cfi_offset 14, -4
-  49              	.LBB21:
-  50              	.LBB20:
+  49              	.LBB24:
+  50              	.LBB22:
   51              		.loc 2 49 20 view .LVU5
-  52 0002 134C     		ldr	r4, .L5
-  53 0004 134B     		ldr	r3, .L5+4
+  52 0002 214C     		ldr	r4, .L5
+  53 0004 214B     		ldr	r3, .L5+4
+  54              	.LBE22:
+  55              	.LBE24:
+  20:application/main.c ****     gpio_get(&led); //申请一个GPIO资源
+  56              		.loc 1 20 1 view .LVU6
+  57 0006 9AB0     		sub	sp, sp, #104
+  58              	.LCFI1:
+  59              		.cfi_def_cfa_offset 112
+  60              	.LBB25:
+  61              	.LBB23:
   50:core/gpio-core.h ****     return gpio_desp->ctl->ops.get(gpio_desp);
-  54              		.loc 2 50 12 view .LVU6
-  55 0006 2046     		mov	r0, r4
-  56 0008 5A68     		ldr	r2, [r3, #4]
+  62              		.loc 2 50 12 view .LVU7
+  63 0008 5A68     		ldr	r2, [r3, #4]
+  64 000a 2046     		mov	r0, r4
   49:core/gpio-core.h ****     return gpio_desp->ctl->ops.get(gpio_desp);
-  57              		.loc 2 49 20 view .LVU7
-  58 000a 6360     		str	r3, [r4, #4]
-  59              		.loc 2 50 5 is_stmt 1 view .LVU8
-  60              		.loc 2 50 12 is_stmt 0 view .LVU9
-  61 000c 9047     		blx	r2
-  62              	.LVL1:
-  63              		.loc 2 50 12 view .LVU10
-  64              	.LBE20:
-  65              	.LBE21:
+  65              		.loc 2 49 20 view .LVU8
+  66 000c 6360     		str	r3, [r4, #4]
+  67              		.loc 2 50 5 is_stmt 1 view .LVU9
+  68              		.loc 2 50 12 is_stmt 0 view .LVU10
+  69 000e 9047     		blx	r2
+  70              	.LVL1:
+  71              		.loc 2 50 12 view .LVU11
+  72              	.LBE23:
+  73              	.LBE25:
   22:application/main.c ****     gpio_set_direction(&led,GPIO_PP_OUTPUT);//设置GPIO为推挽输出
-  66              		.loc 1 22 5 is_stmt 1 view .LVU11
-  67              	.LBB22:
-  68              	.LBI22:
+  74              		.loc 1 22 5 is_stmt 1 view .LVU12
+  75              	.LBB26:
+  76              	.LBI26:
   51:core/gpio-core.h **** }
   52:core/gpio-core.h **** 
   53:core/gpio-core.h **** static inline void gpio_set_direction(gpio_desp_t *gpio_desp, gpio_direction_t dir)
-  69              		.loc 2 53 20 view .LVU12
-  70              	.LBB23:
+  77              		.loc 2 53 20 view .LVU13
+  78              	.LBB27:
   54:core/gpio-core.h **** {
   55:core/gpio-core.h ****     gpio_desp->ctl->ops.set_direction(gpio_desp,dir);
-  71              		.loc 2 55 5 view .LVU13
-  72              		.loc 2 55 24 is_stmt 0 view .LVU14
-  73 000e 6368     		ldr	r3, [r4, #4]
-  74              		.loc 2 55 5 view .LVU15
-  75 0010 0021     		movs	r1, #0
-  76 0012 2046     		mov	r0, r4
-  77 0014 9B68     		ldr	r3, [r3, #8]
-  78 0016 9847     		blx	r3
-  79              	.LVL2:
-  80              		.loc 2 55 5 view .LVU16
-  81              	.LBE23:
-  82              	.LBE22:
+  79              		.loc 2 55 5 view .LVU14
+  80              		.loc 2 55 24 is_stmt 0 view .LVU15
+  81 0010 6368     		ldr	r3, [r4, #4]
+  82              		.loc 2 55 5 view .LVU16
+  83 0012 0021     		movs	r1, #0
+  84 0014 2046     		mov	r0, r4
+  85 0016 9B68     		ldr	r3, [r3, #8]
+  86 0018 9847     		blx	r3
+  87              	.LVL2:
+  88              		.loc 2 55 5 view .LVU17
+  89              	.LBE27:
+  90              	.LBE26:
   23:application/main.c ****     uart_probe(&tty0);
-  83              		.loc 1 23 5 is_stmt 1 view .LVU17
-  84              	.LBB24:
-  85              	.LBI24:
-  86              		.file 3 "core/uart-core.h"
+  91              		.loc 1 23 5 is_stmt 1 view .LVU18
+ARM GAS  C:\Users\test\AppData\Local\Temp\ccJd20rM.s 			page 4
+
+
+  92              	.LBB28:
+  93              	.LBI28:
+  94              		.file 3 "core/uart-core.h"
    1:core/uart-core.h **** #ifndef  __UART_CORE_H_
    2:core/uart-core.h **** #define  __UART_CORE_H_
    3:core/uart-core.h **** 
    4:core/uart-core.h **** #include "module.h"
    5:core/uart-core.h **** 
    6:core/uart-core.h **** typedef struct uart_device
-ARM GAS  C:\Users\test\AppData\Local\Temp\ccwqrrBM.s 			page 4
-
-
    7:core/uart-core.h **** {
    8:core/uart-core.h ****     uint8_t  uart;
    9:core/uart-core.h ****     uint8_t  irq_en;
@@ -209,19 +218,19 @@ ARM GAS  C:\Users\test\AppData\Local\Temp\ccwqrrBM.s 			page 1
   32:core/uart-core.h **** 
   33:core/uart-core.h **** 
   34:core/uart-core.h **** static inline int8_t uart_probe(struct uart_device *dev)
-  87              		.loc 3 34 22 view .LVU18
-  88              	.LBB25:
+  95              		.loc 3 34 22 view .LVU19
+  96              	.LBB29:
   35:core/uart-core.h **** {
   36:core/uart-core.h ****     dev->ctrller = (struct uart_controller *)&__uart_core_init;
-  89              		.loc 3 36 5 view .LVU19
-  90              		.loc 3 36 18 is_stmt 0 view .LVU20
-  91 0018 0F4B     		ldr	r3, .L5+8
-  92 001a 1048     		ldr	r0, .L5+12
-  93              	.LBE25:
-  94              	.LBE24:
-  95              	.LBB27:
-  96              	.LBB28:
-  97              		.file 4 "core/delay-core.h"
+  97              		.loc 3 36 5 view .LVU20
+  98              		.loc 3 36 18 is_stmt 0 view .LVU21
+  99 001a 1D4D     		ldr	r5, .L5+8
+ 100 001c 1D4B     		ldr	r3, .L5+12
+ 101              	.LBE29:
+ 102              	.LBE28:
+ 103              	.LBB31:
+ 104              	.LBB32:
+ 105              		.file 4 "core/delay-core.h"
    1:core/delay-core.h **** #ifndef __DELAY_CORE_H_
    2:core/delay-core.h **** #define __DELAY_CORE_H_
    3:core/delay-core.h **** 
@@ -229,189 +238,283 @@ ARM GAS  C:\Users\test\AppData\Local\Temp\ccwqrrBM.s 			page 1
    5:core/delay-core.h **** 
    6:core/delay-core.h **** static struct delay_core *__delay_core = (struct delay_core*)&__delay_core_init;
    7:core/delay-core.h **** 
+ARM GAS  C:\Users\test\AppData\Local\Temp\ccJd20rM.s 			page 5
+
+
    8:core/delay-core.h **** struct delay_core
    9:core/delay-core.h **** {
-  10:core/delay-core.h ****     void (*udelay)(uint32_t us);
-  11:core/delay-core.h ****     void (*mdelay)(uint32_t ms);
-  12:core/delay-core.h ****     void (*sdelay)(uint32_t s);
-  13:core/delay-core.h **** };
-  14:core/delay-core.h **** 
-  15:core/delay-core.h **** static inline void udelay(uint32_t us)
-  16:core/delay-core.h **** {
-ARM GAS  C:\Users\test\AppData\Local\Temp\ccwqrrBM.s 			page 5
-
-
-  17:core/delay-core.h ****     __delay_core->udelay(us);
-  18:core/delay-core.h **** }
-  19:core/delay-core.h **** 
-  20:core/delay-core.h **** static inline void mdelay(uint32_t ms)
-  21:core/delay-core.h **** {
-  22:core/delay-core.h ****     __delay_core->mdelay(ms);
-  98              		.loc 4 22 17 view .LVU21
-  99 001c 104D     		ldr	r5, .L5+16
- 100              	.LBE28:
- 101              	.LBE27:
- 102              	.LBB30:
- 103              	.LBB26:
+  10:core/delay-core.h ****     void (*probe)(void);
+  11:core/delay-core.h ****     void (*udelay)(uint32_t us);
+  12:core/delay-core.h ****     void (*mdelay)(uint32_t ms);
+  13:core/delay-core.h ****     void (*sdelay)(uint32_t s);
+  14:core/delay-core.h **** };
+  15:core/delay-core.h **** 
+  16:core/delay-core.h **** static inline void delay_probe(void)
+  17:core/delay-core.h **** {
+  18:core/delay-core.h ****     __delay_core->probe();
+  19:core/delay-core.h **** }
+  20:core/delay-core.h **** 
+  21:core/delay-core.h **** static inline void udelay(uint32_t us)
+  22:core/delay-core.h **** {
+  23:core/delay-core.h ****     __delay_core->udelay(us);
+  24:core/delay-core.h **** }
+  25:core/delay-core.h **** 
+  26:core/delay-core.h **** static inline void mdelay(uint32_t ms)
+  27:core/delay-core.h **** {
+  28:core/delay-core.h ****     __delay_core->mdelay(ms);
+ 106              		.loc 4 28 17 view .LVU22
+ 107 001e 1E4E     		ldr	r6, .L5+16
+ 108              	.LBE32:
+ 109              	.LBE31:
+ 110              	.LBB35:
+ 111              	.LBB30:
   37:core/uart-core.h ****     return dev->ctrller->ops.probe(dev);
- 104              		.loc 3 37 12 view .LVU22
- 105 001e 5A68     		ldr	r2, [r3, #4]
+ 112              		.loc 3 37 12 view .LVU23
+ 113 0020 5A68     		ldr	r2, [r3, #4]
+ 114 0022 2846     		mov	r0, r5
   36:core/uart-core.h ****     return dev->ctrller->ops.probe(dev);
- 106              		.loc 3 36 18 view .LVU23
- 107 0020 8360     		str	r3, [r0, #8]
- 108              		.loc 3 37 5 is_stmt 1 view .LVU24
- 109              		.loc 3 37 12 is_stmt 0 view .LVU25
- 110 0022 9047     		blx	r2
- 111              	.LVL3:
- 112              		.loc 3 37 12 view .LVU26
- 113              	.LBE26:
- 114              	.LBE30:
+ 115              		.loc 3 36 18 view .LVU24
+ 116 0024 AB60     		str	r3, [r5, #8]
+ 117              		.loc 3 37 5 is_stmt 1 view .LVU25
+ 118              		.loc 3 37 12 is_stmt 0 view .LVU26
+ 119 0026 9047     		blx	r2
+ 120              	.LVL3:
+ 121              		.loc 3 37 12 view .LVU27
+ 122              	.LBE30:
+ 123              	.LBE35:
   24:application/main.c ****     mdelay(1000);
- 115              		.loc 1 24 5 is_stmt 1 view .LVU27
- 116              	.LBB31:
- 117              	.LBI27:
-  20:core/delay-core.h **** {
- 118              		.loc 4 20 20 view .LVU28
- 119              	.LBB29:
- 120              		.loc 4 22 5 view .LVU29
- 121 0024 4FF47A70 		mov	r0, #1000
- 122 0028 6B68     		ldr	r3, [r5, #4]
- 123 002a 9847     		blx	r3
- 124              	.LVL4:
- 125              		.loc 4 22 5 is_stmt 0 view .LVU30
- 126              	.LBE29:
- 127              	.LBE31:
+ 124              		.loc 1 24 5 is_stmt 1 view .LVU28
+ 125              	.LBB36:
+ 126              	.LBI31:
+  26:core/delay-core.h **** {
+ 127              		.loc 4 26 20 view .LVU29
+ 128              	.LBB33:
+ 129              		.loc 4 28 5 view .LVU30
+ 130              	.LBE33:
+ 131              	.LBE36:
   25:application/main.c ****     char test[100] = "hello Qdriver 9079613232342414";
- 128              		.loc 1 25 5 is_stmt 1 view .LVU31
- 129              	.L2:
+ 132              		.loc 1 25 10 is_stmt 0 view .LVU31
+ 133 0028 1C4F     		ldr	r7, .L5+20
+ 134              	.LBB37:
+ 135              	.LBB34:
+ 136              		.loc 4 28 5 view .LVU32
+ARM GAS  C:\Users\test\AppData\Local\Temp\ccJd20rM.s 			page 6
+
+
+ 137 002a 4FF47A70 		mov	r0, #1000
+ 138 002e B368     		ldr	r3, [r6, #8]
+ 139 0030 9847     		blx	r3
+ 140              	.LVL4:
+ 141              		.loc 4 28 5 view .LVU33
+ 142              	.LBE34:
+ 143              	.LBE37:
+ 144              		.loc 1 25 5 is_stmt 1 view .LVU34
+ 145              		.loc 1 25 10 is_stmt 0 view .LVU35
+ 146 0032 0FCF     		ldmia	r7!, {r0, r1, r2, r3}
+ 147 0034 0DF1040C 		add	ip, sp, #4
+ 148 0038 ACE80F00 		stmia	ip!, {r0, r1, r2, r3}
+ 149 003c 97E80F00 		ldm	r7, {r0, r1, r2, r3}
+ 150 0040 ACE80700 		stmia	ip!, {r0, r1, r2}
+ 151 0044 4522     		movs	r2, #69
+ 152 0046 2CF8023B 		strh	r3, [ip], #2	@ movhi
+ 153 004a 0021     		movs	r1, #0
+ 154 004c 1B0C     		lsrs	r3, r3, #16
+ 155 004e 0DF12300 		add	r0, sp, #35
+ 156 0052 8CF80030 		strb	r3, [ip]
+ 157 0056 FFF7FEFF 		bl	memset
+ 158              	.LVL5:
+ 159              	.L2:
   26:application/main.c ****     while (1)
- 130              		.loc 1 26 5 discriminator 1 view .LVU32
+ 160              		.loc 1 26 5 is_stmt 1 discriminator 1 view .LVU36
   27:application/main.c ****     {
   28:application/main.c ****          gpio_set_value(&led,0);
- 131              		.loc 1 28 10 discriminator 1 view .LVU33
- 132              	.LBB32:
- 133              	.LBI32:
+ 161              		.loc 1 28 10 discriminator 1 view .LVU37
+ 162              	.LBB38:
+ 163              	.LBI38:
   56:core/gpio-core.h **** }
   57:core/gpio-core.h **** 
   58:core/gpio-core.h **** static inline void gpio_set_value(gpio_desp_t *gpio_desp, uint8_t value)
- 134              		.loc 2 58 20 discriminator 1 view .LVU34
- 135              	.LBB33:
+ 164              		.loc 2 58 20 discriminator 1 view .LVU38
+ 165              	.LBB39:
   59:core/gpio-core.h **** {
   60:core/gpio-core.h ****     gpio_desp->ctl->ops.set_value(gpio_desp,value);
-ARM GAS  C:\Users\test\AppData\Local\Temp\ccwqrrBM.s 			page 6
-
-
- 136              		.loc 2 60 5 discriminator 1 view .LVU35
- 137              		.loc 2 60 24 is_stmt 0 discriminator 1 view .LVU36
- 138 002c 6368     		ldr	r3, [r4, #4]
- 139              		.loc 2 60 5 discriminator 1 view .LVU37
- 140 002e 0021     		movs	r1, #0
- 141 0030 2046     		mov	r0, r4
- 142 0032 DB68     		ldr	r3, [r3, #12]
- 143 0034 9847     		blx	r3
- 144              	.LVL5:
- 145              		.loc 2 60 5 discriminator 1 view .LVU38
- 146              	.LBE33:
- 147              	.LBE32:
+ 166              		.loc 2 60 5 discriminator 1 view .LVU39
+ 167              		.loc 2 60 24 is_stmt 0 discriminator 1 view .LVU40
+ 168 005a 6368     		ldr	r3, [r4, #4]
+ 169              		.loc 2 60 5 discriminator 1 view .LVU41
+ 170 005c 0021     		movs	r1, #0
+ 171 005e 2046     		mov	r0, r4
+ 172 0060 DB68     		ldr	r3, [r3, #12]
+ 173 0062 9847     		blx	r3
+ 174              	.LVL6:
+ 175              		.loc 2 60 5 discriminator 1 view .LVU42
+ 176              	.LBE39:
+ 177              	.LBE38:
   29:application/main.c ****          mdelay(50);      //使用延时函数，延时500ms
- 148              		.loc 1 29 10 is_stmt 1 discriminator 1 view .LVU39
- 149              	.LBB34:
- 150              	.LBI34:
-  20:core/delay-core.h **** {
- 151              		.loc 4 20 20 discriminator 1 view .LVU40
- 152              	.LBB35:
- 153              		.loc 4 22 5 discriminator 1 view .LVU41
- 154 0036 6B68     		ldr	r3, [r5, #4]
- 155 0038 3220     		movs	r0, #50
- 156 003a 9847     		blx	r3
- 157              	.LVL6:
- 158              		.loc 4 22 5 is_stmt 0 discriminator 1 view .LVU42
- 159              	.LBE35:
- 160              	.LBE34:
+ 178              		.loc 1 29 10 is_stmt 1 discriminator 1 view .LVU43
+ 179              	.LBB40:
+ 180              	.LBI40:
+  26:core/delay-core.h **** {
+ 181              		.loc 4 26 20 discriminator 1 view .LVU44
+ 182              	.LBB41:
+ 183              		.loc 4 28 5 discriminator 1 view .LVU45
+ARM GAS  C:\Users\test\AppData\Local\Temp\ccJd20rM.s 			page 7
+
+
+ 184 0064 B368     		ldr	r3, [r6, #8]
+ 185 0066 3220     		movs	r0, #50
+ 186 0068 9847     		blx	r3
+ 187              	.LVL7:
+ 188              		.loc 4 28 5 is_stmt 0 discriminator 1 view .LVU46
+ 189              	.LBE41:
+ 190              	.LBE40:
   30:application/main.c ****          gpio_set_value(&led,1);
- 161              		.loc 1 30 10 is_stmt 1 discriminator 1 view .LVU43
- 162              	.LBB36:
- 163              	.LBI36:
+ 191              		.loc 1 30 10 is_stmt 1 discriminator 1 view .LVU47
+ 192              	.LBB42:
+ 193              	.LBI42:
   58:core/gpio-core.h **** {
- 164              		.loc 2 58 20 discriminator 1 view .LVU44
- 165              	.LBB37:
- 166              		.loc 2 60 5 discriminator 1 view .LVU45
- 167              		.loc 2 60 24 is_stmt 0 discriminator 1 view .LVU46
- 168 003c 6368     		ldr	r3, [r4, #4]
- 169              		.loc 2 60 5 discriminator 1 view .LVU47
- 170 003e 2046     		mov	r0, r4
- 171 0040 0121     		movs	r1, #1
- 172 0042 DB68     		ldr	r3, [r3, #12]
- 173 0044 9847     		blx	r3
- 174              	.LVL7:
- 175              		.loc 2 60 5 discriminator 1 view .LVU48
- 176              	.LBE37:
- 177              	.LBE36:
+ 194              		.loc 2 58 20 discriminator 1 view .LVU48
+ 195              	.LBB43:
+ 196              		.loc 2 60 5 discriminator 1 view .LVU49
+ 197              		.loc 2 60 24 is_stmt 0 discriminator 1 view .LVU50
+ 198 006a 6368     		ldr	r3, [r4, #4]
+ 199              		.loc 2 60 5 discriminator 1 view .LVU51
+ 200 006c 0121     		movs	r1, #1
+ 201 006e 2046     		mov	r0, r4
+ 202 0070 DB68     		ldr	r3, [r3, #12]
+ 203 0072 9847     		blx	r3
+ 204              	.LVL8:
+ 205              		.loc 2 60 5 discriminator 1 view .LVU52
+ 206              	.LBE43:
+ 207              	.LBE42:
   31:application/main.c ****          mdelay(50);      //使用延时函数，延时500ms
- 178              		.loc 1 31 10 is_stmt 1 discriminator 1 view .LVU49
- 179              	.LBB38:
- 180              	.LBI38:
-  20:core/delay-core.h **** {
- 181              		.loc 4 20 20 discriminator 1 view .LVU50
- 182              	.LBB39:
- 183              		.loc 4 22 5 discriminator 1 view .LVU51
- 184 0046 3220     		movs	r0, #50
- 185 0048 6B68     		ldr	r3, [r5, #4]
- 186 004a 9847     		blx	r3
-ARM GAS  C:\Users\test\AppData\Local\Temp\ccwqrrBM.s 			page 7
+ 208              		.loc 1 31 10 is_stmt 1 discriminator 1 view .LVU53
+ 209              	.LBB44:
+ 210              	.LBI44:
+  26:core/delay-core.h **** {
+ 211              		.loc 4 26 20 discriminator 1 view .LVU54
+ 212              	.LBB45:
+ 213              		.loc 4 28 5 discriminator 1 view .LVU55
+ 214 0074 B368     		ldr	r3, [r6, #8]
+ 215 0076 3220     		movs	r0, #50
+ 216 0078 9847     		blx	r3
+ 217              	.LVL9:
+ 218              		.loc 4 28 5 is_stmt 0 discriminator 1 view .LVU56
+ 219              	.LBE45:
+ 220              	.LBE44:
+  32:application/main.c ****          uart_poll_write(&tty0,test,sizeof(test));
+ 221              		.loc 1 32 10 is_stmt 1 discriminator 1 view .LVU57
+ 222              	.LBB46:
+ 223              	.LBI46:
+  38:core/uart-core.h **** }
+  39:core/uart-core.h **** 
+  40:core/uart-core.h **** static inline int8_t uart_remove(struct uart_device *dev)
+  41:core/uart-core.h **** {
+  42:core/uart-core.h ****     return dev->ctrller->ops.remove(dev);
+  43:core/uart-core.h **** }
+  44:core/uart-core.h **** 
+  45:core/uart-core.h **** static inline int8_t uart_set_baud_rate(struct uart_device *dev, uint32_t baud_rate)
+  46:core/uart-core.h **** {
+  47:core/uart-core.h ****     return dev->ctrller->ops.set_baud_rate(dev,baud_rate);
+  48:core/uart-core.h **** }
+  49:core/uart-core.h **** 
+ARM GAS  C:\Users\test\AppData\Local\Temp\ccJd20rM.s 			page 8
 
 
- 187              	.LVL8:
- 188 004c EEE7     		b	.L2
- 189              	.L6:
- 190 004e 00BF     		.align	2
- 191              	.L5:
- 192 0050 00000000 		.word	.LANCHOR0
- 193 0054 00000000 		.word	__gpio_core_init
- 194 0058 00000000 		.word	__uart_core_init
- 195 005c 00000000 		.word	.LANCHOR1
- 196 0060 00000000 		.word	__delay_core_init
- 197              	.LBE39:
- 198              	.LBE38:
- 199              		.cfi_endproc
- 200              	.LFE20:
- 202              		.global	tty0
- 203              		.global	led
- 204              		.section	.data.led,"aw"
- 205              		.align	2
- 206              		.set	.LANCHOR0,. + 0
- 209              	led:
- 210 0000 0200     		.short	2
- 211 0002 00       		.byte	0
- 212 0003 00000000 		.space	5
- 212      00
- 213              		.section	.data.tty0,"aw"
- 214              		.align	2
- 215              		.set	.LANCHOR1,. + 0
- 218              	tty0:
- 219 0000 00       		.byte	0
- 220 0001 000000   		.space	3
- 221 0004 00C20100 		.word	115200
- 222 0008 00000000 		.space	4
- 223              		.text
- 224              	.Letext0:
- 225              		.file 5 "e:\\nxp_mcu\\ft1_mcu_make\\toolschain\\arm-none-eabi\\include\\machine\\_default_types.h"
- 226              		.file 6 "e:\\nxp_mcu\\ft1_mcu_make\\toolschain\\arm-none-eabi\\include\\sys\\_stdint.h"
- 227              		.file 7 "core/module.h"
-ARM GAS  C:\Users\test\AppData\Local\Temp\ccwqrrBM.s 			page 8
+  50:core/uart-core.h **** static inline int32_t uart_poll_read(struct uart_device *dev, uint8_t *buffer, uint32_t len)
+  51:core/uart-core.h **** {
+  52:core/uart-core.h ****     return dev->ctrller->ops.poll_read(dev,buffer,len);
+  53:core/uart-core.h **** }
+  54:core/uart-core.h **** 
+  55:core/uart-core.h **** static inline int32_t uart_poll_write(struct uart_device *dev, uint8_t *buffer, uint32_t len)
+ 224              		.loc 3 55 23 discriminator 1 view .LVU58
+ 225              	.LBB47:
+  56:core/uart-core.h **** {
+  57:core/uart-core.h ****     return dev->ctrller->ops.poll_write(dev,buffer,len);
+ 226              		.loc 3 57 5 discriminator 1 view .LVU59
+ 227              		.loc 3 57 29 is_stmt 0 discriminator 1 view .LVU60
+ 228 007a AB68     		ldr	r3, [r5, #8]
+ 229              		.loc 3 57 12 discriminator 1 view .LVU61
+ 230 007c 6422     		movs	r2, #100
+ 231 007e 2846     		mov	r0, r5
+ 232 0080 5B69     		ldr	r3, [r3, #20]
+ 233 0082 01A9     		add	r1, sp, #4
+ 234              	.LVL10:
+ 235              		.loc 3 57 12 discriminator 1 view .LVU62
+ 236 0084 9847     		blx	r3
+ 237              	.LVL11:
+ 238              		.loc 3 57 12 discriminator 1 view .LVU63
+ 239 0086 E8E7     		b	.L2
+ 240              	.L6:
+ 241              		.align	2
+ 242              	.L5:
+ 243 0088 00000000 		.word	.LANCHOR0
+ 244 008c 00000000 		.word	__gpio_core_init
+ 245 0090 00000000 		.word	.LANCHOR1
+ 246 0094 00000000 		.word	__uart_core_init
+ 247 0098 00000000 		.word	__delay_core_init
+ 248 009c 00000000 		.word	.LANCHOR2
+ 249              	.LBE47:
+ 250              	.LBE46:
+ 251              		.cfi_endproc
+ 252              	.LFE21:
+ 254              		.global	tty0
+ 255              		.global	led
+ 256              		.section	.rodata
+ 257              		.align	2
+ 258              		.set	.LANCHOR2,. + 0
+ 259              	.LC0:
+ 260 0000 68656C6C 		.ascii	"hello Qdriver 9079613232342414\000"
+ 260      6F205164 
+ 260      72697665 
+ 260      72203930 
+ 260      37393631 
+ 261 001f 00000000 		.space	69
+ 261      00000000 
+ 261      00000000 
+ 261      00000000 
+ 261      00000000 
+ 262              		.section	.data.led,"aw"
+ 263              		.align	2
+ 264              		.set	.LANCHOR0,. + 0
+ 267              	led:
+ARM GAS  C:\Users\test\AppData\Local\Temp\ccJd20rM.s 			page 9
+
+
+ 268 0000 0200     		.short	2
+ 269 0002 00       		.byte	0
+ 270 0003 00000000 		.space	5
+ 270      00
+ 271              		.section	.data.tty0,"aw"
+ 272              		.align	2
+ 273              		.set	.LANCHOR1,. + 0
+ 276              	tty0:
+ 277 0000 00       		.byte	0
+ 278 0001 000000   		.space	3
+ 279 0004 00C20100 		.word	115200
+ 280 0008 00000000 		.space	4
+ 281              		.text
+ 282              	.Letext0:
+ 283              		.file 5 "e:\\nxp_mcu\\ft1_mcu_make\\toolschain\\arm-none-eabi\\include\\machine\\_default_types.h"
+ 284              		.file 6 "e:\\nxp_mcu\\ft1_mcu_make\\toolschain\\arm-none-eabi\\include\\sys\\_stdint.h"
+ 285              		.file 7 "core/module.h"
+ 286              		.file 8 "<built-in>"
+ARM GAS  C:\Users\test\AppData\Local\Temp\ccJd20rM.s 			page 10
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 main.c
-C:\Users\test\AppData\Local\Temp\ccwqrrBM.s:16     .text.startup.main:00000000 $t
-C:\Users\test\AppData\Local\Temp\ccwqrrBM.s:25     .text.startup.main:00000000 main
-C:\Users\test\AppData\Local\Temp\ccwqrrBM.s:192    .text.startup.main:00000050 $d
-C:\Users\test\AppData\Local\Temp\ccwqrrBM.s:218    .data.tty0:00000000 tty0
-C:\Users\test\AppData\Local\Temp\ccwqrrBM.s:209    .data.led:00000000 led
-C:\Users\test\AppData\Local\Temp\ccwqrrBM.s:205    .data.led:00000000 $d
-C:\Users\test\AppData\Local\Temp\ccwqrrBM.s:214    .data.tty0:00000000 $d
+C:\Users\test\AppData\Local\Temp\ccJd20rM.s:16     .text.startup.main:00000000 $t
+C:\Users\test\AppData\Local\Temp\ccJd20rM.s:25     .text.startup.main:00000000 main
+C:\Users\test\AppData\Local\Temp\ccJd20rM.s:243    .text.startup.main:00000088 $d
+C:\Users\test\AppData\Local\Temp\ccJd20rM.s:276    .data.tty0:00000000 tty0
+C:\Users\test\AppData\Local\Temp\ccJd20rM.s:267    .data.led:00000000 led
+C:\Users\test\AppData\Local\Temp\ccJd20rM.s:257    .rodata:00000000 $d
+C:\Users\test\AppData\Local\Temp\ccJd20rM.s:263    .data.led:00000000 $d
+C:\Users\test\AppData\Local\Temp\ccJd20rM.s:272    .data.tty0:00000000 $d
 
 UNDEFINED SYMBOLS
+memset
 __gpio_core_init
 __uart_core_init
 __delay_core_init

@@ -52,12 +52,10 @@ uint32_t spi_gpio_transfer(struct spi_gpio_device *dev,struct  spi_xfer *xfer)
     
 }
 
-
 uint32_t spi_gpio_write(struct spi_gpio_device *dev, uint8_t *buffer, uint32_t len)
 {
 
 }
-
 
 uint32_t spi_gpio_read(struct spi_gpio_device *dev, uint8_t *buffer, uint32_t len)
 {

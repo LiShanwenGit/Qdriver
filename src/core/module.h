@@ -63,35 +63,35 @@ extern gpio_controller_t module __attribute__((section(".__dac_core_init")))
 #define MACH_DELAY_ADD(module)  \
 extern struct delay_core module __attribute__((section(".__delay_core_init")))
 
-/*
+// /*
 
-*/
-#define     initsyscall(init)    \
-            static struct __init void (*init##syscall) = &init
+// */
+// #define     initsyscall(init)    \
+//             static struct __init void (*init##syscall) = &init
 
-#define     exitsyscall(exit)    \
-            static struct __init void (*exit##syscall) = &exit
-
-
-#define     module_spi_driver(init)  \
-            static struct __spi_init spi_driver *spi##init  =  &init
-
-#define     module_spi_driver(exit) \
-            static struct __spi_exit spi_driver *spi##exit  =  &exit
+// #define     exitsyscall(exit)    \
+//             static struct __init void (*exit##syscall) = &exit
 
 
-#define     module_i2c_driver(init)  \
-            static struct __i2c_init spi_driver *i2c##init  =  &init
+// #define     module_spi_driver(init)  \
+//             static struct __spi_init spi_driver *spi##init  =  &init
 
-#define     module_i2c_driver(exit) \
-            static struct __i2c_exit spi_driver *i2c##exit  =  &exit
+// #define     module_spi_driver(exit) \
+//             static struct __spi_exit spi_driver *spi##exit  =  &exit
 
 
-#define     module_uart_driver(init)  \
-            static struct __uart_init spi_driver *uart##init  =  &init
+// #define     module_i2c_driver(init)  \
+//             static struct __i2c_init spi_driver *i2c##init  =  &init
 
-#define     module_uart_driver(exit) \
-            static struct __uart_exit spi_driver *uart##exit  =  &exit
+// #define     module_i2c_driver(exit) \
+//             static struct __i2c_exit spi_driver *i2c##exit  =  &exit
+
+
+// #define     module_uart_driver(init)  \
+//             static struct __uart_init spi_driver *uart##init  =  &init
+
+// #define     module_uart_driver(exit) \
+//             static struct __uart_exit spi_driver *uart##exit  =  &exit
 
 
 #endif // !__MODULED_H_

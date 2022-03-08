@@ -7,3 +7,7 @@ struct i2c_client tmp1122=
     .speed_hz= 10000,
 };
 
+
+
+
+

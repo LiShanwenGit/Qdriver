@@ -12,8 +12,10 @@
 #    a. at89c5x
 #    b. stc89c5x
 #####################################################################################
-ARCH     :=riscv
-MACH     :=gd32vf10x
+ARCH     :=arm
+MACH     :=stm32f10x
+CCTYPE   :=gcc
+
 
 ##################### optimization level   ##########################################
 OPT      := -O2
@@ -33,11 +35,12 @@ SZ = $(PREFIX)size
 OD = $(PREFIX)objdump
 HEX = $(CP) -O ihex
 BIN = $(CP) -O binary -S
-ARCH_PAR = -march=rv32imac -mabi=ilp32 -mcmodel=medlow
+ARCH_PAR = -march=rv32imac -mabi=ilp32 -mcmodel=medlow -nostartfiles
 
 #---------------------arm arch------------------------------------------------------
 else ifeq ($(ARCH),arm)
 
+PREFIX   := arm-none-eabi-
 CC = $(PREFIX)gcc
 AS = $(PREFIX)gcc -x assembler-with-cpp
 CP = $(PREFIX)objcopy
@@ -46,8 +49,10 @@ SZ = $(PREFIX)size
 OD = $(PREFIX)objdump
 HEX = $(CP) -O ihex
 BIN = $(CP) -O binary -S
-PREFIX   := arm-none-embed-
+ARCH_PAR = -mcpu=cortex-m3 -mthumb -mno-thumb-interwork -mfpu=vfp -msoft-float -mfix-cortex-m3-ldrd 
 endif
+
+
 
 ##################### All C  source files  ##########################################
 C_SOURCES  := 	$(wildcard arch/$(ARCH)/mach-$(MACH)/drivers/*.c)     \
@@ -58,7 +63,7 @@ C_SOURCES  := 	$(wildcard arch/$(ARCH)/mach-$(MACH)/drivers/*.c)     \
 				$(wildcard application/*.c)  
 
 ##################### All ASM source files ##########################################
-ASM_SOURCES := 	$(wildcard arch/$(ARCH)/mach-$(MACH)/startup/*.s)
+ASM_SOURCES := 	$(wildcard arch/$(ARCH)/mach-$(MACH)/startup/$(CCTYPE)/*.s)
 
 
 ##################### library file dir for compiler #################################
@@ -68,7 +73,7 @@ LIB_SOURCES :=
 #---------------------asm source define ---------------------------------------------
 AS_DEFS  := 
 #---------------------C  source  define ---------------------------------------------
-C_DEFS   :=  
+C_DEFS   := 
 
 ##################### head file dir for compiler ####################################
 #---------------------asm  source  define -------------------------------------------
@@ -77,7 +82,7 @@ AS_INCLUDES :=
 C_INCLUDES  := -Icore \
                -Iarch/$(ARCH)/mach-$(MACH)/bsp      \
 			   -Iarch/$(ARCH)/mach-$(MACH)/system   \
-			   -Idribers                            \
+			   -Idrivers                            \
 			   -Iinitial
 
 ##################### creat obj direction ###########################################
@@ -105,7 +110,7 @@ LDSCRIPT := arch/$(ARCH)/mach-$(MACH)/$(MACH).lds
 
 ##################### link libraries ################################################
 LIBDIR  := 
-LDFLAGS := $(OPT) $(ARCH_PAR) -T$(LDSCRIPT) $(LIBDIR) $(LIBS) $(PERIFLIB_SOURCES) -Wl,--cref -Wl,--no-relax -Wl,--gc-sections -Wl,-M=$(BUILD_DIR)/$(TARGET).map --specs=nosys.specs --specs=nano.specs -nostartfiles #-ffreestanding -nostdlib
+LDFLAGS := $(OPT) $(ARCH_PAR) -T$(LDSCRIPT) $(LIBDIR) $(LIBS) $(PERIFLIB_SOURCES) -Wl,--cref -Wl,--no-relax -Wl,--gc-sections -Wl,-M=$(BUILD_DIR)/$(TARGET).map --specs=nosys.specs --specs=nano.specs  #-ffreestanding -nostdlib
 
 ##################### build target ##################################################
 TARGET  := $(MACH)

@@ -98,7 +98,7 @@ static int8_t gd32vf10x_uart_set_baud_rate(struct uart_device *dev, uint32_t bau
 
 static int32_t gd32vf10x_uart_poll_read(struct uart_device *dev, uint8_t *buffer, uint32_t len)
 {
-
+    
 }
 
 static int32_t gd32vf10x_uart_poll_write(struct uart_device *dev, uint8_t *buffer, uint32_t len)
@@ -152,3 +152,4 @@ struct uart_controller gd32vf10x_uart_controller=
 };
 
 MACH_UART_ADD(gd32vf10x_uart_controller);
+

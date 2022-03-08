@@ -1,7 +1,6 @@
 #include "spi-core.h"
 
 
-
 static int8_t gd32vf10x_spi_probe(struct spi_device *dev)
 {
 

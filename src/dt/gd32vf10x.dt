@@ -1,0 +1,24 @@
+/root:
+gpio12:led{
+    compatible = "gpio-driver";
+    flag=1;
+};
+
+i2c0:at24c02{
+    compatible = "i2c,at24c02";
+    status="ok";
+};
+
+i2c1:at24c02{
+    compatible = "i2c,at24c02";
+    status="ok";
+};
+
+i2c-gpio:at24c02{
+    compatible = "i2c-gpio,at24c02";
+    i2c-gpio{
+        sda=1;
+        sck=2;
+    };
+};
+

@@ -25,10 +25,10 @@ static void spi_gpio_init(void)
     gpio_get(&spi_mosi);
     gpio_get(&spi_miso);
     gpio_get(&spi_cs);
-    gpio_set_direction(&spi_clk,GPIO_PP_OUTPUT);
-    gpio_set_direction(&spi_mosi,GPIO_PP_OUTPUT);
-    gpio_set_direction(&spi_miso,GPIO_FINPUT);
-    gpio_set_direction(&spi_cs,GPIO_PP_OUTPUT);
+    gpio_set_mode(&spi_clk,GPIO_OUT_PP);
+    gpio_set_mode(&spi_mosi,GPIO_OUT_PP);
+    gpio_set_mode(&spi_miso,GPIO_INPUT);
+    gpio_set_mode(&spi_cs,GPIO_OUT_PP);
 }
 
 int8_t spi_gpio_probe(struct spi_gpio_device *dev)

@@ -10,6 +10,7 @@
 #define NULL ((void *)0)
 #endif
 
+
 extern uint32_t __gpio_core_init;
 extern uint32_t __spi_core_init;
 extern uint32_t __i2c_core_init;
@@ -20,7 +21,6 @@ extern uint32_t __adc_core_init;
 extern uint32_t __dac_core_init;
 extern uint32_t __pwm_core_init;
 extern uint32_t __delay_core_init;
-
 
 #define __gpio_init     __attribute__((section(".__gpio_core_init")))
 #define __spi_init      __attribute__((section(".__spi_core_init")))
@@ -64,11 +64,12 @@ extern gpio_controller_t module __attribute__((section(".__dac_core_init")))
 extern struct delay_core module __attribute__((section(".__delay_core_init")))
 
 
-#define GPIO2PORT_SHIFT     (5)
-#define GPIO2PORT_MASK      (31)
 
-#define GPIO_NUM2PORT(num)  ((num)>>GPIO2PORT_SHIFT)
-#define GPIO_NUM2PIN(num)   ((num)&GPIO2PORT_MASK)
+#define    GPIO2PORT_SHIFT             (5)
+#define    GPIO2PORT_MASK              (31)
+#define    GPIO_NUM2PORT(x)            (x>>GPIO2PORT_SHIFT)
+#define    GPIO_NUM2PIN(x)             (x&GPIO2PORT_MASK)
+
 
 // /*
 

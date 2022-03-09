@@ -19,13 +19,13 @@ static void stm32f103_probe(void)
     SysTick->CTRL|=(1<<2);         //使用72Mz时钟    
     #if(SYSTICK_INT_EN==0)
 	    SysTick->CTRL&=~(1<<1);     //关闭滴答中断 
-	 #else
+	#else
 	    SysTick->CTRL|=(1<<1);     //使能滴答中断   
 	    NVIC_SetPriority (SysTick_IRQn, 3);
     #endif  
-	 SysTick->LOAD&=0;              //清除寄存器之前值，注意：必须清楚，否则无法正常运行
-	 SysTick->LOAD|=(SYSTICK_MIN&0xFFFFFF); //
-	 SysTick->CTRL|=1;              //开启滴答时钟  
+	SysTick->LOAD&=0;              //清除寄存器之前值，注意：必须清楚，否则无法正常运行
+	SysTick->LOAD|=(SYSTICK_MIN&0xFFFFFF); //
+	SysTick->CTRL|=1;              //开启滴答时钟  
 }
 
 static void stm32f10x_udelay(uint32_t us)

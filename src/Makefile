@@ -1,7 +1,7 @@
 ########################### ARCH  List and MACH  List ###############################
 # 1. arm
 #	 a. gd32vf10x
-#    b. 
+#    b. stm32f10x
 # 2. avr
 #    a. atmega128
 #    b. atmega328

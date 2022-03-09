@@ -5,6 +5,7 @@
 struct gpio_controller;
 
 
+
 typedef struct gpio_desp
 {
     uint16_t pin_num;
@@ -16,19 +17,24 @@ typedef struct gpio_desp
     
 }gpio_desp_t;
 
-typedef enum gpio_direction
+
+typedef enum gpio_mode
 {
-    GPIO_PP_OUTPUT = 0,
-    GPIO_FINPUT,
-    GPIO_PU_OUTPUT,
-    GPIO_PD_OUTPUT,
-    
-}gpio_direction_t;
+    GPIO_INPUT        = 0,  //input
+    GPIO_OUT_PP       = 1,  //Push-pull
+    GPIO_OUT_OD       = 2,  //open drain
+    GPIO_OUT_FLEX_PP  = 3,  //flex push-pull
+    GPIO_OUT_FLEX_OD  = 4,  //flex open drain
+    GPIO_OUT_PP_UP    = 5,  //push-pull up
+    GPIO_OUT_PP_DOWN  = 6,  //push-pull down
+
+}gpio_mode_t;
+
 
 typedef struct gpio_operations
 {
     int8_t   (*get)(gpio_desp_t *gpio_desp);
-    void     (*set_direction)(gpio_desp_t *gpio_desp, gpio_direction_t dir);
+    void     (*set_mode)(gpio_desp_t *gpio_desp, gpio_mode_t mode);
     void     (*set_value)(gpio_desp_t *gpio_desp, uint8_t value);
     uint32_t (*get_value)(gpio_desp_t *gpio_desp);
     void     (*put)(gpio_desp_t *gpio_desp);
@@ -50,9 +56,9 @@ static inline int8_t gpio_get(gpio_desp_t *gpio_desp)
     return gpio_desp->ctl->ops.get(gpio_desp);
 }
 
-static inline void gpio_set_direction(gpio_desp_t *gpio_desp, gpio_direction_t dir)
+static inline void gpio_set_mode(gpio_desp_t *gpio_desp, gpio_mode_t mode)
 {
-    gpio_desp->ctl->ops.set_direction(gpio_desp,dir);
+    gpio_desp->ctl->ops.set_mode(gpio_desp,mode);
 }
 
 static inline void gpio_set_value(gpio_desp_t *gpio_desp, uint8_t value)

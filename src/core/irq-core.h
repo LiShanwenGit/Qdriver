@@ -19,7 +19,7 @@ typedef struct irq_controller
 {
     uint8_t int_flag;  /* the bit is set 1 when interrupt is on */
     int8_t (*request)(struct irq_desp *desp);
-    int8_t (*set_handler)(struct irq_desp *desp, void (*handler)(void *data));
+    int8_t (*set_handler)(struct irq_desp *desp, void (*handler)(void));
     int8_t (*enable)(struct irq_desp *desp);
     int8_t (*disable)(struct irq_desp *desp);
     int8_t (*release)(struct irq_desp *desp);

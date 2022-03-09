@@ -8,7 +8,7 @@ static int8_t gd32vf10x_irq_request(struct irq_desp *desp)
 
 }
 
-static int8_t gd32vf10x_irq_set_handler(struct irq_desp *desp, void (*handler)(void *data))
+static int8_t gd32vf10x_irq_set_handler(struct irq_desp *desp, void (*handler)(void))
 {
 
 }

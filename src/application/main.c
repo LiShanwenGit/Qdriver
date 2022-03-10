@@ -10,26 +10,28 @@ struct gpio_desp led =
     .flag = 0,
 };
 
+
 struct uart_device tty0 =
 {
     .baud_rate = 115200,
     .uart = 0,
 };
 
+
 int main(void)
 {
-    gpio_get(&led); //申请一个GPIO资源
-    gpio_set_mode(&led,GPIO_OUT_PP);//设置GPIO为推挽输出
     uart_probe(&tty0);
     delay_probe();
+
+    gpio_get(&led); //申请一个GPIO资源
     mdelay(1000);
-    char test[100] = "hello Qdriver 907961323234241443333333333";
+    char test[100] = "hello Qdriver";
     while (1)
     {
          gpio_set_value(&led,0);
-         mdelay(50);      //使用延时函数，延时500ms
+         mdelay(100);      //使用延时函数，延时500ms
          gpio_set_value(&led,1);
-         mdelay(50);      //使用延时函数，延时500ms
+         mdelay(100);      //使用延时函数，延时500ms
          uart_poll_write(&tty0,test,sizeof(test));
     }
 }

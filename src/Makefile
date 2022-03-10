@@ -16,7 +16,6 @@ ARCH     :=arm
 MACH     :=stm32f10x
 CCTYPE   :=gcc
 
-
 ##################### optimization level   ##########################################
 OPT      := -O2
 DEBUG    := 1
@@ -164,24 +163,4 @@ clean:
 
 
 
-######################################
-# Jlink Flash
-######################################
-JLINK_SPEED = 4000
-JLINK_BIN_ADDR = 0x08000000
-JLINK_MCU = GD32VF103CBT6
-
-flash: 
-	touch flash.txt
-	echo usb 0 >> flash.txt
-	echo si 0 >>  flash.txt
-	echo jtagconf -1,-1 >> flash.txt
-	echo Device $(JLINK_MCU) >> flash.txt
-	echo speed $(JLINK_SPEED) >> flash.txt
-	echo r >> flash.txt
-	echo h >> flash.txt
-	echo loadfile obj/$(TARGET).bin $(JLINK_BIN_ADDR) >> flash.txt
-	echo Reset >> flash.txt
-	echo q >> flash.txt
-	.././Jlink/JLink.exe  flash.txt
-	rm -rf flash.txt
+include flash.mk

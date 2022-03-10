@@ -19,7 +19,7 @@ typedef struct uart_ops
     int8_t (*set_baud_rate)(struct uart_device *dev, uint32_t baud_rate);
     int32_t (*poll_read)(struct uart_device *dev, uint8_t *buffer, uint32_t len);
     int32_t (*poll_write)(struct uart_device *dev, uint8_t *buffer, uint32_t len);
-    int8_t (*set_handler)(struct uart_device *dev, void (*handler)(void));
+    int8_t (*set_handler)(struct uart_device *dev, void (*handler)(void *data));
 
 }uart_ops_t;
 
@@ -57,7 +57,7 @@ static inline int32_t uart_poll_write(struct uart_device *dev, uint8_t *buffer, 
     return dev->ctrller->ops.poll_write(dev,buffer,len);
 }
 
-static inline int8_t uart_set_handler(struct uart_device *dev, void (*handler)(void))
+static inline int8_t uart_set_handler(struct uart_device *dev, void (*handler)(void *data))
 {
     return dev->ctrller->ops.set_handler(dev,handler);
 }

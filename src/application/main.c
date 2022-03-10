@@ -18,6 +18,20 @@ struct uart_device tty0 =
 };
 
 
+static int flag=0;
+static uint32_t count=0;
+uint8_t buffer[100];
+void tty0_handle(void *data)
+{
+    buffer[count++] = *(uint8_t*)data;
+    if(buffer[count-1] == '\n')
+    {
+        flag = 1;
+        count=0;
+    }
+}
+
+
 int main(void)
 {
     uart_probe(&tty0);
@@ -26,13 +40,19 @@ int main(void)
     gpio_get(&led); //申请一个GPIO资源
     mdelay(1000);
     char test[100] = "hello Qdriver";
+    uart_set_handler(&tty0,tty0_handle);
     while (1)
     {
          gpio_set_value(&led,0);
          mdelay(100);      //使用延时函数，延时500ms
          gpio_set_value(&led,1);
          mdelay(100);      //使用延时函数，延时500ms
-         uart_poll_write(&tty0,test,sizeof(test));
+         //uart_poll_write(&tty0,test,sizeof(test));
+         if(flag)
+         {
+             flag = 0;
+             uart_poll_write(&tty0,buffer,sizeof(buffer));
+         }
     }
 }
 

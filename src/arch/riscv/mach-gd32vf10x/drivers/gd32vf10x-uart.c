@@ -4,7 +4,7 @@
 
 #define  UART_ALL_NUM    4
 
-static void (*uart_handler[UART_ALL_NUM])(void);
+static void (*uart_handler[UART_ALL_NUM])(void *data);
 
 void USART0_IRQHandler(void)
 {
@@ -124,7 +124,7 @@ static int32_t gd32vf10x_uart_poll_write(struct uart_device *dev, uint8_t *buffe
     }
 }
 
-static int8_t gd32vf10x_uart_set_handler(struct uart_device *dev, void (*handler)(void))
+static int8_t gd32vf10x_uart_set_handler(struct uart_device *dev, void (*handler)(void *data))
 {
     uart_handler[dev->uart] = handler;
 }

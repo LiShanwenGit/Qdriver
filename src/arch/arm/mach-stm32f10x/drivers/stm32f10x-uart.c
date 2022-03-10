@@ -3,31 +3,47 @@
 
 #define  STM32F10X_UART_ALL_NUM    5
 
-static void (*uart_handler[STM32F10X_UART_ALL_NUM])(void);
+static void (*uart_handler[STM32F10X_UART_ALL_NUM])(void *data);
+
 
 void USART1_IRQHandler(void)
 {
-    (*uart_handler[0])();
+    uint8_t recv;
+    while((USART1->SR&(1<<5))==0x20)
+	recv = USART1->DR;
+    (*uart_handler[0])(&recv);
 }
 
 void USART2_IRQHandler(void)
 {
-    (*uart_handler[1])();
+    uint8_t recv;
+    while((USART2->SR&(1<<5))==0x20)
+	recv = USART2->DR;
+    (*uart_handler[1])(&recv);
 }
 
 void USART3_IRQHandler(void)
 {
-    (*uart_handler[2])();
+    uint8_t recv;
+    while((USART3->SR&(1<<5))==0x20)
+	recv = USART3->DR;
+    (*uart_handler[2])(&recv);
 }
 
 void USART4_IRQHandler(void)
 {
-    (*uart_handler[3])();
+    uint8_t recv;
+    while((UART4->SR&(1<<5))==0x20)
+	recv = UART4->DR;
+    (*uart_handler[3])(&recv);
 }
 
 void USART5_IRQHandler(void)
 {
-    (*uart_handler[4])();
+    uint8_t recv;
+    while((UART5->SR&(1<<5))==0x20)
+	recv = UART5->DR;
+    (*uart_handler[4])(&recv);
 }
 
 //rcu_periph_clock_enable(RCU_USART0);  //打开USART0时钟
@@ -50,7 +66,7 @@ static int8_t stm32f10x_uart_probe(struct uart_device *dev)
             USART1->CR1|=(1<<3);                    //使能发送	
             integer=72*1000*1000/(dev->baud_rate*16); //取出整数部分
             decimal=(float)(72*1000*1000/(dev->baud_rate*16))-integer; //取出小数部分
-            USART1->BRR=(integer<<4)|((unsigned int)decimal*16);  //将转换后的值赋给BRR寄存器
+            USART1->BRR=(integer<<4)|((unsigned int)decimal*16); //将转换后的值赋给BRR寄存器
             NVIC_SetPriorityGrouping(1);            //设置优先级分组1
             NVIC_SetPriority(USART1_IRQn, NVIC_EncodePriority(1,2,1));     //设置抢占优先级为1，子优先级为1
             NVIC_EnableIRQ(USART1_IRQn);            //使能USART中断
@@ -243,7 +259,7 @@ static int32_t stm32f10x_uart_poll_write(struct uart_device *dev, uint8_t *buffe
     }
 }
 
-static int8_t stm32f10x_uart_set_handler(struct uart_device *dev, void (*handler)(void))
+static int8_t stm32f10x_uart_set_handler(struct uart_device *dev, void (*handler)(void *data))
 {
     uart_handler[dev->uart] = handler;
 }

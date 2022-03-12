@@ -44,9 +44,9 @@ int main(void)
     while (1)
     {
          gpio_bit_reset(&led);
-         mdelay(100);      //使用延时函数，延时500ms
+         mdelay(500);      //使用延时函数，延时500ms
          gpio_bit_set(&led);
-         mdelay(100);      //使用延时函数，延时500ms
+         mdelay(500);      //使用延时函数，延时500ms
          //uart_poll_write(&tty0,test,sizeof(test));
          if(flag)
          {

@@ -36,6 +36,8 @@ typedef struct gpio_operations
     int8_t   (*get)(gpio_desp_t *gpio_desp);
     void     (*set_mode)(gpio_desp_t *gpio_desp, gpio_mode_t mode);
     void     (*set_value)(gpio_desp_t *gpio_desp, uint8_t value);
+    void     (*bit_set)(gpio_desp_t *gpio_desp);
+    void     (*bit_reset)(gpio_desp_t *gpio_desp);
     uint32_t (*get_value)(gpio_desp_t *gpio_desp);
     void     (*put)(gpio_desp_t *gpio_desp);
 
@@ -64,6 +66,16 @@ static inline void gpio_set_mode(gpio_desp_t *gpio_desp, gpio_mode_t mode)
 static inline void gpio_set_value(gpio_desp_t *gpio_desp, uint8_t value)
 {
     gpio_desp->ctl->ops.set_value(gpio_desp,value);
+}
+
+static inline void gpio_bit_set(gpio_desp_t *gpio_desp)
+{
+    gpio_desp->ctl->ops.bit_set(gpio_desp);
+}
+
+static inline void gpio_bit_reset(gpio_desp_t *gpio_desp)
+{
+    gpio_desp->ctl->ops.bit_reset(gpio_desp);
 }
 
 static inline uint32_t gpio_get_value(gpio_desp_t *gpio_desp)

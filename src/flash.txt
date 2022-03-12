@@ -1,0 +1,10 @@
+usb 0
+si 0
+jtagconf -1,-1
+Device
+speed 4000
+r
+h
+loadfile obj/stm32f4xx.bin
+Reset
+q

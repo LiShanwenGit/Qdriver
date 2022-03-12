@@ -179,27 +179,27 @@ static int8_t stm32f10x_uart_set_baud_rate(struct uart_device *dev, uint32_t bau
     }
     switch(dev->uart)
     {
-        case 0:
+        case 0 ... 1:
             USART1->CR1&= ~(1<<13);                  //关闭USART模块
             USART1->BRR=(integer<<4)|((unsigned int)decimal*16);  //将转换后的值赋给BRR寄存器
             USART1->CR1|=(1<<13);                    //使能USART模块
         break;
-        case 1:
+        case 2:
             USART2->CR1&= ~(1<<13);                  //关闭USART模块
             USART2->BRR=(integer<<4)|((unsigned int)decimal*16);  //将转换后的值赋给BRR寄存器
             USART2->CR1|=(1<<13);                    //使能USART模块
         break;
-        case 2:
+        case 3:
             USART3->CR1&= ~(1<<13);                  //关闭USART模块
             USART3->BRR=(integer<<4)|((unsigned int)decimal*16);  //将转换后的值赋给BRR寄存器
             USART3->CR1|=(1<<13);                    //使能USART模块
         break;
-        case 3:
+        case 4:
             UART4->CR1&= ~(1<<13);                   //关闭USART模块
             UART4->BRR=(integer<<4)|((unsigned int)decimal*16);  //将转换后的值赋给BRR寄存器
             UART4->CR1|=(1<<13);                     //使能USART模块
         break;
-        case 4:
+        case 5:
             UART5->CR1&= ~(1<<13);                   //关闭USART模块
             UART5->BRR=(integer<<4)|((unsigned int)decimal*16);  //将转换后的值赋给BRR寄存器
             UART5->CR1|=(1<<13);                     //使能USART模块
@@ -228,7 +228,7 @@ static int32_t stm32f10x_uart_poll_write(struct uart_device *dev, uint8_t *buffe
         case 2:
             for(i=0;i<len;i++)
             {
-                USART1->DR=*buffer;                        
+                USART2->DR=*buffer;                        
                 while(!(USART2->SR&(1<<6)));
                 buffer++;
             }
@@ -236,7 +236,7 @@ static int32_t stm32f10x_uart_poll_write(struct uart_device *dev, uint8_t *buffe
         case 3:
             for(i=0;i<len;i++)
             {
-                USART1->DR=*buffer;                        
+                USART3->DR=*buffer;                        
                 while(!(USART3->SR&(1<<6)));
                 buffer++;
             }
@@ -244,7 +244,7 @@ static int32_t stm32f10x_uart_poll_write(struct uart_device *dev, uint8_t *buffe
         case 4:
             for(i=0;i<len;i++)
             {
-                USART1->DR=*buffer;                        
+                UART4->DR=*buffer;                        
                 while(!(UART4->SR&(1<<6)));
                 buffer++;
             }
@@ -252,7 +252,7 @@ static int32_t stm32f10x_uart_poll_write(struct uart_device *dev, uint8_t *buffe
         case 5:
             for(i=0;i<len;i++)
             {
-                USART1->DR=*buffer;                        
+                UART5->DR=*buffer;                        
                 while(!(UART5->SR&(1<<6)));
                 buffer++;
             }

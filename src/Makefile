@@ -2,6 +2,7 @@
 # 1. arm
 #	 a. gd32vf10x
 #    b. stm32f10x
+#    c. stm32f4xx
 # 2. avr
 #    a. atmega128
 #    b. atmega328
@@ -13,7 +14,7 @@
 #    b. stc89c5x
 #####################################################################################
 ARCH     :=arm
-MACH     :=stm32f10x
+MACH     :=stm32f4xx
 CCTYPE   :=gcc
 
 ##################### optimization level   ##########################################
@@ -24,23 +25,20 @@ DEBUG    := 1
 ##################### toolchain config###############################################
 #---------------------riscv arch-----------------------------------------------------
 ifeq ($(ARCH),riscv)
-
 PREFIX   := riscv-none-embed-
-CC = $(PREFIX)gcc
-AS = $(PREFIX)gcc -x assembler-with-cpp
-CP = $(PREFIX)objcopy
-AR = $(PREFIX)ar
-SZ = $(PREFIX)size
-OD = $(PREFIX)objdump
-HEX = $(CP) -O ihex
-BIN = $(CP) -O binary -S
 ARCH_PAR = -march=rv32imac -mabi=ilp32 -mcmodel=medlow -nostartfiles
-
+endif
 
 #---------------------arm arch------------------------------------------------------
-else ifeq ($(ARCH),arm)
-
+ifeq ($(ARCH),arm)
 PREFIX   := arm-none-eabi-
+ARCH_PAR = -mcpu=cortex-m3 -mthumb -mno-thumb-interwork -mfpu=vfp -msoft-float -mfix-cortex-m3-ldrd 
+endif
+
+
+
+#---------------------compiler config-----------------------------------------------
+ifeq ($(CCTYPE),gcc)
 CC = $(PREFIX)gcc
 AS = $(PREFIX)gcc -x assembler-with-cpp
 CP = $(PREFIX)objcopy
@@ -49,7 +47,6 @@ SZ = $(PREFIX)size
 OD = $(PREFIX)objdump
 HEX = $(CP) -O ihex
 BIN = $(CP) -O binary -S
-ARCH_PAR = -mcpu=cortex-m3 -mthumb -mno-thumb-interwork -mfpu=vfp -msoft-float -mfix-cortex-m3-ldrd 
 endif
 
 
@@ -59,7 +56,7 @@ C_SOURCES  := 	$(wildcard arch/$(ARCH)/mach-$(MACH)/drivers/*.c)     \
 			  	$(wildcard arch/$(ARCH)/mach-$(MACH)/system/*.c)      \
 				$(wildcard arch/$(ARCH)/mach-$(MACH)/bsp/*.c)         \
 			  	$(wildcard drivers/*.c)                               \
-				$(wildcard core/*.c)                               \
+				$(wildcard core/*.c)                                  \
 				$(wildcard application/*.c)  
 
 ##################### All ASM source files ##########################################

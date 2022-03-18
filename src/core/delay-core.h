@@ -3,8 +3,6 @@
 
 #include "module.h"
 
-static struct delay_core *__delay_core = (struct delay_core*)&__delay_core_init;
-
 struct delay_core
 {
     void (*probe)(void);

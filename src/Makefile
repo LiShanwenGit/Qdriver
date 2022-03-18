@@ -12,9 +12,12 @@
 # 4. msc51
 #    a. at89c5x
 #    b. stc89c5x
+# 5. sim
+#    a. linux
+#    b. windows
 #####################################################################################
-ARCH     :=arm
-MACH     :=stm32f4xx
+ARCH     :=sim
+MACH     :=windows
 CCTYPE   :=gcc
 
 ##################### optimization level   ##########################################
@@ -35,6 +38,11 @@ PREFIX   := arm-none-eabi-
 ARCH_PAR = -mcpu=cortex-m3 -mthumb -mno-thumb-interwork -mfpu=vfp -msoft-float -mfix-cortex-m3-ldrd 
 endif
 
+#---------------------sim arch------------------------------------------------------
+ifeq ($(ARCH),sim)
+PREFIX   :=
+ARCH_PAR = -m32 -fdata-sections
+endif
 
 
 #---------------------compiler config-----------------------------------------------
@@ -107,7 +115,11 @@ LDSCRIPT := arch/$(ARCH)/mach-$(MACH)/$(MACH).lds
 
 ##################### link libraries ################################################
 LIBDIR  := 
+ifeq ($(ARCH),sim)
+LDFLAGS := 
+else
 LDFLAGS := $(OPT) $(ARCH_PAR) -T$(LDSCRIPT) $(LIBDIR) $(LIBS) $(PERIFLIB_SOURCES) -Wl,--cref -Wl,--no-relax -Wl,--gc-sections -Wl,-M=$(BUILD_DIR)/$(TARGET).map --specs=nosys.specs --specs=nano.specs  #-ffreestanding -nostdlib
+endif
 
 ##################### build target ##################################################
 TARGET  := $(MACH)
@@ -148,7 +160,8 @@ $(BUILD_DIR)/%.hex: $(BUILD_DIR)/%.elf | $(BUILD_DIR)
 $(BUILD_DIR)/%.bin: $(BUILD_DIR)/%.elf | $(BUILD_DIR)
 	@echo "OBJCOPY $@"
 	@$(BIN) $< $@	
-	
+
+
 $(BUILD_DIR):
 	mkdir $@
 
@@ -161,3 +174,5 @@ clean:
 
 
 include flash.mk
+
+

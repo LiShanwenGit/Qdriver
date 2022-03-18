@@ -36,8 +36,8 @@ typedef struct gpio_operations
     int8_t   (*get)(gpio_desp_t *gpio_desp);
     void     (*set_mode)(gpio_desp_t *gpio_desp, gpio_mode_t mode);
     void     (*set_value)(gpio_desp_t *gpio_desp, uint8_t value);
-    void     (*bit_set)(gpio_desp_t *gpio_desp);
-    void     (*bit_reset)(gpio_desp_t *gpio_desp);
+    void     (*set_bit)(gpio_desp_t *gpio_desp);
+    void     (*reset_bit)(gpio_desp_t *gpio_desp);
     uint32_t (*get_value)(gpio_desp_t *gpio_desp);
     void     (*put)(gpio_desp_t *gpio_desp);
 
@@ -54,7 +54,7 @@ typedef struct gpio_controller
 
 static inline int8_t gpio_get(gpio_desp_t *gpio_desp)
 {
-    gpio_desp->ctl = (gpio_controller_t*)&__gpio_core_init;
+    gpio_desp->ctl = (gpio_controller_t*)(__gpio_core);
     return gpio_desp->ctl->ops.get(gpio_desp);
 }
 
@@ -68,14 +68,14 @@ static inline void gpio_set_value(gpio_desp_t *gpio_desp, uint8_t value)
     gpio_desp->ctl->ops.set_value(gpio_desp,value);
 }
 
-static inline void gpio_bit_set(gpio_desp_t *gpio_desp)
+static inline void gpio_set_bit(gpio_desp_t *gpio_desp)
 {
-    gpio_desp->ctl->ops.bit_set(gpio_desp);
+    gpio_desp->ctl->ops.set_bit(gpio_desp);
 }
 
-static inline void gpio_bit_reset(gpio_desp_t *gpio_desp)
+static inline void gpio_reset_bit(gpio_desp_t *gpio_desp)
 {
-    gpio_desp->ctl->ops.bit_reset(gpio_desp);
+    gpio_desp->ctl->ops.reset_bit(gpio_desp);
 }
 
 static inline uint32_t gpio_get_value(gpio_desp_t *gpio_desp)

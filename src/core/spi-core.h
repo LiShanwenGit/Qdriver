@@ -71,7 +71,7 @@ static inline uint32_t spi_read(struct spi_device *dev, uint8_t *buffer, uint32_
 
 static inline int8_t spi_probe(struct spi_device *dev)
 {
-    dev->master = (struct spi_master*)&__spi_core_init;
+    dev->master = (struct spi_master*)(__spi_core);
     return dev->master->ops.probe(dev);
 }
 

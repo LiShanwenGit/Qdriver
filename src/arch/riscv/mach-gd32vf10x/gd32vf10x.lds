@@ -145,21 +145,7 @@ SECTIONS
     *(.srodata.cst4)
     *(.srodata.cst2)
     *(.srodata .srodata.*)
-
-    . = ALIGN(8);
-    PROVIDE( __gpio_core_init = .);
-    KEEP (*(.__gpio_core_init))
-    PROVIDE( __spi_core_init = .);
-    KEEP (*(.__spi_core_init))
-    PROVIDE( __i2c_core_init = .);
-    KEEP (*(.__i2c_core_init))
-    PROVIDE( __uart_core_init = .);
-    KEEP (*(.__uart_core_init))
-    PROVIDE( __timer_core_init = .);
-    KEEP (*(.__timer_core_init))
-    PROVIDE( __delay_core_init = .);
-    KEEP (*(.__delay_core_init))    
-    
+      
   } >ram AT>flash 
 
   . = ALIGN(4);

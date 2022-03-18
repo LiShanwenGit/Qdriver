@@ -29,7 +29,7 @@ typedef struct irq_controller
 
 static inline int8_t irq_request(struct irq_desp *desp)
 {
-    desp->ctrller = (struct irq_controller*)&__irq_core_init;
+    desp->ctrller = (struct irq_controller*)(__irq_core);
     desp->ctrller->request(desp);
 }
 

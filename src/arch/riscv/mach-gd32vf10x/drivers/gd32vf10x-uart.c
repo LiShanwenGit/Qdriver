@@ -8,27 +8,37 @@ static void (*uart_handler[UART_ALL_NUM])(void *data);
 
 void USART0_IRQHandler(void)
 {
-    (*uart_handler[0])();
+    uint8_t recv;
+	recv = 0;
+    (*uart_handler[0])(&recv);
 }
 
 void USART1_IRQHandler(void)
 {
-    (*uart_handler[1])();
+    uint8_t recv;
+	recv = 0;
+    (*uart_handler[1])(&recv);
 }
 
 void USART2_IRQHandler(void)
 {
-    (*uart_handler[2])();
+    uint8_t recv;
+	recv = 0;
+    (*uart_handler[2])(&recv);
 }
 
 void USART3_IRQHandler(void)
 {
-    (*uart_handler[3])();
+    uint8_t recv;
+	recv = 0;
+    (*uart_handler[3])(&recv);
 }
 
 void USART4_IRQHandler(void)
 {
-    (*uart_handler[4])();
+    uint8_t recv;
+	recv = 0;
+    (*uart_handler[4])(&recv);
 }
 
 

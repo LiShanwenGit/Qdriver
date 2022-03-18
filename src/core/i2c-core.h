@@ -60,7 +60,7 @@ static inline int8_t i2c_set_speed(struct i2c_client *client, uint32_t speed_hz)
 
 static inline int8_t i2c_probe(struct i2c_client *client)
 {
-    client->adaptor = (struct i2c_adaptor*)&__i2c_core_init;
+    client->adaptor = (struct i2c_adaptor*)(__i2c_core);
     return client->adaptor->ops.probe(client);
 }
 

@@ -63,12 +63,12 @@ static void stm32f4xx_gpio_set_value(gpio_desp_t *gpio_desp, uint8_t value)
     }   
 }
 
-static void stm32f4xx_gpio_bit_set(gpio_desp_t *gpio_desp)
+static void stm32f4xx_gpio_set_bit(gpio_desp_t *gpio_desp)
 {
     *((volatile uint32_t*)(GPIOA_BASE + 0x18 + (GPIO_NUM2PORT(gpio_desp->pin_num))*0x400)) |= (1<<GPIO_NUM2PIN(gpio_desp->pin_num));
 }
 
-static void stm32f4xx_gpio_bit_reset(gpio_desp_t *gpio_desp)
+static void stm32f4xx_gpio_reset_bit(gpio_desp_t *gpio_desp)
 {
     *((volatile uint32_t*)(GPIOA_BASE + 0x18 + (GPIO_NUM2PORT(gpio_desp->pin_num))*0x400)) |= (1<<(GPIO_NUM2PIN(gpio_desp->pin_num)+16));
 }
@@ -91,8 +91,8 @@ gpio_controller_t  stm32f4xx_gpio_ctrl =
         .put = stm32f4xx_gpio_put,
         .set_mode = stm32f4xx_gpio_set_mode,
         .set_value = stm32f4xx_gpio_set_value,
-        .bit_set = stm32f4xx_gpio_bit_set,
-        .bit_reset = stm32f4xx_gpio_bit_reset,
+        .set_bit = stm32f4xx_gpio_set_bit,
+        .reset_bit = stm32f4xx_gpio_reset_bit,
     },
 };
 

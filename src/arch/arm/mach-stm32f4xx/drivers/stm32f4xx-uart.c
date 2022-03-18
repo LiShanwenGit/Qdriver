@@ -318,7 +318,7 @@ static int8_t stm32f4xx_uart_set_handler(struct uart_device *dev, void (*handler
     uart_handler[dev->uart] = handler;
 }
 
-struct uart_controller stm32f10x_uart_controller= 
+struct uart_controller stm32f4xx_uart_controller= 
 {
     .ops = 
     {

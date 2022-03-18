@@ -36,7 +36,7 @@ struct pwm_controller
 
 static inline int8_t pwm_get(struct pwm_desp *desp)
 {
-    desp->ctrl = (struct pwm_controller*)(&__pwm_core_init);
+    desp->ctrl = (struct pwm_controller*)(__pwm_core);
     desp->ctrl->ops.get(desp);
     return 0;
 }

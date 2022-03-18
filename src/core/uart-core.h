@@ -33,7 +33,7 @@ typedef struct uart_controller
 
 static inline int8_t uart_probe(struct uart_device *dev)
 {
-    dev->ctrller = (struct uart_controller *)&__uart_core_init;
+    dev->ctrller = (struct uart_controller *)(__uart_core);
     return dev->ctrller->ops.probe(dev);
 }
 

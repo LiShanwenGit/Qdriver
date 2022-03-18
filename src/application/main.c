@@ -37,22 +37,22 @@ int main(void)
     uart_probe(&tty0);
     delay_probe();
 
-    gpio_get(&led); //申请一个GPIO资源
-    mdelay(1000);
-    char test[100] = "hello Qdriver";
-    uart_set_handler(&tty0,tty0_handle);
+    //gpio_get(&led); //申请一个GPIO资源
+    //mdelay(1000);
+    char test[100] = "hello Qdriver\r\n";
+    //uart_set_handler(&tty0,tty0_handle);
     while (1)
     {
-         gpio_bit_reset(&led);
-         mdelay(500);      //使用延时函数，延时500ms
-         gpio_bit_set(&led);
+        //  gpio_reset_bit(&led);
+        //  mdelay(200);      //使用延时函数，延时500ms
+        //  gpio_set_bit(&led);
          mdelay(500);      //使用延时函数，延时500ms
          //uart_poll_write(&tty0,test,sizeof(test));
-         if(flag)
-         {
-             flag = 0;
-             uart_poll_write(&tty0,buffer,sizeof(buffer));
-         }
+        //  if(flag)
+        //  {
+        //      flag = 0;
+        uart_poll_write(&tty0,test,sizeof(test));
+        //  }
     }
 }
 

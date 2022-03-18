@@ -6,10 +6,10 @@ static struct gpio_desp __adaptor_sck;
 
 int8_t i2c_gpio_probe(struct i2c_gpio_client *client)
 {
-    __adaptor_sda.pin_num = client->sda;
-    __adaptor_sck.pin_num = client->sck;
-    gpio_get(&__adaptor_sda);
-    gpio_get(&__adaptor_sck);
+    // __adaptor_sda.pin_num = client->sda;
+    // __adaptor_sck.pin_num = client->sck;
+    // gpio_get(&__adaptor_sda);
+    // gpio_get(&__adaptor_sck);
     
 }
 int8_t i2c_gpio_remove(struct i2c_gpio_client *client)

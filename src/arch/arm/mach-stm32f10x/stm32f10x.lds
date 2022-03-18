@@ -119,21 +119,6 @@ SECTIONS
     _sdata = .;        /* create a global symbol at data start */
     *(.data)           /* .data sections */
     *(.data*)          /* .data* sections */
-
-    . = ALIGN(4);
-    PROVIDE( __gpio_core_init = .);
-    KEEP (*(.__gpio_core_init))
-    PROVIDE( __spi_core_init = .);
-    KEEP (*(.__spi_core_init))
-    PROVIDE( __i2c_core_init = .);
-    KEEP (*(.__i2c_core_init))
-    PROVIDE( __uart_core_init = .);
-    KEEP (*(.__uart_core_init))
-    PROVIDE( __timer_core_init = .);
-    KEEP (*(.__timer_core_init))
-    PROVIDE( __delay_core_init = .);
-    KEEP (*(.__delay_core_init))   
-
     . = ALIGN(4);
     _edata = .;        /* define a global symbol at data end */
   } >RAM
